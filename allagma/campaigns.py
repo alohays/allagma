@@ -142,6 +142,21 @@ def _check_materials(study, directory):
         verify_reference(study, item)
 
 
+def _attempt_outputs(study, directory):
+    outputs = []
+    for path in sorted(directory.iterdir()):
+        if not path.is_file() or path.name in ("started.json", "record.json", "input.json"):
+            continue
+        media_type = None
+        if path.suffix == ".json":
+            try:
+                read_json(path)
+            except AllagmaError:
+                media_type = "application/octet-stream"
+        outputs.append(reference(study, path, media_type))
+    return outputs
+
+
 def _recover_attempts(study, directory):
     for path in sorted(directory.glob("runs/*/attempts/*/started.json")):
         if (path.parent / "record.json").exists():
@@ -164,7 +179,8 @@ def _recover_attempts(study, directory):
         terminal = {**started, "ended_at": utcnow(), "status": "interrupted",
                     "error": {"kind": "controller_interruption", "message": "No terminal record was committed; preserved for inspection"},
                     "usage": {"wall_seconds": charged_seconds, "money_usd": 0.0, "tokens": 0},
-                    "environment": {**started["environment"], "recovered_usage_basis": "worker measurement when available; deadline upper bound otherwise; zero before launch"}}
+                    "environment": {**started["environment"], "recovered_usage_basis": "worker measurement when available; deadline upper bound otherwise; zero before launch"},
+                    "outputs": _attempt_outputs(study, path.parent)}
         record(path.parent / "record.json", terminal)
 
 
@@ -313,8 +329,7 @@ def run_campaign(study, campaign, *, fault=None, stop_after=None, crash_after_st
                         "outputs": outputs, "exit_code": exit_code,
                         "usage": {"wall_seconds": time.monotonic() - begin, "money_usd": 0.0, "tokens": 0}}
             # Logs are evidence for both successes and failures, and are never overwritten.
-            terminal["outputs"].extend(reference(study, path, "text/plain") for path in sorted(adir.glob("*.txt")))
-            terminal["outputs"].extend(reference(study, path) for path in sorted(adir.glob("*.job*.json")))
+            terminal["outputs"] = _attempt_outputs(study, adir)
             record(adir / "record.json", terminal)
             completed_this_call += 1
             if status != "succeeded":

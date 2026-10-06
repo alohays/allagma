@@ -48,6 +48,8 @@ def parser():
     compare = sub.add_parser("compare", help="Run the bounded context-method comparison")
     compare.add_argument("--source", type=Path, default=ROOT)
     compare.add_argument("--output", type=Path, required=True)
+    compare.add_argument("--baseline", default="context/full-record")
+    compare.add_argument("--candidate", default="context/active-brief")
     camp = sub.add_parser("campaign")
     camp.add_argument("operation", choices=["start", "run", "analyze", "audit", "status"])
     camp.add_argument("--study", type=Path, required=True)
@@ -64,7 +66,7 @@ def parser():
     update.add_argument("--source", type=Path, default=ROOT)
     update.add_argument("--id")
     migration = sub.add_parser("migrate")
-    migration.add_argument("operation", choices=["plan", "apply", "rollback"])
+    migration.add_argument("operation", choices=["plan", "apply", "rollback", "recover"])
     migration.add_argument("--study", type=Path, required=True)
     migration.add_argument("--spec", type=Path)
     migration.add_argument("--id")
@@ -77,9 +79,12 @@ def main(argv=None):
     argv = sys.argv[1:] if argv is None else argv
     args = parser().parse_args(argv)
     try:
-        if args.command == "campaign" and args.operation in ("run", "analyze", "audit"):
-            directory = campaigns.campaign_path(args.study, args.campaign)
-            lock = bundles.verify_lock(args.study, read_json(directory / "lock.yaml"))
+        if args.command == "campaign" and args.operation in ("start", "run", "analyze", "audit"):
+            if args.operation == "start":
+                lock = bundles.verify_study(args.study)
+            else:
+                directory = campaigns.campaign_path(args.study, args.campaign)
+                lock = bundles.verify_lock(args.study, read_json(directory / "lock.yaml"))
             root = bundles.bundle_path(args.study, lock)
             if root.resolve() != ROOT:
                 return subprocess.run([sys.executable, str(root / "tools/allagma.py"), *argv]).returncode
@@ -99,7 +104,7 @@ def main(argv=None):
             roles = {key: value for key, value in {"context": args.context, "reviewer": args.reviewer}.items() if value}
             result = toy_workflow(args.source, args.destination, host=args.host, faults=not args.no_faults, roles=roles, recipe=args.recipe)
         elif args.command == "compare":
-            result = compare_context(args.source, args.output)
+            result = compare_context(args.source, args.output, baseline_id=args.baseline, candidate_id=args.candidate)
         elif args.command == "campaign":
             if args.operation == "start":
                 result = campaigns.start_campaign(args.study, args.campaign)

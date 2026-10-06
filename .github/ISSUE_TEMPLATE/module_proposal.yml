@@ -1,0 +1,22 @@
+name: Method, recipe or adapter proposal
+description: Propose one bounded change or a public contract/default change.
+body:
+  - type: textarea
+    id: responsibility
+    attributes:
+      label: Responsibility and difference from existing modules
+    validations:
+      required: true
+  - type: textarea
+    id: contracts
+    attributes:
+      label: Inputs, outputs, capabilities and compatibility
+    validations:
+      required: true
+  - type: textarea
+    id: evaluation
+    attributes:
+      label: Example, evaluation scope and source lineage
+      description: Name the baseline, expected benefit, cost and limitations. A new source is a reason to investigate, not proof of improvement.
+    validations:
+      required: true

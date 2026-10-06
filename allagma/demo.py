@@ -5,12 +5,13 @@ from pathlib import Path
 import shutil
 import subprocess
 import sys
+import time
 
 from .bundles import default_intent, initialize, resolve_entry, source_revision
 from .campaigns import analyze_campaign, audit_campaign, run_campaign, start_campaign
 from .catalog import Catalog
 from .contracts import validate_record
-from .files import AllagmaError, canonical, read_json, reference, utcnow, write_json
+from .files import AllagmaError, canonical, file_hash, inventory, read_json, reference, utcnow, write_json
 
 
 def create_toy(source, destination, *, host="generic", roles=None, recipe="recipe/research", budget=None):
@@ -76,7 +77,7 @@ def toy_workflow(source, destination, *, host="generic", faults=True, roles=None
     return walkthrough
 
 
-def compare_context(source, output):
+def compare_context(source, output, *, baseline_id="context/full-record", candidate_id="context/active-brief"):
     source, output = Path(source).resolve(), Path(output).resolve()
     if output.exists():
         raise AllagmaError("Comparison directory already exists; preserve candidate history")
@@ -84,34 +85,57 @@ def compare_context(source, output):
     catalog = Catalog(source)
     fixture_path = source / "evals/context-retention/cases.json"
     fixture = read_json(fixture_path)
-    measurements = {}
-    for module_id in ("context/full-record", "context/active-brief"):
-        directory = catalog.directory(module_id)
-        char_cost, recalls = 0, []
-        for i, case in enumerate(fixture["cases"]):
-            inputs = output / f"case-{i}.json"
-            write_json(inputs, case, immutable=True)
-            result_path = output / f"{module_id.split('/')[-1]}-{i}.json"
-            subprocess.run([sys.executable, str(directory / "select.py"), str(inputs), str(result_path)], check=True)
-            result = read_json(result_path)
-            validate_record(result)
-            recall = sum(key in result["content"] and result["content"][key] == case["records"][key] for key in case["required"]) / len(case["required"])
-            recalls.append(recall)
-            char_cost += len(canonical(result["content"]).decode())
-        measurements[module_id] = {"required_recall": min(recalls), "character_cost": char_cost}
-    baseline, candidate = measurements["context/full-record"], measurements["context/active-brief"]
-    outcome = "adopt" if candidate["required_recall"] == 1 and candidate["character_cost"] < baseline["character_cost"] else "reject"
-    proposal = {"target": "context selection", "hypothesis": "Focused context retains required fields with lower serialized character cost",
-                "baseline": "context/full-record", "candidate": "context/active-brief", "source_revision": source_revision(source),
-                "candidate_lineage": {"parent": "context/full-record", "change": "Select required and phase-relevant fields"}}
+    proposal = {"target": "context selection", "hypothesis": "The candidate retains required fields with lower serialized character cost than the baseline",
+                "baseline": baseline_id, "candidate": candidate_id, "source_revision": source_revision(source),
+                "candidate_lineage": {"parent": baseline_id, "change": f"Replace {baseline_id} with {candidate_id}"}}
     write_json(output / "proposal.json", proposal, immutable=True)
+    # Retain the actual candidate, baseline, common helper runtime and fixed
+    # fixtures; the comparison no longer depends on a mutable central checkout.
+    package = output / "package"
+    for directory in ("allagma", "contracts"):
+        shutil.copytree(source / directory, package / directory, ignore=shutil.ignore_patterns("__pycache__"))
+    for module_id in dict.fromkeys((baseline_id, candidate_id)):
+        shutil.copytree(catalog.directory(module_id), package / catalog.registry["modules"][module_id], ignore=shutil.ignore_patterns("__pycache__"))
+    write_json(output / "fixed-fixtures.json", fixture, immutable=True)
+    write_json(output / "package-manifest.json", inventory(package), immutable=True)
+    measurements, traces, failure = {}, [], None
+    begun = time.monotonic()
+    try:
+        for module_id in dict.fromkeys((baseline_id, candidate_id)):
+            directory = package / catalog.registry["modules"][module_id]
+            char_cost, recalls = 0, []
+            for i, case in enumerate(fixture["cases"]):
+                inputs = output / f"case-{i}.json"
+                write_json(inputs, case, immutable=True)
+                result_path = output / f"{module_id.split('/')[-1]}-{i}.json"
+                executed = subprocess.run([sys.executable, str(directory / "select.py"), str(inputs), str(result_path)], capture_output=True, text=True, timeout=15)
+                traces.append({"module": module_id, "case": i, "exit_code": executed.returncode,
+                               "stdout": executed.stdout, "stderr": executed.stderr})
+                if executed.returncode:
+                    raise AllagmaError(f"{module_id} did not complete evaluation")
+                result = validate_record(read_json(result_path), package)
+                if result["method_id"] != module_id:
+                    raise AllagmaError("Context producer identity mismatch")
+                recall = sum(key in result["content"] and result["content"][key] == case["records"][key] for key in case["required"]) / len(case["required"])
+                recalls.append(recall)
+                char_cost += len(canonical(result["content"]).decode())
+            measurements[module_id] = {"required_recall": min(recalls), "character_cost": char_cost}
+    except (AllagmaError, OSError, subprocess.TimeoutExpired) as exc:
+        failure = str(exc)
+    write_json(output / "execution-trace.json", traces, immutable=True)
+    if failure:
+        outcome, reason = "not evaluated", failure + "; not a measured negative result"
+    else:
+        baseline, candidate = measurements[baseline_id], measurements[candidate_id]
+        outcome = "adopt" if candidate["required_recall"] == 1 and candidate["character_cost"] < baseline["character_cost"] else "reject"
+        reason = "Required-key retention and serialized character cost determine this bounded decision."
     decision = {"schema_version": "0.2", "record_type": "ImprovementRecord", "improvement_id": output.name,
                 "target": proposal["target"], "hypothesis": proposal["hypothesis"], "source_revision": proposal["source_revision"],
                 "baseline": proposal["baseline"], "candidate": proposal["candidate"],
-                "candidate_artifacts": [reference(output, output / "proposal.json")],
-                "evaluation": "evaluation/context-retention", "controls": {"controller": "deterministic Python", "task_split": fixture["split"], "fixture_sha256": __import__('hashlib').sha256(fixture_path.read_bytes()).hexdigest(), "noise_band": 0, "resources": "same local process contract"},
-                "outcome": outcome, "measurements": measurements, "cost": {"money_usd": 0, "model_tokens": 0, "complexity": "one selection helper, two thin entrypoints"},
-                "user_intervention": 0, "reason": "Required-key retention and character cost determine this bounded decision.",
+                "candidate_artifacts": [reference(output, output / name) for name in ("proposal.json", "package-manifest.json", "fixed-fixtures.json", "execution-trace.json")],
+                "evaluation": "evaluation/context-retention", "controls": {"controller": "deterministic Python", "task_split": fixture["split"], "fixture_sha256": file_hash(fixture_path), "noise_band": 0, "resources": "same local process contract"},
+                "outcome": outcome, "measurements": measurements, "cost": {"money_usd": 0, "model_tokens": 0, "wall_seconds": time.monotonic() - begun, "complexity": "one selection helper, two thin entrypoints"},
+                "user_intervention": 0, "reason": reason,
                 "limitations": ["No model or scientific-quality evaluation; cannot generalize beyond the fixtures."],
                 "release_decision": "Example decision only; no module lifecycle or default selection is changed automatically."}
     validate_record(decision)

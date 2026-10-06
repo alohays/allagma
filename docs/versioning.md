@@ -99,6 +99,11 @@ The inverse restores exact pre-migration user files and refuses to erase work
 made afterward. The acceptance fixture demonstrates migration, conflict
 preservation and inverse rollback separately from a method update.
 
+Application journals its preimage before changing user files. An interrupted
+multi-file migration blocks new active-lock work. Run `migrate recover --study
+work/my-study --id m-ID` to restore the preimage or finish an already committed
+migration. Edits made after interruption are exposed for reconciliation.
+
 ## Local variants
 
 Copy a method into `modules-local/allagma-context-custom`, give it a new ID and

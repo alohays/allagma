@@ -10,9 +10,10 @@ from .contracts import validate_record
 from .files import AllagmaError, file_hash, read_json, reference, write_json, write_text
 
 
-def qualify_examples(root, roles, output):
+def qualify_examples(root, roles, output, *, reference_root=None):
     root, output = Path(root).resolve(), Path(output).resolve()
     output.mkdir(parents=True, exist_ok=False)
+    reference_root = Path(reference_root).resolve() if reference_root else output
     catalog = Catalog(root)
     results = []
     context = catalog.directory(roles["context"])
@@ -26,7 +27,7 @@ def qualify_examples(root, roles, output):
     if produced["method_id"] != roles["context"] or not all(produced["content"].get(key) == case["records"][key] for key in case["required"]):
         raise AllagmaError("Context example lost a required field or producer identity")
     results.append({"module": roles["context"], "status": "pass", "coverage": "Required fields retained, producer identity and ContextRecord schema",
-                    "helper_sha256": file_hash(context / "select.py"), "output": reference(output, output / "context.json")})
+                    "helper_sha256": file_hash(context / "select.py"), "output": reference(reference_root, output / "context.json")})
     write_text(output / "material.md", "# Qualification fixture\n", immutable=True)
     write_json(output / "evidence.json", {"fixture": True}, immutable=True)
     claim = {"schema_version": "0.2", "record_type": "ClaimRecord", "claim_id": "fixture",
@@ -45,7 +46,7 @@ def qualify_examples(root, roles, output):
     if executed.returncode or read_json(output / "stale-review.json").get("verdict") not in ("revise", "blocked"):
         raise AllagmaError("Reviewer accepted stale evidence")
     results.append({"module": roles["reviewer"], "status": "pass", "coverage": "Valid evidence accepted; stale digest rejected",
-                    "helper_sha256": file_hash(reviewer), "output": reference(output, output / "review.json"),
-                    "negative_case": reference(output, output / "stale-review.json")})
+                    "helper_sha256": file_hash(reviewer), "output": reference(reference_root, output / "review.json"),
+                    "negative_case": reference(reference_root, output / "stale-review.json")})
     write_json(output / "results.json", results, immutable=True)
     return results

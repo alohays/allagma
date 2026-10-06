@@ -19,6 +19,20 @@ SUPPORTED = {"$schema", "$id", "$defs", "$ref", "title", "description", "type",
              "minItems", "maxItems", "uniqueItems", "anyOf", "oneOf", "format"}
 
 
+def _equal(a, b):
+    if isinstance(a, bool) != isinstance(b, bool):
+        return False
+    if isinstance(a, dict) and isinstance(b, dict):
+        return a.keys() == b.keys() and all(_equal(a[key], b[key]) for key in a)
+    if isinstance(a, list) and isinstance(b, list):
+        return len(a) == len(b) and all(_equal(x, y) for x, y in zip(a, b))
+    return a == b
+
+
+def _finite(value):
+    return isinstance(value, int) or math.isfinite(value)
+
+
 def validate(value, schema, path="$", *, root=None):
     root = schema if root is None else root
     if schema is True:
@@ -47,16 +61,17 @@ def validate(value, schema, path="$", *, root=None):
     types = {"object": isinstance(value, dict), "array": isinstance(value, list),
              "string": isinstance(value, str), "null": value is None,
              "boolean": isinstance(value, bool),
-             "integer": isinstance(value, int) and not isinstance(value, bool),
+             "integer": (isinstance(value, int) and not isinstance(value, bool)) or
+                        (isinstance(value, float) and math.isfinite(value) and value.is_integer()),
              "number": isinstance(value, (int, float)) and not isinstance(value, bool)
-                       and math.isfinite(value)}
+                       and _finite(value)}
     if "type" in schema:
         allowed = schema["type"] if isinstance(schema["type"], list) else [schema["type"]]
         if not any(types.get(t, False) for t in allowed):
             raise AllagmaError(f"{path}: expected {allowed}, got {type(value).__name__}")
-    if "const" in schema and value != schema["const"]:
+    if "const" in schema and not _equal(value, schema["const"]):
         raise AllagmaError(f"{path}: expected {schema['const']!r}")
-    if "enum" in schema and value not in schema["enum"]:
+    if "enum" in schema and not any(_equal(value, option) for option in schema["enum"]):
         raise AllagmaError(f"{path}: expected one of {schema['enum']}")
     if isinstance(value, dict):
         missing = set(schema.get("required", [])) - value.keys()
@@ -71,7 +86,7 @@ def validate(value, schema, path="$", *, root=None):
             validate(child, schema.get("items", True), f"{path}[{i}]", root=root)
         if len(value) < schema.get("minItems", 0) or len(value) > schema.get("maxItems", math.inf):
             raise AllagmaError(f"{path}: invalid array length")
-        if schema.get("uniqueItems") and any(v == w for i, v in enumerate(value) for w in value[:i]):
+        if schema.get("uniqueItems") and any(_equal(v, w) for i, v in enumerate(value) for w in value[:i]):
             raise AllagmaError(f"{path}: duplicate array items")
     if isinstance(value, str):
         if len(value) < schema.get("minLength", 0) or len(value) > schema.get("maxLength", math.inf):
@@ -86,7 +101,7 @@ def validate(value, schema, path="$", *, root=None):
             except ValueError as exc:
                 raise AllagmaError(f"{path}: expected timestamp with timezone") from exc
     if isinstance(value, (int, float)) and not isinstance(value, bool):
-        if not math.isfinite(value) or value < schema.get("minimum", -math.inf) or value > schema.get("maximum", math.inf):
+        if not _finite(value) or value < schema.get("minimum", -math.inf) or value > schema.get("maximum", math.inf):
             raise AllagmaError(f"{path}: number outside bounds")
 
 

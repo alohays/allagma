@@ -1,0 +1,36 @@
+name: Conformance
+on:
+  pull_request:
+  push:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  targeted:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check affected modules and interfaces
+        env:
+          ALLAGMA_BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: python3 tools/check_changed.py --base "$ALLAGMA_BASE"
+  acceptance:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 -m allagma acceptance --output build/acceptance
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: allagma-acceptance
+          path: build/acceptance
+          include-hidden-files: true

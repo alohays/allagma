@@ -1,0 +1,20 @@
+name: Bug report
+description: Report a reproducible failure in a method, helper or adapter.
+body:
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and observed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction and versions
+      description: Include release, module IDs, host/Python versions and sanitized errors. Do not include credentials or private data.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Relevant evidence and limits

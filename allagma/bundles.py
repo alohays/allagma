@@ -162,7 +162,19 @@ def verify_lock(study, lock, *, directory=None):
     expected_id = "b-" + digest({"files": lock["files"], "source": lock["source_revision"]})[:24]
     if expected_id != lock["bundle_id"]:
         raise AllagmaError("Bundle identity mismatch")
-    verify_inventory(directory or bundle_path(study, lock), lock["files"])
+    root = directory or bundle_path(study, lock)
+    verify_inventory(root, lock["files"])
+    release = read_json(root / "release.json")
+    if any(lock[key] != release[key] for key in ("release", "release_tag", "contracts", "publication")):
+        raise AllagmaError("Lock release identity disagrees with the bundled release manifest")
+    registry = read_json(root / "registry.json")["modules"]
+    if set(registry) != set(lock["modules"]):
+        raise AllagmaError("Lock module selection disagrees with the bundled catalog")
+    for key, module in lock["modules"].items():
+        if registry[key] != module["path"] or module["revision"] != "sha256:" + digest(inventory(confined(root, module["path"]))):
+            raise AllagmaError(f"Module revision mismatch: {key}")
+        if not set(module["dependencies"]) <= lock["modules"].keys():
+            raise AllagmaError(f"Module dependency closure is incomplete: {key}")
     return lock
 
 
@@ -170,6 +182,8 @@ def verify_study(study, *, freshness=True):
     study = Path(study)
     if (study / ".allagma/transaction.json").exists():
         raise AllagmaError("Unfinished update transaction; run update recover before using the active lock")
+    if list((study / ".allagma/migrations").glob("*/transaction.json")):
+        raise AllagmaError("Unfinished scaffold migration; run migrate recover before using the active lock")
     lock = verify_lock(study, read_json(study / ".allagma/lock.yaml"))
     if freshness:
         if digest(read_json(study / "allagma.yaml")) != lock["intent_digest"]:
@@ -391,7 +405,7 @@ def validate_update(study, update_id):
         modules = catalog.check()
         from .qualification import qualify_examples
         output = directory / f"validation-{len(list(directory.glob('validation-*'))) + 1:03d}"
-        examples = qualify_examples(directory / "bundle", lock["roles"], output)
+        examples = qualify_examples(directory / "bundle", lock["roles"], output, reference_root=study)
         return _event(directory, "validate", target=lock["lock_id"], modules=modules, examples=examples,
                       coverage="Bundle integrity, contracts, capability closure, ownership and executable context/reviewer examples")
 
@@ -473,6 +487,8 @@ def rollback(study, update_id):
     with study_mutex(study):
         active = verify_study(study, freshness=False)
         _boundary(study)
+        if digest(read_json(study / "allagma.yaml")) != active["intent_digest"]:
+            raise AllagmaError("Post-update local edit blocks rollback: allagma.yaml")
         history = read_json(confined(study, f".allagma/history/{update_id}.json"))
         import json
         lock = json.loads(history["preimages"][".allagma/lock.yaml"])
