@@ -1,0 +1,10 @@
+{
+  "input_contracts": [
+    "ClaimRecord"
+  ],
+  "output_contracts": [
+    "ReviewRecord"
+  ],
+  "request": "Check material revision plus transitive evidence freshness.",
+  "expected": "Preserve evidence identity, version and declared capability boundaries."
+}

@@ -1,0 +1,43 @@
+{
+  "id": "runner/local-process",
+  "kind": "adapter",
+  "entry": "README.md",
+  "contract": "0.2",
+  "inputs": [
+    "ExperimentSpec"
+  ],
+  "outputs": [
+    "RunRecord"
+  ],
+  "requires": [
+    "artifact.read",
+    "artifact.write",
+    "execution.local"
+  ],
+  "optional": [],
+  "settings": {},
+  "dependencies": [],
+  "resources": [],
+  "sources": [],
+  "adaptation": "Original Allagma implementation of the adopted v0.2 artifact boundaries; no upstream code or prose copied.",
+  "lifecycle": "stable",
+  "maintainer": "@alohays",
+  "evaluation": [
+    "example.json"
+  ],
+  "examples": [
+    "example.json"
+  ],
+  "compatibility": {
+    "contracts": [
+      "0.2"
+    ],
+    "python": ">=3.11 for optional helpers",
+    "hosts": [
+      "generic",
+      "codex",
+      "claude-code"
+    ]
+  },
+  "replacement": null
+}

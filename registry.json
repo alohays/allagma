@@ -1,0 +1,26 @@
+{
+  "schema_version": "0.2",
+  "modules": {
+    "context/active-brief": "methods/allagma-context-active-brief",
+    "context/full-record": "methods/allagma-context-full-record",
+    "research/scope": "methods/allagma-scope",
+    "research/protocol": "methods/allagma-protocol",
+    "research/experiment": "methods/allagma-experiment",
+    "research/analysis": "methods/allagma-analysis",
+    "research/writing": "methods/allagma-writing",
+    "research/audit": "methods/allagma-audit",
+    "research/improve": "methods/allagma-improve",
+    "recipe/research": "recipes/allagma-research",
+    "recipe/replication": "recipes/allagma-replication",
+    "recipe/improve-allagma": "recipes/allagma-improve-allagma",
+    "host/generic": "adapters/generic",
+    "host/codex": "adapters/codex",
+    "host/claude-code": "adapters/claude-code",
+    "reviewer/checklist": "adapters/reviewer-checklist",
+    "reviewer/trace": "adapters/reviewer-trace",
+    "runner/local-process": "adapters/local-process",
+    "evaluation/context-retention": "evals/context-retention",
+    "policy/local": "policies/local",
+    "profile/default": "profiles/default"
+  }
+}

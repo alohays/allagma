@@ -1,0 +1,33 @@
+{
+  "roles": {
+    "context": "context/active-brief",
+    "reviewer": "reviewer/checklist",
+    "runner": "runner/local-process"
+  },
+  "steps": [
+    {
+      "phase": "comparison",
+      "method": "research/improve",
+      "consumes": [
+        "StudySpec"
+      ],
+      "produces": [
+        "ImprovementRecord"
+      ]
+    }
+  ],
+  "branches": {
+    "pilot_failure": "stop with qualification report",
+    "interruption": "resume preserved attempts",
+    "budget_exhausted": "partial package",
+    "review_revise": "return to affected phase up to max_revisions"
+  },
+  "stop_rules": [
+    "declared completeness",
+    "resource ceiling",
+    "repeated failure",
+    "required external input"
+  ],
+  "execution": "sequential",
+  "analysis_repetitions": 1
+}
