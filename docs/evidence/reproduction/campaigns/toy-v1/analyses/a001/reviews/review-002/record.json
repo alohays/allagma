@@ -1,0 +1,43 @@
+{
+  "assurance": "deterministic",
+  "backend": "local deterministic Python",
+  "backend_version": "3.11.6",
+  "coverage": "Schema, material and direct evidence digests. No independent assessment of scientific validity. Plus raw-data recomputation and deterministic report regeneration.",
+  "criteria": [
+    "transitive evidence integrity",
+    "raw-data recomputation",
+    "manuscript and claim regeneration"
+  ],
+  "findings": [],
+  "material": {
+    "media_type": "text/markdown",
+    "path": "campaigns/toy-v1/analyses/a001/paper/manuscript.md",
+    "retention": "retain-with-study",
+    "sha256": "fe92f55727e05cf475500b5f1c8d8990262f3e7ba9b46bf2f30e6d056e0f9189"
+  },
+  "record_type": "ReviewRecord",
+  "review_id": "review-002",
+  "reviewer": "reviewer/checklist",
+  "schema_version": "0.2",
+  "trace": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/toy-v1/analyses/a001/reviews/review-002/input.json",
+      "retention": "retain-with-study",
+      "sha256": "fafe06cf0f2fb035c6a70045fa2c511fedff1e110c9b47334122283590e4354a"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/toy-v1/analyses/a001/reviews/review-002/adapter-result.json",
+      "retention": "retain-with-study",
+      "sha256": "9c40d222178102c0e002a95cd63d53b1af3187c4a847bc233e5c181b568f38cd"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/toy-v1/analyses/a001/reviews/review-002/execution.json",
+      "retention": "retain-with-study",
+      "sha256": "a008bf821c251a8b3adb7967a0d96ac5a4286b1dac7e8fe61a4b2d77f4641e4e"
+    }
+  ],
+  "verdict": "pass"
+}

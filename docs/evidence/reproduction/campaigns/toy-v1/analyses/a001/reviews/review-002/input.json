@@ -1,0 +1,721 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "contradicting": [],
+      "dependencies": [
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/analyses/a001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "6156f41c8a68f6f7f23212c586260089d9070a840719f315c19a94a27b0f0d84"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/analyses/a001/raw-manifest.json",
+          "retention": "retain-with-study",
+          "sha256": "74e05911e2dd4ef0bef4c8b92fe43260b7591fc322c524cd8e8c9dbadd47b458"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/protocol.json",
+          "retention": "retain-with-study",
+          "sha256": "4253224c1eedbff2bc37e9e041f3cc11859b6fd513433587d3dc235817e207da"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-100/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "5b272523acf66cfc2f327a5ecb3bc2eb890822264665785c2fb19db40f42bc60"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-100/attempts/002/record.json",
+          "retention": "retain-with-study",
+          "sha256": "48df78c650276c076c84e516b461d7a2658e11bffec5bd50998db4aa137b4d6a"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-101/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "9ddcb93266430e80db23a99d8fff4b200955a70c2a7fb40e1b314d2dce4f06b9"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-101/attempts/002/record.json",
+          "retention": "retain-with-study",
+          "sha256": "fe2b9fa5cc6ef81e0f14e5439ccc12c2ea4be3e9b506bb64957ada4a91933ae1"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-102/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "dde556266690b0a6bfc18e434c151733ef10a6a2695a153745f94ad564656d1d"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-103/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "e1168d97eb5088bbf82a8a7cd3e3970504e894a9e745544fb8e617a179d23a12"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-104/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "05a61b89b6a1a35c2ae9ab389e620e8737fbad532b411bdae0b2b6d733a5416c"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-105/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "235e713f2583d1d7cea66101d95b06504b82a3dbe8b40fc72d20a336a17c4150"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-106/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "22efea08d8ba18a88de3335cee78d3b5d99f23a3d57493ae70b97e6322766557"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-107/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "36263117e8f0a664c6831dd148ecd942ff99f818fc5be8c2a41e2deba37130dd"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-108/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "9481f03a5da4c0d981d29c174296d91765ad1c51af7ba69ca9b4320a3b0a28a4"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-109/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "7ecce60f54d61821fcb2f2964c14ca3bc05ae18a5b530649e5b8017243a895aa"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-110/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "e290dfe885a385ee6bef1225682a98c6e18e74b4d9c71e9c126842142a37f620"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-111/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "a792c2177d73bba3500dce02f62975af541c18b133c790d25c9070339595eb06"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-112/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "1d460c411588877242b3025dd7a660334e49962a4320a7006fdb6433ff4ff161"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-113/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "040df4a320eaaf6afa7117fdb3f020a96f7756194523d5900ac975a3ac3a110c"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-114/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "1ca45ba3676b94c08922d8bb05bf8d8e8b7f3c21257b3f948d253f1de60f8b08"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-115/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "422bc00a2c4de0d7c790165454178817913452d44b4b901526513d3a75b6013e"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-116/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "eebfd9453c13131c0b9f5e91213f55efd06577490275af9b78b548ed30f49ced"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-117/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "db24a823a3def6f6cae947920fd5344ecab49dae6cc08de35490c71bc327c49c"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-118/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "769c4a244ff255fc4f1aa2999c0cc1b61690d8ff6dfbff4d38ba5bc44ce83630"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-119/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "93b3cdbfdecbaa5f8cac873339b7f6e438875eb2281e2bc1f2e0bb0ba4b06bcd"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-120/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "233968daba8482d760ce4692af3d37da6d6e5679271c9cc618d7b4e32c084e03"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-121/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "308939dd618fdacdee6660eca829cd1cd76b135de795f3a446f3a368ece9ff47"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-122/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "1d4c632362b04d0552fd1a698db1cebc4b783aefe350143168e2a1876f2e72b1"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-123/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "45878aaf3f7f9132dc085b75e42542c15d63b2ccd9f9a473cc445008827dc915"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/pilot-balanced/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "41b5e3981f0d20724d96b9123ea08303bf991c2553b4455d3076001a68acc9ab"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/pilot-zero/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "2a9f7139a0deb74cb1297f8127bf4b4123e17c8dd77233e75d4113ac7184bf42"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-100/attempts/002/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "1d257c2c9b57606a232ad01be4e7f50499f420d7597f56b5ad0e65ac0bef7ca5"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-101/attempts/002/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "c4d4c04bc6d16b3a96abb34414bf175d3ccdd81b1cdb7166cacc0529d73946ff"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-102/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "cdab552e7715495a4e2d7f30d509202a36248775c37c85a477e342e8c2037a61"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-103/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "a8fb60b18c21ec835d6ac6b91bf41bdb0a5eb9dd3713571df8c0433dc31cb3e3"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-104/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "ef73c39cef397ca1db8a6dc5e3d5d20b2ac69a27b44fc34b70fa55bf0a3e5a26"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-105/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "3643351910391bc9ff32455027b82dc6c5550d3cbac1f4c2c665bfbd94f6e52e"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-106/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "eaae1a0d9347bef552668acaec89171157b27f89ba64fdf95f7d06bb04bd476f"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-107/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "97945cb6cf37aa89039b940730fa3c58304491c67bad22f09ac882a794d500d4"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-108/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "c4dc8e6fade216333fd08de5589490016f46181482ecb814b21417db57fa46a0"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-109/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "cf973ac583d0f997bf60ef5739618831c9c7e0d66ed7e0b773eed68027e92701"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-110/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "efff0918de364c748349a616a467408fa9485088ff354e5e58dd400b57d1363b"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-111/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "9ee1258e06fe47375111d1aaad572367d289ae4a6f2136b7142fb3e75ce25992"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-112/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "30a09d407ed2e0f9ebea09f020c5180a8a205cec84ab88ad30a97b482190a0be"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-113/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "ff7896a0b65c36eca159005f09caca26dcef62d2d653e1ebcf372e57e1037d36"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-114/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "6f0e657c0b8c26f70d861b83b398346745d6893c88d193721d8042a9ff4ecc26"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-115/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "c6fbb9bf30bedd6ba04974ded8a62d493d8a9749554a1075d3261685700f3411"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-116/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "5bf8d23db5cfe3d85a2e858b334cfdbb1fada7209fdead2e6d7d0b242895c849"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-117/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "9fc7dff3de12dc8dbbaba59d70be6e5136aa8b3646386c9be3eb26c14d575839"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-118/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "3724eb25817e2b390d42377b2b9c186383cc13b23e1cd51ec49e34b212dba8bf"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-119/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "69ea3d83efa7a49ffec8c9c62a99c6ab9a9178742587bdceec12373b90e84237"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-120/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "978b68519eae2e5450ea015a10d3ec3c3ca1d30535ef6bd7a30be892ab2ad73e"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-121/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "131a64aad28ad61ba53dddbe86c5e05ea6313872fdb5ef0f80859da5f10c7bff"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-122/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "16f77e8182f126f6af91b55eec68db0f1d937dc1a99e29d1fbc7b367603fa72f"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-123/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "08bc3ddbaf390b4a720ebc9da959e5784d15f904338b2ea0076e1a0415308287"
+        }
+      ],
+      "limitations": [
+        "This synthetic known-answer problem does not establish novelty or improve an LLM research agent.",
+        "The 95% interval is a normal approximation over seed replicates, not an exact small-sample guarantee.",
+        "Averages do not establish an ordering for every individual seed."
+      ],
+      "record_type": "ClaimRecord",
+      "schema_version": "0.2",
+      "scope": "24 prespecified seeds, 64 Rademacher observations per seed, target zero, additive bias 0.25",
+      "status": "supported",
+      "supersedes": null,
+      "supporting": [
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/analyses/a001/outputs/summary.json",
+          "retention": "retain-with-study",
+          "sha256": "4b43e76825b15f45c8c0e0abfd380aa046068dc9fc3bcffb41e1b852b3d0628a"
+        }
+      ],
+      "text": "The biased estimator had higher average squared error (paired MSE difference 0.06510417; approximate 95% CI [0.03985104, 0.09035729])."
+    },
+    {
+      "claim_id": "C2",
+      "contradicting": [
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/analyses/a001/outputs/summary.json",
+          "retention": "retain-with-study",
+          "sha256": "4b43e76825b15f45c8c0e0abfd380aa046068dc9fc3bcffb41e1b852b3d0628a"
+        }
+      ],
+      "dependencies": [
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/analyses/a001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "6156f41c8a68f6f7f23212c586260089d9070a840719f315c19a94a27b0f0d84"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/analyses/a001/raw-manifest.json",
+          "retention": "retain-with-study",
+          "sha256": "74e05911e2dd4ef0bef4c8b92fe43260b7591fc322c524cd8e8c9dbadd47b458"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/protocol.json",
+          "retention": "retain-with-study",
+          "sha256": "4253224c1eedbff2bc37e9e041f3cc11859b6fd513433587d3dc235817e207da"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-100/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "5b272523acf66cfc2f327a5ecb3bc2eb890822264665785c2fb19db40f42bc60"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-100/attempts/002/record.json",
+          "retention": "retain-with-study",
+          "sha256": "48df78c650276c076c84e516b461d7a2658e11bffec5bd50998db4aa137b4d6a"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-101/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "9ddcb93266430e80db23a99d8fff4b200955a70c2a7fb40e1b314d2dce4f06b9"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-101/attempts/002/record.json",
+          "retention": "retain-with-study",
+          "sha256": "fe2b9fa5cc6ef81e0f14e5439ccc12c2ea4be3e9b506bb64957ada4a91933ae1"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-102/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "dde556266690b0a6bfc18e434c151733ef10a6a2695a153745f94ad564656d1d"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-103/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "e1168d97eb5088bbf82a8a7cd3e3970504e894a9e745544fb8e617a179d23a12"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-104/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "05a61b89b6a1a35c2ae9ab389e620e8737fbad532b411bdae0b2b6d733a5416c"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-105/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "235e713f2583d1d7cea66101d95b06504b82a3dbe8b40fc72d20a336a17c4150"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-106/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "22efea08d8ba18a88de3335cee78d3b5d99f23a3d57493ae70b97e6322766557"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-107/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "36263117e8f0a664c6831dd148ecd942ff99f818fc5be8c2a41e2deba37130dd"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-108/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "9481f03a5da4c0d981d29c174296d91765ad1c51af7ba69ca9b4320a3b0a28a4"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-109/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "7ecce60f54d61821fcb2f2964c14ca3bc05ae18a5b530649e5b8017243a895aa"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-110/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "e290dfe885a385ee6bef1225682a98c6e18e74b4d9c71e9c126842142a37f620"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-111/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "a792c2177d73bba3500dce02f62975af541c18b133c790d25c9070339595eb06"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-112/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "1d460c411588877242b3025dd7a660334e49962a4320a7006fdb6433ff4ff161"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-113/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "040df4a320eaaf6afa7117fdb3f020a96f7756194523d5900ac975a3ac3a110c"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-114/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "1ca45ba3676b94c08922d8bb05bf8d8e8b7f3c21257b3f948d253f1de60f8b08"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-115/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "422bc00a2c4de0d7c790165454178817913452d44b4b901526513d3a75b6013e"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-116/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "eebfd9453c13131c0b9f5e91213f55efd06577490275af9b78b548ed30f49ced"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-117/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "db24a823a3def6f6cae947920fd5344ecab49dae6cc08de35490c71bc327c49c"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-118/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "769c4a244ff255fc4f1aa2999c0cc1b61690d8ff6dfbff4d38ba5bc44ce83630"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-119/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "93b3cdbfdecbaa5f8cac873339b7f6e438875eb2281e2bc1f2e0bb0ba4b06bcd"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-120/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "233968daba8482d760ce4692af3d37da6d6e5679271c9cc618d7b4e32c084e03"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-121/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "308939dd618fdacdee6660eca829cd1cd76b135de795f3a446f3a368ece9ff47"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-122/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "1d4c632362b04d0552fd1a698db1cebc4b783aefe350143168e2a1876f2e72b1"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-123/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "45878aaf3f7f9132dc085b75e42542c15d63b2ccd9f9a473cc445008827dc915"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/pilot-balanced/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "41b5e3981f0d20724d96b9123ea08303bf991c2553b4455d3076001a68acc9ab"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/pilot-zero/attempts/001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "2a9f7139a0deb74cb1297f8127bf4b4123e17c8dd77233e75d4113ac7184bf42"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-100/attempts/002/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "1d257c2c9b57606a232ad01be4e7f50499f420d7597f56b5ad0e65ac0bef7ca5"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-101/attempts/002/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "c4d4c04bc6d16b3a96abb34414bf175d3ccdd81b1cdb7166cacc0529d73946ff"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-102/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "cdab552e7715495a4e2d7f30d509202a36248775c37c85a477e342e8c2037a61"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-103/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "a8fb60b18c21ec835d6ac6b91bf41bdb0a5eb9dd3713571df8c0433dc31cb3e3"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-104/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "ef73c39cef397ca1db8a6dc5e3d5d20b2ac69a27b44fc34b70fa55bf0a3e5a26"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-105/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "3643351910391bc9ff32455027b82dc6c5550d3cbac1f4c2c665bfbd94f6e52e"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-106/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "eaae1a0d9347bef552668acaec89171157b27f89ba64fdf95f7d06bb04bd476f"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-107/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "97945cb6cf37aa89039b940730fa3c58304491c67bad22f09ac882a794d500d4"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-108/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "c4dc8e6fade216333fd08de5589490016f46181482ecb814b21417db57fa46a0"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-109/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "cf973ac583d0f997bf60ef5739618831c9c7e0d66ed7e0b773eed68027e92701"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-110/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "efff0918de364c748349a616a467408fa9485088ff354e5e58dd400b57d1363b"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-111/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "9ee1258e06fe47375111d1aaad572367d289ae4a6f2136b7142fb3e75ce25992"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-112/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "30a09d407ed2e0f9ebea09f020c5180a8a205cec84ab88ad30a97b482190a0be"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-113/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "ff7896a0b65c36eca159005f09caca26dcef62d2d653e1ebcf372e57e1037d36"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-114/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "6f0e657c0b8c26f70d861b83b398346745d6893c88d193721d8042a9ff4ecc26"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-115/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "c6fbb9bf30bedd6ba04974ded8a62d493d8a9749554a1075d3261685700f3411"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-116/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "5bf8d23db5cfe3d85a2e858b334cfdbb1fada7209fdead2e6d7d0b242895c849"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-117/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "9fc7dff3de12dc8dbbaba59d70be6e5136aa8b3646386c9be3eb26c14d575839"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-118/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "3724eb25817e2b390d42377b2b9c186383cc13b23e1cd51ec49e34b212dba8bf"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-119/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "69ea3d83efa7a49ffec8c9c62a99c6ab9a9178742587bdceec12373b90e84237"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-120/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "978b68519eae2e5450ea015a10d3ec3c3ca1d30535ef6bd7a30be892ab2ad73e"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-121/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "131a64aad28ad61ba53dddbe86c5e05ea6313872fdb5ef0f80859da5f10c7bff"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-122/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "16f77e8182f126f6af91b55eec68db0f1d937dc1a99e29d1fbc7b367603fa72f"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/runs/confirm-123/attempts/001/raw.json",
+          "retention": "retain-with-study",
+          "sha256": "08bc3ddbaf390b4a720ebc9da959e5784d15f904338b2ea0076e1a0415308287"
+        }
+      ],
+      "limitations": [
+        "This synthetic known-answer problem does not establish novelty or improve an LLM research agent.",
+        "The 95% interval is a normal approximation over seed replicates, not an exact small-sample guarantee.",
+        "Averages do not establish an ordering for every individual seed."
+      ],
+      "record_type": "ClaimRecord",
+      "schema_version": "0.2",
+      "scope": "24 prespecified seeds, 64 Rademacher observations per seed, target zero, additive bias 0.25",
+      "status": "contradicted",
+      "supersedes": null,
+      "supporting": [],
+      "text": "The biased estimator has greater squared error on every individual confirmation seed."
+    }
+  ],
+  "material": {
+    "media_type": "text/markdown",
+    "path": "campaigns/toy-v1/analyses/a001/paper/manuscript.md",
+    "retention": "retain-with-study",
+    "sha256": "fe92f55727e05cf475500b5f1c8d8990262f3e7ba9b46bf2f30e6d056e0f9189"
+  },
+  "study": "/Users/iyunseong/maangeek/allagma/build/reproduction-release/allagma-acceptance/generic"
+}
