@@ -6,7 +6,6 @@ from datetime import datetime, timezone
 import fcntl
 import hashlib
 import json
-import math
 import os
 from pathlib import Path, PurePosixPath
 import tempfile
@@ -34,7 +33,10 @@ def digest(value):
 
 
 def file_hash(path):
-    return digest_bytes(Path(path).read_bytes())
+    try:
+        return digest_bytes(Path(path).read_bytes())
+    except OSError as exc:
+        raise AllagmaError(f"Cannot hash artifact {path}: {exc}") from exc
 
 
 def read_json(path):
@@ -130,10 +132,12 @@ def verify_inventory(root, expected):
         raise AllagmaError("Inventory mismatch: " + ", ".join(changes))
 
 
-def reference(root, path, media_type="application/json"):
+def reference(root, path, media_type=None):
     root, path = Path(root).resolve(), Path(path).resolve()
     relative = path.relative_to(root).as_posix()
     confined(root, relative)
+    media_type = media_type or {".json": "application/json", ".yaml": "application/json", ".py": "text/x-python",
+                                ".md": "text/markdown", ".csv": "text/csv", ".txt": "text/plain"}.get(path.suffix, "application/octet-stream")
     return {"path": relative, "sha256": file_hash(path), "media_type": media_type,
             "retention": "retain-with-study"}
 

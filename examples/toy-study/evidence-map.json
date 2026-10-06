@@ -1,0 +1,19 @@
+{
+  "sources": [
+    {
+      "id": "toy-derivation",
+      "title": "Bias\u2013variance identity for a Rademacher mean",
+      "author": "Toy study authors",
+      "year": 2026,
+      "path": "domain/derivation.md",
+      "metadata_checked": true,
+      "support_assessment": {
+        "supports": "Expected MSE difference equals squared bias under independence and a zero-mean generator",
+        "checked_by": "Algebraic expansion in the derivation; zero and balanced pilot controls",
+        "limits": "Does not establish every-sample ordering or empirical agent improvement"
+      }
+    }
+  ],
+  "novelty": "Known analytical identity; no novelty claimed",
+  "search_scope": "Study-owned mathematical source; no external literature review needed for the toy demonstration"
+}

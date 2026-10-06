@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "allagma"
+version = "0.2.0"
+description = "Portable research methods, pinned studies, and traceable evidence"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{name = "Yunsung Lee"}]
+dependencies = []
+
+[project.scripts]
+allagma = "allagma.cli:main"
+
+[tool.setuptools]
+packages = ["allagma"]

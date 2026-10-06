@@ -1,0 +1,281 @@
+{
+  "revision": "toy-v1",
+  "hypothesis": "The mean plus 0.25 has higher expected squared error than the sample mean for zero-mean Rademacher data.",
+  "runner": "domain/runner.py",
+  "evaluator": "domain/evaluator.py",
+  "analyzer": "domain/analyze.py",
+  "writer": "domain/write.py",
+  "code": [
+    "domain/runner.py",
+    "domain/evaluator.py",
+    "domain/analyze.py",
+    "domain/write.py",
+    "domain/derivation.md",
+    "evidence-map.json"
+  ],
+  "uncertainty": "Paired difference mean \u00b1 1.96 sample standard errors across confirmation seeds; normal approximation.",
+  "max_failures_per_run": 2,
+  "completion": "Both known-answer pilots and all 24 confirmation seeds have valid successful attempts.",
+  "runs": [
+    {
+      "id": "pilot-zero",
+      "split": "pilot",
+      "input": {
+        "seed": 1,
+        "n": 64,
+        "bias": 0.25,
+        "control": "zero"
+      }
+    },
+    {
+      "id": "pilot-balanced",
+      "split": "pilot",
+      "input": {
+        "seed": 2,
+        "n": 64,
+        "bias": 0.25,
+        "control": "balanced"
+      }
+    },
+    {
+      "id": "confirm-100",
+      "split": "confirmation",
+      "input": {
+        "seed": 100,
+        "n": 64,
+        "bias": 0.25,
+        "control": "random"
+      }
+    },
+    {
+      "id": "confirm-101",
+      "split": "confirmation",
+      "input": {
+        "seed": 101,
+        "n": 64,
+        "bias": 0.25,
+        "control": "random"
+      }
+    },
+    {
+      "id": "confirm-102",
+      "split": "confirmation",
+      "input": {
+        "seed": 102,
+        "n": 64,
+        "bias": 0.25,
+        "control": "random"
+      }
+    },
+    {
+      "id": "confirm-103",
+      "split": "confirmation",
+      "input": {
+        "seed": 103,
+        "n": 64,
+        "bias": 0.25,
+        "control": "random"
+      }
+    },
+    {
+      "id": "confirm-104",
+      "split": "confirmation",
+      "input": {
+        "seed": 104,
+        "n": 64,
+        "bias": 0.25,
+        "control": "random"
+      }
+    },
+    {
+      "id": "confirm-105",
+      "split": "confirmation",
+      "input": {
+        "seed": 105,
+        "n": 64,
+        "bias": 0.25,
+        "control": "random"
+      }
+    },
+    {
+      "id": "confirm-106",
+      "split": "confirmation",
+      "input": {
+        "seed": 106,
+        "n": 64,
+        "bias": 0.25,
+        "control": "random"
+      }
+    },
+    {
+      "id": "confirm-107",
+      "split": "confirmation",
+      "input": {
+        "seed": 107,
+        "n": 64,
+        "bias": 0.25,
+        "control": "random"
+      }
+    },
+    {
+      "id": "confirm-108",
+      "split": "confirmation",
+      "input": {
+        "seed": 108,
+        "n": 64,
+        "bias": 0.25,
+        "control": "random"
+      }
+    },
+    {
+      "id": "confirm-109",
+      "split": "confirmation",
+      "input": {
+        "seed": 109,
+        "n": 64,
+        "bias": 0.25,
+        "control": "random"
+      }
+    },
+    {
+      "id": "confirm-110",
+      "split": "confirmation",
+      "input": {
+        "seed": 110,
+        "n": 64,
+        "bias": 0.25,
+        "control": "random"
+      }
+    },
+    {
+      "id": "confirm-111",
+      "split": "confirmation",
+      "input": {
+        "seed": 111,
+        "n": 64,
+        "bias": 0.25,
+        "control": "random"
+      }
+    },
+    {
+      "id": "confirm-112",
+      "split": "confirmation",
+      "input": {
+        "seed": 112,
+        "n": 64,
+        "bias": 0.25,
+        "control": "random"
+      }
+    },
+    {
+      "id": "confirm-113",
+      "split": "confirmation",
+      "input": {
+        "seed": 113,
+        "n": 64,
+        "bias": 0.25,
+        "control": "random"
+      }
+    },
+    {
+      "id": "confirm-114",
+      "split": "confirmation",
+      "input": {
+        "seed": 114,
+        "n": 64,
+        "bias": 0.25,
+        "control": "random"
+      }
+    },
+    {
+      "id": "confirm-115",
+      "split": "confirmation",
+      "input": {
+        "seed": 115,
+        "n": 64,
+        "bias": 0.25,
+        "control": "random"
+      }
+    },
+    {
+      "id": "confirm-116",
+      "split": "confirmation",
+      "input": {
+        "seed": 116,
+        "n": 64,
+        "bias": 0.25,
+        "control": "random"
+      }
+    },
+    {
+      "id": "confirm-117",
+      "split": "confirmation",
+      "input": {
+        "seed": 117,
+        "n": 64,
+        "bias": 0.25,
+        "control": "random"
+      }
+    },
+    {
+      "id": "confirm-118",
+      "split": "confirmation",
+      "input": {
+        "seed": 118,
+        "n": 64,
+        "bias": 0.25,
+        "control": "random"
+      }
+    },
+    {
+      "id": "confirm-119",
+      "split": "confirmation",
+      "input": {
+        "seed": 119,
+        "n": 64,
+        "bias": 0.25,
+        "control": "random"
+      }
+    },
+    {
+      "id": "confirm-120",
+      "split": "confirmation",
+      "input": {
+        "seed": 120,
+        "n": 64,
+        "bias": 0.25,
+        "control": "random"
+      }
+    },
+    {
+      "id": "confirm-121",
+      "split": "confirmation",
+      "input": {
+        "seed": 121,
+        "n": 64,
+        "bias": 0.25,
+        "control": "random"
+      }
+    },
+    {
+      "id": "confirm-122",
+      "split": "confirmation",
+      "input": {
+        "seed": 122,
+        "n": 64,
+        "bias": 0.25,
+        "control": "random"
+      }
+    },
+    {
+      "id": "confirm-123",
+      "split": "confirmation",
+      "input": {
+        "seed": 123,
+        "n": 64,
+        "bias": 0.25,
+        "control": "random"
+      }
+    }
+  ]
+}
