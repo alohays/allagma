@@ -95,6 +95,10 @@ class Catalog:
         for step in phases:
             method_id = recipe["roles"].get(step["method"].removeprefix("$"), step["method"])
             method = self.module(method_id)
+            if method_id not in {*module["dependencies"], *recipe["roles"].values()}:
+                raise AllagmaError(f"{module['id']}: undeclared method dependency {method_id}")
+            if set(step["consumes"]) != set(method["inputs"]):
+                raise AllagmaError(f"{module['id']}: input contract disagrees with {method_id}")
             missing = set(step["consumes"]) - available
             if missing:
                 raise AllagmaError(f"{module['id']}: missing handoffs {sorted(missing)}")

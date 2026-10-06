@@ -40,6 +40,23 @@ class Modules(WorkspaceTest):
         with self.assertRaises(AllagmaError):
             Catalog(source).resolve(default_intent("test"))
 
+    def test_recipe_rejects_incompatible_or_undeclared_handoffs(self):
+        source = self.source_copy()
+        path = source / "recipes/allagma-research/recipe.json"
+        recipe = read_json(path)
+        recipe["steps"][2]["consumes"] = ["ContextRecord"]
+        write_json(path, recipe)
+        with self.assertRaisesRegex(AllagmaError, "input contract"):
+            Catalog(source).check("recipe/research")
+        recipe["steps"][2]["consumes"] = ["StudySpec"]
+        write_json(path, recipe)
+        manifest = source / "recipes/allagma-research/module.yaml"
+        metadata = read_json(manifest)
+        metadata["dependencies"].remove("research/protocol")
+        write_json(manifest, metadata)
+        with self.assertRaisesRegex(AllagmaError, "undeclared method dependency"):
+            Catalog(source).check("recipe/research")
+
     def test_dependency_cycle_and_missing_resources_fail(self):
         source = self.source_copy()
         path = source / "methods/allagma-scope/module.yaml"
