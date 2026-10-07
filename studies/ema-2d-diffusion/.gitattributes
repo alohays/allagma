@@ -1,0 +1,4 @@
+# Preserve the exact CSV/Matplotlib bytes used by evidence digests.
+# CRLF records and SVG path whitespace are emitted by those serializers.
+campaigns/**/outputs/*.csv -text -whitespace
+campaigns/**/outputs/*.svg -text -whitespace
