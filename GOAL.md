@@ -1,4 +1,4 @@
-# Allagma v0.2 implementation goal
+# Allagma implementation goals
 
 Fully implement Allagma v0.2 in this repository following the adopted
 [framework design](docs/specification/framework-design.md) and its relevant
@@ -47,6 +47,57 @@ qualification report. Negative or inconclusive findings are valid. Fix
 demonstrated framework defects and run affected checks. Commit coherent
 increments and push to `origin` at completion. Preserve the GUI model choice.
 Use the user-input tool for consequential unresolved choices.
+
+## Allagma v0.3 reusable workflow and evaluation — 8 October 2026
+
+Deliver Allagma v0.3 as a reusable research workflow that lets a fresh Codex
+session turn a research brief, source materials, and resource profile into an
+executed, critically reviewed, reproducible research package.
+
+Build on the current specifications and completed EMA study. Validate three
+tasks: an EMA follow-up separating training-duration and learning-rate-schedule
+effects; modular-addition grokking investigating regularization and
+generalization; and an external computational-reproduction task. Prefer a
+locally compatible CORE-Bench task. If none passes preflight, select a comparable
+open reproduction task and clearly label it a custom evaluation. Preserve the
+source task's scientific requirements and scoring criteria.
+
+Run scientific workloads entirely on this M4 Pro Mac: 14 CPU cores, 20 GPU cores,
+and 48 GB unified memory. Use CPU or PyTorch/MPS and isolated study environments.
+Use existing Codex authentication for agent sessions. Select workloads that fit
+local hardware without requiring CUDA, remote compute, or paid experiment
+services. Use bounded pilots to choose conservative, finite compute, timeout,
+attempt, memory, and storage limits. Track Codex usage separately and respect
+existing account limits.
+
+Extract reusable support from demonstrated needs. Evaluated agents should
+perform planning, implementation, recovery, critique, and reporting from the
+initial brief without task-specific coordinator handholding. Record all
+subsequent assistance. Keep research logic study-owned and the default
+conformance kit offline and standard-library-only.
+
+Compare plain Codex with Codex plus Allagma across three tasks, two conditions,
+and two isolated fresh sessions per condition: 12 evaluation runs. Match the
+underlying model, settings, tools, inputs, and resource ceilings. Freeze the
+workflow and evaluation criteria after development, separate pilot material
+from final evaluation, and protect scorers and reference answers from candidate
+changes. Measure correctness, evidence completeness, completion, interventions,
+and resource use; report failures, regressions, and uncertainty honestly.
+
+Continue through implementation, execution, and fixes until all three task
+packages, the comparison report, and a release candidate are complete. Include
+clean-checkout reproduction of at least one full study from environment setup
+through training or execution, plus recomputation of its reported results.
+Resolve reproduced critical defects, preserve historical evidence and bundles,
+and document the exact validated scope in English with applicable migration
+notes. Follow the existing commit-and-push instructions and preserve the GUI
+model selection.
+
+Make routine decisions autonomously. Use the user-input tool for consequential
+unresolved choices or resource expansion. Negative scientific results and an
+inconclusive baseline comparison are valid outcomes; unfinished or unverified
+work is not completion. The [v0.3 requirement ledger](docs/v0.3/requirements.md)
+tracks evidence against this full scope.
 
 ## Implementation acceptance
 
