@@ -1,0 +1,16 @@
+# Locked Allagma catalog
+
+- `context/active-brief`: [SKILL.md](methods/allagma-context-active-brief/SKILL.md)
+- `host/codex`: [README.md](adapters/codex/README.md)
+- `host/generic`: [README.md](adapters/generic/README.md)
+- `policy/local`: [README.md](policies/local/README.md)
+- `profile/default`: [README.md](profiles/default/README.md)
+- `recipe/research`: [SKILL.md](recipes/allagma-research/SKILL.md)
+- `research/analysis`: [SKILL.md](methods/allagma-analysis/SKILL.md)
+- `research/audit`: [SKILL.md](methods/allagma-audit/SKILL.md)
+- `research/experiment`: [SKILL.md](methods/allagma-experiment/SKILL.md)
+- `research/protocol`: [SKILL.md](methods/allagma-protocol/SKILL.md)
+- `research/scope`: [SKILL.md](methods/allagma-scope/SKILL.md)
+- `research/writing`: [SKILL.md](methods/allagma-writing/SKILL.md)
+- `reviewer/checklist`: [README.md](adapters/reviewer-checklist/README.md)
+- `runner/local-process`: [README.md](adapters/local-process/README.md)

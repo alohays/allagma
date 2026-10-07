@@ -1,0 +1,27 @@
+test_data_partitions (__main__.ScienceTests.test_data_partitions) ... ok
+test_ema_exact_constant_decay (__main__.ScienceTests.test_ema_exact_constant_decay) ... ok
+test_mode_coverage_controls (__main__.ScienceTests.test_mode_coverage_controls) ... ok
+test_mps_model_and_ema (__main__.ScienceTests.test_mps_model_and_ema) ... FAIL
+test_projected_w1_known_translation (__main__.ScienceTests.test_projected_w1_known_translation) ... FAIL
+test_schedule_known_inversion (__main__.ScienceTests.test_schedule_known_inversion) ... ok
+
+======================================================================
+FAIL: test_mps_model_and_ema (__main__.ScienceTests.test_mps_model_and_ema)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/domain/test_science.py", line 53, in test_mps_model_and_ema
+    self.assertEqual(sum(p.numel() for p in cpu.parameters()), 296962)
+AssertionError: 296450 != 296962
+
+======================================================================
+FAIL: test_projected_w1_known_translation (__main__.ScienceTests.test_projected_w1_known_translation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/domain/test_science.py", line 17, in test_projected_w1_known_translation
+    self.assertEqual(wasserstein_distance(x[:,0], x[:,0]+2), 2.)
+AssertionError: np.float64(2.0000000000000004) != 2.0
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.032s
+
+FAILED (failures=2)

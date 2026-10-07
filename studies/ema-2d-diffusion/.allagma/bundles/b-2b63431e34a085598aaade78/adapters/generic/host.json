@@ -1,0 +1,15 @@
+{
+  "host": "generic",
+  "entrypoint": "ALLAGMA.md",
+  "capability_mapping": {
+    "artifact.read": "read study-local files or inject their exact content",
+    "artifact.write": "write authorized study artifacts",
+    "execution.local": "authorized local command execution"
+  },
+  "optional": [],
+  "fallbacks": {
+    "native_subagents": "sequential file handoffs",
+    "native_skills": "read the generic catalog"
+  },
+  "qualification": "contract checked; real-host activation not claimed"
+}
