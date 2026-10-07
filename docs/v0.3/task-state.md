@@ -136,3 +136,23 @@ Poll that handle or its actual process; do not restart based on a file or an
 observation timeout. Next is r04. Account usage before r03 was 13% weekly,
 ordinary use allowed. Ten final runs and the remaining task packages, comparison
 report and release audit are still required. Frozen controls remain unchanged.
+
+## Shared MPS defect discovered during r03
+
+Run r03 is still live (exec session 88620). Its pilot reproduced
+`RuntimeError: invalid low watermark ratio 1.4`: the frozen common broker sets
+MPS HIGH=0.2 and leaves LOW unset (default 1.4). The allocator requires LOW <=
+HIGH. The candidate retained the failure and continued on CPU, within the same
+limits. No coordinator hint was sent and no frozen source changed.
+
+`docs/v0.3/defects.md` and the linked receipt retain the exact evidence and the
+qualification gap. The earlier sandbox MPS probe did not exercise the broker's
+full environment prefix. A corrected release must set a compatible low watermark
+without raising HIGH, and validate actual MPS work through the full broker.
+
+An optional user-input question offers finishing this frozen cohort with the
+shared defect disclosed and a separately validated correction (recommended),
+or archiving/restarting all 12 runs under a repaired freeze. Preserve the live
+run meanwhile. If no answer arrives, continue the originally authorized frozen
+comparison with explicit limitations, then repair/validate before release;
+never silently edit the frozen controls or claim corrected-path performance.
