@@ -1,0 +1,29 @@
+{
+  "archive_sha256": "1a29828b20895dd5430ddf10bb0ffd18244c48bd0fa75b836cf9571e541ebf67",
+  "audit": {
+    "analysis_repetitions": 1,
+    "checked_references": 521,
+    "findings": [],
+    "limitations": [
+      "No independent scientific peer review or real-model quality evaluation."
+    ],
+    "review": {
+      "media_type": "application/json",
+      "path": "campaigns/toy-v1/analyses/a001/reviews/review-002/record.json",
+      "retention": "retain-with-study",
+      "sha256": "81591dc7e7d4c6986f49fe3d06c57a33fb21c3e27926b5da1cdf4ef0317f5e5a"
+    },
+    "stale_claims": [],
+    "verdict": "pass"
+  },
+  "operation": "Extract retained archive into a new directory and rerun the pinned generic campaign audit",
+  "proof_inventory": {
+    "campaigns/toy-v1/analyses/a001/reviews/review-002/adapter-result.json": "9c40d222178102c0e002a95cd63d53b1af3187c4a847bc233e5c181b568f38cd",
+    "campaigns/toy-v1/analyses/a001/reviews/review-002/audit.json": "2fb11ae3ae3f2ac0ea518a337095c3ea88ba75099e765a9270b9acfbd1a6a479",
+    "campaigns/toy-v1/analyses/a001/reviews/review-002/execution.json": "2111955d6946b9a9d18078d13758cead95194babb65de82c2636665f687328bd",
+    "campaigns/toy-v1/analyses/a001/reviews/review-002/input.json": "d1464c8a10ee9cb48dff3f0dd408dd167609e50dc0a049710b69e8c6108d127b",
+    "campaigns/toy-v1/analyses/a001/reviews/review-002/record.json": "81591dc7e7d4c6986f49fe3d06c57a33fb21c3e27926b5da1cdf4ef0317f5e5a"
+  },
+  "proof_overlay": "reproduction/",
+  "status": "pass"
+}

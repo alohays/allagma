@@ -1,51 +1,56 @@
-# Allagma v0.2 implementation
+# Allagma v0.2 implementation and audit
 
 Target: the four adopted specifications in `docs/specification/`, originally
 dated 6 October 2026. Noemetric's scientific experiments are a separate study.
 
-The [post-delivery self-audit](audit/README.md) found gaps beyond the original
-tests. Corrections are undergoing fresh qualification. The receipts below
-describe the original delivered source until replaced by the completed audit.
+The [post-delivery self-audit](audit/README.md) found and corrected 13 groups of
+defects or missing requirements. The [requirement map](audit/requirements.md)
+identifies the evidence and limits for each obligation. Earlier passing tests
+did not cover all of these cases; their original evidence remains preserved.
 
-| Milestone | Required demonstration | Implementation status |
+| Milestone | Required demonstration | Audited status |
 | --- | --- | --- |
-| I1 | Same contracts and artifacts through generic, Codex and Claude Code entrypoints; no native hooks or subagents | Passed |
+| I1 | Same contracts and artifacts through generic, Codex and Claude Code entrypoints; no native hooks or subagents | Passed within the declared packaging scope |
 | I2 | Swap context method, reviewer adapter and recipe without rewriting other modules | Passed |
 | I3 | One-module contribution, targeted offline conformance, lifecycle and ownership | Passed |
 | I4 | Exact bundles, configuration provenance, update reconciliation, migration, rollback and historical resume | Passed |
-| I5 | Actual toy raw data, recomputation, claims, manuscript, success/failure/interruption | Passed |
+| I5 | Actual toy raw data, recomputation, sensitivity, figure, claims, manuscript, success/failure/interruption | Passed |
 
 Validated on 7 October 2026 (Asia/Seoul). The
-[acceptance receipt](evidence/acceptance.json) reports **51 passing conformance
-tests with no skips** and all five executable acceptance scenarios passing.
-The generic toy campaign retained 26 successes, one failure and one interruption;
-its deterministic audit verified **411 distinct evidence references**. The
-replacement, partial-budget, lifecycle and migration cases have their own
-retained artifacts.
+[fresh acceptance receipt](audit/evidence/acceptance.json) records **75 passing
+conformance tests with no skips** and all five executable acceptance scenarios.
+The generic toy retains 26 successes, one failure and one interruption. Its
+deterministic audit verifies **521 distinct evidence references**. A separate
+limited-budget study produces an explicitly partial manuscript.
 
-[Independent validation](evidence/external-validation.json) checked eight JSON
-schemas, 629 record occurrences and 293 skill files using jsonschema, PyYAML and
-the Skill Creator validator. This is structural/packaging assurance. The
-[archive reproduction receipt](evidence/archive-reproduction.json) confirms that
-the retained evidence was extracted elsewhere and re-audited successfully.
+[Independent schema/packaging validation](audit/evidence/external-validation.json)
+checks eight schemas, 643 record occurrences and 290 skill files. RFC 3339
+timestamp validation is installed. A separate
+[1,557-case differential check](audit/evidence/contract-differential.json) agrees
+with the independent JSON Schema implementation.
 
-The [complete evidence archive](evidence/acceptance.tar.gz) contains 5,169 files;
-its inventory and digest are in [archive-manifest.json](evidence/archive-manifest.json).
-See [the acceptance guide](acceptance.md) for reproduction commands and scope.
+The [independent scientific calculation](audit/evidence/independent-science.json)
+uses rational arithmetic without importing the study implementation. It verifies
+eligibility, primary/sensitivity tables, figure data, claims and manuscript
+numbers. The original mean MSE difference remains `25/384`. All 24
+leave-one-seed-out means are positive, ranging from `0.06182065` to `0.07269022`.
+The [SVG figure](audit/paired-differences.svg) was also visually inspected.
 
-The accepted distributable source revision is
-`sha256:8a7d9cac866cf864f02446cb56a83cd40469629d7698cdefb443122a2ce8270b`.
-English contributor guides, governance, ownership, release/migration notes,
-issue/PR templates and targeted CI are present. The requested commit-and-push
-instruction is recorded in [GOAL.md](../GOAL.md); the delivery target is
-`origin/main`.
+The [complete evidence archive](audit/evidence/acceptance.tar.gz) contains
+**5,839 files**. Its [inventory and digest](audit/evidence/archive-manifest.json)
+cover the exact bundles, raw attempts, comparisons and update/migration cases.
+[Archive reproduction](audit/evidence/archive-reproduction.json) passed after
+extraction elsewhere using the pinned helper, with the new review retained.
+The [original evidence](evidence/README.md) describes the earlier source only.
 
-The default kit uses Python 3.11+ without paid APIs, GPU or third-party runtime
-dependencies. JSON-compatible YAML is the on-disk configuration encoding.
-Content-addressed local source snapshots identify unpublished releases; no
-public release, publication, or real-model quality claim is implied.
+Accepted distributable source revision:
+`sha256:fe61419ac78231ab0fcc0d70f77714f6946cbdb1bd72ce3a360313850855e100`.
+Study examples and conformance sources have separate captured inventories.
+English technical documentation, contribution materials and the
+[commit-and-push instruction](../GOAL.md) remain in the repository.
 
-Native Codex and Claude Code packaging is format/contract checked. Real native
-activation, hosted-model behavior and independent scientific review remain
-separate qualifications, as required by the support-scope distinction in the
-specification. Noemetric experiments remain outside this implementation goal.
+The default kit uses Python 3.11+ on POSIX, without paid APIs, GPU or third-party
+Python runtime dependencies. Source snapshots remain unpublished. Historical
+bundles keep their old helpers; adopt the corrected source explicitly for new
+campaigns. Native Codex/Claude activation, model quality and independent
+scientific peer review remain unperformed qualifications.

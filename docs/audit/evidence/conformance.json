@@ -1,0 +1,307 @@
+{
+  "cases": [
+    {
+      "status": "pass",
+      "test": "conformance.test_audit.Audit.test_configuration_matches_budget_schema"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_audit.Audit.test_export_rejects_source_changes_during_copy"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_audit.Audit.test_failed_campaign_creation_does_not_publish_partial_campaign"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_audit.Audit.test_helper_timeout_cleans_descendants"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_audit.Audit.test_interrupted_attempt_preparation_can_resume"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_audit.Audit.test_json_exponent_overflow_is_rejected"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_audit.Audit.test_method_update_does_not_claim_scaffold_migration"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_audit.Audit.test_new_analysis_does_not_inherit_review_assurance"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_audit.Audit.test_omitted_frozen_material_is_rejected"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_audit.Audit.test_partial_analysis_recovers_interrupted_attempt_before_manifest"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_audit.Audit.test_protocol_changes_require_revision_and_amendment_lineage"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_audit.Audit.test_recipe_cannot_disable_reproduction"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_audit.Audit.test_recovery_preserves_post_interruption_user_edits"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_audit.Audit.test_reference_rejects_symlink_alias"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_audit.Audit.test_replacement_does_not_resolve_unused_default"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_audit.Audit.test_review_retry_preserves_incomplete_review_directory"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_audit.Audit.test_scaffold_baseline_uses_selected_release"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_audit.Audit.test_study_metadata_cannot_disagree_with_frozen_lock"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_audit.Audit.test_timestamp_requires_rfc3339_time_and_zone"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_audit.Audit.test_toy_executes_the_selected_source_helper"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_audit.Audit.test_unset_resources_do_not_authorize_execution"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_audit.Audit.test_worker_cleans_descendants_after_leader_exits"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_audit.Audit.test_worker_escalates_for_descendant_ignoring_termination"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_contracts.Contracts.test_configuration_cannot_expand_authorization_or_store_secrets"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_contracts.Contracts.test_configuration_precedence_and_origins"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_contracts.Contracts.test_immutable_artifact_cannot_be_replaced"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_contracts.Contracts.test_json_reader_rejects_duplicate_and_nonfinite_values"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_contracts.Contracts.test_numbers_are_finite_and_booleans_are_not_integers"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_contracts.Contracts.test_records_are_closed_and_versioned"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_contracts.Contracts.test_references_detect_changes_and_confine_paths"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_contracts.Contracts.test_required_context_survives_small_budget_and_missing_fields_fail"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_contracts.Contracts.test_schema_rejects_unknown_validation_keywords"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_contracts.Contracts.test_symlinks_cannot_be_bundled_or_used_as_evidence"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_improvement.Improvement.test_costlier_alternative_is_rejected_and_preserved"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_improvement.Improvement.test_environment_failure_is_unevaluated_not_rejected"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_modules.Modules.test_a_contributor_can_add_and_check_one_module"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_modules.Modules.test_all_module_contracts_and_portable_frontmatter"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_modules.Modules.test_alternative_requires_explicit_selection"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_modules.Modules.test_dependency_cycle_and_missing_resources_fail"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_modules.Modules.test_incompatible_role_replacement_fails"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_modules.Modules.test_missing_capability_does_not_drop_a_check"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_modules.Modules.test_recipe_rejects_incompatible_or_undeclared_handoffs"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_modules.Modules.test_retired_modules_cannot_enter_new_selection"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_research.Research.test_alternative_recipe_and_adapters_complete_the_same_handoffs"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_research.Research.test_analysis_does_not_overwrite_an_earlier_revision"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_research.Research.test_analysis_includes_seed_sensitivity_and_reproducible_figure"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_research.Research.test_budget_stops_before_an_extra_attempt"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_research.Research.test_complete_workflow_records_success_failure_and_interruption"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_research.Research.test_confirmation_is_blocked_after_a_failed_pilot"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_research.Research.test_controller_crash_is_retained_as_a_separate_attempt"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_research.Research.test_frozen_scientific_code_cannot_change_during_resume"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_research.Research.test_missing_or_changed_success_outputs_are_not_silently_rerun"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_research.Research.test_pilot_and_confirmation_overlap_is_rejected"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_research.Research.test_raw_tampering_stales_dependent_claims"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_research.Research.test_reanalysis_and_relocation_preserve_results"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_research.Research.test_repeated_failures_stop_automatically"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_research.Research.test_resume_does_not_rerun_valid_successes"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_research.Research.test_review_is_not_reused_for_edited_manuscript"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_versions.Versions.test_adoption_requires_validation_and_a_campaign_boundary"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_versions.Versions.test_campaign_start_dispatches_to_the_pinned_helper"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_versions.Versions.test_central_edits_and_profiles_do_not_change_a_campaign"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_versions.Versions.test_existing_entrypoints_are_preserved_and_namespaced"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_versions.Versions.test_export_is_closed_and_same_across_hosts"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_versions.Versions.test_generated_bundle_and_entrypoint_edits_block_updates"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_versions.Versions.test_interrupted_adoption_restores_the_preimage"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_versions.Versions.test_interrupted_multi_file_migration_is_recoverable"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_versions.Versions.test_local_variant_is_snapshotted_and_source_edits_are_detected"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_versions.Versions.test_plan_is_read_only_to_active_files_and_detects_late_changes"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_versions.Versions.test_resealed_lock_cannot_misidentify_module_or_release"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_versions.Versions.test_rollback_preserves_unadopted_intent_edits"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_versions.Versions.test_scaffold_conflicts_and_post_migration_edits_are_preserved"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_versions.Versions.test_scaffold_three_way_migration_and_inverse"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_versions.Versions.test_update_retirement_historical_resume_and_full_rollback"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_worker.Worker.test_per_attempt_timeout_is_a_failed_record"
+    },
+    {
+      "status": "pass",
+      "test": "conformance.test_worker.Worker.test_worker_enforces_deadline_after_controller_is_killed"
+    }
+  ],
+  "skipped": 0,
+  "successful": true,
+  "tests_run": 75
+}

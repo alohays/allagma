@@ -50,6 +50,9 @@ See [acceptance evidence](docs/acceptance.md) and the generated report for
 the exact tested scope. Native-host packaging and contract tests are separate
 from real-host activation and model-quality qualification.
 
+The [post-delivery self-audit](docs/audit/README.md) records the defects found,
+their corrections, independent checks and a requirement-by-requirement map.
+
 ## Start your own study
 
 ```sh

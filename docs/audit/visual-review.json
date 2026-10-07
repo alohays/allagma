@@ -1,0 +1,12 @@
+{
+  "artifact": "paired-differences.svg",
+  "checks": [
+    "All 24 seed labels and dots are visible",
+    "Title, legend, axes and tick labels are legible without overlap",
+    "Counterexamples and zero/mean reference lines match the independent numeric audit"
+  ],
+  "renderer": "macOS Quick Look thumbnail, inspected at 1000 pixels",
+  "sha256": "800452621fa043c92e460149422b4291838ec5426930c60fa76a2d9094d78c10",
+  "source_match": "Rendered SVG is byte-identical to final accepted SVG",
+  "status": "pass"
+}

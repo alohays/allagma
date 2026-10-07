@@ -3,7 +3,7 @@
 The executable acceptance command builds fresh studies, runs conformance and
 retains a machine-readable report. It marks a milestone passing only after the
 associated scenarios execute successfully. This document maps the criteria to
-the implementation; `docs/evidence/acceptance.json` records the qualified source
+the implementation; `docs/audit/evidence/acceptance.json` records the qualified source
 and actual results.
 
 ```sh
@@ -16,7 +16,7 @@ python3 -m allagma acceptance --output build/acceptance
 | I2 — replaceable composition | Independent context-only, reviewer-only and recipe-only replacements complete the workflow; shared module revisions are unchanged; controlled comparisons retain adoption and rejection decisions |
 | I3 — contributor path | A fixture adds one module and runs its targeted example without an account; conformance, governance, ownership, issue/PR templates and authoring guidance are present |
 | I4 — versioned studies | Central/profile isolation, update-stage receipts, generated-file conflicts, contract mismatch, coexistence, retirement, historical resume, complete rollback and separate scaffold migration/inverse |
-| I5 — research walkthrough | 26 successful runs (2 pilots + 24 confirmation), 1 failed and 1 interrupted attempt; raw manifest, recomputed table, supported/contradicted claims, manuscript and exact-revision audit; a separate limited-budget partial manuscript |
+| I5 — research walkthrough | 26 successful runs (2 pilots + 24 confirmation), 1 failed and 1 interrupted attempt; raw manifest, recomputed tables, sensitivity, figure, supported/contradicted claims, manuscript and exact-revision audit; a separate limited-budget partial manuscript |
 
 The conformance receipt additionally includes controller crashes, worker
 timeouts after controller death, stale evidence, duplicate/overlapping inputs,
@@ -31,14 +31,15 @@ a separate JSON Schema implementation and a YAML parser/skill validator.
 ## Retained and reproducible evidence
 
 The repository retains a compressed acceptance tree plus plain JSON receipts
-under `docs/evidence/`. The archive includes every toy raw observation and
+under `docs/audit/evidence/`. The original archive in `docs/evidence/` is retained
+as historical evidence. The audited archive includes every toy raw observation and
 attempt, exact bundles, protocols, comparison candidates, update histories,
 migration examples, manuscripts and review traces. Its inventory and SHA-256
 are recorded in `archive-manifest.json`.
 
 ```sh
 mkdir -p work/reproduction
-tar -xzf docs/evidence/acceptance.tar.gz -C work/reproduction
+tar -xzf docs/audit/evidence/acceptance.tar.gz -C work/reproduction
 python3 -m allagma campaign audit \
   --study work/reproduction/allagma-acceptance/generic --campaign toy-v1
 ```

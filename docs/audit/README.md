@@ -68,9 +68,20 @@ The fixes preserve historical bundles. Updating central source does not repair
 an already pinned old helper; new campaigns must explicitly adopt the corrected
 source. Existing campaigns retain their original source and evidence.
 
-## Audit status
+## Qualified result and limits
 
-The reproduced cases are corrected. Requirement mapping, independent scientific
-verification and refreshed final acceptance evidence are still in progress.
-The original archive remains historical evidence for the baseline, not proof
-that the corrections have been qualified.
+All 13 finding groups are corrected and the [requirement map](requirements.md)
+is complete. [Fresh acceptance](evidence/acceptance.json) passes I1–I5 and all
+75 conformance tests with no skips. The retained
+[archive and supporting receipts](evidence/README.md) include independent
+schema/skill checks, 1,557 differential cases, rational arithmetic, and successful
+reproduction after relocation. The [figure](paired-differences.svg) has a
+separate [visual inspection receipt](visual-review.json).
+
+The accepted source revision is
+`sha256:fe61419ac78231ab0fcc0d70f77714f6946cbdb1bd72ce3a360313850855e100`.
+There are no unresolved reproduced findings in the audited scope. This does not
+prove absence of every possible defect. Native model activation and research
+quality, independent scientific peer review and containment of hostile code
+remain explicitly outside the qualification. Existing pinned old helpers are
+not silently upgraded. The original archive is retained as historical evidence.

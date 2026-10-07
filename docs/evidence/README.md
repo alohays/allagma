@@ -1,5 +1,9 @@
 # Retained v0.2 acceptance evidence
 
+This is historical evidence for the initial delivered source. The
+[self-audit](../audit/README.md) found gaps in that implementation; use the
+[audited evidence](../audit/evidence/README.md) for the corrected source.
+
 - [Acceptance report](acceptance.json): exact source, environment, I1–I5 checks
   and artifact paths within the archive.
 - [Conformance receipt](conformance.json) and [log](conformance.log): 51 passing
