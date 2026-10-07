@@ -42,6 +42,24 @@ The analysis and manuscript must identify this limitation. A budget stop with
 too little evidence still writes a partial execution report. Never invent a
 statistical result to fill an incomplete package.
 
+A changed protocol in an existing study needs a new `revision` and an
+`amendment` object. For example:
+
+```json
+{
+  "from_campaign": "pilot-1",
+  "reason": "Add the sensitivity analysis motivated by pilot variance",
+  "affected_runs": ["pilot-zero"]
+}
+```
+
+The named parent campaign must exist; affected IDs identify its declared runs
+(an explicit empty list means no earlier run is affected). Campaign creation
+retains an `amendment.json` receipt linking the exact earlier protocol. An
+unchanged protocol can be repeated without an amendment. Earlier campaigns
+and their results are preserved. Study-owned analysis and writing must still
+match the amended scientific question and protocol.
+
 Use a new `--analysis-id` for a changed analysis. The same identifier cannot
 overwrite an earlier record. Review histories similarly retain each verdict
 and its exact material revision. External reviewer adapters can implement the

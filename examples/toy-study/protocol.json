@@ -1,5 +1,5 @@
 {
-  "revision": "toy-v1",
+  "revision": "toy-v2",
   "hypothesis": "The mean plus 0.25 has higher expected squared error than the sample mean for zero-mean Rademacher data.",
   "runner": "domain/runner.py",
   "evaluator": "domain/evaluator.py",
@@ -14,6 +14,8 @@
     "evidence-map.json"
   ],
   "uncertainty": "Paired difference mean \u00b1 1.96 sample standard errors across confirmation seeds; normal approximation.",
+  "sensitivity": "Recompute the mean paired difference after omitting each confirmation seed once; report its range and positive count.",
+  "figure": "Plot every confirmation seed's paired difference with zero and overall mean reference lines.",
   "max_failures_per_run": 2,
   "completion": "Both known-answer pilots and all 24 confirmation seeds have valid successful attempts.",
   "runs": [

@@ -153,7 +153,7 @@ def reference(root, path, media_type=None):
             raise AllagmaError(f"Evidence path is outside its root: {path}") from exc
     path = confined(root, relative)
     media_type = media_type or {".json": "application/json", ".yaml": "application/json", ".py": "text/x-python",
-                                ".md": "text/markdown", ".csv": "text/csv", ".txt": "text/plain"}.get(path.suffix, "application/octet-stream")
+                                ".md": "text/markdown", ".csv": "text/csv", ".svg": "image/svg+xml", ".txt": "text/plain"}.get(path.suffix, "application/octet-stream")
     return {"path": relative, "sha256": file_hash(path), "media_type": media_type,
             "retention": "retain-with-study"}
 

@@ -1,0 +1,14 @@
+test_analysis_includes_seed_sensitivity_and_reproducible_figure (conformance.test_research.Research.test_analysis_includes_seed_sensitivity_and_reproducible_figure) ... FAIL
+
+======================================================================
+FAIL: test_analysis_includes_seed_sensitivity_and_reproducible_figure (conformance.test_research.Research.test_analysis_includes_seed_sensitivity_and_reproducible_figure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_research.py", line 56, in test_analysis_includes_seed_sensitivity_and_reproducible_figure
+    self.assertIn("leave_one_seed_out", values)
+AssertionError: 'leave_one_seed_out' not found in {'biased_mse': 0.08040364583333333, 'ci95_normal': [0.039851041785294965, 0.09035729154803837], 'counterexample_seeds': [104, 108, 118, 121], 'difference': 0.06510416666666667, 'mean_mse': 0.015299479166666666, 'method': 'paired differences across seeds; normal approximation, 1.96 standard errors', 'replicates': 24, 'samples_per_replicate': 64, 'standard_error': 0.012884247388454952}
+
+----------------------------------------------------------------------
+Ran 1 test in 5.521s
+
+FAILED (failures=1)

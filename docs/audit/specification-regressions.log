@@ -1,0 +1,56 @@
+test_protocol_changes_require_revision_and_amendment_lineage (conformance.test_audit.Audit.test_protocol_changes_require_revision_and_amendment_lineage) ... FAIL
+test_omitted_frozen_material_is_rejected (conformance.test_audit.Audit.test_omitted_frozen_material_is_rejected) ... FAIL
+test_study_metadata_cannot_disagree_with_frozen_lock (conformance.test_audit.Audit.test_study_metadata_cannot_disagree_with_frozen_lock) ... FAIL
+test_scaffold_baseline_uses_selected_release (conformance.test_audit.Audit.test_scaffold_baseline_uses_selected_release) ... FAIL
+test_method_update_does_not_claim_scaffold_migration (conformance.test_audit.Audit.test_method_update_does_not_claim_scaffold_migration) ... FAIL
+
+======================================================================
+FAIL: test_protocol_changes_require_revision_and_amendment_lineage (conformance.test_audit.Audit.test_protocol_changes_require_revision_and_amendment_lineage)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_audit.py", line 146, in test_protocol_changes_require_revision_and_amendment_lineage
+    with self.assertRaises(AllagmaError):
+AssertionError: AllagmaError not raised
+
+======================================================================
+FAIL: test_omitted_frozen_material_is_rejected (conformance.test_audit.Audit.test_omitted_frozen_material_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_audit.py", line 166, in test_omitted_frozen_material_is_rejected
+    with self.assertRaises(AllagmaError):
+AssertionError: AllagmaError not raised
+
+======================================================================
+FAIL: test_study_metadata_cannot_disagree_with_frozen_lock (conformance.test_audit.Audit.test_study_metadata_cannot_disagree_with_frozen_lock)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_audit.py", line 176, in test_study_metadata_cannot_disagree_with_frozen_lock
+    with self.assertRaises(AllagmaError):
+AssertionError: AllagmaError not raised
+
+======================================================================
+FAIL: test_scaffold_baseline_uses_selected_release (conformance.test_audit.Audit.test_scaffold_baseline_uses_selected_release)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_audit.py", line 185, in test_scaffold_baseline_uses_selected_release
+    self.assertEqual(read_json(study / ".allagma/scaffold-baseline.json")["version"], "2")
+AssertionError: '1' != '2'
+- 1
++ 2
+
+
+======================================================================
+FAIL: test_method_update_does_not_claim_scaffold_migration (conformance.test_audit.Audit.test_method_update_does_not_claim_scaffold_migration)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_audit.py", line 195, in test_method_update_does_not_claim_scaffold_migration
+    self.assertEqual(candidate["scaffold"]["version"], "1")
+AssertionError: '2' != '1'
+- 2
++ 1
+
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.145s
+
+FAILED (failures=5)

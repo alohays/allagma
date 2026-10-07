@@ -42,7 +42,7 @@ class Research(WorkspaceTest):
         self.assertGreater(values["ci95_normal"][0], 0)
         self.assertTrue(values["counterexample_seeds"])
         claims = read_json(self.fixture / "campaigns/toy-v1/analyses/a001/paper/claims.json")
-        self.assertEqual([item["status"] for item in claims], ["supported", "contradicted"])
+        self.assertEqual([item["status"] for item in claims], ["supported", "contradicted", "supported"])
 
     def test_resume_does_not_rerun_valid_successes(self):
         study = self.clone()
@@ -50,13 +50,24 @@ class Research(WorkspaceTest):
         run_campaign(study, "toy-v1")
         self.assertEqual(inventory(study / "campaigns/toy-v1/runs"), before)
 
+    def test_analysis_includes_seed_sensitivity_and_reproducible_figure(self):
+        directory = self.fixture / "campaigns/toy-v1/analyses/a001"
+        values = read_json(directory / "outputs/summary.json")
+        self.assertIn("leave_one_seed_out", values)
+        sensitivity = values["leave_one_seed_out"]
+        self.assertEqual(sensitivity["replicates"], 24)
+        self.assertEqual(sensitivity["positive_count"], 24)
+        self.assertGreater(sensitivity["minimum_difference"], 0)
+        self.assertTrue((directory / "outputs/paired-differences.svg").is_file())
+        self.assertIn("paired-differences.svg", (directory / "paper/manuscript.md").read_text())
+
     def test_raw_tampering_stales_dependent_claims(self):
         study = self.clone()
         path = study / "campaigns/toy-v1/runs/confirm-102/attempts/001/raw.json"
         raw = read_json(path); raw["samples"][0] *= -1; write_json(path, raw)
         result = audit_campaign(study, "toy-v1")
         self.assertEqual(result["verdict"], "revise")
-        self.assertEqual(set(result["stale_claims"]), {"C1", "C2"})
+        self.assertEqual(set(result["stale_claims"]), {"C1", "C2", "C3"})
         self.assertTrue(any("Missing or changed evidence" in finding for finding in result["findings"]))
         self.assertEqual(read_json(study / "campaigns/toy-v1/state.json")["execution_status"], "needs_revision")
 

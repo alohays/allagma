@@ -138,7 +138,7 @@ def build_bundle(source, study, intent, destination, *, _local_prepared=False):
                         for key in composition["modules"]},
             "contracts": catalog.release["contracts"], "hosts": intent["hosts"],
             "capabilities": config["capabilities"], "generator_version": __version__,
-            "scaffold": {"version": catalog.release["scaffold_version"], "answers": {"study_id": intent["study_id"]}},
+            "scaffold": {key: read_json(Path(study) / ".allagma/scaffold-baseline.json")[key] for key in ("version", "answers")},
             "effective_configuration": config, "configuration_origins": origins,
             "profile_provenance": provenance, "configuration_inputs": inputs,
             "intent_digest": digest(intent), "created_at": utcnow()}
@@ -312,7 +312,7 @@ def initialize(source, study, *, study_id="study", intent=None):
             baseline[name] = data.decode()
             if not confined(study, name).exists():
                 write_bytes(confined(study, name), data, immutable=True)
-        write_json(study / ".allagma/scaffold-baseline.json", {"version": "1", "answers": {"study_id": intent["study_id"]}, "files": baseline}, immutable=True)
+        write_json(study / ".allagma/scaffold-baseline.json", {"version": Catalog(source).release["scaffold_version"], "answers": {"study_id": intent["study_id"]}, "files": baseline}, immutable=True)
         with tempfile.TemporaryDirectory(prefix="allagma-export-") as temp:
             candidate = Path(temp) / "bundle"
             lock = build_bundle(source, study, intent, candidate)
@@ -369,6 +369,8 @@ def plan_update(source, study):
                     "removed_modules": sorted(old["modules"].keys() - lock["modules"].keys()),
                     "changed_paths": changed, "configuration_changed": old["effective_configuration"] != lock["effective_configuration"],
                     "scaffold_migration": "separate operation; no study-owned files are replaced",
+                    "target_scaffold_version": Catalog(source).release["scaffold_version"],
+                    "scaffold_baseline_digest": file_hash(study / ".allagma/scaffold-baseline.json"),
                     "contracts_compatible": lock["contracts"] == old["contracts"]}
             write_json(directory / "plan.json", plan, immutable=True)
             _event(directory, "plan", target=lock["source_revision"])
@@ -387,6 +389,8 @@ def _update(study, update_id):
     active = verify_study(study, freshness=False)
     if active["lock_id"] != plan["base_lock_id"]:
         raise AllagmaError("Active lock changed since planning; create a new plan")
+    if "scaffold_baseline_digest" in plan and file_hash(Path(study) / ".allagma/scaffold-baseline.json") != plan["scaffold_baseline_digest"]:
+        raise AllagmaError("Scaffold changed since update planning; create a new plan")
     if not plan["contracts_compatible"]:
         raise AllagmaError("Contract migration required before adoption")
     verify_lock(study, lock, directory=directory / "bundle")

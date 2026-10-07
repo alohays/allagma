@@ -56,9 +56,51 @@ def _load(study, campaign):
     lock = verify_lock(study, read_json(directory / "lock.yaml"))
     spec = read_json(directory / "study.json")
     validate_record(spec)
-    verify_reference(study, spec["lock"])
-    verify_reference(study, spec["protocol"])
-    return directory, lock, read_json(directory / "protocol.json")
+    for name in ("lock", "protocol"):
+        path = directory / ("lock.yaml" if name == "lock" else "protocol.json")
+        if verify_reference(study, spec[name]) != path:
+            raise AllagmaError(f"StudySpec {name} does not reference its own campaign")
+    protocol = read_json(directory / "protocol.json")
+    brief = read_json(directory / "brief.json")
+    for key in ("release", "bundle_id", "capabilities", "effective_configuration", "configuration_origins", "profile_provenance"):
+        if spec[key] != lock[key]:
+            raise AllagmaError(f"StudySpec disagrees with the frozen lock: {key}")
+    for key in ("study_id", "question", "motivation", "success_criteria", "constraints", "output", "stop_rules"):
+        if spec[key] != brief[key]:
+            raise AllagmaError(f"StudySpec disagrees with the frozen brief: {key}")
+    if spec["resources"] != lock["effective_configuration"]["budget"] or spec["protocol_revision"] != protocol["revision"]:
+        raise AllagmaError("StudySpec resource policy or protocol revision differs")
+    if "amendment" in protocol:
+        amendment = read_json(directory / "amendment.json")
+        verify_reference(study, amendment["prior_protocol"])
+        if any(amendment[key] != value for key, value in protocol["amendment"].items()):
+            raise AllagmaError("Amendment receipt disagrees with the frozen protocol")
+    return directory, lock, protocol
+
+
+def _amendment(study, campaign, protocol):
+    previous = {path.parent.name: path for path in (study / "campaigns").glob("*/protocol.json")}
+    prior = {name: read_json(path) for name, path in previous.items()}
+    if any(value["revision"] == protocol["revision"] and value != protocol for value in prior.values()):
+        raise AllagmaError("Changed protocol content requires a new protocol revision")
+    change = protocol.get("amendment")
+    if change is None:
+        if prior and protocol not in prior.values():
+            raise AllagmaError("Changed protocol requires amendment: from_campaign, reason and affected_runs")
+        return None
+    if not isinstance(change, dict) or set(change) != {"from_campaign", "reason", "affected_runs"}:
+        raise AllagmaError("Amendment requires from_campaign, reason and affected_runs")
+    parent = change["from_campaign"]
+    affected = change["affected_runs"]
+    if parent not in prior or parent == campaign or not isinstance(change["reason"], str) or not change["reason"].strip():
+        raise AllagmaError("Amendment requires an existing parent campaign and a nonempty reason")
+    known = {run["id"] for run in prior[parent]["runs"]}
+    if not isinstance(affected, list) or any(not isinstance(run, str) for run in affected) or len(set(affected)) != len(affected) or not set(affected) <= known:
+        raise AllagmaError("Amendment affected_runs must identify unique runs from the parent campaign")
+    if protocol["revision"] == prior[parent]["revision"]:
+        raise AllagmaError("Amendment requires a new protocol revision")
+    return {**change, "from_revision": prior[parent]["revision"], "to_revision": protocol["revision"],
+            "prior_protocol": reference(study, previous[parent])}
 
 
 def start_campaign(study, campaign):
@@ -93,11 +135,12 @@ def start_campaign(study, campaign):
         for role in ("runner", "evaluator", "analyzer", "writer"):
             if protocol[role] not in protocol["code"]:
                 raise AllagmaError(f"{role} must be included in the frozen code manifest")
+        amendment = _amendment(study, campaign, protocol)
         with staged_directory(study, directory) as staging:
-            return _prepare_campaign(study, lock, protocol, brief, staging, directory)
+            return _prepare_campaign(study, lock, protocol, brief, staging, directory, amendment)
 
 
-def _prepare_campaign(study, lock, protocol, brief, directory, target):
+def _prepare_campaign(study, lock, protocol, brief, directory, target, amendment):
     plan = protocol["runs"]
 
     def ref(path, media_type=None):
@@ -106,6 +149,8 @@ def _prepare_campaign(study, lock, protocol, brief, directory, target):
     write_json(directory / "lock.yaml", lock, immutable=True)
     write_json(directory / "protocol.json", protocol, immutable=True)
     write_json(directory / "brief.json", brief, immutable=True)
+    if amendment is not None:
+        write_json(directory / "amendment.json", amendment, immutable=True)
     for path in protocol["code"]:
         write_bytes(confined(directory, f"materials/{path}"), confined(study, path).read_bytes(), immutable=True)
     effective = lock["effective_configuration"]
@@ -140,14 +185,24 @@ def _prepare_campaign(study, lock, protocol, brief, directory, target):
 
 
 def _attempts(directory):
-    return [read_json(path) for path in sorted(directory.glob("runs/*/attempts/*/record.json"))]
+    return [validate_record(read_json(path)) for path in sorted(directory.glob("runs/*/attempts/*/record.json"))]
 
 
 def _check_materials(study, directory):
-    for item in read_json(directory / "code-manifest.json").values():
+    protocol = read_json(directory / "protocol.json")
+    code = read_json(directory / "code-manifest.json")
+    if set(code) != set(protocol["code"]):
+        raise AllagmaError("Frozen code manifest does not cover the protocol's complete material inventory")
+    for name, item in code.items():
+        if item["path"] != (directory / "materials" / name).relative_to(study).as_posix():
+            raise AllagmaError("Frozen code manifest points outside its declared material path")
         verify_reference(study, item)
-    manifest = directory / "experiment-manifest.json"
-    for item in read_json(manifest).values():
+    experiments = read_json(directory / "experiment-manifest.json")
+    if set(experiments) != {run["id"] for run in protocol["runs"]}:
+        raise AllagmaError("Experiment manifest does not cover the frozen run plan")
+    for name, item in experiments.items():
+        if item["path"] != (directory / "runs" / name / "spec.json").relative_to(study).as_posix():
+            raise AllagmaError("Experiment manifest points outside its declared run")
         verify_reference(study, item)
 
 
@@ -398,7 +453,7 @@ def analyze_campaign(study, campaign, *, analysis_id="a001", allow_partial=False
         outputs = adir / "outputs"
         trace = _run_helper([sys.executable, str(analyzer), str(study), str(adir / "raw-manifest.json"), str(outputs)], study)
         write_json(adir / "execution.json", trace, immutable=True)
-        output_refs = [reference(study, path, "text/csv" if path.suffix == ".csv" else "application/json") for path in sorted(outputs.iterdir()) if path.is_file()]
+        output_refs = [reference(study, path) for path in sorted(outputs.iterdir()) if path.is_file()]
         if not output_refs:
             raise AllagmaError("Analyzer produced no outputs")
         analysis = {"schema_version": "0.2", "record_type": "AnalysisRecord", "analysis_id": analysis_id,
@@ -407,6 +462,8 @@ def analyze_campaign(study, campaign, *, analysis_id="a001", allow_partial=False
                     "configuration": {"protocol_revision": protocol["revision"], "partial": len(successes) != len(protocol["runs"])},
                     "outputs": output_refs, "exclusions": manifest["exclusions"], "uncertainty": protocol["uncertainty"],
                     "dependencies": [reference(study, directory / "protocol.json"), *manifest["runs"], *manifest["raw"]]}
+        if (directory / "amendment.json").exists():
+            analysis["dependencies"].append(reference(study, directory / "amendment.json"))
         record(adir / "record.json", analysis)
         # The writer is study-owned: framework code does not invent scientific claims.
         writer = directory / "materials" / protocol["writer"]

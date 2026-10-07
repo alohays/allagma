@@ -23,6 +23,8 @@ def main():
         raise AllagmaError("Only a passing run of the current distributable source can be retained")
     if report["conformance_inventory"] != inventory(ROOT / "conformance"):
         raise AllagmaError("Conformance sources changed after the acceptance run")
+    if report.get("example_inventory") != inventory(ROOT / "examples"):
+        raise AllagmaError("Study examples changed after the acceptance run")
     args.destination.mkdir(parents=True, exist_ok=True)
     files = {name: sha for name, sha in inventory(args.source).items() if not name.endswith("/.allagma/mutation.lock")}
     archive = args.destination / "acceptance.tar.gz"

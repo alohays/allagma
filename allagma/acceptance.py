@@ -168,6 +168,7 @@ def run_acceptance(source, output):
     report = {"schema_version": "0.2", "status": "running", "started_at": utcnow(),
               "release": "0.2.0", "source_revision": b.source_revision(source),
               "source_inventory": b.source_inventory(source), "conformance_inventory": inventory(source / "conformance"),
+              "example_inventory": inventory(source / "examples"),
               "environment": {"python": platform.python_version(), "platform": platform.platform(), "timezone_for_reporting": "Asia/Seoul",
                               "codex_version_probe": _version(["codex", "--version"]), "claude_version_probe": _version(["claude", "--version"])},
               "milestones": {}, "limitations": ["Native Codex and Claude Code activation/model quality are not claimed; tests cover packaging and shared contracts.",
@@ -242,6 +243,7 @@ def run_acceptance(source, output):
         require(set(report["milestones"]) == {"I1", "I2", "I3", "I4", "I5"}, "milestone coverage is incomplete")
         require(b.source_revision(source) == report["source_revision"], "source changed during acceptance")
         require(inventory(source / "conformance") == report["conformance_inventory"], "conformance checks changed during acceptance")
+        require(inventory(source / "examples") == report["example_inventory"], "study examples changed during acceptance")
         require(all(file_hash(source / name) == expected for name, expected in report["contributor_materials"].items()), "contributor materials changed during acceptance")
         report["status"] = "pass"
         report["completed_at"] = utcnow()

@@ -13,6 +13,7 @@ import hashlib
 import json
 import math
 from pathlib import Path
+import xml.etree.ElementTree as ET
 
 
 def require(condition, message):
@@ -98,10 +99,25 @@ def audit(study, campaign="toy-v1"):
         for key, expected_value in zip(("mean_estimate", "mean_squared_error", "biased_squared_error", "paired_difference"), rows[int(row["seed"])]):
             require(Q(row[key]) == expected_value, f"Per-seed table differs: {row['seed']} {key}")
     claims = read(analysis / "paper/claims.json")
-    require([claim["status"] for claim in claims] == ["supported", "contradicted"], "Claim classifications differ")
+    require([claim["status"] for claim in claims] == ["supported", "contradicted", "supported"], "Claim classifications differ")
     require(interval[0] > 0 and counterexamples, "Claim directions lack numerical evidence")
     paper = (analysis / "paper/manuscript.md").read_text()
     require(all(f"{value:.8f}" in paper for value in (float(plain), float(biased), float(difference), *interval)), "Manuscript numbers differ")
+    sensitivity = {seed: sum(row[3] for other, row in rows.items() if other != seed) / (count - 1) for seed in rows}
+    expected_sensitivity = {"replicates": count, "minimum_difference": float(min(sensitivity.values())),
+                            "maximum_difference": float(max(sensitivity.values())),
+                            "positive_count": sum(value > 0 for value in sensitivity.values())}
+    require(summary["leave_one_seed_out"] == expected_sensitivity, "Sensitivity summary differs")
+    with (analysis / "outputs/leave-one-seed-out.csv").open() as stream:
+        sensitivity_table = list(csv.DictReader(stream))
+    require(len(sensitivity_table) == count, "Sensitivity table has wrong row count")
+    for row in sensitivity_table:
+        require(float(sensitivity[int(row["omitted_seed"])] ) == float(row["mean_difference"]), "Sensitivity table differs")
+    plot = ET.parse(analysis / "outputs/paired-differences.svg")
+    plotted = {int(dot.attrib["data-seed"]): float(dot.attrib["data-difference"])
+               for dot in plot.findall(".//{http://www.w3.org/2000/svg}circle")}
+    require(plotted == {seed: float(row[3]) for seed, row in rows.items()}, "Figure data differs")
+    require("../outputs/paired-differences.svg" in paper, "Manuscript does not link the figure")
     # Independently enumerate the binomial distribution of the count of +1s.
     exact_plain = sum(Q(math.comb(64, k), 2 ** 64) * Q(2*k - 64, 64) ** 2 for k in range(65))
     exact_biased = sum(Q(math.comb(64, k), 2 ** 64) * (Q(2*k - 64, 64) + Q(1, 4)) ** 2 for k in range(65))
@@ -110,9 +126,10 @@ def audit(study, campaign="toy-v1"):
             "attempts": dict(counts), "confirmation_replicates": count, "distinct_direct_references": len(seen),
             "exact_observed": {"mean_mse": str(plain), "biased_mse": str(biased), "difference": str(difference)},
             "scientific_summary": {**expected, "ci95_normal": interval, "counterexample_seeds": counterexamples},
+            "sensitivity": expected_sensitivity, "figure_points": len(plotted),
             "enumerated_population_mse": {"mean": str(exact_plain), "biased": str(exact_biased)},
             "implementation_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
-            "coverage": "Separate rational arithmetic and binomial enumeration; complete-toy eligibility, reference digests, CSV, claims and manuscript numbers. No Allagma or study helper imports."}
+            "coverage": "Separate rational arithmetic and binomial enumeration; complete-toy eligibility, reference digests, primary and sensitivity CSVs, figure points, claims and manuscript numbers. No Allagma or study helper imports."}
 
 
 if __name__ == "__main__":

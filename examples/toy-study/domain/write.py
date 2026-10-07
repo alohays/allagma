@@ -18,6 +18,10 @@ def write(study, analysis_path, output):
         raise ValueError("Summary digest mismatch")
     values = json.loads(summary_path.read_text())
     lower, upper = values["ci95_normal"]
+    sensitivity = values["leave_one_seed_out"]
+    sensitivity_text = (f"Leave-one-seed-out mean differences ranged from {sensitivity['minimum_difference']:.8f} "
+                        f"to {sensitivity['maximum_difference']:.8f}; {sensitivity['positive_count']} of "
+                        f"{sensitivity['replicates']} retained means were positive.")
     supported = lower > 0
     interpretation = "The biased estimator had higher average squared error" if supported else "The direction of the average error difference was inconclusive"
     scope = f"{values['replicates']} prespecified seeds, {values['samples_per_replicate']} Rademacher observations per seed, target zero, additive bias 0.25"
@@ -33,7 +37,8 @@ def write(study, analysis_path, output):
                "status": "supported" if supported else "inconclusive"},
               {**common, "claim_id": "C2", "text": "The biased estimator has greater squared error on every individual confirmation seed.",
                "supporting": [], "contradicting": [summary_ref] if values["counterexample_seeds"] else [],
-               "status": "contradicted" if values["counterexample_seeds"] else "inconclusive"}]
+               "status": "contradicted" if values["counterexample_seeds"] else "inconclusive"},
+              {**common, "claim_id": "C3", "text": sensitivity_text, "status": "supported"}]
     output.mkdir(parents=True, exist_ok=False)
     (output / "claims.json").write_text(json.dumps(claims, sort_keys=True, indent=2, allow_nan=False) + "\n")
     paper = f'''# A reproducible toy comparison of two mean estimators
@@ -62,6 +67,9 @@ Failed and interrupted attempts were excluded; retries retained distinct IDs.
 Confirmation differences are paired within each seed. The standard error is
 the sample standard deviation of paired differences divided by the square root
 of the number of seeds. The interval uses ±1.96 standard errors.
+Sensitivity analysis recalculates the mean difference after omitting each
+confirmation seed once. This measures sensitivity to individual seeds, not to
+other distributions or estimator definitions.
 
 ## Results
 
@@ -76,6 +84,12 @@ of the number of seeds. The interval uses ±1.96 standard errors.
 Claim C1 records the average comparison. Claim C2 tests an overstrong universal
 ordering: counterexample seeds were {values['counterexample_seeds']}. A positive
 average does not imply that every replicate favors the sample mean.
+
+![Paired squared-error differences by confirmation seed](../outputs/paired-differences.svg)
+
+Each dot is one confirmation seed. Positive values favor the sample mean;
+the dashed line is the average difference. Claim C3 records the sensitivity
+result: {sensitivity_text}
 
 ## Evidence and reproducibility
 

@@ -21,6 +21,13 @@ The primary statistic is the mean paired difference in squared error. The
 reported interval is the mean ±1.96 standard errors across independent seeds,
 an explicitly approximate uncertainty calculation. A separate overstrong claim
 about every individual seed is tested against counterexamples.
+Protocol revision `toy-v2` also prespecifies leave-one-seed-out sensitivity:
+recalculate the mean after omitting each confirmation seed once. A separate
+table and claim record the resulting range. A deterministic SVG figure shows
+every paired difference, zero, and the overall mean. These artifacts are
+recomputed by the audit without plotting-library dependencies. The first
+walkthrough campaign is still named `toy-v1`; the campaign ID and protocol
+revision are distinct.
 
 | Generated location | Evidence |
 | --- | --- |
@@ -29,7 +36,7 @@ about every individual seed is tested against counterexamples.
 | `campaigns/toy-v1/study.json`, `lock.yaml`, `materials/` | Campaign identity and frozen scientific programs |
 | `campaigns/toy-v1/runs/*/attempts/*/` | Inputs, raw data, evaluation, logs, started and terminal records |
 | `campaigns/toy-v1/analyses/a001/raw-manifest.json` | Included and excluded observations and their identities |
-| `campaigns/toy-v1/analyses/a001/outputs/` | Recomputable summary and per-seed table |
+| `campaigns/toy-v1/analyses/a001/outputs/` | Summary, per-seed and sensitivity tables, and SVG figure |
 | `campaigns/toy-v1/analyses/a001/paper/` | Claims and manuscript |
 | `campaigns/toy-v1/analyses/a001/reviews/` | Exact-revision deterministic reviews and reproduction reports |
 | `walkthrough.json` | Host packaging route and final artifact handoff |

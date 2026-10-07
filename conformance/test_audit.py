@@ -14,6 +14,7 @@ from allagma.configuration import DEFAULT_BUDGET, resolve_configuration
 from allagma.contracts import validate
 from allagma.demo import create_toy, toy_workflow
 from allagma.files import AllagmaError, read_json, reference, write_json, write_text
+from allagma.migrations import plan_migration, apply_migration
 from conformance.support import ROOT, WorkspaceTest
 
 
@@ -136,6 +137,70 @@ class Audit(WorkspaceTest):
         with self.assertRaisesRegex(AllagmaError, "Pinned helper sentinel"):
             toy_workflow(source, self.work / "selected-source", faults=False)
 
+    def test_protocol_changes_require_revision_and_amendment_lineage(self):
+        study = create_toy(ROOT, self.work / "study")
+        c.start_campaign(study, "original")
+        original = (study / "campaigns/original/protocol.json").read_bytes()
+        protocol = read_json(study / "protocol.json")
+        protocol["runs"][-1]["input"]["bias"] = 0.5
+        write_json(study / "protocol.json", protocol)
+        with self.assertRaises(AllagmaError):
+            c.start_campaign(study, "reused-revision")
+        protocol["revision"] = "toy-v3"
+        write_json(study / "protocol.json", protocol)
+        with self.assertRaises(AllagmaError):
+            c.start_campaign(study, "missing-amendment")
+        protocol["amendment"] = {"from_campaign": "original", "reason": "Sensitivity to larger bias",
+                                 "affected_runs": [protocol["runs"][-1]["id"]]}
+        write_json(study / "protocol.json", protocol)
+        c.start_campaign(study, "amended")
+        self.assertEqual((study / "campaigns/original/protocol.json").read_bytes(), original)
+        self.assertTrue((study / "campaigns/amended/amendment.json").exists())
+
+    def test_omitted_frozen_material_is_rejected(self):
+        study = create_toy(ROOT, self.work / "study")
+        c.start_campaign(study, "frozen")
+        manifest = study / "campaigns/frozen/code-manifest.json"
+        contents = read_json(manifest)
+        contents.pop("domain/analyze.py")
+        write_json(manifest, contents)
+        with self.assertRaises(AllagmaError):
+            c.run_campaign(study, "frozen", stop_after=1)
+
+    def test_study_metadata_cannot_disagree_with_frozen_lock(self):
+        study = create_toy(ROOT, self.work / "study")
+        c.start_campaign(study, "frozen")
+        path = study / "campaigns/frozen/study.json"
+        record = read_json(path)
+        record["effective_configuration"]["language"] = "Unrecorded change"
+        write_json(path, record)
+        with self.assertRaises(AllagmaError):
+            c.run_campaign(study, "frozen", stop_after=1)
+
+    def test_scaffold_baseline_uses_selected_release(self):
+        source = self.source_copy()
+        release = read_json(source / "release.json")
+        release["scaffold_version"] = "2"
+        write_json(source / "release.json", release)
+        study = create_toy(source, self.work / "study")
+        self.assertEqual(read_json(study / ".allagma/scaffold-baseline.json")["version"], "2")
+
+    def test_method_update_does_not_claim_scaffold_migration(self):
+        source = self.source_copy()
+        study = create_toy(source, self.work / "study")
+        release = read_json(source / "release.json")
+        release["scaffold_version"] = "2"
+        write_json(source / "release.json", release)
+        plan = b.plan_update(source, study)
+        candidate = read_json(study / ".allagma/updates" / plan["id"] / "lock.yaml")
+        self.assertEqual(candidate["scaffold"]["version"], "1")
+        baseline = read_json(study / ".allagma/scaffold-baseline.json")
+        migration = plan_migration(study, {"from": "1", "to": "2", "answers": baseline["answers"],
+                                          "reason": "Explicit scaffold change", "files": {"LOG.md": "Study log\n"}})
+        apply_migration(study, migration["id"])
+        with self.assertRaisesRegex(AllagmaError, "Scaffold changed"):
+            b.reconcile_update(study, plan["id"])
+
     def test_partial_analysis_recovers_interrupted_attempt_before_manifest(self):
         study = create_toy(ROOT, self.work / "study")
         c.start_campaign(study, "partial")
@@ -199,6 +264,26 @@ class Audit(WorkspaceTest):
                 c._run_helper([sys.executable, "-c", leader], self.work, timeout=0.15)
             time.sleep(0.6)
             self.assertFalse((self.work / "late").exists(), "Helper timeout left a descendant running")
+        finally:
+            if (self.work / "pid").exists():
+                try:
+                    os.kill(int((self.work / "pid").read_text()), signal.SIGKILL)
+                except ProcessLookupError:
+                    pass
+
+    def test_worker_escalates_for_descendant_ignoring_termination(self):
+        descendant = ("from pathlib import Path; import signal,time; "
+                      "signal.signal(signal.SIGTERM, signal.SIG_IGN); Path('ready').touch(); "
+                      "time.sleep(0.7); Path('late').touch(); time.sleep(3)")
+        leader = ("import subprocess,sys,time\nfrom pathlib import Path\n"
+                  f"p=subprocess.Popen([sys.executable,'-c',{descendant!r}])\n"
+                  "Path('pid').write_text(str(p.pid))\n"
+                  "while not Path('ready').exists(): time.sleep(0.01)\n")
+        try:
+            c._execute([sys.executable, "-c", leader], self.work,
+                       self.work / "stdout.txt", self.work / "stderr.txt", 0.5)
+            time.sleep(0.8)
+            self.assertFalse((self.work / "late").exists())
         finally:
             if (self.work / "pid").exists():
                 try:
