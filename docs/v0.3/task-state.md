@@ -80,3 +80,23 @@ policy. Bounded checks/recomputation and setup still have time remaining. Final
 run allocations are new, explicit profiles chosen from the completed pilots,
 not edits to the development ledger. No unresolved user choice is currently
 required. Do not mark the goal complete before all remaining gates pass.
+
+## Frozen evaluation started
+
+The controls are committed at `de6abce`; the frozen source is `c369fe7` plus the
+exact files in `evals/research-v0.3/frozen/freeze.json`. All twelve workspaces are
+prepared, and their common inputs match exactly within each task. Read the
+frozen run order and `evals/research-v0.3/progress.json` before continuing.
+
+Run **r01 (CORE CULP, Allagma, replicate 2)** is active under exec session
+**57392**. Poll that handle and inspect its authoritative process state; do not
+restart it just because an observation times out. Its controller/runtime files
+are under `evals/research-v0.3/runs/r01/`. Actual final-runtime probes deny reads
+of original answers, writes to the scorer, and reads of the other workspace.
+They changed no candidate or protected file content.
+
+No final run is complete yet. After r01 terminates, retain/score its outcome and
+check account limits before launching r02. The prepared runs use the public
+research interface, matching model/CLI/tools and finite per-task ceilings. No
+frozen code, criterion or input may be edited during the comparison. All prior
+work and remaining full-goal requirements still apply.
