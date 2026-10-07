@@ -72,12 +72,27 @@ def parser():
     migration.add_argument("--id")
     accept = sub.add_parser("acceptance", help="Generate I1–I5 evidence and a machine-readable report")
     accept.add_argument("--output", type=Path, default=ROOT / "build/acceptance")
+    res = sub.add_parser("resource", help="Supervise finite study-owned local process budgets")
+    res.add_argument("operation", choices=["init", "run", "status", "recover"])
+    res.add_argument("--ledger", type=Path, required=True)
+    res.add_argument("--profile", type=Path)
+    res.add_argument("--workdir", type=Path)
+    res.add_argument("--label")
+    res.add_argument("--category", default="compute")
+    res.add_argument("--timeout", type=float)
+    res.add_argument("--attempt", action="store_true")
+    res.epilog = "For run, put the supervised command after --."
     return p
 
 
 def main(argv=None):
     argv = sys.argv[1:] if argv is None else argv
-    args = parser().parse_args(argv)
+    command_argv = []
+    parser_argv = argv
+    if argv[:2] == ["resource", "run"] and "--" in argv:
+        boundary = argv.index("--")
+        parser_argv, command_argv = argv[:boundary], argv[boundary+1:]
+    args = parser().parse_args(parser_argv)
     try:
         if args.command == "campaign" and args.operation in ("start", "run", "analyze", "audit"):
             if args.operation == "start":
@@ -139,10 +154,27 @@ def main(argv=None):
                 if not args.id:
                     raise AllagmaError("Migration operation requires --id")
                 result = getattr(migrations, args.operation + "_migration")(args.study, args.id)
+        elif args.command == "resource":
+            from . import resources
+            if args.operation == "init":
+                if not args.profile or not args.workdir:
+                    raise AllagmaError("Resource initialization requires --profile and --workdir")
+                result = resources.initialize(args.ledger, read_json(args.profile), args.workdir)
+            elif args.operation == "run":
+                if not args.label or args.timeout is None:
+                    raise AllagmaError("Resource execution requires --label and --timeout")
+                result = resources.execute(args.ledger, command_argv, label=args.label,
+                    category=args.category, timeout=args.timeout, attempt=args.attempt)
+            elif args.operation == "recover":
+                result = resources.recover(args.ledger)
+            else:
+                result = resources.summary(args.ledger)
         else:
             from .acceptance import run_acceptance
             result = run_acceptance(ROOT, args.output)
         print(canonical(result).decode(), end="")
+        if args.command == "resource" and args.operation == "run" and result["status"] != "completed":
+            return 1
         if isinstance(result, dict) and (result.get("verdict") in ("revise", "blocked") or result.get("execution_status") in ("failed", "blocked", "budget_exhausted", "needs_revision")):
             return 1
         return 0
