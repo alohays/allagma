@@ -1,5 +1,11 @@
 # Native evaluation isolation: development evidence
 
+Subsequent qualification found an [MPS allocator configuration defect](defects.md)
+in the broker environment prefix. The sandbox canary below remains valid for
+its tested profile; it does not establish that the complete frozen broker can
+initialize MPS with its high-watermark setting. The defect and its native
+failure are retained, with correction required before release completion.
+
 No final comparison runs have started. These checks validate parts of the
 evaluation infrastructure; they do not establish research-workflow quality.
 

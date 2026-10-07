@@ -1,0 +1,20 @@
+{
+  "status": "reproduced_in_native_evaluation",
+  "observed_error": "RuntimeError: invalid low watermark ratio 1.4",
+  "frozen_configuration": "PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.2; low-watermark variable unset",
+  "scope": "Shared computation broker in both conditions; CPU fallback remains available. No frozen code changed and no message sent to candidate.",
+  "evidence": [
+    {
+      "request_id": "7fffec6bc421479d8e724f2152bb4128",
+      "request": "evals/research-v0.3/runs/r03/broker/requests/7fffec6bc421479d8e724f2152bb4128/request.json",
+      "outcome": "evals/research-v0.3/runs/r03/broker/requests/7fffec6bc421479d8e724f2152bb4128/response.json",
+      "stderr": "evals/research-v0.3/runs/r03/broker/requests/7fffec6bc421479d8e724f2152bb4128/stderr.txt"
+    }
+  ],
+  "required_followup": "Resolve after the frozen comparison or restart under a new freeze per user preference; preserve all current evidence.",
+  "primary_reference": "https://docs.pytorch.org/docs/stable/mps_environment_variables.html",
+  "local_header": "work/v03-development/torch-env/lib/python3.11/site-packages/torch/include/ATen/mps/MPSAllocator.h",
+  "documented_constraint": "Low watermark must be between zero and the high watermark; the unified-memory default is 1.4.",
+  "proposed_correction": "Set PYTORCH_MPS_LOW_WATERMARK_RATIO=0.1 alongside HIGH=0.2, then run an actual broker-based MPS regression check without raising the high limit.",
+  "qualification_gap": "Earlier MPS canary tested the worker filesystem/network profile with a per-process fraction, but did not cover the broker environment prefix."
+}
