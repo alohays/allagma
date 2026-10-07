@@ -1,0 +1,109 @@
+{
+  "Report the CN prediction accuracy for the Iris dataset.": 100.0,
+  "Report the AA prediction acccuracy for the Iris dataset.": 100.0,
+  "Report the CN prediction acccuracy for the Zoo dataset.": 100.0,
+  "Report the AA prediction acccuracy for the Zoo dataset.": 100.0,
+  "Report the CN prediction acccuracy for the Wine dataset.": 97.22,
+  "Report the AA prediction acccuracy for the Wine dataset.": 97.22
+}
+{
+  "passed": true,
+  "coverage": [
+    "Retained partitions equal RandomState(42) permutation and ceil(20% N) test size; train/test disjoint",
+    "Labels match retained full inputs; Wine mean and population SD use only training rows",
+    "Class vertices connect exactly to labelled training nodes, with no test-label edges",
+    "Independent set-based CN/AA/RA/CS scoring of retained graph reproduces all 12 prediction vectors",
+    "Only Zoo/Wine path adapters differ; AST after restoring those paths equals original"
+  ],
+  "graph_checks": [
+    {
+      "dataset": "iris",
+      "predictor": "CS",
+      "predictions_verified": 30,
+      "tied_top_scores": 0,
+      "self_loops": 1
+    },
+    {
+      "dataset": "iris",
+      "predictor": "CS",
+      "predictions_verified": 30,
+      "tied_top_scores": 0,
+      "self_loops": 1
+    },
+    {
+      "dataset": "iris",
+      "predictor": "CS",
+      "predictions_verified": 30,
+      "tied_top_scores": 0,
+      "self_loops": 1
+    },
+    {
+      "dataset": "iris",
+      "predictor": "CS",
+      "predictions_verified": 30,
+      "tied_top_scores": 0,
+      "self_loops": 1
+    },
+    {
+      "dataset": "zoo",
+      "predictor": "CS",
+      "predictions_verified": 21,
+      "tied_top_scores": 0,
+      "self_loops": 28
+    },
+    {
+      "dataset": "zoo",
+      "predictor": "CS",
+      "predictions_verified": 21,
+      "tied_top_scores": 0,
+      "self_loops": 28
+    },
+    {
+      "dataset": "zoo",
+      "predictor": "CS",
+      "predictions_verified": 21,
+      "tied_top_scores": 0,
+      "self_loops": 28
+    },
+    {
+      "dataset": "zoo",
+      "predictor": "CS",
+      "predictions_verified": 21,
+      "tied_top_scores": 0,
+      "self_loops": 28
+    },
+    {
+      "dataset": "wine",
+      "predictor": "CN",
+      "predictions_verified": 36,
+      "tied_top_scores": 1,
+      "self_loops": 0
+    },
+    {
+      "dataset": "wine",
+      "predictor": "AA",
+      "predictions_verified": 36,
+      "tied_top_scores": 0,
+      "self_loops": 0
+    },
+    {
+      "dataset": "wine",
+      "predictor": "RA",
+      "predictions_verified": 36,
+      "tied_top_scores": 0,
+      "self_loops": 0
+    },
+    {
+      "dataset": "wine",
+      "predictor": "CS",
+      "predictions_verified": 36,
+      "tied_top_scores": 0,
+      "self_loops": 0
+    }
+  ],
+  "limits": [
+    "No independent validation of upstream data authenticity",
+    "Graph construction is inspected and frozen but nearest-neighbour selection is not independently reimplemented",
+    "No new splits or true CN/AA runs for Iris/Zoo"
+  ]
+}

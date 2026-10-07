@@ -1,0 +1,23 @@
+{
+  "attempt": false,
+  "category": "setup",
+  "command": [
+    "core-env/bin/python",
+    "-m",
+    "pip",
+    "download",
+    "--only-binary=:all:",
+    "--dest",
+    "wheelhouse-core",
+    "-r",
+    "/Users/iyunseong/maangeek/allagma/studies/core-culp/development/requirements.lock"
+  ],
+  "label": "core-wheelhouse",
+  "profile_sha256": "fa5c3559023d6d84ce62436f11e67ba82f19c35e892834f53892395c5d51bc5c",
+  "reserved_seconds": 184.75,
+  "started_at": "2026-10-07T18:22:02.819975+00:00",
+  "storage_root": "/Users/iyunseong/maangeek/allagma/work/v03-development",
+  "supervisor_pid": 91486,
+  "timeout_seconds": 180.0,
+  "workdir": "/Users/iyunseong/maangeek/allagma/work/v03-development"
+}

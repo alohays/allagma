@@ -1,0 +1,25 @@
+{
+  "attempt": false,
+  "category": "setup",
+  "command": [
+    "torch-env/bin/python",
+    "-m",
+    "pip",
+    "download",
+    "--only-binary=:all:",
+    "--dest",
+    "wheelhouse-torch",
+    "-r",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/requirements.lock"
+  ],
+  "label": "torch-wheelhouse",
+  "profile_sha256": "fa5c3559023d6d84ce62436f11e67ba82f19c35e892834f53892395c5d51bc5c",
+  "request_id": null,
+  "reserved_seconds": 184.75,
+  "started_at": "2026-10-07T19:08:25.160391+00:00",
+  "storage_root": "/Users/iyunseong/maangeek/allagma/work/v03-development",
+  "supervisor_pid": 9629,
+  "supervisor_sha256": "392f7975f4a4ae77a11e23a2e167cd4cee53d7f0d63a58a42f5782d244f3da8f",
+  "timeout_seconds": 180.0,
+  "workdir": "/Users/iyunseong/maangeek/allagma/work/v03-development"
+}

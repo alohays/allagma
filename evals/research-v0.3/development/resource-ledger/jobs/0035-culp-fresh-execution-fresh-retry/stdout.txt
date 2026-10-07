@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "coverage": "All three scripts execute directly with no observation wrappers in a newly installed isolated environment; all 12 labelled stdout scores exactly equal the primary run.",
+  "python": "3.11.6",
+  "packages": {
+    "numpy": "1.26.4",
+    "scipy": "1.14.1",
+    "scikit-learn": "1.5.2",
+    "pandas": "2.2.3",
+    "networkx": "2.8.8"
+  },
+  "scripts": {
+    "iris": {
+      "argv": [
+        "/Users/iyunseong/maangeek/allagma/work/v03-development/dev-core-01/candidate/.venv-fresh-retry/bin/python",
+        "/Users/iyunseong/maangeek/allagma/work/v03-development/dev-core-01/candidate/campaigns/core-culp/materials/source/adapted/code/iris_sample.py"
+      ],
+      "cwd": "campaigns/core-culp/materials/source/adapted/code",
+      "exit_code": 0,
+      "seconds": 34.54486095905304,
+      "stdout": "Prediction Accuracy for Iris Dataset (\u03bb=CN) = 100.0%\nPrediction Accuracy for Iris Dataset (\u03bb=AA) = 100.0%\nPrediction Accuracy for Iris Dataset (\u03bb=RA) = 100.0%\nPrediction Accuracy for Iris Dataset (\u03bb=CS) = 100.0%\n",
+      "scores": {
+        "CN": 100.0,
+        "AA": 100.0,
+        "RA": 100.0,
+        "CS": 100.0
+      }
+    },
+    "zoo": {
+      "argv": [
+        "/Users/iyunseong/maangeek/allagma/work/v03-development/dev-core-01/candidate/.venv-fresh-retry/bin/python",
+        "/Users/iyunseong/maangeek/allagma/work/v03-development/dev-core-01/candidate/campaigns/core-culp/materials/source/adapted/code/zoo_sample.py"
+      ],
+      "cwd": "campaigns/core-culp/materials/source/adapted/code",
+      "exit_code": 0,
+      "seconds": 0.6699752497952431,
+      "stdout": "Prediction Accuracy for Zoo Dataset (\u03bb=CN) = 100.0%\nPrediction Accuracy for Zoo Dataset (\u03bb=AA) = 100.0%\nPrediction Accuracy for Zoo Dataset (\u03bb=RA) = 100.0%\nPrediction Accuracy for Zoo Dataset (\u03bb=CS) = 100.0%\n",
+      "scores": {
+        "CN": 100.0,
+        "AA": 100.0,
+        "RA": 100.0,
+        "CS": 100.0
+      }
+    },
+    "wine": {
+      "argv": [
+        "/Users/iyunseong/maangeek/allagma/work/v03-development/dev-core-01/candidate/.venv-fresh-retry/bin/python",
+        "/Users/iyunseong/maangeek/allagma/work/v03-development/dev-core-01/candidate/campaigns/core-culp/materials/source/adapted/code/wine_sample.py"
+      ],
+      "cwd": "campaigns/core-culp/materials/source/adapted/code",
+      "exit_code": 0,
+      "seconds": 0.680491958046332,
+      "stdout": "Prediction Accuracy for Wine Dataset (\u03bb=CN) = 97.22%\nPrediction Accuracy for Wine Dataset (\u03bb=AA) = 97.22%\nPrediction Accuracy for Wine Dataset (\u03bb=RA) = 97.22%\nPrediction Accuracy for Wine Dataset (\u03bb=CS) = 100.0%\n",
+      "scores": {
+        "CN": 97.22,
+        "AA": 97.22,
+        "RA": 97.22,
+        "CS": 100.0
+      }
+    }
+  }
+}

@@ -1,2 +1,4 @@
 # Captured native diagnostics are retained byte-for-byte.
 native-isolation-*/startup.log -text -whitespace
+# Execution snapshots preserve supplied and generated source exactly.
+sessions/*/broker/requests/*/sources/** -text -whitespace conflict-marker-size=128

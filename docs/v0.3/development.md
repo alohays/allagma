@@ -79,3 +79,38 @@ CS predictor. Preserving the source task means retaining this behavior and
 disclosing it, rather than silently fixing it or treating its labels as proof
 that CN and AA were actually compared. The preflight is a local compatibility
 result, not a leaderboard score or final evaluation run.
+
+## Complete native brief-to-package development run
+
+`development/sessions/dev-core-01/` under the evaluation directory retains a
+fresh `gpt-6-astra` / `max` session using existing authentication and the locked
+Allagma recipe. It received only the initial brief, source capsule, wheelhouse
+and finite resource description. There were **zero subsequent coordinator
+messages or edits to candidate work**. The session independently identified the
+printed-label defect, implemented study-owned execution and verification,
+recovered the deliberate interruption, preserved a failed cold-environment
+check, repaired its verification timeout within the existing ceiling, and
+delivered reports, records, reproduction and recomputation entry points.
+
+The native session took 1,738.77 seconds. Its recorded usage is 2,409,916 input
+tokens (2,313,600 cached), 32,236 output tokens and 8,127 reasoning-output tokens.
+These counts are separate from scientific computation. The unchanged upstream
+scorer independently accepts all six answers. All 365 files in the candidate's
+manifest were hash-verified before retention in `candidate-package.tar.gz`.
+Its own substantive checks and author critique are accurately labeled; this is
+not independent scientific peer review or a final comparison run.
+
+The run exposed a shared-helper assumption: `analyze_campaign` required two
+confirmation records even for a fixed single-case reproduction. The agent
+correctly used the portable contracts without inventing replicates. The source
+helper now accepts a positive study-owned `minimum_confirmation_runs` (default
+one), and the toy protocol explicitly retains its minimum of two. A single-case
+fixture executes analysis and audit successfully. Explicit paired-condition
+seed reuse is also supported without weakening pilot/confirmation separation.
+
+Repeated input preparation motivated the generic `research prepare/run/status`
+interface, described in [research workspaces](../research-workspaces.md). A
+standalone broker driver supports delivered reproduction commands without
+starting another model session. Its actual macOS process integration check
+passes. These changes are still under qualification; the final workflow and
+evaluation criteria have not been frozen.

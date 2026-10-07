@@ -5,6 +5,12 @@ that compose them, adapters that connect them to a host, and evidence records
 that link a scientific question to a manuscript. A study pins an exact local
 bundle. Central edits and later releases cannot change an existing campaign.
 
+**v0.3 release candidate:** [research workspaces](docs/research-workspaces.md)
+prepare a brief, source materials and finite resource profile for a fresh native
+Codex session. The [qualification ledger](docs/v0.3/requirements.md) tracks the
+three studies, controlled comparison and reproduction gates. Evaluation is in
+progress; the version label does not claim those gates are complete.
+
 The v0.2 implementation includes an offline toy study, generic/Codex/Claude
 Code packaging, replaceable context and reviewer examples, update and rollback
 tools, and a contributor conformance kit. The core and offline toy study use **Python 3.11+ on POSIX**

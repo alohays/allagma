@@ -34,7 +34,7 @@ def _copy_materials(source, destination):
             shutil.copyfile(path,target)
 
 
-def prepare(source, study, control, *, brief, materials, profile, study_id="study"):
+def prepare(source, study, control, *, brief, materials, profile, study_id="study", install_workflow=True):
     source,study,control=(Path(p).resolve() for p in (source,study,control))
     _separate(study,control)
     resources.validate_profile(profile)
@@ -71,17 +71,18 @@ def prepare(source, study, control, *, brief, materials, profile, study_id="stud
     intent["request"]={"budget":{"max_attempts":profile["attempt_limit"],
         "max_seconds":profile["budgets_seconds"]["compute"],"money_usd":0,
         "per_attempt_seconds":profile["command_timeout_seconds"]["compute"]}}
-    lock=bundles.initialize(source,study,study_id=study_id,intent=intent)
-    readonly=[inputs,study/".allagma/bundles",study/".agents"]
+    lock=bundles.initialize(source,study,study_id=study_id,intent=intent) if install_workflow else None
+    readonly=[inputs]+([study/".allagma/bundles",study/".agents"] if install_workflow else [])
     control.mkdir(parents=True)
     resources.initialize(control/"resources",profile,study)
     prepared={"format":"allagma-research-workspace-v1","created_at":utcnow(),
         "study":str(study),"control":str(control),"study_id":study_id,
-        "lock_id":lock["lock_id"],"bundle_id":lock["bundle_id"],
+        "workflow_enabled":bool(install_workflow),
+        "lock_id":lock["lock_id"] if lock else None,"bundle_id":lock["bundle_id"] if lock else None,
         "common_inputs":inventory(inputs),"readonly":[str(p) for p in readonly]}
     write_json(control/"prepared.json",prepared,immutable=True)
     write_json(study/"research-workspace.json",prepared,immutable=True)
-    (study/"RESEARCH.md").write_text(
+    if install_workflow:(study/"RESEARCH.md").write_text(
         "# Prepared research workspace\n\nRead `inputs/BRIEF.md`, the supplied `inputs/materials/`, "
         "`inputs/RESOURCES.json` and `inputs/COMPUTE.md`. The controller stores authoritative "
         "resource receipts outside this workspace. Read `ALLAGMA.md` and use the locked "
@@ -108,31 +109,37 @@ def _load(name,path):
     module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module);return module
 
 
-def run(study, control, *, codex, timeout, session_id, config, auth, interrupt_first_attempt=False):
+def run(study, control, *, codex, timeout, session_id, config, auth, interrupt_first_attempt=False, prompt=None):
     if not re.fullmatch(r"[a-z0-9][a-z0-9-]{0,59}",session_id):raise AllagmaError("Invalid research session ID")
     study,control=Path(study).resolve(),Path(control).resolve()
     prepared=status(study,control)["prepared"]
-    lock=bundles.verify_study(study)
-    if lock["lock_id"]!=prepared["lock_id"]:
+    workflow=prepared.get("workflow_enabled",True)
+    lock=bundles.verify_study(study) if workflow else None
+    if lock and lock["lock_id"]!=prepared["lock_id"]:
         raise AllagmaError("Prepared workflow lock changed; reconcile at a campaign boundary before new execution")
     if inventory(study/"inputs")!=prepared["common_inputs"]:
         raise AllagmaError("Prepared inputs changed; preserve the old study and prepare a new revision")
-    root=bundles.bundle_path(study,lock)
+    root=bundles.bundle_path(study,lock) if lock else Path(__file__).resolve().parents[1]
+    if lock:
+        for name in ("allagma/resources.py","allagma/files.py"):
+            if file_hash(Path(__file__).resolve().parents[1]/name)!=file_hash(root/name):
+                raise AllagmaError("Controller helpers differ from the pinned workflow; invoke its tools/allagma.py directly")
     native=_load("allagma_research_native",root/"adapters/codex/session.py")
     local=_load("allagma_research_broker",root/"adapters/local-process/broker.py")
     broker=local.Broker(study,control/"resources",control/"broker",readonly=prepared["readonly"],
                        protected=[control],interrupt_first_attempt=interrupt_first_attempt)
     broker.recover()
     profile=resources._policy(control/"resources")["profile"]
-    prompt=("Use the installed Allagma research workflow to complete the research brief in inputs/BRIEF.md. "
-        "Read RESEARCH.md, ALLAGMA.md, inputs/RESOURCES.json, inputs/COMPUTE.md and the supplied inputs/materials. "
-        "Resolve the canonical methods through the exact study or campaign lock. Work autonomously through "
+    if prompt is None:prompt=("Complete the research brief in inputs/BRIEF.md. "
+        "Read inputs/RESOURCES.json, inputs/COMPUTE.md and the supplied inputs/materials. Work autonomously through "
         "planning, implementation, bounded execution, recovery, analysis, substantive critique and reporting. "
         "Preserve all attempts and scientific evidence. Use the common local broker for setup and all scientific "
         "computation. Produce an evidence-linked English research package with full reproduction and "
         "retained-data recomputation commands. Distinguish completed checks from unverified claims and label "
         "any partial outcome honestly. Do not expand the supplied ceilings or change protected inputs. "
         "If a consequential unresolved choice prevents progress, record it explicitly for the user.\n")
+    if workflow:prompt+="Use the installed Allagma research workflow. Read RESEARCH.md and ALLAGMA.md and resolve canonical methods through the exact study or campaign lock.\n"
+    prompt+=f"The native session wall-time ceiling is {timeout} seconds, including model work. Scientific computation and setup retain their separate ceilings.\n"
     if interrupt_first_attempt:prompt+="A controlled interruption is enabled for the first marked scientific attempt; preserve it and recover.\n"
     return native.capture(codex=Path(codex).resolve(),workspace=study,record=control/"sessions"/session_id/"native",
         runtime=control/"sessions"/session_id/"runtime",prompt=prompt,timeout=timeout,config=config,auth=auth,

@@ -1,0 +1,19 @@
+test_baseline_has_identical_materials_but_no_methods (conformance.test_research_prepare.ResearchPreparationTests.test_baseline_has_identical_materials_but_no_methods) ... ok
+test_brief_materials_limits_and_portable_lock_are_retained (conformance.test_research_prepare.ResearchPreparationTests.test_brief_materials_limits_and_portable_lock_are_retained) ... ok
+test_material_links_and_nested_output_are_rejected_before_mutation (conformance.test_research_prepare.ResearchPreparationTests.test_material_links_and_nested_output_are_rejected_before_mutation) ... ok
+test_reprepare_preserves_existing_workspace (conformance.test_research_prepare.ResearchPreparationTests.test_reprepare_preserves_existing_workspace) ... ok
+test_unbounded_or_insufficient_resource_policy_is_rejected (conformance.test_research_prepare.ResearchPreparationTests.test_unbounded_or_insufficient_resource_policy_is_rejected) ... ok
+test_computation_cannot_bypass_attempt_count_by_omitting_flag (conformance.test_broker.BrokerTests.test_computation_cannot_bypass_attempt_count_by_omitting_flag) ... ok
+test_controller_and_ledger_cannot_be_candidate_owned (conformance.test_broker.BrokerTests.test_controller_and_ledger_cannot_be_candidate_owned) ... ok
+test_new_controller_does_not_replay_an_inherited_queue (conformance.test_broker.BrokerTests.test_new_controller_does_not_replay_an_inherited_queue) ... ok
+test_path_escape_is_rejected_without_execution (conformance.test_broker.BrokerTests.test_path_escape_is_rejected_without_execution) ... ok
+test_profile_denies_network_and_preserves_readonly_paths (conformance.test_broker.BrokerTests.test_profile_denies_network_and_preserves_readonly_paths) ... ok
+test_recorded_request_without_reservation_never_launches_on_recovery (conformance.test_broker.BrokerTests.test_recorded_request_without_reservation_never_launches_on_recovery) ... ok
+test_recovery_delivers_completed_job_without_a_second_execution (conformance.test_broker.BrokerTests.test_recovery_delivers_completed_job_without_a_second_execution) ... ok
+test_recovery_refuses_a_live_job_then_conservatively_abandons_it (conformance.test_broker.BrokerTests.test_recovery_refuses_a_live_job_then_conservatively_abandons_it) ... ok
+test_source_snapshot_and_authoritative_replay_guard (conformance.test_broker.BrokerTests.test_source_snapshot_and_authoritative_replay_guard) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.309s
+
+OK

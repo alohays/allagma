@@ -129,6 +129,17 @@ class BrokerTests(unittest.TestCase):
             self.assertIsNone(other.poll())
             execute.assert_not_called()
 
+    def test_source_snapshots_exclude_named_virtual_environments(self):
+        environment=self.workspace/'environment-two';environment.mkdir()
+        (environment/'pyvenv.cfg').write_text('home = /python\n')
+        (environment/'installed.py').write_text('installed_dependency=True\n')
+        (self.workspace/'science.py').write_text('print(4)\n')
+        self.request()
+        with patch.object(broker_module.resources,'execute',return_value={'status':'completed'}):self.broker.poll()
+        snapshot=self.root/'controller/requests'/('a'*32)/'sources'
+        self.assertTrue((snapshot/'science.py').exists())
+        self.assertFalse((snapshot/'environment-two').exists())
+
 
 if __name__ == "__main__":
     unittest.main()

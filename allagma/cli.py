@@ -97,6 +97,7 @@ def parser():
     research.add_argument("--config", type=Path, default=Path.home()/".codex/config.toml")
     research.add_argument("--auth", type=Path, default=Path.home()/".codex/auth.json")
     research.add_argument("--interrupt-first-attempt", action="store_true")
+    research.add_argument("--baseline", action="store_true", help="Evaluation control: common infrastructure without Allagma methods")
     return p
 
 
@@ -109,7 +110,7 @@ def main(argv=None):
         parser_argv, command_argv = argv[:boundary], argv[boundary+1:]
     args = parser().parse_args(parser_argv)
     try:
-        if args.command == "research" and args.operation == "run":
+        if args.command == "research" and args.operation == "run" and read_json(args.control/"prepared.json").get("workflow_enabled",True):
             root = bundles.bundle_path(args.study, bundles.verify_study(args.study))
             if root.resolve() != ROOT:
                 return subprocess.run([sys.executable, str(root/"tools/allagma.py"), *argv]).returncode
@@ -194,7 +195,7 @@ def main(argv=None):
                 if not all((args.brief,args.materials,args.profile)):
                     raise AllagmaError("Research preparation requires --brief, --materials and --profile")
                 result = research.prepare(args.source,args.study,args.control,brief=args.brief,materials=args.materials,
-                                          profile=read_json(args.profile),study_id=args.id)
+                                          profile=read_json(args.profile),study_id=args.id,install_workflow=not args.baseline)
             elif args.operation == "run":
                 if args.codex is None or args.timeout is None:
                     raise AllagmaError("Native execution requires explicit --codex and --timeout")

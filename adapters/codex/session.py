@@ -80,7 +80,9 @@ def permission_config(workspace, runtime, blocked, readonly):
 
 
 def config_text(controlled, disabled_skills):
-    lines = [f"{key} = {json.dumps(value)}" for key, value in controlled.items() if key != "permissions"]
+    lines = [f"{key} = {json.dumps(value)}" for key, value in controlled.items() if key not in ("permissions","features")]
+    if "features" in controlled:
+        lines += ["\n[features]"]+[f"{key} = {str(value).lower()}" for key,value in controlled["features"].items()]
     for name, value in controlled["permissions"].items():
         lines += [f"\n[permissions.{name}]", f"extends = {json.dumps(value['extends'])}",
                   f"\n[permissions.{name}.filesystem]"]
@@ -132,11 +134,13 @@ def capture(*, codex, workspace, record, runtime, prompt, timeout,
     record.mkdir(parents=True)
     (record/"adapter.py").write_bytes(Path(__file__).read_bytes())
     runtime.mkdir(parents=True, mode=0o700)
+    (runtime/".gitignore").write_text("*\n")
     (workspace/".tmp").mkdir(exist_ok=True)
     (runtime/"auth.json").symlink_to(auth)
     # The temporary runtime is a CODEX_HOME, not a project .codex configuration.
     # Personal tools, global instructions and saved chat histories are excluded.
     controlled = {**settings, "web_search": "disabled", "project_doc_max_bytes": 0,
+        "features": {"multi_agent": False, "multi_agent_v2": False},
         "default_permissions": "allagma-eval",
         "permissions": permission_config(workspace, runtime, blocked, readonly)}
     disabled = sorted({str(path) for root in (Path.home()/".agents/skills", config.parent/"skills")

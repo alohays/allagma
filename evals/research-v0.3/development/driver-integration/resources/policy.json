@@ -1,0 +1,22 @@
+{
+  "created_at": "2026-10-07T19:22:55.477689+00:00",
+  "profile": {
+    "attempt_limit": 3,
+    "budgets_seconds": {
+      "compute": 20,
+      "setup": 20
+    },
+    "command_timeout_seconds": {
+      "compute": 5,
+      "setup": 5
+    },
+    "file_limit_bytes": 1000000,
+    "format": "allagma-resource-profile-v1",
+    "poll_seconds": 0.05,
+    "rss_limit_bytes": 200000000,
+    "storage_limit_bytes": 10000000,
+    "terminate_grace_seconds": 0.1
+  },
+  "profile_sha256": "d65d5cb97f8a3f0e8d3d576a22805dfe7f8298017287d2db78c5b77f05011bd0",
+  "workdir": "/Users/iyunseong/maangeek/allagma/work/v03-driver-qa/candidate"
+}

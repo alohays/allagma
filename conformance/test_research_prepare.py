@@ -50,6 +50,14 @@ class ResearchPreparationTests(unittest.TestCase):
         with self.assertRaises(AllagmaError):self.prepare()
         self.assertEqual(path.read_bytes(),old)
 
+    def test_baseline_has_identical_materials_but_no_methods(self):
+        self.prepare(install_workflow=False)
+        study=self.root/'study'
+        self.assertFalse((study/'.allagma').exists())
+        self.assertFalse((study/'.agents').exists())
+        self.assertEqual((study/'inputs/BRIEF.md').read_bytes(),self.brief.read_bytes())
+        self.assertTrue((study/'inputs/compute.py').exists())
+
     def test_unbounded_or_insufficient_resource_policy_is_rejected(self):
         self.profile["budgets_seconds"]["compute"]=float("inf")
         with self.assertRaises(AllagmaError):self.prepare()

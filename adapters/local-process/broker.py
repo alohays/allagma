@@ -63,6 +63,7 @@ class Broker:
         manifest = {}
         for root, dirs, files in os.walk(self.workspace, followlinks=False):
             dirs[:] = [name for name in dirs if name not in (".venv", ".tmp", ".compute", "__pycache__", ".git", "site-packages")
+                       and not name.startswith(".venv-") and not (Path(root)/name/"pyvenv.cfg").is_file()
                        and not (Path(root)/name).is_symlink()]
             for name in files:
                 path = Path(root)/name

@@ -1,0 +1,17 @@
+{
+  "injected_interruption": false,
+  "isolation_sha256": "090018cfd5519e5165ea02612ed68583ec7014e54282ae0e559f26de0ec848db",
+  "reconciled_after_controller_restart": false,
+  "request_id": "dbd75c5096ce4bd48d52522a488c780c",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 9.27211045799777,
+    "ended_at": "2026-10-07T18:47:20.464445+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/development/resource-ledger/jobs/0034-culp-fresh-environment-fresh-retry",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 221741056,
+    "peak_storage_bytes": 2818242842,
+    "status": "completed"
+  }
+}

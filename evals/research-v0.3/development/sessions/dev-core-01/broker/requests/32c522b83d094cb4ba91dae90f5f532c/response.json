@@ -1,0 +1,17 @@
+{
+  "injected_interruption": false,
+  "isolation_sha256": "090018cfd5519e5165ea02612ed68583ec7014e54282ae0e559f26de0ec848db",
+  "reconciled_after_controller_restart": false,
+  "request_id": "32c522b83d094cb4ba91dae90f5f532c",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 0.5866463328711689,
+    "ended_at": "2026-10-07T18:42:35.819323+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/development/resource-ledger/jobs/0031-culp-raw-analysis-and-independent-checks",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 4079616,
+    "peak_storage_bytes": 2175491619,
+    "status": "completed"
+  }
+}

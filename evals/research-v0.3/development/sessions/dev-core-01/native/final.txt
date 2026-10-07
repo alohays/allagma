@@ -1,0 +1,11 @@
+Completed all three scripts, recovered the controlled interruption, and verified results through fresh-environment execution and raw-only recomputation.
+
+| Dataset | CN-labelled | AA-labelled |
+|---|---:|---:|
+| Iris | 100% | 100% |
+| Zoo | 100% | 100% |
+| Wine | 97.22% | 97.22% |
+
+**Source limitation:** Iris and Zoo actually execute CS under both labels. This behavior was preserved and documented.
+
+The complete package—including answers, review, reproduction commands, failure history and hashed manifest—is indexed in [submission.json](/Users/iyunseong/maangeek/allagma/work/v03-development/dev-core-01/candidate/submission.json). See [REPORT.md](/Users/iyunseong/maangeek/allagma/work/v03-development/dev-core-01/candidate/REPORT.md) for findings and limitations.

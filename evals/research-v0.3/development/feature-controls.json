@@ -1,0 +1,8 @@
+{
+  "status": "pass",
+  "scope": "Actual CLI reads both disabled model-delegation features. The features command does not support strict-config; native exec does. No model or study workload executed.",
+  "lines": [
+    "multi_agent                              stable             false",
+    "multi_agent_v2                           stable             false"
+  ]
+}

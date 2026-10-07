@@ -1,0 +1,21 @@
+{
+  "attempt": false,
+  "category": "compute",
+  "command": [
+    "core-env/bin/python",
+    "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/score.py",
+    "/Users/iyunseong/maangeek/allagma/work/v03-development/dev-core-01/candidate",
+    "--output",
+    "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/development/sessions/dev-core-01/independent-score.json"
+  ],
+  "label": "dev-core-01-independent-score",
+  "profile_sha256": "fa5c3559023d6d84ce62436f11e67ba82f19c35e892834f53892395c5d51bc5c",
+  "request_id": null,
+  "reserved_seconds": 34.75,
+  "started_at": "2026-10-07T18:57:40.050577+00:00",
+  "storage_root": "/Users/iyunseong/maangeek/allagma/work/v03-development",
+  "supervisor_pid": 7447,
+  "supervisor_sha256": "392f7975f4a4ae77a11e23a2e167cd4cee53d7f0d63a58a42f5782d244f3da8f",
+  "timeout_seconds": 30.0,
+  "workdir": "/Users/iyunseong/maangeek/allagma/work/v03-development"
+}

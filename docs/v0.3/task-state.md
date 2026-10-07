@@ -37,29 +37,46 @@ The study-compute ceiling is still 1,800 seconds for development, with a separat
 for current authoritative usage. The last account checkpoint permits normal
 Codex use and records 6% weekly usage. Model usage is separate from study compute.
 
+## Native development and current interface
+
+A complete fresh native CORE study finished with zero follow-up messages. It
+preserved and recovered the controlled interruption, repaired a fresh-environment
+verification timeout, and delivered a critically reviewed package. The original
+CORE-Bench scorer accepts 6/6 answers, and all 365 declared artifact hashes were
+verified before archiving the exact package. Evidence is under
+`evals/research-v0.3/development/sessions/dev-core-01/`.
+
+The source now provides `research prepare/run/status`, a standalone broker driver,
+explicit broker restart reconciliation and baseline preparation for controlled
+evaluation. The native task exposed a generic-helper two-observation assumption;
+analysis minima are now study-owned, and paired seed reuse requires explicit
+condition identities. Historical bundles remain unchanged. The release candidate
+is 0.3.0rc1. A full I1–I5 acceptance run and 109 conformance tests passed; subsequent
+focused control checks passed. The protected scorer's five scientific checks pass,
+including an actual development-checkpoint replay. The last account checkpoint
+permits ordinary use with 9% weekly usage consumed.
+
 ## Next concrete work
 
-1. Finish broker restart reconciliation: a controller crash after recording a
-   request must reconcile the associated resource receipt before deciding
-   whether the request launched, remains live, completed, or was abandoned.
-   Never infer restart permission from an observation timeout or missing reply.
-2. Prepare candidate input builders and an offline package wheelhouse. Keep
-   controller scorers, original answers, all pilot outputs and other candidate
-   work unreadable. Match all common input manifests and tools between arms.
-3. Run a complete fresh native development study from only its initial brief,
-   source materials and resource profile. Use the same common computation broker
-   that will serve both final conditions. Record every subsequent assistance.
-   Extract necessary generic workflow/bootstrap improvements from this run.
-4. Finish protected scientific scorers and frozen manual-review criteria. The
-   original CORE-Bench score must remain separate from additional execution and
-   evidence measures. EMA/grokking checks must independently recompute saved raw
-   evidence and verify protocol controls, uncertainty and honest conclusions.
-5. Freeze workflow, inputs, protocol, model/settings, run order, ceilings and
-   interventions. Execute all 12 fresh evaluation runs, then complete three
-   critically reviewed task packages, clean-checkout full-study reproduction,
-   comparison, fixes and release-candidate/migration audit. Preserve failed
-   comparison outcomes when making later repairs. Commit increments and push
-   origin only when the full goal is achieved.
+1. Commit the candidate controls/evidence, then freeze `evaluate.py`, `score.py`,
+   criteria, profiles, briefs, exact common materials, workflow source, CLI/model
+   settings and the counterbalanced 12-run order. No final run has started yet.
+2. Prepare and launch runs through `evals/research-v0.3/evaluate.py`, using the
+   public research workspace API for both arms (methods installed only for
+   Allagma). Check account limits before each run. Keep sessions serial and do
+   not change frozen control code or criteria during the comparison.
+3. Score all outcomes and complete the frozen substantive/evidence review;
+   preserve failures and distinguish model completion from task completion.
+   Retain software-wheel hashes without placing individual >100 MB files in Git;
+   provide verified hydration or chunked archives as appropriate.
+4. Complete all three task packages, a clean-checkout full-study reproduction,
+   raw-data recomputation, comparison report and final release/migration audit.
+   Preserve frozen outcomes when making later repairs. Push origin only when
+   the full goal is achieved.
 
-No clarification or resource expansion is currently required. Historical v0.2
-bundles, attempts and publications have not been changed.
+The original development attempt cap has been reached (24 marked attempts);
+no additional marked development experiment is authorized under that same
+policy. Bounded checks/recomputation and setup still have time remaining. Final
+run allocations are new, explicit profiles chosen from the completed pilots,
+not edits to the development ledger. No unresolved user choice is currently
+required. Do not mark the goal complete before all remaining gates pass.
