@@ -1,0 +1,160 @@
+{
+  "attempt_id": "confirm-gmm8-2004-a001",
+  "attempt_number": 1,
+  "bundle_id": "b-2b63431e34a085598aaade78",
+  "campaign_id": "ema-v1",
+  "command": [
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/.venv/bin/python",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/campaigns/ema-v1/materials/domain/runner.py",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/input.json",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/raw.json"
+  ],
+  "data_revision": "d3ed5f4c8adc48dabe0376c50ff4a828ce34d4726c820c4a9fd59f2a69e58d05",
+  "ended_at": "2026-10-07T15:31:52.764690+00:00",
+  "environment": {
+    "executable": "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/.venv/bin/python",
+    "isolation": "local process; not an OS security sandbox",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.11.6"
+  },
+  "error": null,
+  "exit_code": 0,
+  "experiment_id": "confirm-gmm8-2004",
+  "inputs": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/input.json",
+      "retention": "retain-with-study",
+      "sha256": "d3ed5f4c8adc48dabe0376c50ff4a828ce34d4726c820c4a9fd59f2a69e58d05"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/spec.json",
+      "retention": "retain-with-study",
+      "sha256": "f95b4455f80a109c48f98b0d8b1f18a0019fec2ae0d21951c901011d16498160"
+    },
+    {
+      "media_type": "text/x-python",
+      "path": "campaigns/ema-v1/materials/domain/runner.py",
+      "retention": "retain-with-study",
+      "sha256": "26f69538c0ecb3497a77e57899dfb8b362f780ae1fba1d9865ffeb7a3cb8a868"
+    },
+    {
+      "media_type": "text/x-python",
+      "path": "campaigns/ema-v1/materials/domain/evaluator.py",
+      "retention": "retain-with-study",
+      "sha256": "609018a0d4b61b178d139d944290bc4f53dad1151a1e871efabb9a7e1eba65bf"
+    }
+  ],
+  "model_revision": null,
+  "outputs": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/evaluation.json",
+      "retention": "retain-with-study",
+      "sha256": "873ad5fe790cd91da6e895a77a985ba281269fd8747f2f2910b330be1bb2023c"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/evaluator-command.json",
+      "retention": "retain-with-study",
+      "sha256": "a6130f6eaa15515b4b99329e5e3a78e0cc85f39f182f95c5bef10aaf1c7b660b"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/evaluator-stderr.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/evaluator-stdout.job-result.json",
+      "retention": "retain-with-study",
+      "sha256": "4efb8f6d1b756ed4e92fbef5e0744fc4381b27af70b3b0ec89fa402eaf310724"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/evaluator-stdout.job.json",
+      "retention": "retain-with-study",
+      "sha256": "94ba6472b760b47e8e6dc468a27dfe6350d85bcf760eeb5a11ab121fb7d5f9bf"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/evaluator-stdout.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/evaluator-stdout.worker-stderr.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/evaluator-stdout.worker-stdout.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/raw.json",
+      "retention": "retain-with-study",
+      "sha256": "5ce938f84f264c487081a6dd9fc560e6c04828ac0d173fb70ab218724c2f0ce8"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/stderr.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/stdout.job-result.json",
+      "retention": "retain-with-study",
+      "sha256": "f7072e12384ca5e48f374754b95e14b8dbc3497c78c2591e189174d43bbb2a2f"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/stdout.job.json",
+      "retention": "retain-with-study",
+      "sha256": "f0ee2c3004db1f5b325a05af302695532d5d1cdc3e885e9cddcc0a6bc55a044f"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/stdout.txt",
+      "retention": "retain-with-study",
+      "sha256": "a39b0df6862e63cc6da5ed0e9381a0869bae8cd855b96494c752c98c637f5139"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/stdout.worker-stderr.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/stdout.worker-stdout.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/weights.npz",
+      "retention": "retain-with-study",
+      "sha256": "90a9248dc89624fa47a3dfa389cc3481988858e991d12358482a507fbdbc3f19"
+    }
+  ],
+  "protocol_revision": "ema-2d-v1",
+  "record_type": "RunRecord",
+  "run_id": "confirm-gmm8-2004",
+  "schema_version": "0.2",
+  "split": "confirmation",
+  "started_at": "2026-10-07T15:31:37.973101+00:00",
+  "status": "succeeded",
+  "usage": {
+    "money_usd": 0.0,
+    "tokens": 0,
+    "wall_seconds": 14.782785458024591
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "checks": {
+    "10000_ema0999_coverage": true,
+    "10000_ema0999_finite_shape": true,
+    "10000_ema0999_scipy_w1": true,
+    "10000_ema099_coverage": true,
+    "10000_ema099_finite_shape": true,
+    "10000_ema099_scipy_w1": true,
+    "10000_raw_coverage": true,
+    "10000_raw_finite_shape": true,
+    "10000_raw_scipy_w1": true,
+    "5000_ema0999_coverage": true,
+    "5000_ema0999_finite_shape": true,
+    "5000_ema0999_scipy_w1": true,
+    "5000_ema099_coverage": true,
+    "5000_ema099_finite_shape": true,
+    "5000_ema099_scipy_w1": true,
+    "5000_raw_coverage": true,
+    "5000_raw_finite_shape": true,
+    "5000_raw_scipy_w1": true,
+    "checkpoint_digest": true,
+    "checkpoints": true,
+    "exact_input": true,
+    "heldout_hash": true,
+    "heldout_reseeded": true,
+    "native_mps": true,
+    "trajectory_complete": true,
+    "variants_10000": true,
+    "variants_5000": true
+  },
+  "scope": "Seeded holdout reconstruction, complete paired trajectories, finite output, checkpoint hash and SciPy projected W1 cross-check; no retraining or scientific peer review",
+  "valid": true
+}

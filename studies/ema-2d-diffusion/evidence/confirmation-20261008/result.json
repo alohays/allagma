@@ -1,0 +1,165 @@
+{
+  "actions": {
+    "additional_agents_or_model_sessions_spawned": false,
+    "all_command_exit_codes": 0,
+    "analysis_performed": false,
+    "audit_performed": false,
+    "automatic_retries": 0,
+    "confirmation_calls": 10,
+    "confirmation_command": [
+      "python3",
+      "manage.py",
+      "confirm"
+    ],
+    "freeze_command": [
+      "python3",
+      "manage.py",
+      "freeze"
+    ],
+    "model_override_supplied": false,
+    "resource_ceilings_changed": false,
+    "scientific_code_changed": false
+  },
+  "bundle_id": "b-2b63431e34a085598aaade78",
+  "campaign": "ema-v1",
+  "campaign_attempt_budget": {
+    "ceiling_seconds": 1650.0,
+    "charged_seconds": 206.59665320860222,
+    "remaining_attempt_slots": 3,
+    "remaining_seconds": 1443.4033467913978
+  },
+  "confirmation_inspections": [
+    {
+      "path": "evidence/confirmation-20261008/01-confirm-moons-1001.json",
+      "sha256": "ff4e05ed2e298ec6060af94d0198e694fd0d454f324bcd9d83c52e623a70f38f"
+    },
+    {
+      "path": "evidence/confirmation-20261008/02-confirm-moons-1002.json",
+      "sha256": "9790a72711fcc898564f0ae4117d41f5f8b785dafe4587a14a7a88fd5c1a69c2"
+    },
+    {
+      "path": "evidence/confirmation-20261008/03-confirm-moons-1003.json",
+      "sha256": "a0e1b0e473522ebd31aeaa6d68bae9e8891086dfc5488ad53b4eb13062e99329"
+    },
+    {
+      "path": "evidence/confirmation-20261008/04-confirm-moons-1004.json",
+      "sha256": "bf027326b901f19aeeaac4d33ec55aa2bb2c66d04324305cdf7cd4e5cea2a435"
+    },
+    {
+      "path": "evidence/confirmation-20261008/05-confirm-moons-1005.json",
+      "sha256": "943d4bdff6acf67eb38ae3d6160a4fbab40ad2c82c0182fc7c8abdb1394ef7fb"
+    },
+    {
+      "path": "evidence/confirmation-20261008/06-confirm-gmm8-2001.json",
+      "sha256": "ed3459af31cb7abb468ed03931a40fc0dbd402f010c48800175856e785415a2b"
+    },
+    {
+      "path": "evidence/confirmation-20261008/07-confirm-gmm8-2002.json",
+      "sha256": "45ee5036792cb87b2596930932fc86cee3200b2efa5e761514942903957c3c91"
+    },
+    {
+      "path": "evidence/confirmation-20261008/08-confirm-gmm8-2003.json",
+      "sha256": "23c38a4cc5042baef9979ed7312891101a398cd0d49d03888744f85b843e5e7a"
+    },
+    {
+      "path": "evidence/confirmation-20261008/09-confirm-gmm8-2004.json",
+      "sha256": "61c9204af33483b236f59216a8b758946a3147e5525332fa1aed6893a7d65e2e"
+    },
+    {
+      "path": "evidence/confirmation-20261008/10-confirm-gmm8-2005.json",
+      "sha256": "5f9f1d0e799ae154ace296e0f38169f3bc0d2fe39278b56b2e3460d80c8de3a9"
+    }
+  ],
+  "coverage": {
+    "checkpoints": [
+      5000,
+      10000
+    ],
+    "confirmation_evaluator_checks_passed": 240,
+    "confirmation_input_output_digests_verified": 200,
+    "confirmation_seeds": {
+      "gmm8": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "moons": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005
+      ]
+    },
+    "confirmation_variant_checkpoint_cells": 60,
+    "samples_per_variant_checkpoint": 2048,
+    "successful_confirmation_trajectories": 10,
+    "successful_pilot_trajectories": 4,
+    "variants": [
+      "raw",
+      "ema099",
+      "ema0999"
+    ]
+  },
+  "final_state": {
+    "assurance": "unreviewed",
+    "execution_status": "ready",
+    "phase": "analysis",
+    "stop_reason": "Declared run plan complete"
+  },
+  "freeze": {
+    "decision": "Proceed unchanged after four qualified pilots; no confirmation result observed",
+    "forecast_seconds": 284.8384268725058,
+    "path": "confirmation-freeze.json",
+    "remaining_seconds_at_freeze": 1699.627220249083,
+    "sha256": "e7b37fee3ca7331f7743f73a52de0528a3f1e2ce5d4e83aa2d385674c6ac9eca"
+  },
+  "freeze_unchanged": true,
+  "lock_id": "7287e278da3e264dc83704d42c334dd5845da048f59c9967343545fc4ec6c329",
+  "new_unsuccessful_attempts": 0,
+  "preexisting_protected_artifacts_unchanged": true,
+  "preflight": {
+    "path": "evidence/confirmation-20261008/preflight.json",
+    "sha256": "7e5832c1822953d4e15b079d5d00c84828a2d503eb1186fd9de1ba441433c25b"
+  },
+  "protected_file_count": 253,
+  "protocol_revision": "ema-2d-v1",
+  "protocol_sha256": "09942fb8ed12194b9c2efb944b2c1d9a2b00f63c043bd5055ce6f42e0008cfb1",
+  "recorded_at": "2026-10-07T15:33:57.868296+00:00",
+  "retained_failed_setup_receipts": [
+    {
+      "charged_seconds": 20.174600374884903,
+      "exit_code": 1,
+      "path": "evidence/compute/001-known-answer-checks.json",
+      "sha256": "4296eb948a355945fa8fd237df23792b4df10b56c27afcba09c2a22f8e8c6a43"
+    },
+    {
+      "charged_seconds": 2.4604918339755386,
+      "exit_code": 1,
+      "path": "evidence/compute/002-known-answer-checks-corrected.json",
+      "sha256": "83cde448fd0c3d97e8accf3fbf198c61d2d8d5431ccb12c90fcde97f5ceaebb2"
+    }
+  ],
+  "retained_interrupted_attempts": [
+    {
+      "attempt_id": "pilot-moons-11-a001",
+      "record": "campaigns/ema-v1/runs/pilot-moons-11/attempts/001/record.json",
+      "scientific_evidence": false,
+      "sha256": "8d98942d76693aa115f1779aab649a0bffd2e64c72dfb984717a2a05b26eec3a"
+    }
+  ],
+  "scientific_processes_serial": true,
+  "source_files_match_frozen_materials": true,
+  "status": "Ten confirmation trajectories succeeded and passed evaluation; stopped before analysis.",
+  "study_budget": {
+    "attempt_limit": 18,
+    "attempts": 15,
+    "ceiling_seconds": 1800.0,
+    "charged_seconds": 249.16257670680062,
+    "prior_probe_estimate_charged_seconds": 15.3,
+    "prior_probe_is_scientific_evidence": false,
+    "remaining_seconds": 1550.8374232931994
+  }
+}

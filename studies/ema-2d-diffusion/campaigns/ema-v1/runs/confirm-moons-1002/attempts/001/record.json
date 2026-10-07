@@ -1,0 +1,160 @@
+{
+  "attempt_id": "confirm-moons-1002-a001",
+  "attempt_number": 1,
+  "bundle_id": "b-2b63431e34a085598aaade78",
+  "campaign_id": "ema-v1",
+  "command": [
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/.venv/bin/python",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/campaigns/ema-v1/materials/domain/runner.py",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/input.json",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/raw.json"
+  ],
+  "data_revision": "6fffd55c0f8da9b4d63529c63ba47d3d1b8c1b8b800c8d2d430742b1b10fa992",
+  "ended_at": "2026-10-07T15:30:08.276088+00:00",
+  "environment": {
+    "executable": "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/.venv/bin/python",
+    "isolation": "local process; not an OS security sandbox",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.11.6"
+  },
+  "error": null,
+  "exit_code": 0,
+  "experiment_id": "confirm-moons-1002",
+  "inputs": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/input.json",
+      "retention": "retain-with-study",
+      "sha256": "6fffd55c0f8da9b4d63529c63ba47d3d1b8c1b8b800c8d2d430742b1b10fa992"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/spec.json",
+      "retention": "retain-with-study",
+      "sha256": "5ab5514234799a6bce12709e7f598a78d4db83b7716c28e9d2964529b4c71330"
+    },
+    {
+      "media_type": "text/x-python",
+      "path": "campaigns/ema-v1/materials/domain/runner.py",
+      "retention": "retain-with-study",
+      "sha256": "26f69538c0ecb3497a77e57899dfb8b362f780ae1fba1d9865ffeb7a3cb8a868"
+    },
+    {
+      "media_type": "text/x-python",
+      "path": "campaigns/ema-v1/materials/domain/evaluator.py",
+      "retention": "retain-with-study",
+      "sha256": "609018a0d4b61b178d139d944290bc4f53dad1151a1e871efabb9a7e1eba65bf"
+    }
+  ],
+  "model_revision": null,
+  "outputs": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/evaluation.json",
+      "retention": "retain-with-study",
+      "sha256": "4d5154ba64029968f5cd674e4a83eafe9d826b6b67eca282a42cca815b4809eb"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/evaluator-command.json",
+      "retention": "retain-with-study",
+      "sha256": "347ac5607edb2ce7ac1b29fbd714c6186f128ff87011f165e49aed1270a289f9"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/evaluator-stderr.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/evaluator-stdout.job-result.json",
+      "retention": "retain-with-study",
+      "sha256": "6594123d9cc479bdcc85b705265f2669a98efda8c5b47090a115dd92d591116b"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/evaluator-stdout.job.json",
+      "retention": "retain-with-study",
+      "sha256": "15e4c2b1186b73bbbfc4e5ed3daa488649ce47c4249103b8aba7b5edb1e065ae"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/evaluator-stdout.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/evaluator-stdout.worker-stderr.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/evaluator-stdout.worker-stdout.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/raw.json",
+      "retention": "retain-with-study",
+      "sha256": "bd04f9de81164e90b7a0568eff5c2119de6bc67d73cdf872c91cb5e99a965de0"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/stderr.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/stdout.job-result.json",
+      "retention": "retain-with-study",
+      "sha256": "f9aa12a83a5db5ef8069b7642250bff2276bdcfdbaca2da53d9d753b1e1fe4d9"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/stdout.job.json",
+      "retention": "retain-with-study",
+      "sha256": "09942dcc5185ab5d752aeefb2d87e87578b27ee16a3be7dc5911cc9738504098"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/stdout.txt",
+      "retention": "retain-with-study",
+      "sha256": "3f0b73189fa4ea0e2c3180cae23b34d815df43df355edc5fd03177d71de282ad"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/stdout.worker-stderr.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/stdout.worker-stdout.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/weights.npz",
+      "retention": "retain-with-study",
+      "sha256": "7ac79e3215e50492ece3d7838da4b055042b5a9a391ea1984e3c74b0c4584cda"
+    }
+  ],
+  "protocol_revision": "ema-2d-v1",
+  "record_type": "RunRecord",
+  "run_id": "confirm-moons-1002",
+  "schema_version": "0.2",
+  "split": "confirmation",
+  "started_at": "2026-10-07T15:29:53.739583+00:00",
+  "status": "succeeded",
+  "usage": {
+    "money_usd": 0.0,
+    "tokens": 0,
+    "wall_seconds": 14.528551374794915
+  }
+}

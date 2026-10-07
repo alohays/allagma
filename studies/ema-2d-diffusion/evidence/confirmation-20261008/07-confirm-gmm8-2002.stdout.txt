@@ -1,0 +1,27 @@
+{
+  "receipt": "evidence/compute/015-confirm-confirm-gmm8-2002.json",
+  "label": "confirm-confirm-gmm8-2002",
+  "command": [
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/.venv/bin/python",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/.allagma/bundles/b-2b63431e34a085598aaade78/tools/allagma.py",
+    "campaign",
+    "run",
+    "--study",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion",
+    "--campaign",
+    "ema-v1",
+    "--stop-after",
+    "1"
+  ],
+  "cwd": "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion",
+  "attempt": true,
+  "started_at": "2026-10-07T15:31:08.023972+00:00",
+  "reservation_seconds": 162,
+  "timeout_seconds": 160,
+  "status": "completed",
+  "pid": 22774,
+  "child_pid": 22775,
+  "exit_code": 0,
+  "ended_at": "2026-10-07T15:31:22.919407+00:00",
+  "charged_seconds": 14.895416624844074
+}

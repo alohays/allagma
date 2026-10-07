@@ -1,0 +1,63 @@
+{
+  "attempt_id": "confirm-gmm8-2003-a001",
+  "attempt_number": 1,
+  "bundle_id": "b-2b63431e34a085598aaade78",
+  "campaign_id": "ema-v1",
+  "command": [
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/.venv/bin/python",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/campaigns/ema-v1/materials/domain/runner.py",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/campaigns/ema-v1/runs/confirm-gmm8-2003/attempts/001/input.json",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/campaigns/ema-v1/runs/confirm-gmm8-2003/attempts/001/raw.json"
+  ],
+  "data_revision": "70e35fbeb38de48d80ed0bc031253f727a01b98f3a131602dcaa18e166fa8593",
+  "ended_at": null,
+  "environment": {
+    "executable": "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/.venv/bin/python",
+    "isolation": "local process; not an OS security sandbox",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.11.6"
+  },
+  "error": null,
+  "exit_code": null,
+  "experiment_id": "confirm-gmm8-2003",
+  "inputs": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2003/attempts/001/input.json",
+      "retention": "retain-with-study",
+      "sha256": "70e35fbeb38de48d80ed0bc031253f727a01b98f3a131602dcaa18e166fa8593"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2003/spec.json",
+      "retention": "retain-with-study",
+      "sha256": "71aec2d68d0d32bf4a78b64cc9f7d25686fa8760b876a1a00dcaa598eb97c185"
+    },
+    {
+      "media_type": "text/x-python",
+      "path": "campaigns/ema-v1/materials/domain/runner.py",
+      "retention": "retain-with-study",
+      "sha256": "26f69538c0ecb3497a77e57899dfb8b362f780ae1fba1d9865ffeb7a3cb8a868"
+    },
+    {
+      "media_type": "text/x-python",
+      "path": "campaigns/ema-v1/materials/domain/evaluator.py",
+      "retention": "retain-with-study",
+      "sha256": "609018a0d4b61b178d139d944290bc4f53dad1151a1e871efabb9a7e1eba65bf"
+    }
+  ],
+  "model_revision": null,
+  "outputs": [],
+  "protocol_revision": "ema-2d-v1",
+  "record_type": "RunRecord",
+  "run_id": "confirm-gmm8-2003",
+  "schema_version": "0.2",
+  "split": "confirmation",
+  "started_at": "2026-10-07T15:31:23.070158+00:00",
+  "status": "running",
+  "usage": {
+    "money_usd": 0.0,
+    "tokens": 0,
+    "wall_seconds": 0.0
+  }
+}

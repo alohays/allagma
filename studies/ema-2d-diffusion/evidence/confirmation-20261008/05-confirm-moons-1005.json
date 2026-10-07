@@ -1,0 +1,80 @@
+{
+  "artifact_digests_verified": true,
+  "attempt_id": "confirm-moons-1005-a001",
+  "attempt_wall_seconds": 14.703115375014022,
+  "charged_seconds": 14.874637250090018,
+  "command": [
+    "python3",
+    "manage.py",
+    "confirm"
+  ],
+  "command_exit_code": 0,
+  "completed_at": "2026-10-07T15:30:53.085951+00:00",
+  "compute_receipt": {
+    "path": "evidence/compute/013-confirm-confirm-moons-1005.json",
+    "sha256": "8fcb515214a8366d05f9b2be195abe12a8eaef20361571acbfeffc61d8f9541b"
+  },
+  "coverage": [
+    {
+      "samples_per_variant": {
+        "ema099": 2048,
+        "ema0999": 2048,
+        "raw": 2048
+      },
+      "step": 5000,
+      "variants": [
+        "ema099",
+        "ema0999",
+        "raw"
+      ]
+    },
+    {
+      "samples_per_variant": {
+        "ema099": 2048,
+        "ema0999": 2048,
+        "raw": 2048
+      },
+      "step": 10000,
+      "variants": [
+        "ema099",
+        "ema0999",
+        "raw"
+      ]
+    }
+  ],
+  "evaluation": {
+    "checks": {
+      "10000_ema0999_finite_shape": true,
+      "10000_ema0999_scipy_w1": true,
+      "10000_ema099_finite_shape": true,
+      "10000_ema099_scipy_w1": true,
+      "10000_raw_finite_shape": true,
+      "10000_raw_scipy_w1": true,
+      "5000_ema0999_finite_shape": true,
+      "5000_ema0999_scipy_w1": true,
+      "5000_ema099_finite_shape": true,
+      "5000_ema099_scipy_w1": true,
+      "5000_raw_finite_shape": true,
+      "5000_raw_scipy_w1": true,
+      "checkpoint_digest": true,
+      "checkpoints": true,
+      "exact_input": true,
+      "heldout_hash": true,
+      "heldout_reseeded": true,
+      "native_mps": true,
+      "trajectory_complete": true,
+      "variants_10000": true,
+      "variants_5000": true
+    },
+    "path": "campaigns/ema-v1/runs/confirm-moons-1005/attempts/001/evaluation.json",
+    "scope": "Seeded holdout reconstruction, complete paired trajectories, finite output, checkpoint hash and SciPy projected W1 cross-check; no retraining or scientific peer review",
+    "sha256": "4d5154ba64029968f5cd674e4a83eafe9d826b6b67eca282a42cca815b4809eb",
+    "valid": true
+  },
+  "record": {
+    "path": "campaigns/ema-v1/runs/confirm-moons-1005/attempts/001/record.json",
+    "sha256": "1982a3f8e19a3a58cbe60b1f1c4200a8226e150d074f75d7a66239ed9c3ce878"
+  },
+  "run_id": "confirm-moons-1005",
+  "status": "succeeded"
+}

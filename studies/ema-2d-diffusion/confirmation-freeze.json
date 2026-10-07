@@ -1,0 +1,69 @@
+{
+  "code": {
+    "DESIGN.md": "34927712c438865a2bfce16f9da28f9bfcce147df905dc52678aa1778519d35a",
+    "REFERENCE.md": "3632bda3aa4d14e5b0dd2466a2b8528091848704245dbdb81f012c3c07c0ad76",
+    "domain/analyze.py": "9155f175cbb84305d4a71d11d8483b10d202bf0a60b86a262c85ef79a566392a",
+    "domain/evaluator.py": "609018a0d4b61b178d139d944290bc4f53dad1151a1e871efabb9a7e1eba65bf",
+    "domain/runner.py": "26f69538c0ecb3497a77e57899dfb8b362f780ae1fba1d9865ffeb7a3cb8a868",
+    "domain/science.py": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1",
+    "domain/test_science.py": "4efc18d1b04c5241d534939026d91b2b5079061f8a171ecb2e0c56270a2631c9",
+    "domain/write.py": "106238b626c114acdf2c4d9d1df4b492141feeeac815d3e7974b900070543304",
+    "reference/LICENSE": "9c82e554a54dfcf2550b452801475a36f9cb909ede00b03e492089e4836a7462",
+    "reference/provenance.json": "5487fe70c56f4aa8594dd178ae89fdc4f59a1c146a7a01bc31ebe42de28e455f",
+    "requirements.lock": "7decf0446de48124cc46ed9c1d69669a62b9daacfb00c070c10f44ed7a5b039d"
+  },
+  "confirmation_seeds": {
+    "gmm8": [
+      2001,
+      2002,
+      2003,
+      2004,
+      2005
+    ],
+    "moons": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005
+    ]
+  },
+  "decision": "Proceed unchanged after four qualified pilots; no confirmation result observed",
+  "forecast_basis": "10 \u00d7 longest pilot \u00d7 1.15 + 120s analysis/reproduction reserve",
+  "forecast_seconds": 284.8384268725058,
+  "frozen_at": "2026-10-07T15:28:26.950456+00:00",
+  "lock_sha256": "cc0ef548e8ae7c018133a83bbe922cd201c5732728fd306a6cd3d5e98d7b320e",
+  "orchestration": {
+    "compute.py": "9f1923c1087af49e5ec11f60578126b520f46e893c9d2818f2cbfe7450bd7067",
+    "manage.py": "d8a6606f5f5b629511e9ab6553d94684a368fcf727eb5aae4047713c35ffabe6",
+    "native_session.py": "d02967b9700da67fc0888bb9bb21ea43902d811966a6fcb33fe70b4a6edaa33c",
+    "verify_results.py": "a1d73ac321964f9f269ad2e10b196946f99a85e3d2e182dca67c249051a699d0"
+  },
+  "pilot_attempt_seconds": [
+    14.040583041962236,
+    14.333776249783114,
+    14.311593499965966,
+    14.21466058306396
+  ],
+  "pilot_records": [
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-21/attempts/001/record.json",
+      "sha256": "857bcbc66589a52b88c4acf51c8222509dc5efecac9d271306a0182ee19523ea"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/record.json",
+      "sha256": "b4e15b88f078617d19c17dd3e8b04c8fcc3d2738e7aa4f6c187e3cbb867017ca"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/002/record.json",
+      "sha256": "c68096e0ffed6634ed45e4b542ddd439d9418daafd64d8ddf377989b9e221057"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/record.json",
+      "sha256": "002bd8e1e41fa0eb5a8e2153e7e878ae16283b4b283341ad63a2a2c4f4cb2913"
+    }
+  ],
+  "protocol_revision": "ema-2d-v1",
+  "protocol_sha256": "09942fb8ed12194b9c2efb944b2c1d9a2b00f63c043bd5055ce6f42e0008cfb1",
+  "remaining_seconds_at_freeze": 1699.627220249083
+}

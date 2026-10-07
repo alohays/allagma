@@ -1,0 +1,86 @@
+{
+  "artifact_digests_verified": true,
+  "attempt_id": "confirm-gmm8-2005-a001",
+  "attempt_wall_seconds": 14.922793708974496,
+  "charged_seconds": 15.09641645802185,
+  "command": [
+    "python3",
+    "manage.py",
+    "confirm"
+  ],
+  "command_exit_code": 0,
+  "completed_at": "2026-10-07T15:32:07.970729+00:00",
+  "compute_receipt": {
+    "path": "evidence/compute/018-confirm-confirm-gmm8-2005.json",
+    "sha256": "442054551f82452059c692788c6f10f8d60007305b2fb0c3b31e4f4dc387daa7"
+  },
+  "coverage": [
+    {
+      "samples_per_variant": {
+        "ema099": 2048,
+        "ema0999": 2048,
+        "raw": 2048
+      },
+      "step": 5000,
+      "variants": [
+        "ema099",
+        "ema0999",
+        "raw"
+      ]
+    },
+    {
+      "samples_per_variant": {
+        "ema099": 2048,
+        "ema0999": 2048,
+        "raw": 2048
+      },
+      "step": 10000,
+      "variants": [
+        "ema099",
+        "ema0999",
+        "raw"
+      ]
+    }
+  ],
+  "evaluation": {
+    "checks": {
+      "10000_ema0999_coverage": true,
+      "10000_ema0999_finite_shape": true,
+      "10000_ema0999_scipy_w1": true,
+      "10000_ema099_coverage": true,
+      "10000_ema099_finite_shape": true,
+      "10000_ema099_scipy_w1": true,
+      "10000_raw_coverage": true,
+      "10000_raw_finite_shape": true,
+      "10000_raw_scipy_w1": true,
+      "5000_ema0999_coverage": true,
+      "5000_ema0999_finite_shape": true,
+      "5000_ema0999_scipy_w1": true,
+      "5000_ema099_coverage": true,
+      "5000_ema099_finite_shape": true,
+      "5000_ema099_scipy_w1": true,
+      "5000_raw_coverage": true,
+      "5000_raw_finite_shape": true,
+      "5000_raw_scipy_w1": true,
+      "checkpoint_digest": true,
+      "checkpoints": true,
+      "exact_input": true,
+      "heldout_hash": true,
+      "heldout_reseeded": true,
+      "native_mps": true,
+      "trajectory_complete": true,
+      "variants_10000": true,
+      "variants_5000": true
+    },
+    "path": "campaigns/ema-v1/runs/confirm-gmm8-2005/attempts/001/evaluation.json",
+    "scope": "Seeded holdout reconstruction, complete paired trajectories, finite output, checkpoint hash and SciPy projected W1 cross-check; no retraining or scientific peer review",
+    "sha256": "873ad5fe790cd91da6e895a77a985ba281269fd8747f2f2910b330be1bb2023c",
+    "valid": true
+  },
+  "record": {
+    "path": "campaigns/ema-v1/runs/confirm-gmm8-2005/attempts/001/record.json",
+    "sha256": "20eac2a20882c3765069239a9ebbb99ae823d12f1150db95cb9188d631c4025e"
+  },
+  "run_id": "confirm-gmm8-2005",
+  "status": "succeeded"
+}
