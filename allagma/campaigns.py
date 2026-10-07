@@ -112,6 +112,11 @@ def start_campaign(study, campaign):
             raise AllagmaError("Campaign already exists; resume it instead")
         protocol = read_json(study / "protocol.json")
         brief = read_json(study / "brief.json")
+        minimum = protocol.get("minimum_confirmation_runs", 1)
+        if type(minimum) is not int or minimum < 1:
+            raise AllagmaError("minimum_confirmation_runs must be a positive integer chosen by the study")
+        if type(protocol.get("paired_seeds", False)) is not bool:
+            raise AllagmaError("paired_seeds must be boolean")
         plan = protocol["runs"]
         if not plan or len({run["id"] for run in plan}) != len(plan):
             raise AllagmaError("Protocol needs a finite plan with unique run IDs")
@@ -129,7 +134,14 @@ def start_campaign(study, campaign):
             confined(study, f"campaigns/{campaign}/runs/{run['id']}")
         for split in seeds:
             if sum(run["split"] == split for run in plan) != len(seeds[split]):
-                raise AllagmaError(f"Duplicate seeds in {split}; define independent run identities explicitly")
+                if not protocol.get("paired_seeds", False):
+                    raise AllagmaError(f"Duplicate seeds in {split}; declare paired_seeds and distinct condition_id values for paired conditions")
+                for seed in seeds[split]:
+                    group = [run for run in plan if run["split"] == split and run["input"]["seed"] == seed]
+                    if len(group) > 1:
+                        conditions = [run.get("condition_id") for run in group]
+                        if any(not isinstance(value,str) or not value.strip() for value in conditions) or len(set(conditions)) != len(conditions):
+                            raise AllagmaError("Paired runs sharing a seed need distinct nonempty condition_id values")
         if "execution.local" not in lock["capabilities"]:
             raise AllagmaError("Local execution capability is missing")
         for role in ("runner", "evaluator", "analyzer", "writer"):
@@ -445,8 +457,11 @@ def analyze_campaign(study, campaign, *, analysis_id="a001", allow_partial=False
                 manifest["raw"].append(next(ref for ref in item["outputs"] if ref["path"].endswith("/raw.json")))
             else:
                 manifest["exclusions"].append({"attempt_id": item["attempt_id"], "reason": item["status"] if item["status"] != "succeeded" else "pilot data excluded from confirmation"})
-        if len(manifest["raw"]) < 2:
-            raise AllagmaError("At least two eligible confirmation observations are needed for uncertainty")
+        minimum = protocol.get("minimum_confirmation_runs", 1)
+        if type(minimum) is not int or minimum < 1:
+            raise AllagmaError("Invalid frozen minimum_confirmation_runs")
+        if len(manifest["raw"]) < minimum:
+            raise AllagmaError(f"Study protocol requires at least {minimum} eligible confirmation runs")
         adir.mkdir(parents=True)
         write_json(adir / "raw-manifest.json", manifest, immutable=True)
         analyzer = directory / "materials" / protocol["analyzer"]
@@ -459,7 +474,8 @@ def analyze_campaign(study, campaign, *, analysis_id="a001", allow_partial=False
         analysis = {"schema_version": "0.2", "record_type": "AnalysisRecord", "analysis_id": analysis_id,
                     "raw_manifest": reference(study, adir / "raw-manifest.json"),
                     "analysis_revision": file_hash(analyzer), "code": reference(study, analyzer, "text/x-python"),
-                    "configuration": {"protocol_revision": protocol["revision"], "partial": len(successes) != len(protocol["runs"])},
+                    "configuration": {"protocol_revision": protocol["revision"], "partial": len(successes) != len(protocol["runs"]),
+                                      "minimum_confirmation_runs": minimum},
                     "outputs": output_refs, "exclusions": manifest["exclusions"], "uncertainty": protocol["uncertainty"],
                     "dependencies": [reference(study, directory / "protocol.json"), *manifest["runs"], *manifest["raw"]]}
         if (directory / "amendment.json").exists():
