@@ -1,0 +1,128 @@
+{
+  "bundle_id": "b-2b63431e34a085598aaade78",
+  "campaign": "ema-v1",
+  "command_order": [
+    {
+      "charged_seconds": 15.517920332960784,
+      "ended_at": "2026-10-07T15:38:17.774758+00:00",
+      "exit_code": 0,
+      "receipt": {
+        "path": "evidence/compute/019-analyze.json",
+        "sha256": "df6e85f0a0c795cf93b1c9a75ebc2e29e68b01a6ad8d3ec510b5c94ad06cbbb9"
+      },
+      "requested_command": "python3 manage.py analyze",
+      "started_at": "2026-10-07T15:38:02.256335+00:00",
+      "status": "completed"
+    },
+    {
+      "charged_seconds": 4.819993916898966,
+      "ended_at": "2026-10-07T15:38:32.290229+00:00",
+      "exit_code": 0,
+      "receipt": {
+        "path": "evidence/compute/020-audit.json",
+        "sha256": "64aef5084bbf018df0ac840c6a269b54b7482aabd67e11fe96a205b6a0f07068"
+      },
+      "requested_command": "python3 manage.py audit",
+      "started_at": "2026-10-07T15:38:27.469805+00:00",
+      "status": "completed"
+    },
+    {
+      "charged_seconds": 6.804718292085454,
+      "ended_at": "2026-10-07T15:39:07.870247+00:00",
+      "exit_code": 0,
+      "receipt": {
+        "path": "evidence/compute/021-independent-verification.json",
+        "sha256": "8648f2d62112bdaaac932ad6a4d6cc91b01dc082bd0a7b6cfe9fb46c66e2bdf5"
+      },
+      "requested_command": "python3 manage.py verify",
+      "started_at": "2026-10-07T15:39:01.065108+00:00",
+      "status": "completed"
+    },
+    {
+      "charged_seconds": 0.04027158301323652,
+      "ended_at": "2026-10-07T15:39:17.711290+00:00",
+      "exit_code": 0,
+      "receipt": {
+        "path": "evidence/compute/022-publication.json",
+        "sha256": "c2e55b989438af28eddbf152ae0c7a8b0b0ae6339edcda7d3495e764792cebad"
+      },
+      "requested_command": "python3 publication.py",
+      "started_at": "2026-10-07T15:39:17.670613+00:00",
+      "status": "completed"
+    }
+  ],
+  "final_status": {
+    "attempt_limit": 18,
+    "attempts": 15,
+    "ceiling_seconds": 1800.0,
+    "charged_seconds": 276.34548083175906,
+    "next_run": null,
+    "prior_probe_estimate_charged_seconds": 15.3,
+    "prior_probe_is_scientific_evidence": false,
+    "remaining_seconds": 1523.654519168241,
+    "state": {
+      "assurance": "deterministic",
+      "execution_status": "completed",
+      "phase": "audit",
+      "stop_reason": null
+    }
+  },
+  "format": "ema-finalization-handoff-v1",
+  "materials": [
+    {
+      "path": "confirmation-freeze.json",
+      "sha256": "e7b37fee3ca7331f7743f73a52de0528a3f1e2ce5d4e83aa2d385674c6ac9eca"
+    },
+    {
+      "path": "campaigns/ema-v1/analyses/a001/raw-manifest.json",
+      "sha256": "72287c825fa1afae016e0cd3e320951583f59ee5b1c91e09f7a8b777bbddd42f"
+    },
+    {
+      "path": "campaigns/ema-v1/analyses/a001/record.json",
+      "sha256": "e3f8a1dbcd7490338345eef2f55b9a2f3eb4d97d999a0e5780b5a92f603853e6"
+    },
+    {
+      "path": "campaigns/ema-v1/analyses/a001/outputs/summary.json",
+      "sha256": "c8863b0f30af4b1eb00411074bc711b3c9c2cd9e236f9c16b1a274b1ad4b082e"
+    },
+    {
+      "path": "campaigns/ema-v1/analyses/a001/paper/claims.json",
+      "sha256": "6ce2dfcd632913db6bbdcedde3e1a5519fb17b8dfc6050965fe7034ca03bee68"
+    },
+    {
+      "path": "campaigns/ema-v1/analyses/a001/paper/manuscript.md",
+      "sha256": "68bc1aae499f57f973221d8e13a4fc2d033f135d9fa237eb12529761053f6159"
+    },
+    {
+      "path": "campaigns/ema-v1/latest-audit.json",
+      "sha256": "2075e6ea12c457b48973e942c170148b390b9b0b40d6e6b5f455896ffa28205e"
+    },
+    {
+      "path": "evidence/independent-verification.json",
+      "sha256": "2b075f0307adba21ae638c8645970a6d625eb2eea214987b9cc71253e5d2e056"
+    },
+    {
+      "path": "publication/manuscript.md",
+      "sha256": "0b69adf92abaccf8027a512be8afc84bd6226bcd3a121212166010e419af4a4a"
+    },
+    {
+      "path": "publication/record.json",
+      "sha256": "27d4f78bbf761319a92b0f824d095e217703343b24c651fa6e034653aecdef69"
+    },
+    {
+      "path": "evidence/finalization-20261008/final-status.json",
+      "sha256": "87998c19017c29b16c83c03f5a6d5b5c72996eb74e641399017db7dc28d1e271"
+    },
+    {
+      "path": "evidence/finalization-20261008/report.md",
+      "sha256": "7373dda777c0dfc86a53ed0580c9392d7787e83c1491239d4c99ae6820fdf55c"
+    }
+  ],
+  "recorded_at": "2026-10-07T15:44:23.854648+00:00",
+  "reporting_findings": [
+    "Independent-verifier scope wording is broader than its independently recalculated supporting diagnostics.",
+    "Secondary Table 2 conclusions lack separate ClaimRecords.",
+    "README lacks the reproduction/training commands asserted in the manuscript; separate host report remains undelivered/unlinked."
+  ],
+  "review_scope": "Same-model-family provisional artifact and reporting critique; not independent scientific peer review; figure inspection and repository delivery deferred to coordinator."
+}

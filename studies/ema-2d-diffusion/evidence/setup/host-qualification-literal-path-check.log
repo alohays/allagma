@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/qualify_host.py", line 113, in <module>
+    main()
+  File "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/qualify_host.py", line 62, in main
+    assert any(canonical in item["command"] and f"name: allagma-{method}" in item["aggregated_output"] for item in all_commands)
+AssertionError

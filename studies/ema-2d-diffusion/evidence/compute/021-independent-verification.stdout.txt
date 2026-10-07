@@ -1,0 +1,90 @@
+{
+  "status": "pass",
+  "attempt_statuses": {
+    "succeeded": 14,
+    "interrupted": 1
+  },
+  "interrupted_attempts": [
+    "pilot-moons-11-a001"
+  ],
+  "distinct_direct_reference_checks": 263,
+  "scipy_projected_w1_checks": 84,
+  "independent_mixture_coverage_checks": 42,
+  "saved_weight_digest_checks": 84,
+  "paired_interval_checks": 8,
+  "sample_regeneration": [
+    {
+      "run": "confirm-gmm8-2001",
+      "updates": 5000,
+      "weights": "ema099",
+      "max_sample_absolute_error": 0.0
+    },
+    {
+      "run": "confirm-gmm8-2001",
+      "updates": 5000,
+      "weights": "ema0999",
+      "max_sample_absolute_error": 0.0
+    },
+    {
+      "run": "confirm-gmm8-2001",
+      "updates": 5000,
+      "weights": "raw",
+      "max_sample_absolute_error": 0.0
+    },
+    {
+      "run": "confirm-gmm8-2001",
+      "updates": 10000,
+      "weights": "ema099",
+      "max_sample_absolute_error": 0.0
+    },
+    {
+      "run": "confirm-gmm8-2001",
+      "updates": 10000,
+      "weights": "ema0999",
+      "max_sample_absolute_error": 0.0
+    },
+    {
+      "run": "confirm-gmm8-2001",
+      "updates": 10000,
+      "weights": "raw",
+      "max_sample_absolute_error": 0.0
+    },
+    {
+      "run": "confirm-moons-1001",
+      "updates": 5000,
+      "weights": "ema099",
+      "max_sample_absolute_error": 0.0
+    },
+    {
+      "run": "confirm-moons-1001",
+      "updates": 5000,
+      "weights": "ema0999",
+      "max_sample_absolute_error": 0.0
+    },
+    {
+      "run": "confirm-moons-1001",
+      "updates": 5000,
+      "weights": "raw",
+      "max_sample_absolute_error": 0.0
+    },
+    {
+      "run": "confirm-moons-1001",
+      "updates": 10000,
+      "weights": "ema099",
+      "max_sample_absolute_error": 0.0
+    },
+    {
+      "run": "confirm-moons-1001",
+      "updates": 10000,
+      "weights": "ema0999",
+      "max_sample_absolute_error": 0.0
+    },
+    {
+      "run": "confirm-moons-1001",
+      "updates": 10000,
+      "weights": "raw",
+      "max_sample_absolute_error": 0.0
+    }
+  ],
+  "scope": "Every trajectory and raw/checkpoint digest; all reported SW1 scores and paired confidence intervals independently recomputed. Saved-weight sampling re-executed on the two prespecified first confirmation seeds, all three variants and both checkpoints. No retraining or independent peer review."
+}

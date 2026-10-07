@@ -7,7 +7,7 @@ bundle. Central edits and later releases cannot change an existing campaign.
 
 The v0.2 implementation includes an offline toy study, generic/Codex/Claude
 Code packaging, replaceable context and reviewer examples, update and rollback
-tools, and a contributor conformance kit. It uses **Python 3.11+ on POSIX**
+tools, and a contributor conformance kit. The core and offline toy study use **Python 3.11+ on POSIX**
 (macOS or Linux), with **no third-party runtime dependencies, paid APIs or GPU**.
 Distribution is a source checkout or a generated study-local bundle; a Python
 wheel, remote scheduler and autonomous model optimizer are outside this release.
@@ -52,6 +52,12 @@ from real-host activation and model-quality qualification.
 
 The [post-delivery self-audit](docs/audit/README.md) records the defects found,
 their corrections, independent checks and a requirement-by-requirement map.
+
+The separate [weight EMA diffusion study](studies/ema-2d-diffusion/README.md)
+retains real native Codex sessions, MPS training, held-out comparisons and
+fresh-session recovery. Its PyTorch environment and scientific code belong to
+the study. See the [host qualification report](studies/ema-2d-diffusion/HOST-QUALIFICATION.md)
+for the exact tested scope and evidence.
 
 ## Start your own study
 
@@ -116,6 +122,7 @@ rollback.
 | `profiles/`, `policies/` | Public examples; personal credentials stay outside |
 | `evals/`, `conformance/` | Framework evaluation and offline behavioral checks |
 | `examples/toy-study/` | Study-owned science and a complete reference workflow |
+| `studies/ema-2d-diffusion/` | Native Codex/MPS study, pinned science and retained results |
 | `templates/study/` | Initial scaffold, owned by the study after generation |
 
 Read [architecture](docs/architecture.md), [module authoring](docs/module-authoring.md),
@@ -124,4 +131,5 @@ Read [architecture](docs/architecture.md), [module authoring](docs/module-author
 The [adopted specifications](docs/specification/README.md) and
 [design lineage](docs/design-lineage.md) explain the design's origins.
 
-MIT licensed. See [third-party notices](THIRD_PARTY_NOTICES.md).
+Allagma core is MIT licensed. Study-specific source reuse and licensing are
+documented in [third-party notices](THIRD_PARTY_NOTICES.md).

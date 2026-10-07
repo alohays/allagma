@@ -1,0 +1,54 @@
+{
+  "assurance": "provisional",
+  "backend": "native-codex",
+  "backend_version": "codex-cli 0.160.1",
+  "coverage": "Same-model-family reporting critique halted at the first requested command failure. Read-only method, prior-review, script and README inspection plus preservation of 416 file digests. No numerical recomputation, v2 review, new ClaimRecord validation, retraining or independent scientific peer review. Host qualification and final requirement checklist are out of scope.",
+  "criteria": [
+    "Use campaign-pinned writing and audit methods and preserve earlier artifacts.",
+    "Run supporting verification then publication revision through their built-in supervisor; stop on failure.",
+    "Assess the three prior reporting findings and validate any new ClaimRecords with the locked schema validator.",
+    "Exclude host qualification and final requirement checklist completion; claim no independent scientific peer review."
+  ],
+  "findings": [
+    "python3 verify_supporting.py exited 1 at its top-level NumPy import before entering the supervisor; no supporting verification or v2 publication was generated.",
+    "Supporting-diagnostic verification and Table 2 ClaimRecord completeness remain unresolved; the revision and new ClaimRecord validation were not run.",
+    "README reproduction commands are now present, but the documented verifier command failed and the v2/supporting-evidence links have no targets at this revision."
+  ],
+  "material": {
+    "media_type": "application/json",
+    "path": "evidence/reporting-revision-20261008/materials.json",
+    "retention": "retain-with-study",
+    "sha256": "22027553f5b436519371d910d4c4659b1b5beba176247fb48bac2a965f04db47"
+  },
+  "record_type": "ReviewRecord",
+  "review_id": "ema-v1-reporting-revision-20261008",
+  "reviewer": "OpenAI Codex; same-model-family provisional critique",
+  "schema_version": "0.2",
+  "trace": [
+    {
+      "media_type": "application/json",
+      "path": "evidence/reporting-revision-20261008/commands.json",
+      "retention": "retain-with-study",
+      "sha256": "ebb499dcb497f90e6dd006ccc68fa18cad8a9026d6b7711f524bf4841e38754d"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/reporting-revision-20261008/preflight.json",
+      "retention": "retain-with-study",
+      "sha256": "24906e51b25c6074d60982250d86d1a5781b7eb93e3ed97c161f372714542fde"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/reporting-revision-20261008/preservation.json",
+      "retention": "retain-with-study",
+      "sha256": "0efe0e82ad5c16fef0944442ca3182fc46ae2e69ce861683d09cede12023b133"
+    },
+    {
+      "media_type": "text/markdown",
+      "path": "evidence/reporting-revision-20261008/report.md",
+      "retention": "retain-with-study",
+      "sha256": "15bbfcc4a58e8dd05db6d8555e88ab58aede195be7949d59d416cc193478088c"
+    }
+  ],
+  "verdict": "blocked"
+}

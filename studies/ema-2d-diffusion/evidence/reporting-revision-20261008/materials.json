@@ -1,0 +1,75 @@
+{
+  "bundle_id": "b-2b63431e34a085598aaade78",
+  "campaign": "ema-v1",
+  "inspected_materials": [
+    {
+      "media_type": "text/markdown",
+      "path": "README.md",
+      "retention": "retain-with-study",
+      "sha256": "b8a2e5983490240bf0e16f609aa89613f12b0a927486fa41e8a49d085a21d625"
+    },
+    {
+      "media_type": "text/x-python",
+      "path": "verify_supporting.py",
+      "retention": "retain-with-study",
+      "sha256": "e9a5cb8fafc23cc67161927591dbf4f2ba697d40cc518f802e38deacfdcffa15"
+    },
+    {
+      "media_type": "text/x-python",
+      "path": "revise_publication.py",
+      "retention": "retain-with-study",
+      "sha256": "5d56145036c2e96cdd7c7f41b848ed2e1f23de4e2c4f67578e92fc0ceab17006"
+    },
+    {
+      "media_type": "text/x-python",
+      "path": "reproduce_study.py",
+      "retention": "retain-with-study",
+      "sha256": "05c3d44bf34e508a412837d5998dc0688aadd8cf90e978baff815efd59d8ad5b"
+    },
+    {
+      "media_type": "text/x-python",
+      "path": "publication.py",
+      "retention": "retain-with-study",
+      "sha256": "78cb8589669e151448ca740cc76c1cfc29bb2b905ee1f38d98fdf64c922a3324"
+    },
+    {
+      "media_type": "application/json",
+      "path": "publication/record.json",
+      "retention": "retain-with-study",
+      "sha256": "27d4f78bbf761319a92b0f824d095e217703343b24c651fa6e034653aecdef69"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/analyses/a001/record.json",
+      "retention": "retain-with-study",
+      "sha256": "e3f8a1dbcd7490338345eef2f55b9a2f3eb4d97d999a0e5780b5a92f603853e6"
+    },
+    {
+      "media_type": "text/markdown",
+      "path": "evidence/finalization-20261008/report.md",
+      "retention": "retain-with-study",
+      "sha256": "7373dda777c0dfc86a53ed0580c9392d7787e83c1491239d4c99ae6820fdf55c"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/finalization-20261008/record.json",
+      "retention": "retain-with-study",
+      "sha256": "b8c0e4fda51331e811f701cc0df8ad77065f1fee3c6daf903f6ba91638fbc056"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/independent-verification.json",
+      "retention": "retain-with-study",
+      "sha256": "2b075f0307adba21ae638c8645970a6d625eb2eea214987b9cc71253e5d2e056"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/lock.yaml",
+      "retention": "retain-with-study",
+      "sha256": "cc0ef548e8ae7c018133a83bbe922cd201c5732728fd306a6cd3d5e98d7b320e"
+    }
+  ],
+  "intended_revision": "publication/v2 (not created)",
+  "lock_id": "7287e278da3e264dc83704d42c334dd5845da048f59c9967343545fc4ec6c329",
+  "scope": "Retained evidence and prepared reporting inputs inspected before the required stop; no v2 manuscript or claims exist."
+}

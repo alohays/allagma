@@ -1,20 +1,65 @@
 {
-  "02-interrupted": {
-    "thread_id": "01a116ef-4939-7070-b7b3-ff6de94201a8",
-    "model": "gpt-6-astra",
-    "effort": "max",
-    "approval_policy": "never",
-    "cwd": "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion",
-    "rollout_filename": "rollout-2026-10-08T00-15-43-01a116ef-4939-7070-b7b3-ff6de94201a8.jsonl",
-    "provenance": "Selected non-secret fields from the local native session turn_context; original remains in host session storage"
-  },
   "01-interrupted": {
-    "thread_id": "01a116ee-177b-7770-abfc-72444bccbc64",
-    "model": "gpt-6-astra",
-    "effort": "max",
     "approval_policy": "never",
     "cwd": "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion",
+    "effort": "max",
+    "model": "gpt-6-astra",
+    "provenance": "Selected non-secret fields from the native turn_context; original retained in host session storage",
     "rollout_filename": "rollout-2026-10-08T00-14-24-01a116ee-177b-7770-abfc-72444bccbc64.jsonl",
-    "provenance": "Selected non-secret fields from the local native session turn_context; original remains in host session storage"
+    "thread_id": "01a116ee-177b-7770-abfc-72444bccbc64"
+  },
+  "02-interrupted": {
+    "approval_policy": "never",
+    "cwd": "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion",
+    "effort": "max",
+    "model": "gpt-6-astra",
+    "provenance": "Selected non-secret fields from the native turn_context; original retained in host session storage",
+    "rollout_filename": "rollout-2026-10-08T00-15-43-01a116ef-4939-7070-b7b3-ff6de94201a8.jsonl",
+    "thread_id": "01a116ef-4939-7070-b7b3-ff6de94201a8"
+  },
+  "03-fresh-pilots": {
+    "approval_policy": "never",
+    "cwd": "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion",
+    "effort": "max",
+    "model": "gpt-6-astra",
+    "provenance": "Selected non-secret fields from the native turn_context; original retained in host session storage",
+    "rollout_filename": "rollout-2026-10-08T00-17-59-01a116f1-5d09-7682-a2a5-4c408e722905.jsonl",
+    "thread_id": "01a116f1-5d09-7682-a2a5-4c408e722905"
+  },
+  "04-confirmation": {
+    "approval_policy": "never",
+    "cwd": "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion",
+    "effort": "max",
+    "model": "gpt-6-astra",
+    "provenance": "Selected non-secret fields from the native turn_context; original retained in host session storage",
+    "rollout_filename": "rollout-2026-10-08T00-25-20-01a116f8-19de-7302-bad5-2b1d09db2055.jsonl",
+    "thread_id": "01a116f8-19de-7302-bad5-2b1d09db2055"
+  },
+  "05-analysis": {
+    "approval_policy": "never",
+    "cwd": "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion",
+    "effort": "max",
+    "model": "gpt-6-astra",
+    "provenance": "Selected non-secret fields from the native turn_context; original retained in host session storage",
+    "rollout_filename": "rollout-2026-10-08T00-35-22-01a11701-495b-7a63-82ac-1ed916ff58a3.jsonl",
+    "thread_id": "01a11701-495b-7a63-82ac-1ed916ff58a3"
+  },
+  "06-reporting-revision": {
+    "approval_policy": "never",
+    "cwd": "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion",
+    "effort": "max",
+    "model": "gpt-6-astra",
+    "provenance": "Selected non-secret fields from the native turn_context; original retained in host session storage",
+    "rollout_filename": "rollout-2026-10-08T00-48-25-01a1170d-396e-72d0-9840-26d9a72331c5.jsonl",
+    "thread_id": "01a1170d-396e-72d0-9840-26d9a72331c5"
+  },
+  "07-reporting-repair": {
+    "approval_policy": "never",
+    "cwd": "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion",
+    "effort": "max",
+    "model": "gpt-6-astra",
+    "provenance": "Selected non-secret fields from the native turn_context; original retained in host session storage",
+    "rollout_filename": "rollout-2026-10-08T00-56-58-01a11715-104f-7f61-ab4c-28416494202b.jsonl",
+    "thread_id": "01a11715-104f-7f61-ab4c-28416494202b"
   }
 }

@@ -1,0 +1,41 @@
+{
+  "analysis": {
+    "media_type": "application/json",
+    "path": "campaigns/ema-v1/analyses/a001/record.json",
+    "retention": "retain-with-study",
+    "sha256": "e3f8a1dbcd7490338345eef2f55b9a2f3eb4d97d999a0e5780b5a92f603853e6"
+  },
+  "claims": {
+    "media_type": "application/json",
+    "path": "campaigns/ema-v1/analyses/a001/paper/claims.json",
+    "retention": "retain-with-study",
+    "sha256": "6ce2dfcd632913db6bbdcedde3e1a5519fb17b8dfc6050965fe7034ca03bee68"
+  },
+  "disclosure": {
+    "media_type": "text/markdown",
+    "path": "DISCLOSURE.md",
+    "retention": "retain-with-study",
+    "sha256": "136a4990ce709b605d4f804ff1b562a2be8d12db5bb18430424e0ea6ce7c3648"
+  },
+  "output": {
+    "media_type": "text/markdown",
+    "path": "publication/manuscript.md",
+    "retention": "retain-with-study",
+    "sha256": "0b69adf92abaccf8027a512be8afc84bd6226bcd3a121212166010e419af4a4a"
+  },
+  "scope": "Publication text transformation and local link verification; scientific recomputation is separately established by campaign audit and independent verification",
+  "script": {
+    "media_type": "text/x-python",
+    "path": "publication.py",
+    "retention": "retain-with-study",
+    "sha256": "78cb8589669e151448ca740cc76c1cfc29bb2b905ee1f38d98fdf64c922a3324"
+  },
+  "source": {
+    "media_type": "text/markdown",
+    "path": "campaigns/ema-v1/analyses/a001/paper/manuscript.md",
+    "retention": "retain-with-study",
+    "sha256": "68bc1aae499f57f973221d8e13a4fc2d033f135d9fa237eb12529761053f6159"
+  },
+  "status": "pass",
+  "transformation": "Prepend machine-generation disclosure after title; rebase local Markdown links; preserve all remaining scientific wording and numbers"
+}

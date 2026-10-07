@@ -50,7 +50,27 @@ English technical documentation, contribution materials and the
 [commit-and-push instruction](../GOAL.md) remain in the repository.
 
 The default kit uses Python 3.11+ on POSIX, without paid APIs, GPU or third-party
-Python runtime dependencies. Source snapshots remain unpublished. Historical
+Python runtime dependencies. Historical
 bundles keep their old helpers; adopt the corrected source explicitly for new
 campaigns. Native Codex/Claude activation, model quality and independent
-scientific peer review remain unperformed qualifications.
+scientific peer review were unperformed at that audit checkpoint.
+
+## Subsequent native Codex qualification
+
+The [weight EMA diffusion study](../studies/ema-2d-diffusion/README.md) adds real
+native Codex evidence on 8 October 2026. Six distinct CLI 0.160.1 sessions
+cover interruption, fresh-session recovery, pilots, confirmation, analysis and
+reporting revision. The inherited model was `gpt-6-astra` with no project model
+pin. The exact audited framework source above remains the study's frozen
+source; PyTorch and scientific dependencies belong only to the separate study.
+
+Four pilot and ten confirmation trajectories completed on MPS. Every trajectory
+retains raw and EMA0.99/EMA0.999 checkpoints at 5,000 and 10,000 updates. One
+100-update pilot interruption remains excluded. The deterministic audit and
+independent scientific verifiers recompute results and reproduce selected
+saved-weight samples. A global 1,800-second ceiling counts scientific checks,
+retries, execution, analysis and recomputation. See the
+[host qualification report](../studies/ema-2d-diffusion/HOST-QUALIFICATION.md)
+and [machine-checkable receipt](../studies/ema-2d-diffusion/evidence/host-qualification.json)
+for actual cost, tested methods and limits. Claude activation, general model
+research quality and independent scientific peer review remain unqualified.

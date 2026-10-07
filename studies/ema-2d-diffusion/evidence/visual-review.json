@@ -1,0 +1,24 @@
+{
+  "status": "pass",
+  "reviewed_at": "2026-10-07T15:41:14.259305+00:00",
+  "method": "Direct visual inspection of the actual generated PNG files through the image viewing tool",
+  "figures": [
+    {
+      "path": "campaigns/ema-v1/analyses/a001/outputs/paired-quality.png",
+      "sha256": "a3ea9ba221e90ed2de24aad798dd15bfe99b00294f469d619dd2c0f1cf6d02de"
+    },
+    {
+      "path": "campaigns/ema-v1/analyses/a001/outputs/samples.png",
+      "sha256": "d4290627f0aed329d3e3d39f27d3e88851f09735be8ee3c0fe654407697be9f2"
+    }
+  ],
+  "observations": [
+    "Readable titles, units, axis ticks and variant labels; no clipped text or overlapping panels",
+    "Each effects panel displays its own numerical y scale, five seed points, mean, interval and zero reference; the paired CSV retains every value",
+    "Sample panels show the prespecified first confirmation seed for each dataset at 10000 updates, with shared fixed axes",
+    "Qualitative sample figure displays the first1024 of2048 samples; full2048 used for metrics"
+  ],
+  "limits": [
+    "Visual inspection is not a numerical verifier; numerical and checkpoint checks are retained separately"
+  ]
+}

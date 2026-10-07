@@ -1,0 +1,43 @@
+{
+  "assurance": "deterministic",
+  "backend": "local deterministic Python",
+  "backend_version": "3.11.6",
+  "coverage": "Schema, material and direct evidence digests. No independent assessment of scientific validity. Plus raw-data recomputation and deterministic report regeneration.",
+  "criteria": [
+    "transitive evidence integrity",
+    "raw-data recomputation",
+    "manuscript and claim regeneration"
+  ],
+  "findings": [],
+  "material": {
+    "media_type": "text/markdown",
+    "path": "campaigns/ema-v1/analyses/a001/paper/manuscript.md",
+    "retention": "retain-with-study",
+    "sha256": "68bc1aae499f57f973221d8e13a4fc2d033f135d9fa237eb12529761053f6159"
+  },
+  "record_type": "ReviewRecord",
+  "review_id": "review-001",
+  "reviewer": "reviewer/checklist",
+  "schema_version": "0.2",
+  "trace": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/analyses/a001/reviews/review-001/input.json",
+      "retention": "retain-with-study",
+      "sha256": "4a723ab727b61580fe8d0cc6aeb98036912addb1a0b475f720f40f3c40f5afdf"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/analyses/a001/reviews/review-001/adapter-result.json",
+      "retention": "retain-with-study",
+      "sha256": "9c40d222178102c0e002a95cd63d53b1af3187c4a847bc233e5c181b568f38cd"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/analyses/a001/reviews/review-001/execution.json",
+      "retention": "retain-with-study",
+      "sha256": "6e5c6a87655065bc7c36d91d00e440db6a1aef28852eb20d747539f8f2ab86fe"
+    }
+  ],
+  "verdict": "pass"
+}

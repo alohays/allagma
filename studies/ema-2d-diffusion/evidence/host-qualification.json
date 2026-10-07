@@ -1,0 +1,270 @@
+{
+  "accepted_publication": {
+    "path": "publication/v2/record.json",
+    "sha256": "ae8cb9a8720b5354d5bc95734a43dad7c03e24cbdf3dfe87aef8e6327f06add7"
+  },
+  "budget": {
+    "attempt_limit": 18,
+    "attempts": 15,
+    "ceiling_seconds": 1800.0,
+    "charged_seconds": 324.5607410408091,
+    "prior_probe_estimate_charged_seconds": 15.3,
+    "prior_probe_is_scientific_evidence": false,
+    "remaining_seconds": 1475.439258959191
+  },
+  "bundle_id": "b-2b63431e34a085598aaade78",
+  "campaign_routes": [
+    {
+      "item_id": "item_20",
+      "module": "research/protocol",
+      "path": ".allagma/bundles/b-2b63431e34a085598aaade78/methods/allagma-protocol/SKILL.md",
+      "session": "02-interrupted",
+      "sha256": "a89b094556d76a0a370363ab54f943d4342f5322042ed7ff4424c90171b754ac"
+    },
+    {
+      "item_id": "item_21",
+      "module": "research/experiment",
+      "path": ".allagma/bundles/b-2b63431e34a085598aaade78/methods/allagma-experiment/SKILL.md",
+      "session": "02-interrupted",
+      "sha256": "81e6590ae9113a3f0a9508af58b3d70ad60ba970f86750d4ce5751e662e6b5c9"
+    },
+    {
+      "item_id": "item_11",
+      "module": "research/experiment",
+      "path": ".allagma/bundles/b-2b63431e34a085598aaade78/methods/allagma-experiment/SKILL.md",
+      "session": "03-fresh-pilots",
+      "sha256": "81e6590ae9113a3f0a9508af58b3d70ad60ba970f86750d4ce5751e662e6b5c9"
+    },
+    {
+      "item_id": "item_12",
+      "module": "research/protocol",
+      "path": ".allagma/bundles/b-2b63431e34a085598aaade78/methods/allagma-protocol/SKILL.md",
+      "session": "03-fresh-pilots",
+      "sha256": "a89b094556d76a0a370363ab54f943d4342f5322042ed7ff4424c90171b754ac"
+    },
+    {
+      "item_id": "item_9",
+      "module": "research/protocol",
+      "path": ".allagma/bundles/b-2b63431e34a085598aaade78/methods/allagma-protocol/SKILL.md",
+      "session": "04-confirmation",
+      "sha256": "a89b094556d76a0a370363ab54f943d4342f5322042ed7ff4424c90171b754ac"
+    },
+    {
+      "item_id": "item_10",
+      "module": "research/experiment",
+      "path": ".allagma/bundles/b-2b63431e34a085598aaade78/methods/allagma-experiment/SKILL.md",
+      "session": "04-confirmation",
+      "sha256": "81e6590ae9113a3f0a9508af58b3d70ad60ba970f86750d4ce5751e662e6b5c9"
+    },
+    {
+      "item_id": "item_12",
+      "module": "research/analysis",
+      "path": ".allagma/bundles/b-2b63431e34a085598aaade78/methods/allagma-analysis/SKILL.md",
+      "session": "05-analysis",
+      "sha256": "1d40ee00b301b631db81daf16ad8df793600af0a560bde85eded1066ad2eda79"
+    },
+    {
+      "item_id": "item_13",
+      "module": "research/writing",
+      "path": ".allagma/bundles/b-2b63431e34a085598aaade78/methods/allagma-writing/SKILL.md",
+      "session": "05-analysis",
+      "sha256": "1c6926bb5fdedcd3357e20d53914f6174d021d18f187045e59df5ac5305b3e11"
+    },
+    {
+      "item_id": "item_14",
+      "module": "research/audit",
+      "path": ".allagma/bundles/b-2b63431e34a085598aaade78/methods/allagma-audit/SKILL.md",
+      "session": "05-analysis",
+      "sha256": "7f151e4dc792fa50e593613798c3e079f7c6dfa8112a78da0d0f43ccc1067e35"
+    },
+    {
+      "item_id": "item_13",
+      "module": "research/audit",
+      "path": ".allagma/bundles/b-2b63431e34a085598aaade78/methods/allagma-audit/SKILL.md",
+      "session": "06-reporting-revision",
+      "sha256": "7f151e4dc792fa50e593613798c3e079f7c6dfa8112a78da0d0f43ccc1067e35"
+    },
+    {
+      "item_id": "item_14",
+      "module": "research/writing",
+      "path": ".allagma/bundles/b-2b63431e34a085598aaade78/methods/allagma-writing/SKILL.md",
+      "session": "06-reporting-revision",
+      "sha256": "1c6926bb5fdedcd3357e20d53914f6174d021d18f187045e59df5ac5305b3e11"
+    },
+    {
+      "item_id": "item_13",
+      "module": "research/audit",
+      "path": ".allagma/bundles/b-2b63431e34a085598aaade78/methods/allagma-audit/SKILL.md",
+      "session": "07-reporting-repair",
+      "sha256": "7f151e4dc792fa50e593613798c3e079f7c6dfa8112a78da0d0f43ccc1067e35"
+    },
+    {
+      "item_id": "item_12",
+      "module": "research/writing",
+      "path": ".allagma/bundles/b-2b63431e34a085598aaade78/methods/allagma-writing/SKILL.md",
+      "session": "07-reporting-repair",
+      "sha256": "1c6926bb5fdedcd3357e20d53914f6174d021d18f187045e59df5ac5305b3e11"
+    }
+  ],
+  "canonical_skill_reads": [
+    {
+      "item_id": "item_15",
+      "module": "research/protocol",
+      "session": "02-interrupted",
+      "source": {
+        "path": ".allagma/bundles/b-2b63431e34a085598aaade78/methods/allagma-protocol/SKILL.md",
+        "sha256": "a89b094556d76a0a370363ab54f943d4342f5322042ed7ff4424c90171b754ac"
+      }
+    },
+    {
+      "item_id": "item_15",
+      "module": "research/experiment",
+      "session": "02-interrupted",
+      "source": {
+        "path": ".allagma/bundles/b-2b63431e34a085598aaade78/methods/allagma-experiment/SKILL.md",
+        "sha256": "81e6590ae9113a3f0a9508af58b3d70ad60ba970f86750d4ce5751e662e6b5c9"
+      }
+    },
+    {
+      "item_id": "item_8",
+      "module": "research/analysis",
+      "session": "05-analysis",
+      "source": {
+        "path": ".allagma/bundles/b-2b63431e34a085598aaade78/methods/allagma-analysis/SKILL.md",
+        "sha256": "1d40ee00b301b631db81daf16ad8df793600af0a560bde85eded1066ad2eda79"
+      }
+    },
+    {
+      "item_id": "item_8",
+      "module": "research/writing",
+      "session": "05-analysis",
+      "source": {
+        "path": ".allagma/bundles/b-2b63431e34a085598aaade78/methods/allagma-writing/SKILL.md",
+        "sha256": "1c6926bb5fdedcd3357e20d53914f6174d021d18f187045e59df5ac5305b3e11"
+      }
+    },
+    {
+      "item_id": "item_8",
+      "module": "research/audit",
+      "session": "05-analysis",
+      "source": {
+        "path": ".allagma/bundles/b-2b63431e34a085598aaade78/methods/allagma-audit/SKILL.md",
+        "sha256": "7f151e4dc792fa50e593613798c3e079f7c6dfa8112a78da0d0f43ccc1067e35"
+      }
+    }
+  ],
+  "complete_plan": {
+    "confirmation_successes": 10,
+    "interrupted_attempts": 1,
+    "pilot_successes": 4
+  },
+  "confirmation_freeze": {
+    "path": "confirmation-freeze.json",
+    "sha256": "e7b37fee3ca7331f7743f73a52de0528a3f1e2ce5d4e83aa2d385674c6ac9eca"
+  },
+  "date": "2026-10-08 Asia/Seoul",
+  "excluded_claims": [
+    "Implicit skill-trigger reliability",
+    "Other models, hosts or hardware",
+    "Desktop UI interaction",
+    "General autonomous research quality",
+    "Independent scientific peer review",
+    "OS security sandbox isolation"
+  ],
+  "lock_id": "7287e278da3e264dc83704d42c334dd5845da048f59c9967343545fc4ec6c329",
+  "native_model_observations": {
+    "path": "evidence/native/model-observations.json",
+    "sha256": "82f8992afecc6ccd7ee40dcfa670ba99fb800551602a1c5b23318a44152506c8"
+  },
+  "recovery_attempts": [
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/001/record.json",
+      "sha256": "8d98942d76693aa115f1779aab649a0bffd2e64c72dfb984717a2a05b26eec3a"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/002/record.json",
+      "sha256": "c68096e0ffed6634ed45e4b542ddd439d9418daafd64d8ddf377989b9e221057"
+    }
+  ],
+  "scope": "Explicit native Codex CLI skill invocation, exact canonical method routing, bounded real MPS study execution, interrupted-host/fresh-session continuation, native analysis/audit/publication handoff for this study",
+  "sessions": [
+    {
+      "label": "02-interrupted",
+      "receipt": {
+        "path": "evidence/native/02-interrupted/session.json",
+        "sha256": "d0fe25ef0aae954f8fd259cab2d4ae77c833ae97e1090d9bd1aadbc18fe9106c"
+      },
+      "thread_id": "01a116ef-4939-7070-b7b3-ff6de94201a8",
+      "trace": {
+        "path": "evidence/native/02-interrupted/events.jsonl",
+        "sha256": "0dfce76dcc46e0f3a1e8ff0d4b51d7ca959d4db4456579f593c243f0bd422a52"
+      }
+    },
+    {
+      "label": "03-fresh-pilots",
+      "receipt": {
+        "path": "evidence/native/03-fresh-pilots/session.json",
+        "sha256": "768c0e47c2071b37510047ba8780a4433b5c2290bf2cb5d80781a06844cd35b9"
+      },
+      "thread_id": "01a116f1-5d09-7682-a2a5-4c408e722905",
+      "trace": {
+        "path": "evidence/native/03-fresh-pilots/events.jsonl",
+        "sha256": "91861c967f01ebadad48a646158b0b51012ed673d540fad3ff2e99b6e8305225"
+      }
+    },
+    {
+      "label": "04-confirmation",
+      "receipt": {
+        "path": "evidence/native/04-confirmation/session.json",
+        "sha256": "95313cdb6f2846bb7f8562585613311d6a1f6c26700af3463385dd313cb693f2"
+      },
+      "thread_id": "01a116f8-19de-7302-bad5-2b1d09db2055",
+      "trace": {
+        "path": "evidence/native/04-confirmation/events.jsonl",
+        "sha256": "e224a1c58a873e6439a838f1ff5de4d4eb420f11d2ed8f6672b763cf62e22e38"
+      }
+    },
+    {
+      "label": "05-analysis",
+      "receipt": {
+        "path": "evidence/native/05-analysis/session.json",
+        "sha256": "2e4015b6b5df8d44d85d1f73ad1320daf6b74da8fa7fcb538057b1877256fa11"
+      },
+      "thread_id": "01a11701-495b-7a63-82ac-1ed916ff58a3",
+      "trace": {
+        "path": "evidence/native/05-analysis/events.jsonl",
+        "sha256": "62e4d9029129747c28e027589a55355c29f5e9a0b8b684db14e421d503af9d5c"
+      }
+    },
+    {
+      "label": "06-reporting-revision",
+      "receipt": {
+        "path": "evidence/native/06-reporting-revision/session.json",
+        "sha256": "82ca25888d5d649ebe82c45f61b58c73e438bb13d52f43d37a40c5aaffe82a57"
+      },
+      "thread_id": "01a1170d-396e-72d0-9840-26d9a72331c5",
+      "trace": {
+        "path": "evidence/native/06-reporting-revision/events.jsonl",
+        "sha256": "e28be51576600e9a77ab7a920217168a6348c505905c813ea02d79104e226fff"
+      }
+    },
+    {
+      "label": "07-reporting-repair",
+      "receipt": {
+        "path": "evidence/native/07-reporting-repair/session.json",
+        "sha256": "3d6069dc4774185f52aded28fe9bc4ecd0eedf17108427876728cde0bb37e7c0"
+      },
+      "thread_id": "01a11715-104f-7f61-ab4c-28416494202b",
+      "trace": {
+        "path": "evidence/native/07-reporting-repair/events.jsonl",
+        "sha256": "34c917def67cebfcaf15225ae17bdb3ed8fa0c4217fb934141b283bd47f9ddb4"
+      }
+    }
+  ],
+  "source_revision": "sha256:fe61419ac78231ab0fcc0d70f77714f6946cbdb1bd72ce3a360313850855e100",
+  "status": "pass",
+  "supporting_verification": {
+    "path": "evidence/supporting-verification.json",
+    "sha256": "adff17860580c0b0a78d22bd1fe167322044ffa4477295cd857616ee27ad7c02"
+  }
+}

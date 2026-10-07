@@ -1,0 +1,181 @@
+{
+  "campaign_id": "ema-v1",
+  "exclusions": [
+    {
+      "attempt_id": "pilot-gmm8-21-a001",
+      "reason": "pilot data excluded from confirmation"
+    },
+    {
+      "attempt_id": "pilot-gmm8-22-a001",
+      "reason": "pilot data excluded from confirmation"
+    },
+    {
+      "attempt_id": "pilot-moons-11-a001",
+      "reason": "interrupted"
+    },
+    {
+      "attempt_id": "pilot-moons-11-a002",
+      "reason": "pilot data excluded from confirmation"
+    },
+    {
+      "attempt_id": "pilot-moons-12-a001",
+      "reason": "pilot data excluded from confirmation"
+    }
+  ],
+  "protocol_revision": "ema-2d-v1",
+  "raw": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2001/attempts/001/raw.json",
+      "retention": "retain-with-study",
+      "sha256": "06a6eca47ef88b0d04ede81cfc4ab0ac92355a114db8065d212eb3d76e7713fe"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2002/attempts/001/raw.json",
+      "retention": "retain-with-study",
+      "sha256": "33895d95730fded817533b90df9770063303bf2e331f1aa3994a5ff16bfb00bd"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2003/attempts/001/raw.json",
+      "retention": "retain-with-study",
+      "sha256": "3051323175b25498be86ec5739bb45d70bd73bb08bba7b585967584be801ccd0"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/raw.json",
+      "retention": "retain-with-study",
+      "sha256": "5ce938f84f264c487081a6dd9fc560e6c04828ac0d173fb70ab218724c2f0ce8"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2005/attempts/001/raw.json",
+      "retention": "retain-with-study",
+      "sha256": "75b9d64393c3322e48ccff4c0e0cd517c8cca68f324a1a1414a33b6fe0c58676"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-moons-1001/attempts/001/raw.json",
+      "retention": "retain-with-study",
+      "sha256": "471f84222ddcac010a37305f660cca3404905715c5735a137d6ac0d20920776e"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/raw.json",
+      "retention": "retain-with-study",
+      "sha256": "bd04f9de81164e90b7a0568eff5c2119de6bc67d73cdf872c91cb5e99a965de0"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-moons-1003/attempts/001/raw.json",
+      "retention": "retain-with-study",
+      "sha256": "4ad56e9d2ccff0ad0280d2cf1ac825704cb5dca377b4207a8c098355ea415e01"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-moons-1004/attempts/001/raw.json",
+      "retention": "retain-with-study",
+      "sha256": "73bc78f0f067867f8e83159f616ea066cc8d3710342734a219cee3556f0f8f34"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-moons-1005/attempts/001/raw.json",
+      "retention": "retain-with-study",
+      "sha256": "ebc64b6c3b7e91cfabf7c76c76ffe49d41cde2f6a9f5b43bcd5e8abe81cf6bee"
+    }
+  ],
+  "runs": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2001/attempts/001/record.json",
+      "retention": "retain-with-study",
+      "sha256": "33c106f1ed07ff0b2c51dacb3643d0a6e51b227345af6702584732b8ac935b46"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2002/attempts/001/record.json",
+      "retention": "retain-with-study",
+      "sha256": "9a321acf55cb55dc5380228ba20215c4d3fc9b0c86ecaf1f0da1e9ee3afe4e81"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2003/attempts/001/record.json",
+      "retention": "retain-with-study",
+      "sha256": "845756a5ee801f0d9511f42559f047f07762b2ce69305884aba8ddb8a515517e"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/record.json",
+      "retention": "retain-with-study",
+      "sha256": "208b0a9091fa5a6dfc903ace1ce4701b02acf4312506bc58beeab572feec6f52"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2005/attempts/001/record.json",
+      "retention": "retain-with-study",
+      "sha256": "20eac2a20882c3765069239a9ebbb99ae823d12f1150db95cb9188d631c4025e"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-moons-1001/attempts/001/record.json",
+      "retention": "retain-with-study",
+      "sha256": "02e43de40c6694e8be17612c12b0841043ebdd34d4652798e4d006b3bff68cc4"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/record.json",
+      "retention": "retain-with-study",
+      "sha256": "0f0059246136b43b97dc25a84e6596402cd0365bbf1f429df6a8eaad8f6f19db"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-moons-1003/attempts/001/record.json",
+      "retention": "retain-with-study",
+      "sha256": "f38bb051493780ebb9c764e16a884dd6b7c25226ac38ee8385408da7bf3b8e84"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-moons-1004/attempts/001/record.json",
+      "retention": "retain-with-study",
+      "sha256": "fe80781fb5a8a2a6968d683f1d38bb433d9c66f08fa6b7dae629e916ff302416"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/confirm-moons-1005/attempts/001/record.json",
+      "retention": "retain-with-study",
+      "sha256": "1982a3f8e19a3a58cbe60b1f1c4200a8226e150d074f75d7a66239ed9c3ce878"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-21/attempts/001/record.json",
+      "retention": "retain-with-study",
+      "sha256": "857bcbc66589a52b88c4acf51c8222509dc5efecac9d271306a0182ee19523ea"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/record.json",
+      "retention": "retain-with-study",
+      "sha256": "b4e15b88f078617d19c17dd3e8b04c8fcc3d2738e7aa4f6c187e3cbb867017ca"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/001/record.json",
+      "retention": "retain-with-study",
+      "sha256": "8d98942d76693aa115f1779aab649a0bffd2e64c72dfb984717a2a05b26eec3a"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/002/record.json",
+      "retention": "retain-with-study",
+      "sha256": "c68096e0ffed6634ed45e4b542ddd439d9418daafd64d8ddf377989b9e221057"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/record.json",
+      "retention": "retain-with-study",
+      "sha256": "002bd8e1e41fa0eb5a8e2153e7e878ae16283b4b283341ad63a2a2c4f4cb2913"
+    }
+  ],
+  "schema_version": "0.2"
+}

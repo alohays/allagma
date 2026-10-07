@@ -1,0 +1,1682 @@
+{
+  "bundle_id": "b-2b63431e34a085598aaade78",
+  "campaign": "ema-v1",
+  "compute_before": {
+    "attempt_limit": 18,
+    "attempts": 15,
+    "ceiling_seconds": 1800.0,
+    "charged_seconds": 276.34548083175906,
+    "prior_probe_estimate_charged_seconds": 15.3,
+    "prior_probe_is_scientific_evidence": false,
+    "remaining_seconds": 1523.654519168241
+  },
+  "lock_id": "7287e278da3e264dc83704d42c334dd5845da048f59c9967343545fc4ec6c329",
+  "protected_files": [
+    {
+      "path": "DESIGN.md",
+      "sha256": "34927712c438865a2bfce16f9da28f9bfcce147df905dc52678aa1778519d35a"
+    },
+    {
+      "path": "DISCLOSURE.md",
+      "sha256": "136a4990ce709b605d4f804ff1b562a2be8d12db5bb18430424e0ea6ce7c3648"
+    },
+    {
+      "path": "README.md",
+      "sha256": "b8a2e5983490240bf0e16f609aa89613f12b0a927486fa41e8a49d085a21d625"
+    },
+    {
+      "path": "campaigns/ema-v1/analyses/a001/execution.json",
+      "sha256": "2dd121cf86c85c85bd09beeacd2449ca06e50c17c6c57402f4b3b3757332f2a7"
+    },
+    {
+      "path": "campaigns/ema-v1/analyses/a001/outputs/holdout-controls.csv",
+      "sha256": "630b02d680bb074459dec358597ab80066ca37a3375a9dd75614cbd3466d0475"
+    },
+    {
+      "path": "campaigns/ema-v1/analyses/a001/outputs/paired-differences.csv",
+      "sha256": "06c71dcb04c958d7634f7405a0f969996becbb03cd1ac1d9a98045eb68b1010b"
+    },
+    {
+      "path": "campaigns/ema-v1/analyses/a001/outputs/paired-quality.png",
+      "sha256": "a3ea9ba221e90ed2de24aad798dd15bfe99b00294f469d619dd2c0f1cf6d02de"
+    },
+    {
+      "path": "campaigns/ema-v1/analyses/a001/outputs/paired-quality.svg",
+      "sha256": "7d780f2e6a80075d31f7bfc4e7da4b7c26cdd0fe2e5c3069e3a745e24e01bf1f"
+    },
+    {
+      "path": "campaigns/ema-v1/analyses/a001/outputs/per-seed.csv",
+      "sha256": "7e899dc7ecd37761288ce2ce7862f95ca3e13eed67b84592a6285b5dfdf00ace"
+    },
+    {
+      "path": "campaigns/ema-v1/analyses/a001/outputs/samples.png",
+      "sha256": "d4290627f0aed329d3e3d39f27d3e88851f09735be8ee3c0fe654407697be9f2"
+    },
+    {
+      "path": "campaigns/ema-v1/analyses/a001/outputs/samples.svg",
+      "sha256": "823f84d02415dbdd26de5673d0cc560331d7a9da2a1afa14e0506df919740b46"
+    },
+    {
+      "path": "campaigns/ema-v1/analyses/a001/outputs/summary.json",
+      "sha256": "c8863b0f30af4b1eb00411074bc711b3c9c2cd9e236f9c16b1a274b1ad4b082e"
+    },
+    {
+      "path": "campaigns/ema-v1/analyses/a001/paper/claims.json",
+      "sha256": "6ce2dfcd632913db6bbdcedde3e1a5519fb17b8dfc6050965fe7034ca03bee68"
+    },
+    {
+      "path": "campaigns/ema-v1/analyses/a001/paper/manuscript.md",
+      "sha256": "68bc1aae499f57f973221d8e13a4fc2d033f135d9fa237eb12529761053f6159"
+    },
+    {
+      "path": "campaigns/ema-v1/analyses/a001/raw-manifest.json",
+      "sha256": "72287c825fa1afae016e0cd3e320951583f59ee5b1c91e09f7a8b777bbddd42f"
+    },
+    {
+      "path": "campaigns/ema-v1/analyses/a001/record.json",
+      "sha256": "e3f8a1dbcd7490338345eef2f55b9a2f3eb4d97d999a0e5780b5a92f603853e6"
+    },
+    {
+      "path": "campaigns/ema-v1/analyses/a001/reviews/review-001/adapter-result.json",
+      "sha256": "9c40d222178102c0e002a95cd63d53b1af3187c4a847bc233e5c181b568f38cd"
+    },
+    {
+      "path": "campaigns/ema-v1/analyses/a001/reviews/review-001/audit.json",
+      "sha256": "2075e6ea12c457b48973e942c170148b390b9b0b40d6e6b5f455896ffa28205e"
+    },
+    {
+      "path": "campaigns/ema-v1/analyses/a001/reviews/review-001/execution.json",
+      "sha256": "6e5c6a87655065bc7c36d91d00e440db6a1aef28852eb20d747539f8f2ab86fe"
+    },
+    {
+      "path": "campaigns/ema-v1/analyses/a001/reviews/review-001/input.json",
+      "sha256": "4a723ab727b61580fe8d0cc6aeb98036912addb1a0b475f720f40f3c40f5afdf"
+    },
+    {
+      "path": "campaigns/ema-v1/analyses/a001/reviews/review-001/record.json",
+      "sha256": "ab93d79ab2c8a62f280522be1c82c7ee8da4ba6565b93730901fa28849d41534"
+    },
+    {
+      "path": "campaigns/ema-v1/analyses/a001/writing-execution.json",
+      "sha256": "260ae42d69e2c59f27f238ebcc30314c3af94eb52572e0bf934001329681ddda"
+    },
+    {
+      "path": "campaigns/ema-v1/brief.json",
+      "sha256": "1b86d9b4337fba420935485b7425201a8cf7e5765a77bf0a06fd875befeb5a4f"
+    },
+    {
+      "path": "campaigns/ema-v1/code-manifest.json",
+      "sha256": "9f3b344da4fbb0f22467a6537efae4e256c97cb052d339981ed39b0bac5b9fef"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791386217858717000-72340e.json",
+      "sha256": "db5b5aafceda44fafb8825467da9fb70110af7561409e620683fbc4adb5aa365"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791386237424099000-cefc60.json",
+      "sha256": "24ae71fd38edf8fef79498ab32736c7daa9466344c026028b2e554159a496761"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791386239840825000-63ff3c.json",
+      "sha256": "9cf35d62737d746f8c02cf80563b9ab5ea9c3770a8ad701f37f12c03b7245f2e"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791386439081802000-699460.json",
+      "sha256": "51ea7d1de7db170271a0552ce290e066ebeef3091d61d60c707a681b99cc105e"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791386453416327000-a5d61e.json",
+      "sha256": "ffae8b95549d40603e0c6eaa45f1e73e3ffbf74af4a8cfe3bc6da5b89a531fa6"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791386482087358000-435a87.json",
+      "sha256": "e1d9cf00b6e7472943010a7ec4c5573469639ed885f560637c536c571676c75e"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791386496324888000-feb6bd.json",
+      "sha256": "12e304bb0be872710835156680f566c959d14ab88dbe3f2a713b23dd37cdeec3"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791386522662957000-71a0c2.json",
+      "sha256": "d47a6df202a0a6ef75aa74c9687e728d6a0fe2fe32442464464c30b622f4a416"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791386536726265000-e6c50b.json",
+      "sha256": "ed9cbf3596448ba9a785bd1bd4369379b1c16239cbff881a9f31e63d7d626124"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791386555441263000-705b71.json",
+      "sha256": "27e161a823c4192977ba0be73352dd637d5bf121bcfb03edeedd232a7cecedc8"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791386569798683000-c7b16e.json",
+      "sha256": "0d1a159cc2748a3fee03f8d4db0b732047b4f97a3a8fd4e0eb59e9cff0e966a3"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791386978801246000-abedbd.json",
+      "sha256": "12accba26e57686479e60c06104c0e7dacd30e0b4777847ac878002ef69008d5"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791386993614197000-bb9e77.json",
+      "sha256": "8fd559d6997eb5cff655d4725d677dc813a32fd62cbb90d1692695298c59f0f9"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791386993738423000-d296d3.json",
+      "sha256": "843ad563e47ecfbc62c52bdef89c172589d320c1c5f22d6d68ceed0bb5c27259"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791387008292385000-c9af6e.json",
+      "sha256": "c223a175c51780d217927b10c263b127a91244eae606eaa7cd10891571c660f3"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791387008451621000-a636b0.json",
+      "sha256": "5d373631afa260c6bfbc6e8231da0b901d4611832b5ba60dec3518469a8f8b5e"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791387023144144000-c314a0.json",
+      "sha256": "018bd7d0c6bdad81906f85ff04ebaf65836f1beba83c6c995050edd15060431a"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791387023333781000-af0da5.json",
+      "sha256": "a5486b938fba4242cbdda70f6bcc933a286e71068cdc5711d00e85645f5250c2"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791387038098120000-8b4069.json",
+      "sha256": "c28f35c3d8cf15fc188fe7b3e94092f5c7d38d2854099c189d5e7a83c2422ba3"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791387038278215000-54425a.json",
+      "sha256": "3b1efef4aaf7282292329d368b62a6cd3d3d41e0fee776ac753488e3e5a0d8be"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791387053007816000-d4291a.json",
+      "sha256": "437d0094c477fb1e64aaf2da012da40b63c7897d340505bd44461119477f22d1"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791387053205639000-94074c.json",
+      "sha256": "d39e5b6f6589fe6840454fec1066a15c5a66c2dc8fb4b25501237bc90752da18"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791387067948886000-6bac01.json",
+      "sha256": "fa21109550bf498c2b49288e0837a104e2ac889de1c20d48930ffe443386de39"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791387068119767000-141395.json",
+      "sha256": "c5664ba09611c0fc0704535634d924908582011ad33d687b2112a8ea02ffeacb"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791387082879293000-cecd3e.json",
+      "sha256": "77dc1325877d95da8bbbaa49cd332daad2f9087339423b3d0272c786cd204222"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791387083068983000-6cf49b.json",
+      "sha256": "839576812f6e750886fa103098594781fd8d930b13c862417e2c14b78a363ad0"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791387097806432000-576ae5.json",
+      "sha256": "47f3ec6d9d06a263c4b093c38935c5fe7d6f4d9481b730748b3bb5261e44f444"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791387097971903000-5ddc21.json",
+      "sha256": "dc801795426552841a0f625f75d52f1695c71eab1683c1dd0fc223d218daf93c"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791387112785254000-4e7945.json",
+      "sha256": "1afd2b10595e056f28698be67eb3a992949413b8623bae15d4337c023c7ef92a"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791387112954018000-e561ba.json",
+      "sha256": "2eebe7f916028e7b050d423ac4c57764aa232a85e636047ecead978994e6ab6e"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791387127912783000-01f95b.json",
+      "sha256": "70a3ac6ecf6f779c5a4e186b6aeb75b0919bb45bd98aac803ff35f3d3e110c09"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791387497747130000-e5f6d8.json",
+      "sha256": "4e1d8be0d609a50b8d92a8f46f7e7c357b63ca68ba4925e67c0fc8aa2229377e"
+    },
+    {
+      "path": "campaigns/ema-v1/events/1791387512269717000-5031b6.json",
+      "sha256": "40ed2d689274610234c49e13c3bb331fe40b0911302f9ce7b8f0b03d616130e9"
+    },
+    {
+      "path": "campaigns/ema-v1/experiment-manifest.json",
+      "sha256": "9122eb010bcfd84203d8285961c9b6503e1bdd4169e89a0bde402295b70cf759"
+    },
+    {
+      "path": "campaigns/ema-v1/latest-analysis.json",
+      "sha256": "b90b1ecd9e12a5755261289f56f10e01053929f7a6b8bda7265bea49ea76893a"
+    },
+    {
+      "path": "campaigns/ema-v1/latest-audit.json",
+      "sha256": "2075e6ea12c457b48973e942c170148b390b9b0b40d6e6b5f455896ffa28205e"
+    },
+    {
+      "path": "campaigns/ema-v1/lock.yaml",
+      "sha256": "cc0ef548e8ae7c018133a83bbe922cd201c5732728fd306a6cd3d5e98d7b320e"
+    },
+    {
+      "path": "campaigns/ema-v1/materials/DESIGN.md",
+      "sha256": "34927712c438865a2bfce16f9da28f9bfcce147df905dc52678aa1778519d35a"
+    },
+    {
+      "path": "campaigns/ema-v1/materials/REFERENCE.md",
+      "sha256": "3632bda3aa4d14e5b0dd2466a2b8528091848704245dbdb81f012c3c07c0ad76"
+    },
+    {
+      "path": "campaigns/ema-v1/materials/domain/analyze.py",
+      "sha256": "9155f175cbb84305d4a71d11d8483b10d202bf0a60b86a262c85ef79a566392a"
+    },
+    {
+      "path": "campaigns/ema-v1/materials/domain/evaluator.py",
+      "sha256": "609018a0d4b61b178d139d944290bc4f53dad1151a1e871efabb9a7e1eba65bf"
+    },
+    {
+      "path": "campaigns/ema-v1/materials/domain/runner.py",
+      "sha256": "26f69538c0ecb3497a77e57899dfb8b362f780ae1fba1d9865ffeb7a3cb8a868"
+    },
+    {
+      "path": "campaigns/ema-v1/materials/domain/science.py",
+      "sha256": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1"
+    },
+    {
+      "path": "campaigns/ema-v1/materials/domain/test_science.py",
+      "sha256": "4efc18d1b04c5241d534939026d91b2b5079061f8a171ecb2e0c56270a2631c9"
+    },
+    {
+      "path": "campaigns/ema-v1/materials/domain/write.py",
+      "sha256": "106238b626c114acdf2c4d9d1df4b492141feeeac815d3e7974b900070543304"
+    },
+    {
+      "path": "campaigns/ema-v1/materials/reference/LICENSE",
+      "sha256": "9c82e554a54dfcf2550b452801475a36f9cb909ede00b03e492089e4836a7462"
+    },
+    {
+      "path": "campaigns/ema-v1/materials/reference/provenance.json",
+      "sha256": "5487fe70c56f4aa8594dd178ae89fdc4f59a1c146a7a01bc31ebe42de28e455f"
+    },
+    {
+      "path": "campaigns/ema-v1/materials/requirements.lock",
+      "sha256": "7decf0446de48124cc46ed9c1d69669a62b9daacfb00c070c10f44ed7a5b039d"
+    },
+    {
+      "path": "campaigns/ema-v1/protocol.json",
+      "sha256": "09942fb8ed12194b9c2efb944b2c1d9a2b00f63c043bd5055ce6f42e0008cfb1"
+    },
+    {
+      "path": "campaigns/ema-v1/reports/partial-1791386239841300000.md",
+      "sha256": "84bdf6a17a7a204ef3fd20633cb54df31c0fef5abcce6a2ebd68bfd5438a7db5"
+    },
+    {
+      "path": "campaigns/ema-v1/reports/partial-1791386453416782000.md",
+      "sha256": "7a34c005c540de107d78bfd5300b3728d1bdb77457b84817ebd83720c48bf127"
+    },
+    {
+      "path": "campaigns/ema-v1/reports/partial-1791386496325272000.md",
+      "sha256": "7a34c005c540de107d78bfd5300b3728d1bdb77457b84817ebd83720c48bf127"
+    },
+    {
+      "path": "campaigns/ema-v1/reports/partial-1791386536726655000.md",
+      "sha256": "7a34c005c540de107d78bfd5300b3728d1bdb77457b84817ebd83720c48bf127"
+    },
+    {
+      "path": "campaigns/ema-v1/reports/partial-1791386569799109000.md",
+      "sha256": "7a34c005c540de107d78bfd5300b3728d1bdb77457b84817ebd83720c48bf127"
+    },
+    {
+      "path": "campaigns/ema-v1/reports/partial-1791386993614713000.md",
+      "sha256": "7a34c005c540de107d78bfd5300b3728d1bdb77457b84817ebd83720c48bf127"
+    },
+    {
+      "path": "campaigns/ema-v1/reports/partial-1791387008292829000.md",
+      "sha256": "7a34c005c540de107d78bfd5300b3728d1bdb77457b84817ebd83720c48bf127"
+    },
+    {
+      "path": "campaigns/ema-v1/reports/partial-1791387023144582000.md",
+      "sha256": "7a34c005c540de107d78bfd5300b3728d1bdb77457b84817ebd83720c48bf127"
+    },
+    {
+      "path": "campaigns/ema-v1/reports/partial-1791387038098563000.md",
+      "sha256": "7a34c005c540de107d78bfd5300b3728d1bdb77457b84817ebd83720c48bf127"
+    },
+    {
+      "path": "campaigns/ema-v1/reports/partial-1791387053008251000.md",
+      "sha256": "7a34c005c540de107d78bfd5300b3728d1bdb77457b84817ebd83720c48bf127"
+    },
+    {
+      "path": "campaigns/ema-v1/reports/partial-1791387067949316000.md",
+      "sha256": "7a34c005c540de107d78bfd5300b3728d1bdb77457b84817ebd83720c48bf127"
+    },
+    {
+      "path": "campaigns/ema-v1/reports/partial-1791387082879706000.md",
+      "sha256": "7a34c005c540de107d78bfd5300b3728d1bdb77457b84817ebd83720c48bf127"
+    },
+    {
+      "path": "campaigns/ema-v1/reports/partial-1791387097806859000.md",
+      "sha256": "7a34c005c540de107d78bfd5300b3728d1bdb77457b84817ebd83720c48bf127"
+    },
+    {
+      "path": "campaigns/ema-v1/reports/partial-1791387112785783000.md",
+      "sha256": "7a34c005c540de107d78bfd5300b3728d1bdb77457b84817ebd83720c48bf127"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2001/attempts/001/evaluation.json",
+      "sha256": "873ad5fe790cd91da6e895a77a985ba281269fd8747f2f2910b330be1bb2023c"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2001/attempts/001/evaluator-command.json",
+      "sha256": "86ea51b2234ad6a469b2695a7514980079133db05a970a15a1d7e7a58a66781d"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2001/attempts/001/evaluator-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2001/attempts/001/evaluator-stdout.job-result.json",
+      "sha256": "5c13a59c0c324e87f6aa1336df12e5852bbfae343fb77138dc725847cf8a6ea5"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2001/attempts/001/evaluator-stdout.job.json",
+      "sha256": "8924e84840ae1bb8dd7f423dbb61d08b8cc52ca046ab9b06eab0ed0b618db0c5"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2001/attempts/001/evaluator-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2001/attempts/001/evaluator-stdout.worker-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2001/attempts/001/evaluator-stdout.worker-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2001/attempts/001/input.json",
+      "sha256": "d2dc76e5a803542581dbb54d944f4eef5035f28575c6e77bbe943482da90cdf2"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2001/attempts/001/raw.json",
+      "sha256": "06a6eca47ef88b0d04ede81cfc4ab0ac92355a114db8065d212eb3d76e7713fe"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2001/attempts/001/record.json",
+      "sha256": "33c106f1ed07ff0b2c51dacb3643d0a6e51b227345af6702584732b8ac935b46"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2001/attempts/001/started.json",
+      "sha256": "1082800050a5e855e1f11e78f7b5c8bdf15420ac242bab03c0fdd5c0fd30b802"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2001/attempts/001/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2001/attempts/001/stdout.job-result.json",
+      "sha256": "852e4c6a67d3fe1834ddfac4a91c456108eccf2e88c1da83287f7bcb9eb045e6"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2001/attempts/001/stdout.job.json",
+      "sha256": "85c401e5b00f753388bf3c769a1f45b991e29efa6c64ffe4c78b3ea3bc7f33b4"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2001/attempts/001/stdout.txt",
+      "sha256": "19bb43dea58aa15bbf68023ab7d482b477342b16e5786610cdc70e36ca2af86a"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2001/attempts/001/stdout.worker-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2001/attempts/001/stdout.worker-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2001/attempts/001/weights.npz",
+      "sha256": "e142787565cdbe9d136658a735f7ff07fb2807f759421e638371773462cd7209"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2001/parameters.json",
+      "sha256": "d2dc76e5a803542581dbb54d944f4eef5035f28575c6e77bbe943482da90cdf2"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2001/spec.json",
+      "sha256": "07150f3ee9e28365ebfddf46de6e8ced794ed1afd70cdb901039f523f371e8ed"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2002/attempts/001/evaluation.json",
+      "sha256": "873ad5fe790cd91da6e895a77a985ba281269fd8747f2f2910b330be1bb2023c"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2002/attempts/001/evaluator-command.json",
+      "sha256": "2c1f55b4d294f7e0bc572a5d61ac69d3b2caa54521f54d1d71d1263078829064"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2002/attempts/001/evaluator-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2002/attempts/001/evaluator-stdout.job-result.json",
+      "sha256": "e858d8df450b8d599edb0fdae539e583ec2e23cfda5df431294c7b6b733c0b0a"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2002/attempts/001/evaluator-stdout.job.json",
+      "sha256": "f070e41e88c0a83f7756e9d47eec52d097c279ef5029585ff2e3fbe34b7a418f"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2002/attempts/001/evaluator-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2002/attempts/001/evaluator-stdout.worker-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2002/attempts/001/evaluator-stdout.worker-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2002/attempts/001/input.json",
+      "sha256": "f31dd087e0e7e56264a600a4cb36b76636fe88e1964b255e86ca09ed2ce474bc"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2002/attempts/001/raw.json",
+      "sha256": "33895d95730fded817533b90df9770063303bf2e331f1aa3994a5ff16bfb00bd"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2002/attempts/001/record.json",
+      "sha256": "9a321acf55cb55dc5380228ba20215c4d3fc9b0c86ecaf1f0da1e9ee3afe4e81"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2002/attempts/001/started.json",
+      "sha256": "9e441075e1f29a07fec84dcdfe80dfa1a20d7610b56eb8724012b81eeebc0564"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2002/attempts/001/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2002/attempts/001/stdout.job-result.json",
+      "sha256": "509852dab293ae7952dbb6bf7915c28bd8c0779ac25ffe1c87ac62960590ca06"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2002/attempts/001/stdout.job.json",
+      "sha256": "6683eae557a6ded4ebe4967f059d514bafe6b1c5163104ee107d1537424137d7"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2002/attempts/001/stdout.txt",
+      "sha256": "d8bc593103b1048451c5e0bb5c9ed17b0bbf3a060ea402355cf84392a65ccdea"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2002/attempts/001/stdout.worker-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2002/attempts/001/stdout.worker-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2002/attempts/001/weights.npz",
+      "sha256": "46908bfb1e9f0fdf54dda15d134dd73313c2fc75cecdbf25ca0f1d7250e752f1"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2002/parameters.json",
+      "sha256": "f31dd087e0e7e56264a600a4cb36b76636fe88e1964b255e86ca09ed2ce474bc"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2002/spec.json",
+      "sha256": "3ced5a266ff1db1ccf3eb69f90c74453fbd1e9fad1cf09feb46360663ef9d116"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2003/attempts/001/evaluation.json",
+      "sha256": "873ad5fe790cd91da6e895a77a985ba281269fd8747f2f2910b330be1bb2023c"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2003/attempts/001/evaluator-command.json",
+      "sha256": "64396b5748172d5c98179f566665dba16ebcf76db8fbc80142c56698ded18d04"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2003/attempts/001/evaluator-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2003/attempts/001/evaluator-stdout.job-result.json",
+      "sha256": "beb46b1daefb753b45e1cb5db397c4cc0c87a66793ecdf0b35b1f0b490a1e40e"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2003/attempts/001/evaluator-stdout.job.json",
+      "sha256": "a581e0a7f9c6630390155d7fca1e6c7cddb72d5e1c1ef636d4e614e425810e25"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2003/attempts/001/evaluator-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2003/attempts/001/evaluator-stdout.worker-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2003/attempts/001/evaluator-stdout.worker-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2003/attempts/001/input.json",
+      "sha256": "70e35fbeb38de48d80ed0bc031253f727a01b98f3a131602dcaa18e166fa8593"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2003/attempts/001/raw.json",
+      "sha256": "3051323175b25498be86ec5739bb45d70bd73bb08bba7b585967584be801ccd0"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2003/attempts/001/record.json",
+      "sha256": "845756a5ee801f0d9511f42559f047f07762b2ce69305884aba8ddb8a515517e"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2003/attempts/001/started.json",
+      "sha256": "5ec1bc8134c1e79521f434709c7acf405e9f13724fb8d2a1e34c17e39c8e0da7"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2003/attempts/001/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2003/attempts/001/stdout.job-result.json",
+      "sha256": "53b9487f117714e05f1319a1cf05eaeda27341a53cae0762fa62900828854d1b"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2003/attempts/001/stdout.job.json",
+      "sha256": "6ede1c5cbe17d8929a2864f21d3c684e5742fce2afb6133969e229225a231fe8"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2003/attempts/001/stdout.txt",
+      "sha256": "a7d3f02465a26f17c4c591bba85f19bc08a611528a7431f4fabb20496842b98c"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2003/attempts/001/stdout.worker-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2003/attempts/001/stdout.worker-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2003/attempts/001/weights.npz",
+      "sha256": "c79eeb54f3552b2e437e8a0af0f16ad353b0fc206fbd8041956fb0cc3b4b3803"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2003/parameters.json",
+      "sha256": "70e35fbeb38de48d80ed0bc031253f727a01b98f3a131602dcaa18e166fa8593"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2003/spec.json",
+      "sha256": "71aec2d68d0d32bf4a78b64cc9f7d25686fa8760b876a1a00dcaa598eb97c185"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/evaluation.json",
+      "sha256": "873ad5fe790cd91da6e895a77a985ba281269fd8747f2f2910b330be1bb2023c"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/evaluator-command.json",
+      "sha256": "a6130f6eaa15515b4b99329e5e3a78e0cc85f39f182f95c5bef10aaf1c7b660b"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/evaluator-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/evaluator-stdout.job-result.json",
+      "sha256": "4efb8f6d1b756ed4e92fbef5e0744fc4381b27af70b3b0ec89fa402eaf310724"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/evaluator-stdout.job.json",
+      "sha256": "94ba6472b760b47e8e6dc468a27dfe6350d85bcf760eeb5a11ab121fb7d5f9bf"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/evaluator-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/evaluator-stdout.worker-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/evaluator-stdout.worker-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/input.json",
+      "sha256": "d3ed5f4c8adc48dabe0376c50ff4a828ce34d4726c820c4a9fd59f2a69e58d05"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/raw.json",
+      "sha256": "5ce938f84f264c487081a6dd9fc560e6c04828ac0d173fb70ab218724c2f0ce8"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/record.json",
+      "sha256": "208b0a9091fa5a6dfc903ace1ce4701b02acf4312506bc58beeab572feec6f52"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/started.json",
+      "sha256": "8e1c29bf283664f3a4e01b09c39da8cc60e74abbf1169cffb65c4b08d70c43f0"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/stdout.job-result.json",
+      "sha256": "f7072e12384ca5e48f374754b95e14b8dbc3497c78c2591e189174d43bbb2a2f"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/stdout.job.json",
+      "sha256": "f0ee2c3004db1f5b325a05af302695532d5d1cdc3e885e9cddcc0a6bc55a044f"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/stdout.txt",
+      "sha256": "a39b0df6862e63cc6da5ed0e9381a0869bae8cd855b96494c752c98c637f5139"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/stdout.worker-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/stdout.worker-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/attempts/001/weights.npz",
+      "sha256": "90a9248dc89624fa47a3dfa389cc3481988858e991d12358482a507fbdbc3f19"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/parameters.json",
+      "sha256": "d3ed5f4c8adc48dabe0376c50ff4a828ce34d4726c820c4a9fd59f2a69e58d05"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2004/spec.json",
+      "sha256": "f95b4455f80a109c48f98b0d8b1f18a0019fec2ae0d21951c901011d16498160"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2005/attempts/001/evaluation.json",
+      "sha256": "873ad5fe790cd91da6e895a77a985ba281269fd8747f2f2910b330be1bb2023c"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2005/attempts/001/evaluator-command.json",
+      "sha256": "b39b9bca659b6704bee9d75148d7a8092d790c2fdbe0eb33528b1f4e7819436c"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2005/attempts/001/evaluator-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2005/attempts/001/evaluator-stdout.job-result.json",
+      "sha256": "b75e2483c48de0d58fe5da2ffc86af27edcaf0e9ff5b297303cbc9ac339d470a"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2005/attempts/001/evaluator-stdout.job.json",
+      "sha256": "e493476c6d3eccd65e9e0ea41882284c255dae80b859761067c570e5b3b6c1d0"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2005/attempts/001/evaluator-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2005/attempts/001/evaluator-stdout.worker-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2005/attempts/001/evaluator-stdout.worker-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2005/attempts/001/input.json",
+      "sha256": "c6fd5698db1e28b3dc3eb68312db9eddbf0531e5dad319e318cf4d4033226d42"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2005/attempts/001/raw.json",
+      "sha256": "75b9d64393c3322e48ccff4c0e0cd517c8cca68f324a1a1414a33b6fe0c58676"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2005/attempts/001/record.json",
+      "sha256": "20eac2a20882c3765069239a9ebbb99ae823d12f1150db95cb9188d631c4025e"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2005/attempts/001/started.json",
+      "sha256": "f5e3227e7f4eea59ee75b6538dc5ffcbcd067f0588ca775ecb904f59e09f73d6"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2005/attempts/001/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2005/attempts/001/stdout.job-result.json",
+      "sha256": "5d73875eabdc60cc6304c7cd2b75f78141fb6fa915454955197ac2c5029bb3c7"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2005/attempts/001/stdout.job.json",
+      "sha256": "040ed722fde3852a88e29561bad7a15c061b2bc3be853be93460dee9fab8917c"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2005/attempts/001/stdout.txt",
+      "sha256": "f55d995d8fb40b308cb2c6f2fb450298eda628c12931fcfa9cf5e7c622969daf"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2005/attempts/001/stdout.worker-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2005/attempts/001/stdout.worker-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2005/attempts/001/weights.npz",
+      "sha256": "a06e106b4608e6998d20592587c45f2fdd2b30a85744a8f7b870406645d11898"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2005/parameters.json",
+      "sha256": "c6fd5698db1e28b3dc3eb68312db9eddbf0531e5dad319e318cf4d4033226d42"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-gmm8-2005/spec.json",
+      "sha256": "23858cbf8d67e8ed80763c3a49d70cfb4a7bf5653ded15b84d8c9b7898a8f4cc"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1001/attempts/001/evaluation.json",
+      "sha256": "4d5154ba64029968f5cd674e4a83eafe9d826b6b67eca282a42cca815b4809eb"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1001/attempts/001/evaluator-command.json",
+      "sha256": "c767fa23b1be7ea50f44fb627f07ee14ca2e663d3cc58df426edc37f71b4dc8c"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1001/attempts/001/evaluator-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1001/attempts/001/evaluator-stdout.job-result.json",
+      "sha256": "9f8e7118432b5528751bf1f54a6165fe39764cca38be2363e5a7b481bdd4e69a"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1001/attempts/001/evaluator-stdout.job.json",
+      "sha256": "1f78a6c50a31e6c03eab6f58886d1166837f66964178d64b186a67124ccf7ca6"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1001/attempts/001/evaluator-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1001/attempts/001/evaluator-stdout.worker-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1001/attempts/001/evaluator-stdout.worker-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1001/attempts/001/input.json",
+      "sha256": "9b9eef8a2a13a3c232529b38ce9deabc5b752a634da0eb15d2590d4b40bc1920"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1001/attempts/001/raw.json",
+      "sha256": "471f84222ddcac010a37305f660cca3404905715c5735a137d6ac0d20920776e"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1001/attempts/001/record.json",
+      "sha256": "02e43de40c6694e8be17612c12b0841043ebdd34d4652798e4d006b3bff68cc4"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1001/attempts/001/started.json",
+      "sha256": "0d7511ccc87573f554763a64e5ac0d5d1c51e699a86b298c338f103bd5278765"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1001/attempts/001/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1001/attempts/001/stdout.job-result.json",
+      "sha256": "6bd3e64fdbc2ae88e4a73fd7a9fa960c0c87cbd2e3b1a343dc205251d7ce748c"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1001/attempts/001/stdout.job.json",
+      "sha256": "c694fac80769205a2120c55d0a20889f936a421949d14c300f1bfe8e442789b2"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1001/attempts/001/stdout.txt",
+      "sha256": "55f2d57fa5258890d7ddc2526cabf5f10c13350618a828ed3d4a793345d9b1f8"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1001/attempts/001/stdout.worker-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1001/attempts/001/stdout.worker-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1001/attempts/001/weights.npz",
+      "sha256": "081e1cb1a4b7bc402e90333557967831bcdc600082293aee79d241d520dd4cca"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1001/parameters.json",
+      "sha256": "9b9eef8a2a13a3c232529b38ce9deabc5b752a634da0eb15d2590d4b40bc1920"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1001/spec.json",
+      "sha256": "ba883a5129c8e09172e9133532c92dcb05f5c4690651d594019654756d887562"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/evaluation.json",
+      "sha256": "4d5154ba64029968f5cd674e4a83eafe9d826b6b67eca282a42cca815b4809eb"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/evaluator-command.json",
+      "sha256": "347ac5607edb2ce7ac1b29fbd714c6186f128ff87011f165e49aed1270a289f9"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/evaluator-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/evaluator-stdout.job-result.json",
+      "sha256": "6594123d9cc479bdcc85b705265f2669a98efda8c5b47090a115dd92d591116b"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/evaluator-stdout.job.json",
+      "sha256": "15e4c2b1186b73bbbfc4e5ed3daa488649ce47c4249103b8aba7b5edb1e065ae"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/evaluator-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/evaluator-stdout.worker-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/evaluator-stdout.worker-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/input.json",
+      "sha256": "6fffd55c0f8da9b4d63529c63ba47d3d1b8c1b8b800c8d2d430742b1b10fa992"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/raw.json",
+      "sha256": "bd04f9de81164e90b7a0568eff5c2119de6bc67d73cdf872c91cb5e99a965de0"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/record.json",
+      "sha256": "0f0059246136b43b97dc25a84e6596402cd0365bbf1f429df6a8eaad8f6f19db"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/started.json",
+      "sha256": "e5ab63e25b86a7e64bdc709eeedcc74e8d62399d27e07d85dcb9a73a57841be3"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/stdout.job-result.json",
+      "sha256": "f9aa12a83a5db5ef8069b7642250bff2276bdcfdbaca2da53d9d753b1e1fe4d9"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/stdout.job.json",
+      "sha256": "09942dcc5185ab5d752aeefb2d87e87578b27ee16a3be7dc5911cc9738504098"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/stdout.txt",
+      "sha256": "3f0b73189fa4ea0e2c3180cae23b34d815df43df355edc5fd03177d71de282ad"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/stdout.worker-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/stdout.worker-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/attempts/001/weights.npz",
+      "sha256": "7ac79e3215e50492ece3d7838da4b055042b5a9a391ea1984e3c74b0c4584cda"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/parameters.json",
+      "sha256": "6fffd55c0f8da9b4d63529c63ba47d3d1b8c1b8b800c8d2d430742b1b10fa992"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1002/spec.json",
+      "sha256": "5ab5514234799a6bce12709e7f598a78d4db83b7716c28e9d2964529b4c71330"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1003/attempts/001/evaluation.json",
+      "sha256": "4d5154ba64029968f5cd674e4a83eafe9d826b6b67eca282a42cca815b4809eb"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1003/attempts/001/evaluator-command.json",
+      "sha256": "3ca65def17b1e58a85c38793698baeb0adfc10046d1593dfdad8a1cdb9f686c3"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1003/attempts/001/evaluator-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1003/attempts/001/evaluator-stdout.job-result.json",
+      "sha256": "40238c996d0eea951654b8b184a98379bf9ae4199cca3181bd30d434216959c8"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1003/attempts/001/evaluator-stdout.job.json",
+      "sha256": "5d80a0ed5b77824c229dfd8ef1d42c2eba781610e830f53811c23b9ba8696ac0"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1003/attempts/001/evaluator-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1003/attempts/001/evaluator-stdout.worker-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1003/attempts/001/evaluator-stdout.worker-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1003/attempts/001/input.json",
+      "sha256": "05c029765a002eccfe86585610e1f15f231299a95511dd5bf665df78ea77662e"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1003/attempts/001/raw.json",
+      "sha256": "4ad56e9d2ccff0ad0280d2cf1ac825704cb5dca377b4207a8c098355ea415e01"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1003/attempts/001/record.json",
+      "sha256": "f38bb051493780ebb9c764e16a884dd6b7c25226ac38ee8385408da7bf3b8e84"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1003/attempts/001/started.json",
+      "sha256": "cf7a9e6c6266a874635ca4c84d9bbf2469120e8553f4053a2d04ee30d48b9daf"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1003/attempts/001/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1003/attempts/001/stdout.job-result.json",
+      "sha256": "ac359c86c1bba7bedbf8e843b30a94d2d7b5b9842933a90c28ecd553c28f5f1a"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1003/attempts/001/stdout.job.json",
+      "sha256": "c056c6c793b2b3e379bf24bfc22019d922f6d3102e11b45609af7bbfe0e1da2f"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1003/attempts/001/stdout.txt",
+      "sha256": "12a079531ebdfaab4debb560fcdd52eea3e8b96e41b784d6d54ac51df26bef14"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1003/attempts/001/stdout.worker-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1003/attempts/001/stdout.worker-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1003/attempts/001/weights.npz",
+      "sha256": "bfddfcfea17172c01874b7910b9617ac0dbd34c8246675a42cbc848a4903644f"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1003/parameters.json",
+      "sha256": "05c029765a002eccfe86585610e1f15f231299a95511dd5bf665df78ea77662e"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1003/spec.json",
+      "sha256": "930894a6d98a6ea7b37fd5bed757469521e9217f831c45b9f0e59f5fba46b44a"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1004/attempts/001/evaluation.json",
+      "sha256": "4d5154ba64029968f5cd674e4a83eafe9d826b6b67eca282a42cca815b4809eb"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1004/attempts/001/evaluator-command.json",
+      "sha256": "939542773c32b0f1013f8cacfd09f55eef95dde7ac5dc73c2922384a58a3807d"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1004/attempts/001/evaluator-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1004/attempts/001/evaluator-stdout.job-result.json",
+      "sha256": "73c65f9eab653f82dd2ca9aa6fd62c0979e05ac94dca8a7ffc12dfab36ed1031"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1004/attempts/001/evaluator-stdout.job.json",
+      "sha256": "eec72dabdf32a4e7bdb8965d6a25a5ba751e31a33f3b2dcc240349e2bb98195a"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1004/attempts/001/evaluator-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1004/attempts/001/evaluator-stdout.worker-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1004/attempts/001/evaluator-stdout.worker-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1004/attempts/001/input.json",
+      "sha256": "de708ce6da2601169f9370fe1c00ab848a9f9f5f05028db1d7a5252034c61565"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1004/attempts/001/raw.json",
+      "sha256": "73bc78f0f067867f8e83159f616ea066cc8d3710342734a219cee3556f0f8f34"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1004/attempts/001/record.json",
+      "sha256": "fe80781fb5a8a2a6968d683f1d38bb433d9c66f08fa6b7dae629e916ff302416"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1004/attempts/001/started.json",
+      "sha256": "17c0f789e78afd25849e91cd8079ebf31f0397e3012ba802ec0cb4e89a2dd59f"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1004/attempts/001/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1004/attempts/001/stdout.job-result.json",
+      "sha256": "282aaa363b2633959e42366c133bde147e79f968e6aa536ffb177221ac6d3caa"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1004/attempts/001/stdout.job.json",
+      "sha256": "a3eb4d6db6f04d55f8f9554792e62624415e95128ef993ee3671a9008e28af61"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1004/attempts/001/stdout.txt",
+      "sha256": "cc3ecffb0f7122560e0fb3c6ee407109f050100d88cf2df8dbf3d6760efdcecc"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1004/attempts/001/stdout.worker-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1004/attempts/001/stdout.worker-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1004/attempts/001/weights.npz",
+      "sha256": "4e66e787742f8b429e329de0c3e8a194c6369132e921532b7cc6714f77b031b8"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1004/parameters.json",
+      "sha256": "de708ce6da2601169f9370fe1c00ab848a9f9f5f05028db1d7a5252034c61565"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1004/spec.json",
+      "sha256": "5ca95cb907326f4f8b9e95efa28c000e51f9073b06a86bc6909c51cb0235b5a7"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1005/attempts/001/evaluation.json",
+      "sha256": "4d5154ba64029968f5cd674e4a83eafe9d826b6b67eca282a42cca815b4809eb"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1005/attempts/001/evaluator-command.json",
+      "sha256": "9261e48ddff6703d840f9ce027af1b369faf74802bcaa30f6f2beb44835c8429"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1005/attempts/001/evaluator-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1005/attempts/001/evaluator-stdout.job-result.json",
+      "sha256": "5e665bee90146898c462065c43657020083e4df27dd18723fcf20d77124c70c9"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1005/attempts/001/evaluator-stdout.job.json",
+      "sha256": "668522b6cf6fa97dc5148a8bfb8619397cf622a069cec19f0297b51e1fc15275"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1005/attempts/001/evaluator-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1005/attempts/001/evaluator-stdout.worker-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1005/attempts/001/evaluator-stdout.worker-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1005/attempts/001/input.json",
+      "sha256": "b927f08174d5454a1755ff7d6879b08f82ba8018dda07536956749022fb3034d"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1005/attempts/001/raw.json",
+      "sha256": "ebc64b6c3b7e91cfabf7c76c76ffe49d41cde2f6a9f5b43bcd5e8abe81cf6bee"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1005/attempts/001/record.json",
+      "sha256": "1982a3f8e19a3a58cbe60b1f1c4200a8226e150d074f75d7a66239ed9c3ce878"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1005/attempts/001/started.json",
+      "sha256": "df9a455aa2ed7e113215f3bf16fae1f45d2ea3cfa436862e6d34540a917943c4"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1005/attempts/001/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1005/attempts/001/stdout.job-result.json",
+      "sha256": "b88d1e2ebd3819e4d471f5768289d28f121df4fd8c015a8cbd6aeb72af2fc6e2"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1005/attempts/001/stdout.job.json",
+      "sha256": "7213107b79b25c598458ad91cfa79189456f723d02ee5587b809033bb9f20730"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1005/attempts/001/stdout.txt",
+      "sha256": "0372c3da6552d3976fdc587d93a8436304905465c038592da8b48b2ea08ae551"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1005/attempts/001/stdout.worker-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1005/attempts/001/stdout.worker-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1005/attempts/001/weights.npz",
+      "sha256": "117fb6e0c1f0c50bc1b8c2ab92e3ef24c34da11ad3ae73d35e85243767116fc2"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1005/parameters.json",
+      "sha256": "b927f08174d5454a1755ff7d6879b08f82ba8018dda07536956749022fb3034d"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/confirm-moons-1005/spec.json",
+      "sha256": "794166b1db790fde55a16f677ee6546eac967a753890864574907df52bb73f98"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-21/attempts/001/evaluation.json",
+      "sha256": "873ad5fe790cd91da6e895a77a985ba281269fd8747f2f2910b330be1bb2023c"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-21/attempts/001/evaluator-command.json",
+      "sha256": "35def712aa52b40809f80a91a3fd49c863655e7119324737a23227e081c632b5"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-21/attempts/001/evaluator-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-21/attempts/001/evaluator-stdout.job-result.json",
+      "sha256": "dff32469ff7cbe247f77924d120403852ede5a546bc52856f04584b86ea684d8"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-21/attempts/001/evaluator-stdout.job.json",
+      "sha256": "6d2ccbba817a98038eaae087077a35f57b39fb8eb171c05107a71d053f9aaed9"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-21/attempts/001/evaluator-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-21/attempts/001/evaluator-stdout.worker-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-21/attempts/001/evaluator-stdout.worker-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-21/attempts/001/input.json",
+      "sha256": "4a89c7db1a775bc443519fd6967866994850a52b1d4a7fb622810d345cc1eec5"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-21/attempts/001/raw.json",
+      "sha256": "27c4b18420ecfc00bbcb4f226ea780fb1ab0551563f5d9ca0e9aabe0477ca82a"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-21/attempts/001/record.json",
+      "sha256": "857bcbc66589a52b88c4acf51c8222509dc5efecac9d271306a0182ee19523ea"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-21/attempts/001/started.json",
+      "sha256": "a6e379223f652a531f194ebce0cbe9727527d0d5d1c67c7d92fdd94e5f49ca23"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-21/attempts/001/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-21/attempts/001/stdout.job-result.json",
+      "sha256": "b3e7377bf58d708fbaf096882cb0f5491061f5cc9be553e0e491761252eb621c"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-21/attempts/001/stdout.job.json",
+      "sha256": "4abea5e052df5d9db3b20cf1b4600efbbebd81314a99627a176913d4c6dfb978"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-21/attempts/001/stdout.txt",
+      "sha256": "88d4beade49a9860bd8fd41fa25e5e95660e5518bb41f126bd5c396501e207cd"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-21/attempts/001/stdout.worker-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-21/attempts/001/stdout.worker-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-21/attempts/001/weights.npz",
+      "sha256": "9f893a934d0520b7a415f2b1fd3e14ba28dfdc51ec1771a70607051cb909002f"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-21/parameters.json",
+      "sha256": "4a89c7db1a775bc443519fd6967866994850a52b1d4a7fb622810d345cc1eec5"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-21/spec.json",
+      "sha256": "15e6fb25ba5b0a25dcd65ed6e74b92f798f127cb703ea89967a41524d200ae7b"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/evaluation.json",
+      "sha256": "873ad5fe790cd91da6e895a77a985ba281269fd8747f2f2910b330be1bb2023c"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/evaluator-command.json",
+      "sha256": "d05ab74a827b4b0a3f01c4798c5c07b799167352da19150eded1f22b6cfbb095"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/evaluator-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/evaluator-stdout.job-result.json",
+      "sha256": "6276fbfc7383a9ed929a218478ed0e6636a5fecdc48eb8f647a0d3e3203ae23b"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/evaluator-stdout.job.json",
+      "sha256": "482afa968a52010bcbf427d5cf3e17a9f97e72f950f74d9d8dfc1039a9c5e93b"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/evaluator-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/evaluator-stdout.worker-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/evaluator-stdout.worker-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/input.json",
+      "sha256": "384564a141efe9c7cb93b88008d8a04ac0bfa0997eab14742288561795c9dbe9"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/raw.json",
+      "sha256": "515e4450ced4f79425bfa8fc111455b4f3e0c68dde48753baecf279a48c5dc02"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/record.json",
+      "sha256": "b4e15b88f078617d19c17dd3e8b04c8fcc3d2738e7aa4f6c187e3cbb867017ca"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/started.json",
+      "sha256": "daa18ca32a0ce3588e3333e4662e7f71cc3fc839edce28503b49dd241922784e"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/stdout.job-result.json",
+      "sha256": "d77f09e3c43d5f51a8596e5873e0656330b3435811945265828d99b3009a3720"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/stdout.job.json",
+      "sha256": "c4df0b961a79b37d2349072cf9b3b8c9a47a4ef328852d51455a12bdeee6686c"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/stdout.txt",
+      "sha256": "5ab3170881f031c22ac15042ff9860b1b18c2cc9b4287e7125bdee1edc5a4268"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/stdout.worker-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/stdout.worker-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/weights.npz",
+      "sha256": "9dbe087f636593bc34125016912aed0884c397eef1cee55b5971f8c177b37fb6"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/parameters.json",
+      "sha256": "384564a141efe9c7cb93b88008d8a04ac0bfa0997eab14742288561795c9dbe9"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/spec.json",
+      "sha256": "0ce3eadb2be6f395d4016317c256fefc764e32023943f47ed6caf9f75b1c8300"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/001/input.json",
+      "sha256": "ebdd7501d6cde9d2ba0b85d84d02e04981f463ef9b87452c1c3422abb9e2ffe2"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/001/interrupt-ready",
+      "sha256": "b17573102da96aaa5a2b36b5535baaaf155eabafd65fd5484d05c8c03b4e181c"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/001/partial-training.json",
+      "sha256": "9db63947f74f909c00d5e9f7651d122c5a093e94bb3d866d41a66a70c5c798a3"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/001/record.json",
+      "sha256": "8d98942d76693aa115f1779aab649a0bffd2e64c72dfb984717a2a05b26eec3a"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/001/started.json",
+      "sha256": "46b5e4b561494851631922f8738019e5f6ce03bff079f9751550cfead63b8104"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/001/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/001/stdout.job-result.json",
+      "sha256": "e39f80ed80cdce346b26a710a1afc3fb4258cd6bedcba560a6351778edd88a76"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/001/stdout.job.json",
+      "sha256": "0dad45fd34ba24b58f3af293340e2934c480c0922f5b8f376b6e814479235901"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/001/stdout.txt",
+      "sha256": "1e817027f5b763e7c053ce3444331e584322093d153810acaf8f468413fddc2e"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/001/stdout.worker-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/001/stdout.worker-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/002/evaluation.json",
+      "sha256": "4d5154ba64029968f5cd674e4a83eafe9d826b6b67eca282a42cca815b4809eb"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/002/evaluator-command.json",
+      "sha256": "beeaa36d5ae68230194e4df431f60719d4f41114378c5aa4340da2f611c99c5a"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/002/evaluator-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/002/evaluator-stdout.job-result.json",
+      "sha256": "7b9c37fd7e0ece1e784cbc42bfc9ab59553c505248d51a78e933a618f63e3aa2"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/002/evaluator-stdout.job.json",
+      "sha256": "1e687eff480d0da8f008f36bfc21f8bc736f24da791d87a37e2b0b4eb865c1f0"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/002/evaluator-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/002/evaluator-stdout.worker-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/002/evaluator-stdout.worker-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/002/input.json",
+      "sha256": "2d167c66518c411b48601477bf59657eb35762e0cbd929b678cd034723e51d52"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/002/raw.json",
+      "sha256": "b16ece31451e3226e692c45b2d63bc26c2ed205d2e221ef4d47ed50066c7628f"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/002/record.json",
+      "sha256": "c68096e0ffed6634ed45e4b542ddd439d9418daafd64d8ddf377989b9e221057"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/002/started.json",
+      "sha256": "d2b2a824ec5178d68ccd8f0cd3eeaffe76423a29fef726a67e427e46cf28128e"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/002/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/002/stdout.job-result.json",
+      "sha256": "c668a01582baec7cedc18c1e56c21a2aebd59e802b5941f510c52f6f00e11cc6"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/002/stdout.job.json",
+      "sha256": "d16c39aca9ef054b75c4028e6e87aabd4cb31483a63140a2b2f6602c24c213bb"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/002/stdout.txt",
+      "sha256": "57f48c6d05417cc22508e7c772ae8741ad1afae379bb7633a627eadbd5a94f6f"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/002/stdout.worker-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/002/stdout.worker-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/002/weights.npz",
+      "sha256": "1f20c80f1174af82e5d0442f0899c40f7c6aa1cac0945519c4006072fe203baa"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/parameters.json",
+      "sha256": "2d167c66518c411b48601477bf59657eb35762e0cbd929b678cd034723e51d52"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/spec.json",
+      "sha256": "0bb2df08e935179acb2a74c0c6a7ded6d9da0f1e0e71486359cd4789e1ceea4c"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/evaluation.json",
+      "sha256": "4d5154ba64029968f5cd674e4a83eafe9d826b6b67eca282a42cca815b4809eb"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/evaluator-command.json",
+      "sha256": "d38e56af370c22a84eb4905f0dd739c09283487eab6ac032ef90f8fdb4ab939f"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/evaluator-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/evaluator-stdout.job-result.json",
+      "sha256": "c34ce8cb0f7c72df01c1e2383cc2a9498078c62af5f106b97d79d4e4ead13a5d"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/evaluator-stdout.job.json",
+      "sha256": "d279ad22acb88f88c09d000700d3bb447d944e3f7d365f09d5d11228e35e9126"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/evaluator-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/evaluator-stdout.worker-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/evaluator-stdout.worker-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/input.json",
+      "sha256": "508ae2afa13a1a1b6c3e79aa01d15e7b636d78701d92d4b30d0e4745467e2d59"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/raw.json",
+      "sha256": "c259a441aa03f2f61e2b8e32fe6cde0b7a5fde832769fd06898c685292e4f110"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/record.json",
+      "sha256": "002bd8e1e41fa0eb5a8e2153e7e878ae16283b4b283341ad63a2a2c4f4cb2913"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/started.json",
+      "sha256": "e1939a1380ad8e015dcd689ddfab285031094b01acb3818646cd66f377593df7"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/stdout.job-result.json",
+      "sha256": "8282525bc98a4cea1eb98218e0dea9bc5505c63bb63819cd4c96d632246e8980"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/stdout.job.json",
+      "sha256": "9c66b6b9ac2b73833f1c84b57aec712e65d421f236aad7fb49ff3fb76ebf5d8d"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/stdout.txt",
+      "sha256": "80de55dbe1c33266d37639cf59df02adb44d80b4abff7f338616459747a32ade"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/stdout.worker-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/stdout.worker-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/weights.npz",
+      "sha256": "954c6df6d02d77f8e61d08cffd2613081e2a819ffee8f4fc99a81c437291b727"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/parameters.json",
+      "sha256": "508ae2afa13a1a1b6c3e79aa01d15e7b636d78701d92d4b30d0e4745467e2d59"
+    },
+    {
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/spec.json",
+      "sha256": "1cd5a053206eebe0f5cd4829198a80a764c57c4c21100a019813cb57ce078af2"
+    },
+    {
+      "path": "campaigns/ema-v1/state.json",
+      "sha256": "6cd6e1745a0d354138439a1db47008325b160f3348def4703cef2292b35defad"
+    },
+    {
+      "path": "campaigns/ema-v1/study.json",
+      "sha256": "df71dd9ffa6d651e0def40b11ee8d4b1aab90b29c69b72942d223a43190114a2"
+    },
+    {
+      "path": "compute.py",
+      "sha256": "9f1923c1087af49e5ec11f60578126b520f46e893c9d2818f2cbfe7450bd7067"
+    },
+    {
+      "path": "confirmation-freeze.json",
+      "sha256": "e7b37fee3ca7331f7743f73a52de0528a3f1e2ce5d4e83aa2d385674c6ac9eca"
+    },
+    {
+      "path": "domain/analyze.py",
+      "sha256": "9155f175cbb84305d4a71d11d8483b10d202bf0a60b86a262c85ef79a566392a"
+    },
+    {
+      "path": "domain/evaluator.py",
+      "sha256": "609018a0d4b61b178d139d944290bc4f53dad1151a1e871efabb9a7e1eba65bf"
+    },
+    {
+      "path": "domain/runner.py",
+      "sha256": "26f69538c0ecb3497a77e57899dfb8b362f780ae1fba1d9865ffeb7a3cb8a868"
+    },
+    {
+      "path": "domain/science.py",
+      "sha256": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1"
+    },
+    {
+      "path": "domain/test_science.py",
+      "sha256": "4efc18d1b04c5241d534939026d91b2b5079061f8a171ecb2e0c56270a2631c9"
+    },
+    {
+      "path": "domain/write.py",
+      "sha256": "106238b626c114acdf2c4d9d1df4b492141feeeac815d3e7974b900070543304"
+    },
+    {
+      "path": "evidence/finalization-20261008/final-status.json",
+      "sha256": "87998c19017c29b16c83c03f5a6d5b5c72996eb74e641399017db7dc28d1e271"
+    },
+    {
+      "path": "evidence/finalization-20261008/record.json",
+      "sha256": "b8c0e4fda51331e811f701cc0df8ad77065f1fee3c6daf903f6ba91638fbc056"
+    },
+    {
+      "path": "evidence/finalization-20261008/report.md",
+      "sha256": "7373dda777c0dfc86a53ed0580c9392d7787e83c1491239d4c99ae6820fdf55c"
+    },
+    {
+      "path": "evidence/independent-verification.json",
+      "sha256": "2b075f0307adba21ae638c8645970a6d625eb2eea214987b9cc71253e5d2e056"
+    },
+    {
+      "path": "manage.py",
+      "sha256": "d8a6606f5f5b629511e9ab6553d94684a368fcf727eb5aae4047713c35ffabe6"
+    },
+    {
+      "path": "protocol.json",
+      "sha256": "e0c43bdad5c86808e1d3dcc1ff1194b0ed96f6c6bafb344ff4285b5a6c172a29"
+    },
+    {
+      "path": "publication/manuscript.md",
+      "sha256": "0b69adf92abaccf8027a512be8afc84bd6226bcd3a121212166010e419af4a4a"
+    },
+    {
+      "path": "publication/record.json",
+      "sha256": "27d4f78bbf761319a92b0f824d095e217703343b24c651fa6e034653aecdef69"
+    },
+    {
+      "path": "publication.py",
+      "sha256": "78cb8589669e151448ca740cc76c1cfc29bb2b905ee1f38d98fdf64c922a3324"
+    },
+    {
+      "path": "reproduce_study.py",
+      "sha256": "05c3d44bf34e508a412837d5998dc0688aadd8cf90e978baff815efd59d8ad5b"
+    },
+    {
+      "path": "requirements.lock",
+      "sha256": "7decf0446de48124cc46ed9c1d69669a62b9daacfb00c070c10f44ed7a5b039d"
+    },
+    {
+      "path": "revise_publication.py",
+      "sha256": "5d56145036c2e96cdd7c7f41b848ed2e1f23de4e2c4f67578e92fc0ceab17006"
+    },
+    {
+      "path": "verify_results.py",
+      "sha256": "a1d73ac321964f9f269ad2e10b196946f99a85e3d2e182dca67c249051a699d0"
+    },
+    {
+      "path": "verify_supporting.py",
+      "sha256": "e9a5cb8fafc23cc67161927591dbf4f2ba697d40cc518f802e38deacfdcffa15"
+    }
+  ],
+  "recorded_at": "2026-10-07T15:50:29.758540+00:00",
+  "scope": "Baseline digests for the retained campaign, original publication, first native review, scientific and reporting source, protocol and README. Cache files excluded. New reporting artifacts and compute receipts will be appended."
+}

@@ -1,0 +1,25 @@
+{
+  "new_claim_record_validation": "not_run",
+  "new_claim_records_validated": 0,
+  "reason": "The publication revision was not run after the verifier failed; no v2 ClaimRecords exist.",
+  "recorded_at": "2026-10-07T15:53:16.650389+00:00",
+  "review_record": {
+    "media_type": "application/json",
+    "path": "evidence/reporting-revision-20261008/record.json",
+    "retention": "retain-with-study",
+    "sha256": "42304b9cf847de6d4f0af672b4fda0231196fa65d6d2836002f3b79e5c179a00"
+  },
+  "review_record_validation": "pass",
+  "review_schema": {
+    "media_type": "application/json",
+    "path": ".allagma/bundles/b-2b63431e34a085598aaade78/contracts/ReviewRecord.schema.json",
+    "retention": "retain-with-study",
+    "sha256": "e33fe17311cfcc7132ca03623a8cdbc50afb8fde9e346faa123d03e5d50346c6"
+  },
+  "validator": {
+    "media_type": "text/x-python",
+    "path": ".allagma/bundles/b-2b63431e34a085598aaade78/allagma/contracts.py",
+    "retention": "retain-with-study",
+    "sha256": "ede363ff2a1def2e10509ffc9f0374c0c25e70b667d14d4da7263a1d5d7d125c"
+  }
+}

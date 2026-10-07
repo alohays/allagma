@@ -1,0 +1,204 @@
+{
+  "budget": {
+    "attempt_limit": 18,
+    "attempts": 15,
+    "ceiling_seconds": 1800.0,
+    "charged_seconds": 324.5607410408091,
+    "prior_probe_estimate_charged_seconds": 15.3,
+    "prior_probe_is_scientific_evidence": false,
+    "remaining_seconds": 1475.439258959191
+  },
+  "checked_at": "2026-10-07T16:15:47.708110+00:00",
+  "final_claim_transitive_references": 306,
+  "framework_source_revision": "sha256:fe61419ac78231ab0fcc0d70f77714f6946cbdb1bd72ce3a360313850855e100",
+  "native_review_transitive_references": 338,
+  "requirements": [
+    {
+      "evidence": [
+        {
+          "path": "reference/provenance.json",
+          "sha256": "5487fe70c56f4aa8594dd178ae89fdc4f59a1c146a7a01bc31ebe42de28e455f"
+        },
+        {
+          "path": "REFERENCE.md",
+          "sha256": "3632bda3aa4d14e5b0dd2466a2b8528091848704245dbdb81f012c3c07c0ad76"
+        },
+        {
+          "path": "DISCLOSURE.md",
+          "sha256": "136a4990ce709b605d4f804ff1b562a2be8d12db5bb18430424e0ea6ce7c3648"
+        }
+      ],
+      "finding": "Exact upstream commit, retained source and license",
+      "id": "reference",
+      "status": "pass"
+    },
+    {
+      "evidence": [
+        {
+          "path": "requirements.lock",
+          "sha256": "7decf0446de48124cc46ed9c1d69669a62b9daacfb00c070c10f44ed7a5b039d"
+        },
+        {
+          "path": "evidence/setup/host.json",
+          "sha256": "69bee741f7227f7ecccb56cf23ea7b23faf72b527adaa0e26d68fba3483ebb9c"
+        }
+      ],
+      "finding": "Separate study-owned Python/PyTorch environment on M4 Pro/48GiB; actual MPS without fallback",
+      "id": "environment",
+      "status": "pass"
+    },
+    {
+      "evidence": [
+        {
+          "path": "campaigns/ema-v1/protocol.json",
+          "sha256": "09942fb8ed12194b9c2efb944b2c1d9a2b00f63c043bd5055ce6f42e0008cfb1"
+        },
+        {
+          "path": "evidence/independent-verification.json",
+          "sha256": "2b075f0307adba21ae638c8645970a6d625eb2eea214987b9cc71253e5d2e056"
+        }
+      ],
+      "finding": "All 14 successful trajectories use 296,450 parameters, batch 256 and 100 diffusion steps; paired raw/EMA 0.99/EMA 0.999 checkpoints at 5,000 and 10,000 updates.",
+      "id": "experiment",
+      "status": "pass"
+    },
+    {
+      "evidence": [
+        {
+          "path": "confirmation-freeze.json",
+          "sha256": "e7b37fee3ca7331f7743f73a52de0528a3f1e2ce5d4e83aa2d385674c6ac9eca"
+        },
+        {
+          "path": "evidence/host-qualification.json",
+          "sha256": "4d8a3251f63c6e77e39328df37beb7d13b9207499b11a1897ab03dd21e274ad3"
+        }
+      ],
+      "finding": "Four qualified pilot seeds; post-pilot freeze; ten new confirmations; one interrupted attempt retained",
+      "id": "pilot_confirmation",
+      "status": "pass"
+    },
+    {
+      "evidence": [
+        {
+          "path": "evidence/independent-verification.json",
+          "sha256": "2b075f0307adba21ae638c8645970a6d625eb2eea214987b9cc71253e5d2e056"
+        },
+        {
+          "path": "evidence/supporting-verification.json",
+          "sha256": "adff17860580c0b0a78d22bd1fe167322044ffa4477295cd857616ee27ad7c02"
+        }
+      ],
+      "finding": "Held-out SlicedW1, modecoverage, paired estimates and seed-level uncertainty independently checked",
+      "id": "metrics",
+      "status": "pass"
+    },
+    {
+      "evidence": [
+        {
+          "path": "evidence/compute-summary.json",
+          "sha256": "213d3512657d0f964ccf16d8869f3a39b919df36f2ac336ace8cea472c456c9f"
+        },
+        {
+          "path": "evidence/compute/023-supporting-startup-failure.json",
+          "sha256": "55c18586ea85ffec8cd9bbb0a2fe8de905eac278dcc5e0f149e134d053f45d22"
+        },
+        {
+          "path": "evidence/setup/budget-supervisor-tests.log",
+          "sha256": "d52f16640f46747a915a234cac3e73ef779edde8ab8848b7a660284aa1804dd3"
+        }
+      ],
+      "finding": "Explicit 18-attempt and 150-second attempt limits; supervised computation plus conservative startup/probe charges remain below 1,800 seconds.",
+      "id": "budget",
+      "status": "pass"
+    },
+    {
+      "evidence": [
+        {
+          "path": "evidence/host-qualification.json",
+          "sha256": "4d8a3251f63c6e77e39328df37beb7d13b9207499b11a1897ab03dd21e274ad3"
+        },
+        {
+          "path": "evidence/native/model-observations.json",
+          "sha256": "82f8992afecc6ccd7ee40dcfa670ba99fb800551602a1c5b23318a44152506c8"
+        }
+      ],
+      "finding": "Actual native CLI 0.160.1 invocation: 13 campaign routes, five complete canonical skill reads, fresh-session recovery and no model overrides.",
+      "id": "native",
+      "status": "pass"
+    },
+    {
+      "evidence": [
+        {
+          "path": "campaigns/ema-v1/latest-audit.json",
+          "sha256": "2075e6ea12c457b48973e942c170148b390b9b0b40d6e6b5f455896ffa28205e"
+        },
+        {
+          "path": "evidence/independent-verification.json",
+          "sha256": "2b075f0307adba21ae638c8645970a6d625eb2eea214987b9cc71253e5d2e056"
+        },
+        {
+          "path": "evidence/setup/reproduction-layout-delivery.json",
+          "sha256": "80a6f97430443ad9fc87bc3e66cc8ccaeff6db141c2a8c8820b281b4e066c555"
+        }
+      ],
+      "finding": "Numerical and figure regeneration passed; 12 exact saved-weight sample regenerations; empty replication copier verified.",
+      "id": "reproduction",
+      "status": "pass"
+    },
+    {
+      "evidence": [
+        {
+          "path": "publication/v2/record.json",
+          "sha256": "ae8cb9a8720b5354d5bc95734a43dad7c03e24cbdf3dfe87aef8e6327f06add7"
+        },
+        {
+          "path": "publication/v2/claims.json",
+          "sha256": "93450790da9addd96b3a60dafde1e94ab1b4a8098118044c2085139dbf7d64b4"
+        },
+        {
+          "path": "evidence/visual-review.json",
+          "sha256": "3d2523361e225437df61f92587b9232c118f5a08dd80bfc847babb774bf3e9c3"
+        }
+      ],
+      "finding": "English disclosed manuscript, 13 evidence-linked claims, figures and preserved publication history.",
+      "id": "publication",
+      "status": "pass"
+    },
+    {
+      "evidence": [
+        {
+          "path": "evidence/reporting-repair-20261008/review.json",
+          "sha256": "792f1143f5e6fee0a70328914af16bc87f8ab3b2360c7de7ac65530fdb39251f"
+        },
+        {
+          "path": "HOST-QUALIFICATION.md",
+          "sha256": "57d4f99e4dcfb55c7476aa0d28c68dee7c2fcc8356a37f722aed6ed0cfbaa1ea"
+        }
+      ],
+      "finding": "Native critique findings corrected; current exact material references pass; assurance provisional",
+      "id": "reporting_review",
+      "status": "pass"
+    },
+    {
+      "evidence": [
+        {
+          "path": "evidence/setup/framework-conformance.log",
+          "sha256": "1067f05e3f3bf0ebf57b56c3ec6a0781a8e81775b39617e89aa1fa16a7afd5ca"
+        },
+        {
+          "path": "evidence/compute/003-known-answer-mps-corrected.stderr.txt",
+          "sha256": "03c562051e64e02cd4f62509e8748d0a1ccf5ced36233208d9e8b99094568036"
+        },
+        {
+          "path": "evidence/setup/budget-supervisor-tests.log",
+          "sha256": "d52f16640f46747a915a234cac3e73ef779edde8ab8848b7a660284aa1804dd3"
+        }
+      ],
+      "finding": "75 framework tests, six scientific known-answer checks and four budget tests passed; prior failures retained.",
+      "id": "checks",
+      "status": "pass"
+    }
+  ],
+  "scope": "Technical study acceptance before Git delivery; commit,push and CI verified separately from live Git/GitHub state",
+  "status": "pass"
+}

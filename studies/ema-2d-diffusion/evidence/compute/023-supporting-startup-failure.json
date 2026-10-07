@@ -1,0 +1,19 @@
+{
+  "accounting_basis": "Conservative full planned 45+2 second reservation charged after an immediate import failure before supervisor entry; this is not a measured duration",
+  "attempt": false,
+  "charged_seconds": 47.0,
+  "command": [
+    "python3",
+    "verify_supporting.py"
+  ],
+  "cwd": "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion",
+  "error": "ModuleNotFoundError: No module named numpy",
+  "exit_code": 1,
+  "label": "supporting-verification-startup-failure",
+  "native_item_id": "item_25",
+  "native_trace": "evidence/native/06-reporting-revision/events.jsonl",
+  "recorded_at": "2026-10-07T15:56:22.887932+00:00",
+  "reservation_seconds": 47.0,
+  "status": "failed_startup",
+  "timeout_seconds": 45.0
+}

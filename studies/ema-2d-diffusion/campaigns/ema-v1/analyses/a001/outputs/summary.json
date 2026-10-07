@@ -1,0 +1,434 @@
+{
+  "comparisons": [
+    {
+      "ci95_t": [
+        -0.12111662761418761,
+        -0.0030677571670359866
+      ],
+      "dataset": "moons",
+      "differences": [
+        -0.09265250288582028,
+        -0.012862922037098434,
+        -0.03855405649534363,
+        -0.03717030586191147,
+        -0.1292211746728852
+      ],
+      "ema": "ema099",
+      "improved_seeds": 5,
+      "inlier_difference": null,
+      "leave_one_out_mean_range": [
+        -0.07439950997899014,
+        -0.045309946820043454
+      ],
+      "mean": -0.0620921923906118,
+      "mode_difference": null,
+      "n": 5,
+      "se": 0.021258995941636282,
+      "seeds": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005
+      ],
+      "sign_flip_p_two_sided": 0.0625,
+      "updates": 5000
+    },
+    {
+      "ci95_t": [
+        -0.12290701567202891,
+        0.0013792079378879135
+      ],
+      "dataset": "moons",
+      "differences": [
+        -0.09630535011087618,
+        -0.012086161748469243,
+        -0.044787415804789746,
+        -0.02189947785964637,
+        -0.128741113811571
+      ],
+      "ema": "ema0999",
+      "improved_seeds": 5,
+      "inlier_difference": null,
+      "leave_one_out_mean_range": [
+        -0.07293333939672082,
+        -0.04376960138094538
+      ],
+      "mean": -0.0607639038670705,
+      "mode_difference": null,
+      "n": 5,
+      "se": 0.022382258409726904,
+      "seeds": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005
+      ],
+      "sign_flip_p_two_sided": 0.0625,
+      "updates": 5000
+    },
+    {
+      "ci95_t": [
+        -0.00034766078329562646,
+        0.00022542470325254818
+      ],
+      "dataset": "moons",
+      "differences": [
+        7.210653571491227e-05,
+        -7.51733244341024e-05,
+        1.1730725474584647e-05,
+        0.00013556413837004233,
+        -0.00044981827523313256
+      ],
+      "ema": "ema099",
+      "improved_seeds": 2,
+      "inlier_difference": null,
+      "leave_one_out_mean_range": [
+        -0.00011028858461943451,
+        3.605701878135921e-05
+      ],
+      "mean": -6.111804002153915e-05,
+      "mode_difference": null,
+      "n": 5,
+      "se": 0.00010320490138186041,
+      "seeds": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005
+      ],
+      "sign_flip_p_two_sided": 0.8125,
+      "updates": 10000
+    },
+    {
+      "ci95_t": [
+        -0.002105293684562629,
+        0.0002760055190870255
+      ],
+      "dataset": "moons",
+      "differences": [
+        0.0007302758852210933,
+        -0.0012133128826453399,
+        -0.00178881126795008,
+        -0.00108943517136742,
+        -0.001211936976947263
+      ],
+      "ema": "ema0999",
+      "improved_seeds": 4,
+      "inlier_difference": null,
+      "leave_one_out_mean_range": [
+        -0.0013258740747275257,
+        -0.0006961022864347324
+      ],
+      "mean": -0.0009146440827378019,
+      "mode_difference": null,
+      "n": 5,
+      "se": 0.0004288395976552202,
+      "seeds": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005
+      ],
+      "sign_flip_p_two_sided": 0.125,
+      "updates": 10000
+    },
+    {
+      "ci95_t": [
+        -0.11330083881987899,
+        -0.009705228766467004
+      ],
+      "dataset": "gmm8",
+      "differences": [
+        -0.07432497684955197,
+        -0.09136798183026029,
+        0.011039350437114404,
+        -0.06651472584758254,
+        -0.08634683487558453
+      ],
+      "ema": "ema099",
+      "improved_seeds": 4,
+      "inlier_difference": {
+        "ci95_t": [
+          -0.0019094802207620457,
+          0.006792292720762046
+        ],
+        "mean": 0.00244140625,
+        "n": 5,
+        "se": 0.0015670709507696495
+      },
+      "leave_one_out_mean_range": [
+        -0.07963862985074484,
+        -0.054036796783901164
+      ],
+      "mean": -0.06150303379317299,
+      "mode_difference": {
+        "ci95_t": [
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "n": 5,
+        "se": 0.0
+      },
+      "n": 5,
+      "se": 0.018656160328808635,
+      "seeds": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "sign_flip_p_two_sided": 0.125,
+      "updates": 5000
+    },
+    {
+      "ci95_t": [
+        -0.1105513000800412,
+        -0.007105379232968931
+      ],
+      "dataset": "gmm8",
+      "differences": [
+        -0.07283517936706652,
+        -0.08501377183896863,
+        0.014542251479130283,
+        -0.06749816073294759,
+        -0.08333683782267291
+      ],
+      "ema": "ema0999",
+      "improved_seeds": 4,
+      "inlier_difference": {
+        "ci95_t": [
+          -0.011933731942116638,
+          0.007246231942116637
+        ],
+        "mean": -0.00234375,
+        "n": 5,
+        "se": 0.003454050621841288
+      },
+      "leave_one_out_mean_range": [
+        -0.07717098744041391,
+        -0.05228198161088919
+      ],
+      "mean": -0.058828339656505066,
+      "mode_difference": {
+        "ci95_t": [
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "n": 5,
+        "se": 0.0
+      },
+      "n": 5,
+      "se": 0.01862920333872454,
+      "seeds": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "sign_flip_p_two_sided": 0.125,
+      "updates": 5000
+    },
+    {
+      "ci95_t": [
+        -0.00013346209631464435,
+        0.00025824578078320723
+      ],
+      "dataset": "gmm8",
+      "differences": [
+        0.0001249204009912963,
+        -0.00019385348629025884,
+        2.179758059144693e-05,
+        0.0001589175621755784,
+        0.0002001771537033445
+      ],
+      "ema": "ema099",
+      "improved_seeds": 1,
+      "inlier_difference": {
+        "ci95_t": [
+          -0.0008191900719566091,
+          0.001209815071956609
+        ],
+        "mean": 0.0001953125,
+        "n": 5,
+        "se": 0.0003653962291771427
+      },
+      "leave_one_out_mean_range": [
+        2.79455143670157e-05,
+        0.00012645317436541653
+      ],
+      "mean": 6.239184223428146e-05,
+      "mode_difference": {
+        "ci95_t": [
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "n": 5,
+        "se": 0.0
+      },
+      "n": 5,
+      "se": 7.0541260903112e-05,
+      "seeds": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "sign_flip_p_two_sided": 0.4375,
+      "updates": 10000
+    },
+    {
+      "ci95_t": [
+        -0.0015735740324215567,
+        0.0029720491622628547
+      ],
+      "dataset": "gmm8",
+      "differences": [
+        -0.0008863611408446159,
+        0.0010631684227019947,
+        0.0019229256599642489,
+        -0.0014533181049659408,
+        0.0028497729877475578
+      ],
+      "ema": "ema0999",
+      "improved_seeds": 2,
+      "inlier_difference": {
+        "ci95_t": [
+          -0.0018147226079349137,
+          0.0012287851079349136
+        ],
+        "mean": -0.00029296875,
+        "n": 5,
+        "se": 0.0005480943437657141
+      },
+      "leave_one_out_mean_range": [
+        0.0001616037092139217,
+        0.0012373764823922963
+      ],
+      "mean": 0.0006992375649206489,
+      "mode_difference": {
+        "ci95_t": [
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "n": 5,
+        "se": 0.0
+      },
+      "n": 5,
+      "se": 0.0008186049106777823,
+      "seeds": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "sign_flip_p_two_sided": 0.4375,
+      "updates": 10000
+    }
+  ],
+  "exclusions": [
+    {
+      "attempt_id": "pilot-gmm8-21-a001",
+      "reason": "pilot data excluded from confirmation"
+    },
+    {
+      "attempt_id": "pilot-gmm8-22-a001",
+      "reason": "pilot data excluded from confirmation"
+    },
+    {
+      "attempt_id": "pilot-moons-11-a001",
+      "reason": "interrupted"
+    },
+    {
+      "attempt_id": "pilot-moons-11-a002",
+      "reason": "pilot data excluded from confirmation"
+    },
+    {
+      "attempt_id": "pilot-moons-12-a001",
+      "reason": "pilot data excluded from confirmation"
+    }
+  ],
+  "format": "ema-analysis-v1",
+  "holdout_controls": [
+    {
+      "dataset": "gmm8",
+      "holdout_vs_independent_holdout_sw1": 0.024173278552614252,
+      "seed": 2001
+    },
+    {
+      "dataset": "gmm8",
+      "holdout_vs_independent_holdout_sw1": 0.026150520208545296,
+      "seed": 2002
+    },
+    {
+      "dataset": "gmm8",
+      "holdout_vs_independent_holdout_sw1": 0.054058489709528756,
+      "seed": 2003
+    },
+    {
+      "dataset": "gmm8",
+      "holdout_vs_independent_holdout_sw1": 0.032602989853531834,
+      "seed": 2004
+    },
+    {
+      "dataset": "gmm8",
+      "holdout_vs_independent_holdout_sw1": 0.036141274445111976,
+      "seed": 2005
+    },
+    {
+      "dataset": "moons",
+      "holdout_vs_independent_holdout_sw1": 0.07040009246016893,
+      "seed": 1001
+    },
+    {
+      "dataset": "moons",
+      "holdout_vs_independent_holdout_sw1": 0.04268980445989945,
+      "seed": 1002
+    },
+    {
+      "dataset": "moons",
+      "holdout_vs_independent_holdout_sw1": 0.042401685977151576,
+      "seed": 1003
+    },
+    {
+      "dataset": "moons",
+      "holdout_vs_independent_holdout_sw1": 0.028914396939854585,
+      "seed": 1004
+    },
+    {
+      "dataset": "moons",
+      "holdout_vs_independent_holdout_sw1": 0.05815501077442385,
+      "seed": 1005
+    }
+  ],
+  "metric": "Mean empirical projected W1 over 128 fixed random unit directions (seed 7321)",
+  "per_dataset_seeds": {
+    "gmm8": [
+      2001,
+      2002,
+      2003,
+      2004,
+      2005
+    ],
+    "moons": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005
+    ]
+  },
+  "trajectories": 10,
+  "uncertainty": "Unadjusted two-sided 95% Student t intervals across paired seed differences; eight comparisons, descriptive; exact sign-flip sensitivity assumes sign exchangeability"
+}

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/qualify_host.py", line 108, in <module>
+    main()
+  File "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/qualify_host.py", line 42, in main
+    assert value["lock_id"]==lock["lock_id"] and value["bundle_id"]==lock["bundle_id"]
+           ~~~~~^^^^^^^^^^^
+KeyError: 'lock_id'

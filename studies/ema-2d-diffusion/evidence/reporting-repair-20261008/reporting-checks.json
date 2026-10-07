@@ -1,0 +1,128 @@
+{
+  "checkpoint_pattern_claim_present": true,
+  "local_links_checked": [
+    {
+      "source": "publication/v2/manuscript.md",
+      "target": "../../confirmation-freeze.json"
+    },
+    {
+      "source": "publication/v2/manuscript.md",
+      "target": "../../campaigns/ema-v1/analyses/a001/outputs/paired-quality.png"
+    },
+    {
+      "source": "publication/v2/manuscript.md",
+      "target": "../../campaigns/ema-v1/analyses/a001/outputs/paired-differences.csv"
+    },
+    {
+      "source": "publication/v2/manuscript.md",
+      "target": "../../campaigns/ema-v1/analyses/a001/outputs/samples.png"
+    },
+    {
+      "source": "publication/v2/manuscript.md",
+      "target": "../../campaigns/ema-v1/analyses/a001/outputs/summary.json"
+    },
+    {
+      "source": "publication/v2/manuscript.md",
+      "target": "../../campaigns/ema-v1/analyses/a001/outputs/per-seed.csv"
+    },
+    {
+      "source": "publication/v2/manuscript.md",
+      "target": "../../campaigns/ema-v1/analyses/a001/raw-manifest.json"
+    },
+    {
+      "source": "publication/v2/manuscript.md",
+      "target": "../../campaigns/ema-v1/analyses/a001/record.json"
+    },
+    {
+      "source": "publication/v2/manuscript.md",
+      "target": "claims.json"
+    },
+    {
+      "source": "publication/v2/manuscript.md",
+      "target": "../../campaigns/ema-v1/protocol.json"
+    },
+    {
+      "source": "publication/v2/manuscript.md",
+      "target": "../../reference/provenance.json"
+    },
+    {
+      "source": "publication/v2/manuscript.md",
+      "target": "../../README.md"
+    },
+    {
+      "source": "publication/v2/manuscript.md",
+      "target": "../../evidence/supporting-verification.json"
+    },
+    {
+      "source": "publication/v2/manuscript.md",
+      "target": "record.json"
+    },
+    {
+      "source": "README.md",
+      "target": "DISCLOSURE.md"
+    },
+    {
+      "source": "README.md",
+      "target": "reference/LICENSE"
+    },
+    {
+      "source": "README.md",
+      "target": "DESIGN.md"
+    },
+    {
+      "source": "README.md",
+      "target": "protocol.json"
+    },
+    {
+      "source": "README.md",
+      "target": "REFERENCE.md"
+    },
+    {
+      "source": "README.md",
+      "target": "publication/v2/manuscript.md"
+    },
+    {
+      "source": "README.md",
+      "target": "publication/v2/claims.json"
+    },
+    {
+      "source": "README.md",
+      "target": "campaigns/ema-v1/analyses/a001/outputs/paired-quality.png"
+    },
+    {
+      "source": "README.md",
+      "target": "campaigns/ema-v1/analyses/a001/outputs/samples.png"
+    },
+    {
+      "source": "README.md",
+      "target": "campaigns/ema-v1/analyses/a001/outputs/summary.json"
+    },
+    {
+      "source": "README.md",
+      "target": "campaigns/ema-v1/analyses/a001/outputs/per-seed.csv"
+    },
+    {
+      "source": "README.md",
+      "target": "campaigns/ema-v1/analyses/a001/outputs/paired-differences.csv"
+    },
+    {
+      "source": "README.md",
+      "target": "evidence/independent-verification.json"
+    },
+    {
+      "source": "README.md",
+      "target": "evidence/supporting-verification.json"
+    }
+  ],
+  "out_of_scope_links": [
+    {
+      "disposition": "Coordinator-owned host report, explicitly outside scoped review",
+      "source": "README.md",
+      "target": "HOST-QUALIFICATION.md"
+    }
+  ],
+  "primary_table_rows_checked_against_summary": 8,
+  "readme_reproduction_assessment": "Retained-data audit and supervised frozen-analyzer commands, plus an isolated new-study training sequence including interruption, four pilots, freeze and ten confirmations, are present and consistent with inspected entrypoints. Training and expensive passed checks were not rerun.",
+  "secondary_table_rows_and_claims_checked_against_summary": 4,
+  "status": "pass"
+}

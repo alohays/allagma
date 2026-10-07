@@ -1,0 +1,362 @@
+[
+  {
+    "claim_id": "C1",
+    "contradicting": [],
+    "dependencies": [
+      {
+        "media_type": "application/json",
+        "path": "campaigns/ema-v1/analyses/a001/record.json",
+        "retention": "retain-with-study",
+        "sha256": "e3f8a1dbcd7490338345eef2f55b9a2f3eb4d97d999a0e5780b5a92f603853e6"
+      },
+      {
+        "media_type": "application/json",
+        "path": "campaigns/ema-v1/analyses/a001/raw-manifest.json",
+        "retention": "retain-with-study",
+        "sha256": "72287c825fa1afae016e0cd3e320951583f59ee5b1c91e09f7a8b777bbddd42f"
+      },
+      {
+        "media_type": "application/json",
+        "path": "confirmation-freeze.json",
+        "retention": "retain-with-study",
+        "sha256": "e7b37fee3ca7331f7743f73a52de0528a3f1e2ce5d4e83aa2d385674c6ac9eca"
+      }
+    ],
+    "limitations": [
+      "Five confirmation seeds per dataset give imprecise seed-level inference.",
+      "Eight unadjusted comparisons are descriptive, not a familywise-confirmed superiority claim.",
+      "Finite shared sampling noise and finite held-out draws are not separate seed replicates.",
+      "This result is limited to one denoiser, optimizer, cosine schedule and two synthetic distributions.",
+      "No scientific novelty, independent peer review or general agent-quality claim is established."
+    ],
+    "record_type": "ClaimRecord",
+    "schema_version": "0.2",
+    "scope": "Descriptive paired seed estimates under protocol ema-2d-v1",
+    "status": "supported",
+    "supersedes": null,
+    "supporting": [
+      {
+        "media_type": "application/json",
+        "path": "campaigns/ema-v1/analyses/a001/outputs/summary.json",
+        "retention": "retain-with-study",
+        "sha256": "c8863b0f30af4b1eb00411074bc711b3c9c2cd9e236f9c16b1a274b1ad4b082e"
+      }
+    ],
+    "text": "moons, 5,000 updates, ema099: mean paired Sliced W1 difference -0.062092, unadjusted 95% t interval [-0.121117, -0.003068]; 5/5 seeds have lower distance than raw weights."
+  },
+  {
+    "claim_id": "C2",
+    "contradicting": [],
+    "dependencies": [
+      {
+        "media_type": "application/json",
+        "path": "campaigns/ema-v1/analyses/a001/record.json",
+        "retention": "retain-with-study",
+        "sha256": "e3f8a1dbcd7490338345eef2f55b9a2f3eb4d97d999a0e5780b5a92f603853e6"
+      },
+      {
+        "media_type": "application/json",
+        "path": "campaigns/ema-v1/analyses/a001/raw-manifest.json",
+        "retention": "retain-with-study",
+        "sha256": "72287c825fa1afae016e0cd3e320951583f59ee5b1c91e09f7a8b777bbddd42f"
+      },
+      {
+        "media_type": "application/json",
+        "path": "confirmation-freeze.json",
+        "retention": "retain-with-study",
+        "sha256": "e7b37fee3ca7331f7743f73a52de0528a3f1e2ce5d4e83aa2d385674c6ac9eca"
+      }
+    ],
+    "limitations": [
+      "Five confirmation seeds per dataset give imprecise seed-level inference.",
+      "Eight unadjusted comparisons are descriptive, not a familywise-confirmed superiority claim.",
+      "Finite shared sampling noise and finite held-out draws are not separate seed replicates.",
+      "This result is limited to one denoiser, optimizer, cosine schedule and two synthetic distributions.",
+      "No scientific novelty, independent peer review or general agent-quality claim is established."
+    ],
+    "record_type": "ClaimRecord",
+    "schema_version": "0.2",
+    "scope": "Descriptive paired seed estimates under protocol ema-2d-v1",
+    "status": "supported",
+    "supersedes": null,
+    "supporting": [
+      {
+        "media_type": "application/json",
+        "path": "campaigns/ema-v1/analyses/a001/outputs/summary.json",
+        "retention": "retain-with-study",
+        "sha256": "c8863b0f30af4b1eb00411074bc711b3c9c2cd9e236f9c16b1a274b1ad4b082e"
+      }
+    ],
+    "text": "moons, 5,000 updates, ema0999: mean paired Sliced W1 difference -0.060764, unadjusted 95% t interval [-0.122907, 0.001379]; 5/5 seeds have lower distance than raw weights."
+  },
+  {
+    "claim_id": "C3",
+    "contradicting": [],
+    "dependencies": [
+      {
+        "media_type": "application/json",
+        "path": "campaigns/ema-v1/analyses/a001/record.json",
+        "retention": "retain-with-study",
+        "sha256": "e3f8a1dbcd7490338345eef2f55b9a2f3eb4d97d999a0e5780b5a92f603853e6"
+      },
+      {
+        "media_type": "application/json",
+        "path": "campaigns/ema-v1/analyses/a001/raw-manifest.json",
+        "retention": "retain-with-study",
+        "sha256": "72287c825fa1afae016e0cd3e320951583f59ee5b1c91e09f7a8b777bbddd42f"
+      },
+      {
+        "media_type": "application/json",
+        "path": "confirmation-freeze.json",
+        "retention": "retain-with-study",
+        "sha256": "e7b37fee3ca7331f7743f73a52de0528a3f1e2ce5d4e83aa2d385674c6ac9eca"
+      }
+    ],
+    "limitations": [
+      "Five confirmation seeds per dataset give imprecise seed-level inference.",
+      "Eight unadjusted comparisons are descriptive, not a familywise-confirmed superiority claim.",
+      "Finite shared sampling noise and finite held-out draws are not separate seed replicates.",
+      "This result is limited to one denoiser, optimizer, cosine schedule and two synthetic distributions.",
+      "No scientific novelty, independent peer review or general agent-quality claim is established."
+    ],
+    "record_type": "ClaimRecord",
+    "schema_version": "0.2",
+    "scope": "Descriptive paired seed estimates under protocol ema-2d-v1",
+    "status": "supported",
+    "supersedes": null,
+    "supporting": [
+      {
+        "media_type": "application/json",
+        "path": "campaigns/ema-v1/analyses/a001/outputs/summary.json",
+        "retention": "retain-with-study",
+        "sha256": "c8863b0f30af4b1eb00411074bc711b3c9c2cd9e236f9c16b1a274b1ad4b082e"
+      }
+    ],
+    "text": "moons, 10,000 updates, ema099: mean paired Sliced W1 difference -0.000061, unadjusted 95% t interval [-0.000348, 0.000225]; 2/5 seeds have lower distance than raw weights."
+  },
+  {
+    "claim_id": "C4",
+    "contradicting": [],
+    "dependencies": [
+      {
+        "media_type": "application/json",
+        "path": "campaigns/ema-v1/analyses/a001/record.json",
+        "retention": "retain-with-study",
+        "sha256": "e3f8a1dbcd7490338345eef2f55b9a2f3eb4d97d999a0e5780b5a92f603853e6"
+      },
+      {
+        "media_type": "application/json",
+        "path": "campaigns/ema-v1/analyses/a001/raw-manifest.json",
+        "retention": "retain-with-study",
+        "sha256": "72287c825fa1afae016e0cd3e320951583f59ee5b1c91e09f7a8b777bbddd42f"
+      },
+      {
+        "media_type": "application/json",
+        "path": "confirmation-freeze.json",
+        "retention": "retain-with-study",
+        "sha256": "e7b37fee3ca7331f7743f73a52de0528a3f1e2ce5d4e83aa2d385674c6ac9eca"
+      }
+    ],
+    "limitations": [
+      "Five confirmation seeds per dataset give imprecise seed-level inference.",
+      "Eight unadjusted comparisons are descriptive, not a familywise-confirmed superiority claim.",
+      "Finite shared sampling noise and finite held-out draws are not separate seed replicates.",
+      "This result is limited to one denoiser, optimizer, cosine schedule and two synthetic distributions.",
+      "No scientific novelty, independent peer review or general agent-quality claim is established."
+    ],
+    "record_type": "ClaimRecord",
+    "schema_version": "0.2",
+    "scope": "Descriptive paired seed estimates under protocol ema-2d-v1",
+    "status": "supported",
+    "supersedes": null,
+    "supporting": [
+      {
+        "media_type": "application/json",
+        "path": "campaigns/ema-v1/analyses/a001/outputs/summary.json",
+        "retention": "retain-with-study",
+        "sha256": "c8863b0f30af4b1eb00411074bc711b3c9c2cd9e236f9c16b1a274b1ad4b082e"
+      }
+    ],
+    "text": "moons, 10,000 updates, ema0999: mean paired Sliced W1 difference -0.000915, unadjusted 95% t interval [-0.002105, 0.000276]; 4/5 seeds have lower distance than raw weights."
+  },
+  {
+    "claim_id": "C5",
+    "contradicting": [],
+    "dependencies": [
+      {
+        "media_type": "application/json",
+        "path": "campaigns/ema-v1/analyses/a001/record.json",
+        "retention": "retain-with-study",
+        "sha256": "e3f8a1dbcd7490338345eef2f55b9a2f3eb4d97d999a0e5780b5a92f603853e6"
+      },
+      {
+        "media_type": "application/json",
+        "path": "campaigns/ema-v1/analyses/a001/raw-manifest.json",
+        "retention": "retain-with-study",
+        "sha256": "72287c825fa1afae016e0cd3e320951583f59ee5b1c91e09f7a8b777bbddd42f"
+      },
+      {
+        "media_type": "application/json",
+        "path": "confirmation-freeze.json",
+        "retention": "retain-with-study",
+        "sha256": "e7b37fee3ca7331f7743f73a52de0528a3f1e2ce5d4e83aa2d385674c6ac9eca"
+      }
+    ],
+    "limitations": [
+      "Five confirmation seeds per dataset give imprecise seed-level inference.",
+      "Eight unadjusted comparisons are descriptive, not a familywise-confirmed superiority claim.",
+      "Finite shared sampling noise and finite held-out draws are not separate seed replicates.",
+      "This result is limited to one denoiser, optimizer, cosine schedule and two synthetic distributions.",
+      "No scientific novelty, independent peer review or general agent-quality claim is established."
+    ],
+    "record_type": "ClaimRecord",
+    "schema_version": "0.2",
+    "scope": "Descriptive paired seed estimates under protocol ema-2d-v1",
+    "status": "supported",
+    "supersedes": null,
+    "supporting": [
+      {
+        "media_type": "application/json",
+        "path": "campaigns/ema-v1/analyses/a001/outputs/summary.json",
+        "retention": "retain-with-study",
+        "sha256": "c8863b0f30af4b1eb00411074bc711b3c9c2cd9e236f9c16b1a274b1ad4b082e"
+      }
+    ],
+    "text": "gmm8, 5,000 updates, ema099: mean paired Sliced W1 difference -0.061503, unadjusted 95% t interval [-0.113301, -0.009705]; 4/5 seeds have lower distance than raw weights."
+  },
+  {
+    "claim_id": "C6",
+    "contradicting": [],
+    "dependencies": [
+      {
+        "media_type": "application/json",
+        "path": "campaigns/ema-v1/analyses/a001/record.json",
+        "retention": "retain-with-study",
+        "sha256": "e3f8a1dbcd7490338345eef2f55b9a2f3eb4d97d999a0e5780b5a92f603853e6"
+      },
+      {
+        "media_type": "application/json",
+        "path": "campaigns/ema-v1/analyses/a001/raw-manifest.json",
+        "retention": "retain-with-study",
+        "sha256": "72287c825fa1afae016e0cd3e320951583f59ee5b1c91e09f7a8b777bbddd42f"
+      },
+      {
+        "media_type": "application/json",
+        "path": "confirmation-freeze.json",
+        "retention": "retain-with-study",
+        "sha256": "e7b37fee3ca7331f7743f73a52de0528a3f1e2ce5d4e83aa2d385674c6ac9eca"
+      }
+    ],
+    "limitations": [
+      "Five confirmation seeds per dataset give imprecise seed-level inference.",
+      "Eight unadjusted comparisons are descriptive, not a familywise-confirmed superiority claim.",
+      "Finite shared sampling noise and finite held-out draws are not separate seed replicates.",
+      "This result is limited to one denoiser, optimizer, cosine schedule and two synthetic distributions.",
+      "No scientific novelty, independent peer review or general agent-quality claim is established."
+    ],
+    "record_type": "ClaimRecord",
+    "schema_version": "0.2",
+    "scope": "Descriptive paired seed estimates under protocol ema-2d-v1",
+    "status": "supported",
+    "supersedes": null,
+    "supporting": [
+      {
+        "media_type": "application/json",
+        "path": "campaigns/ema-v1/analyses/a001/outputs/summary.json",
+        "retention": "retain-with-study",
+        "sha256": "c8863b0f30af4b1eb00411074bc711b3c9c2cd9e236f9c16b1a274b1ad4b082e"
+      }
+    ],
+    "text": "gmm8, 5,000 updates, ema0999: mean paired Sliced W1 difference -0.058828, unadjusted 95% t interval [-0.110551, -0.007105]; 4/5 seeds have lower distance than raw weights."
+  },
+  {
+    "claim_id": "C7",
+    "contradicting": [],
+    "dependencies": [
+      {
+        "media_type": "application/json",
+        "path": "campaigns/ema-v1/analyses/a001/record.json",
+        "retention": "retain-with-study",
+        "sha256": "e3f8a1dbcd7490338345eef2f55b9a2f3eb4d97d999a0e5780b5a92f603853e6"
+      },
+      {
+        "media_type": "application/json",
+        "path": "campaigns/ema-v1/analyses/a001/raw-manifest.json",
+        "retention": "retain-with-study",
+        "sha256": "72287c825fa1afae016e0cd3e320951583f59ee5b1c91e09f7a8b777bbddd42f"
+      },
+      {
+        "media_type": "application/json",
+        "path": "confirmation-freeze.json",
+        "retention": "retain-with-study",
+        "sha256": "e7b37fee3ca7331f7743f73a52de0528a3f1e2ce5d4e83aa2d385674c6ac9eca"
+      }
+    ],
+    "limitations": [
+      "Five confirmation seeds per dataset give imprecise seed-level inference.",
+      "Eight unadjusted comparisons are descriptive, not a familywise-confirmed superiority claim.",
+      "Finite shared sampling noise and finite held-out draws are not separate seed replicates.",
+      "This result is limited to one denoiser, optimizer, cosine schedule and two synthetic distributions.",
+      "No scientific novelty, independent peer review or general agent-quality claim is established."
+    ],
+    "record_type": "ClaimRecord",
+    "schema_version": "0.2",
+    "scope": "Descriptive paired seed estimates under protocol ema-2d-v1",
+    "status": "supported",
+    "supersedes": null,
+    "supporting": [
+      {
+        "media_type": "application/json",
+        "path": "campaigns/ema-v1/analyses/a001/outputs/summary.json",
+        "retention": "retain-with-study",
+        "sha256": "c8863b0f30af4b1eb00411074bc711b3c9c2cd9e236f9c16b1a274b1ad4b082e"
+      }
+    ],
+    "text": "gmm8, 10,000 updates, ema099: mean paired Sliced W1 difference 0.000062, unadjusted 95% t interval [-0.000133, 0.000258]; 1/5 seeds have lower distance than raw weights."
+  },
+  {
+    "claim_id": "C8",
+    "contradicting": [],
+    "dependencies": [
+      {
+        "media_type": "application/json",
+        "path": "campaigns/ema-v1/analyses/a001/record.json",
+        "retention": "retain-with-study",
+        "sha256": "e3f8a1dbcd7490338345eef2f55b9a2f3eb4d97d999a0e5780b5a92f603853e6"
+      },
+      {
+        "media_type": "application/json",
+        "path": "campaigns/ema-v1/analyses/a001/raw-manifest.json",
+        "retention": "retain-with-study",
+        "sha256": "72287c825fa1afae016e0cd3e320951583f59ee5b1c91e09f7a8b777bbddd42f"
+      },
+      {
+        "media_type": "application/json",
+        "path": "confirmation-freeze.json",
+        "retention": "retain-with-study",
+        "sha256": "e7b37fee3ca7331f7743f73a52de0528a3f1e2ce5d4e83aa2d385674c6ac9eca"
+      }
+    ],
+    "limitations": [
+      "Five confirmation seeds per dataset give imprecise seed-level inference.",
+      "Eight unadjusted comparisons are descriptive, not a familywise-confirmed superiority claim.",
+      "Finite shared sampling noise and finite held-out draws are not separate seed replicates.",
+      "This result is limited to one denoiser, optimizer, cosine schedule and two synthetic distributions.",
+      "No scientific novelty, independent peer review or general agent-quality claim is established."
+    ],
+    "record_type": "ClaimRecord",
+    "schema_version": "0.2",
+    "scope": "Descriptive paired seed estimates under protocol ema-2d-v1",
+    "status": "supported",
+    "supersedes": null,
+    "supporting": [
+      {
+        "media_type": "application/json",
+        "path": "campaigns/ema-v1/analyses/a001/outputs/summary.json",
+        "retention": "retain-with-study",
+        "sha256": "c8863b0f30af4b1eb00411074bc711b3c9c2cd9e236f9c16b1a274b1ad4b082e"
+      }
+    ],
+    "text": "gmm8, 10,000 updates, ema0999: mean paired Sliced W1 difference 0.000699, unadjusted 95% t interval [-0.001574, 0.002972]; 2/5 seeds have lower distance than raw weights."
+  }
+]
