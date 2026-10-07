@@ -1,0 +1,468 @@
+{
+  "injected_interruption": false,
+  "isolation_sha256": "b0ca202dc13f7e1d6b8637690b58eb4cd617fcd38399e9e22e507238027c3723",
+  "reconciled_after_controller_restart": false,
+  "request_id": "aa9fb32b3ef1402a9b3c284cec45f130",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 1.5685883748810738,
+    "ended_at": "2026-10-07T21:01:31.773132+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/validation/resources/jobs/0004-fresh-venv",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 166019072,
+    "peak_storage_bytes": 90962526,
+    "status": "completed"
+  }
+}
+{
+  "injected_interruption": false,
+  "isolation_sha256": "b0ca202dc13f7e1d6b8637690b58eb4cd617fcd38399e9e22e507238027c3723",
+  "reconciled_after_controller_restart": false,
+  "request_id": "6cf776a81a8b4e3d827c36b6644396de",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 5.705706542124972,
+    "ended_at": "2026-10-07T21:01:37.817502+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/validation/resources/jobs/0005-fresh-packages",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 193691648,
+    "peak_storage_bytes": 388802501,
+    "status": "completed"
+  }
+}
+Looking in links: inputs/materials/wheels
+Processing ./inputs/materials/wheels/numpy-1.26.4-cp311-cp311-macosx_11_0_arm64.whl (from -r requirements.lock.txt (line 1))
+Processing ./inputs/materials/wheels/scipy-1.14.1-cp311-cp311-macosx_14_0_arm64.whl (from -r requirements.lock.txt (line 2))
+Processing ./inputs/materials/wheels/scikit_learn-1.5.2-cp311-cp311-macosx_12_0_arm64.whl (from -r requirements.lock.txt (line 3))
+Processing ./inputs/materials/wheels/networkx-2.8.8-py3-none-any.whl (from -r requirements.lock.txt (line 4))
+Processing ./inputs/materials/wheels/pandas-2.2.3-cp311-cp311-macosx_11_0_arm64.whl (from -r requirements.lock.txt (line 5))
+Processing ./inputs/materials/wheels/joblib-1.6.0-py3-none-any.whl (from -r requirements.lock.txt (line 6))
+Processing ./inputs/materials/wheels/threadpoolctl-3.7.0-py3-none-any.whl (from -r requirements.lock.txt (line 7))
+Processing ./inputs/materials/wheels/python_dateutil-2.9.0.post0-py2.py3-none-any.whl (from -r requirements.lock.txt (line 8))
+Processing ./inputs/materials/wheels/pytz-2026.5-py2.py3-none-any.whl (from -r requirements.lock.txt (line 9))
+Processing ./inputs/materials/wheels/tzdata-2026.5-py2.py3-none-any.whl (from -r requirements.lock.txt (line 10))
+Processing ./inputs/materials/wheels/cloudpickle-3.1.2-py3-none-any.whl (from -r requirements.lock.txt (line 11))
+Processing ./inputs/materials/wheels/six-1.17.0-py2.py3-none-any.whl (from -r requirements.lock.txt (line 12))
+Installing collected packages: pytz, tzdata, threadpoolctl, six, numpy, networkx, cloudpickle, scipy, python-dateutil, joblib, scikit-learn, pandas
+Successfully installed cloudpickle-3.1.2 joblib-1.6.0 networkx-2.8.8 numpy-1.26.4 pandas-2.2.3 python-dateutil-2.9.0.post0 pytz-2026.5 scikit-learn-1.5.2 scipy-1.14.1 six-1.17.0 threadpoolctl-3.7.0 tzdata-2026.5
+{
+  "injected_interruption": false,
+  "isolation_sha256": "b0ca202dc13f7e1d6b8637690b58eb4cd617fcd38399e9e22e507238027c3723",
+  "reconciled_after_controller_restart": false,
+  "request_id": "60937673970e4d49b678df0d2eb73fb3",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 0.18036516685970128,
+    "ended_at": "2026-10-07T21:01:38.557826+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/validation/resources/jobs/0006-fresh-environment",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 4030464,
+    "peak_storage_bytes": 389016950,
+    "status": "completed"
+  }
+}
+{
+  "executable": "/Users/iyunseong/maangeek/allagma/work/v03-validation/clean-r01/.venv-clean-checkout/bin/python",
+  "machine": "arm64",
+  "packages": {
+    "cloudpickle": "3.1.2",
+    "joblib": "1.6.0",
+    "networkx": "2.8.8",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "pip": "23.2.1",
+    "python-dateutil": "2.9.0.post0",
+    "pytz": "2026.5",
+    "scikit-learn": "1.5.2",
+    "scipy": "1.14.1",
+    "setuptools": "65.5.0",
+    "six": "1.17.0",
+    "threadpoolctl": "3.7.0",
+    "tzdata": "2026.5"
+  },
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "python": "3.11.6 (v3.11.6:8b6ee5ba3b, Oct  2 2023, 11:18:21) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "recorded_at": "2026-10-07T21:01:38.422032+00:00"
+}
+{
+  "injected_interruption": false,
+  "isolation_sha256": "b0ca202dc13f7e1d6b8637690b58eb4cd617fcd38399e9e22e507238027c3723",
+  "reconciled_after_controller_restart": false,
+  "request_id": "2341420ed2ef4bcfbf63c733fd2fdd4e",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 28.42086029215716,
+    "ended_at": "2026-10-07T21:02:07.493898+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/validation/resources/jobs/0007-fresh-pilot",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 161087488,
+    "peak_storage_bytes": 389149089,
+    "status": "completed"
+  }
+}
+{
+  "qualification": "passed",
+  "artifact": {
+    "path": "reproduction/clean-checkout/pilot/qualification.json",
+    "sha256": "00418ff8249dfb43a1aa3d05238283699fca35abc8621f4bc12680da9d1257ea",
+    "media_type": "application/json",
+    "retention": "retained in study"
+  }
+}
+{
+  "injected_interruption": false,
+  "isolation_sha256": "b0ca202dc13f7e1d6b8637690b58eb4cd617fcd38399e9e22e507238027c3723",
+  "reconciled_after_controller_restart": false,
+  "request_id": "0250a818bfb14981a34f90382bb23455",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 2.774767957860604,
+    "ended_at": "2026-10-07T21:02:10.791112+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/validation/resources/jobs/0008-fresh-iris-a01",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 164888576,
+    "peak_storage_bytes": 389399112,
+    "status": "completed"
+  }
+}
+Prediction Accuracy for Iris Dataset (λ=CN) = 100.0%
+Prediction Accuracy for Iris Dataset (λ=AA) = 100.0%
+Prediction Accuracy for Iris Dataset (λ=RA) = 100.0%
+Prediction Accuracy for Iris Dataset (λ=CS) = 100.0%
+{
+  "injected_interruption": false,
+  "isolation_sha256": "b0ca202dc13f7e1d6b8637690b58eb4cd617fcd38399e9e22e507238027c3723",
+  "reconciled_after_controller_restart": false,
+  "request_id": "93cf53ea4e224c7aa8de353a3fd0705b",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 1.0158787500113249,
+    "ended_at": "2026-10-07T21:02:12.345656+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/validation/resources/jobs/0009-fresh-zoo-a01",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 114950144,
+    "peak_storage_bytes": 389634622,
+    "status": "completed"
+  }
+}
+Prediction Accuracy for Zoo Dataset (λ=CN) = 100.0%
+Prediction Accuracy for Zoo Dataset (λ=AA) = 100.0%
+Prediction Accuracy for Zoo Dataset (λ=RA) = 100.0%
+Prediction Accuracy for Zoo Dataset (λ=CS) = 100.0%
+{
+  "injected_interruption": false,
+  "isolation_sha256": "b0ca202dc13f7e1d6b8637690b58eb4cd617fcd38399e9e22e507238027c3723",
+  "reconciled_after_controller_restart": false,
+  "request_id": "248f066600a94363992e776343f47e8c",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 1.0578349169809371,
+    "ended_at": "2026-10-07T21:02:13.942170+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/validation/resources/jobs/0010-fresh-wine-a01",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 116359168,
+    "peak_storage_bytes": 389995644,
+    "status": "completed"
+  }
+}
+Prediction Accuracy for Wine Dataset (λ=CN) = 97.22%
+Prediction Accuracy for Wine Dataset (λ=AA) = 97.22%
+Prediction Accuracy for Wine Dataset (λ=RA) = 97.22%
+Prediction Accuracy for Wine Dataset (λ=CS) = 100.0%
+{
+  "injected_interruption": false,
+  "isolation_sha256": "b0ca202dc13f7e1d6b8637690b58eb4cd617fcd38399e9e22e507238027c3723",
+  "reconciled_after_controller_restart": false,
+  "request_id": "e23781046ffd43cca8960a07dda73099",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 0.19528187485411763,
+    "ended_at": "2026-10-07T21:02:14.762416+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/validation/resources/jobs/0011-fresh-analysis",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 4079616,
+    "peak_storage_bytes": 390125189,
+    "status": "completed"
+  }
+}
+{
+  "Report the CN prediction accuracy for the Iris dataset.": 100.0,
+  "Report the AA prediction acccuracy for the Iris dataset.": 100.0,
+  "Report the CN prediction acccuracy for the Zoo dataset.": 100.0,
+  "Report the AA prediction acccuracy for the Zoo dataset.": 100.0,
+  "Report the CN prediction acccuracy for the Wine dataset.": 97.22,
+  "Report the AA prediction acccuracy for the Wine dataset.": 97.22
+}
+{
+  "injected_interruption": false,
+  "isolation_sha256": "b0ca202dc13f7e1d6b8637690b58eb4cd617fcd38399e9e22e507238027c3723",
+  "reconciled_after_controller_restart": false,
+  "request_id": "3089af7050ed49be9285b3079d4309b9",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 0.19539591716602445,
+    "ended_at": "2026-10-07T21:02:15.564541+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/validation/resources/jobs/0012-fresh-graph-audit",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 4079616,
+    "peak_storage_bytes": 390243446,
+    "status": "completed"
+  }
+}
+{
+  "passed": true,
+  "checks": [
+    "Exact source seed-42 permutation and all retained train/test indices",
+    "Every class edge comes from an appropriate training label; no test-label class edges",
+    "All 12 score matrices independently reconstructed from retained graph edges using Python sets and math.log",
+    "Independent score argmax agrees with every saved prediction"
+  ],
+  "limitations": [
+    "Does not prove nearest-neighbor graph construction for every possible input",
+    "Does not compare with unavailable original capsule outputs or establish generalization"
+  ],
+  "results": [
+    {
+      "dataset": "iris",
+      "printed_label": "CN",
+      "actual_predictor": "CS",
+      "max_score_error": 1.7763568394002505e-15,
+      "self_loop_nodes": [
+        10
+      ],
+      "tied_maximum_test_cases": 0,
+      "predictions_match": true
+    },
+    {
+      "dataset": "iris",
+      "printed_label": "AA",
+      "actual_predictor": "CS",
+      "max_score_error": 1.7763568394002505e-15,
+      "self_loop_nodes": [
+        10
+      ],
+      "tied_maximum_test_cases": 0,
+      "predictions_match": true
+    },
+    {
+      "dataset": "iris",
+      "printed_label": "RA",
+      "actual_predictor": "CS",
+      "max_score_error": 1.7763568394002505e-15,
+      "self_loop_nodes": [
+        10
+      ],
+      "tied_maximum_test_cases": 0,
+      "predictions_match": true
+    },
+    {
+      "dataset": "iris",
+      "printed_label": "CS",
+      "actual_predictor": "CS",
+      "max_score_error": 1.7763568394002505e-15,
+      "self_loop_nodes": [
+        10
+      ],
+      "tied_maximum_test_cases": 0,
+      "predictions_match": true
+    },
+    {
+      "dataset": "zoo",
+      "printed_label": "CN",
+      "actual_predictor": "CS",
+      "max_score_error": 0.0,
+      "self_loop_nodes": [
+        5,
+        9,
+        12,
+        15,
+        20,
+        22,
+        25,
+        26,
+        29,
+        31,
+        32,
+        33,
+        34,
+        37,
+        38,
+        42,
+        44,
+        46,
+        48,
+        62,
+        70,
+        73,
+        74,
+        75,
+        90,
+        93,
+        96,
+        97
+      ],
+      "tied_maximum_test_cases": 0,
+      "predictions_match": true
+    },
+    {
+      "dataset": "zoo",
+      "printed_label": "AA",
+      "actual_predictor": "CS",
+      "max_score_error": 0.0,
+      "self_loop_nodes": [
+        5,
+        9,
+        12,
+        15,
+        20,
+        22,
+        25,
+        26,
+        29,
+        31,
+        32,
+        33,
+        34,
+        37,
+        38,
+        42,
+        44,
+        46,
+        48,
+        62,
+        70,
+        73,
+        74,
+        75,
+        90,
+        93,
+        96,
+        97
+      ],
+      "tied_maximum_test_cases": 0,
+      "predictions_match": true
+    },
+    {
+      "dataset": "zoo",
+      "printed_label": "RA",
+      "actual_predictor": "CS",
+      "max_score_error": 0.0,
+      "self_loop_nodes": [
+        5,
+        9,
+        12,
+        15,
+        20,
+        22,
+        25,
+        26,
+        29,
+        31,
+        32,
+        33,
+        34,
+        37,
+        38,
+        42,
+        44,
+        46,
+        48,
+        62,
+        70,
+        73,
+        74,
+        75,
+        90,
+        93,
+        96,
+        97
+      ],
+      "tied_maximum_test_cases": 0,
+      "predictions_match": true
+    },
+    {
+      "dataset": "zoo",
+      "printed_label": "CS",
+      "actual_predictor": "CS",
+      "max_score_error": 0.0,
+      "self_loop_nodes": [
+        5,
+        9,
+        12,
+        15,
+        20,
+        22,
+        25,
+        26,
+        29,
+        31,
+        32,
+        33,
+        34,
+        37,
+        38,
+        42,
+        44,
+        46,
+        48,
+        62,
+        70,
+        73,
+        74,
+        75,
+        90,
+        93,
+        96,
+        97
+      ],
+      "tied_maximum_test_cases": 0,
+      "predictions_match": true
+    },
+    {
+      "dataset": "wine",
+      "printed_label": "CN",
+      "actual_predictor": "CN",
+      "max_score_error": 0.0,
+      "self_loop_nodes": [],
+      "tied_maximum_test_cases": 1,
+      "predictions_match": true
+    },
+    {
+      "dataset": "wine",
+      "printed_label": "AA",
+      "actual_predictor": "AA",
+      "max_score_error": 8.881784197001252e-16,
+      "self_loop_nodes": [],
+      "tied_maximum_test_cases": 0,
+      "predictions_match": true
+    },
+    {
+      "dataset": "wine",
+      "printed_label": "RA",
+      "actual_predictor": "RA",
+      "max_score_error": 2.220446049250313e-16,
+      "self_loop_nodes": [],
+      "tied_maximum_test_cases": 0,
+      "predictions_match": true
+    },
+    {
+      "dataset": "wine",
+      "printed_label": "CS",
+      "actual_predictor": "CS",
+      "max_score_error": 8.881784197001252e-16,
+      "self_loop_nodes": [],
+      "tied_maximum_test_cases": 0,
+      "predictions_match": true
+    }
+  ]
+}
+Fresh environment, all three source scripts, retained-data analysis and graph audit completed.

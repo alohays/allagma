@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/Users/iyunseong/maangeek/allagma/work/v03-validation/clean-r01/.venv-clean-checkout/bin/python",
+    "-m",
+    "pip",
+    "install",
+    "--no-cache-dir",
+    "--no-index",
+    "--find-links",
+    "inputs/materials/wheels",
+    "-r",
+    "requirements.lock.txt"
+  ],
+  "attempt": false,
+  "category": "setup",
+  "cwd": ".",
+  "label": "fresh-packages",
+  "request_id": "6cf776a81a8b4e3d827c36b6644396de",
+  "timeout_seconds": 120.0
+}

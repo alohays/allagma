@@ -1,0 +1,54 @@
+{
+  "artifact_manifest": "artifact-manifest.json",
+  "completion_assessment": "Complete local execution, recovery, exact-question answers, retained-data verification, fresh-environment reproduction and scoped review. Original upstream limitations preserved. Historical reference-output agreement and true CN/AA measurements for Iris/Zoo are not established by the supplied code.",
+  "execution_status": "complete",
+  "final_verification_receipt": "evidence/jobs/final-package-a01/client-result.json",
+  "limitations": [
+    "Iris/Zoo CN and AA printed labels actually use CS",
+    "Original outputs/scorer/environment unavailable",
+    "Fixed transductive split; no population confidence intervals",
+    "Same-agent scientific critique with deterministic checks, not independent peer review",
+    "CULP extension to generic measurement envelope; supplied task-specific schemas describe other tasks"
+  ],
+  "manuscript": "REPORT.md",
+  "measurements": "measurements.json",
+  "recompute": {
+    "argv": [
+      "python3",
+      "inputs/compute.py",
+      "--category",
+      "compute",
+      "--label",
+      "retained-recompute",
+      "--timeout",
+      "30",
+      "--",
+      ".venv/bin/python",
+      "tools/analyze.py",
+      "--manifest",
+      "evidence/raw-manifest.json",
+      "--out",
+      "recomputation/submission",
+      "--compare",
+      "analysis/primary"
+    ],
+    "cwd": "."
+  },
+  "report": "report.json",
+  "reproduce": {
+    "argv": [
+      "python3",
+      "tools/reproduce.py",
+      "--env",
+      ".venv-reproduce",
+      "--output",
+      "reproduction/fresh"
+    ],
+    "cwd": "."
+  },
+  "resource_accounting": "evidence/resources-at-seal.json",
+  "review": "review.json",
+  "task_id": "core-culp",
+  "unmet_requirements": [],
+  "verification": "verification/final.json"
+}

@@ -1,0 +1,109 @@
+{
+  "coverage": "Ordinary uninstrumented execution of each complete source script produces identical stdout to the captured run",
+  "limitation": "Does not prove the absence of all possible instrumentation effects for other inputs",
+  "passed": true,
+  "runs": [
+    {
+      "command": [
+        "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r01/candidate/.venv-verified/bin/python",
+        "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r01/candidate/source/adapted/code/iris_sample.py"
+      ],
+      "cwd": "source/adapted/code",
+      "dataset": "iris",
+      "exit_code": 0,
+      "expected": {
+        "media_type": "application/octet-stream",
+        "path": "evidence/runs/iris-a02/stdout.txt",
+        "retention": "retained in study",
+        "sha256": "9b6bbee09c56848cc00f8079b454b17e4b4a6d56b3426347b750348f01a76a70"
+      },
+      "source": {
+        "media_type": "application/octet-stream",
+        "path": "source/adapted/code/iris_sample.py",
+        "retention": "retained in study",
+        "sha256": "eef48c00cb56e8756ad877f84ed2f3d1a04bd3773b23148ebb2d4766fff561cb"
+      },
+      "stderr": {
+        "media_type": "application/octet-stream",
+        "path": "verification/unprofiled/iris-stderr.txt",
+        "retention": "retained in study",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "media_type": "application/octet-stream",
+        "path": "verification/unprofiled/iris-stdout.txt",
+        "retention": "retained in study",
+        "sha256": "9b6bbee09c56848cc00f8079b454b17e4b4a6d56b3426347b750348f01a76a70"
+      },
+      "stdout_identical": true
+    },
+    {
+      "command": [
+        "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r01/candidate/.venv-verified/bin/python",
+        "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r01/candidate/source/adapted/code/zoo_sample.py"
+      ],
+      "cwd": "source/adapted/code",
+      "dataset": "zoo",
+      "exit_code": 0,
+      "expected": {
+        "media_type": "application/octet-stream",
+        "path": "evidence/runs/zoo-a01/stdout.txt",
+        "retention": "retained in study",
+        "sha256": "b6be453bfb2b9e7cd1faf9389875ecff5b2d2764badd5be84b5689f2ee1bba0d"
+      },
+      "source": {
+        "media_type": "application/octet-stream",
+        "path": "source/adapted/code/zoo_sample.py",
+        "retention": "retained in study",
+        "sha256": "a4a52a3dcc4708ef67ae8ecf6672433df836549046e98c5b66db2d8604099715"
+      },
+      "stderr": {
+        "media_type": "application/octet-stream",
+        "path": "verification/unprofiled/zoo-stderr.txt",
+        "retention": "retained in study",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "media_type": "application/octet-stream",
+        "path": "verification/unprofiled/zoo-stdout.txt",
+        "retention": "retained in study",
+        "sha256": "b6be453bfb2b9e7cd1faf9389875ecff5b2d2764badd5be84b5689f2ee1bba0d"
+      },
+      "stdout_identical": true
+    },
+    {
+      "command": [
+        "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r01/candidate/.venv-verified/bin/python",
+        "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r01/candidate/source/adapted/code/wine_sample.py"
+      ],
+      "cwd": "source/adapted/code",
+      "dataset": "wine",
+      "exit_code": 0,
+      "expected": {
+        "media_type": "application/octet-stream",
+        "path": "evidence/runs/wine-a01/stdout.txt",
+        "retention": "retained in study",
+        "sha256": "93c201462bc7615c6b820c541bcbab13d5e22d057b68d5b98a140fd38452314c"
+      },
+      "source": {
+        "media_type": "application/octet-stream",
+        "path": "source/adapted/code/wine_sample.py",
+        "retention": "retained in study",
+        "sha256": "92efce2e73ad9a8c95ba8dfe8bc763a9a222eef773ddbadcb51852b332568562"
+      },
+      "stderr": {
+        "media_type": "application/octet-stream",
+        "path": "verification/unprofiled/wine-stderr.txt",
+        "retention": "retained in study",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "media_type": "application/octet-stream",
+        "path": "verification/unprofiled/wine-stdout.txt",
+        "retention": "retained in study",
+        "sha256": "93c201462bc7615c6b820c541bcbab13d5e22d057b68d5b98a140fd38452314c"
+      },
+      "stdout_identical": true
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "at": "2026-10-07T20:35:02.251695+00:00",
+  "campaign": "culp-reproduction",
+  "method_execution": "Sequential portable artifact handoffs using exact locked methods; all executable science/setup via common broker",
+  "preseal": {
+    "media_type": "application/json",
+    "path": "verification/preseal.json",
+    "retention": "retained in study",
+    "sha256": "fc70f222cac4d7484ff58e39f4c39ed981c25bd4aed01a71a40f36b3c18806f6"
+  },
+  "protocol_revision": "culp-v1",
+  "review": {
+    "media_type": "application/json",
+    "path": "review.json",
+    "retention": "retained in study",
+    "sha256": "9f81028b827efa4a30f2439f713d7aa3d39de6b2e6b0475d8425dfba4bd1bf6e"
+  },
+  "steps": [
+    "scope and evidence map",
+    "frozen protocol and synthetic pilot",
+    "confirmation with interruption/recovery",
+    "retained-data analysis and separate-directory recomputation",
+    "evidence-linked manuscript and claims",
+    "current-revision scoped audit"
+  ]
+}

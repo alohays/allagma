@@ -1,0 +1,21 @@
+{
+  "injected_interruption": false,
+  "isolation_sha256": "b0ca202dc13f7e1d6b8637690b58eb4cd617fcd38399e9e22e507238027c3723",
+  "reconciled_after_controller_restart": false,
+  "request_id": "248f066600a94363992e776343f47e8c",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 1.0578349169809371,
+    "ended_at": "2026-10-07T21:02:13.942170+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/validation/resources/jobs/0010-fresh-wine-a01",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 116359168,
+    "peak_storage_bytes": 389995644,
+    "status": "completed"
+  }
+}
+Prediction Accuracy for Wine Dataset (λ=CN) = 97.22%
+Prediction Accuracy for Wine Dataset (λ=AA) = 97.22%
+Prediction Accuracy for Wine Dataset (λ=RA) = 97.22%
+Prediction Accuracy for Wine Dataset (λ=CS) = 100.0%

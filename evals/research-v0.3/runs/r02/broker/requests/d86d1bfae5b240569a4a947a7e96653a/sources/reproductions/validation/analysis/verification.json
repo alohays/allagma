@@ -1,0 +1,147 @@
+{
+  "status": "passed",
+  "source_revision": "a4d31ba65afa3020c8d94c1228753f69dc0efba2dd9239782aedf3ff32a89b5f",
+  "protocol_sha256": "5b8a2bf473a5a32a41f166bec945772313600d937e2f7f376e02af2ef27cb438",
+  "runner_sha256": "7856367e839b29c7dfec29fa88177f3b716db4b815b538bf51fb70b4d5a74c94",
+  "recompute_sha256": "25f09003aec929d4643d32c04ae3e089d1f105d0a5f1e97eb1472f8e0c1a86f6",
+  "attempt_id": "b2f762d955554492b3d6e71a2095e668",
+  "receipt": "evidence/broker/b2f762d955554492b3d6e71a2095e668/response.json",
+  "changed_sources": [
+    "code/wine_sample.py",
+    "code/zoo_sample.py"
+  ],
+  "dataset_checks": {
+    "iris": {
+      "data_shape": [
+        150,
+        4
+      ],
+      "train_count": 120,
+      "test_count": 30,
+      "train_class_counts": [
+        40,
+        41,
+        39
+      ],
+      "test_class_counts": [
+        10,
+        9,
+        11
+      ],
+      "seed42_split_exact": true,
+      "input_label_alignment": true,
+      "preprocessing_verified": true,
+      "stdout_all_rows_verified": true,
+      "original_data_file_verified": false,
+      "iris_provenance": "Saved sklearn 1.5.2 built-in Iris arrays; offline wheel retained."
+    },
+    "zoo": {
+      "data_shape": [
+        101,
+        16
+      ],
+      "train_count": 80,
+      "test_count": 21,
+      "train_class_counts": [
+        29,
+        18,
+        4,
+        11,
+        4,
+        5,
+        9
+      ],
+      "test_class_counts": [
+        12,
+        2,
+        1,
+        2,
+        0,
+        3,
+        1
+      ],
+      "seed42_split_exact": true,
+      "input_label_alignment": true,
+      "preprocessing_verified": true,
+      "stdout_all_rows_verified": true,
+      "original_data_file_verified": true,
+      "iris_provenance": null
+    },
+    "wine": {
+      "data_shape": [
+        178,
+        13
+      ],
+      "train_count": 142,
+      "test_count": 36,
+      "train_class_counts": [
+        45,
+        57,
+        40
+      ],
+      "test_class_counts": [
+        14,
+        14,
+        8
+      ],
+      "seed42_split_exact": true,
+      "input_label_alignment": true,
+      "preprocessing_verified": true,
+      "stdout_all_rows_verified": true,
+      "original_data_file_verified": true,
+      "iris_provenance": null
+    }
+  },
+  "same_environment_repeatability": {
+    "checked": false,
+    "run": null,
+    "attempt_id": null,
+    "receipt": null,
+    "all_dataset_arrays_graphs_predictions_stdout_equal": false
+  },
+  "evidence_sha256": {
+    "reproductions/validation/runs/attempt01/iris/call_00.npz": "34f38185d77480f9c303855cd41188680e751a77313ed6e465f1069df93030d2",
+    "reproductions/validation/runs/attempt01/iris/call_01.npz": "34f38185d77480f9c303855cd41188680e751a77313ed6e465f1069df93030d2",
+    "reproductions/validation/runs/attempt01/iris/call_02.npz": "34f38185d77480f9c303855cd41188680e751a77313ed6e465f1069df93030d2",
+    "reproductions/validation/runs/attempt01/iris/call_03.npz": "34f38185d77480f9c303855cd41188680e751a77313ed6e465f1069df93030d2",
+    "reproductions/validation/runs/attempt01/iris/calls.json": "fc5b71b5acd867ca4f53439c641b70e5a4098dffb476c09573740d240683721b",
+    "reproductions/validation/runs/attempt01/iris/dataset.npz": "48ceac3800bcdde98e99a1c1823a13d6cfff467efa0acd904d256ce9a8aad110",
+    "reproductions/validation/runs/attempt01/iris/graph_00.npz": "d8db594062db9c4c17c82a18b9163b786e84c561d82a9a29b9f42c5c43d7b744",
+    "reproductions/validation/runs/attempt01/iris/graph_01.npz": "d8db594062db9c4c17c82a18b9163b786e84c561d82a9a29b9f42c5c43d7b744",
+    "reproductions/validation/runs/attempt01/iris/graph_02.npz": "d8db594062db9c4c17c82a18b9163b786e84c561d82a9a29b9f42c5c43d7b744",
+    "reproductions/validation/runs/attempt01/iris/graph_03.npz": "d8db594062db9c4c17c82a18b9163b786e84c561d82a9a29b9f42c5c43d7b744",
+    "reproductions/validation/runs/attempt01/iris/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reproductions/validation/runs/attempt01/iris/stdout.txt": "9b6bbee09c56848cc00f8079b454b17e4b4a6d56b3426347b750348f01a76a70",
+    "reproductions/validation/runs/attempt01/zoo/call_00.npz": "5818b5cf92701bcbe1a037011ecd2ca0acfd4ad2cf94eb27eaf3d3ec542cd649",
+    "reproductions/validation/runs/attempt01/zoo/call_01.npz": "5818b5cf92701bcbe1a037011ecd2ca0acfd4ad2cf94eb27eaf3d3ec542cd649",
+    "reproductions/validation/runs/attempt01/zoo/call_02.npz": "5818b5cf92701bcbe1a037011ecd2ca0acfd4ad2cf94eb27eaf3d3ec542cd649",
+    "reproductions/validation/runs/attempt01/zoo/call_03.npz": "5818b5cf92701bcbe1a037011ecd2ca0acfd4ad2cf94eb27eaf3d3ec542cd649",
+    "reproductions/validation/runs/attempt01/zoo/calls.json": "5845b01c673fb1829ae7eca4ddddc905cce5b3af730286370045ff8779600d98",
+    "reproductions/validation/runs/attempt01/zoo/dataset.npz": "ba4072b5feedf36b14f68c286e09fe6fca3507d3226ef530c8968103af22aad8",
+    "reproductions/validation/runs/attempt01/zoo/graph_00.npz": "40ad9912827b0ac86efff8f5f69dd0ab3d9f43a40a2fc005a1ea6d2f2cce39fa",
+    "reproductions/validation/runs/attempt01/zoo/graph_01.npz": "40ad9912827b0ac86efff8f5f69dd0ab3d9f43a40a2fc005a1ea6d2f2cce39fa",
+    "reproductions/validation/runs/attempt01/zoo/graph_02.npz": "40ad9912827b0ac86efff8f5f69dd0ab3d9f43a40a2fc005a1ea6d2f2cce39fa",
+    "reproductions/validation/runs/attempt01/zoo/graph_03.npz": "40ad9912827b0ac86efff8f5f69dd0ab3d9f43a40a2fc005a1ea6d2f2cce39fa",
+    "reproductions/validation/runs/attempt01/zoo/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reproductions/validation/runs/attempt01/zoo/stdout.txt": "b6be453bfb2b9e7cd1faf9389875ecff5b2d2764badd5be84b5689f2ee1bba0d",
+    "reproductions/validation/runs/attempt01/wine/call_00.npz": "c80d287ad90cc3fbbef3e1d5debfcae083c9b1bd08488124c335eb2b05802142",
+    "reproductions/validation/runs/attempt01/wine/call_01.npz": "c80d287ad90cc3fbbef3e1d5debfcae083c9b1bd08488124c335eb2b05802142",
+    "reproductions/validation/runs/attempt01/wine/call_02.npz": "c80d287ad90cc3fbbef3e1d5debfcae083c9b1bd08488124c335eb2b05802142",
+    "reproductions/validation/runs/attempt01/wine/call_03.npz": "3ac0dfb498d105d0b65f445456e199cc988541aed3edd134d927b932d0122cf2",
+    "reproductions/validation/runs/attempt01/wine/calls.json": "cfdc378b3f812aca2b07c50f076c292083751d69426fa5787d0c040e52b1591b",
+    "reproductions/validation/runs/attempt01/wine/dataset.npz": "4ddac4dc3cb63eeacc9fbb9c6ab1677b9fdbe9d4776827433497e960e0444786",
+    "reproductions/validation/runs/attempt01/wine/graph_00.npz": "0c094e2c46e2c656febe6d95e3d9bc15ee74f32fbf23629e8004caab2a6123ff",
+    "reproductions/validation/runs/attempt01/wine/graph_01.npz": "0c094e2c46e2c656febe6d95e3d9bc15ee74f32fbf23629e8004caab2a6123ff",
+    "reproductions/validation/runs/attempt01/wine/graph_02.npz": "0c094e2c46e2c656febe6d95e3d9bc15ee74f32fbf23629e8004caab2a6123ff",
+    "reproductions/validation/runs/attempt01/wine/graph_03.npz": "0c094e2c46e2c656febe6d95e3d9bc15ee74f32fbf23629e8004caab2a6123ff",
+    "reproductions/validation/runs/attempt01/wine/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reproductions/validation/runs/attempt01/wine/stdout.txt": "93c201462bc7615c6b820c541bcbab13d5e22d057b68d5b98a140fd38452314c"
+  },
+  "scope": "Exact retained-output arithmetic, data/split/scaling checks, graph admissibility, independent predictor scores; no source experiment rerun.",
+  "limits": [
+    "No comparison to original capsule outputs, which were not supplied.",
+    "No uncertainty or cross-version generalization claim from one fixed partition.",
+    "Iris and Zoo printed CN/AA rows execute CS.",
+    "k-NN boundary-tie selection is checked for admissibility, not independently reconstructed."
+  ]
+}

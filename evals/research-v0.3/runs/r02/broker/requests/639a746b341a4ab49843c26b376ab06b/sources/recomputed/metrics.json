@@ -1,0 +1,900 @@
+[
+  {
+    "dataset": "iris",
+    "printed_label": "CN",
+    "actual_predictor": "CS",
+    "correct": 30,
+    "total": 30,
+    "accuracy": 1.0,
+    "accuracy_percent": 100.0,
+    "k": 11,
+    "similarity": "manhattan",
+    "confusion_true_rows_predicted_columns": [
+      [
+        10,
+        0,
+        0
+      ],
+      [
+        0,
+        9,
+        0
+      ],
+      [
+        0,
+        0,
+        11
+      ]
+    ],
+    "misclassified_original_indices": [],
+    "misclassified_true_labels": [],
+    "misclassified_predictions": [],
+    "graph_audit": {
+      "nodes": 153,
+      "edges": 1197,
+      "self_loops": [
+        10
+      ],
+      "self_loop_count": 1,
+      "duplicate_feature_pairs": 1,
+      "top_score_ties": 0,
+      "all_zero_score_rows": 0,
+      "minimum_cs_denominator": 2,
+      "class_edges_exact": true,
+      "knn_edges_admissible": true,
+      "strict_positive_distance_knn_edges_present": true,
+      "independent_score_predictions_equal": true,
+      "limitation": "Boundary-tie neighbor choice is not independently reconstructed; its admissibility is checked."
+    },
+    "independent_scores": "recomputed/iris_CN_scores.npz"
+  },
+  {
+    "dataset": "iris",
+    "printed_label": "AA",
+    "actual_predictor": "CS",
+    "correct": 30,
+    "total": 30,
+    "accuracy": 1.0,
+    "accuracy_percent": 100.0,
+    "k": 11,
+    "similarity": "manhattan",
+    "confusion_true_rows_predicted_columns": [
+      [
+        10,
+        0,
+        0
+      ],
+      [
+        0,
+        9,
+        0
+      ],
+      [
+        0,
+        0,
+        11
+      ]
+    ],
+    "misclassified_original_indices": [],
+    "misclassified_true_labels": [],
+    "misclassified_predictions": [],
+    "graph_audit": {
+      "nodes": 153,
+      "edges": 1197,
+      "self_loops": [
+        10
+      ],
+      "self_loop_count": 1,
+      "duplicate_feature_pairs": 1,
+      "top_score_ties": 0,
+      "all_zero_score_rows": 0,
+      "minimum_cs_denominator": 2,
+      "class_edges_exact": true,
+      "knn_edges_admissible": true,
+      "strict_positive_distance_knn_edges_present": true,
+      "independent_score_predictions_equal": true,
+      "limitation": "Boundary-tie neighbor choice is not independently reconstructed; its admissibility is checked."
+    },
+    "independent_scores": "recomputed/iris_AA_scores.npz"
+  },
+  {
+    "dataset": "iris",
+    "printed_label": "RA",
+    "actual_predictor": "CS",
+    "correct": 30,
+    "total": 30,
+    "accuracy": 1.0,
+    "accuracy_percent": 100.0,
+    "k": 11,
+    "similarity": "manhattan",
+    "confusion_true_rows_predicted_columns": [
+      [
+        10,
+        0,
+        0
+      ],
+      [
+        0,
+        9,
+        0
+      ],
+      [
+        0,
+        0,
+        11
+      ]
+    ],
+    "misclassified_original_indices": [],
+    "misclassified_true_labels": [],
+    "misclassified_predictions": [],
+    "graph_audit": {
+      "nodes": 153,
+      "edges": 1197,
+      "self_loops": [
+        10
+      ],
+      "self_loop_count": 1,
+      "duplicate_feature_pairs": 1,
+      "top_score_ties": 0,
+      "all_zero_score_rows": 0,
+      "minimum_cs_denominator": 2,
+      "class_edges_exact": true,
+      "knn_edges_admissible": true,
+      "strict_positive_distance_knn_edges_present": true,
+      "independent_score_predictions_equal": true,
+      "limitation": "Boundary-tie neighbor choice is not independently reconstructed; its admissibility is checked."
+    },
+    "independent_scores": "recomputed/iris_RA_scores.npz"
+  },
+  {
+    "dataset": "iris",
+    "printed_label": "CS",
+    "actual_predictor": "CS",
+    "correct": 30,
+    "total": 30,
+    "accuracy": 1.0,
+    "accuracy_percent": 100.0,
+    "k": 11,
+    "similarity": "manhattan",
+    "confusion_true_rows_predicted_columns": [
+      [
+        10,
+        0,
+        0
+      ],
+      [
+        0,
+        9,
+        0
+      ],
+      [
+        0,
+        0,
+        11
+      ]
+    ],
+    "misclassified_original_indices": [],
+    "misclassified_true_labels": [],
+    "misclassified_predictions": [],
+    "graph_audit": {
+      "nodes": 153,
+      "edges": 1197,
+      "self_loops": [
+        10
+      ],
+      "self_loop_count": 1,
+      "duplicate_feature_pairs": 1,
+      "top_score_ties": 0,
+      "all_zero_score_rows": 0,
+      "minimum_cs_denominator": 2,
+      "class_edges_exact": true,
+      "knn_edges_admissible": true,
+      "strict_positive_distance_knn_edges_present": true,
+      "independent_score_predictions_equal": true,
+      "limitation": "Boundary-tie neighbor choice is not independently reconstructed; its admissibility is checked."
+    },
+    "independent_scores": "recomputed/iris_CS_scores.npz"
+  },
+  {
+    "dataset": "zoo",
+    "printed_label": "CN",
+    "actual_predictor": "CS",
+    "correct": 21,
+    "total": 21,
+    "accuracy": 1.0,
+    "accuracy_percent": 100.0,
+    "k": 2,
+    "similarity": "manhattan",
+    "confusion_true_rows_predicted_columns": [
+      [
+        12,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "misclassified_original_indices": [],
+    "misclassified_true_labels": [],
+    "misclassified_predictions": [],
+    "graph_audit": {
+      "nodes": 108,
+      "edges": 253,
+      "self_loops": [
+        5,
+        9,
+        12,
+        15,
+        20,
+        22,
+        25,
+        26,
+        29,
+        31,
+        32,
+        33,
+        34,
+        37,
+        38,
+        42,
+        44,
+        46,
+        48,
+        62,
+        70,
+        73,
+        74,
+        75,
+        90,
+        93,
+        96,
+        97
+      ],
+      "self_loop_count": 28,
+      "duplicate_feature_pairs": 104,
+      "top_score_ties": 0,
+      "all_zero_score_rows": 0,
+      "minimum_cs_denominator": 2,
+      "class_edges_exact": true,
+      "knn_edges_admissible": true,
+      "strict_positive_distance_knn_edges_present": true,
+      "independent_score_predictions_equal": true,
+      "limitation": "Boundary-tie neighbor choice is not independently reconstructed; its admissibility is checked."
+    },
+    "independent_scores": "recomputed/zoo_CN_scores.npz"
+  },
+  {
+    "dataset": "zoo",
+    "printed_label": "AA",
+    "actual_predictor": "CS",
+    "correct": 21,
+    "total": 21,
+    "accuracy": 1.0,
+    "accuracy_percent": 100.0,
+    "k": 2,
+    "similarity": "manhattan",
+    "confusion_true_rows_predicted_columns": [
+      [
+        12,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "misclassified_original_indices": [],
+    "misclassified_true_labels": [],
+    "misclassified_predictions": [],
+    "graph_audit": {
+      "nodes": 108,
+      "edges": 253,
+      "self_loops": [
+        5,
+        9,
+        12,
+        15,
+        20,
+        22,
+        25,
+        26,
+        29,
+        31,
+        32,
+        33,
+        34,
+        37,
+        38,
+        42,
+        44,
+        46,
+        48,
+        62,
+        70,
+        73,
+        74,
+        75,
+        90,
+        93,
+        96,
+        97
+      ],
+      "self_loop_count": 28,
+      "duplicate_feature_pairs": 104,
+      "top_score_ties": 0,
+      "all_zero_score_rows": 0,
+      "minimum_cs_denominator": 2,
+      "class_edges_exact": true,
+      "knn_edges_admissible": true,
+      "strict_positive_distance_knn_edges_present": true,
+      "independent_score_predictions_equal": true,
+      "limitation": "Boundary-tie neighbor choice is not independently reconstructed; its admissibility is checked."
+    },
+    "independent_scores": "recomputed/zoo_AA_scores.npz"
+  },
+  {
+    "dataset": "zoo",
+    "printed_label": "RA",
+    "actual_predictor": "CS",
+    "correct": 21,
+    "total": 21,
+    "accuracy": 1.0,
+    "accuracy_percent": 100.0,
+    "k": 2,
+    "similarity": "manhattan",
+    "confusion_true_rows_predicted_columns": [
+      [
+        12,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "misclassified_original_indices": [],
+    "misclassified_true_labels": [],
+    "misclassified_predictions": [],
+    "graph_audit": {
+      "nodes": 108,
+      "edges": 253,
+      "self_loops": [
+        5,
+        9,
+        12,
+        15,
+        20,
+        22,
+        25,
+        26,
+        29,
+        31,
+        32,
+        33,
+        34,
+        37,
+        38,
+        42,
+        44,
+        46,
+        48,
+        62,
+        70,
+        73,
+        74,
+        75,
+        90,
+        93,
+        96,
+        97
+      ],
+      "self_loop_count": 28,
+      "duplicate_feature_pairs": 104,
+      "top_score_ties": 0,
+      "all_zero_score_rows": 0,
+      "minimum_cs_denominator": 2,
+      "class_edges_exact": true,
+      "knn_edges_admissible": true,
+      "strict_positive_distance_knn_edges_present": true,
+      "independent_score_predictions_equal": true,
+      "limitation": "Boundary-tie neighbor choice is not independently reconstructed; its admissibility is checked."
+    },
+    "independent_scores": "recomputed/zoo_RA_scores.npz"
+  },
+  {
+    "dataset": "zoo",
+    "printed_label": "CS",
+    "actual_predictor": "CS",
+    "correct": 21,
+    "total": 21,
+    "accuracy": 1.0,
+    "accuracy_percent": 100.0,
+    "k": 2,
+    "similarity": "manhattan",
+    "confusion_true_rows_predicted_columns": [
+      [
+        12,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "misclassified_original_indices": [],
+    "misclassified_true_labels": [],
+    "misclassified_predictions": [],
+    "graph_audit": {
+      "nodes": 108,
+      "edges": 253,
+      "self_loops": [
+        5,
+        9,
+        12,
+        15,
+        20,
+        22,
+        25,
+        26,
+        29,
+        31,
+        32,
+        33,
+        34,
+        37,
+        38,
+        42,
+        44,
+        46,
+        48,
+        62,
+        70,
+        73,
+        74,
+        75,
+        90,
+        93,
+        96,
+        97
+      ],
+      "self_loop_count": 28,
+      "duplicate_feature_pairs": 104,
+      "top_score_ties": 0,
+      "all_zero_score_rows": 0,
+      "minimum_cs_denominator": 2,
+      "class_edges_exact": true,
+      "knn_edges_admissible": true,
+      "strict_positive_distance_knn_edges_present": true,
+      "independent_score_predictions_equal": true,
+      "limitation": "Boundary-tie neighbor choice is not independently reconstructed; its admissibility is checked."
+    },
+    "independent_scores": "recomputed/zoo_CS_scores.npz"
+  },
+  {
+    "dataset": "wine",
+    "printed_label": "CN",
+    "actual_predictor": "CN",
+    "correct": 35,
+    "total": 36,
+    "accuracy": 0.9722222222222222,
+    "accuracy_percent": 97.22,
+    "k": 12,
+    "similarity": "manhattan",
+    "confusion_true_rows_predicted_columns": [
+      [
+        14,
+        0,
+        0
+      ],
+      [
+        1,
+        13,
+        0
+      ],
+      [
+        0,
+        0,
+        8
+      ]
+    ],
+    "misclassified_original_indices": [
+      66
+    ],
+    "misclassified_true_labels": [
+      1
+    ],
+    "misclassified_predictions": [
+      0
+    ],
+    "graph_audit": {
+      "nodes": 181,
+      "edges": 1598,
+      "self_loops": [],
+      "self_loop_count": 0,
+      "duplicate_feature_pairs": 0,
+      "top_score_ties": 1,
+      "all_zero_score_rows": 0,
+      "minimum_cs_denominator": null,
+      "class_edges_exact": true,
+      "knn_edges_admissible": true,
+      "strict_positive_distance_knn_edges_present": true,
+      "independent_score_predictions_equal": true,
+      "limitation": "Boundary-tie neighbor choice is not independently reconstructed; its admissibility is checked."
+    },
+    "independent_scores": "recomputed/wine_CN_scores.npz"
+  },
+  {
+    "dataset": "wine",
+    "printed_label": "AA",
+    "actual_predictor": "AA",
+    "correct": 35,
+    "total": 36,
+    "accuracy": 0.9722222222222222,
+    "accuracy_percent": 97.22,
+    "k": 12,
+    "similarity": "manhattan",
+    "confusion_true_rows_predicted_columns": [
+      [
+        14,
+        0,
+        0
+      ],
+      [
+        1,
+        13,
+        0
+      ],
+      [
+        0,
+        0,
+        8
+      ]
+    ],
+    "misclassified_original_indices": [
+      66
+    ],
+    "misclassified_true_labels": [
+      1
+    ],
+    "misclassified_predictions": [
+      0
+    ],
+    "graph_audit": {
+      "nodes": 181,
+      "edges": 1598,
+      "self_loops": [],
+      "self_loop_count": 0,
+      "duplicate_feature_pairs": 0,
+      "top_score_ties": 0,
+      "all_zero_score_rows": 0,
+      "minimum_cs_denominator": null,
+      "class_edges_exact": true,
+      "knn_edges_admissible": true,
+      "strict_positive_distance_knn_edges_present": true,
+      "independent_score_predictions_equal": true,
+      "limitation": "Boundary-tie neighbor choice is not independently reconstructed; its admissibility is checked."
+    },
+    "independent_scores": "recomputed/wine_AA_scores.npz"
+  },
+  {
+    "dataset": "wine",
+    "printed_label": "RA",
+    "actual_predictor": "RA",
+    "correct": 35,
+    "total": 36,
+    "accuracy": 0.9722222222222222,
+    "accuracy_percent": 97.22,
+    "k": 12,
+    "similarity": "manhattan",
+    "confusion_true_rows_predicted_columns": [
+      [
+        14,
+        0,
+        0
+      ],
+      [
+        1,
+        13,
+        0
+      ],
+      [
+        0,
+        0,
+        8
+      ]
+    ],
+    "misclassified_original_indices": [
+      66
+    ],
+    "misclassified_true_labels": [
+      1
+    ],
+    "misclassified_predictions": [
+      0
+    ],
+    "graph_audit": {
+      "nodes": 181,
+      "edges": 1598,
+      "self_loops": [],
+      "self_loop_count": 0,
+      "duplicate_feature_pairs": 0,
+      "top_score_ties": 0,
+      "all_zero_score_rows": 0,
+      "minimum_cs_denominator": null,
+      "class_edges_exact": true,
+      "knn_edges_admissible": true,
+      "strict_positive_distance_knn_edges_present": true,
+      "independent_score_predictions_equal": true,
+      "limitation": "Boundary-tie neighbor choice is not independently reconstructed; its admissibility is checked."
+    },
+    "independent_scores": "recomputed/wine_RA_scores.npz"
+  },
+  {
+    "dataset": "wine",
+    "printed_label": "CS",
+    "actual_predictor": "CS",
+    "correct": 36,
+    "total": 36,
+    "accuracy": 1.0,
+    "accuracy_percent": 100.0,
+    "k": 12,
+    "similarity": "manhattan",
+    "confusion_true_rows_predicted_columns": [
+      [
+        14,
+        0,
+        0
+      ],
+      [
+        0,
+        14,
+        0
+      ],
+      [
+        0,
+        0,
+        8
+      ]
+    ],
+    "misclassified_original_indices": [],
+    "misclassified_true_labels": [],
+    "misclassified_predictions": [],
+    "graph_audit": {
+      "nodes": 181,
+      "edges": 1598,
+      "self_loops": [],
+      "self_loop_count": 0,
+      "duplicate_feature_pairs": 0,
+      "top_score_ties": 0,
+      "all_zero_score_rows": 0,
+      "minimum_cs_denominator": 2,
+      "class_edges_exact": true,
+      "knn_edges_admissible": true,
+      "strict_positive_distance_knn_edges_present": true,
+      "independent_score_predictions_equal": true,
+      "limitation": "Boundary-tie neighbor choice is not independently reconstructed; its admissibility is checked."
+    },
+    "independent_scores": "recomputed/wine_CS_scores.npz"
+  }
+]

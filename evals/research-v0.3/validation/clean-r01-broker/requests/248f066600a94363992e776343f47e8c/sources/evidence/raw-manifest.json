@@ -1,0 +1,257 @@
+{
+  "exclusions": [
+    {
+      "attempt_id": "pilot-a01",
+      "reason": "Synthetic qualification, no task answers"
+    },
+    {
+      "attempt_id": "iris-a01",
+      "reason": "Injected interruption, authoritative timed_out; incomplete outputs not eligible"
+    }
+  ],
+  "files": [
+    {
+      "media_type": "application/json",
+      "path": "evidence/runs/iris-a02/raw.json",
+      "retention": "retained in study",
+      "sha256": "d6d6460cfce1823fd2182cf8585f36de0c16dd0d9aea5914c3d06e1234ec1a32"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-reproduction/runs/iris/attempts/iris-a02/record.json",
+      "retention": "retained in study",
+      "sha256": "645a752f91dc09994302bdafe7b2a3a5b7967b260c7bb7f5a119f05da7f5d598"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "source/adapted/code/iris_sample.py",
+      "retention": "retained in study",
+      "sha256": "eef48c00cb56e8756ad877f84ed2f3d1a04bd3773b23148ebb2d4766fff561cb"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/iris-a02/dataset.npz",
+      "retention": "retained in study",
+      "sha256": "84ece38a26781e2e8a44c7bb15679eb2cf9e49442bd3dbbc24d070ca4f94429d"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/iris-a02/stdout.txt",
+      "retention": "retained in study",
+      "sha256": "9b6bbee09c56848cc00f8079b454b17e4b4a6d56b3426347b750348f01a76a70"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/iris-a02/stderr.txt",
+      "retention": "retained in study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/iris-a02/call-00.npz",
+      "retention": "retained in study",
+      "sha256": "0b9dc17538d3ccd75b36539b7da825dd0cc6a8b58a37bc7bb4dcf4f3b376e876"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/iris-a02/call-01.npz",
+      "retention": "retained in study",
+      "sha256": "0b9dc17538d3ccd75b36539b7da825dd0cc6a8b58a37bc7bb4dcf4f3b376e876"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/iris-a02/call-02.npz",
+      "retention": "retained in study",
+      "sha256": "0b9dc17538d3ccd75b36539b7da825dd0cc6a8b58a37bc7bb4dcf4f3b376e876"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/iris-a02/call-03.npz",
+      "retention": "retained in study",
+      "sha256": "0b9dc17538d3ccd75b36539b7da825dd0cc6a8b58a37bc7bb4dcf4f3b376e876"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/runs/zoo-a01/raw.json",
+      "retention": "retained in study",
+      "sha256": "849e8eb9689a295b80ad03ec96c5d8a3795ed9a6f6c05b6857ddd421e0302dc0"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-reproduction/runs/zoo/attempts/zoo-a01/record.json",
+      "retention": "retained in study",
+      "sha256": "9f3fe1d6776a1a8e398338da1812d3d47ca658273fc8b84f2378e936e696c61f"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "source/adapted/code/zoo_sample.py",
+      "retention": "retained in study",
+      "sha256": "a4a52a3dcc4708ef67ae8ecf6672433df836549046e98c5b66db2d8604099715"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/zoo-a01/dataset.npz",
+      "retention": "retained in study",
+      "sha256": "c21df59e8a83087dcd3ebb5a1b714b3179e1769e1eb588d53fc962b35a9c07db"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/zoo-a01/stdout.txt",
+      "retention": "retained in study",
+      "sha256": "b6be453bfb2b9e7cd1faf9389875ecff5b2d2764badd5be84b5689f2ee1bba0d"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/zoo-a01/stderr.txt",
+      "retention": "retained in study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/zoo-a01/call-00.npz",
+      "retention": "retained in study",
+      "sha256": "7602effb8f04a981d33b404880a4db520458d711b84645c9c3bcbc199b7ed4f4"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/zoo-a01/call-01.npz",
+      "retention": "retained in study",
+      "sha256": "7602effb8f04a981d33b404880a4db520458d711b84645c9c3bcbc199b7ed4f4"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/zoo-a01/call-02.npz",
+      "retention": "retained in study",
+      "sha256": "7602effb8f04a981d33b404880a4db520458d711b84645c9c3bcbc199b7ed4f4"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/zoo-a01/call-03.npz",
+      "retention": "retained in study",
+      "sha256": "7602effb8f04a981d33b404880a4db520458d711b84645c9c3bcbc199b7ed4f4"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/runs/wine-a01/raw.json",
+      "retention": "retained in study",
+      "sha256": "b133ace63bf4c35705c43d063bff2184dc97ec30f6ecfa25bb9c653c437e44b4"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-reproduction/runs/wine/attempts/wine-a01/record.json",
+      "retention": "retained in study",
+      "sha256": "613621e007986ba6e08df5df6adf7fb01748887cdf649140468156296972d6ab"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "source/adapted/code/wine_sample.py",
+      "retention": "retained in study",
+      "sha256": "92efce2e73ad9a8c95ba8dfe8bc763a9a222eef773ddbadcb51852b332568562"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/wine-a01/dataset.npz",
+      "retention": "retained in study",
+      "sha256": "dcd7f5b6cc9fff5f75536788a135fc8bd5fb39a37b13fa24d8ae2f3d1925d920"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/wine-a01/stdout.txt",
+      "retention": "retained in study",
+      "sha256": "93c201462bc7615c6b820c541bcbab13d5e22d057b68d5b98a140fd38452314c"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/wine-a01/stderr.txt",
+      "retention": "retained in study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/wine-a01/call-00.npz",
+      "retention": "retained in study",
+      "sha256": "d44bb2b8d9770321f81a6249267f52bde32d4cb3e3c0d4aeb1c97e9b9025bc15"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/wine-a01/call-01.npz",
+      "retention": "retained in study",
+      "sha256": "3cccffff56efb216aeea1b207afede625d8b9e24111c05a53c408fbc8d8da900"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/wine-a01/call-02.npz",
+      "retention": "retained in study",
+      "sha256": "6b00724339b4f85bfc00bc6c64f2a7608b429c69271cff199254228b99e96122"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/wine-a01/call-03.npz",
+      "retention": "retained in study",
+      "sha256": "d5c3612f4204733684761c9b45cacb7dc568cb9d50f3169ddda7a98b1da9a354"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-reproduction/protocol.json",
+      "retention": "retained in study",
+      "sha256": "4673ef730fcda1c3e92dbf93c00690b953d369f644be86de5bad30fc25364a3d"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/provenance.json",
+      "retention": "retained in study",
+      "sha256": "15553929726e34de35cbdf0c3206568777f695fab19d912ce9985864c796538f"
+    }
+  ],
+  "format": "culp-raw-manifest-v1",
+  "runs": [
+    {
+      "attempt_id": "iris-a02",
+      "dataset": "iris",
+      "raw": {
+        "media_type": "application/json",
+        "path": "evidence/runs/iris-a02/raw.json",
+        "retention": "retained in study",
+        "sha256": "d6d6460cfce1823fd2182cf8585f36de0c16dd0d9aea5914c3d06e1234ec1a32"
+      },
+      "run_record": {
+        "media_type": "application/json",
+        "path": "campaigns/culp-reproduction/runs/iris/attempts/iris-a02/record.json",
+        "retention": "retained in study",
+        "sha256": "645a752f91dc09994302bdafe7b2a3a5b7967b260c7bb7f5a119f05da7f5d598"
+      }
+    },
+    {
+      "attempt_id": "zoo-a01",
+      "dataset": "zoo",
+      "raw": {
+        "media_type": "application/json",
+        "path": "evidence/runs/zoo-a01/raw.json",
+        "retention": "retained in study",
+        "sha256": "849e8eb9689a295b80ad03ec96c5d8a3795ed9a6f6c05b6857ddd421e0302dc0"
+      },
+      "run_record": {
+        "media_type": "application/json",
+        "path": "campaigns/culp-reproduction/runs/zoo/attempts/zoo-a01/record.json",
+        "retention": "retained in study",
+        "sha256": "9f3fe1d6776a1a8e398338da1812d3d47ca658273fc8b84f2378e936e696c61f"
+      }
+    },
+    {
+      "attempt_id": "wine-a01",
+      "dataset": "wine",
+      "raw": {
+        "media_type": "application/json",
+        "path": "evidence/runs/wine-a01/raw.json",
+        "retention": "retained in study",
+        "sha256": "b133ace63bf4c35705c43d063bff2184dc97ec30f6ecfa25bb9c653c437e44b4"
+      },
+      "run_record": {
+        "media_type": "application/json",
+        "path": "campaigns/culp-reproduction/runs/wine/attempts/wine-a01/record.json",
+        "retention": "retained in study",
+        "sha256": "613621e007986ba6e08df5df6adf7fb01748887cdf649140468156296972d6ab"
+      }
+    }
+  ]
+}

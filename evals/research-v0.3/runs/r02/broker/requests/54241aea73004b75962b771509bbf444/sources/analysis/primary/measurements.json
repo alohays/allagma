@@ -1,0 +1,248 @@
+{
+  "format": "research-measurements-v1",
+  "task_id": "core-culp",
+  "protocol": "PROTOCOL.md",
+  "schema_extension": "CULP run schema documented in REPRODUCE.md; supplied task-specific schemas concern other tasks.",
+  "runs": [
+    {
+      "dataset": "iris",
+      "phase": "confirmation",
+      "device": "cpu",
+      "printed_label": "CN",
+      "actual_predictor": "CS",
+      "arrays": "runs/attempt02/iris/call_00.npz",
+      "dataset_arrays": "runs/attempt02/iris/dataset.npz",
+      "graph_arrays": "runs/attempt02/iris/graph_00.npz",
+      "stdout": "runs/attempt02/iris/stdout.txt",
+      "metrics": {
+        "correct": 30,
+        "total": 30,
+        "accuracy": 1.0,
+        "accuracy_percent": 100.0
+      },
+      "source_revision": "a4d31ba65afa3020c8d94c1228753f69dc0efba2dd9239782aedf3ff32a89b5f",
+      "attempt_id": "c717a9c504bd4655a7ab71d5c4d93aab",
+      "broker_receipt": "evidence/broker/c717a9c504bd4655a7ab71d5c4d93aab/response.json"
+    },
+    {
+      "dataset": "iris",
+      "phase": "confirmation",
+      "device": "cpu",
+      "printed_label": "AA",
+      "actual_predictor": "CS",
+      "arrays": "runs/attempt02/iris/call_01.npz",
+      "dataset_arrays": "runs/attempt02/iris/dataset.npz",
+      "graph_arrays": "runs/attempt02/iris/graph_01.npz",
+      "stdout": "runs/attempt02/iris/stdout.txt",
+      "metrics": {
+        "correct": 30,
+        "total": 30,
+        "accuracy": 1.0,
+        "accuracy_percent": 100.0
+      },
+      "source_revision": "a4d31ba65afa3020c8d94c1228753f69dc0efba2dd9239782aedf3ff32a89b5f",
+      "attempt_id": "c717a9c504bd4655a7ab71d5c4d93aab",
+      "broker_receipt": "evidence/broker/c717a9c504bd4655a7ab71d5c4d93aab/response.json"
+    },
+    {
+      "dataset": "iris",
+      "phase": "confirmation",
+      "device": "cpu",
+      "printed_label": "RA",
+      "actual_predictor": "CS",
+      "arrays": "runs/attempt02/iris/call_02.npz",
+      "dataset_arrays": "runs/attempt02/iris/dataset.npz",
+      "graph_arrays": "runs/attempt02/iris/graph_02.npz",
+      "stdout": "runs/attempt02/iris/stdout.txt",
+      "metrics": {
+        "correct": 30,
+        "total": 30,
+        "accuracy": 1.0,
+        "accuracy_percent": 100.0
+      },
+      "source_revision": "a4d31ba65afa3020c8d94c1228753f69dc0efba2dd9239782aedf3ff32a89b5f",
+      "attempt_id": "c717a9c504bd4655a7ab71d5c4d93aab",
+      "broker_receipt": "evidence/broker/c717a9c504bd4655a7ab71d5c4d93aab/response.json"
+    },
+    {
+      "dataset": "iris",
+      "phase": "confirmation",
+      "device": "cpu",
+      "printed_label": "CS",
+      "actual_predictor": "CS",
+      "arrays": "runs/attempt02/iris/call_03.npz",
+      "dataset_arrays": "runs/attempt02/iris/dataset.npz",
+      "graph_arrays": "runs/attempt02/iris/graph_03.npz",
+      "stdout": "runs/attempt02/iris/stdout.txt",
+      "metrics": {
+        "correct": 30,
+        "total": 30,
+        "accuracy": 1.0,
+        "accuracy_percent": 100.0
+      },
+      "source_revision": "a4d31ba65afa3020c8d94c1228753f69dc0efba2dd9239782aedf3ff32a89b5f",
+      "attempt_id": "c717a9c504bd4655a7ab71d5c4d93aab",
+      "broker_receipt": "evidence/broker/c717a9c504bd4655a7ab71d5c4d93aab/response.json"
+    },
+    {
+      "dataset": "zoo",
+      "phase": "confirmation",
+      "device": "cpu",
+      "printed_label": "CN",
+      "actual_predictor": "CS",
+      "arrays": "runs/attempt02/zoo/call_00.npz",
+      "dataset_arrays": "runs/attempt02/zoo/dataset.npz",
+      "graph_arrays": "runs/attempt02/zoo/graph_00.npz",
+      "stdout": "runs/attempt02/zoo/stdout.txt",
+      "metrics": {
+        "correct": 21,
+        "total": 21,
+        "accuracy": 1.0,
+        "accuracy_percent": 100.0
+      },
+      "source_revision": "a4d31ba65afa3020c8d94c1228753f69dc0efba2dd9239782aedf3ff32a89b5f",
+      "attempt_id": "c717a9c504bd4655a7ab71d5c4d93aab",
+      "broker_receipt": "evidence/broker/c717a9c504bd4655a7ab71d5c4d93aab/response.json"
+    },
+    {
+      "dataset": "zoo",
+      "phase": "confirmation",
+      "device": "cpu",
+      "printed_label": "AA",
+      "actual_predictor": "CS",
+      "arrays": "runs/attempt02/zoo/call_01.npz",
+      "dataset_arrays": "runs/attempt02/zoo/dataset.npz",
+      "graph_arrays": "runs/attempt02/zoo/graph_01.npz",
+      "stdout": "runs/attempt02/zoo/stdout.txt",
+      "metrics": {
+        "correct": 21,
+        "total": 21,
+        "accuracy": 1.0,
+        "accuracy_percent": 100.0
+      },
+      "source_revision": "a4d31ba65afa3020c8d94c1228753f69dc0efba2dd9239782aedf3ff32a89b5f",
+      "attempt_id": "c717a9c504bd4655a7ab71d5c4d93aab",
+      "broker_receipt": "evidence/broker/c717a9c504bd4655a7ab71d5c4d93aab/response.json"
+    },
+    {
+      "dataset": "zoo",
+      "phase": "confirmation",
+      "device": "cpu",
+      "printed_label": "RA",
+      "actual_predictor": "CS",
+      "arrays": "runs/attempt02/zoo/call_02.npz",
+      "dataset_arrays": "runs/attempt02/zoo/dataset.npz",
+      "graph_arrays": "runs/attempt02/zoo/graph_02.npz",
+      "stdout": "runs/attempt02/zoo/stdout.txt",
+      "metrics": {
+        "correct": 21,
+        "total": 21,
+        "accuracy": 1.0,
+        "accuracy_percent": 100.0
+      },
+      "source_revision": "a4d31ba65afa3020c8d94c1228753f69dc0efba2dd9239782aedf3ff32a89b5f",
+      "attempt_id": "c717a9c504bd4655a7ab71d5c4d93aab",
+      "broker_receipt": "evidence/broker/c717a9c504bd4655a7ab71d5c4d93aab/response.json"
+    },
+    {
+      "dataset": "zoo",
+      "phase": "confirmation",
+      "device": "cpu",
+      "printed_label": "CS",
+      "actual_predictor": "CS",
+      "arrays": "runs/attempt02/zoo/call_03.npz",
+      "dataset_arrays": "runs/attempt02/zoo/dataset.npz",
+      "graph_arrays": "runs/attempt02/zoo/graph_03.npz",
+      "stdout": "runs/attempt02/zoo/stdout.txt",
+      "metrics": {
+        "correct": 21,
+        "total": 21,
+        "accuracy": 1.0,
+        "accuracy_percent": 100.0
+      },
+      "source_revision": "a4d31ba65afa3020c8d94c1228753f69dc0efba2dd9239782aedf3ff32a89b5f",
+      "attempt_id": "c717a9c504bd4655a7ab71d5c4d93aab",
+      "broker_receipt": "evidence/broker/c717a9c504bd4655a7ab71d5c4d93aab/response.json"
+    },
+    {
+      "dataset": "wine",
+      "phase": "confirmation",
+      "device": "cpu",
+      "printed_label": "CN",
+      "actual_predictor": "CN",
+      "arrays": "runs/attempt02/wine/call_00.npz",
+      "dataset_arrays": "runs/attempt02/wine/dataset.npz",
+      "graph_arrays": "runs/attempt02/wine/graph_00.npz",
+      "stdout": "runs/attempt02/wine/stdout.txt",
+      "metrics": {
+        "correct": 35,
+        "total": 36,
+        "accuracy": 0.9722222222222222,
+        "accuracy_percent": 97.22
+      },
+      "source_revision": "a4d31ba65afa3020c8d94c1228753f69dc0efba2dd9239782aedf3ff32a89b5f",
+      "attempt_id": "c717a9c504bd4655a7ab71d5c4d93aab",
+      "broker_receipt": "evidence/broker/c717a9c504bd4655a7ab71d5c4d93aab/response.json"
+    },
+    {
+      "dataset": "wine",
+      "phase": "confirmation",
+      "device": "cpu",
+      "printed_label": "AA",
+      "actual_predictor": "AA",
+      "arrays": "runs/attempt02/wine/call_01.npz",
+      "dataset_arrays": "runs/attempt02/wine/dataset.npz",
+      "graph_arrays": "runs/attempt02/wine/graph_01.npz",
+      "stdout": "runs/attempt02/wine/stdout.txt",
+      "metrics": {
+        "correct": 35,
+        "total": 36,
+        "accuracy": 0.9722222222222222,
+        "accuracy_percent": 97.22
+      },
+      "source_revision": "a4d31ba65afa3020c8d94c1228753f69dc0efba2dd9239782aedf3ff32a89b5f",
+      "attempt_id": "c717a9c504bd4655a7ab71d5c4d93aab",
+      "broker_receipt": "evidence/broker/c717a9c504bd4655a7ab71d5c4d93aab/response.json"
+    },
+    {
+      "dataset": "wine",
+      "phase": "confirmation",
+      "device": "cpu",
+      "printed_label": "RA",
+      "actual_predictor": "RA",
+      "arrays": "runs/attempt02/wine/call_02.npz",
+      "dataset_arrays": "runs/attempt02/wine/dataset.npz",
+      "graph_arrays": "runs/attempt02/wine/graph_02.npz",
+      "stdout": "runs/attempt02/wine/stdout.txt",
+      "metrics": {
+        "correct": 35,
+        "total": 36,
+        "accuracy": 0.9722222222222222,
+        "accuracy_percent": 97.22
+      },
+      "source_revision": "a4d31ba65afa3020c8d94c1228753f69dc0efba2dd9239782aedf3ff32a89b5f",
+      "attempt_id": "c717a9c504bd4655a7ab71d5c4d93aab",
+      "broker_receipt": "evidence/broker/c717a9c504bd4655a7ab71d5c4d93aab/response.json"
+    },
+    {
+      "dataset": "wine",
+      "phase": "confirmation",
+      "device": "cpu",
+      "printed_label": "CS",
+      "actual_predictor": "CS",
+      "arrays": "runs/attempt02/wine/call_03.npz",
+      "dataset_arrays": "runs/attempt02/wine/dataset.npz",
+      "graph_arrays": "runs/attempt02/wine/graph_03.npz",
+      "stdout": "runs/attempt02/wine/stdout.txt",
+      "metrics": {
+        "correct": 36,
+        "total": 36,
+        "accuracy": 1.0,
+        "accuracy_percent": 100.0
+      },
+      "source_revision": "a4d31ba65afa3020c8d94c1228753f69dc0efba2dd9239782aedf3ff32a89b5f",
+      "attempt_id": "c717a9c504bd4655a7ab71d5c4d93aab",
+      "broker_receipt": "evidence/broker/c717a9c504bd4655a7ab71d5c4d93aab/response.json"
+    }
+  ]
+}

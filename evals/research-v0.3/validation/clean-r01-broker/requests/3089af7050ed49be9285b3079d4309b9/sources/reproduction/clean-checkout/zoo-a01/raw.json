@@ -1,0 +1,90 @@
+{
+  "calls": [
+    {
+      "actual_predictor": "CS",
+      "arrays": {
+        "media_type": "application/octet-stream",
+        "path": "reproduction/clean-checkout/zoo-a01/call-00.npz",
+        "retention": "retained in study",
+        "sha256": "7602effb8f04a981d33b404880a4db520458d711b84645c9c3bcbc199b7ed4f4"
+      },
+      "index": 0,
+      "k": 2,
+      "n_jobs": 1,
+      "printed_label": "CN",
+      "similarity": "manhattan"
+    },
+    {
+      "actual_predictor": "CS",
+      "arrays": {
+        "media_type": "application/octet-stream",
+        "path": "reproduction/clean-checkout/zoo-a01/call-01.npz",
+        "retention": "retained in study",
+        "sha256": "7602effb8f04a981d33b404880a4db520458d711b84645c9c3bcbc199b7ed4f4"
+      },
+      "index": 1,
+      "k": 2,
+      "n_jobs": 1,
+      "printed_label": "AA",
+      "similarity": "manhattan"
+    },
+    {
+      "actual_predictor": "CS",
+      "arrays": {
+        "media_type": "application/octet-stream",
+        "path": "reproduction/clean-checkout/zoo-a01/call-02.npz",
+        "retention": "retained in study",
+        "sha256": "7602effb8f04a981d33b404880a4db520458d711b84645c9c3bcbc199b7ed4f4"
+      },
+      "index": 2,
+      "k": 2,
+      "n_jobs": 1,
+      "printed_label": "RA",
+      "similarity": "manhattan"
+    },
+    {
+      "actual_predictor": "CS",
+      "arrays": {
+        "media_type": "application/octet-stream",
+        "path": "reproduction/clean-checkout/zoo-a01/call-03.npz",
+        "retention": "retained in study",
+        "sha256": "7602effb8f04a981d33b404880a4db520458d711b84645c9c3bcbc199b7ed4f4"
+      },
+      "index": 3,
+      "k": 2,
+      "n_jobs": 1,
+      "printed_label": "CS",
+      "similarity": "manhattan"
+    }
+  ],
+  "dataset": "zoo",
+  "dataset_arrays": {
+    "media_type": "application/octet-stream",
+    "path": "reproduction/clean-checkout/zoo-a01/dataset.npz",
+    "retention": "retained in study",
+    "sha256": "c21df59e8a83087dcd3ebb5a1b714b3179e1769e1eb588d53fc962b35a9c07db"
+  },
+  "device": "cpu",
+  "finished_at": "2026-10-07T21:02:12.037790+00:00",
+  "phase": "confirmation",
+  "script": {
+    "media_type": "application/octet-stream",
+    "path": "source/adapted/code/zoo_sample.py",
+    "retention": "retained in study",
+    "sha256": "a4a52a3dcc4708ef67ae8ecf6672433df836549046e98c5b66db2d8604099715"
+  },
+  "seed": 42,
+  "stderr": {
+    "media_type": "application/octet-stream",
+    "path": "reproduction/clean-checkout/zoo-a01/stderr.txt",
+    "retention": "retained in study",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "media_type": "application/octet-stream",
+    "path": "reproduction/clean-checkout/zoo-a01/stdout.txt",
+    "retention": "retained in study",
+    "sha256": "b6be453bfb2b9e7cd1faf9389875ecff5b2d2764badd5be84b5689f2ee1bba0d"
+  },
+  "test_size": 0.2
+}

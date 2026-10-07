@@ -1,0 +1,210 @@
+{
+  "run_id": "r02",
+  "criteria": "evals/research-v0.3/frozen/source/evals/research-v0.3/CRITERIA.md",
+  "completion_verified": true,
+  "evidence_score": 8,
+  "evidence_total": 8,
+  "evidence_items": [
+    {
+      "id": 1,
+      "score": 1,
+      "reason": "Original capsule bytes and licenses retained; only two data-path adaptations and required imports differ.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "source/provenance.json",
+          "sha256": "276d5cb7870a9cb807504cf518fcbaa6f13cdec1635557ac769c5a296d0e66ce"
+        },
+        {
+          "root": "candidate",
+          "path": "source/compatibility.patch",
+          "sha256": "2fa4434d311b20c0149e61229fe614c34ed130fe4b26a89f68ea6f968b31435e"
+        },
+        {
+          "root": "candidate",
+          "path": "source/original/code/LICENSE",
+          "sha256": "86f24132a2af026b022666ac11bef2c3b73575ec072f4d33f750e6a9255a486f"
+        },
+        {
+          "root": "candidate",
+          "path": "source/original/data/LICENSE",
+          "sha256": "36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "score": 1,
+      "reason": "Frozen protocol and fixed source definitions precede successful execution; authoritative recovery-request snapshot retains the earlier protocol hash. Controls and resource stops are explicit; no invented confirmation replicates.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "PROTOCOL.md",
+          "sha256": "5b8a2bf473a5a32a41f166bec945772313600d937e2f7f376e02af2ef27cb438"
+        },
+        {
+          "root": "candidate",
+          "path": "runs/attempt01/execution.json",
+          "sha256": "c90b6e794d23366ffb485dfcef108178ba73c5a4812d6c3f3bf3fd6cb14a3bfb"
+        },
+        {
+          "root": "candidate",
+          "path": "runs/attempt02/execution.json",
+          "sha256": "19d9dd80f21e59b44586026e75366c9911dd3d91ecb165225d1f088b80e8ce2b"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "score": 1,
+      "reason": "All required source scripts actually executed; the controlled incomplete attempt, separate recovery and exact broker receipts remain retained.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "runs/attempt01/execution.json",
+          "sha256": "c90b6e794d23366ffb485dfcef108178ba73c5a4812d6c3f3bf3fd6cb14a3bfb"
+        },
+        {
+          "root": "candidate",
+          "path": "runs/attempt02/execution.json",
+          "sha256": "19d9dd80f21e59b44586026e75366c9911dd3d91ecb165225d1f088b80e8ce2b"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/broker/315e7642997b41399b4378fbf1a803e1/response.json",
+          "sha256": "33157ce6b13b86ae831043acd5b5272eec839956ef3c7e433e0085cca3d308fb"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "score": 1,
+      "reason": "Protected original score is 6/6; raw prediction/label arithmetic, independent graph formulas, fresh-environment repeatability and direct-script stdout equivalence pass.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "analysis/final/verification.json",
+          "sha256": "97a55fc829107db242227bd3ea29cb8dc29be3e156cd368df67a3cda13dc2b26"
+        },
+        {
+          "root": "candidate",
+          "path": "recomputed/verification.json",
+          "sha256": "97a55fc829107db242227bd3ea29cb8dc29be3e156cd368df67a3cda13dc2b26"
+        },
+        {
+          "root": "candidate",
+          "path": "reproductions/validation/reproduction.json",
+          "sha256": "794d2e368d89888807bebc16bf00a227be6c3511875b48269a3e6bf5a76b77de"
+        },
+        {
+          "root": "candidate",
+          "path": "runs/direct-cli/verification.json",
+          "sha256": "e0e8d2710d345fdea09683e8885204c95e63455343c1b79588c2a80167321930"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "score": 1,
+      "reason": "Report avoids population intervals and repeated-run pseudoreplication; discloses transduction, missing Zoo test class, duplicates, self-loops and label mismatch.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "REPORT.md",
+          "sha256": "0a5d652a055c9aa0f63e2e953ad453f15f3c1775b7c2b8fcca7b3b7405f8f03d"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/final/metrics.json",
+          "sha256": "59d4673bd40fa600dab4a42603f91e3f7dbe8e825a951ffcaed36b1c9c225739"
+        },
+        {
+          "root": "candidate",
+          "path": "review.json",
+          "sha256": "b7962a9c22c437dcda24b8d47f19df40246f27f2213d81bb7600b8157cc59496"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "score": 1,
+      "reason": "English report/table trace printed labels versus actual predictors and numerical findings to retained evidence; no generalization/superiority claim is made.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "REPORT.md",
+          "sha256": "0a5d652a055c9aa0f63e2e953ad453f15f3c1775b7c2b8fcca7b3b7405f8f03d"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/final/results.csv",
+          "sha256": "fc3963dd056688b765e98fdabdbd1fa58e5d0010e3c20ffc6056ee1f2db35151"
+        },
+        {
+          "root": "candidate",
+          "path": "measurements.json",
+          "sha256": "cc420759bd72907178b7bf0d2b9916ca13a12630c353eb32254a377e5ab23043"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "score": 1,
+      "reason": "Pinned environment, full reproduction and raw-only recomputation are documented and actually tested; all declared manifest hashes and retained package files verify.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "requirements.lock",
+          "sha256": "17753afeced7ad96dfe472dccf601b909485c8ae29cd7c3779f9ef46cbc6a451"
+        },
+        {
+          "root": "candidate",
+          "path": "REPRODUCE.md",
+          "sha256": "823589ea96b184f32bf3e8b6eb06ff634f3bdc31311d7d242d733e762732f2b0"
+        },
+        {
+          "root": "candidate",
+          "path": "scripts/reproduce.py",
+          "sha256": "e1a500eb971f1b8a641a007718fb3fcb31310704cc684348b7177197ab0fd4c6"
+        },
+        {
+          "root": "candidate",
+          "path": "scripts/recompute_entry.py",
+          "sha256": "f259beadbd40cb46f0afbbdeec52005ebc8e2089877152801c017663c53f4ba2"
+        },
+        {
+          "root": "candidate",
+          "path": "artifact-manifest.json",
+          "sha256": "f19adfe0d417fee3629ef5cc53663a44e9ce9a394e0f8549d11583a643c856e7"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "score": 1,
+      "reason": "Concrete self-review identifies upstream limitations and verification boundaries at the exact reviewed source/artifact revision.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "review.json",
+          "sha256": "b7962a9c22c437dcda24b8d47f19df40246f27f2213d81bb7600b8157cc59496"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/final/verification.json",
+          "sha256": "97a55fc829107db242227bd3ea29cb8dc29be3e156cd368df67a3cda13dc2b26"
+        }
+      ]
+    }
+  ],
+  "critical_findings_unresolved": [],
+  "coordinator_task_messages": 0,
+  "candidate_edits_by_controller": 0,
+  "treatment_compliance": "Plain condition: no installed Allagma methods or framework records required; common resource instrumentation only.",
+  "scope": "Controller source/artifact inspection plus protected original scoring and observed execution. Same-model/controller critique is provisional, not independent scientific peer review.",
+  "review_material": {
+    "root": "candidate",
+    "path": "review.json",
+    "sha256": "b7962a9c22c437dcda24b8d47f19df40246f27f2213d81bb7600b8157cc59496"
+  }
+}

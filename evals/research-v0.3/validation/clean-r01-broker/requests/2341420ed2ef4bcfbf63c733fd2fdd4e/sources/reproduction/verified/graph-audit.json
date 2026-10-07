@@ -1,0 +1,247 @@
+{
+  "checks": [
+    "Exact source seed-42 permutation and all retained train/test indices",
+    "Every class edge comes from an appropriate training label; no test-label class edges",
+    "All 12 score matrices independently reconstructed from retained graph edges using Python sets and math.log",
+    "Independent score argmax agrees with every saved prediction"
+  ],
+  "limitations": [
+    "Does not prove nearest-neighbor graph construction for every possible input",
+    "Does not compare with unavailable original capsule outputs or establish generalization"
+  ],
+  "passed": true,
+  "results": [
+    {
+      "actual_predictor": "CS",
+      "dataset": "iris",
+      "max_score_error": 1.7763568394002505e-15,
+      "predictions_match": true,
+      "printed_label": "CN",
+      "self_loop_nodes": [
+        10
+      ],
+      "tied_maximum_test_cases": 0
+    },
+    {
+      "actual_predictor": "CS",
+      "dataset": "iris",
+      "max_score_error": 1.7763568394002505e-15,
+      "predictions_match": true,
+      "printed_label": "AA",
+      "self_loop_nodes": [
+        10
+      ],
+      "tied_maximum_test_cases": 0
+    },
+    {
+      "actual_predictor": "CS",
+      "dataset": "iris",
+      "max_score_error": 1.7763568394002505e-15,
+      "predictions_match": true,
+      "printed_label": "RA",
+      "self_loop_nodes": [
+        10
+      ],
+      "tied_maximum_test_cases": 0
+    },
+    {
+      "actual_predictor": "CS",
+      "dataset": "iris",
+      "max_score_error": 1.7763568394002505e-15,
+      "predictions_match": true,
+      "printed_label": "CS",
+      "self_loop_nodes": [
+        10
+      ],
+      "tied_maximum_test_cases": 0
+    },
+    {
+      "actual_predictor": "CS",
+      "dataset": "zoo",
+      "max_score_error": 0.0,
+      "predictions_match": true,
+      "printed_label": "CN",
+      "self_loop_nodes": [
+        5,
+        9,
+        12,
+        15,
+        20,
+        22,
+        25,
+        26,
+        29,
+        31,
+        32,
+        33,
+        34,
+        37,
+        38,
+        42,
+        44,
+        46,
+        48,
+        62,
+        70,
+        73,
+        74,
+        75,
+        90,
+        93,
+        96,
+        97
+      ],
+      "tied_maximum_test_cases": 0
+    },
+    {
+      "actual_predictor": "CS",
+      "dataset": "zoo",
+      "max_score_error": 0.0,
+      "predictions_match": true,
+      "printed_label": "AA",
+      "self_loop_nodes": [
+        5,
+        9,
+        12,
+        15,
+        20,
+        22,
+        25,
+        26,
+        29,
+        31,
+        32,
+        33,
+        34,
+        37,
+        38,
+        42,
+        44,
+        46,
+        48,
+        62,
+        70,
+        73,
+        74,
+        75,
+        90,
+        93,
+        96,
+        97
+      ],
+      "tied_maximum_test_cases": 0
+    },
+    {
+      "actual_predictor": "CS",
+      "dataset": "zoo",
+      "max_score_error": 0.0,
+      "predictions_match": true,
+      "printed_label": "RA",
+      "self_loop_nodes": [
+        5,
+        9,
+        12,
+        15,
+        20,
+        22,
+        25,
+        26,
+        29,
+        31,
+        32,
+        33,
+        34,
+        37,
+        38,
+        42,
+        44,
+        46,
+        48,
+        62,
+        70,
+        73,
+        74,
+        75,
+        90,
+        93,
+        96,
+        97
+      ],
+      "tied_maximum_test_cases": 0
+    },
+    {
+      "actual_predictor": "CS",
+      "dataset": "zoo",
+      "max_score_error": 0.0,
+      "predictions_match": true,
+      "printed_label": "CS",
+      "self_loop_nodes": [
+        5,
+        9,
+        12,
+        15,
+        20,
+        22,
+        25,
+        26,
+        29,
+        31,
+        32,
+        33,
+        34,
+        37,
+        38,
+        42,
+        44,
+        46,
+        48,
+        62,
+        70,
+        73,
+        74,
+        75,
+        90,
+        93,
+        96,
+        97
+      ],
+      "tied_maximum_test_cases": 0
+    },
+    {
+      "actual_predictor": "CN",
+      "dataset": "wine",
+      "max_score_error": 0.0,
+      "predictions_match": true,
+      "printed_label": "CN",
+      "self_loop_nodes": [],
+      "tied_maximum_test_cases": 1
+    },
+    {
+      "actual_predictor": "AA",
+      "dataset": "wine",
+      "max_score_error": 8.881784197001252e-16,
+      "predictions_match": true,
+      "printed_label": "AA",
+      "self_loop_nodes": [],
+      "tied_maximum_test_cases": 0
+    },
+    {
+      "actual_predictor": "RA",
+      "dataset": "wine",
+      "max_score_error": 2.220446049250313e-16,
+      "predictions_match": true,
+      "printed_label": "RA",
+      "self_loop_nodes": [],
+      "tied_maximum_test_cases": 0
+    },
+    {
+      "actual_predictor": "CS",
+      "dataset": "wine",
+      "max_score_error": 8.881784197001252e-16,
+      "predictions_match": true,
+      "printed_label": "CS",
+      "self_loop_nodes": [],
+      "tied_maximum_test_cases": 0
+    }
+  ]
+}

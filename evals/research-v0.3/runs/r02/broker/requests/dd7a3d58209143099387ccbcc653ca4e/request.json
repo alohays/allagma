@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r02/candidate/.venv/bin/python",
+    "scripts/recompute.py",
+    "--run",
+    "runs/attempt02",
+    "--compare-run",
+    "reproductions/validation/runs/attempt01",
+    "--output",
+    "recomputed",
+    "--expected",
+    "report.json"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "retained-evidence-recompute",
+  "request_id": "dd7a3d58209143099387ccbcc653ca4e",
+  "timeout_seconds": 30.0
+}

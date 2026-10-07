@@ -115,3 +115,24 @@ Run **r02 (CORE CULP, plain Codex, replicate 2)** is now active under exec sessi
 **24362**. It replaces r01 as the live handle to poll. Account usage before launch
 was 12% of the weekly window, with ordinary use allowed. Follow the remaining
 frozen run order; do not alter controlled files or provide task-specific guidance.
+
+## First matched pair and clean-checkout gate complete
+
+r01 (Allagma) and r02 (plain), CORE CULP replicate 2, are both terminal and
+controller-verified: original scores 6/6, evidence 8/8, zero task-specific
+coordinator messages. Preserve these outcomes; no broad superiority inference is
+supported by this first pair. Exact costs, corrected failures and native traces
+remain under each run directory.
+
+The r01 package was restored from a clean Git clone at `a5ac168`, with all 1,085
+file/dependency hashes verified. Full execution created `.venv-clean-checkout`,
+reran the pilot and all three scripts, checked graph scores, and reproduced the
+six answers. A separate raw-only recomputation matched too. This passes the
+required at-least-one full clean-checkout reproduction gate for CORE, not a
+retraining claim for the other two tasks. Evidence: `validation/clean-r01-results/`.
+
+**Active run: r03, modular addition, plain Codex, replicate 2. Exec session 88620.**
+Poll that handle or its actual process; do not restart based on a file or an
+observation timeout. Next is r04. Account usage before r03 was 13% weekly,
+ordinary use allowed. Ten final runs and the remaining task packages, comparison
+report and release audit are still required. Frozen controls remain unchanged.

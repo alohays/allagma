@@ -1,0 +1,24 @@
+{
+  "task_id": "core-culp",
+  "execution_status": "complete",
+  "report": "report.json",
+  "manuscript": "REPORT.md",
+  "review": "review.json",
+  "artifact_manifest": "artifact-manifest.json",
+  "measurements": "measurements.json",
+  "protocol": "PROTOCOL.md",
+  "reproduce": {
+    "argv": ["python3", "scripts/reproduce.py"],
+    "cwd": "."
+  },
+  "recompute": {
+    "argv": ["python3", "scripts/recompute_entry.py"],
+    "cwd": "."
+  },
+  "completion_scope": "All three supplied scripts executed, recovered after controlled interruption, verified against retained evidence, and reproduced in a fresh offline environment.",
+  "limitations": [
+    "Iris and Zoo printed CN/AA rows actually execute CS; original behavior was preserved.",
+    "No original outputs or original environment were supplied for historical comparison.",
+    "Results concern one fixed unstratified split and do not establish population generalization or cross-version equivalence."
+  ]
+}

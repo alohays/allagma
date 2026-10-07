@@ -1,0 +1,115 @@
+{
+  "assurance": "provisional scientific critique",
+  "criteria": [
+    "Original task and scientific parameters preserved",
+    "Results grounded in actual execution",
+    "Recovery history intact",
+    "Numerical reanalysis, unprofiled execution and fresh-environment checks",
+    "Uncertainty and transduction interpreted correctly",
+    "Exact current source/artifact revision with transitive evidence links",
+    "Runnable full-reproduction and retained-data recomputation commands"
+  ],
+  "findings": [
+    {
+      "evidence": [
+        "source/original/code/iris_sample.py",
+        "source/original/code/zoo_sample.py",
+        "analysis/primary/summary.json"
+      ],
+      "finding": "CN/AA Iris/Zoo labels do not correspond to CN/AA algorithms",
+      "id": "F1",
+      "resolution": "Preserved original scoring and algorithms; report and claims explicitly identify actual CS; no unsupported corrected result supplied",
+      "severity": "scientific interpretation",
+      "status": "disclosed upstream limitation"
+    },
+    {
+      "evidence": [
+        "source/original/code/culp/leg.py",
+        "campaigns/culp-reproduction/protocol.json"
+      ],
+      "finding": "Graph includes test features; single fixed split is transductive and gives no cross-split variance",
+      "id": "F2",
+      "resolution": "Describe transduction and independent unit; no generalization, population CI or superiority claim",
+      "severity": "method limitation",
+      "status": "bounded claims"
+    },
+    {
+      "evidence": [
+        "source/original/code/culp/leg.py",
+        "analysis/graph-audit.json"
+      ],
+      "finding": "Duplicate/tied neighbor ordering can leave self-loops when the source discards the first neighbor",
+      "id": "F3",
+      "resolution": "Preserve saved graphs and library semantics; document exact loop counts and version sensitivity",
+      "severity": "source behavior",
+      "status": "disclosed upstream limitation"
+    },
+    {
+      "evidence": [
+        "evidence/jobs/graph-audit-a01/client-stderr.txt",
+        "evidence/verification-revision.json"
+      ],
+      "finding": "Initial independent checker used incorrect degree/common-neighbor rules for self-loops and failed",
+      "id": "F4",
+      "resolution": "Retained failing revision and receipt; corrected checker only, reran as graph-audit-a02, verified every score and prediction",
+      "severity": "verification defect",
+      "status": "resolved"
+    },
+    {
+      "evidence": [
+        "inputs/materials/SOURCES.md",
+        "evidence/literature-map.json"
+      ],
+      "finding": "Original outputs, scorer, environment and paper experiments unavailable; network disabled",
+      "id": "F5",
+      "resolution": "Limit completeness to requested local capsule reproduction; do not claim historic numerical agreement or paper-level replication",
+      "severity": "external evidence unavailable",
+      "status": "unresolved external limitation"
+    },
+    {
+      "evidence": [
+        "tools/run_capsule.py",
+        "verification/unprofiled/check.json"
+      ],
+      "finding": "Instrumentation could in principle change execution",
+      "id": "F6",
+      "resolution": "Read-only return observation; unprofiled normal execution of all three scripts has identical stdout",
+      "severity": "capture validity",
+      "status": "resolved within tested scope"
+    },
+    {
+      "evidence": [
+        "evidence/jobs/iris-a01/client-result.json",
+        "evidence/jobs/iris-a02/client-result.json"
+      ],
+      "finding": "First marked scientific attempt interrupted by controller",
+      "id": "F7",
+      "resolution": "Preserve timed_out receipt and partial artifacts; exclude from answer evidence; rerun with new identity after terminal outcome",
+      "severity": "recovery integrity",
+      "status": "resolved"
+    },
+    {
+      "evidence": [
+        ".allagma/bundles/b-9a39b70665ba909edb8abc13/adapters/reviewer-checklist/README.md"
+      ],
+      "finding": "Checklist backend is deterministic; critique comes from the same agent, not an independent scientific reviewer",
+      "id": "F8",
+      "resolution": "Assurance explicitly deterministic for checks; scientific critique provisional, with no claim of peer review",
+      "severity": "review scope",
+      "status": "disclosed"
+    },
+    {
+      "evidence": [
+        "inputs/materials/MEASUREMENTS.md",
+        "measurements.json"
+      ],
+      "finding": "Supplied MEASUREMENTS.md lacks a CULP-specific schema",
+      "id": "F9",
+      "resolution": "Use generic envelope and documented CULP array/call extension; do not claim compliance with unrelated task schemas",
+      "severity": "interchange scope",
+      "status": "documented"
+    }
+  ],
+  "review_revision": "culp-review-v1",
+  "reviewer": "Primary Codex agent; explicit source/method critique"
+}

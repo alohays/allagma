@@ -1,0 +1,362 @@
+[
+  {
+    "claim_id": "iris-cn",
+    "contradicting": [],
+    "dependencies": [
+      {
+        "media_type": "application/json",
+        "path": "analysis/record.json",
+        "retention": "retained in study",
+        "sha256": "8ee055c2c099dfad0ccc66c81dc07b0798af6a878e7f56dd82eb280a93074904"
+      }
+    ],
+    "limitations": [
+      "One source-prescribed fixed split; no population inference",
+      "Printed label does not identify the actual predictor: source hard-codes CS"
+    ],
+    "record_type": "ClaimRecord",
+    "schema_version": "0.2",
+    "scope": "Supplied capsule, unchanged scientific configuration, local offline environment, fixed seed-42 partitions",
+    "status": "supported",
+    "supersedes": null,
+    "supporting": [
+      {
+        "media_type": "application/json",
+        "path": "analysis/primary/iris-evaluation.json",
+        "retention": "retained in study",
+        "sha256": "ac41399456afeafce372d78bb73b531ae633bdfea94867ee34a8dcd173753742"
+      }
+    ],
+    "text": "Iris source line labelled CN reports 100.00% (30/30); actual predictor CS."
+  },
+  {
+    "claim_id": "iris-aa",
+    "contradicting": [],
+    "dependencies": [
+      {
+        "media_type": "application/json",
+        "path": "analysis/record.json",
+        "retention": "retained in study",
+        "sha256": "8ee055c2c099dfad0ccc66c81dc07b0798af6a878e7f56dd82eb280a93074904"
+      }
+    ],
+    "limitations": [
+      "One source-prescribed fixed split; no population inference",
+      "Printed label does not identify the actual predictor: source hard-codes CS"
+    ],
+    "record_type": "ClaimRecord",
+    "schema_version": "0.2",
+    "scope": "Supplied capsule, unchanged scientific configuration, local offline environment, fixed seed-42 partitions",
+    "status": "supported",
+    "supersedes": null,
+    "supporting": [
+      {
+        "media_type": "application/json",
+        "path": "analysis/primary/iris-evaluation.json",
+        "retention": "retained in study",
+        "sha256": "ac41399456afeafce372d78bb73b531ae633bdfea94867ee34a8dcd173753742"
+      }
+    ],
+    "text": "Iris source line labelled AA reports 100.00% (30/30); actual predictor CS."
+  },
+  {
+    "claim_id": "zoo-cn",
+    "contradicting": [],
+    "dependencies": [
+      {
+        "media_type": "application/json",
+        "path": "analysis/record.json",
+        "retention": "retained in study",
+        "sha256": "8ee055c2c099dfad0ccc66c81dc07b0798af6a878e7f56dd82eb280a93074904"
+      }
+    ],
+    "limitations": [
+      "One source-prescribed fixed split; no population inference",
+      "Printed label does not identify the actual predictor: source hard-codes CS"
+    ],
+    "record_type": "ClaimRecord",
+    "schema_version": "0.2",
+    "scope": "Supplied capsule, unchanged scientific configuration, local offline environment, fixed seed-42 partitions",
+    "status": "supported",
+    "supersedes": null,
+    "supporting": [
+      {
+        "media_type": "application/json",
+        "path": "analysis/primary/zoo-evaluation.json",
+        "retention": "retained in study",
+        "sha256": "8afa04c1067a18707369dcc36470d412946efe40b65d00044dd38da242ff5811"
+      }
+    ],
+    "text": "Zoo source line labelled CN reports 100.00% (21/21); actual predictor CS."
+  },
+  {
+    "claim_id": "zoo-aa",
+    "contradicting": [],
+    "dependencies": [
+      {
+        "media_type": "application/json",
+        "path": "analysis/record.json",
+        "retention": "retained in study",
+        "sha256": "8ee055c2c099dfad0ccc66c81dc07b0798af6a878e7f56dd82eb280a93074904"
+      }
+    ],
+    "limitations": [
+      "One source-prescribed fixed split; no population inference",
+      "Printed label does not identify the actual predictor: source hard-codes CS"
+    ],
+    "record_type": "ClaimRecord",
+    "schema_version": "0.2",
+    "scope": "Supplied capsule, unchanged scientific configuration, local offline environment, fixed seed-42 partitions",
+    "status": "supported",
+    "supersedes": null,
+    "supporting": [
+      {
+        "media_type": "application/json",
+        "path": "analysis/primary/zoo-evaluation.json",
+        "retention": "retained in study",
+        "sha256": "8afa04c1067a18707369dcc36470d412946efe40b65d00044dd38da242ff5811"
+      }
+    ],
+    "text": "Zoo source line labelled AA reports 100.00% (21/21); actual predictor CS."
+  },
+  {
+    "claim_id": "wine-cn",
+    "contradicting": [],
+    "dependencies": [
+      {
+        "media_type": "application/json",
+        "path": "analysis/record.json",
+        "retention": "retained in study",
+        "sha256": "8ee055c2c099dfad0ccc66c81dc07b0798af6a878e7f56dd82eb280a93074904"
+      }
+    ],
+    "limitations": [
+      "One source-prescribed fixed split; no population inference"
+    ],
+    "record_type": "ClaimRecord",
+    "schema_version": "0.2",
+    "scope": "Supplied capsule, unchanged scientific configuration, local offline environment, fixed seed-42 partitions",
+    "status": "supported",
+    "supersedes": null,
+    "supporting": [
+      {
+        "media_type": "application/json",
+        "path": "analysis/primary/wine-evaluation.json",
+        "retention": "retained in study",
+        "sha256": "d95408e44aebe1545efc3ff9fd7d4efd15c606df5e4a63f2de921749f92b42d3"
+      }
+    ],
+    "text": "Wine source line labelled CN reports 97.22% (35/36); actual predictor CN."
+  },
+  {
+    "claim_id": "wine-aa",
+    "contradicting": [],
+    "dependencies": [
+      {
+        "media_type": "application/json",
+        "path": "analysis/record.json",
+        "retention": "retained in study",
+        "sha256": "8ee055c2c099dfad0ccc66c81dc07b0798af6a878e7f56dd82eb280a93074904"
+      }
+    ],
+    "limitations": [
+      "One source-prescribed fixed split; no population inference"
+    ],
+    "record_type": "ClaimRecord",
+    "schema_version": "0.2",
+    "scope": "Supplied capsule, unchanged scientific configuration, local offline environment, fixed seed-42 partitions",
+    "status": "supported",
+    "supersedes": null,
+    "supporting": [
+      {
+        "media_type": "application/json",
+        "path": "analysis/primary/wine-evaluation.json",
+        "retention": "retained in study",
+        "sha256": "d95408e44aebe1545efc3ff9fd7d4efd15c606df5e4a63f2de921749f92b42d3"
+      }
+    ],
+    "text": "Wine source line labelled AA reports 97.22% (35/36); actual predictor AA."
+  },
+  {
+    "claim_id": "source-label-limitation",
+    "contradicting": [],
+    "dependencies": [
+      {
+        "media_type": "application/json",
+        "path": "analysis/record.json",
+        "retention": "retained in study",
+        "sha256": "8ee055c2c099dfad0ccc66c81dc07b0798af6a878e7f56dd82eb280a93074904"
+      }
+    ],
+    "limitations": [
+      "No corrected CN/AA experiment was performed for Iris or Zoo"
+    ],
+    "record_type": "ClaimRecord",
+    "schema_version": "0.2",
+    "scope": "Supplied capsule, unchanged scientific configuration, local offline environment, fixed seed-42 partitions",
+    "status": "supported",
+    "supersedes": null,
+    "supporting": [
+      {
+        "media_type": "application/octet-stream",
+        "path": "source/original/code/iris_sample.py",
+        "retention": "retained in study",
+        "sha256": "eef48c00cb56e8756ad877f84ed2f3d1a04bd3773b23148ebb2d4766fff561cb"
+      },
+      {
+        "media_type": "application/octet-stream",
+        "path": "source/original/code/zoo_sample.py",
+        "retention": "retained in study",
+        "sha256": "d3750a40e7a2eb4b6500254dd1ebef865f5a264d349310b8942c1f4ed08b8b8c"
+      },
+      {
+        "media_type": "application/octet-stream",
+        "path": "source/original/code/wine_sample.py",
+        "retention": "retained in study",
+        "sha256": "ffb9756450e5c0d1ff432e2902bede1e632c142e83f5e93be2c5987977707198"
+      }
+    ],
+    "text": "Iris and Zoo hard-code CS for all four printed predictor labels; Wine selects lp."
+  },
+  {
+    "claim_id": "recovery",
+    "contradicting": [],
+    "dependencies": [
+      {
+        "media_type": "application/json",
+        "path": "analysis/record.json",
+        "retention": "retained in study",
+        "sha256": "8ee055c2c099dfad0ccc66c81dc07b0798af6a878e7f56dd82eb280a93074904"
+      }
+    ],
+    "limitations": [
+      "Controller's original timed_out outcome is retained, with injected_interruption true"
+    ],
+    "record_type": "ClaimRecord",
+    "schema_version": "0.2",
+    "scope": "Supplied capsule, unchanged scientific configuration, local offline environment, fixed seed-42 partitions",
+    "status": "supported",
+    "supersedes": null,
+    "supporting": [
+      {
+        "media_type": "application/json",
+        "path": "evidence/jobs/iris-a01/client-result.json",
+        "retention": "retained in study",
+        "sha256": "fa941b27cf83af5be2bed2aa7c83a2e1f895d098b94440d37acda65cdc99a310"
+      },
+      {
+        "media_type": "application/json",
+        "path": "evidence/jobs/iris-a02/client-result.json",
+        "retention": "retained in study",
+        "sha256": "b62fbe30805dc7600feaefa15dc8fd9a09fbca61dc26f50d7ae789ff43449e3f"
+      },
+      {
+        "media_type": "application/json",
+        "path": "evidence/attempt-history.json",
+        "retention": "retained in study",
+        "sha256": "bf3c073e71780042b0681676a62454a32608770a0e6b9c4bae5f4f12f71e6e8a"
+      }
+    ],
+    "text": "The controlled first marked Iris attempt was preserved and recovered by a new successful attempt without changing scientific inputs."
+  },
+  {
+    "claim_id": "recomputation",
+    "contradicting": [],
+    "dependencies": [
+      {
+        "media_type": "application/json",
+        "path": "analysis/record.json",
+        "retention": "retained in study",
+        "sha256": "8ee055c2c099dfad0ccc66c81dc07b0798af6a878e7f56dd82eb280a93074904"
+      }
+    ],
+    "limitations": [
+      "Deterministic reproduction checks do not create new statistical replicates"
+    ],
+    "record_type": "ClaimRecord",
+    "schema_version": "0.2",
+    "scope": "Supplied capsule, unchanged scientific configuration, local offline environment, fixed seed-42 partitions",
+    "status": "supported",
+    "supersedes": null,
+    "supporting": [
+      {
+        "media_type": "application/json",
+        "path": "analysis/recomputed/recomputation-check.json",
+        "retention": "retained in study",
+        "sha256": "a776e7643a282fa97a15cdee2dc1fbd66c78fcf432a0bafa17cadb304c60aa71"
+      },
+      {
+        "media_type": "application/json",
+        "path": "reproduction/verified/agreement.json",
+        "retention": "retained in study",
+        "sha256": "50140b9fd3b4af88487e8093fe2e4fa3d4746ee8bb8e2bfdf72c6b50e781c030"
+      }
+    ],
+    "text": "Retained-data recomputation gives byte-identical six-answer report, summary and table; fresh-environment execution agrees on all six answers."
+  },
+  {
+    "claim_id": "graph-verification",
+    "contradicting": [],
+    "dependencies": [
+      {
+        "media_type": "application/json",
+        "path": "analysis/record.json",
+        "retention": "retained in study",
+        "sha256": "8ee055c2c099dfad0ccc66c81dc07b0798af6a878e7f56dd82eb280a93074904"
+      }
+    ],
+    "limitations": [
+      "Initial checker failed and was corrected for self-loops",
+      "No proof for all possible inputs or external reference comparison"
+    ],
+    "record_type": "ClaimRecord",
+    "schema_version": "0.2",
+    "scope": "Supplied capsule, unchanged scientific configuration, local offline environment, fixed seed-42 partitions",
+    "status": "supported",
+    "supersedes": null,
+    "supporting": [
+      {
+        "media_type": "application/json",
+        "path": "analysis/graph-audit.json",
+        "retention": "retained in study",
+        "sha256": "5fbcd636531effcd55a6cd854d275e17d2840fcd2e4b1b4f00705eef40dde26e"
+      },
+      {
+        "media_type": "application/json",
+        "path": "evidence/verification-revision.json",
+        "retention": "retained in study",
+        "sha256": "13d0e88675ff32396a98088c91a5753b7fb8bdb53f5fc33039431ea08924c77c"
+      }
+    ],
+    "text": "Independent retained-graph link scores agree within 1e-12 relative and absolute tolerance, with identical predictions."
+  },
+  {
+    "claim_id": "unprofiled-execution",
+    "contradicting": [],
+    "dependencies": [
+      {
+        "media_type": "application/json",
+        "path": "analysis/record.json",
+        "retention": "retained in study",
+        "sha256": "8ee055c2c099dfad0ccc66c81dc07b0798af6a878e7f56dd82eb280a93074904"
+      }
+    ],
+    "limitations": [
+      "Bounded check on these scripts and this environment"
+    ],
+    "record_type": "ClaimRecord",
+    "schema_version": "0.2",
+    "scope": "Supplied capsule, unchanged scientific configuration, local offline environment, fixed seed-42 partitions",
+    "status": "supported",
+    "supersedes": null,
+    "supporting": [
+      {
+        "media_type": "application/json",
+        "path": "verification/unprofiled/check.json",
+        "retention": "retained in study",
+        "sha256": "0fa3780ca171deb30908a99c982f666d87063ea2894cf23b094f7cf0a7f2bc48"
+      }
+    ],
+    "text": "All three scripts also execute normally without the capture hook and produce identical stdout."
+  }
+]

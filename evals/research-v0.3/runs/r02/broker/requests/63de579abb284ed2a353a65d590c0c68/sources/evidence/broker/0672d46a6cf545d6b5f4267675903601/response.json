@@ -1,0 +1,17 @@
+{
+  "injected_interruption": false,
+  "isolation_sha256": "4c168b337562dd28afedabf5fdc675d5e8e5bfecf5fe74b2160cc13a2b0a1ee3",
+  "reconciled_after_controller_restart": false,
+  "request_id": "0672d46a6cf545d6b5f4267675903601",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 6.230449291877449,
+    "ended_at": "2026-10-07T20:48:29.690172+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r02/resources/jobs/0008-fresh-offline-dependencies",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 207945728,
+    "peak_storage_bytes": 705519305,
+    "status": "completed"
+  }
+}

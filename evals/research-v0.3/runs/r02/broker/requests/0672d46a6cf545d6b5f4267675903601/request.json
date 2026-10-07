@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r02/candidate/reproductions/validation/venv/bin/python",
+    "-m",
+    "pip",
+    "install",
+    "--no-cache-dir",
+    "--no-index",
+    "--find-links",
+    "inputs/materials/wheels",
+    "-r",
+    "requirements.lock"
+  ],
+  "attempt": false,
+  "category": "setup",
+  "cwd": ".",
+  "label": "fresh-offline-dependencies",
+  "request_id": "0672d46a6cf545d6b5f4267675903601",
+  "timeout_seconds": 90.0
+}

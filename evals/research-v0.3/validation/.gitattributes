@@ -1,0 +1,3 @@
+# Source snapshots are verbatim evidence, including upstream line endings.
+*-broker/requests/*/sources/** -text -whitespace conflict-marker-size=128
+clean-r01-results/**/source-snapshot/** -text -whitespace conflict-marker-size=128

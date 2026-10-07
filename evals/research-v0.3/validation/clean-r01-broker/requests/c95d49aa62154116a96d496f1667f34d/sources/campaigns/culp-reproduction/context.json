@@ -1,0 +1,69 @@
+{
+  "content": {
+    "compute": {
+      "media_type": "application/octet-stream",
+      "path": "inputs/COMPUTE.md",
+      "retention": "retained in study",
+      "sha256": "ac8f4265812035ab9c856bfb6805bacf6e991fd4ea5e9a7d28f44956f9aabae7"
+    },
+    "constraints": {
+      "media_type": "application/json",
+      "path": "inputs/RESOURCES.json",
+      "retention": "retained in study",
+      "sha256": "36757ac6d373298f00bcae4a354e2b39e4d49e722bbc18d62da29f66872b1f69"
+    },
+    "lock": {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/culp-reproduction/lock.yaml",
+      "retention": "retained in study",
+      "sha256": "6070e4a1f44084e9bcbd7e4f10e0cc829d524a707d6d8fafc8cf2d1436b175bc"
+    },
+    "prior_work": {
+      "media_type": "application/json",
+      "path": "evidence/literature-map.json",
+      "retention": "retained in study",
+      "sha256": "d90c29d0be05e7374049b69d5bfe77e0fd52f408a7b5e7b0664eeba55a9c3955"
+    },
+    "protocol": {
+      "media_type": "application/json",
+      "path": "campaigns/culp-reproduction/protocol.json",
+      "retention": "retained in study",
+      "sha256": "4673ef730fcda1c3e92dbf93c00690b953d369f644be86de5bad30fc25364a3d"
+    },
+    "question": {
+      "media_type": "application/json",
+      "path": "campaigns/culp-reproduction/brief.json",
+      "retention": "retained in study",
+      "sha256": "eb8b23f17761baef331c9f07c7958ad7363dcb199eadcf35bcecc8b2f3e31001"
+    },
+    "source_findings": {
+      "media_type": "application/json",
+      "path": "evidence/provenance.json",
+      "retention": "retained in study",
+      "sha256": "15553929726e34de35cbdf0c3206568777f695fab19d912ce9985864c796538f"
+    }
+  },
+  "context_id": "culp-preconfirmation",
+  "limitations": [],
+  "method_id": "context/active-brief",
+  "omitted": [],
+  "record_type": "ContextRecord",
+  "required": [
+    "question",
+    "constraints",
+    "compute",
+    "protocol",
+    "lock",
+    "source_findings"
+  ],
+  "schema_version": "0.2",
+  "selected": [
+    "question",
+    "constraints",
+    "compute",
+    "protocol",
+    "lock",
+    "source_findings",
+    "prior_work"
+  ]
+}

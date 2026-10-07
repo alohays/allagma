@@ -1,0 +1,87 @@
+{
+  "assurance": "deterministic",
+  "backend": "reviewer/checklist + tools/verify_package.py + primary Codex source critique",
+  "backend_version": "Allagma 0.3.0rc1, bundle b-9a39b70665ba909edb8abc13; code revisions in review material",
+  "coverage": "Locked adapter: claim schemas and direct evidence/material digests. Study verifier: exact source adaptations, preconfirmation science revision, transitive references, six answers, manuscript rendering, 120 arrays versus fresh execution, interruption recovery and measurement archives. Agent critique is provisional, not independent scientific peer review. No original-output agreement or generalization claim.",
+  "criteria": [
+    "Original task and scientific parameters preserved",
+    "Results grounded in actual execution",
+    "Recovery history intact",
+    "Numerical reanalysis, unprofiled execution and fresh-environment checks",
+    "Uncertainty and transduction interpreted correctly",
+    "Exact current source/artifact revision with transitive evidence links",
+    "Runnable full-reproduction and retained-data recomputation commands"
+  ],
+  "findings": [
+    "F1: CN/AA Iris/Zoo labels do not correspond to CN/AA algorithms Resolution: Preserved original scoring and algorithms; report and claims explicitly identify actual CS; no unsupported corrected result supplied Status: disclosed upstream limitation.",
+    "F2: Graph includes test features; single fixed split is transductive and gives no cross-split variance Resolution: Describe transduction and independent unit; no generalization, population CI or superiority claim Status: bounded claims.",
+    "F3: Duplicate/tied neighbor ordering can leave self-loops when the source discards the first neighbor Resolution: Preserve saved graphs and library semantics; document exact loop counts and version sensitivity Status: disclosed upstream limitation.",
+    "F4: Initial independent checker used incorrect degree/common-neighbor rules for self-loops and failed Resolution: Retained failing revision and receipt; corrected checker only, reran as graph-audit-a02, verified every score and prediction Status: resolved.",
+    "F5: Original outputs, scorer, environment and paper experiments unavailable; network disabled Resolution: Limit completeness to requested local capsule reproduction; do not claim historic numerical agreement or paper-level replication Status: unresolved external limitation.",
+    "F6: Instrumentation could in principle change execution Resolution: Read-only return observation; unprofiled normal execution of all three scripts has identical stdout Status: resolved within tested scope.",
+    "F7: First marked scientific attempt interrupted by controller Resolution: Preserve timed_out receipt and partial artifacts; exclude from answer evidence; rerun with new identity after terminal outcome Status: resolved.",
+    "F8: Checklist backend is deterministic; critique comes from the same agent, not an independent scientific reviewer Resolution: Assurance explicitly deterministic for checks; scientific critique provisional, with no claim of peer review Status: disclosed.",
+    "F9: Supplied MEASUREMENTS.md lacks a CULP-specific schema Resolution: Use generic envelope and documented CULP array/call extension; do not claim compliance with unrelated task schemas Status: documented."
+  ],
+  "material": {
+    "media_type": "application/json",
+    "path": "review-material.json",
+    "retention": "retained in study",
+    "sha256": "1d22445b822e357ddb1e78c54f2e83d3461311131fcbe182389f6f6257301ec2"
+  },
+  "record_type": "ReviewRecord",
+  "review_id": "culp-review-v1",
+  "reviewer": "Locked Allagma reviewer/checklist plus primary-agent critique and study-owned executable verification",
+  "schema_version": "0.2",
+  "trace": [
+    {
+      "media_type": "application/json",
+      "path": "review-input.json",
+      "retention": "retained in study",
+      "sha256": "ec42ccc544de0269add36973893602fc3ae7d340751645c2bf2574dddf2306cd"
+    },
+    {
+      "media_type": "application/json",
+      "path": "review-findings.json",
+      "retention": "retained in study",
+      "sha256": "e9879822ac8351f7d7fe9a8462bb97698780e2b6c23cced1b84ee3f879520e46"
+    },
+    {
+      "media_type": "application/json",
+      "path": "verification/locked-review.json",
+      "retention": "retained in study",
+      "sha256": "9c40d222178102c0e002a95cd63d53b1af3187c4a847bc233e5c181b568f38cd"
+    },
+    {
+      "media_type": "application/json",
+      "path": "verification/preseal.json",
+      "retention": "retained in study",
+      "sha256": "fc70f222cac4d7484ff58e39f4c39ed981c25bd4aed01a71a40f36b3c18806f6"
+    },
+    {
+      "media_type": "application/json",
+      "path": "analysis/recomputed/recomputation-check.json",
+      "retention": "retained in study",
+      "sha256": "a776e7643a282fa97a15cdee2dc1fbd66c78fcf432a0bafa17cadb304c60aa71"
+    },
+    {
+      "media_type": "application/json",
+      "path": "analysis/graph-audit.json",
+      "retention": "retained in study",
+      "sha256": "5fbcd636531effcd55a6cd854d275e17d2840fcd2e4b1b4f00705eef40dde26e"
+    },
+    {
+      "media_type": "application/json",
+      "path": "verification/unprofiled/check.json",
+      "retention": "retained in study",
+      "sha256": "0fa3780ca171deb30908a99c982f666d87063ea2894cf23b094f7cf0a7f2bc48"
+    },
+    {
+      "media_type": "application/json",
+      "path": "reproduction/verified/agreement.json",
+      "retention": "retained in study",
+      "sha256": "50140b9fd3b4af88487e8093fe2e4fa3d4746ee8bb8e2bfdf72c6b50e781c030"
+    }
+  ],
+  "verdict": "pass"
+}

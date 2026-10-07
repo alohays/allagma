@@ -1,0 +1,104 @@
+{
+  "extension": "CULP-specific retained dataset/split arrays and per-call prediction/label/graph/score NPZ files; all load with allow_pickle=False. Supplied MEASUREMENTS.md specifies no CULP-specific fields.",
+  "format": "research-measurements-v1",
+  "protocol": "campaigns/culp-reproduction/protocol.json",
+  "runs": [
+    {
+      "arrays": "evidence/runs/iris-a02/dataset.npz",
+      "attempt_id": "iris-a02",
+      "calls": [
+        {
+          "actual_predictor": "CS",
+          "arrays": "evidence/runs/iris-a02/call-00.npz",
+          "printed_label": "CN"
+        },
+        {
+          "actual_predictor": "CS",
+          "arrays": "evidence/runs/iris-a02/call-01.npz",
+          "printed_label": "AA"
+        },
+        {
+          "actual_predictor": "CS",
+          "arrays": "evidence/runs/iris-a02/call-02.npz",
+          "printed_label": "RA"
+        },
+        {
+          "actual_predictor": "CS",
+          "arrays": "evidence/runs/iris-a02/call-03.npz",
+          "printed_label": "CS"
+        }
+      ],
+      "dataset": "iris",
+      "device": "cpu",
+      "phase": "confirmation",
+      "raw": "evidence/runs/iris-a02/raw.json",
+      "seed": 42,
+      "source_revision": "15553929726e34de35cbdf0c3206568777f695fab19d912ce9985864c796538f"
+    },
+    {
+      "arrays": "evidence/runs/zoo-a01/dataset.npz",
+      "attempt_id": "zoo-a01",
+      "calls": [
+        {
+          "actual_predictor": "CS",
+          "arrays": "evidence/runs/zoo-a01/call-00.npz",
+          "printed_label": "CN"
+        },
+        {
+          "actual_predictor": "CS",
+          "arrays": "evidence/runs/zoo-a01/call-01.npz",
+          "printed_label": "AA"
+        },
+        {
+          "actual_predictor": "CS",
+          "arrays": "evidence/runs/zoo-a01/call-02.npz",
+          "printed_label": "RA"
+        },
+        {
+          "actual_predictor": "CS",
+          "arrays": "evidence/runs/zoo-a01/call-03.npz",
+          "printed_label": "CS"
+        }
+      ],
+      "dataset": "zoo",
+      "device": "cpu",
+      "phase": "confirmation",
+      "raw": "evidence/runs/zoo-a01/raw.json",
+      "seed": 42,
+      "source_revision": "15553929726e34de35cbdf0c3206568777f695fab19d912ce9985864c796538f"
+    },
+    {
+      "arrays": "evidence/runs/wine-a01/dataset.npz",
+      "attempt_id": "wine-a01",
+      "calls": [
+        {
+          "actual_predictor": "CN",
+          "arrays": "evidence/runs/wine-a01/call-00.npz",
+          "printed_label": "CN"
+        },
+        {
+          "actual_predictor": "AA",
+          "arrays": "evidence/runs/wine-a01/call-01.npz",
+          "printed_label": "AA"
+        },
+        {
+          "actual_predictor": "RA",
+          "arrays": "evidence/runs/wine-a01/call-02.npz",
+          "printed_label": "RA"
+        },
+        {
+          "actual_predictor": "CS",
+          "arrays": "evidence/runs/wine-a01/call-03.npz",
+          "printed_label": "CS"
+        }
+      ],
+      "dataset": "wine",
+      "device": "cpu",
+      "phase": "confirmation",
+      "raw": "evidence/runs/wine-a01/raw.json",
+      "seed": 42,
+      "source_revision": "15553929726e34de35cbdf0c3206568777f695fab19d912ce9985864c796538f"
+    }
+  ],
+  "task_id": "core-culp"
+}

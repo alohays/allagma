@@ -1,0 +1,53 @@
+{
+  "checks": [
+    "All printed percentages exactly equal scores from retained predictions/labels",
+    "All saved scores select saved predictions via source argmax",
+    "Split indices partition input rows and recover every saved train/test label",
+    "Inputs equal indexed raw features, with train-only Wine normalization",
+    "All observed predictor, k, distance and n_jobs settings match original source"
+  ],
+  "raw": {
+    "media_type": "application/json",
+    "path": "evidence/runs/wine-a01/raw.json",
+    "retention": "retained in study",
+    "sha256": "b133ace63bf4c35705c43d063bff2184dc97ec30f6ecfa25bb9c653c437e44b4"
+  },
+  "rows": [
+    {
+      "accuracy": 0.9722222222222222,
+      "actual_predictor": "CN",
+      "correct": 35,
+      "dataset": "wine",
+      "printed_label": "CN",
+      "printed_percent": 97.22,
+      "total": 36
+    },
+    {
+      "accuracy": 0.9722222222222222,
+      "actual_predictor": "AA",
+      "correct": 35,
+      "dataset": "wine",
+      "printed_label": "AA",
+      "printed_percent": 97.22,
+      "total": 36
+    },
+    {
+      "accuracy": 0.9722222222222222,
+      "actual_predictor": "RA",
+      "correct": 35,
+      "dataset": "wine",
+      "printed_label": "RA",
+      "printed_percent": 97.22,
+      "total": 36
+    },
+    {
+      "accuracy": 1.0,
+      "actual_predictor": "CS",
+      "correct": 36,
+      "dataset": "wine",
+      "printed_label": "CS",
+      "printed_percent": 100.0,
+      "total": 36
+    }
+  ]
+}

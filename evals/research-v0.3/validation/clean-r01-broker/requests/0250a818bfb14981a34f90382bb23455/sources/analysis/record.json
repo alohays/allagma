@@ -1,0 +1,116 @@
+{
+  "analysis_id": "culp-a001",
+  "analysis_revision": "338959e1c0c5d234ac819682668cf114e9436f600ccc811255f741202624074c",
+  "code": {
+    "media_type": "application/octet-stream",
+    "path": "tools/analyze.py",
+    "retention": "retained in study",
+    "sha256": "338959e1c0c5d234ac819682668cf114e9436f600ccc811255f741202624074c"
+  },
+  "configuration": {
+    "fixed_split_per_dataset": true,
+    "independent_unit": "Dataset/fixed partition; retries and predictor calls are not independent repetitions",
+    "minimum_confirmation_runs": 3,
+    "source_score": "round(100*float(numpy.mean(prediction==y_test)),2)",
+    "units": "percent"
+  },
+  "dependencies": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "tools/evaluate.py",
+      "retention": "retained in study",
+      "sha256": "2e1cf33c2ae294df16e30473d682033110eba15bd4b9a9a19f6033da7afb9722"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "tools/common.py",
+      "retention": "retained in study",
+      "sha256": "076958876a3701e988c6ffce4e7819b183ad1636e2204f321dd9bc1d7beccf9d"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-reproduction/protocol.json",
+      "retention": "retained in study",
+      "sha256": "4673ef730fcda1c3e92dbf93c00690b953d369f644be86de5bad30fc25364a3d"
+    },
+    {
+      "media_type": "application/json",
+      "path": "analysis/recomputed/recomputation-check.json",
+      "retention": "retained in study",
+      "sha256": "a776e7643a282fa97a15cdee2dc1fbd66c78fcf432a0bafa17cadb304c60aa71"
+    },
+    {
+      "media_type": "application/json",
+      "path": "analysis/graph-audit.json",
+      "retention": "retained in study",
+      "sha256": "5fbcd636531effcd55a6cd854d275e17d2840fcd2e4b1b4f00705eef40dde26e"
+    },
+    {
+      "media_type": "application/json",
+      "path": "reproduction/verified/agreement.json",
+      "retention": "retained in study",
+      "sha256": "50140b9fd3b4af88487e8093fe2e4fa3d4746ee8bb8e2bfdf72c6b50e781c030"
+    }
+  ],
+  "exclusions": [
+    {
+      "attempt_id": "iris-a01",
+      "reason": "Controlled interruption"
+    },
+    {
+      "attempt_id": "pilot-a01",
+      "reason": "Synthetic qualification only"
+    },
+    {
+      "attempt_id": "fresh runs",
+      "reason": "Reproduction agreement, not extra independent observations"
+    }
+  ],
+  "outputs": [
+    {
+      "media_type": "application/json",
+      "path": "analysis/primary/iris-evaluation.json",
+      "retention": "retained in study",
+      "sha256": "ac41399456afeafce372d78bb73b531ae633bdfea94867ee34a8dcd173753742"
+    },
+    {
+      "media_type": "application/json",
+      "path": "analysis/primary/report.json",
+      "retention": "retained in study",
+      "sha256": "e5d07d5a6b2983fdd14a6cd9364fc9c88210d12d73da7df0a958fec3275d42c5"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "analysis/primary/results-table.md",
+      "retention": "retained in study",
+      "sha256": "0661bf5df7552360bfbe17f36a4acf0f9fb84c2c587721435b164efb6796484b"
+    },
+    {
+      "media_type": "application/json",
+      "path": "analysis/primary/summary.json",
+      "retention": "retained in study",
+      "sha256": "c211ac06da93cf0676d61a9aed5e02a83cb9ca078bcec84d18d09f16aceff330"
+    },
+    {
+      "media_type": "application/json",
+      "path": "analysis/primary/wine-evaluation.json",
+      "retention": "retained in study",
+      "sha256": "d95408e44aebe1545efc3ff9fd7d4efd15c606df5e4a63f2de921749f92b42d3"
+    },
+    {
+      "media_type": "application/json",
+      "path": "analysis/primary/zoo-evaluation.json",
+      "retention": "retained in study",
+      "sha256": "8afa04c1067a18707369dcc36470d412946efe40b65d00044dd38da242ff5811"
+    }
+  ],
+  "raw_manifest": {
+    "media_type": "application/json",
+    "path": "evidence/raw-manifest.json",
+    "retention": "retained in study",
+    "sha256": "0ed3cf56b6a90b85af10074bccba8d90036d1eca645d937c83654800f6665f96"
+  },
+  "record_type": "AnalysisRecord",
+  "schema_version": "0.2",
+  "uncertainty": "No population interval: deterministic fixed-split reproduction with retained correct/total counts; no stochastic repetitions."
+}

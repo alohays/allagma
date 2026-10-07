@@ -1,0 +1,192 @@
+{
+  "broker_argv": [
+    "/usr/local/bin/python3",
+    "inputs/compute.py",
+    "--category",
+    "compute",
+    "--label",
+    "fresh-iris-a01",
+    "--timeout",
+    "60",
+    "--attempt",
+    "--",
+    "/Users/iyunseong/maangeek/allagma/work/v03-validation/clean-r01/.venv-clean-checkout/bin/python",
+    "tools/run_capsule.py",
+    "--dataset",
+    "iris",
+    "--out",
+    "reproduction/clean-checkout/iris-a01"
+  ],
+  "category": "compute",
+  "command": [
+    "/Users/iyunseong/maangeek/allagma/work/v03-validation/clean-r01/.venv-clean-checkout/bin/python",
+    "tools/run_capsule.py",
+    "--dataset",
+    "iris",
+    "--out",
+    "reproduction/clean-checkout/iris-a01"
+  ],
+  "cwd": ".",
+  "environment": {
+    "media_type": "application/json",
+    "path": "reproduction/clean-checkout/environment.json",
+    "retention": "retained in study",
+    "sha256": "97b77044d548815db85619b9e5e4ed3d561af32ba2f3a363827a066963127b26"
+  },
+  "identity": "fresh-iris-a01",
+  "marked_attempt": true,
+  "source_snapshot": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "reproduction/clean-checkout/jobs/fresh-iris-a01/source-snapshot/tools/analyze.py",
+      "retention": "retained in study",
+      "sha256": "338959e1c0c5d234ac819682668cf114e9436f600ccc811255f741202624074c"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "reproduction/clean-checkout/jobs/fresh-iris-a01/source-snapshot/tools/audit_science.py",
+      "retention": "retained in study",
+      "sha256": "52076934f3aac68fc83eda90281991bdf774dd18e9d051c1da48ff2e3e6674cf"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "reproduction/clean-checkout/jobs/fresh-iris-a01/source-snapshot/tools/broker_job.py",
+      "retention": "retained in study",
+      "sha256": "4bdedd5b83f59dfd0a7679801fa530b509e13573b7f4ec5c8161c2d33e0aae6f"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "reproduction/clean-checkout/jobs/fresh-iris-a01/source-snapshot/tools/build_review.py",
+      "retention": "retained in study",
+      "sha256": "ddc9a791a55a57802b2b8b0336331507b9dac53b9bcd007d610f7a98d96ae4c1"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "reproduction/clean-checkout/jobs/fresh-iris-a01/source-snapshot/tools/check_direct.py",
+      "retention": "retained in study",
+      "sha256": "de8c291b9bd6012b358794bf883aba73c9601aa312d3a852a01848c0ece6dbd8"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "reproduction/clean-checkout/jobs/fresh-iris-a01/source-snapshot/tools/collect_evidence.py",
+      "retention": "retained in study",
+      "sha256": "f52aa5a772893df102334704a3c8f37828c3c83f5f9e2b25d53bd4a41c952ef8"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "reproduction/clean-checkout/jobs/fresh-iris-a01/source-snapshot/tools/common.py",
+      "retention": "retained in study",
+      "sha256": "076958876a3701e988c6ffce4e7819b183ad1636e2204f321dd9bc1d7beccf9d"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "reproduction/clean-checkout/jobs/fresh-iris-a01/source-snapshot/tools/environment.py",
+      "retention": "retained in study",
+      "sha256": "a4fabb7234c197b136d51d517ed72c0475d2e27e09bb9bfe26bfcb5616c4f487"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "reproduction/clean-checkout/jobs/fresh-iris-a01/source-snapshot/tools/evaluate.py",
+      "retention": "retained in study",
+      "sha256": "2e1cf33c2ae294df16e30473d682033110eba15bd4b9a9a19f6033da7afb9722"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "reproduction/clean-checkout/jobs/fresh-iris-a01/source-snapshot/tools/pilot.py",
+      "retention": "retained in study",
+      "sha256": "9deb99e5cfc39aab4e32021abb876b99d23efa0d2e521f9b6dc2391cc5bdb15b"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "reproduction/clean-checkout/jobs/fresh-iris-a01/source-snapshot/tools/prepare_study.py",
+      "retention": "retained in study",
+      "sha256": "616951e944c09a7f60b3f6bb039d82c96435af9b4e882407f40b055e8ad96e62"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "reproduction/clean-checkout/jobs/fresh-iris-a01/source-snapshot/tools/reproduce.py",
+      "retention": "retained in study",
+      "sha256": "ee004561c0429fe4c4f5d8c8d2a9cfd00ac350dab605bde2056a0e791ba0b9ac"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "reproduction/clean-checkout/jobs/fresh-iris-a01/source-snapshot/tools/run_capsule.py",
+      "retention": "retained in study",
+      "sha256": "611273d4406ddc4693d92fa82d62adc1c458afc03e3ac93881cb2a67cee83f0c"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "reproduction/clean-checkout/jobs/fresh-iris-a01/source-snapshot/tools/seal_package.py",
+      "retention": "retained in study",
+      "sha256": "a0d1b3cee95e09c350e27417b18054fa0af614f2e13fc590385038fca9bd516d"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "reproduction/clean-checkout/jobs/fresh-iris-a01/source-snapshot/tools/verify_package.py",
+      "retention": "retained in study",
+      "sha256": "9f679463cb1bf5925a1fdf0b0af9b1afc028fa141df12846d6f299f1d03594fb"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "reproduction/clean-checkout/jobs/fresh-iris-a01/source-snapshot/tools/write_report.py",
+      "retention": "retained in study",
+      "sha256": "4cab34717470a25bbc84f6939b598f6e298b6d243bbb948a793aa274754e3b0a"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "reproduction/clean-checkout/jobs/fresh-iris-a01/source-snapshot/source/adapted/code/culp/__init__.py",
+      "retention": "retained in study",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "reproduction/clean-checkout/jobs/fresh-iris-a01/source-snapshot/source/adapted/code/culp/classifier.py",
+      "retention": "retained in study",
+      "sha256": "29765277bbcc3dc11f03d60d3a22c1e8b6e0688870f6329c3347e8d9480928b0"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "reproduction/clean-checkout/jobs/fresh-iris-a01/source-snapshot/source/adapted/code/culp/leg.py",
+      "retention": "retained in study",
+      "sha256": "620577a43e68a32c8228193aa47d541b569857f6bb9f6007da07eb9e94d7da55"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "reproduction/clean-checkout/jobs/fresh-iris-a01/source-snapshot/source/adapted/code/culp/link_predictors.py",
+      "retention": "retained in study",
+      "sha256": "70347199ed928229a7d1cd7cffc31137e443cc8ee2f61ef398ba8ccc552b8243"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "reproduction/clean-checkout/jobs/fresh-iris-a01/source-snapshot/source/adapted/code/iris_sample.py",
+      "retention": "retained in study",
+      "sha256": "eef48c00cb56e8756ad877f84ed2f3d1a04bd3773b23148ebb2d4766fff561cb"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "reproduction/clean-checkout/jobs/fresh-iris-a01/source-snapshot/source/adapted/code/wine_sample.py",
+      "retention": "retained in study",
+      "sha256": "92efce2e73ad9a8c95ba8dfe8bc763a9a222eef773ddbadcb51852b332568562"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "reproduction/clean-checkout/jobs/fresh-iris-a01/source-snapshot/source/adapted/code/zoo_sample.py",
+      "retention": "retained in study",
+      "sha256": "a4a52a3dcc4708ef67ae8ecf6672433df836549046e98c5b66db2d8604099715"
+    },
+    {
+      "media_type": "application/json",
+      "path": "reproduction/clean-checkout/jobs/fresh-iris-a01/source-snapshot/protocol.json",
+      "retention": "retained in study",
+      "sha256": "4673ef730fcda1c3e92dbf93c00690b953d369f644be86de5bad30fc25364a3d"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "reproduction/clean-checkout/jobs/fresh-iris-a01/source-snapshot/requirements.lock.txt",
+      "retention": "retained in study",
+      "sha256": "75ca99f2cd2bdad786a1d9b09bf7a101e4582ca465d52befde3823dd118c37ef"
+    }
+  ],
+  "started_at": "2026-10-07T21:02:07.586599+00:00",
+  "timeout_seconds": 60
+}

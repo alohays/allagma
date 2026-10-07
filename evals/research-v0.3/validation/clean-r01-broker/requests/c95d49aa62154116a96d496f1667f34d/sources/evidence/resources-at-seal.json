@@ -1,0 +1,316 @@
+{
+  "ceilings": {
+    "compute_requests": 32,
+    "compute_seconds": 600,
+    "native_wall_seconds": 3600,
+    "setup_seconds": 300
+  },
+  "charged_seconds": {
+    "compute": 75.39397882996127,
+    "setup": 15.429592083673924
+  },
+  "compute_requests": 19,
+  "receipts": [
+    {
+      "category": "compute",
+      "charged_seconds": 0.16229500016197562,
+      "identity": "analyze-a01",
+      "receipt": {
+        "media_type": "application/json",
+        "path": "evidence/jobs/analyze-a01/client-result.json",
+        "retention": "retained in study",
+        "sha256": "103cd05d8e28a43169c61065249a03dab3824ca5fe4cff3848c98538b1611e4d"
+      },
+      "status": "completed"
+    },
+    {
+      "category": "setup",
+      "charged_seconds": 0.15625383285805583,
+      "identity": "environment-metadata",
+      "receipt": {
+        "media_type": "application/json",
+        "path": "evidence/jobs/environment-metadata/client-result.json",
+        "retention": "retained in study",
+        "sha256": "7ec06ae303a529505a833be7ee308e8381e92f37a41ac0aa45f647dd7b7891df"
+      },
+      "status": "completed"
+    },
+    {
+      "category": "compute",
+      "charged_seconds": 0.16261324984952807,
+      "identity": "graph-audit-a01",
+      "receipt": {
+        "media_type": "application/json",
+        "path": "evidence/jobs/graph-audit-a01/client-result.json",
+        "retention": "retained in study",
+        "sha256": "549bfc9474dcf76d118c512e1470d412a76b124d333637115518476eda08e0ff"
+      },
+      "status": "failed"
+    },
+    {
+      "category": "compute",
+      "charged_seconds": 0.16417504101991653,
+      "identity": "graph-audit-a02",
+      "receipt": {
+        "media_type": "application/json",
+        "path": "evidence/jobs/graph-audit-a02/client-result.json",
+        "retention": "retained in study",
+        "sha256": "2ba32c2f3947ceccca74982016670510067eb75ba85a78c24f0d89aae044698c"
+      },
+      "status": "completed"
+    },
+    {
+      "category": "compute",
+      "charged_seconds": 1.1173052920494229,
+      "identity": "iris-a01",
+      "receipt": {
+        "media_type": "application/json",
+        "path": "evidence/jobs/iris-a01/client-result.json",
+        "retention": "retained in study",
+        "sha256": "fa941b27cf83af5be2bed2aa7c83a2e1f895d098b94440d37acda65cdc99a310"
+      },
+      "status": "timed_out"
+    },
+    {
+      "category": "compute",
+      "charged_seconds": 2.24552954104729,
+      "identity": "iris-a02",
+      "receipt": {
+        "media_type": "application/json",
+        "path": "evidence/jobs/iris-a02/client-result.json",
+        "retention": "retained in study",
+        "sha256": "b62fbe30805dc7600feaefa15dc8fd9a09fbca61dc26f50d7ae789ff43449e3f"
+      },
+      "status": "completed"
+    },
+    {
+      "category": "compute",
+      "charged_seconds": 0.30017995787784457,
+      "identity": "locked-review-a01",
+      "receipt": {
+        "media_type": "application/json",
+        "path": "evidence/jobs/locked-review-a01/client-result.json",
+        "retention": "retained in study",
+        "sha256": "4638463b8e1a8e63c55ca2e3bafd04e3a2f805eede4767c717f7097e92514a71"
+      },
+      "status": "completed"
+    },
+    {
+      "category": "compute",
+      "charged_seconds": 30.834908583201468,
+      "identity": "pilot-a01",
+      "receipt": {
+        "media_type": "application/json",
+        "path": "evidence/jobs/pilot-a01/client-result.json",
+        "retention": "retained in study",
+        "sha256": "3df440ee2e706dccb5e4a552d0c4d589ab5a25c3aa55ee67eb0f9efa9e683f8c"
+      },
+      "status": "completed"
+    },
+    {
+      "category": "compute",
+      "charged_seconds": 0.29592150007374585,
+      "identity": "prepare-review-a01",
+      "receipt": {
+        "media_type": "application/json",
+        "path": "evidence/jobs/prepare-review-a01/client-result.json",
+        "retention": "retained in study",
+        "sha256": "55ef218f10ac621fbacb4f1c80d947dfdab2ae2ceaee4b58705e170416c0f679"
+      },
+      "status": "completed"
+    },
+    {
+      "category": "compute",
+      "charged_seconds": 0.3002712500747293,
+      "identity": "preseal-check-a01",
+      "receipt": {
+        "media_type": "application/json",
+        "path": "evidence/jobs/preseal-check-a01/client-result.json",
+        "retention": "retained in study",
+        "sha256": "9f24b3f5f26780100a20aa5064d9a0f511559c3884a809803017b5867a3269cf"
+      },
+      "status": "completed"
+    },
+    {
+      "category": "compute",
+      "charged_seconds": 0.1615918749012053,
+      "identity": "recompute-a01",
+      "receipt": {
+        "media_type": "application/json",
+        "path": "evidence/jobs/recompute-a01/client-result.json",
+        "retention": "retained in study",
+        "sha256": "239a5154bc6f9a83dbcbca732aaa8cfbdf8173a809fcb473f3864283c5b073ce"
+      },
+      "status": "completed"
+    },
+    {
+      "category": "compute",
+      "charged_seconds": 2.472635957878083,
+      "identity": "unprofiled-check-a01",
+      "receipt": {
+        "media_type": "application/json",
+        "path": "evidence/jobs/unprofiled-check-a01/client-result.json",
+        "retention": "retained in study",
+        "sha256": "a1b6c52931008088acf19c08d7acac94c486b224835efddc89895ef89bce5371"
+      },
+      "status": "completed"
+    },
+    {
+      "category": "compute",
+      "charged_seconds": 0.9852407078724355,
+      "identity": "wine-a01",
+      "receipt": {
+        "media_type": "application/json",
+        "path": "evidence/jobs/wine-a01/client-result.json",
+        "retention": "retained in study",
+        "sha256": "4fb713bd7b9f1c824394a53a98149fb80a634a2d33e32dbd6f657466492b91ea"
+      },
+      "status": "completed"
+    },
+    {
+      "category": "compute",
+      "charged_seconds": 0.9784994160290807,
+      "identity": "zoo-a01",
+      "receipt": {
+        "media_type": "application/json",
+        "path": "evidence/jobs/zoo-a01/client-result.json",
+        "retention": "retained in study",
+        "sha256": "277867635d9074ad5e6fd243465a1602561960de3a2caa2fb392cad2545810e1"
+      },
+      "status": "completed"
+    },
+    {
+      "category": "compute",
+      "charged_seconds": 0.3047559168189764,
+      "identity": "fresh-analysis",
+      "receipt": {
+        "media_type": "application/json",
+        "path": "reproduction/verified/jobs/fresh-analysis/client-result.json",
+        "retention": "retained in study",
+        "sha256": "001b18c386e7ba00910cf7451ce45df728f9881840017c70b0efd20b1917a9df"
+      },
+      "status": "completed"
+    },
+    {
+      "category": "setup",
+      "charged_seconds": 0.2882799580693245,
+      "identity": "fresh-environment",
+      "receipt": {
+        "media_type": "application/json",
+        "path": "reproduction/verified/jobs/fresh-environment/client-result.json",
+        "retention": "retained in study",
+        "sha256": "6a40d41415c3d40235544821c6404b84a4dee852112d58c3b0f829f4c9b83ac6"
+      },
+      "status": "completed"
+    },
+    {
+      "category": "compute",
+      "charged_seconds": 0.2975586249958724,
+      "identity": "fresh-graph-audit",
+      "receipt": {
+        "media_type": "application/json",
+        "path": "reproduction/verified/jobs/fresh-graph-audit/client-result.json",
+        "retention": "retained in study",
+        "sha256": "e56778bd2fc3cca27a1ea73a2b75f481119161f88663ac3f5e0aa2689b9af1c5"
+      },
+      "status": "completed"
+    },
+    {
+      "category": "compute",
+      "charged_seconds": 2.478107958100736,
+      "identity": "fresh-iris-a01",
+      "receipt": {
+        "media_type": "application/json",
+        "path": "reproduction/verified/jobs/fresh-iris-a01/client-result.json",
+        "retention": "retained in study",
+        "sha256": "93bae0dba27bf012f2543c6385077e1613b759efbad213270c98a60fd2db1327"
+      },
+      "status": "completed"
+    },
+    {
+      "category": "setup",
+      "charged_seconds": 6.212280249921605,
+      "identity": "fresh-packages",
+      "receipt": {
+        "media_type": "application/json",
+        "path": "reproduction/verified/jobs/fresh-packages/client-result.json",
+        "retention": "retained in study",
+        "sha256": "c766a33ace943430e547e1986fd89cb6cabc002816b07d85938317b6e2e8fd2e"
+      },
+      "status": "completed"
+    },
+    {
+      "category": "compute",
+      "charged_seconds": 30.423242749879137,
+      "identity": "fresh-pilot",
+      "receipt": {
+        "media_type": "application/json",
+        "path": "reproduction/verified/jobs/fresh-pilot/client-result.json",
+        "retention": "retained in study",
+        "sha256": "65292f5435f7f422766359506d2c897eeb52f00d0ad8f062262fb4243e7ccb8e"
+      },
+      "status": "completed"
+    },
+    {
+      "category": "setup",
+      "charged_seconds": 1.4482419998385012,
+      "identity": "fresh-venv",
+      "receipt": {
+        "media_type": "application/json",
+        "path": "reproduction/verified/jobs/fresh-venv/client-result.json",
+        "retention": "retained in study",
+        "sha256": "71da8a8ee326dd2fdd701bc58e3eafd03c3ad2706563a9f628f670d9dc7151bd"
+      },
+      "status": "completed"
+    },
+    {
+      "category": "compute",
+      "charged_seconds": 0.8788052080199122,
+      "identity": "fresh-wine-a01",
+      "receipt": {
+        "media_type": "application/json",
+        "path": "reproduction/verified/jobs/fresh-wine-a01/client-result.json",
+        "retention": "retained in study",
+        "sha256": "fc5d3a4bec5906104e3c6f299a080486facc3bed23166993229c4d7bf53467ea"
+      },
+      "status": "completed"
+    },
+    {
+      "category": "compute",
+      "charged_seconds": 0.830341000109911,
+      "identity": "fresh-zoo-a01",
+      "receipt": {
+        "media_type": "application/json",
+        "path": "reproduction/verified/jobs/fresh-zoo-a01/client-result.json",
+        "retention": "retained in study",
+        "sha256": "1e9884f5e7ed5445e9bcc41b748e223368cde3d2a772bc172671530042e12eb8"
+      },
+      "status": "completed"
+    },
+    {
+      "category": "setup",
+      "charged_seconds": 1.4802013339940459,
+      "identity": "venv",
+      "receipt": {
+        "media_type": "application/json",
+        "path": "evidence/setup/venv/7f6a63c8dad9416dbcb663d3509f3d7f.json",
+        "retention": "retained in study",
+        "sha256": "ae8448e6ea49da3b24329bf9e8a112322559891d511d3337ff8b1cbaf3d5545e"
+      },
+      "status": "completed"
+    },
+    {
+      "category": "setup",
+      "charged_seconds": 5.844334708992392,
+      "identity": "packages",
+      "receipt": {
+        "media_type": "application/json",
+        "path": "evidence/setup/packages/61b7bc100dec4a28908d2179d77223c9.json",
+        "retention": "retained in study",
+        "sha256": "8cc07c7f7820fbaff8f281bf17200163b110c29743800e4f74d6e6b8e38c4297"
+      },
+      "status": "completed"
+    }
+  ],
+  "scope": "Copied broker charges through review; final package verification adds one compute request and its separate retained receipt. Controller accounting is authoritative."
+}

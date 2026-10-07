@@ -1,0 +1,117 @@
+{
+  "format": "culp-critical-review-v1",
+  "review_type": "Critical self-review with a separate mathematical implementation for retained-evidence checks; not external peer review",
+  "status": "accepted_with_preserved_source_limitations",
+  "reviewed_source_revision": "a4d31ba65afa3020c8d94c1228753f69dc0efba2dd9239782aedf3ff32a89b5f",
+  "artifact_revision_definition": "SHA-256 of json.dumps(reviewed_artifacts, sort_keys=True, separators=(',', ':')).encode(); review and manifest are excluded to avoid self-reference",
+  "checks": [
+    {
+      "id": "C01",
+      "check": "Original capsule integrity and scope of adaptation",
+      "status": "passed",
+      "establishes": "Original files match supplied inputs; only two absolute data paths differ in the adapted source, with no algorithm or parameter changes.",
+      "does_not_establish": "Equivalence to an unavailable historical software environment.",
+      "evidence": ["source/provenance.json", "source/compatibility.patch", "analysis/final/verification.json"]
+    },
+    {
+      "id": "C02",
+      "check": "All required scripts actually executed and recording transparency checked",
+      "status": "passed",
+      "establishes": "Each script completed four predictor calls; three direct uninstrumented CLI executions produce identical stdout to the recorded execution.",
+      "does_not_establish": "Correct interpretation of the printed predictor names without inspecting call arguments.",
+      "evidence": ["runs/attempt02/execution.json", "runs/direct-cli/verification.json", "runs/attempt02/iris/calls.json", "runs/attempt02/zoo/calls.json", "runs/attempt02/wine/calls.json"]
+    },
+    {
+      "id": "C03",
+      "check": "Data, exact seed-42 partition, label alignment, and train-only Wine normalization",
+      "status": "passed",
+      "establishes": "Saved data match source text or Iris CSV in the pinned wheel; disjoint exhaustive partitions match the original random permutation and transformed arrays match the original preprocessing.",
+      "does_not_establish": "Representative class coverage or independence of duplicated feature vectors.",
+      "evidence": ["analysis/final/verification.json", "analysis/final/wine_normalization.npz", "scripts/recompute.py"]
+    },
+    {
+      "id": "C04",
+      "check": "All twelve printed accuracies and six exact question keys recomputed",
+      "status": "passed",
+      "establishes": "Correct/total and two-decimal percentage computed from retained predictions and test labels equal every stdout row; report keys are parsed from the original task.",
+      "does_not_establish": "Distinct CN/AA experiments for Iris and Zoo, statistical uncertainty, or historical reference agreement.",
+      "evidence": ["report.json", "analysis/final/results.csv", "analysis/final/verification.json", "recomputed/report.json", "recomputed/verification.json"]
+    },
+    {
+      "id": "C05",
+      "check": "Independent retained-graph predictor scoring and graph constraints",
+      "status": "passed_with_explicit_scope",
+      "establishes": "Independent set/scalar score formulas reproduce all predictions; exact class edges, Manhattan neighbor-boundary admissibility, mandatory closer positive-distance edges, finite scores, and positive observed CS denominators are checked.",
+      "does_not_establish": "An independent exact tie-breaking reconstruction of the k-NN graph, or correctness beyond the observed inputs.",
+      "evidence": ["analysis/final/metrics.json", "scripts/recompute.py", "runs/attempt02/iris/graph_00.npz", "runs/attempt02/zoo/graph_00.npz", "runs/attempt02/wine/graph_00.npz"]
+    },
+    {
+      "id": "C06",
+      "check": "Fresh environment and retained-evidence recomputation commands actually tested",
+      "status": "passed",
+      "establishes": "Fresh offline installation and full execution succeed; raw arrays, graphs, predictions and stdout equal the recovery run; the delivered recompute entry point regenerates the six answers without source experiments.",
+      "does_not_establish": "Portability to another operating system, Python major/minor version, wheel set, or nearest-neighbor tie implementation.",
+      "evidence": ["reproductions/validation/reproduction.json", "analysis/final/verification.json", "recomputed/verification.json", "REPRODUCE.md"]
+    },
+    {
+      "id": "C07",
+      "check": "Controlled interruption, permanent history, and distinct recovery",
+      "status": "passed",
+      "establishes": "First marked scientific request has an authoritative injected interruption receipt; its partial directory remains; the recovery uses a new request and directory and all datasets complete.",
+      "does_not_establish": "Checkpoint resume inside a partially completed classifier call; recovery restarts these small deterministic scripts.",
+      "evidence": ["evidence/broker/315e7642997b41399b4378fbf1a803e1/response.json", "runs/attempt01/execution.json", "evidence/broker/c717a9c504bd4655a7ab71d5c4d93aab/response.json"]
+    }
+  ],
+  "findings": [
+    {
+      "id": "F01",
+      "severity": "major scientific interpretation limitation",
+      "finding": "Iris and Zoo print CN/AA/RA/CS labels but hardcode link_predictor='CS'.",
+      "resolution": "Preserved upstream calls and original scoring; report values are explicitly labeled as printed-row results with actual predictor CS. Genuine separate CN/AA performance is not claimed.",
+      "status": "preserved_and_disclosed",
+      "evidence": ["source/original/code/iris_sample.py", "source/original/code/zoo_sample.py", "measurements.json", "REPORT.md"]
+    },
+    {
+      "id": "F02",
+      "severity": "graph construction limitation",
+      "finding": "Dropping the first nearest-neighbor index does not guarantee self removal with duplicate features; saved Iris and Zoo graphs contain 1 and 28 self-loops.",
+      "resolution": "Preserved original graphs and tie behavior; independent scores account for loop degree semantics. No graph repair or substituted result is used.",
+      "status": "preserved_and_disclosed",
+      "evidence": ["source/original/code/culp/leg.py", "analysis/final/metrics.json", "REPORT.md"]
+    },
+    {
+      "id": "F03",
+      "severity": "generalization limitation",
+      "finding": "Single unstratified seed-42 split; Zoo has no class-4 test examples and 15 of 21 test feature vectors equal a training vector; test features participate in the graph.",
+      "resolution": "Report exact class support and transductive design; retain partition; make no uncertainty, class-complete evaluation, inductive, or population-level claim.",
+      "status": "preserved_and_disclosed",
+      "evidence": ["analysis/final/verification.json", "source/original/code/culp/leg.py", "REPORT.md"]
+    },
+    {
+      "id": "F04",
+      "severity": "reproducibility boundary",
+      "finding": "Original environment, reference outputs and full paper were not supplied; README provides no dependency versions or supplied run.sh.",
+      "resolution": "Infer dependencies from imports, pin and record actual offline versions, retain original provenance, execute the three named scripts, and limit conclusions to the demonstrated local reproduction.",
+      "status": "resolved_for_local_execution_historical_comparison_unavailable",
+      "evidence": ["inputs/materials/SOURCES.md", "source/original/code/README.md", "requirements.lock", "runs/attempt02/execution.json"]
+    },
+    {
+      "id": "F05",
+      "severity": "interchange mismatch",
+      "finding": "Supplied measurement-specific schemas cover EMA and modular addition rather than CULP.",
+      "resolution": "Use the common measurement envelope and document a CULP-specific extension with numeric NPZ evidence, actual predictor identity and broker provenance. No unrelated measurements are fabricated.",
+      "status": "documented_extension",
+      "evidence": ["inputs/materials/MEASUREMENTS.md", "measurements.json", "REPRODUCE.md", "PROTOCOL.md"]
+    },
+    {
+      "id": "F06",
+      "severity": "verification scope",
+      "finding": "Deterministic repeatability and a passed CLI alone do not verify scientific results; equal-distance neighbor ordering can depend on library implementation.",
+      "resolution": "Check saved-label arithmetic, independent graph scores, original data, preprocessing, source scope, and exact repeats. State that boundary tie selection is checked for admissibility only and cross-version equivalence remains untested.",
+      "status": "resolved_with_scoped_checks",
+      "evidence": ["analysis/final/verification.json", "analysis/final/metrics.json", "scripts/recompute.py", "REPORT.md"]
+    }
+  ],
+  "unmet_execution_or_delivery_requirements": [],
+  "remaining_scientific_limitations": ["F01", "F02", "F03", "F04", "F06"]
+}

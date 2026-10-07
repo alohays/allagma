@@ -1,0 +1,60 @@
+{
+  "format": "culp-execution-v1",
+  "state": "completed",
+  "started_utc": "2026-10-07T20:48:30.508966+00:00",
+  "output": "reproductions/validation/runs/attempt01",
+  "python": "3.11.6 (v3.11.6:8b6ee5ba3b, Oct  2 2023, 11:18:21) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "executable": "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r02/candidate/reproductions/validation/venv/bin/python",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "device": "cpu",
+  "source_revision": "a4d31ba65afa3020c8d94c1228753f69dc0efba2dd9239782aedf3ff32a89b5f",
+  "runner_sha256": "7856367e839b29c7dfec29fa88177f3b716db4b815b538bf51fb70b4d5a74c94",
+  "protocol_sha256": "5b8a2bf473a5a32a41f166bec945772313600d937e2f7f376e02af2ef27cb438",
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": null,
+    "NUMEXPR_NUM_THREADS": null
+  },
+  "datasets_completed": [
+    "iris",
+    "zoo",
+    "wine"
+  ],
+  "versions": {
+    "numpy": "1.26.4",
+    "scipy": "1.14.1",
+    "scikit-learn": "1.5.2",
+    "pandas": "2.2.3",
+    "networkx": "2.8.8",
+    "joblib": "1.6.0",
+    "threadpoolctl": "3.7.0",
+    "python-dateutil": "2.9.0.post0",
+    "pytz": "2026.5",
+    "tzdata": "2026.5",
+    "six": "1.17.0",
+    "cloudpickle": "3.1.2"
+  },
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r02/candidate/reproductions/validation/venv/lib/python3.11/site-packages/numpy/.dylibs/libopenblas64_.0.dylib",
+      "version": "0.3.23.dev",
+      "threading_layer": "pthreads",
+      "architecture": "armv8"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libomp",
+      "filepath": "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r02/candidate/reproductions/validation/venv/lib/python3.11/site-packages/sklearn/.dylibs/libomp.dylib",
+      "version": null
+    }
+  ],
+  "elapsed_seconds": 35.49794995877892
+}

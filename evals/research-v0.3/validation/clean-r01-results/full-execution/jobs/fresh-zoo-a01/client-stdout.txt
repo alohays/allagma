@@ -1,0 +1,21 @@
+{
+  "injected_interruption": false,
+  "isolation_sha256": "b0ca202dc13f7e1d6b8637690b58eb4cd617fcd38399e9e22e507238027c3723",
+  "reconciled_after_controller_restart": false,
+  "request_id": "93cf53ea4e224c7aa8de353a3fd0705b",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 1.0158787500113249,
+    "ended_at": "2026-10-07T21:02:12.345656+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/validation/resources/jobs/0009-fresh-zoo-a01",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 114950144,
+    "peak_storage_bytes": 389634622,
+    "status": "completed"
+  }
+}
+Prediction Accuracy for Zoo Dataset (λ=CN) = 100.0%
+Prediction Accuracy for Zoo Dataset (λ=AA) = 100.0%
+Prediction Accuracy for Zoo Dataset (λ=RA) = 100.0%
+Prediction Accuracy for Zoo Dataset (λ=CS) = 100.0%

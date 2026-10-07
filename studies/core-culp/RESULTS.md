@@ -54,4 +54,4 @@ restoration, read `REPORT.md`, `REPRODUCE.md` and `submission.json`. Use the
 [standalone broker driver](../../docs/research-workspaces.md) to service the
 delivered reproduction command under a new finite validation profile. Run the
 full-study and raw-data recomputation commands separately and retain their
-outcomes. The clean-checkout full-execution release gate is still pending.
+outcomes. The [clean-checkout release check](../../evals/research-v0.3/validation/clean-r01-results/verification.json) passed: a new Git clone restored all exact files and dependencies, created a fresh environment, reran the complete study, and recomputed the retained-data results. Both answer sets equal the original package.

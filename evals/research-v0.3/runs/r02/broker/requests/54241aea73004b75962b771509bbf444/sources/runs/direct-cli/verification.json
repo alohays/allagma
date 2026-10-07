@@ -1,0 +1,32 @@
+[
+  {
+    "dataset": "iris",
+    "argv": [
+      "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r02/candidate/.venv/bin/python",
+      "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r02/candidate/source/adapted/code/iris_sample.py"
+    ],
+    "returncode": 0,
+    "stdout_matches_instrumented_run": true,
+    "stderr_empty": true
+  },
+  {
+    "dataset": "zoo",
+    "argv": [
+      "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r02/candidate/.venv/bin/python",
+      "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r02/candidate/source/adapted/code/zoo_sample.py"
+    ],
+    "returncode": 0,
+    "stdout_matches_instrumented_run": true,
+    "stderr_empty": true
+  },
+  {
+    "dataset": "wine",
+    "argv": [
+      "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r02/candidate/.venv/bin/python",
+      "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r02/candidate/source/adapted/code/wine_sample.py"
+    ],
+    "returncode": 0,
+    "stdout_matches_instrumented_run": true,
+    "stderr_empty": true
+  }
+]

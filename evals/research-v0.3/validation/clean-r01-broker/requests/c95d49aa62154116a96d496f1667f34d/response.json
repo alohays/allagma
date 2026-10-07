@@ -1,0 +1,17 @@
+{
+  "injected_interruption": false,
+  "isolation_sha256": "b0ca202dc13f7e1d6b8637690b58eb4cd617fcd38399e9e22e507238027c3723",
+  "reconciled_after_controller_restart": false,
+  "request_id": "c95d49aa62154116a96d496f1667f34d",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 0.1711848748382181,
+    "ended_at": "2026-10-07T21:03:36.240716+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/validation/resources/jobs/0013-clean-checkout-raw-recompute",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 4079616,
+    "peak_storage_bytes": 390262407,
+    "status": "completed"
+  }
+}

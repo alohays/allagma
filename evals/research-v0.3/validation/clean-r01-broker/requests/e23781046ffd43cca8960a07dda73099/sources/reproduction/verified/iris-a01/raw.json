@@ -1,0 +1,90 @@
+{
+  "calls": [
+    {
+      "actual_predictor": "CS",
+      "arrays": {
+        "media_type": "application/octet-stream",
+        "path": "reproduction/verified/iris-a01/call-00.npz",
+        "retention": "retained in study",
+        "sha256": "0b9dc17538d3ccd75b36539b7da825dd0cc6a8b58a37bc7bb4dcf4f3b376e876"
+      },
+      "index": 0,
+      "k": 11,
+      "n_jobs": 1,
+      "printed_label": "CN",
+      "similarity": "manhattan"
+    },
+    {
+      "actual_predictor": "CS",
+      "arrays": {
+        "media_type": "application/octet-stream",
+        "path": "reproduction/verified/iris-a01/call-01.npz",
+        "retention": "retained in study",
+        "sha256": "0b9dc17538d3ccd75b36539b7da825dd0cc6a8b58a37bc7bb4dcf4f3b376e876"
+      },
+      "index": 1,
+      "k": 11,
+      "n_jobs": 1,
+      "printed_label": "AA",
+      "similarity": "manhattan"
+    },
+    {
+      "actual_predictor": "CS",
+      "arrays": {
+        "media_type": "application/octet-stream",
+        "path": "reproduction/verified/iris-a01/call-02.npz",
+        "retention": "retained in study",
+        "sha256": "0b9dc17538d3ccd75b36539b7da825dd0cc6a8b58a37bc7bb4dcf4f3b376e876"
+      },
+      "index": 2,
+      "k": 11,
+      "n_jobs": 1,
+      "printed_label": "RA",
+      "similarity": "manhattan"
+    },
+    {
+      "actual_predictor": "CS",
+      "arrays": {
+        "media_type": "application/octet-stream",
+        "path": "reproduction/verified/iris-a01/call-03.npz",
+        "retention": "retained in study",
+        "sha256": "0b9dc17538d3ccd75b36539b7da825dd0cc6a8b58a37bc7bb4dcf4f3b376e876"
+      },
+      "index": 3,
+      "k": 11,
+      "n_jobs": 1,
+      "printed_label": "CS",
+      "similarity": "manhattan"
+    }
+  ],
+  "dataset": "iris",
+  "dataset_arrays": {
+    "media_type": "application/octet-stream",
+    "path": "reproduction/verified/iris-a01/dataset.npz",
+    "retention": "retained in study",
+    "sha256": "84ece38a26781e2e8a44c7bb15679eb2cf9e49442bd3dbbc24d070ca4f94429d"
+  },
+  "device": "cpu",
+  "finished_at": "2026-10-07T20:26:15.035462+00:00",
+  "phase": "confirmation",
+  "script": {
+    "media_type": "application/octet-stream",
+    "path": "source/adapted/code/iris_sample.py",
+    "retention": "retained in study",
+    "sha256": "eef48c00cb56e8756ad877f84ed2f3d1a04bd3773b23148ebb2d4766fff561cb"
+  },
+  "seed": 42,
+  "stderr": {
+    "media_type": "application/octet-stream",
+    "path": "reproduction/verified/iris-a01/stderr.txt",
+    "retention": "retained in study",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "media_type": "application/octet-stream",
+    "path": "reproduction/verified/iris-a01/stdout.txt",
+    "retention": "retained in study",
+    "sha256": "9b6bbee09c56848cc00f8079b454b17e4b4a6d56b3426347b750348f01a76a70"
+  },
+  "test_size": 0.2
+}

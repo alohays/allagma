@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "question_count": 6,
+  "measurement_run_count": 12,
+  "direct_script_count": 3,
+  "source_revision": "a4d31ba65afa3020c8d94c1228753f69dc0efba2dd9239782aedf3ff32a89b5f",
+  "verified": [
+    "submission paths and argv",
+    "exact original question strings",
+    "all published answer files equal",
+    "measurements reference numeric evidence verified by recomputation",
+    "current checker and runner revisions",
+    "retained earlier checker revision",
+    "review evidence links",
+    "three direct CLI outputs"
+  ],
+  "input_files_verified": 33,
+  "all_python_sources_parse": true,
+  "local_manuscript_links_exist": true,
+  "interrupted_attempt_preserved": true,
+  "completed_resource_totals": {
+    "setup": 15.14354933355935,
+    "compute": 76.57057254365645
+  },
+  "scope": "Package contract and integrity checks plus references to prior scientific verification; no experiment execution."
+}

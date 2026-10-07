@@ -2,7 +2,7 @@
 
 Status: compatibility preflight and the first final Allagma run passed. Its
 [verified results and retained package](RESULTS.md) are available; the remaining
-controlled comparison and clean-checkout release gate are still in progress.
+controlled comparison is still in progress. The clean-checkout full-study and raw-recomputation checks have passed.
 
 This study uses CORE-Bench's public training task `capsule-6460826`, **CULP:
 Classification Using Link Prediction**. The original task requires execution

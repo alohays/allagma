@@ -1,0 +1,53 @@
+{
+  "checks": [
+    "All printed percentages exactly equal scores from retained predictions/labels",
+    "All saved scores select saved predictions via source argmax",
+    "Split indices partition input rows and recover every saved train/test label",
+    "Inputs equal indexed raw features, with train-only Wine normalization",
+    "All observed predictor, k, distance and n_jobs settings match original source"
+  ],
+  "raw": {
+    "media_type": "application/json",
+    "path": "reproduction/clean-checkout/zoo-a01/raw.json",
+    "retention": "retained in study",
+    "sha256": "39f29b27519885995ef2081ce17d680f7ad9d027fe5776acb2f0b77b5916640b"
+  },
+  "rows": [
+    {
+      "accuracy": 1.0,
+      "actual_predictor": "CS",
+      "correct": 21,
+      "dataset": "zoo",
+      "printed_label": "CN",
+      "printed_percent": 100.0,
+      "total": 21
+    },
+    {
+      "accuracy": 1.0,
+      "actual_predictor": "CS",
+      "correct": 21,
+      "dataset": "zoo",
+      "printed_label": "AA",
+      "printed_percent": 100.0,
+      "total": 21
+    },
+    {
+      "accuracy": 1.0,
+      "actual_predictor": "CS",
+      "correct": 21,
+      "dataset": "zoo",
+      "printed_label": "RA",
+      "printed_percent": 100.0,
+      "total": 21
+    },
+    {
+      "accuracy": 1.0,
+      "actual_predictor": "CS",
+      "correct": 21,
+      "dataset": "zoo",
+      "printed_label": "CS",
+      "printed_percent": 100.0,
+      "total": 21
+    }
+  ]
+}

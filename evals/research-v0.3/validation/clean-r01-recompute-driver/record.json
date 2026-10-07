@@ -1,0 +1,30 @@
+{
+  "command": [
+    "python3",
+    "inputs/compute.py",
+    "--category",
+    "compute",
+    "--label",
+    "clean-checkout-raw-recompute",
+    "--timeout",
+    "30",
+    "--",
+    ".venv-clean-checkout/bin/python",
+    "tools/analyze.py",
+    "--manifest",
+    "evidence/raw-manifest.json",
+    "--out",
+    "recomputation/clean-checkout",
+    "--compare",
+    "analysis/primary"
+  ],
+  "ended_at": "2026-10-07T21:03:36.351832+00:00",
+  "exit_code": 0,
+  "peak_rss_bytes": 4079616,
+  "peak_storage_bytes": 390262407,
+  "pid": 54215,
+  "started_at": "2026-10-07T21:03:35.639111+00:00",
+  "status": "completed",
+  "timeout_seconds": 90.0,
+  "wall_seconds": 0.712003415916115
+}

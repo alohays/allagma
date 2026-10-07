@@ -1,0 +1,90 @@
+{
+  "calls": [
+    {
+      "actual_predictor": "CN",
+      "arrays": {
+        "media_type": "application/octet-stream",
+        "path": "reproduction/verified/wine-a01/call-00.npz",
+        "retention": "retained in study",
+        "sha256": "d44bb2b8d9770321f81a6249267f52bde32d4cb3e3c0d4aeb1c97e9b9025bc15"
+      },
+      "index": 0,
+      "k": 12,
+      "n_jobs": 1,
+      "printed_label": "CN",
+      "similarity": "manhattan"
+    },
+    {
+      "actual_predictor": "AA",
+      "arrays": {
+        "media_type": "application/octet-stream",
+        "path": "reproduction/verified/wine-a01/call-01.npz",
+        "retention": "retained in study",
+        "sha256": "3cccffff56efb216aeea1b207afede625d8b9e24111c05a53c408fbc8d8da900"
+      },
+      "index": 1,
+      "k": 12,
+      "n_jobs": 1,
+      "printed_label": "AA",
+      "similarity": "manhattan"
+    },
+    {
+      "actual_predictor": "RA",
+      "arrays": {
+        "media_type": "application/octet-stream",
+        "path": "reproduction/verified/wine-a01/call-02.npz",
+        "retention": "retained in study",
+        "sha256": "6b00724339b4f85bfc00bc6c64f2a7608b429c69271cff199254228b99e96122"
+      },
+      "index": 2,
+      "k": 12,
+      "n_jobs": 1,
+      "printed_label": "RA",
+      "similarity": "manhattan"
+    },
+    {
+      "actual_predictor": "CS",
+      "arrays": {
+        "media_type": "application/octet-stream",
+        "path": "reproduction/verified/wine-a01/call-03.npz",
+        "retention": "retained in study",
+        "sha256": "d5c3612f4204733684761c9b45cacb7dc568cb9d50f3169ddda7a98b1da9a354"
+      },
+      "index": 3,
+      "k": 12,
+      "n_jobs": 1,
+      "printed_label": "CS",
+      "similarity": "manhattan"
+    }
+  ],
+  "dataset": "wine",
+  "dataset_arrays": {
+    "media_type": "application/octet-stream",
+    "path": "reproduction/verified/wine-a01/dataset.npz",
+    "retention": "retained in study",
+    "sha256": "dcd7f5b6cc9fff5f75536788a135fc8bd5fb39a37b13fa24d8ae2f3d1925d920"
+  },
+  "device": "cpu",
+  "finished_at": "2026-10-07T20:26:18.859211+00:00",
+  "phase": "confirmation",
+  "script": {
+    "media_type": "application/octet-stream",
+    "path": "source/adapted/code/wine_sample.py",
+    "retention": "retained in study",
+    "sha256": "92efce2e73ad9a8c95ba8dfe8bc763a9a222eef773ddbadcb51852b332568562"
+  },
+  "seed": 42,
+  "stderr": {
+    "media_type": "application/octet-stream",
+    "path": "reproduction/verified/wine-a01/stderr.txt",
+    "retention": "retained in study",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "media_type": "application/octet-stream",
+    "path": "reproduction/verified/wine-a01/stdout.txt",
+    "retention": "retained in study",
+    "sha256": "93c201462bc7615c6b820c541bcbab13d5e22d057b68d5b98a140fd38452314c"
+  },
+  "test_size": 0.2
+}

@@ -1,0 +1,19 @@
+{
+  "command": [
+    "python3",
+    "tools/reproduce.py",
+    "--env",
+    ".venv-clean-checkout",
+    "--output",
+    "reproduction/clean-checkout"
+  ],
+  "ended_at": "2026-10-07T21:02:15.951179+00:00",
+  "exit_code": 0,
+  "peak_rss_bytes": 39354368,
+  "peak_storage_bytes": 390262054,
+  "pid": 53542,
+  "started_at": "2026-10-07T21:01:29.899026+00:00",
+  "status": "completed",
+  "timeout_seconds": 600.0,
+  "wall_seconds": 46.052594874985516
+}
