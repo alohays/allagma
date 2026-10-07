@@ -1,0 +1,43 @@
+{
+  "affected_runs": [],
+  "boundary": "Verifier-only correction under protocol editable evidence-check boundary. No rerun, data, parameter, source experiment or answer change.",
+  "corrected_code": {
+    "media_type": "application/octet-stream",
+    "path": "tools/audit_science.py",
+    "retention": "retained in study",
+    "sha256": "52076934f3aac68fc83eda90281991bdf774dd18e9d051c1da48ff2e3e6674cf"
+  },
+  "correction": "Degree counts self-loops twice; common-neighbor sets exclude queried endpoints, as NetworkX specifies",
+  "evidence": {
+    "media_type": "application/json",
+    "path": "analysis/graph-audit.json",
+    "retention": "retained in study",
+    "sha256": "5fbcd636531effcd55a6cd854d275e17d2840fcd2e4b1b4f00705eef40dde26e"
+  },
+  "failed_attempt": {
+    "media_type": "application/json",
+    "path": "evidence/jobs/graph-audit-a01/client-result.json",
+    "retention": "retained in study",
+    "sha256": "549bfc9474dcf76d118c512e1470d412a76b124d333637115518476eda08e0ff"
+  },
+  "other_reporting_revisions": [
+    "Writer expanded with graph-check finding and fresh verification evidence",
+    "Broker bridge selects fresh environment metadata when present; actual interpreter is always recorded in argv",
+    "Postconfirmation unprofiled and package verification tools added; confirmation runner, evaluator and analyzer unchanged"
+  ],
+  "prior_code": {
+    "media_type": "application/octet-stream",
+    "path": "evidence/jobs/graph-audit-a01/source-snapshot/tools/audit_science.py",
+    "retention": "retained in study",
+    "sha256": "a2f40f5cd40807aac55ea16a216a1f387937b4ddba3f570a4a9aa24811c24b2d"
+  },
+  "reason": "Initial independent checker incorrectly treated self-loops; first saved Iris graph exposed disagreement",
+  "revision": "verification-v2",
+  "scientific_protocol_changed": false,
+  "successful_attempt": {
+    "media_type": "application/json",
+    "path": "evidence/jobs/graph-audit-a02/client-result.json",
+    "retention": "retained in study",
+    "sha256": "2ba32c2f3947ceccca74982016670510067eb75ba85a78c24f0d89aae044698c"
+  }
+}

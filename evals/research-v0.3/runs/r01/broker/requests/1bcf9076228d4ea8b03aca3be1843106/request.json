@@ -1,0 +1,16 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "tools/analyze.py",
+    "--out",
+    "analysis/recomputed",
+    "--compare",
+    "analysis/primary"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "recompute-a01",
+  "request_id": "1bcf9076228d4ea8b03aca3be1843106",
+  "timeout_seconds": 30.0
+}

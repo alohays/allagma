@@ -1,0 +1,10 @@
+{
+  "status": "preliminary",
+  "phase": "source inspection while run is active",
+  "source": "work/v03-evaluation/runs/r01/candidate/tools/audit_science.py",
+  "sha256": "52076934f3aac68fc83eda90281991bdf774dd18e9d051c1da48ff2e3e6674cf",
+  "observation": "Independent graph formulas currently use len(neighbors[v]) as degree. NetworkX counts a self-loop twice in degree. Check the actual retained graphs and final verifier revision before accepting or rejecting this finding.",
+  "not_a_final_finding": true,
+  "coordinator_message_sent": false,
+  "candidate_files_modified": false
+}

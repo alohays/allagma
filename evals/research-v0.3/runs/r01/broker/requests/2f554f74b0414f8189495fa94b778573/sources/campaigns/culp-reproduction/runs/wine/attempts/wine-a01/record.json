@@ -1,0 +1,147 @@
+{
+  "attempt_id": "wine-a01",
+  "attempt_number": 1,
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "campaign_id": "culp-reproduction",
+  "command": [
+    ".venv/bin/python",
+    "tools/run_capsule.py",
+    "--dataset",
+    "wine",
+    "--out",
+    "evidence/runs/wine-a01"
+  ],
+  "data_revision": "15553929726e34de35cbdf0c3206568777f695fab19d912ce9985864c796538f",
+  "ended_at": "2026-10-07T20:22:52.499727+00:00",
+  "environment": {
+    "metadata": {
+      "media_type": "application/json",
+      "path": "evidence/setup/environment.json",
+      "retention": "retained in study",
+      "sha256": "6f8cfae6629116f30abc5380ffac530c7ac3cb46bc9fb6f50ebab2c9fa9f6520"
+    },
+    "model_accounting": "Native model use external; local scientific worker tokens are zero",
+    "receipt": {
+      "media_type": "application/json",
+      "path": "evidence/jobs/wine-a01/client-result.json",
+      "retention": "retained in study",
+      "sha256": "4fb713bd7b9f1c824394a53a98149fb80a634a2d33e32dbd6f657466492b91ea"
+    }
+  },
+  "error": null,
+  "exit_code": 0,
+  "experiment_id": "wine",
+  "inputs": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-reproduction/runs/wine/parameters.json",
+      "retention": "retained in study",
+      "sha256": "6785bdb4ff1216c2bfc79b621a944b5587c8839d39117be1da2e5fc6fe435ffa"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-reproduction/protocol.json",
+      "retention": "retained in study",
+      "sha256": "4673ef730fcda1c3e92dbf93c00690b953d369f644be86de5bad30fc25364a3d"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/jobs/wine-a01/before.json",
+      "retention": "retained in study",
+      "sha256": "8c04d26ba347e89b6b369f2260e358a6c6ed481daab4b7307a1941d925c4d78a"
+    }
+  ],
+  "model_revision": null,
+  "outputs": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/wine-a01/call-00.npz",
+      "retention": "retained in study",
+      "sha256": "d44bb2b8d9770321f81a6249267f52bde32d4cb3e3c0d4aeb1c97e9b9025bc15"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/wine-a01/call-01.npz",
+      "retention": "retained in study",
+      "sha256": "3cccffff56efb216aeea1b207afede625d8b9e24111c05a53c408fbc8d8da900"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/wine-a01/call-02.npz",
+      "retention": "retained in study",
+      "sha256": "6b00724339b4f85bfc00bc6c64f2a7608b429c69271cff199254228b99e96122"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/wine-a01/call-03.npz",
+      "retention": "retained in study",
+      "sha256": "d5c3612f4204733684761c9b45cacb7dc568cb9d50f3169ddda7a98b1da9a354"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/wine-a01/calls.jsonl",
+      "retention": "retained in study",
+      "sha256": "5fadfa85704e365501845b0941a6519dd3464062021e5055cebdace187537904"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/wine-a01/dataset.npz",
+      "retention": "retained in study",
+      "sha256": "dcd7f5b6cc9fff5f75536788a135fc8bd5fb39a37b13fa24d8ae2f3d1925d920"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/runs/wine-a01/raw.json",
+      "retention": "retained in study",
+      "sha256": "b133ace63bf4c35705c43d063bff2184dc97ec30f6ecfa25bb9c653c437e44b4"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/runs/wine-a01/started.json",
+      "retention": "retained in study",
+      "sha256": "9fb8e626537b33792d121f00df687be728406f64ac569885006bcee63cbcedcc"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/wine-a01/stderr.txt",
+      "retention": "retained in study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/wine-a01/stdout.txt",
+      "retention": "retained in study",
+      "sha256": "93c201462bc7615c6b820c541bcbab13d5e22d057b68d5b98a140fd38452314c"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/jobs/wine-a01/client-result.json",
+      "retention": "retained in study",
+      "sha256": "4fb713bd7b9f1c824394a53a98149fb80a634a2d33e32dbd6f657466492b91ea"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/jobs/wine-a01/client-stdout.txt",
+      "retention": "retained in study",
+      "sha256": "ca7c566794e4706bdd99c7f4d41c2f168baaf1615c775e9db9276fc6524a0265"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/jobs/wine-a01/client-stderr.txt",
+      "retention": "retained in study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "protocol_revision": "culp-v1",
+  "record_type": "RunRecord",
+  "run_id": "wine",
+  "schema_version": "0.2",
+  "split": "confirmation",
+  "started_at": "2026-10-07T20:22:51.163528+00:00",
+  "status": "succeeded",
+  "usage": {
+    "money_usd": 0,
+    "tokens": 0,
+    "wall_seconds": 0.9852407078724355
+  }
+}

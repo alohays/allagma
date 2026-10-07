@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r01/candidate/tools/audit_science.py", line 72, in <module>
+    value = audit(ROOT / args.manifest)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r01/candidate/tools/audit_science.py", line 51, in audit
+    assert np.allclose(scores, a["scores"], rtol=1e-12, atol=1e-12)
+AssertionError

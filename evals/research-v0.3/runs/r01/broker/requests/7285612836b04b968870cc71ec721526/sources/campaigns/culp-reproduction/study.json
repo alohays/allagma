@@ -1,0 +1,88 @@
+{
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "capabilities": [
+    "artifact.read",
+    "artifact.write",
+    "execution.local"
+  ],
+  "configuration_origins": {
+    "budget.max_attempts": "current request",
+    "budget.max_seconds": "current request",
+    "budget.money_usd": "current request",
+    "budget.per_attempt_seconds": "current request",
+    "capabilities": "host authorization",
+    "context_chars": "module:context/active-brief",
+    "language": "profile:public/default",
+    "max_revisions": "recipe:recipe/research"
+  },
+  "constraints": [
+    "All setup/scientific work through inputs/compute.py; sequential single worker",
+    "No network",
+    "600 seconds compute, 300 seconds setup, 32 compute requests, 180-second per-command ceiling",
+    "3600-second native wall ceiling including model work",
+    "No altered algorithms, seeds, partitions or scoring",
+    "Preserve all attempts and source revisions; do not modify installed bundles or inputs"
+  ],
+  "effective_configuration": {
+    "budget": {
+      "max_attempts": 32,
+      "max_seconds": 600,
+      "money_usd": 0,
+      "per_attempt_seconds": 180
+    },
+    "capabilities": [
+      "artifact.read",
+      "artifact.write",
+      "execution.local"
+    ],
+    "context_chars": 12000,
+    "language": "English",
+    "max_revisions": 2
+  },
+  "lock": {
+    "media_type": "application/json",
+    "path": "campaigns/culp-reproduction/lock.yaml",
+    "retention": "retain-with-study",
+    "sha256": "6070e4a1f44084e9bcbd7e4f10e0cc829d524a707d6d8fafc8cf2d1436b175bc"
+  },
+  "motivation": "Traceable computational reproduction with honest interpretation of source limitations.",
+  "output": "report.json, REPORT.md, review.json, REPRODUCE.md, artifact-manifest.json, measurements.json, submission.json",
+  "profile_provenance": [
+    {
+      "id": "public/default",
+      "sha256": "9f90c310cefb07153761645bd658f8ad6551578ccb6bf772074e44e8f8c17b9b"
+    }
+  ],
+  "protocol": {
+    "media_type": "application/json",
+    "path": "campaigns/culp-reproduction/protocol.json",
+    "retention": "retain-with-study",
+    "sha256": "4673ef730fcda1c3e92dbf93c00690b953d369f644be86de5bad30fc25364a3d"
+  },
+  "protocol_revision": "culp-v1",
+  "question": "Reproduce the supplied CULP sample scripts and answer the six exact source-task CN/AA questions.",
+  "record_type": "StudySpec",
+  "release": "0.3.0rc1",
+  "resources": {
+    "max_attempts": 32,
+    "max_seconds": 600,
+    "money_usd": 0,
+    "per_attempt_seconds": 180
+  },
+  "schema_version": "0.2",
+  "stop_rules": [
+    "Declared bounded reproduction completion",
+    "Resource or native deadline stop => partial package",
+    "Unresolved pilot failure stops confirmation",
+    "Repeated failure or required unavailable input => honest partial/blocked assessment"
+  ],
+  "study_id": "r01",
+  "success_criteria": [
+    "Known-answer synthetic pilot passes",
+    "All three original script computations complete without scientific edits",
+    "Six exact original question keys answered from observed stdout and retained predictions",
+    "Controlled interruption retained and recovered with a new identity",
+    "Retained-data recomputation and concrete current-revision critique pass within stated scope",
+    "Fresh-environment reproduction and manifests delivered"
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "attempt_id": "pilot-a01",
+  "attempt_number": 1,
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "campaign_id": "culp-reproduction",
+  "command": [
+    ".venv/bin/python",
+    "tools/pilot.py",
+    "--out",
+    "evidence/pilot/a01"
+  ],
+  "data_revision": "15553929726e34de35cbdf0c3206568777f695fab19d912ce9985864c796538f",
+  "ended_at": "2026-10-07T20:18:50.505498+00:00",
+  "environment": {
+    "metadata": {
+      "media_type": "application/json",
+      "path": "evidence/setup/environment.json",
+      "retention": "retained in study",
+      "sha256": "6f8cfae6629116f30abc5380ffac530c7ac3cb46bc9fb6f50ebab2c9fa9f6520"
+    },
+    "model_accounting": "Native model use external; local scientific worker tokens are zero",
+    "receipt": {
+      "media_type": "application/json",
+      "path": "evidence/jobs/pilot-a01/client-result.json",
+      "retention": "retained in study",
+      "sha256": "3df440ee2e706dccb5e4a552d0c4d589ab5a25c3aa55ee67eb0f9efa9e683f8c"
+    }
+  },
+  "error": null,
+  "exit_code": 0,
+  "experiment_id": "pilot",
+  "inputs": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-reproduction/runs/pilot/parameters.json",
+      "retention": "retained in study",
+      "sha256": "7e72aef19be9fcaeb50905c8eb03a8c71a20b0bf5a49a6a8c09ce58dde85bb80"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-reproduction/protocol.json",
+      "retention": "retained in study",
+      "sha256": "4673ef730fcda1c3e92dbf93c00690b953d369f644be86de5bad30fc25364a3d"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/jobs/pilot-a01/before.json",
+      "retention": "retained in study",
+      "sha256": "ca3a9cfd560470c471586509b653714784fb74b5baa9e1f627e8b51c26c4cb4b"
+    }
+  ],
+  "model_revision": null,
+  "outputs": [
+    {
+      "media_type": "application/json",
+      "path": "evidence/pilot/a01/qualification.json",
+      "retention": "retained in study",
+      "sha256": "00418ff8249dfb43a1aa3d05238283699fca35abc8621f4bc12680da9d1257ea"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/jobs/pilot-a01/client-result.json",
+      "retention": "retained in study",
+      "sha256": "3df440ee2e706dccb5e4a552d0c4d589ab5a25c3aa55ee67eb0f9efa9e683f8c"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/jobs/pilot-a01/client-stdout.txt",
+      "retention": "retained in study",
+      "sha256": "8a71754ce8cf84cca838e1f99092781183aed7b0fe1c70e9e529748c22dec95b"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/jobs/pilot-a01/client-stderr.txt",
+      "retention": "retained in study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "protocol_revision": "culp-v1",
+  "record_type": "RunRecord",
+  "run_id": "pilot",
+  "schema_version": "0.2",
+  "split": "pilot",
+  "started_at": "2026-10-07T20:18:19.488869+00:00",
+  "status": "succeeded",
+  "usage": {
+    "money_usd": 0,
+    "tokens": 0,
+    "wall_seconds": 30.834908583201468
+  }
+}

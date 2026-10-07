@@ -1,0 +1,13 @@
+{
+  "answers": {
+    "study_id": "r01"
+  },
+  "files": {
+    "AGENTS.md": "# Study workspace\n\nThis scaffold belongs to the study. Allagma updates preserve it. Read\n`ALLAGMA.md` (or the generated path recorded in `.allagma/ownership.json`) for\nthe selected recipe. Recover a campaign before choosing its method bundle.\nKeep scientific code and evidence in the study. Do not edit generated bundles.\n\nPreserve the user's GUI model selection; do not add project-level model or\nreview_model pins without an explicit request.\n",
+    "CLAUDE.md": "# Study workspace\n\nUse the study-local Allagma entrypoint recorded in `.allagma/ownership.json`.\nSelect the campaign and read its pinned bundle before executing a method.\nThis file is study-owned and is not replaced by bundle updates.\n",
+    "README.md": "# r01\n\nThe study owns this scaffold, its domain code, overrides, evidence and paper.\nAllagma owns `.allagma/bundles/` and the paths in `.allagma/ownership.json`.\nEdit `allagma.yaml` to express selection intent, then explicitly plan and adopt\nan update. Existing campaigns retain their own locks and configuration.\n",
+    "modules-local/README.md": "# Local method variants\n\nStudy-owned variants belong here, outside immutable bundles. Each variant\ndeclares its base module and replacement scope. Export a candidate source\ncontaining the variant, select it explicitly, and follow the normal update\nprotocol. Never patch a generated bundle in place.\n",
+    "overrides/README.md": "# Study overrides\n\nPut settings in `settings.json` using JSON-compatible YAML. Selection intent\nlists these files. Each resolution records values, leaf-level origins and\ninput digests. Edited overrides require a new lock before starting a new\ncampaign. Resuming an existing campaign uses its frozen configuration.\n"
+  },
+  "version": "1"
+}

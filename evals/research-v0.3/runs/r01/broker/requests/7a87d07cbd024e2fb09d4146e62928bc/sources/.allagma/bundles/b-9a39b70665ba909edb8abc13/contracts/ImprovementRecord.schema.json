@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://allagma.org/contracts/0.2/ImprovementRecord",
+  "title": "ImprovementRecord",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "0.2"
+    },
+    "record_type": {
+      "const": "ImprovementRecord"
+    },
+    "improvement_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "target": {
+      "type": "string",
+      "minLength": 1
+    },
+    "hypothesis": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "baseline": {
+      "type": "string",
+      "minLength": 1
+    },
+    "candidate": {
+      "type": "string",
+      "minLength": 1
+    },
+    "candidate_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "media_type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "retention": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "path",
+          "sha256",
+          "media_type",
+          "retention"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "evaluation": {
+      "type": "string",
+      "minLength": 1
+    },
+    "controls": {
+      "type": "object"
+    },
+    "outcome": {
+      "enum": [
+        "adopt",
+        "reject",
+        "replace",
+        "retire",
+        "not evaluated"
+      ]
+    },
+    "measurements": {
+      "type": "object"
+    },
+    "cost": {
+      "type": "object"
+    },
+    "user_intervention": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "release_decision": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "record_type",
+    "improvement_id",
+    "target",
+    "hypothesis",
+    "source_revision",
+    "baseline",
+    "candidate",
+    "candidate_artifacts",
+    "evaluation",
+    "controls",
+    "outcome",
+    "measurements",
+    "cost",
+    "user_intervention",
+    "reason",
+    "limitations",
+    "release_decision"
+  ],
+  "additionalProperties": false
+}

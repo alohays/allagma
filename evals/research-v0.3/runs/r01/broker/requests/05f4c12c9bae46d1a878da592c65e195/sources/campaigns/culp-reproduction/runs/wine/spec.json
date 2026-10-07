@@ -1,0 +1,75 @@
+{
+  "budget": {
+    "max_attempts": 32,
+    "max_seconds": 600,
+    "money_usd": 0,
+    "per_attempt_seconds": 180
+  },
+  "editable": [
+    "fault injection for conformance, excluded from successful science"
+  ],
+  "evaluator": {
+    "media_type": "text/x-python",
+    "path": "campaigns/culp-reproduction/materials/tools/evaluate.py",
+    "retention": "retain-with-study",
+    "sha256": "2e1cf33c2ae294df16e30473d682033110eba15bd4b9a9a19f6033da7afb9722"
+  },
+  "expected_artifacts": [
+    "raw.json",
+    "evaluation.json"
+  ],
+  "experiment_id": "wine",
+  "fixed": [
+    "runner",
+    "evaluator",
+    "seed",
+    "parameters",
+    "protocol",
+    "analysis"
+  ],
+  "hypothesis": "The supplied scripts execute with path-only adaptation and yield internally verifiable printed accuracies; no presumed numeric target.",
+  "inputs": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-reproduction/runs/wine/parameters.json",
+      "retention": "retain-with-study",
+      "sha256": "6785bdb4ff1216c2bfc79b621a944b5587c8839d39117be1da2e5fc6fe435ffa"
+    }
+  ],
+  "parameters": {
+    "actual_predictors": [
+      "CN",
+      "AA",
+      "RA",
+      "CS"
+    ],
+    "dataset": "wine",
+    "k": 12,
+    "n_jobs": 1,
+    "printed_predictors": [
+      "CN",
+      "AA",
+      "RA",
+      "CS"
+    ],
+    "seed": 42,
+    "similarity": "manhattan",
+    "stratify": null,
+    "test_size": 0.2
+  },
+  "protocol_revision": "culp-v1",
+  "record_type": "ExperimentSpec",
+  "runner": {
+    "media_type": "text/x-python",
+    "path": "campaigns/culp-reproduction/materials/tools/run_capsule.py",
+    "retention": "retain-with-study",
+    "sha256": "611273d4406ddc4693d92fa82d62adc1c458afc03e3ac93881cb2a67cee83f0c"
+  },
+  "schema_version": "0.2",
+  "seed_policy": {
+    "disjoint_confirmation": true,
+    "seed": 42,
+    "split": "confirmation"
+  },
+  "split": "confirmation"
+}

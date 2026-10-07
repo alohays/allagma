@@ -1,0 +1,19 @@
+{
+  "status": "inspection",
+  "changes": [
+    {
+      "path": "code/wine_sample.py",
+      "before_sha256": "ffb9756450e5c0d1ff432e2902bede1e632c142e83f5e93be2c5987977707198",
+      "after_sha256": "92efce2e73ad9a8c95ba8dfe8bc763a9a222eef773ddbadcb51852b332568562",
+      "diff": "--- code/wine_sample.py\n+++ code/wine_sample.py\n@@ -2,8 +2,9 @@\n import numpy\n from sklearn.model_selection import train_test_split\n import pandas\n+from pathlib import Path\n \n-wine = numpy.array(pandas.read_csv('/data/wine.txt', header=None))\n+wine = numpy.array(pandas.read_csv(Path(__file__).resolve().parents[1] / 'data' / 'wine.txt', header=None))\n data = wine[:, 1:].astype(float)\n labels = wine[:, 0]\n for i, j in enumerate([1, 2, 3]): # labels should be between 0 and C-1\n"
+    },
+    {
+      "path": "code/zoo_sample.py",
+      "before_sha256": "d3750a40e7a2eb4b6500254dd1ebef865f5a264d349310b8942c1f4ed08b8b8c",
+      "after_sha256": "a4a52a3dcc4708ef67ae8ecf6672433df836549046e98c5b66db2d8604099715",
+      "diff": "--- code/zoo_sample.py\n+++ code/zoo_sample.py\n@@ -2,8 +2,9 @@\n import numpy\n from sklearn.model_selection import train_test_split\n import pandas\n+from pathlib import Path\n \n-zoo = numpy.array(pandas.read_csv('/data/zoo.txt', header=None))\n+zoo = numpy.array(pandas.read_csv(Path(__file__).resolve().parents[1] / 'data' / 'zoo.txt', header=None))\n data = zoo[:, 1:17].astype(float)\n labels = zoo[:, 17] - 1\n \n"
+    }
+  ],
+  "scope": "Read-only source comparison during run; final material hashes must be checked before final assessment",
+  "candidate_files_modified": false
+}

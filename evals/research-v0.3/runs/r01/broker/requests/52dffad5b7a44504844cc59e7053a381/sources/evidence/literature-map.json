@@ -1,0 +1,33 @@
+{
+  "entries": [
+    {
+      "source_location": "inputs/materials/capsule-6460826/metadata/metadata.yml",
+      "source_metadata": {
+        "authors": [
+          "Seyed Amin Fadaee",
+          "Maryam Amir Haeri"
+        ],
+        "doi_as_supplied": "10.24433/CO.0609cc4f-8b95-4d94-8fd0-9456d262b3a5",
+        "title": "CULP: Classification Using Link Prediction"
+      },
+      "support_assessment": "Metadata supports attribution and intended algorithm description; source code supports actual sample behavior",
+      "uncertainties": [
+        "No network metadata verification",
+        "No paper text or historic output provided",
+        "Abstract performance/novelty claims not verified"
+      ]
+    },
+    {
+      "source_location": "inputs/materials/SOURCES.md",
+      "source_metadata": {
+        "commit": "e32a2980e72fe6eb04ee04eb749458f570625663",
+        "selection": "CORE-Bench public training capsule"
+      },
+      "support_assessment": "User-supplied provenance; local selected-task execution only",
+      "uncertainties": [
+        "Not an independent upstream commit lookup or leaderboard evaluation"
+      ]
+    }
+  ],
+  "network": false
+}

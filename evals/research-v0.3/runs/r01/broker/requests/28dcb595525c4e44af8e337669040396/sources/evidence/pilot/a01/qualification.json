@@ -1,0 +1,39 @@
+{
+  "inputs": "Hand-defined graph and 1D separated anchors; no supplied dataset used",
+  "known_accuracy_percent": 66.67,
+  "outcomes": {
+    "adamic_adar": [
+      0
+    ],
+    "common_neighbors": [
+      0
+    ],
+    "compatibility_score": [
+      0
+    ],
+    "end_to_end_AA": [
+      0,
+      1
+    ],
+    "end_to_end_CN": [
+      0,
+      1
+    ],
+    "end_to_end_CS": [
+      0,
+      1
+    ],
+    "end_to_end_RA": [
+      0,
+      1
+    ],
+    "reject_mismatched_vectors": true,
+    "resource_allocation_index": [
+      0
+    ]
+  },
+  "phase": "pilot",
+  "scope": "Known predictions for all four predictors and evaluator boundary controls; not a proof for all graphs",
+  "seed": 123,
+  "status": "passed"
+}

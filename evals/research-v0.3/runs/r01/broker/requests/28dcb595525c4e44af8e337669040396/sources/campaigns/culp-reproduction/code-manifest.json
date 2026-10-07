@@ -1,0 +1,152 @@
+{
+  "requirements.lock.txt": {
+    "media_type": "text/plain",
+    "path": "campaigns/culp-reproduction/materials/requirements.lock.txt",
+    "retention": "retain-with-study",
+    "sha256": "75ca99f2cd2bdad786a1d9b09bf7a101e4582ca465d52befde3823dd118c37ef"
+  },
+  "source/adapted/code/LICENSE": {
+    "media_type": "application/octet-stream",
+    "path": "campaigns/culp-reproduction/materials/source/adapted/code/LICENSE",
+    "retention": "retain-with-study",
+    "sha256": "86f24132a2af026b022666ac11bef2c3b73575ec072f4d33f750e6a9255a486f"
+  },
+  "source/adapted/code/README.md": {
+    "media_type": "text/markdown",
+    "path": "campaigns/culp-reproduction/materials/source/adapted/code/README.md",
+    "retention": "retain-with-study",
+    "sha256": "88b1d4ce7571e28de55ab1b8915f8453cd6e7fd404de159d42bf948d1983ac29"
+  },
+  "source/adapted/code/culp/__init__.py": {
+    "media_type": "text/x-python",
+    "path": "campaigns/culp-reproduction/materials/source/adapted/code/culp/__init__.py",
+    "retention": "retain-with-study",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  "source/adapted/code/culp/classifier.py": {
+    "media_type": "text/x-python",
+    "path": "campaigns/culp-reproduction/materials/source/adapted/code/culp/classifier.py",
+    "retention": "retain-with-study",
+    "sha256": "29765277bbcc3dc11f03d60d3a22c1e8b6e0688870f6329c3347e8d9480928b0"
+  },
+  "source/adapted/code/culp/leg.py": {
+    "media_type": "text/x-python",
+    "path": "campaigns/culp-reproduction/materials/source/adapted/code/culp/leg.py",
+    "retention": "retain-with-study",
+    "sha256": "620577a43e68a32c8228193aa47d541b569857f6bb9f6007da07eb9e94d7da55"
+  },
+  "source/adapted/code/culp/link_predictors.py": {
+    "media_type": "text/x-python",
+    "path": "campaigns/culp-reproduction/materials/source/adapted/code/culp/link_predictors.py",
+    "retention": "retain-with-study",
+    "sha256": "70347199ed928229a7d1cd7cffc31137e443cc8ee2f61ef398ba8ccc552b8243"
+  },
+  "source/adapted/code/iris_sample.py": {
+    "media_type": "text/x-python",
+    "path": "campaigns/culp-reproduction/materials/source/adapted/code/iris_sample.py",
+    "retention": "retain-with-study",
+    "sha256": "eef48c00cb56e8756ad877f84ed2f3d1a04bd3773b23148ebb2d4766fff561cb"
+  },
+  "source/adapted/code/wine_sample.py": {
+    "media_type": "text/x-python",
+    "path": "campaigns/culp-reproduction/materials/source/adapted/code/wine_sample.py",
+    "retention": "retain-with-study",
+    "sha256": "92efce2e73ad9a8c95ba8dfe8bc763a9a222eef773ddbadcb51852b332568562"
+  },
+  "source/adapted/code/zoo_sample.py": {
+    "media_type": "text/x-python",
+    "path": "campaigns/culp-reproduction/materials/source/adapted/code/zoo_sample.py",
+    "retention": "retain-with-study",
+    "sha256": "a4a52a3dcc4708ef67ae8ecf6672433df836549046e98c5b66db2d8604099715"
+  },
+  "source/adapted/data/LICENSE": {
+    "media_type": "application/octet-stream",
+    "path": "campaigns/culp-reproduction/materials/source/adapted/data/LICENSE",
+    "retention": "retain-with-study",
+    "sha256": "36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673"
+  },
+  "source/adapted/data/wine.txt": {
+    "media_type": "text/plain",
+    "path": "campaigns/culp-reproduction/materials/source/adapted/data/wine.txt",
+    "retention": "retain-with-study",
+    "sha256": "6be6b1203f3d51df0b553a70e57b8a723cd405683958204f96d23d7cd6aea659"
+  },
+  "source/adapted/data/zoo.txt": {
+    "media_type": "text/plain",
+    "path": "campaigns/culp-reproduction/materials/source/adapted/data/zoo.txt",
+    "retention": "retain-with-study",
+    "sha256": "cddc71c26ab9bc82795b8f4ff114cade41885d92720c6af29ffb69bcf73f0315"
+  },
+  "source/adapted/metadata/metadata.yml": {
+    "media_type": "application/octet-stream",
+    "path": "campaigns/culp-reproduction/materials/source/adapted/metadata/metadata.yml",
+    "retention": "retain-with-study",
+    "sha256": "7ae5e1a5c94f23793c907352db657d7249781825d28dd83b5977708d8a010750"
+  },
+  "tools/analyze.py": {
+    "media_type": "text/x-python",
+    "path": "campaigns/culp-reproduction/materials/tools/analyze.py",
+    "retention": "retain-with-study",
+    "sha256": "338959e1c0c5d234ac819682668cf114e9436f600ccc811255f741202624074c"
+  },
+  "tools/audit_science.py": {
+    "media_type": "text/x-python",
+    "path": "campaigns/culp-reproduction/materials/tools/audit_science.py",
+    "retention": "retain-with-study",
+    "sha256": "a2f40f5cd40807aac55ea16a216a1f387937b4ddba3f570a4a9aa24811c24b2d"
+  },
+  "tools/broker_job.py": {
+    "media_type": "text/x-python",
+    "path": "campaigns/culp-reproduction/materials/tools/broker_job.py",
+    "retention": "retain-with-study",
+    "sha256": "e5d6279e2fffc319c3ead181aabc75f88cb0da5952538ec9a58c365e0cf6215c"
+  },
+  "tools/common.py": {
+    "media_type": "text/x-python",
+    "path": "campaigns/culp-reproduction/materials/tools/common.py",
+    "retention": "retain-with-study",
+    "sha256": "076958876a3701e988c6ffce4e7819b183ad1636e2204f321dd9bc1d7beccf9d"
+  },
+  "tools/environment.py": {
+    "media_type": "text/x-python",
+    "path": "campaigns/culp-reproduction/materials/tools/environment.py",
+    "retention": "retain-with-study",
+    "sha256": "a4fabb7234c197b136d51d517ed72c0475d2e27e09bb9bfe26bfcb5616c4f487"
+  },
+  "tools/evaluate.py": {
+    "media_type": "text/x-python",
+    "path": "campaigns/culp-reproduction/materials/tools/evaluate.py",
+    "retention": "retain-with-study",
+    "sha256": "2e1cf33c2ae294df16e30473d682033110eba15bd4b9a9a19f6033da7afb9722"
+  },
+  "tools/pilot.py": {
+    "media_type": "text/x-python",
+    "path": "campaigns/culp-reproduction/materials/tools/pilot.py",
+    "retention": "retain-with-study",
+    "sha256": "9deb99e5cfc39aab4e32021abb876b99d23efa0d2e521f9b6dc2391cc5bdb15b"
+  },
+  "tools/prepare_study.py": {
+    "media_type": "text/x-python",
+    "path": "campaigns/culp-reproduction/materials/tools/prepare_study.py",
+    "retention": "retain-with-study",
+    "sha256": "616951e944c09a7f60b3f6bb039d82c96435af9b4e882407f40b055e8ad96e62"
+  },
+  "tools/reproduce.py": {
+    "media_type": "text/x-python",
+    "path": "campaigns/culp-reproduction/materials/tools/reproduce.py",
+    "retention": "retain-with-study",
+    "sha256": "ee004561c0429fe4c4f5d8c8d2a9cfd00ac350dab605bde2056a0e791ba0b9ac"
+  },
+  "tools/run_capsule.py": {
+    "media_type": "text/x-python",
+    "path": "campaigns/culp-reproduction/materials/tools/run_capsule.py",
+    "retention": "retain-with-study",
+    "sha256": "611273d4406ddc4693d92fa82d62adc1c458afc03e3ac93881cb2a67cee83f0c"
+  },
+  "tools/write_report.py": {
+    "media_type": "text/x-python",
+    "path": "campaigns/culp-reproduction/materials/tools/write_report.py",
+    "retention": "retain-with-study",
+    "sha256": "20192cd753a53b7ea7934650b78336a43f2fad24a4eea32a2b69e9a2951773a0"
+  }
+}

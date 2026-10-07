@@ -1,0 +1,96 @@
+{
+  "attempt_id": "iris-a01",
+  "attempt_number": 1,
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "campaign_id": "culp-reproduction",
+  "command": [
+    ".venv/bin/python",
+    "tools/run_capsule.py",
+    "--dataset",
+    "iris",
+    "--out",
+    "evidence/runs/iris-a01"
+  ],
+  "data_revision": "15553929726e34de35cbdf0c3206568777f695fab19d912ce9985864c796538f",
+  "ended_at": "2026-10-07T20:19:59.527128+00:00",
+  "environment": {
+    "metadata": {
+      "media_type": "application/json",
+      "path": "evidence/setup/environment.json",
+      "retention": "retained in study",
+      "sha256": "6f8cfae6629116f30abc5380ffac530c7ac3cb46bc9fb6f50ebab2c9fa9f6520"
+    },
+    "model_accounting": "Native model use external; local scientific worker tokens are zero",
+    "receipt": {
+      "media_type": "application/json",
+      "path": "evidence/jobs/iris-a01/client-result.json",
+      "retention": "retained in study",
+      "sha256": "fa941b27cf83af5be2bed2aa7c83a2e1f895d098b94440d37acda65cdc99a310"
+    }
+  },
+  "error": {
+    "kind": "controller_injected_interruption",
+    "message": "Authoritative status preserved as timed_out; see original receipt. New attempt required."
+  },
+  "exit_code": -15,
+  "experiment_id": "iris",
+  "inputs": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-reproduction/runs/iris/parameters.json",
+      "retention": "retained in study",
+      "sha256": "59f6b2b8bd33d2b985574e7b0cba548ccf5a61177309748772ec02d9ff58d0fa"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-reproduction/protocol.json",
+      "retention": "retained in study",
+      "sha256": "4673ef730fcda1c3e92dbf93c00690b953d369f644be86de5bad30fc25364a3d"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/jobs/iris-a01/before.json",
+      "retention": "retained in study",
+      "sha256": "8930355903e72bec48ec7c6d5467b37f5ac7e216b68e22264eb45d1922bd5742"
+    }
+  ],
+  "model_revision": null,
+  "outputs": [
+    {
+      "media_type": "application/json",
+      "path": "evidence/runs/iris-a01/started.json",
+      "retention": "retained in study",
+      "sha256": "75cb2e4fc73421bb1057b9370c2280405b36ac48a22cf2ff1d6fad8b10d09ef2"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/jobs/iris-a01/client-result.json",
+      "retention": "retained in study",
+      "sha256": "fa941b27cf83af5be2bed2aa7c83a2e1f895d098b94440d37acda65cdc99a310"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/jobs/iris-a01/client-stdout.txt",
+      "retention": "retained in study",
+      "sha256": "fa941b27cf83af5be2bed2aa7c83a2e1f895d098b94440d37acda65cdc99a310"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/jobs/iris-a01/client-stderr.txt",
+      "retention": "retained in study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "protocol_revision": "culp-v1",
+  "record_type": "RunRecord",
+  "run_id": "iris",
+  "schema_version": "0.2",
+  "split": "confirmation",
+  "started_at": "2026-10-07T20:19:58.195050+00:00",
+  "status": "interrupted",
+  "usage": {
+    "money_usd": 0,
+    "tokens": 0,
+    "wall_seconds": 1.1173052920494229
+  }
+}

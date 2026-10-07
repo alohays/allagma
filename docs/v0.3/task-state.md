@@ -100,3 +100,18 @@ check account limits before launching r02. The prepared runs use the public
 research interface, matching model/CLI/tools and finite per-task ceilings. No
 frozen code, criterion or input may be edited during the comparison. All prior
 work and remaining full-goal requirements still apply.
+
+## First final outcome retained
+
+Run r01 is terminal and controller-verified: original CORE-Bench score 6/6,
+evidence items 8/8, no task-specific coordinator messages. It used 76.26 seconds
+of scientific compute, 15.43 seconds of setup and 1,921.48 seconds native wall
+time. Failed/interrupted requests remain retained. The checker self-loop issue
+was independently corrected by the candidate before final delivery. Its complete
+source/evidence package is indexed under `runs/r01/package/`; software wheels are
+restored by exact hash. Clean-checkout reproduction remains a separate release gate.
+
+Run **r02 (CORE CULP, plain Codex, replicate 2)** is now active under exec session
+**24362**. It replaces r01 as the live handle to poll. Account usage before launch
+was 12% of the weekly window, with ordinary use allowed. Follow the remaining
+frozen run order; do not alter controlled files or provide task-specific guidance.

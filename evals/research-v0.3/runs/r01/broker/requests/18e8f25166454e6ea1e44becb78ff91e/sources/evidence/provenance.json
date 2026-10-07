@@ -1,0 +1,273 @@
+{
+  "adaptation": "Only Wine/Zoo /data filenames replaced by capsule-relative pathlib paths; imports added",
+  "capsule": "capsule-6460826",
+  "diff": {
+    "media_type": "application/octet-stream",
+    "path": "evidence/source-adaptation.patch",
+    "retention": "retained in study",
+    "sha256": "1eff655a43874c6d221ee7b18d0da1d1d5a5bac46a2e6bb636685cfdc605f107"
+  },
+  "files": [
+    {
+      "adapted": {
+        "media_type": "application/octet-stream",
+        "path": "source/adapted/code/LICENSE",
+        "retention": "retained in study",
+        "sha256": "86f24132a2af026b022666ac11bef2c3b73575ec072f4d33f750e6a9255a486f"
+      },
+      "original": {
+        "media_type": "application/octet-stream",
+        "path": "source/original/code/LICENSE",
+        "retention": "retained in study",
+        "sha256": "86f24132a2af026b022666ac11bef2c3b73575ec072f4d33f750e6a9255a486f"
+      },
+      "supplied": {
+        "media_type": "application/octet-stream",
+        "path": "inputs/materials/capsule-6460826/code/LICENSE",
+        "retention": "retained in study",
+        "sha256": "86f24132a2af026b022666ac11bef2c3b73575ec072f4d33f750e6a9255a486f"
+      }
+    },
+    {
+      "adapted": {
+        "media_type": "application/octet-stream",
+        "path": "source/adapted/code/README.md",
+        "retention": "retained in study",
+        "sha256": "88b1d4ce7571e28de55ab1b8915f8453cd6e7fd404de159d42bf948d1983ac29"
+      },
+      "original": {
+        "media_type": "application/octet-stream",
+        "path": "source/original/code/README.md",
+        "retention": "retained in study",
+        "sha256": "88b1d4ce7571e28de55ab1b8915f8453cd6e7fd404de159d42bf948d1983ac29"
+      },
+      "supplied": {
+        "media_type": "application/octet-stream",
+        "path": "inputs/materials/capsule-6460826/code/README.md",
+        "retention": "retained in study",
+        "sha256": "88b1d4ce7571e28de55ab1b8915f8453cd6e7fd404de159d42bf948d1983ac29"
+      }
+    },
+    {
+      "adapted": {
+        "media_type": "application/octet-stream",
+        "path": "source/adapted/code/culp/__init__.py",
+        "retention": "retained in study",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      },
+      "original": {
+        "media_type": "application/octet-stream",
+        "path": "source/original/code/culp/__init__.py",
+        "retention": "retained in study",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      },
+      "supplied": {
+        "media_type": "application/octet-stream",
+        "path": "inputs/materials/capsule-6460826/code/culp/__init__.py",
+        "retention": "retained in study",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      }
+    },
+    {
+      "adapted": {
+        "media_type": "application/octet-stream",
+        "path": "source/adapted/code/culp/classifier.py",
+        "retention": "retained in study",
+        "sha256": "29765277bbcc3dc11f03d60d3a22c1e8b6e0688870f6329c3347e8d9480928b0"
+      },
+      "original": {
+        "media_type": "application/octet-stream",
+        "path": "source/original/code/culp/classifier.py",
+        "retention": "retained in study",
+        "sha256": "29765277bbcc3dc11f03d60d3a22c1e8b6e0688870f6329c3347e8d9480928b0"
+      },
+      "supplied": {
+        "media_type": "application/octet-stream",
+        "path": "inputs/materials/capsule-6460826/code/culp/classifier.py",
+        "retention": "retained in study",
+        "sha256": "29765277bbcc3dc11f03d60d3a22c1e8b6e0688870f6329c3347e8d9480928b0"
+      }
+    },
+    {
+      "adapted": {
+        "media_type": "application/octet-stream",
+        "path": "source/adapted/code/culp/leg.py",
+        "retention": "retained in study",
+        "sha256": "620577a43e68a32c8228193aa47d541b569857f6bb9f6007da07eb9e94d7da55"
+      },
+      "original": {
+        "media_type": "application/octet-stream",
+        "path": "source/original/code/culp/leg.py",
+        "retention": "retained in study",
+        "sha256": "620577a43e68a32c8228193aa47d541b569857f6bb9f6007da07eb9e94d7da55"
+      },
+      "supplied": {
+        "media_type": "application/octet-stream",
+        "path": "inputs/materials/capsule-6460826/code/culp/leg.py",
+        "retention": "retained in study",
+        "sha256": "620577a43e68a32c8228193aa47d541b569857f6bb9f6007da07eb9e94d7da55"
+      }
+    },
+    {
+      "adapted": {
+        "media_type": "application/octet-stream",
+        "path": "source/adapted/code/culp/link_predictors.py",
+        "retention": "retained in study",
+        "sha256": "70347199ed928229a7d1cd7cffc31137e443cc8ee2f61ef398ba8ccc552b8243"
+      },
+      "original": {
+        "media_type": "application/octet-stream",
+        "path": "source/original/code/culp/link_predictors.py",
+        "retention": "retained in study",
+        "sha256": "70347199ed928229a7d1cd7cffc31137e443cc8ee2f61ef398ba8ccc552b8243"
+      },
+      "supplied": {
+        "media_type": "application/octet-stream",
+        "path": "inputs/materials/capsule-6460826/code/culp/link_predictors.py",
+        "retention": "retained in study",
+        "sha256": "70347199ed928229a7d1cd7cffc31137e443cc8ee2f61ef398ba8ccc552b8243"
+      }
+    },
+    {
+      "adapted": {
+        "media_type": "application/octet-stream",
+        "path": "source/adapted/code/iris_sample.py",
+        "retention": "retained in study",
+        "sha256": "eef48c00cb56e8756ad877f84ed2f3d1a04bd3773b23148ebb2d4766fff561cb"
+      },
+      "original": {
+        "media_type": "application/octet-stream",
+        "path": "source/original/code/iris_sample.py",
+        "retention": "retained in study",
+        "sha256": "eef48c00cb56e8756ad877f84ed2f3d1a04bd3773b23148ebb2d4766fff561cb"
+      },
+      "supplied": {
+        "media_type": "application/octet-stream",
+        "path": "inputs/materials/capsule-6460826/code/iris_sample.py",
+        "retention": "retained in study",
+        "sha256": "eef48c00cb56e8756ad877f84ed2f3d1a04bd3773b23148ebb2d4766fff561cb"
+      }
+    },
+    {
+      "adapted": {
+        "media_type": "application/octet-stream",
+        "path": "source/adapted/code/wine_sample.py",
+        "retention": "retained in study",
+        "sha256": "92efce2e73ad9a8c95ba8dfe8bc763a9a222eef773ddbadcb51852b332568562"
+      },
+      "original": {
+        "media_type": "application/octet-stream",
+        "path": "source/original/code/wine_sample.py",
+        "retention": "retained in study",
+        "sha256": "ffb9756450e5c0d1ff432e2902bede1e632c142e83f5e93be2c5987977707198"
+      },
+      "supplied": {
+        "media_type": "application/octet-stream",
+        "path": "inputs/materials/capsule-6460826/code/wine_sample.py",
+        "retention": "retained in study",
+        "sha256": "ffb9756450e5c0d1ff432e2902bede1e632c142e83f5e93be2c5987977707198"
+      }
+    },
+    {
+      "adapted": {
+        "media_type": "application/octet-stream",
+        "path": "source/adapted/code/zoo_sample.py",
+        "retention": "retained in study",
+        "sha256": "a4a52a3dcc4708ef67ae8ecf6672433df836549046e98c5b66db2d8604099715"
+      },
+      "original": {
+        "media_type": "application/octet-stream",
+        "path": "source/original/code/zoo_sample.py",
+        "retention": "retained in study",
+        "sha256": "d3750a40e7a2eb4b6500254dd1ebef865f5a264d349310b8942c1f4ed08b8b8c"
+      },
+      "supplied": {
+        "media_type": "application/octet-stream",
+        "path": "inputs/materials/capsule-6460826/code/zoo_sample.py",
+        "retention": "retained in study",
+        "sha256": "d3750a40e7a2eb4b6500254dd1ebef865f5a264d349310b8942c1f4ed08b8b8c"
+      }
+    },
+    {
+      "adapted": {
+        "media_type": "application/octet-stream",
+        "path": "source/adapted/data/LICENSE",
+        "retention": "retained in study",
+        "sha256": "36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673"
+      },
+      "original": {
+        "media_type": "application/octet-stream",
+        "path": "source/original/data/LICENSE",
+        "retention": "retained in study",
+        "sha256": "36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673"
+      },
+      "supplied": {
+        "media_type": "application/octet-stream",
+        "path": "inputs/materials/capsule-6460826/data/LICENSE",
+        "retention": "retained in study",
+        "sha256": "36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673"
+      }
+    },
+    {
+      "adapted": {
+        "media_type": "application/octet-stream",
+        "path": "source/adapted/data/wine.txt",
+        "retention": "retained in study",
+        "sha256": "6be6b1203f3d51df0b553a70e57b8a723cd405683958204f96d23d7cd6aea659"
+      },
+      "original": {
+        "media_type": "application/octet-stream",
+        "path": "source/original/data/wine.txt",
+        "retention": "retained in study",
+        "sha256": "6be6b1203f3d51df0b553a70e57b8a723cd405683958204f96d23d7cd6aea659"
+      },
+      "supplied": {
+        "media_type": "application/octet-stream",
+        "path": "inputs/materials/capsule-6460826/data/wine.txt",
+        "retention": "retained in study",
+        "sha256": "6be6b1203f3d51df0b553a70e57b8a723cd405683958204f96d23d7cd6aea659"
+      }
+    },
+    {
+      "adapted": {
+        "media_type": "application/octet-stream",
+        "path": "source/adapted/data/zoo.txt",
+        "retention": "retained in study",
+        "sha256": "cddc71c26ab9bc82795b8f4ff114cade41885d92720c6af29ffb69bcf73f0315"
+      },
+      "original": {
+        "media_type": "application/octet-stream",
+        "path": "source/original/data/zoo.txt",
+        "retention": "retained in study",
+        "sha256": "cddc71c26ab9bc82795b8f4ff114cade41885d92720c6af29ffb69bcf73f0315"
+      },
+      "supplied": {
+        "media_type": "application/octet-stream",
+        "path": "inputs/materials/capsule-6460826/data/zoo.txt",
+        "retention": "retained in study",
+        "sha256": "cddc71c26ab9bc82795b8f4ff114cade41885d92720c6af29ffb69bcf73f0315"
+      }
+    },
+    {
+      "adapted": {
+        "media_type": "application/octet-stream",
+        "path": "source/adapted/metadata/metadata.yml",
+        "retention": "retained in study",
+        "sha256": "7ae5e1a5c94f23793c907352db657d7249781825d28dd83b5977708d8a010750"
+      },
+      "original": {
+        "media_type": "application/octet-stream",
+        "path": "source/original/metadata/metadata.yml",
+        "retention": "retained in study",
+        "sha256": "7ae5e1a5c94f23793c907352db657d7249781825d28dd83b5977708d8a010750"
+      },
+      "supplied": {
+        "media_type": "application/octet-stream",
+        "path": "inputs/materials/capsule-6460826/metadata/metadata.yml",
+        "retention": "retained in study",
+        "sha256": "7ae5e1a5c94f23793c907352db657d7249781825d28dd83b5977708d8a010750"
+      }
+    }
+  ],
+  "preserved_limitation": "Iris and Zoo execute CS for all four printed predictor labels"
+}

@@ -1,0 +1,28 @@
+{
+  "status": "resolved_by_candidate_without_assistance",
+  "source": "work/v03-evaluation/runs/r01/candidate/tools/audit_science.py",
+  "source_sha256": "52076934f3aac68fc83eda90281991bdf774dd18e9d051c1da48ff2e3e6674cf",
+  "observed_correction": "Degree now counts self-loops twice; common-neighbor sets exclude the queried endpoints, matching NetworkX semantics.",
+  "observed_process_outcomes": [
+    {
+      "label": "graph-audit-a01",
+      "request_id": "7285612836b04b968870cc71ec721526",
+      "status": "failed",
+      "receipt": "evals/research-v0.3/runs/r01/broker/requests/7285612836b04b968870cc71ec721526/response.json"
+    },
+    {
+      "label": "fresh-graph-audit",
+      "request_id": "18e8f25166454e6ea1e44becb78ff91e",
+      "status": "completed",
+      "receipt": "evals/research-v0.3/runs/r01/broker/requests/18e8f25166454e6ea1e44becb78ff91e/response.json"
+    },
+    {
+      "label": "graph-audit-a02",
+      "request_id": "2f554f74b0414f8189495fa94b778573",
+      "status": "completed",
+      "receipt": "evals/research-v0.3/runs/r01/broker/requests/2f554f74b0414f8189495fa94b778573/response.json"
+    }
+  ],
+  "coordinator_messages": 0,
+  "scope": "Resolution of the preliminary source observation only; final package assessment remains pending."
+}

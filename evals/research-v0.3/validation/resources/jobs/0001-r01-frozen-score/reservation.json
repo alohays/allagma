@@ -1,0 +1,21 @@
+{
+  "attempt": true,
+  "category": "compute",
+  "command": [
+    "/Users/iyunseong/maangeek/allagma/work/v03-development/torch-env/bin/python",
+    "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/frozen/source/evals/research-v0.3/score.py",
+    "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r01/candidate",
+    "--output",
+    "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r01/score.json"
+  ],
+  "label": "r01-frozen-score",
+  "profile_sha256": "d9ed8b7b47a1c369f31cda162c19023d2942b562f994970218fb55279cc67ced",
+  "request_id": null,
+  "reserved_seconds": 34.75,
+  "started_at": "2026-10-07T20:37:25.810671+00:00",
+  "storage_root": "/Users/iyunseong/maangeek/allagma/work/v03-validation",
+  "supervisor_pid": 42529,
+  "supervisor_sha256": "392f7975f4a4ae77a11e23a2e167cd4cee53d7f0d63a58a42f5782d244f3da8f",
+  "timeout_seconds": 30.0,
+  "workdir": "/Users/iyunseong/maangeek/allagma/work/v03-validation"
+}

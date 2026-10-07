@@ -1,0 +1,210 @@
+{
+  "run_id": "r01",
+  "criteria": "evals/research-v0.3/frozen/source/evals/research-v0.3/CRITERIA.md",
+  "completion_verified": true,
+  "evidence_score": 8,
+  "evidence_total": 8,
+  "evidence_items": [
+    {
+      "id": 1,
+      "score": 1,
+      "reason": "Source identity, exact input bytes and code/data licenses retained; only Wine/Zoo location adapters differ.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "inputs/materials/SOURCES.md",
+          "sha256": "07ea54a345de52c6f5f9416ad46e81ae5a45425cfb2b5ff4eef172d3727fec21"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/provenance.json",
+          "sha256": "15553929726e34de35cbdf0c3206568777f695fab19d912ce9985864c796538f"
+        },
+        {
+          "root": "candidate",
+          "path": "source/original/code/LICENSE",
+          "sha256": "86f24132a2af026b022666ac11bef2c3b73575ec072f4d33f750e6a9255a486f"
+        },
+        {
+          "root": "candidate",
+          "path": "source/original/data/LICENSE",
+          "sha256": "36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "score": 1,
+      "reason": "Protocol predates confirmation, preserves original controls, excludes synthetic pilot and retries, and defines no population inference.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "campaigns/culp-reproduction/protocol.json",
+          "sha256": "4673ef730fcda1c3e92dbf93c00690b953d369f644be86de5bad30fc25364a3d"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/raw-manifest.json",
+          "sha256": "0ed3cf56b6a90b85af10074bccba8d90036d1eca645d937c83654800f6665f96"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "score": 1,
+      "reason": "All three requested scripts executed through authoritative broker jobs; interrupted Iris and failed graph checker remain retained with distinct retries.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "evidence/attempt-history.json",
+          "sha256": "bf3c073e71780042b0681676a62454a32608770a0e6b9c4bae5f4f12f71e6e8a"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/jobs/iris-a01/client-result.json",
+          "sha256": "fa941b27cf83af5be2bed2aa7c83a2e1f895d098b94440d37acda65cdc99a310"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/jobs/iris-a02/client-result.json",
+          "sha256": "b62fbe30805dc7600feaefa15dc8fd9a09fbca61dc26f50d7ae789ff43449e3f"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "score": 1,
+      "reason": "Original protected scorer accepts 6/6; separate-directory recomputation and graph scores agree, fresh environment reproduces all answers/120 arrays, and ordinary uninstrumented stdout agrees.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "analysis/recomputed/recomputation-check.json",
+          "sha256": "a776e7643a282fa97a15cdee2dc1fbd66c78fcf432a0bafa17cadb304c60aa71"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/graph-audit.json",
+          "sha256": "5fbcd636531effcd55a6cd854d275e17d2840fcd2e4b1b4f00705eef40dde26e"
+        },
+        {
+          "root": "candidate",
+          "path": "reproduction/verified/agreement.json",
+          "sha256": "50140b9fd3b4af88487e8093fe2e4fa3d4746ee8bb8e2bfdf72c6b50e781c030"
+        },
+        {
+          "root": "candidate",
+          "path": "verification/unprofiled/check.json",
+          "sha256": "0fa3780ca171deb30908a99c982f666d87063ea2894cf23b094f7cf0a7f2bc48"
+        },
+        {
+          "root": "candidate",
+          "path": "verification/final.json",
+          "sha256": "76b4376f4602009d4be788470cd24965a43d9d6cd429602750492df454735b6f"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "score": 1,
+      "reason": "Correctly limits inference to fixed transductive splits, avoids population intervals and retry pseudoreplication, and explains original label/self-loop limitations.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "REPORT.md",
+          "sha256": "428b2af47aa2ce21633561c52c32ea35eba7b242ce43a21a4ccb8cb6279a3598"
+        },
+        {
+          "root": "candidate",
+          "path": "review-findings.json",
+          "sha256": "e9879822ac8351f7d7fe9a8462bb97698780e2b6c23cced1b84ee3f879520e46"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "score": 1,
+      "reason": "English report/table identify actual predictor calls and connect all numerical claims to retained predictions, graphs, stdout and analysis.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "REPORT.md",
+          "sha256": "428b2af47aa2ce21633561c52c32ea35eba7b242ce43a21a4ccb8cb6279a3598"
+        },
+        {
+          "root": "candidate",
+          "path": "report.json",
+          "sha256": "e5d07d5a6b2983fdd14a6cd9364fc9c88210d12d73da7df0a958fec3275d42c5"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/primary/summary.json",
+          "sha256": "c211ac06da93cf0676d61a9aed5e02a83cb9ca078bcec84d18d09f16aceff330"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "score": 1,
+      "reason": "Exact environment pins, broker-based full reproduction and raw-only recomputation are documented and exercised; 1048 declared hashes and supplemental files retain identity. Default reproduction/recompute output paths are unused.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "requirements.lock.txt",
+          "sha256": "75ca99f2cd2bdad786a1d9b09bf7a101e4582ca465d52befde3823dd118c37ef"
+        },
+        {
+          "root": "candidate",
+          "path": "REPRODUCE.md",
+          "sha256": "8700c4d5e7f7eb50479b56dc5391ce90fd7b56d115e9de28b4fec94389fdfecd"
+        },
+        {
+          "root": "candidate",
+          "path": "submission.json",
+          "sha256": "b78aadb69183493577c7c3222453d26b0fabc1448547a28e337d33374bb1f330"
+        },
+        {
+          "root": "candidate",
+          "path": "artifact-manifest.json",
+          "sha256": "3093e2c9af79386215f7eab9db5a62b90cfd40d0adab699dea71bde9be80942c"
+        },
+        {
+          "root": "candidate",
+          "path": "verification/final.json",
+          "sha256": "76b4376f4602009d4be788470cd24965a43d9d6cd429602750492df454735b6f"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "score": 1,
+      "reason": "Revision-bound critique records real upstream limitations, the corrected independent-checker defect, recovery and explicit assurance limits.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "review.json",
+          "sha256": "9f81028b827efa4a30f2439f713d7aa3d39de6b2e6b0475d8425dfba4bd1bf6e"
+        },
+        {
+          "root": "candidate",
+          "path": "review-material.json",
+          "sha256": "1d22445b822e357ddb1e78c54f2e83d3461311131fcbe182389f6f6257301ec2"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/verification-revision.json",
+          "sha256": "13d0e88675ff32396a98088c91a5753b7fb8bdb53f5fc33039431ea08924c77c"
+        }
+      ]
+    }
+  ],
+  "critical_findings_unresolved": [],
+  "coordinator_task_messages": 0,
+  "candidate_edits_by_controller": 0,
+  "treatment_compliance": "Locked Allagma recipe/method reads and revision-bound records observed; portable study-owned execution bridge used.",
+  "scope": "Controller source/artifact inspection plus protected original scoring and observed native execution. Same-model/controller critique is not independent scientific peer review. Clean-checkout reproduction remains a separate release gate.",
+  "material": {
+    "root": "candidate",
+    "path": "review-material.json",
+    "sha256": "1d22445b822e357ddb1e78c54f2e83d3461311131fcbe182389f6f6257301ec2"
+  }
+}

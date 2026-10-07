@@ -1,0 +1,6 @@
+{
+  "status": "pass",
+  "stdout": "{'scorer_write': 'denied', 'other_workspace_read': 'denied'}\n",
+  "stderr": "",
+  "scope": "Non-mutating open check for protected scorer writes, plus cross-workspace read denial. No file content changed."
+}

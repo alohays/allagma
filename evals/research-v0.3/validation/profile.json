@@ -1,0 +1,11 @@
+{
+  "format": "allagma-resource-profile-v1",
+  "budgets_seconds": {"compute": 1800, "setup": 600},
+  "command_timeout_seconds": {"compute": 300, "setup": 180},
+  "attempt_limit": 64,
+  "rss_limit_bytes": 8589934592,
+  "storage_limit_bytes": 6442450944,
+  "file_limit_bytes": 536870912,
+  "poll_seconds": 0.25,
+  "terminate_grace_seconds": 0.5
+}

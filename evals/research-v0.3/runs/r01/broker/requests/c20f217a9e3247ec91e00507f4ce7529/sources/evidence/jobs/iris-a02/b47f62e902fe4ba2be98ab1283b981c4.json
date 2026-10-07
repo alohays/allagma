@@ -1,0 +1,17 @@
+{
+  "injected_interruption": false,
+  "isolation_sha256": "95bb88a51ff944172965a3edc5e027905770945d1af65d6176e60cf17cb6b708",
+  "reconciled_after_controller_restart": false,
+  "request_id": "b47f62e902fe4ba2be98ab1283b981c4",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 2.24552954104729,
+    "ended_at": "2026-10-07T20:20:20.375720+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r01/resources/jobs/0006-iris-a02",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 162545664,
+    "peak_storage_bytes": 385502798,
+    "status": "completed"
+  }
+}

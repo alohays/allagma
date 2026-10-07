@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r01/candidate/.venv-verified/bin/python",
+    "-m",
+    "pip",
+    "install",
+    "--no-cache-dir",
+    "--no-index",
+    "--find-links",
+    "inputs/materials/wheels",
+    "-r",
+    "requirements.lock.txt"
+  ],
+  "attempt": false,
+  "category": "setup",
+  "cwd": ".",
+  "label": "fresh-packages",
+  "request_id": "9607cb35c2624f8cbae16d7d5d13abe1",
+  "timeout_seconds": 120.0
+}

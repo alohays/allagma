@@ -1,0 +1,137 @@
+{
+  "answer_unit": "percent",
+  "checks": [
+    "All observed predictor, k, distance and n_jobs settings match original source",
+    "All printed percentages exactly equal scores from retained predictions/labels",
+    "All saved scores select saved predictions via source argmax",
+    "Inputs equal indexed raw features, with train-only Wine normalization",
+    "Split indices partition input rows and recover every saved train/test label"
+  ],
+  "independent_unit": "One fixed source-prescribed split per dataset; calls and retries are not replicates",
+  "questions": [
+    "Report the CN prediction accuracy for the Iris dataset.",
+    "Report the AA prediction acccuracy for the Iris dataset.",
+    "Report the CN prediction acccuracy for the Zoo dataset.",
+    "Report the AA prediction acccuracy for the Zoo dataset.",
+    "Report the CN prediction acccuracy for the Wine dataset.",
+    "Report the AA prediction acccuracy for the Wine dataset."
+  ],
+  "raw_manifest": {
+    "media_type": "application/json",
+    "path": "reproduction/verified/raw-manifest.json",
+    "retention": "retained in study",
+    "sha256": "5c4140f11173e48810fc6519f27a8ffe8c305ae011e6e6f9e22a8256081703ea"
+  },
+  "rows": [
+    {
+      "accuracy": 1.0,
+      "actual_predictor": "CS",
+      "correct": 30,
+      "dataset": "iris",
+      "printed_label": "CN",
+      "printed_percent": 100.0,
+      "total": 30
+    },
+    {
+      "accuracy": 1.0,
+      "actual_predictor": "CS",
+      "correct": 30,
+      "dataset": "iris",
+      "printed_label": "AA",
+      "printed_percent": 100.0,
+      "total": 30
+    },
+    {
+      "accuracy": 1.0,
+      "actual_predictor": "CS",
+      "correct": 30,
+      "dataset": "iris",
+      "printed_label": "RA",
+      "printed_percent": 100.0,
+      "total": 30
+    },
+    {
+      "accuracy": 1.0,
+      "actual_predictor": "CS",
+      "correct": 30,
+      "dataset": "iris",
+      "printed_label": "CS",
+      "printed_percent": 100.0,
+      "total": 30
+    },
+    {
+      "accuracy": 1.0,
+      "actual_predictor": "CS",
+      "correct": 21,
+      "dataset": "zoo",
+      "printed_label": "CN",
+      "printed_percent": 100.0,
+      "total": 21
+    },
+    {
+      "accuracy": 1.0,
+      "actual_predictor": "CS",
+      "correct": 21,
+      "dataset": "zoo",
+      "printed_label": "AA",
+      "printed_percent": 100.0,
+      "total": 21
+    },
+    {
+      "accuracy": 1.0,
+      "actual_predictor": "CS",
+      "correct": 21,
+      "dataset": "zoo",
+      "printed_label": "RA",
+      "printed_percent": 100.0,
+      "total": 21
+    },
+    {
+      "accuracy": 1.0,
+      "actual_predictor": "CS",
+      "correct": 21,
+      "dataset": "zoo",
+      "printed_label": "CS",
+      "printed_percent": 100.0,
+      "total": 21
+    },
+    {
+      "accuracy": 0.9722222222222222,
+      "actual_predictor": "CN",
+      "correct": 35,
+      "dataset": "wine",
+      "printed_label": "CN",
+      "printed_percent": 97.22,
+      "total": 36
+    },
+    {
+      "accuracy": 0.9722222222222222,
+      "actual_predictor": "AA",
+      "correct": 35,
+      "dataset": "wine",
+      "printed_label": "AA",
+      "printed_percent": 97.22,
+      "total": 36
+    },
+    {
+      "accuracy": 0.9722222222222222,
+      "actual_predictor": "RA",
+      "correct": 35,
+      "dataset": "wine",
+      "printed_label": "RA",
+      "printed_percent": 97.22,
+      "total": 36
+    },
+    {
+      "accuracy": 1.0,
+      "actual_predictor": "CS",
+      "correct": 36,
+      "dataset": "wine",
+      "printed_label": "CS",
+      "printed_percent": 100.0,
+      "total": 36
+    }
+  ],
+  "separate_counting_agreement": true,
+  "uncertainty": "No population confidence interval: a single deterministic split and no prespecified sampling design. Counts show finite-test-set resolution."
+}

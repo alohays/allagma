@@ -1,0 +1,5 @@
+Completed the local reproduction. The [submission package](/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r01/candidate/submission.json) includes answers, report, review, reproduction commands, and hashed artifacts.
+
+CN/AA labeled outputs: **Iris 100%, Zoo 100%, Wine 97.22%**. Iris and Zoo actually call CS—this upstream limitation is preserved and documented in [REPORT.md](/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r01/candidate/REPORT.md).
+
+The interrupted attempt was preserved and recovered. Fresh-environment execution, retained-data recomputation, and final evidence checks passed. Historical reference-output agreement remains unverified.

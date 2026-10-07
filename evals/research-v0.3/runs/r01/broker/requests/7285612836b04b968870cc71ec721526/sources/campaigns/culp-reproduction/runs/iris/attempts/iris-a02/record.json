@@ -1,0 +1,147 @@
+{
+  "attempt_id": "iris-a02",
+  "attempt_number": 2,
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "campaign_id": "culp-reproduction",
+  "command": [
+    ".venv/bin/python",
+    "tools/run_capsule.py",
+    "--dataset",
+    "iris",
+    "--out",
+    "evidence/runs/iris-a02"
+  ],
+  "data_revision": "15553929726e34de35cbdf0c3206568777f695fab19d912ce9985864c796538f",
+  "ended_at": "2026-10-07T20:20:20.375720+00:00",
+  "environment": {
+    "metadata": {
+      "media_type": "application/json",
+      "path": "evidence/setup/environment.json",
+      "retention": "retained in study",
+      "sha256": "6f8cfae6629116f30abc5380ffac530c7ac3cb46bc9fb6f50ebab2c9fa9f6520"
+    },
+    "model_accounting": "Native model use external; local scientific worker tokens are zero",
+    "receipt": {
+      "media_type": "application/json",
+      "path": "evidence/jobs/iris-a02/client-result.json",
+      "retention": "retained in study",
+      "sha256": "b62fbe30805dc7600feaefa15dc8fd9a09fbca61dc26f50d7ae789ff43449e3f"
+    }
+  },
+  "error": null,
+  "exit_code": 0,
+  "experiment_id": "iris",
+  "inputs": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-reproduction/runs/iris/parameters.json",
+      "retention": "retained in study",
+      "sha256": "59f6b2b8bd33d2b985574e7b0cba548ccf5a61177309748772ec02d9ff58d0fa"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-reproduction/protocol.json",
+      "retention": "retained in study",
+      "sha256": "4673ef730fcda1c3e92dbf93c00690b953d369f644be86de5bad30fc25364a3d"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/jobs/iris-a02/before.json",
+      "retention": "retained in study",
+      "sha256": "c64e95cbf301cc727148476ee03cc9f95ad58c3e06abd12c389867ca5eaf98fe"
+    }
+  ],
+  "model_revision": null,
+  "outputs": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/iris-a02/call-00.npz",
+      "retention": "retained in study",
+      "sha256": "0b9dc17538d3ccd75b36539b7da825dd0cc6a8b58a37bc7bb4dcf4f3b376e876"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/iris-a02/call-01.npz",
+      "retention": "retained in study",
+      "sha256": "0b9dc17538d3ccd75b36539b7da825dd0cc6a8b58a37bc7bb4dcf4f3b376e876"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/iris-a02/call-02.npz",
+      "retention": "retained in study",
+      "sha256": "0b9dc17538d3ccd75b36539b7da825dd0cc6a8b58a37bc7bb4dcf4f3b376e876"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/iris-a02/call-03.npz",
+      "retention": "retained in study",
+      "sha256": "0b9dc17538d3ccd75b36539b7da825dd0cc6a8b58a37bc7bb4dcf4f3b376e876"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/iris-a02/calls.jsonl",
+      "retention": "retained in study",
+      "sha256": "ec741c82bc21b8c8f8d1b6f8214d8f0ff6b37471b117a7b374a88e4b9a397c70"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/iris-a02/dataset.npz",
+      "retention": "retained in study",
+      "sha256": "84ece38a26781e2e8a44c7bb15679eb2cf9e49442bd3dbbc24d070ca4f94429d"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/runs/iris-a02/raw.json",
+      "retention": "retained in study",
+      "sha256": "d6d6460cfce1823fd2182cf8585f36de0c16dd0d9aea5914c3d06e1234ec1a32"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/runs/iris-a02/started.json",
+      "retention": "retained in study",
+      "sha256": "c6512f6cb5f008bb73efcc89a9e9fdb17ecdb4482f0c695084442be3265c21f7"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/iris-a02/stderr.txt",
+      "retention": "retained in study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/runs/iris-a02/stdout.txt",
+      "retention": "retained in study",
+      "sha256": "9b6bbee09c56848cc00f8079b454b17e4b4a6d56b3426347b750348f01a76a70"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/jobs/iris-a02/client-result.json",
+      "retention": "retained in study",
+      "sha256": "b62fbe30805dc7600feaefa15dc8fd9a09fbca61dc26f50d7ae789ff43449e3f"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/jobs/iris-a02/client-stdout.txt",
+      "retention": "retained in study",
+      "sha256": "45a058b359a58788d474a53aad6edeb384d297ed5b915d78f407cac11134d11c"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/jobs/iris-a02/client-stderr.txt",
+      "retention": "retained in study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "protocol_revision": "culp-v1",
+  "record_type": "RunRecord",
+  "run_id": "iris",
+  "schema_version": "0.2",
+  "split": "confirmation",
+  "started_at": "2026-10-07T20:20:17.823967+00:00",
+  "status": "succeeded",
+  "usage": {
+    "money_usd": 0,
+    "tokens": 0,
+    "wall_seconds": 2.24552954104729
+  }
+}
