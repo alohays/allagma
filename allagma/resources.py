@@ -127,15 +127,15 @@ def storage_bytes(directory):
 
 
 def process_table():
-    result = subprocess.run(["ps", "-axo", "pid=,ppid=,pgid=,rss=,lstart="],
+    result = subprocess.run(["ps", "-axo", "pid=,ppid=,pgid=,rss=,stat=,lstart="],
                             capture_output=True, text=True, timeout=3, check=True)
     processes = {}
     for line in result.stdout.splitlines():
-        fields = line.split(None, 4)
-        if len(fields) == 5:
+        fields = line.split(None, 5)
+        if len(fields) == 6 and not fields[4].startswith("Z"):
             pid, parent, group, rss = map(int, fields[:4])
             processes[pid] = {"parent": parent, "group": group, "rss": rss*1024,
-                              "started": fields[4]}
+                              "started": fields[5]}
     return processes
 
 
@@ -259,6 +259,10 @@ def execute(directory, command, *, label, category, timeout, attempt=False):
                         status = "storage_exceeded"
                     elif process.poll() is not None:
                         status = "completed" if process.returncode == 0 else "failed"
+                        # The earlier snapshot can predate normal child exit.
+                        # Reap the root, then verify descendants in a fresh view.
+                        table = process_table()
+                        known = _family(table, process.pid, known)
                         if any(pid != process.pid for pid in known):
                             status = "orphaned_children"
                             _stop(process, known, profile["terminate_grace_seconds"])

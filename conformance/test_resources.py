@@ -80,6 +80,17 @@ class ResourceTests(unittest.TestCase):
         self.assertEqual(result.returncode, 1, result.stderr)
         self.assertEqual((self.ledger/"jobs/0001-cli/stdout.txt").read_text(), "--literal\n")
 
+    def test_normal_subprocess_exit_is_not_an_orphan(self):
+        self.initialize()
+        result = self.run_code("import subprocess,sys; subprocess.run([sys.executable,'-c','import time; time.sleep(.08)'],check=True)")
+        self.assertEqual(result["status"], "completed")
+
+    def test_observed_detached_child_is_stopped_after_parent_exits(self):
+        self.initialize()
+        result = self.run_code("import subprocess,sys,time; from pathlib import Path; p=subprocess.Popen([sys.executable,'-c','import time; time.sleep(10)'],start_new_session=True); Path('pid').write_text(str(p.pid)); time.sleep(.15)")
+        self.assertEqual(result["status"], "orphaned_children")
+        self.assertNotIn(int((self.work/"pid").read_text()), resources.process_table())
+
     def test_failed_launch_is_fully_charged_until_recovered(self):
         self.initialize()
         with self.assertRaises(FileNotFoundError):

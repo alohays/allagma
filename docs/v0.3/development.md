@@ -51,3 +51,31 @@ disclosed and must not change scientific parameters or scoring.
 Sources: [CORE-Bench](https://github.com/siegelz/core-bench),
 [native Codex execution](https://learn.chatgpt.com/docs/non-interactive-mode),
 [skill evaluation guidance](https://developers.openai.com/blog/eval-skills).
+
+## Resource recovery correction from real setup
+
+The first isolated Torch environment setup completed with exit code zero but
+the supervisor labeled it `orphaned_children`. A process snapshot taken before
+the root exited could still include an already-finished installer child. The
+fix excludes zombies and obtains a fresh process snapshot after observing root
+exit. Twelve resource tests now pass, including normal nested-process exit and
+termination of an actually live detached descendant. The original setup receipt
+is preserved. This correction does not relabel its historical outcome.
+
+## CULP compatibility established
+
+The initial CULP invocation timed out at 30 seconds during its first environment
+use. A separate bounded import diagnostic captured the interpreter inside a
+scikit-learn extension import. A fresh attempt with a 45-second per-script
+timeout completed all three original scripts in about four seconds overall.
+The exact upstream scoring function, original reference answers and unchanged
+question strings gave **6/6 correct answers**. Only the Wine/Zoo absolute
+container paths were adapted to capsule-relative data paths; algorithms,
+dataset partitions, parameters and scoring tolerances were unchanged.
+
+CULP is selected for the external task. The original source has a scientific
+reporting caveat: Iris and Zoo loop over predictor labels but always call the
+CS predictor. Preserving the source task means retaining this behavior and
+disclosing it, rather than silently fixing it or treating its labels as proof
+that CN and AA were actually compared. The preflight is a local compatibility
+result, not a leaderboard score or final evaluation run.
