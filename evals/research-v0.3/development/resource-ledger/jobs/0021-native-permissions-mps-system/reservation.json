@@ -1,0 +1,26 @@
+{
+  "attempt": false,
+  "category": "compute",
+  "command": [
+    "env",
+    "CODEX_HOME=/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/runtime05",
+    "TMPDIR=/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/candidate05/.tmp",
+    "PYTORCH_ENABLE_MPS_FALLBACK=0",
+    "/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex",
+    "sandbox",
+    "-P",
+    "allagma-eval",
+    "-C",
+    "/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/candidate05",
+    "--",
+    "/Users/iyunseong/maangeek/allagma/work/v03-development/torch-env/bin/python",
+    "inputs/probe_permissions.py"
+  ],
+  "label": "native-permissions-mps-system",
+  "profile_sha256": "fa5c3559023d6d84ce62436f11e67ba82f19c35e892834f53892395c5d51bc5c",
+  "reserved_seconds": 49.75,
+  "started_at": "2026-10-07T17:48:46.611907+00:00",
+  "supervisor_pid": 82516,
+  "timeout_seconds": 45.0,
+  "workdir": "/Users/iyunseong/maangeek/allagma/work/v03-development"
+}

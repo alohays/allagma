@@ -1,0 +1,7 @@
+The Python check passed all expectations:
+
+- `inputs/canary.txt` read: succeeded.
+- Canary overwrite: failed with `PermissionError`.
+- `protected-answer.txt` read: failed with `PermissionError`.
+
+Results saved to [probe.json](/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/candidate03/probe.json).

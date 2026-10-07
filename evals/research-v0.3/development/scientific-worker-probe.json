@@ -1,0 +1,27 @@
+{
+  "input_write": {
+    "denied": true,
+    "exception": "PermissionError"
+  },
+  "answer_read": {
+    "denied": true,
+    "exception": "PermissionError"
+  },
+  "answer_write": {
+    "denied": true,
+    "exception": "PermissionError"
+  },
+  "answer_symlink_read": {
+    "denied": true,
+    "exception": "PermissionError"
+  },
+  "command_network": {
+    "denied": true,
+    "exception": "PermissionError"
+  },
+  "mps": {
+    "forward_backward_known_answer": true,
+    "torch": "2.14.1",
+    "driver_allocated_bytes": 8880128
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "status": "pass",
+  "ema_variant_checks": [
+    {
+      "file": "ema-gmm8-constant-10000-seed31.json",
+      "variant": "ema099",
+      "sw1": 0.03594656442745334
+    },
+    {
+      "file": "ema-gmm8-constant-10000-seed31.json",
+      "variant": "ema0999",
+      "sw1": 0.03184752583566426
+    },
+    {
+      "file": "ema-gmm8-constant-10000-seed31.json",
+      "variant": "raw",
+      "sw1": 0.07959913875525458
+    },
+    {
+      "file": "ema-gmm8-constant-5000-seed31.json",
+      "variant": "ema099",
+      "sw1": 0.028416026355642117
+    },
+    {
+      "file": "ema-gmm8-constant-5000-seed31.json",
+      "variant": "ema0999",
+      "sw1": 0.03150531141429825
+    },
+    {
+      "file": "ema-gmm8-constant-5000-seed31.json",
+      "variant": "raw",
+      "sw1": 0.07944761982978439
+    },
+    {
+      "file": "ema-gmm8-cosine-10000-seed31.json",
+      "variant": "ema099",
+      "sw1": 0.02883298118335656
+    },
+    {
+      "file": "ema-gmm8-cosine-10000-seed31.json",
+      "variant": "ema0999",
+      "sw1": 0.03260334140417554
+    },
+    {
+      "file": "ema-gmm8-cosine-10000-seed31.json",
+      "variant": "raw",
+      "sw1": 0.02868202628307988
+    },
+    {
+      "file": "ema-gmm8-cosine-5000-seed31.json",
+      "variant": "ema099",
+      "sw1": 0.027859374017273255
+    },
+    {
+      "file": "ema-gmm8-cosine-5000-seed31.json",
+      "variant": "ema0999",
+      "sw1": 0.029947850507934713
+    },
+    {
+      "file": "ema-gmm8-cosine-5000-seed31.json",
+      "variant": "raw",
+      "sw1": 0.02755147007479211
+    },
+    {
+      "file": "ema-moons-constant-10000-seed41.json",
+      "variant": "ema099",
+      "sw1": 0.029963688505362004
+    },
+    {
+      "file": "ema-moons-constant-10000-seed41.json",
+      "variant": "ema0999",
+      "sw1": 0.03678358978142955
+    },
+    {
+      "file": "ema-moons-constant-10000-seed41.json",
+      "variant": "raw",
+      "sw1": 0.07370824359400625
+    },
+    {
+      "file": "ema-moons-cosine-10000-seed41.json",
+      "variant": "ema099",
+      "sw1": 0.038877295304318854
+    },
+    {
+      "file": "ema-moons-cosine-10000-seed41.json",
+      "variant": "ema0999",
+      "sw1": 0.03872003771723645
+    },
+    {
+      "file": "ema-moons-cosine-10000-seed41.json",
+      "variant": "raw",
+      "sw1": 0.0388337915706848
+    }
+  ],
+  "grok_history_and_partition_checks": [
+    {
+      "file": "grok-mps-wd0-100k-seed29.json",
+      "seed": 29,
+      "steps": 100000,
+      "weight_decay": 0.0,
+      "last": {
+        "step": 100000,
+        "train_accuracy": 1.0,
+        "test_accuracy": 0.0003036283596884459,
+        "train_loss": 2.2016962475390756e-07,
+        "test_loss": 139.28892517089844
+      },
+      "train_indices_sha256": "3b27f88463186c57d93ff2af22c566a193b683d0f2181fe90bebb2465cc028a7",
+      "test_indices_sha256": "56d2636c1ac93143f9da16f979c29e1d89337cd017dfed26b23422eef7a592b6"
+    },
+    {
+      "file": "grok-mps-wd1-100k-seed29.json",
+      "seed": 29,
+      "steps": 100000,
+      "weight_decay": 1.0,
+      "last": {
+        "step": 100000,
+        "train_accuracy": 1.0,
+        "test_accuracy": 0.7024441957473755,
+        "train_loss": 3.39036705554463e-05,
+        "test_loss": 1.1842745542526245
+      },
+      "train_indices_sha256": "3b27f88463186c57d93ff2af22c566a193b683d0f2181fe90bebb2465cc028a7",
+      "test_indices_sha256": "56d2636c1ac93143f9da16f979c29e1d89337cd017dfed26b23422eef7a592b6"
+    },
+    {
+      "file": "grok-pilot-wd0-100k-seed17.json",
+      "seed": 17,
+      "steps": 100000,
+      "weight_decay": 0.0,
+      "last": {
+        "step": 100000,
+        "train_accuracy": 1.0,
+        "test_accuracy": 0.0,
+        "train_loss": 2.2316886827411508e-07,
+        "test_loss": 143.77432250976562
+      },
+      "train_indices_sha256": "3e91526c44262c595961eeb47e460a94f7c74d08e69070bb98b2dc6dcfb05960",
+      "test_indices_sha256": "e2985de1a77a8f749881750c748cc18e48f8e6928d7288f9477f3fe3fb3c5048"
+    },
+    {
+      "file": "grok-pilot-wd1-100k-seed17.json",
+      "seed": 17,
+      "steps": 100000,
+      "weight_decay": 1.0,
+      "last": {
+        "step": 100000,
+        "train_accuracy": 1.0,
+        "test_accuracy": 0.6658570170402527,
+        "train_loss": 3.4919277823064476e-05,
+        "test_loss": 1.335483431816101
+      },
+      "train_indices_sha256": "3e91526c44262c595961eeb47e460a94f7c74d08e69070bb98b2dc6dcfb05960",
+      "test_indices_sha256": "e2985de1a77a8f749881750c748cc18e48f8e6928d7288f9477f3fe3fb3c5048"
+    },
+    {
+      "file": "pilot-wd1-10k-seed17.json",
+      "seed": 17,
+      "steps": 10000,
+      "weight_decay": 1.0,
+      "last": {
+        "step": 10000,
+        "train_accuracy": 1.0,
+        "test_accuracy": 0.006376195698976517,
+        "train_loss": 0.00019314743985887617,
+        "test_loss": 13.246082305908203
+      },
+      "train_indices_sha256": "3e91526c44262c595961eeb47e460a94f7c74d08e69070bb98b2dc6dcfb05960",
+      "test_indices_sha256": "e2985de1a77a8f749881750c748cc18e48f8e6928d7288f9477f3fe3fb3c5048"
+    }
+  ],
+  "limitations": [
+    "Grokking pilots retain aggregate curves, not endpoint predictions or checkpoints; accuracy is not independently recomputed here.",
+    "No final confirmation or agent comparison run is included."
+  ]
+}

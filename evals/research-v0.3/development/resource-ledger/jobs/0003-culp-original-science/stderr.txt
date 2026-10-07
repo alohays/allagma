@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/development/preflight_core.py", line 81, in <module>
+    main()
+  File "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/development/preflight_core.py", line 39, in main
+    result = subprocess.run([sys.executable, name], cwd=destination/"code",
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/subprocess.py", line 1209, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/subprocess.py", line 2109, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/subprocess.py", line 1253, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['/Users/iyunseong/maangeek/allagma/work/v03-development/core-env/bin/python', 'iris_sample.py']' timed out after 30 seconds

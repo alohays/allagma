@@ -1,0 +1,113 @@
+{
+  "adapter_sha256": "8c1e1de302f75b1c3fcd36df12509c8a4a9b82a07b2e0eb695c4acc08c55e6e5",
+  "authentication": "Existing Codex auth file referenced locally; no credentials in evidence",
+  "cli_sha256": "cc0a05e34876414280a79726153d0fe8d55c93f704ef6c292ec409bfe36d5b06",
+  "cli_version": "codex-cli 0.160.1",
+  "command": [
+    "/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex",
+    "--strict-config",
+    "--no-daemon",
+    "-a",
+    "never",
+    "exec",
+    "--ignore-rules",
+    "--skip-git-repo-check",
+    "--json",
+    "-C",
+    "/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/candidate03",
+    "-o",
+    "/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/runtime03/final.txt",
+    "-"
+  ],
+  "controlled_settings": {
+    "default_permissions": "allagma-eval",
+    "model": "gpt-6-astra",
+    "model_auto_compact_token_limit": 900000,
+    "model_context_window": 1000000,
+    "model_reasoning_effort": "max",
+    "permissions": {
+      "allagma-eval": {
+        "extends": ":workspace",
+        "filesystem": {
+          "/Applications/ChatGPT.app": "read",
+          "/Library/Frameworks/Python.framework": "read",
+          "/Users/iyunseong/.agents": "deny",
+          "/Users/iyunseong/.codex": "deny",
+          "/Users/iyunseong/Documents/vault": "deny",
+          "/Users/iyunseong/maangeek/allagma": "deny",
+          "/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/candidate03": "write",
+          "/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/candidate03/inputs": "read",
+          "/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/runtime03": "deny",
+          "/usr/local/bin": "read",
+          ":minimal": "read",
+          ":root": "deny",
+          ":slash_tmp": "deny",
+          ":tmpdir": "deny"
+        },
+        "network": {
+          "enabled": false
+        }
+      }
+    },
+    "project_doc_max_bytes": 0,
+    "web_search": "disabled"
+  },
+  "disabled_skill_count": 29,
+  "ended_at": "2026-10-07T17:32:22.332727+00:00",
+  "events_sha256": "60b0a15156e1f41f67034ee82a83676a4270baccc620b535b17e6c8d7bd2bda5",
+  "exit_code": 0,
+  "fresh_session": true,
+  "isolation": "Native allagma-eval permission profile; tool reads restricted, command network disabled",
+  "malformed_event_lines": 0,
+  "model_observations": [
+    {
+      "approval_policy": "never",
+      "cwd": "/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/candidate03",
+      "effort": "max",
+      "model": "gpt-6-astra",
+      "sandbox_policy": {
+        "exclude_slash_tmp": true,
+        "exclude_tmpdir_env_var": true,
+        "network_access": false,
+        "type": "workspace-write"
+      }
+    }
+  ],
+  "pid": 78074,
+  "project_model_config_written": false,
+  "prompt_sha256": "13dad28040d982144f20ff0da3bb55b7849cae5213439ab2feedc461fc95e83d",
+  "resume": false,
+  "runtime": "/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/runtime03",
+  "runtime_config_after_sha256": "57a3c1d1bb9b9409e1e64d71567623a260dad90641cea60de1683f0c475a5f5f",
+  "runtime_config_sha256": "81251c9e27c102be1f2b0a75f256f7634ed5e0ed14672d64900d1a04e8c871e0",
+  "runtime_project_trust_entries": {
+    "/Users/iyunseong/maangeek/allagma": {
+      "trust_level": "trusted"
+    }
+  },
+  "settings": {
+    "model": "gpt-6-astra",
+    "model_auto_compact_token_limit": 900000,
+    "model_context_window": 1000000,
+    "model_reasoning_effort": "max"
+  },
+  "settings_source": "/Users/iyunseong/.codex/config.toml",
+  "settings_unchanged": true,
+  "started_at": "2026-10-07T17:31:20.110554+00:00",
+  "status": "completed",
+  "thread_ids": [
+    "01a1176b-734c-7102-8223-b0d7e594cb54"
+  ],
+  "timeout_seconds": 180.0,
+  "usage": [
+    {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 29696,
+      "input_tokens": 37672,
+      "output_tokens": 1299,
+      "reasoning_output_tokens": 356
+    }
+  ],
+  "wall_seconds": 62.118114084005356,
+  "workspace": "/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/candidate03"
+}

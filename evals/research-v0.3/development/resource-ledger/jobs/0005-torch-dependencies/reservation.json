@@ -1,0 +1,19 @@
+{
+  "attempt": false,
+  "category": "setup",
+  "command": [
+    "torch-env/bin/python",
+    "-m",
+    "pip",
+    "install",
+    "-r",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/requirements.lock"
+  ],
+  "label": "torch-dependencies",
+  "profile_sha256": "fa5c3559023d6d84ce62436f11e67ba82f19c35e892834f53892395c5d51bc5c",
+  "reserved_seconds": 184.75,
+  "started_at": "2026-10-07T17:07:31.299407+00:00",
+  "supervisor_pid": 65760,
+  "timeout_seconds": 180.0,
+  "workdir": "/Users/iyunseong/maangeek/allagma/work/v03-development"
+}

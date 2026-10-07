@@ -1,0 +1,28 @@
+{
+  "attempt": true,
+  "category": "compute",
+  "command": [
+    "env",
+    "PYTORCH_ENABLE_MPS_FALLBACK=0",
+    "OMP_NUM_THREADS=1",
+    "torch-env/bin/python",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-schedule/development/pilot.py",
+    "--dataset",
+    "gmm8",
+    "--seed",
+    "31",
+    "--updates",
+    "5000",
+    "--schedule",
+    "cosine",
+    "--output",
+    "ema-gmm8-cosine-5000-seed31.json"
+  ],
+  "label": "ema-gmm8-cosine-5000-seed31",
+  "profile_sha256": "fa5c3559023d6d84ce62436f11e67ba82f19c35e892834f53892395c5d51bc5c",
+  "reserved_seconds": 94.75,
+  "started_at": "2026-10-07T17:16:31.990106+00:00",
+  "supervisor_pid": 70018,
+  "timeout_seconds": 90,
+  "workdir": "/Users/iyunseong/maangeek/allagma/work/v03-development"
+}

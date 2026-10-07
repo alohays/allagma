@@ -1,0 +1,28 @@
+{
+  "attempt": true,
+  "category": "compute",
+  "command": [
+    "env",
+    "PYTORCH_ENABLE_MPS_FALLBACK=0",
+    "OMP_NUM_THREADS=1",
+    "torch-env/bin/python",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-schedule/development/pilot.py",
+    "--dataset",
+    "moons",
+    "--seed",
+    "41",
+    "--updates",
+    "10000",
+    "--schedule",
+    "cosine",
+    "--output",
+    "ema-moons-cosine-10000-seed41.json"
+  ],
+  "label": "ema-moons-cosine-10000-seed41",
+  "profile_sha256": "fa5c3559023d6d84ce62436f11e67ba82f19c35e892834f53892395c5d51bc5c",
+  "reserved_seconds": 124.75,
+  "started_at": "2026-10-07T17:25:19.678106+00:00",
+  "supervisor_pid": 74527,
+  "timeout_seconds": 120,
+  "workdir": "/Users/iyunseong/maangeek/allagma/work/v03-development"
+}

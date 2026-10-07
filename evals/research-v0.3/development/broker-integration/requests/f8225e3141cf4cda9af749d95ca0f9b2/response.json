@@ -1,0 +1,16 @@
+{
+  "injected_interruption": true,
+  "isolation_sha256": "1c51e787215754afca1649246b8ee4c5ecb46ac20046e7923f445c33b0477f13",
+  "request_id": "f8225e3141cf4cda9af749d95ca0f9b2",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 1.8361718330997974,
+    "ended_at": "2026-10-07T18:04:40.610441+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/development/resource-ledger/jobs/0024-broker-interrupted",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 12533760,
+    "peak_storage_bytes": 1650001090,
+    "status": "timed_out"
+  }
+}

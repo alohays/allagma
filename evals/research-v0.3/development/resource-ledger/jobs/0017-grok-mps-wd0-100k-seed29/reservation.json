@@ -1,0 +1,26 @@
+{
+  "attempt": true,
+  "category": "compute",
+  "command": [
+    "env",
+    "PYTORCH_ENABLE_MPS_FALLBACK=0",
+    "OMP_NUM_THREADS=1",
+    "torch-env/bin/python",
+    "/Users/iyunseong/maangeek/allagma/studies/modular-addition/development/pilot.py",
+    "--seed",
+    "29",
+    "--weight-decay",
+    "0",
+    "--steps",
+    "100000",
+    "--output",
+    "grok-mps-wd0-100k-seed29.json"
+  ],
+  "label": "grok-mps-wd0-100k-seed29",
+  "profile_sha256": "fa5c3559023d6d84ce62436f11e67ba82f19c35e892834f53892395c5d51bc5c",
+  "reserved_seconds": 124.75,
+  "started_at": "2026-10-07T17:25:33.128076+00:00",
+  "supervisor_pid": 74527,
+  "timeout_seconds": 120,
+  "workdir": "/Users/iyunseong/maangeek/allagma/work/v03-development"
+}

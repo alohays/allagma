@@ -1,0 +1,25 @@
+metadata_version: 1
+name: 'CULP: Classification Using Link Prediction'
+description: |-
+  This is the implementation of the CULP classification algorithm from the paper Classification Using Link Prediction.
+
+  Abstract: Link prediction in a graph is the problem of detecting the missing links that would be formed in the near future. Using a graph representation of the data, we can convert the problem of classification to the problem of link prediction which aims at finding the missing links between the unlabeled data (unlabeled nodes) and their classes. To our knowledge, despite the fact that numerous algorithms use the graph representation of the data for classification, none are using link prediction as the heart of their classifying procedure. In this work, we propose a novel algorithm called CULP (Classification Using Link Prediction) which uses a new structure namely Label Embedded Graph or LEG and a link predictor to find the class of the unlabeled data. Different link predictors along with Compatibility Score - a new link predictor we proposed that is designed specifically for our settings - has been used and showed promising results for classifying different datasets. This paper further improved CULP by designing an extension called CULM which uses a majority vote (hence the M in the acronym) procedure with weights proportional to the predictions’ confidences to use the predictive power of multiple link predictors and also exploits the low level features of the data. Extensive experimental evaluations shows that both CULP and CULM are highly accurate and competitive with the cutting edge graph classifiers and general classifiers.
+tags:
+- classification
+- link-prediction
+- graph-representation
+- local-similarity-measure
+- similarity-based-techniques
+- topological-properties
+- complex-networks
+- supervised-learning
+authors:
+- name: Seyed Amin Fadaee
+  affiliations:
+  - name: Amirkabir University of Technology
+- name: Maryam Amir Haeri
+  affiliations:
+  - name: Amirkabir University of Technology
+corresponding_contributor:
+  name: Seyed Amin Fadaee
+  email: aminfadaee@aut.ac.ir

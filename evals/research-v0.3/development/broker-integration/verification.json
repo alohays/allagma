@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "actual_local_processes": true,
+  "native_agent": false,
+  "scope": "Real Mac queue, first-attempt timeout, new preserved request, successful retry, protected controller receipts; no model workflow quality claim",
+  "runs": [
+    {
+      "label": "interrupted",
+      "exit_code": 1
+    },
+    {
+      "label": "recovered",
+      "exit_code": 0
+    }
+  ]
+}

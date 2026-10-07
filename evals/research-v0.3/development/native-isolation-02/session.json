@@ -1,0 +1,84 @@
+{
+  "adapter_sha256": "6ea8edc9a03c79a6f4c31ad6f6d8ce32c0e771cb2d4f1e06bbbce91b8ccb5b6a",
+  "authentication": "Existing Codex auth file referenced locally; no credentials in evidence",
+  "cli_sha256": "cc0a05e34876414280a79726153d0fe8d55c93f704ef6c292ec409bfe36d5b06",
+  "cli_version": "codex-cli 0.160.1",
+  "command": [
+    "/usr/bin/sandbox-exec",
+    "-p",
+    "(version 1)\n(allow default)\n(deny file-read-data file-write* (require-all (subpath \"/Users/iyunseong/maangeek/allagma\") (require-not (require-any (subpath \"/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/candidate02\") (subpath \"/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/runtime02\") (subpath \"/Users/iyunseong/.codex/auth.json\")))))\n(deny file-read-data file-write* (require-all (subpath \"/Users/iyunseong/.agents\") (require-not (require-any (subpath \"/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/candidate02\") (subpath \"/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/runtime02\") (subpath \"/Users/iyunseong/.codex/auth.json\")))))\n(deny file-read-data file-write* (require-all (subpath \"/Users/iyunseong/.codex\") (require-not (require-any (subpath \"/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/candidate02\") (subpath \"/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/runtime02\") (subpath \"/Users/iyunseong/.codex/auth.json\")))))\n(deny file-read-data file-write* (require-all (subpath \"/Users/iyunseong/Documents/vault\") (require-not (require-any (subpath \"/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/candidate02\") (subpath \"/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/runtime02\") (subpath \"/Users/iyunseong/.codex/auth.json\")))))\n(deny file-write* (subpath \"/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/candidate02/inputs\"))\n",
+    "/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex",
+    "--strict-config",
+    "-a",
+    "never",
+    "exec",
+    "--sandbox",
+    "workspace-write",
+    "--ignore-rules",
+    "--skip-git-repo-check",
+    "--json",
+    "-C",
+    "/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/candidate02",
+    "-o",
+    "/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/runtime02/final.txt",
+    "-"
+  ],
+  "controlled_settings": {
+    "model": "gpt-6-astra",
+    "model_auto_compact_token_limit": 900000,
+    "model_context_window": 1000000,
+    "model_reasoning_effort": "max",
+    "project_doc_max_bytes": 0,
+    "web_search": "disabled"
+  },
+  "ended_at": "2026-10-07T17:25:54.214660+00:00",
+  "events_sha256": "71db54302c13e8b0d9c7336647bd2162eb58933618de7f22a0c9745a04ed75be",
+  "exit_code": 0,
+  "fresh_session": true,
+  "malformed_event_lines": 0,
+  "model_observations": [
+    {
+      "approval_policy": "never",
+      "cwd": "/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/candidate02",
+      "effort": "max",
+      "model": "gpt-6-astra",
+      "sandbox_policy": {
+        "exclude_slash_tmp": false,
+        "exclude_tmpdir_env_var": false,
+        "network_access": false,
+        "type": "workspace-write"
+      }
+    }
+  ],
+  "pid": 74159,
+  "project_model_config_written": false,
+  "prompt_sha256": "13dad28040d982144f20ff0da3bb55b7849cae5213439ab2feedc461fc95e83d",
+  "resume": false,
+  "runtime": "/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/runtime02",
+  "runtime_config_sha256": "7972e57863d7ed5333fc9ecca25dfd1576ee6d79df68e28943601cd5a8bd43db",
+  "settings": {
+    "model": "gpt-6-astra",
+    "model_auto_compact_token_limit": 900000,
+    "model_context_window": 1000000,
+    "model_reasoning_effort": "max"
+  },
+  "settings_source": "/Users/iyunseong/.codex/config.toml",
+  "settings_unchanged": false,
+  "started_at": "2026-10-07T17:24:24.837381+00:00",
+  "status": "completed",
+  "thread_ids": [
+    "01a11765-1d23-7e13-a9a8-48524bfca3ca"
+  ],
+  "timeout_seconds": 180.0,
+  "usage": [
+    {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 34176,
+      "input_tokens": 38065,
+      "output_tokens": 1415,
+      "reasoning_output_tokens": 582
+    }
+  ],
+  "wall_seconds": 89.27362700016238,
+  "workspace": "/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/candidate02"
+}

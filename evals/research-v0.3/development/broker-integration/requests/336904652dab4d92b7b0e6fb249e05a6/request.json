@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "/usr/local/bin/python3",
+    "-c",
+    "import time; print('started',flush=True); time.sleep(1); print(2+2)"
+  ],
+  "attempt": true,
+  "category": "compute",
+  "cwd": ".",
+  "label": "broker-recovered",
+  "request_id": "336904652dab4d92b7b0e6fb249e05a6",
+  "timeout_seconds": 5.0
+}

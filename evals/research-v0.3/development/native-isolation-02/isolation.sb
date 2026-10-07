@@ -1,0 +1,7 @@
+(version 1)
+(allow default)
+(deny file-read-data file-write* (require-all (subpath "/Users/iyunseong/maangeek/allagma") (require-not (require-any (subpath "/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/candidate02") (subpath "/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/runtime02") (subpath "/Users/iyunseong/.codex/auth.json")))))
+(deny file-read-data file-write* (require-all (subpath "/Users/iyunseong/.agents") (require-not (require-any (subpath "/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/candidate02") (subpath "/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/runtime02") (subpath "/Users/iyunseong/.codex/auth.json")))))
+(deny file-read-data file-write* (require-all (subpath "/Users/iyunseong/.codex") (require-not (require-any (subpath "/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/candidate02") (subpath "/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/runtime02") (subpath "/Users/iyunseong/.codex/auth.json")))))
+(deny file-read-data file-write* (require-all (subpath "/Users/iyunseong/Documents/vault") (require-not (require-any (subpath "/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/candidate02") (subpath "/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/runtime02") (subpath "/Users/iyunseong/.codex/auth.json")))))
+(deny file-write* (subpath "/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/candidate02/inputs"))

@@ -1,0 +1,7 @@
+(version 1)
+(allow default)
+(deny file-read-data file-write* (require-all (subpath "/Users/iyunseong") (require-not (require-any (subpath "/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/candidate06") (subpath "/Users/iyunseong/maangeek/allagma/work/v03-development/torch-env")))))
+(deny file-write* (subpath "/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/candidate06/inputs"))
+(deny file-write* (subpath "/Users/iyunseong/maangeek/allagma/work/v03-development/torch-env"))
+(deny network*)
+(deny file-write* (require-not (require-any (subpath "/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/candidate06") (literal "/dev/null") (literal "/dev/tty"))))

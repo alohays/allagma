@@ -1,0 +1,15 @@
+{
+  "benchmark_repository": "https://github.com/siegelz/core-bench",
+  "benchmark_commit": "e32a2980e72fe6eb04ee04eb749458f570625663",
+  "capsule_url": "https://corebench.cs.princeton.edu/capsules/capsule-6460826.tar.gz",
+  "tar_sha256": "36e6fe89a288dc66a167c055bd21965cdbd053f87217d6fc9e00642af0445664",
+  "candidate_exclusions": [
+    "results",
+    "environment",
+    "REPRODUCING.md",
+    "code/run.sh",
+    "controller-task.json",
+    "upstream-evaluations.py"
+  ],
+  "selection": "Passed local preflight with original scientific scripts, path-only compatibility changes, and exact upstream scoring"
+}

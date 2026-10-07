@@ -1,0 +1,15 @@
+{
+  "attempt": false,
+  "category": "compute",
+  "command": [
+    "torch-env/bin/python",
+    "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/development/verify_pilots.py"
+  ],
+  "label": "independent-pilot-checks",
+  "profile_sha256": "fa5c3559023d6d84ce62436f11e67ba82f19c35e892834f53892395c5d51bc5c",
+  "reserved_seconds": 34.75,
+  "started_at": "2026-10-07T17:46:51.690810+00:00",
+  "supervisor_pid": 81882,
+  "timeout_seconds": 30.0,
+  "workdir": "/Users/iyunseong/maangeek/allagma/work/v03-development"
+}

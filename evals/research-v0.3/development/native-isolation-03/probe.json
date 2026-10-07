@@ -1,0 +1,23 @@
+{
+  "probe": "development_isolation",
+  "results": {
+    "canary_read": {
+      "operation_succeeded": true,
+      "exception": null,
+      "expectation_met": true
+    },
+    "canary_overwrite": {
+      "operation_succeeded": false,
+      "exception": "PermissionError",
+      "message": "[Errno 1] Operation not permitted: 'inputs/canary.txt'",
+      "expectation_met": true
+    },
+    "protected_answer_read": {
+      "operation_succeeded": false,
+      "exception": "PermissionError",
+      "message": "[Errno 1] Operation not permitted: '/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/protected-answer.txt'",
+      "expectation_met": true
+    }
+  },
+  "all_expectations_met": true
+}

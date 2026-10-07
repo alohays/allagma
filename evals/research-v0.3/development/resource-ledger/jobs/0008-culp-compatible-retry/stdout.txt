@@ -1,0 +1,67 @@
+Prediction Accuracy for Iris Dataset (λ=CN) = 100.0%
+Prediction Accuracy for Iris Dataset (λ=AA) = 100.0%
+Prediction Accuracy for Iris Dataset (λ=RA) = 100.0%
+Prediction Accuracy for Iris Dataset (λ=CS) = 100.0%
+Prediction Accuracy for Zoo Dataset (λ=CN) = 100.0%
+Prediction Accuracy for Zoo Dataset (λ=AA) = 100.0%
+Prediction Accuracy for Zoo Dataset (λ=RA) = 100.0%
+Prediction Accuracy for Zoo Dataset (λ=CS) = 100.0%
+Prediction Accuracy for Wine Dataset (λ=CN) = 97.22%
+Prediction Accuracy for Wine Dataset (λ=AA) = 97.22%
+Prediction Accuracy for Wine Dataset (λ=RA) = 97.22%
+Prediction Accuracy for Wine Dataset (λ=CS) = 100.0%
+{
+  "capsule_id": "capsule-6460826",
+  "task_prompt": "Run 'iris_sample.py', 'zoo_sample.py', and 'wine_sample.py'",
+  "original_tar_sha256": "36e6fe89a288dc66a167c055bd21965cdbd053f87217d6fc9e00642af0445664",
+  "upstream_scorer_sha256": "88a132c1196bfd9f1f8cf32d23e64cb6e0b26d98437ab5ff72f5e77ef56b53bb",
+  "scorer": "exact upstream eval_result_json AST; original references",
+  "modifications": [
+    {
+      "file": "wine_sample.py",
+      "original_sha256": "ffb9756450e5c0d1ff432e2902bede1e632c142e83f5e93be2c5987977707198",
+      "adapted_sha256": "a78228a88c8a69e4bc9afe1034dd3681d1859ff8370f31b1babe87a5cc535206",
+      "change": "Absolute container /data path becomes capsule-relative ../data; no algorithm or parameters changed"
+    },
+    {
+      "file": "zoo_sample.py",
+      "original_sha256": "d3750a40e7a2eb4b6500254dd1ebef865f5a264d349310b8942c1f4ed08b8b8c",
+      "adapted_sha256": "5191413dfd8582bb2241c7ff7429a3635e2ba06f68e675b165d4b35517a06f2d",
+      "change": "Absolute container /data path becomes capsule-relative ../data; no algorithm or parameters changed"
+    }
+  ],
+  "runs": [
+    {
+      "script": "iris_sample.py",
+      "exit_code": 0,
+      "stdout_sha256": "9b6bbee09c56848cc00f8079b454b17e4b4a6d56b3426347b750348f01a76a70"
+    },
+    {
+      "script": "zoo_sample.py",
+      "exit_code": 0,
+      "stdout_sha256": "b6be453bfb2b9e7cd1faf9389875ecff5b2d2764badd5be84b5689f2ee1bba0d"
+    },
+    {
+      "script": "wine_sample.py",
+      "exit_code": 0,
+      "stdout_sha256": "93c201462bc7615c6b820c541bcbab13d5e22d057b68d5b98a140fd38452314c"
+    }
+  ],
+  "report": {
+    "Report the CN prediction accuracy for the Iris dataset.": 100.0,
+    "Report the AA prediction acccuracy for the Iris dataset.": 100.0,
+    "Report the CN prediction acccuracy for the Zoo dataset.": 100.0,
+    "Report the AA prediction acccuracy for the Zoo dataset.": 100.0,
+    "Report the CN prediction acccuracy for the Wine dataset.": 97.22,
+    "Report the AA prediction acccuracy for the Wine dataset.": 97.22
+  },
+  "score": {
+    "correct_written_answers": 6,
+    "correct_vision_answers": 0,
+    "total_written_questions": 6,
+    "total_vision_questions": 0
+  },
+  "status": "pass",
+  "scope": "Native Mac CPU compatibility with path-only changes and isolated updated dependencies; not a full CORE-Bench run",
+  "source_caveat": "Iris and Zoo source scripts loop over labels but always call link_predictor='CS'; retained exactly for source-task fidelity"
+}

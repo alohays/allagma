@@ -1,0 +1,33 @@
+{
+  "attempt": true,
+  "category": "compute",
+  "command": [
+    "/usr/bin/env",
+    "-i",
+    "PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin",
+    "HOME=/Users/iyunseong",
+    "LANG=en_US.UTF-8",
+    "TMPDIR=/Users/iyunseong/maangeek/allagma/work/v03-development/broker-contract/.tmp",
+    "OMP_NUM_THREADS=1",
+    "OPENBLAS_NUM_THREADS=1",
+    "MKL_NUM_THREADS=1",
+    "PYTORCH_ENABLE_MPS_FALLBACK=0",
+    "PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.2",
+    "ALLAGMA_COMPUTE_REQUEST=336904652dab4d92b7b0e6fb249e05a6",
+    "MPLCONFIGDIR=/Users/iyunseong/maangeek/allagma/work/v03-development/broker-contract/.tmp/matplotlib",
+    "/usr/bin/sandbox-exec",
+    "-p",
+    "(version 1)\n(allow default)\n(deny network*)\n(deny file-write* (require-not (require-any (subpath \"/Users/iyunseong/maangeek/allagma/work/v03-development/broker-contract\") (literal \"/dev/null\") (literal \"/dev/tty\"))))\n(deny file-read-data (require-all (subpath \"/Users/iyunseong\") (require-not (subpath \"/Users/iyunseong/maangeek/allagma/work/v03-development/broker-contract\"))))\n(deny file-read-data (require-all (subpath \"/Users/iyunseong/maangeek/allagma/evals/research-v0.3/development/resource-ledger\") (require-not (subpath \"/Users/iyunseong/maangeek/allagma/work/v03-development/broker-contract\"))))\n(deny file-read-data (require-all (subpath \"/Users/iyunseong/maangeek/allagma/evals/research-v0.3/development/broker-integration\") (require-not (subpath \"/Users/iyunseong/maangeek/allagma/work/v03-development/broker-contract\"))))\n(deny file-read-data (require-all (subpath \"/Users/iyunseong/maangeek/allagma\") (require-not (subpath \"/Users/iyunseong/maangeek/allagma/work/v03-development/broker-contract\"))))\n(deny file-write* (subpath \"/Users/iyunseong/maangeek/allagma/work/v03-development/broker-contract/inputs\"))\n",
+    "/usr/local/bin/python3",
+    "-c",
+    "import time; print('started',flush=True); time.sleep(1); print(2+2)"
+  ],
+  "label": "broker-recovered",
+  "profile_sha256": "fa5c3559023d6d84ce62436f11e67ba82f19c35e892834f53892395c5d51bc5c",
+  "reserved_seconds": 9.75,
+  "started_at": "2026-10-07T18:04:41.308857+00:00",
+  "storage_root": "/Users/iyunseong/maangeek/allagma/work/v03-development",
+  "supervisor_pid": 86264,
+  "timeout_seconds": 5.0,
+  "workdir": "/Users/iyunseong/maangeek/allagma/work/v03-development/broker-contract"
+}

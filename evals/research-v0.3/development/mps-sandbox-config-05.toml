@@ -1,0 +1,31 @@
+model = "gpt-6-astra"
+model_reasoning_effort = "max"
+model_context_window = 1000000
+model_auto_compact_token_limit = 900000
+default_permissions = "allagma-eval"
+
+[permissions.allagma-eval]
+extends = ":workspace"
+
+[permissions.allagma-eval.filesystem]
+":root" = "deny"
+":minimal" = "read"
+":tmpdir" = "write"
+":slash_tmp" = "deny"
+"/Library/Frameworks/Python.framework" = "read"
+"/usr/local/bin" = "read"
+"/Applications/ChatGPT.app" = "read"
+"/Users/iyunseong/maangeek/allagma" = "deny"
+"/Users/iyunseong/.codex" = "deny"
+"/Users/iyunseong/.agents" = "deny"
+"/Users/iyunseong/Documents/vault" = "deny"
+"/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/runtime05" = "deny"
+"/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/candidate05" = "write"
+"/Users/iyunseong/maangeek/allagma/work/v03-development/native-isolation/candidate05/inputs" = "read"
+"/Users/iyunseong/maangeek/allagma/work/v03-development/torch-env" = "read"
+"/System" = "read"
+"/Library" = "read"
+"/usr" = "read"
+
+[permissions.allagma-eval.network]
+enabled = false

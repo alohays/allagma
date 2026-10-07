@@ -34,3 +34,25 @@ to its code, analyses, manuscript drafts and reports; the final published
 manuscript repeats that disclosure prominently. Python packages are installed
 only into an ignored study-owned environment; their versions are pinned in
 `requirements.lock` and their package licenses apply to those installations.
+
+## v0.3 study development sources
+
+`studies/ema-schedule/development/science.py` copies the preceding study's
+adaptation; the same license is retained at `studies/ema-schedule/reference/LICENSE`.
+Its follow-up runner also uses those adapted mechanisms. The
+[follow-up disclosure](studies/ema-schedule/REFERENCE.md) identifies the source
+and AI-generated material.
+
+`studies/core-culp/reference/` retains CORE-Bench scoring/prompt files from
+`siegelz/core-bench` commit `e32a2980e72fe6eb04ee04eb749458f570625663` under its
+included MIT license and the original `capsule-6460826` archive. Capsule code is
+accompanied by its MIT license; dataset files retain their CC0 1.0 dedication.
+The [provenance record](studies/core-culp/reference/provenance.json) identifies
+the exact archive. These are study/evaluation resources, not dependencies of
+the default conformance kit. Original reference answers and scorer code remain
+outside evaluated agents' writable/readable workspaces.
+
+The modular-addition pilot is an original small MLP implementation inspired by
+[Power et al.](https://arxiv.org/abs/2201.02177), with the adaptation stated in
+its [study README](studies/modular-addition/README.md). No upstream transformer
+implementation is copied into that pilot.
