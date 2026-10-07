@@ -164,7 +164,7 @@ def main(argv=None):
                 if not args.label or args.timeout is None:
                     raise AllagmaError("Resource execution requires --label and --timeout")
                 result = resources.execute(args.ledger, command_argv, label=args.label,
-                    category=args.category, timeout=args.timeout, attempt=args.attempt)
+                    category=args.category, timeout=args.timeout, attempt=args.attempt, workdir=args.workdir)
             elif args.operation == "recover":
                 result = resources.recover(args.ledger)
             else:

@@ -85,6 +85,18 @@ class ResourceTests(unittest.TestCase):
         result = self.run_code("import subprocess,sys; subprocess.run([sys.executable,'-c','import time; time.sleep(.08)'],check=True)")
         self.assertEqual(result["status"], "completed")
 
+    def test_command_cwd_stays_inside_budgeted_storage(self):
+        self.initialize()
+        subdirectory = self.work/"capsule"
+        subdirectory.mkdir()
+        result = resources.execute(self.ledger, [sys.executable, "-c", "from pathlib import Path; Path('result').write_text('done')"],
+            label="subdir", category="compute", timeout=2, workdir=subdirectory)
+        self.assertEqual(result["status"], "completed")
+        self.assertEqual((subdirectory/"result").read_text(), "done")
+        with self.assertRaisesRegex(AllagmaError, "budgeted workspace"):
+            resources.execute(self.ledger, [sys.executable, "-c", "pass"], label="outside",
+                category="compute", timeout=2, workdir=self.work.parent)
+
     def test_observed_detached_child_is_stopped_after_parent_exits(self):
         self.initialize()
         result = self.run_code("import subprocess,sys,time; from pathlib import Path; p=subprocess.Popen([sys.executable,'-c','import time; time.sleep(10)'],start_new_session=True); Path('pid').write_text(str(p.pid)); time.sleep(.15)")

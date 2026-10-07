@@ -197,7 +197,7 @@ def recover(directory):
     return {"recovered": recovered, "summary": summary(directory)}
 
 
-def execute(directory, command, *, label, category, timeout, attempt=False):
+def execute(directory, command, *, label, category, timeout, attempt=False, workdir=None):
     directory = Path(directory).resolve()
     if not re.fullmatch(r"[a-zA-Z0-9][a-zA-Z0-9_-]{0,79}", label):
         raise AllagmaError("Invalid resource job label")
@@ -206,7 +206,10 @@ def execute(directory, command, *, label, category, timeout, attempt=False):
     _positive(timeout, "timeout")
     with _mutex(directory):
         policy = _policy(directory)
-        profile, workdir = policy["profile"], Path(policy["workdir"])
+        profile, storage_root = policy["profile"], Path(policy["workdir"])
+        workdir = Path(workdir).resolve() if workdir is not None else storage_root
+        if not workdir.is_dir() or (workdir != storage_root and storage_root not in workdir.parents):
+            raise AllagmaError("Command workdir must stay inside the budgeted workspace")
         current = summary(directory)
         if any(entry["result"] is None for entry in current["entries"]):
             raise AllagmaError("An unresolved reservation exists; observe or recover it first")
@@ -217,14 +220,14 @@ def execute(directory, command, *, label, category, timeout, attempt=False):
             raise AllagmaError("Insufficient remaining budget for the full timeout reservation")
         if attempt and current["attempts"] >= profile["attempt_limit"]:
             raise AllagmaError("Attempt ceiling reached")
-        initial_storage = storage_bytes(workdir)
+        initial_storage = storage_bytes(storage_root)
         if initial_storage >= profile["storage_limit_bytes"]:
             raise AllagmaError("Study already reaches its storage ceiling")
         job = directory / "jobs" / f"{len(current['entries'])+1:04d}-{label}"
         job.mkdir(parents=True, exist_ok=False)
         reservation = {"label": label, "command": command, "category": category,
             "attempt": bool(attempt), "timeout_seconds": timeout, "reserved_seconds": reserve,
-            "workdir": str(workdir), "profile_sha256": policy["profile_sha256"],
+            "workdir": str(workdir), "storage_root": str(storage_root), "profile_sha256": policy["profile_sha256"],
             "started_at": utcnow(), "supervisor_pid": os.getpid()}
         write_json(job / "reservation.json", reservation, immutable=True)
         environment = {**os.environ, "ALLAGMA_RESOURCE_RECEIPT": str(job / "reservation.json")}
@@ -248,7 +251,7 @@ def execute(directory, command, *, label, category, timeout, attempt=False):
                     table = process_table()
                     known = _family(table, process.pid, known)
                     peak_rss = max(peak_rss, sum(table[pid]["rss"] for pid in known))
-                    peak_storage = max(peak_storage, storage_bytes(workdir))
+                    peak_storage = max(peak_storage, storage_bytes(storage_root))
                     if interrupted:
                         status = "interrupted"
                     elif time.monotonic()-started >= timeout:

@@ -19,6 +19,9 @@ python3 -m allagma resource status --ledger /path/to/ledger
 ```
 
 Categories have separate cumulative wall-time ceilings and per-command timeouts.
+For `resource run`, `--workdir` may select a subdirectory of the budgeted study;
+storage accounting still covers the entire frozen work directory. A path that
+escapes that directory is rejected.
 Use a separate setup category for dependency installation. Charge scientific
 checks, training, sampling, analysis and recomputation to compute. Record Codex
 tokens and account usage separately; an agent's entire deliberation time is not
