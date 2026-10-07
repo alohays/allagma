@@ -1,0 +1,24 @@
+{
+  "attempt": false,
+  "category": "setup",
+  "command": [
+    "/usr/local/bin/python3",
+    "/Users/iyunseong/maangeek/allagma/work/v03-clean-checkout/evals/research-v0.3/retention.py",
+    "restore",
+    "--source",
+    "/Users/iyunseong/maangeek/allagma/work/v03-clean-checkout/evals/research-v0.3/runs/r01/package",
+    "--destination",
+    "/Users/iyunseong/maangeek/allagma/work/v03-validation/clean-r01",
+    "--download-wheels"
+  ],
+  "label": "clean-r01-package-restore",
+  "profile_sha256": "d9ed8b7b47a1c369f31cda162c19023d2942b562f994970218fb55279cc67ced",
+  "request_id": null,
+  "reserved_seconds": 184.75,
+  "started_at": "2026-10-07T20:46:31.500945+00:00",
+  "storage_root": "/Users/iyunseong/maangeek/allagma/work/v03-validation",
+  "supervisor_pid": 47026,
+  "supervisor_sha256": "392f7975f4a4ae77a11e23a2e167cd4cee53d7f0d63a58a42f5782d244f3da8f",
+  "timeout_seconds": 180.0,
+  "workdir": "/Users/iyunseong/maangeek/allagma/work/v03-validation"
+}

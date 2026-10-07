@@ -1,7 +1,8 @@
 # Local computational reproduction: CULP
 
-Status: compatibility preflight passed; final agent evaluation and reviewed
-research package remain pending.
+Status: compatibility preflight and the first final Allagma run passed. Its
+[verified results and retained package](RESULTS.md) are available; the remaining
+controlled comparison and clean-checkout release gate are still in progress.
 
 This study uses CORE-Bench's public training task `capsule-6460826`, **CULP:
 Classification Using Link Prediction**. The original task requires execution
