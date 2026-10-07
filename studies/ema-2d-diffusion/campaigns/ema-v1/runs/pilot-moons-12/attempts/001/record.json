@@ -1,0 +1,160 @@
+{
+  "attempt_id": "pilot-moons-12-a001",
+  "attempt_number": 1,
+  "bundle_id": "b-2b63431e34a085598aaade78",
+  "campaign_id": "ema-v1",
+  "command": [
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/.venv/bin/python",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/campaigns/ema-v1/materials/domain/runner.py",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/campaigns/ema-v1/runs/pilot-moons-12/attempts/001/input.json",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/campaigns/ema-v1/runs/pilot-moons-12/attempts/001/raw.json"
+  ],
+  "data_revision": "508ae2afa13a1a1b6c3e79aa01d15e7b636d78701d92d4b30d0e4745467e2d59",
+  "ended_at": "2026-10-07T15:21:36.311456+00:00",
+  "environment": {
+    "executable": "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/.venv/bin/python",
+    "isolation": "local process; not an OS security sandbox",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.11.6"
+  },
+  "error": null,
+  "exit_code": 0,
+  "experiment_id": "pilot-moons-12",
+  "inputs": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/input.json",
+      "retention": "retain-with-study",
+      "sha256": "508ae2afa13a1a1b6c3e79aa01d15e7b636d78701d92d4b30d0e4745467e2d59"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/spec.json",
+      "retention": "retain-with-study",
+      "sha256": "1cd5a053206eebe0f5cd4829198a80a764c57c4c21100a019813cb57ce078af2"
+    },
+    {
+      "media_type": "text/x-python",
+      "path": "campaigns/ema-v1/materials/domain/runner.py",
+      "retention": "retain-with-study",
+      "sha256": "26f69538c0ecb3497a77e57899dfb8b362f780ae1fba1d9865ffeb7a3cb8a868"
+    },
+    {
+      "media_type": "text/x-python",
+      "path": "campaigns/ema-v1/materials/domain/evaluator.py",
+      "retention": "retain-with-study",
+      "sha256": "609018a0d4b61b178d139d944290bc4f53dad1151a1e871efabb9a7e1eba65bf"
+    }
+  ],
+  "model_revision": null,
+  "outputs": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/evaluation.json",
+      "retention": "retain-with-study",
+      "sha256": "4d5154ba64029968f5cd674e4a83eafe9d826b6b67eca282a42cca815b4809eb"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/evaluator-command.json",
+      "retention": "retain-with-study",
+      "sha256": "d38e56af370c22a84eb4905f0dd739c09283487eab6ac032ef90f8fdb4ab939f"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/evaluator-stderr.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/evaluator-stdout.job-result.json",
+      "retention": "retain-with-study",
+      "sha256": "c34ce8cb0f7c72df01c1e2383cc2a9498078c62af5f106b97d79d4e4ead13a5d"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/evaluator-stdout.job.json",
+      "retention": "retain-with-study",
+      "sha256": "d279ad22acb88f88c09d000700d3bb447d944e3f7d365f09d5d11228e35e9126"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/evaluator-stdout.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/evaluator-stdout.worker-stderr.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/evaluator-stdout.worker-stdout.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/raw.json",
+      "retention": "retain-with-study",
+      "sha256": "c259a441aa03f2f61e2b8e32fe6cde0b7a5fde832769fd06898c685292e4f110"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/stderr.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/stdout.job-result.json",
+      "retention": "retain-with-study",
+      "sha256": "8282525bc98a4cea1eb98218e0dea9bc5505c63bb63819cd4c96d632246e8980"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/stdout.job.json",
+      "retention": "retain-with-study",
+      "sha256": "9c66b6b9ac2b73833f1c84b57aec712e65d421f236aad7fb49ff3fb76ebf5d8d"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/stdout.txt",
+      "retention": "retain-with-study",
+      "sha256": "80de55dbe1c33266d37639cf59df02adb44d80b4abff7f338616459747a32ade"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/stdout.worker-stderr.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/stdout.worker-stdout.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/weights.npz",
+      "retention": "retain-with-study",
+      "sha256": "954c6df6d02d77f8e61d08cffd2613081e2a819ffee8f4fc99a81c437291b727"
+    }
+  ],
+  "protocol_revision": "ema-2d-v1",
+  "record_type": "RunRecord",
+  "run_id": "pilot-moons-12",
+  "schema_version": "0.2",
+  "split": "pilot",
+  "started_at": "2026-10-07T15:21:22.088216+00:00",
+  "status": "succeeded",
+  "usage": {
+    "money_usd": 0.0,
+    "tokens": 0,
+    "wall_seconds": 14.21466058306396
+  }
+}

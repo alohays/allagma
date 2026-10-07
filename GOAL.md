@@ -22,8 +22,6 @@ defects beyond the original tests, correct confirmed problems, retain the
 before/after evidence, and qualify the resulting source again. The commit-and-
 push instruction above also applies to this follow-up.
 
-## Tracking and completion
-
 ## Native Codex diffusion study — 8 October 2026
 
 Qualify Allagma for real native Codex use by completing **When Does Weight EMA

@@ -1,0 +1,40 @@
+{
+  "command": [
+    "/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex",
+    "-a",
+    "never",
+    "exec",
+    "--sandbox",
+    "danger-full-access",
+    "--json",
+    "-C",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion",
+    "-o",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/evidence/native/03-fresh-pilots/final.txt",
+    "-"
+  ],
+  "started_at": "2026-10-07T15:17:59.122791+00:00",
+  "cli_version": "codex-cli 0.160.1",
+  "prompt_sha256": "4adc7804436f254f409a3b48cda15a8cf3600ef536a3d81161308c51b619d3d7",
+  "model_override": null,
+  "authentication": "Existing ChatGPT CLI login; no credentials exported",
+  "sandbox": "danger-full-access on the user-authorized local host; not a security containment claim",
+  "fresh_session": true,
+  "host_interrupted": false,
+  "pid": 14684,
+  "exit_code": 0,
+  "ended_at": "2026-10-07T15:25:01.450383+00:00",
+  "thread_ids": [
+    "01a116f1-5d09-7682-a2a5-4c408e722905"
+  ],
+  "usage": [
+    {
+      "input_tokens": 1197413,
+      "cached_input_tokens": 1123968,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 9727,
+      "reasoning_output_tokens": 2421
+    }
+  ],
+  "events_sha256": "91861c967f01ebadad48a646158b0b51012ed673d540fad3ff2e99b6e8305225"
+}

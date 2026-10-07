@@ -1,0 +1,28 @@
+{
+  "constraints": [
+    "30-minute total study-computation ceiling including retries",
+    "M4 Pro /48GB /MPS in isolated study-owned environment",
+    "Preserve GUI model selection",
+    "Negative or inconclusive scientific findings are valid",
+    "No pilot reuse as confirmation",
+    "Prior15.3-second probe is feasibility only"
+  ],
+  "motivation": "Measure paired distribution-quality effects and qualify real native Codex workflow execution and recovery.",
+  "output": "Reproducible empirical study and native Codex qualification report",
+  "question": "When does weight EMA help tiny 2D diffusion on two moons and an eight-component Gaussian mixture?",
+  "stop_rules": [
+    "18 total training attempts",
+    "1800 total computation seconds including checks, retries and analysis",
+    "150seconds per training attempt",
+    "Two failures on same planned run",
+    "Stop before confirmation if qualification fails or forecast exceeds remaining budget",
+    "Ask before expanding budget or changing question"
+  ],
+  "study_id": "ema-2d-diffusion",
+  "success_criteria": [
+    "Two pilot seeds per dataset qualify implementation and cost",
+    "Five untouched confirmation seeds per dataset compare raw/EMA0.99/EMA0.999 at5000/10000 updates",
+    "Retained real native skill activation, exact campaign routing and fresh-session continuation after interruption",
+    "Recomputable results, figures, evidence-linked English manuscript and accurate host report"
+  ]
+}

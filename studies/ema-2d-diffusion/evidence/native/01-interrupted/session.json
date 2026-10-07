@@ -1,0 +1,32 @@
+{
+  "command": [
+    "codex",
+    "-a",
+    "never",
+    "exec",
+    "--sandbox",
+    "danger-full-access",
+    "--json",
+    "-C",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion",
+    "-o",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/evidence/native/01-interrupted/final.txt",
+    "-"
+  ],
+  "started_at": "2026-10-07T15:14:23.929716+00:00",
+  "cli_version": "codex-cli 0.151.0",
+  "prompt_sha256": "9a93f120d57fdeed45b8cffcc8f729ec960c10f96627fce301b7ddc03e15363f",
+  "model_override": null,
+  "authentication": "Existing ChatGPT CLI login; no credentials exported",
+  "sandbox": "danger-full-access on the user-authorized local host; not a security containment claim",
+  "fresh_session": true,
+  "host_interrupted": false,
+  "pid": 11116,
+  "exit_code": 1,
+  "ended_at": "2026-10-07T15:14:29.861064+00:00",
+  "thread_ids": [
+    "01a116ee-177b-7770-abfc-72444bccbc64"
+  ],
+  "usage": [],
+  "events_sha256": "4863f1864a6810fd4cdd03c08766b664aee9168ec150640d0434a42e439d57bd"
+}

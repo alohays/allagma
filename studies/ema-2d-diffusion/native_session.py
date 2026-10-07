@@ -16,16 +16,17 @@ def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("label")
     parser.add_argument("prompt",type=Path)
+    parser.add_argument("--codex",default="codex",help="Native CLI executable; never a model override")
     parser.add_argument("--interrupt-after-attempt",action="store_true")
     args=parser.parse_args()
     directory=ROOT/"evidence/native"/args.label
     directory.mkdir(parents=True,exist_ok=False)
     prompt=args.prompt.read_text()
     (directory/"prompt.txt").write_text(prompt)
-    command=["codex","-a","never","exec","--sandbox","danger-full-access","--json","-C",str(ROOT),
+    command=[args.codex,"-a","never","exec","--sandbox","danger-full-access","--json","-C",str(ROOT),
              "-o",str(directory/"final.txt"),"-"]
     receipt={"command":command,"started_at":datetime.datetime.now(datetime.timezone.utc).isoformat(),
-             "cli_version":subprocess.check_output(["codex","--version"],text=True).strip(),
+             "cli_version":subprocess.check_output([args.codex,"--version"],text=True).strip(),
              "prompt_sha256":hashlib.sha256(prompt.encode()).hexdigest(),"model_override":None,
              "authentication":"Existing ChatGPT CLI login; no credentials exported",
              "sandbox":"danger-full-access on the user-authorized local host; not a security containment claim",

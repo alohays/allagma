@@ -1,0 +1,61 @@
+{
+  "budget": {
+    "max_attempts": 18,
+    "max_seconds": 1650.0,
+    "money_usd": 0.0,
+    "per_attempt_seconds": 150.0
+  },
+  "editable": [
+    "fault injection for conformance, excluded from successful science"
+  ],
+  "evaluator": {
+    "media_type": "text/x-python",
+    "path": "campaigns/ema-v1/materials/domain/evaluator.py",
+    "retention": "retain-with-study",
+    "sha256": "609018a0d4b61b178d139d944290bc4f53dad1151a1e871efabb9a7e1eba65bf"
+  },
+  "expected_artifacts": [
+    "raw.json",
+    "evaluation.json"
+  ],
+  "experiment_id": "pilot-moons-11",
+  "fixed": [
+    "runner",
+    "evaluator",
+    "seed",
+    "parameters",
+    "protocol",
+    "analysis"
+  ],
+  "hypothesis": "Constant-decay weight EMA can improve held-out distribution quality relative to raw weights; the effect depends on decay, dataset and training checkpoint.",
+  "inputs": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/parameters.json",
+      "retention": "retain-with-study",
+      "sha256": "2d167c66518c411b48601477bf59657eb35762e0cbd929b678cd034723e51d52"
+    }
+  ],
+  "parameters": {
+    "dataset": "moons",
+    "eval_size": 2048,
+    "phase": "pilot",
+    "seed": 11,
+    "train_size": 100000
+  },
+  "protocol_revision": "ema-2d-v1",
+  "record_type": "ExperimentSpec",
+  "runner": {
+    "media_type": "text/x-python",
+    "path": "campaigns/ema-v1/materials/domain/runner.py",
+    "retention": "retain-with-study",
+    "sha256": "26f69538c0ecb3497a77e57899dfb8b362f780ae1fba1d9865ffeb7a3cb8a868"
+  },
+  "schema_version": "0.2",
+  "seed_policy": {
+    "disjoint_confirmation": true,
+    "seed": 11,
+    "split": "pilot"
+  },
+  "split": "pilot"
+}

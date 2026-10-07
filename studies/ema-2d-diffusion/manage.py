@@ -64,6 +64,7 @@ def freeze():
         "lock_sha256":sha(CAMPAIGN/"lock.yaml"),"decision":"Proceed unchanged after four qualified pilots; no confirmation result observed",
         "pilot_records":[{"path":str(p.relative_to(ROOT)),"sha256":sha(p)} for p,_ in successful],
         "code":{name:sha(CAMPAIGN/"materials"/name) for name in protocol["code"]},
+        "orchestration":{name:sha(ROOT/name) for name in ("manage.py","compute.py","native_session.py","verify_results.py")},
         "pilot_attempt_seconds":times,"remaining_seconds_at_freeze":available,
         "forecast_seconds":forecast,"forecast_basis":"10 × longest pilot × 1.15 + 120s analysis/reproduction reserve",
         "confirmation_seeds":{name:[r["input"]["seed"] for r in protocol["runs"] if r["split"]=="confirmation" and r["input"]["dataset"]==name] for name in ("moons","gmm8")}})
@@ -72,7 +73,7 @@ def freeze():
 
 def main():
     parser=argparse.ArgumentParser()
-    parser.add_argument("operation",choices=["start","check","interrupt","pilot","freeze","confirm","analyze","audit","status"])
+    parser.add_argument("operation",choices=["start","check","interrupt","pilot","freeze","confirm","analyze","audit","verify","status"])
     args=parser.parse_args()
     if args.operation=="status":
         value={k:v for k,v in ledger().items() if k!="entries"}
@@ -87,6 +88,8 @@ def main():
     if args.operation=="freeze":
         freeze()
         return 0
+    if args.operation=="verify":
+        return execute("independent-verification",[PYTHON,str(ROOT/"verify_results.py")],120)
     if args.operation in ("interrupt","pilot","confirm"):
         run=next_run()
         if run is None:

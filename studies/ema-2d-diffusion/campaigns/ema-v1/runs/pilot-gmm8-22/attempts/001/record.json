@@ -1,0 +1,160 @@
+{
+  "attempt_id": "pilot-gmm8-22-a001",
+  "attempt_number": 1,
+  "bundle_id": "b-2b63431e34a085598aaade78",
+  "campaign_id": "ema-v1",
+  "command": [
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/.venv/bin/python",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/campaigns/ema-v1/materials/domain/runner.py",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/input.json",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/raw.json"
+  ],
+  "data_revision": "384564a141efe9c7cb93b88008d8a04ac0bfa0997eab14742288561795c9dbe9",
+  "ended_at": "2026-10-07T15:22:49.784043+00:00",
+  "environment": {
+    "executable": "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/.venv/bin/python",
+    "isolation": "local process; not an OS security sandbox",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.11.6"
+  },
+  "error": null,
+  "exit_code": 0,
+  "experiment_id": "pilot-gmm8-22",
+  "inputs": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/input.json",
+      "retention": "retain-with-study",
+      "sha256": "384564a141efe9c7cb93b88008d8a04ac0bfa0997eab14742288561795c9dbe9"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/spec.json",
+      "retention": "retain-with-study",
+      "sha256": "0ce3eadb2be6f395d4016317c256fefc764e32023943f47ed6caf9f75b1c8300"
+    },
+    {
+      "media_type": "text/x-python",
+      "path": "campaigns/ema-v1/materials/domain/runner.py",
+      "retention": "retain-with-study",
+      "sha256": "26f69538c0ecb3497a77e57899dfb8b362f780ae1fba1d9865ffeb7a3cb8a868"
+    },
+    {
+      "media_type": "text/x-python",
+      "path": "campaigns/ema-v1/materials/domain/evaluator.py",
+      "retention": "retain-with-study",
+      "sha256": "609018a0d4b61b178d139d944290bc4f53dad1151a1e871efabb9a7e1eba65bf"
+    }
+  ],
+  "model_revision": null,
+  "outputs": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/evaluation.json",
+      "retention": "retain-with-study",
+      "sha256": "873ad5fe790cd91da6e895a77a985ba281269fd8747f2f2910b330be1bb2023c"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/evaluator-command.json",
+      "retention": "retain-with-study",
+      "sha256": "d05ab74a827b4b0a3f01c4798c5c07b799167352da19150eded1f22b6cfbb095"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/evaluator-stderr.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/evaluator-stdout.job-result.json",
+      "retention": "retain-with-study",
+      "sha256": "6276fbfc7383a9ed929a218478ed0e6636a5fecdc48eb8f647a0d3e3203ae23b"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/evaluator-stdout.job.json",
+      "retention": "retain-with-study",
+      "sha256": "482afa968a52010bcbf427d5cf3e17a9f97e72f950f74d9d8dfc1039a9c5e93b"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/evaluator-stdout.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/evaluator-stdout.worker-stderr.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/evaluator-stdout.worker-stdout.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/raw.json",
+      "retention": "retain-with-study",
+      "sha256": "515e4450ced4f79425bfa8fc111455b4f3e0c68dde48753baecf279a48c5dc02"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/stderr.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/stdout.job-result.json",
+      "retention": "retain-with-study",
+      "sha256": "d77f09e3c43d5f51a8596e5873e0656330b3435811945265828d99b3009a3720"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/stdout.job.json",
+      "retention": "retain-with-study",
+      "sha256": "c4df0b961a79b37d2349072cf9b3b8c9a47a4ef328852d51455a12bdeee6686c"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/stdout.txt",
+      "retention": "retain-with-study",
+      "sha256": "5ab3170881f031c22ac15042ff9860b1b18c2cc9b4287e7125bdee1edc5a4268"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/stdout.worker-stderr.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/stdout.worker-stdout.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/weights.npz",
+      "retention": "retain-with-study",
+      "sha256": "9dbe087f636593bc34125016912aed0884c397eef1cee55b5971f8c177b37fb6"
+    }
+  ],
+  "protocol_revision": "ema-2d-v1",
+  "record_type": "RunRecord",
+  "run_id": "pilot-gmm8-22",
+  "schema_version": "0.2",
+  "split": "pilot",
+  "started_at": "2026-10-07T15:22:35.442436+00:00",
+  "status": "succeeded",
+  "usage": {
+    "money_usd": 0.0,
+    "tokens": 0,
+    "wall_seconds": 14.333776249783114
+  }
+}

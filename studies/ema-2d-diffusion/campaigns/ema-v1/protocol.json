@@ -1,0 +1,221 @@
+{
+  "analyzer": "domain/analyze.py",
+  "code": [
+    "domain/science.py",
+    "domain/runner.py",
+    "domain/evaluator.py",
+    "domain/analyze.py",
+    "domain/write.py",
+    "domain/test_science.py",
+    "requirements.lock",
+    "REFERENCE.md",
+    "DESIGN.md",
+    "reference/provenance.json",
+    "reference/LICENSE"
+  ],
+  "completion": "Four qualified pilot trajectories, post-pilot confirmation freeze, then ten new complete confirmation trajectories; all raw/EMA variants at 5000 and 10000 updates; deterministic reanalysis and traceable native sessions.",
+  "confirmation_gate": "No confirmation launch until confirmation-freeze.json binds this protocol, successful pilot evidence and cost forecast.",
+  "evaluator": "domain/evaluator.py",
+  "hypothesis": "Constant-decay weight EMA can improve held-out distribution quality relative to raw weights; the effect depends on decay, dataset and training checkpoint.",
+  "max_failures_per_run": 2,
+  "metrics": {
+    "mode_coverage": "gmm8: number of nearest-center bins with >=ceil(0.01*N) samples within 0.45 (3 sigma); also inlier fraction and half-L1 inlier mass discrepancy",
+    "pairing": "Same trajectory, holdout and all reverse noise across raw/EMA and both checkpoints",
+    "primary": "Sliced Wasserstein-1: mean of empirical projected W1, 128 unit directions seed7321, 2048 generated and independent held-out draws",
+    "qualitative_figure_selection": "Smallest prespecified confirmation seed per dataset, 10000 updates, first1024 samples"
+  },
+  "model": {
+    "batch_size": 256,
+    "checkpoints": [
+      5000,
+      10000
+    ],
+    "diffusion_steps": 100,
+    "ema_decays": [
+      0.99,
+      0.999
+    ],
+    "ema_update_every": 1,
+    "ema_warmup": 0,
+    "embedding_dimension": 128,
+    "gradient_clip_norm": 0.5,
+    "hidden_width": 256,
+    "noise_schedule": "cosine s=0.008; beta capped 0.999",
+    "optimizer": "AdamW lr=0.0003 weight_decay=0.01; cosine LR to zero at update10000",
+    "parameters": 296450,
+    "prediction_clip": [
+      -6,
+      6
+    ],
+    "residual_blocks": 3,
+    "updates": 10000
+  },
+  "resources": {
+    "attempt_limit": 18,
+    "count_retries": true,
+    "native_model_sessions": "Existing ChatGPT authentication; no API key or project model override; CLI default inherited",
+    "per_attempt_seconds": 150,
+    "prior_probe_estimate_charged_seconds": 15.3,
+    "study_computation_seconds": 1800
+  },
+  "revision": "ema-2d-v1",
+  "runner": "domain/runner.py",
+  "runs": [
+    {
+      "id": "pilot-moons-11",
+      "input": {
+        "dataset": "moons",
+        "eval_size": 2048,
+        "phase": "pilot",
+        "seed": 11,
+        "train_size": 100000
+      },
+      "split": "pilot"
+    },
+    {
+      "id": "pilot-moons-12",
+      "input": {
+        "dataset": "moons",
+        "eval_size": 2048,
+        "phase": "pilot",
+        "seed": 12,
+        "train_size": 100000
+      },
+      "split": "pilot"
+    },
+    {
+      "id": "pilot-gmm8-21",
+      "input": {
+        "dataset": "gmm8",
+        "eval_size": 2048,
+        "phase": "pilot",
+        "seed": 21,
+        "train_size": 100000
+      },
+      "split": "pilot"
+    },
+    {
+      "id": "pilot-gmm8-22",
+      "input": {
+        "dataset": "gmm8",
+        "eval_size": 2048,
+        "phase": "pilot",
+        "seed": 22,
+        "train_size": 100000
+      },
+      "split": "pilot"
+    },
+    {
+      "id": "confirm-moons-1001",
+      "input": {
+        "dataset": "moons",
+        "eval_size": 2048,
+        "phase": "confirmation",
+        "seed": 1001,
+        "train_size": 100000
+      },
+      "split": "confirmation"
+    },
+    {
+      "id": "confirm-moons-1002",
+      "input": {
+        "dataset": "moons",
+        "eval_size": 2048,
+        "phase": "confirmation",
+        "seed": 1002,
+        "train_size": 100000
+      },
+      "split": "confirmation"
+    },
+    {
+      "id": "confirm-moons-1003",
+      "input": {
+        "dataset": "moons",
+        "eval_size": 2048,
+        "phase": "confirmation",
+        "seed": 1003,
+        "train_size": 100000
+      },
+      "split": "confirmation"
+    },
+    {
+      "id": "confirm-moons-1004",
+      "input": {
+        "dataset": "moons",
+        "eval_size": 2048,
+        "phase": "confirmation",
+        "seed": 1004,
+        "train_size": 100000
+      },
+      "split": "confirmation"
+    },
+    {
+      "id": "confirm-moons-1005",
+      "input": {
+        "dataset": "moons",
+        "eval_size": 2048,
+        "phase": "confirmation",
+        "seed": 1005,
+        "train_size": 100000
+      },
+      "split": "confirmation"
+    },
+    {
+      "id": "confirm-gmm8-2001",
+      "input": {
+        "dataset": "gmm8",
+        "eval_size": 2048,
+        "phase": "confirmation",
+        "seed": 2001,
+        "train_size": 100000
+      },
+      "split": "confirmation"
+    },
+    {
+      "id": "confirm-gmm8-2002",
+      "input": {
+        "dataset": "gmm8",
+        "eval_size": 2048,
+        "phase": "confirmation",
+        "seed": 2002,
+        "train_size": 100000
+      },
+      "split": "confirmation"
+    },
+    {
+      "id": "confirm-gmm8-2003",
+      "input": {
+        "dataset": "gmm8",
+        "eval_size": 2048,
+        "phase": "confirmation",
+        "seed": 2003,
+        "train_size": 100000
+      },
+      "split": "confirmation"
+    },
+    {
+      "id": "confirm-gmm8-2004",
+      "input": {
+        "dataset": "gmm8",
+        "eval_size": 2048,
+        "phase": "confirmation",
+        "seed": 2004,
+        "train_size": 100000
+      },
+      "split": "confirmation"
+    },
+    {
+      "id": "confirm-gmm8-2005",
+      "input": {
+        "dataset": "gmm8",
+        "eval_size": 2048,
+        "phase": "confirmation",
+        "seed": 2005,
+        "train_size": 100000
+      },
+      "split": "confirmation"
+    }
+  ],
+  "uncertainty": "Unadjusted Student t 95% intervals over paired seed differences within each dataset/checkpoint/EMA comparison (n=5, df=4); exact sign-flip sensitivity and leave-one-seed-out mean ranges; no pooled point or checkpoint replication.",
+  "writer": "domain/write.py"
+}

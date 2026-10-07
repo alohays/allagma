@@ -1,0 +1,63 @@
+{
+  "attempt_id": "pilot-moons-11-a002",
+  "attempt_number": 2,
+  "bundle_id": "b-2b63431e34a085598aaade78",
+  "campaign_id": "ema-v1",
+  "command": [
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/.venv/bin/python",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/campaigns/ema-v1/materials/domain/runner.py",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/campaigns/ema-v1/runs/pilot-moons-11/attempts/002/input.json",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/campaigns/ema-v1/runs/pilot-moons-11/attempts/002/raw.json"
+  ],
+  "data_revision": "2d167c66518c411b48601477bf59657eb35762e0cbd929b678cd034723e51d52",
+  "ended_at": null,
+  "environment": {
+    "executable": "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/.venv/bin/python",
+    "isolation": "local process; not an OS security sandbox",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.11.6"
+  },
+  "error": null,
+  "exit_code": null,
+  "experiment_id": "pilot-moons-11",
+  "inputs": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/002/input.json",
+      "retention": "retain-with-study",
+      "sha256": "2d167c66518c411b48601477bf59657eb35762e0cbd929b678cd034723e51d52"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/spec.json",
+      "retention": "retain-with-study",
+      "sha256": "0bb2df08e935179acb2a74c0c6a7ded6d9da0f1e0e71486359cd4789e1ceea4c"
+    },
+    {
+      "media_type": "text/x-python",
+      "path": "campaigns/ema-v1/materials/domain/runner.py",
+      "retention": "retain-with-study",
+      "sha256": "26f69538c0ecb3497a77e57899dfb8b362f780ae1fba1d9865ffeb7a3cb8a868"
+    },
+    {
+      "media_type": "text/x-python",
+      "path": "campaigns/ema-v1/materials/domain/evaluator.py",
+      "retention": "retain-with-study",
+      "sha256": "609018a0d4b61b178d139d944290bc4f53dad1151a1e871efabb9a7e1eba65bf"
+    }
+  ],
+  "model_revision": null,
+  "outputs": [],
+  "protocol_revision": "ema-2d-v1",
+  "record_type": "RunRecord",
+  "run_id": "pilot-moons-11",
+  "schema_version": "0.2",
+  "split": "pilot",
+  "started_at": "2026-10-07T15:20:39.082575+00:00",
+  "status": "running",
+  "usage": {
+    "money_usd": 0.0,
+    "tokens": 0,
+    "wall_seconds": 0.0
+  }
+}

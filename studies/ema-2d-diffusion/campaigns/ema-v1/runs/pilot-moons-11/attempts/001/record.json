@@ -1,0 +1,115 @@
+{
+  "attempt_id": "pilot-moons-11-a001",
+  "attempt_number": 1,
+  "bundle_id": "b-2b63431e34a085598aaade78",
+  "campaign_id": "ema-v1",
+  "command": [
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/.venv/bin/python",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/campaigns/ema-v1/materials/domain/runner.py",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/campaigns/ema-v1/runs/pilot-moons-11/attempts/001/input.json",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/campaigns/ema-v1/runs/pilot-moons-11/attempts/001/raw.json"
+  ],
+  "data_revision": "2d167c66518c411b48601477bf59657eb35762e0cbd929b678cd034723e51d52",
+  "ended_at": "2026-10-07T15:17:19.839237+00:00",
+  "environment": {
+    "executable": "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/.venv/bin/python",
+    "isolation": "local process; not an OS security sandbox",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.11.6"
+  },
+  "error": {
+    "kind": "interrupted",
+    "message": "Process terminated; this attempt is not scientific evidence"
+  },
+  "exit_code": -15,
+  "experiment_id": "pilot-moons-11",
+  "inputs": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/001/input.json",
+      "retention": "retain-with-study",
+      "sha256": "ebdd7501d6cde9d2ba0b85d84d02e04981f463ef9b87452c1c3422abb9e2ffe2"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/spec.json",
+      "retention": "retain-with-study",
+      "sha256": "0bb2df08e935179acb2a74c0c6a7ded6d9da0f1e0e71486359cd4789e1ceea4c"
+    },
+    {
+      "media_type": "text/x-python",
+      "path": "campaigns/ema-v1/materials/domain/runner.py",
+      "retention": "retain-with-study",
+      "sha256": "26f69538c0ecb3497a77e57899dfb8b362f780ae1fba1d9865ffeb7a3cb8a868"
+    },
+    {
+      "media_type": "text/x-python",
+      "path": "campaigns/ema-v1/materials/domain/evaluator.py",
+      "retention": "retain-with-study",
+      "sha256": "609018a0d4b61b178d139d944290bc4f53dad1151a1e871efabb9a7e1eba65bf"
+    }
+  ],
+  "model_revision": null,
+  "outputs": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/001/interrupt-ready",
+      "retention": "retain-with-study",
+      "sha256": "b17573102da96aaa5a2b36b5535baaaf155eabafd65fd5484d05c8c03b4e181c"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/001/partial-training.json",
+      "retention": "retain-with-study",
+      "sha256": "9db63947f74f909c00d5e9f7651d122c5a093e94bb3d866d41a66a70c5c798a3"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/001/stderr.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/001/stdout.job-result.json",
+      "retention": "retain-with-study",
+      "sha256": "e39f80ed80cdce346b26a710a1afc3fb4258cd6bedcba560a6351778edd88a76"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/001/stdout.job.json",
+      "retention": "retain-with-study",
+      "sha256": "0dad45fd34ba24b58f3af293340e2934c480c0922f5b8f376b6e814479235901"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/001/stdout.txt",
+      "retention": "retain-with-study",
+      "sha256": "1e817027f5b763e7c053ce3444331e584322093d153810acaf8f468413fddc2e"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/001/stdout.worker-stderr.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "text/plain",
+      "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/001/stdout.worker-stdout.txt",
+      "retention": "retain-with-study",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "protocol_revision": "ema-2d-v1",
+  "record_type": "RunRecord",
+  "run_id": "pilot-moons-11",
+  "schema_version": "0.2",
+  "split": "pilot",
+  "started_at": "2026-10-07T15:17:17.424944+00:00",
+  "status": "interrupted",
+  "usage": {
+    "money_usd": 0.0,
+    "tokens": 0,
+    "wall_seconds": 2.403129167156294
+  }
+}

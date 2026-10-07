@@ -1,0 +1,16 @@
+All four pilots completed successfully, each with 10,000 updates on native MPS.
+
+| Attempt | Charged time | Evaluation |
+|---|---:|---:|
+| `pilot-moons-11-a002` | 14.44 s | 21/21 passed |
+| `pilot-moons-12-a001` | 14.33 s | 21/21 passed |
+| `pilot-gmm8-21-a001` | 14.16 s | 27/27 passed |
+| `pilot-gmm8-22-a001` | 14.48 s | 27/27 passed |
+
+Pilot cost: **57.39 seconds**. Total study charge: **100.37 / 1,800 seconds**, leaving **1,699.63 seconds**.
+
+All 151 protected files remain unchanged. `pilot-moons-11-a001` remains interrupted and excluded; its partial artifact still records 100 updates and `scientific_evidence: false`. The latest retained known-answer results passed all six tests; they were inspected, not rerun.
+
+Confirmation was neither frozen nor run. Model defaults were preserved, with no additional agents or model sessions launched.
+
+[Retained report and evidence](/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/evidence/pilot-resumption-20261008/report.md)

@@ -1,0 +1,183 @@
+{
+  "assurance_scope": "Deterministic pilot evaluation and artifact integrity checks; campaign assurance remains unreviewed.",
+  "bundle_id": "b-2b63431e34a085598aaade78",
+  "campaign": "ema-v1",
+  "checks": {
+    "changed_files": [],
+    "confirmation_attempts": 0,
+    "confirmation_freeze_exists": false,
+    "interrupted_attempt_excluded_from_successes": true,
+    "interrupted_attempt_unchanged": true,
+    "known_answer_rerun_this_session": false,
+    "latest_retained_known_answer_receipt": "evidence/compute/003-known-answer-mps-corrected.json",
+    "latest_retained_known_answer_tests_passed": 6,
+    "partial_training": {
+      "scientific_evidence": false,
+      "seed": 11,
+      "updates": 100
+    },
+    "pilot_evaluation_checks_passed": 96,
+    "protected_files_unchanged": 151,
+    "unfinished_attempts": 0
+  },
+  "costs": {
+    "all_campaign_attempt_wall_seconds": 59.30374254193157,
+    "four_pilot_attempt_wall_seconds": 56.900613374775276,
+    "four_pilot_charged_seconds": 57.39214124996215,
+    "pilot_runner_money_usd": 0.0,
+    "runner_cost_scope": "Local scientific execution; native model usage is separate and not represented by runner token/cost fields.",
+    "study_ledger": {
+      "attempt_limit": 18,
+      "attempts": 5,
+      "ceiling_seconds": 1800.0,
+      "charged_seconds": 100.3727797509171,
+      "prior_probe_estimate_charged_seconds": 15.3,
+      "prior_probe_is_scientific_evidence": false,
+      "remaining_seconds": 1699.627220249083
+    }
+  },
+  "final_state": {
+    "assurance": "unreviewed",
+    "execution_status": "paused",
+    "phase": "pilot",
+    "stop_reason": "Requested checkpoint reached; resume uses the same lock."
+  },
+  "pilots": [
+    {
+      "artifact_digests_verified_after_completion": true,
+      "attempt_id": "pilot-moons-11-a002",
+      "attempt_wall_seconds": 14.311593499965966,
+      "charged_seconds": 14.435188625007868,
+      "command": [
+        "python3",
+        "manage.py",
+        "pilot"
+      ],
+      "compute_receipt": {
+        "path": "evidence/compute/005-pilot-pilot-moons-11.json",
+        "sha256": "ddec3ba5ff8c8f14884f626319ea556e47c4b7a4a03c5257b6241020cd382f20"
+      },
+      "evaluation": {
+        "passed_checks": 21,
+        "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/002/evaluation.json",
+        "sha256": "4d5154ba64029968f5cd674e4a83eafe9d826b6b67eca282a42cca815b4809eb",
+        "valid": true
+      },
+      "exit_code": 0,
+      "money_usd": 0.0,
+      "record": {
+        "path": "campaigns/ema-v1/runs/pilot-moons-11/attempts/002/record.json",
+        "sha256": "c68096e0ffed6634ed45e4b542ddd439d9418daafd64d8ddf377989b9e221057"
+      },
+      "run_id": "pilot-moons-11",
+      "status": "succeeded"
+    },
+    {
+      "artifact_digests_verified_after_completion": true,
+      "attempt_id": "pilot-moons-12-a001",
+      "attempt_wall_seconds": 14.21466058306396,
+      "charged_seconds": 14.325513541931286,
+      "command": [
+        "python3",
+        "manage.py",
+        "pilot"
+      ],
+      "compute_receipt": {
+        "path": "evidence/compute/006-pilot-pilot-moons-12.json",
+        "sha256": "c7f4a626d68336a35a83b77338078a5bfbed38c8e4ad38dfad1ef1fbb4d8ae11"
+      },
+      "evaluation": {
+        "passed_checks": 21,
+        "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/evaluation.json",
+        "sha256": "4d5154ba64029968f5cd674e4a83eafe9d826b6b67eca282a42cca815b4809eb",
+        "valid": true
+      },
+      "exit_code": 0,
+      "money_usd": 0.0,
+      "record": {
+        "path": "campaigns/ema-v1/runs/pilot-moons-12/attempts/001/record.json",
+        "sha256": "002bd8e1e41fa0eb5a8e2153e7e878ae16283b4b283341ad63a2a2c4f4cb2913"
+      },
+      "run_id": "pilot-moons-12",
+      "status": "succeeded"
+    },
+    {
+      "artifact_digests_verified_after_completion": true,
+      "attempt_id": "pilot-gmm8-21-a001",
+      "attempt_wall_seconds": 14.040583041962236,
+      "charged_seconds": 14.155807707924396,
+      "command": [
+        "python3",
+        "manage.py",
+        "pilot"
+      ],
+      "compute_receipt": {
+        "path": "evidence/compute/007-pilot-pilot-gmm8-21.json",
+        "sha256": "78e81cee06427f4f85b5e04dfe2cf4fd9f8094f17e9c89315de904e245b6e0c1"
+      },
+      "evaluation": {
+        "passed_checks": 27,
+        "path": "campaigns/ema-v1/runs/pilot-gmm8-21/attempts/001/evaluation.json",
+        "sha256": "873ad5fe790cd91da6e895a77a985ba281269fd8747f2f2910b330be1bb2023c",
+        "valid": true
+      },
+      "exit_code": 0,
+      "money_usd": 0.0,
+      "record": {
+        "path": "campaigns/ema-v1/runs/pilot-gmm8-21/attempts/001/record.json",
+        "sha256": "857bcbc66589a52b88c4acf51c8222509dc5efecac9d271306a0182ee19523ea"
+      },
+      "run_id": "pilot-gmm8-21",
+      "status": "succeeded"
+    },
+    {
+      "artifact_digests_verified_after_completion": true,
+      "attempt_id": "pilot-gmm8-22-a001",
+      "attempt_wall_seconds": 14.333776249783114,
+      "charged_seconds": 14.475631375098601,
+      "command": [
+        "python3",
+        "manage.py",
+        "pilot"
+      ],
+      "compute_receipt": {
+        "path": "evidence/compute/008-pilot-pilot-gmm8-22.json",
+        "sha256": "fefd4a8a3b3802d49e2ee0e79cfbb09bca9f391eff4dbf124fe73cc5ca8c5c73"
+      },
+      "evaluation": {
+        "passed_checks": 27,
+        "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/evaluation.json",
+        "sha256": "873ad5fe790cd91da6e895a77a985ba281269fd8747f2f2910b330be1bb2023c",
+        "valid": true
+      },
+      "exit_code": 0,
+      "money_usd": 0.0,
+      "record": {
+        "path": "campaigns/ema-v1/runs/pilot-gmm8-22/attempts/001/record.json",
+        "sha256": "b4e15b88f078617d19c17dd3e8b04c8fcc3d2738e7aa4f6c187e3cbb867017ca"
+      },
+      "run_id": "pilot-gmm8-22",
+      "status": "succeeded"
+    }
+  ],
+  "preflight": {
+    "path": "evidence/pilot-resumption-20261008/preflight.json",
+    "sha256": "f7e43b07f88529125cc1582b6af186aa920482fc9bb8c0331cd33d5617387640"
+  },
+  "recorded_at": "2026-10-07T15:24:27.572763+00:00",
+  "session_actions": {
+    "additional_agents_or_model_sessions_spawned": false,
+    "confirmation_frozen": false,
+    "confirmation_run": false,
+    "model_override_supplied": false,
+    "resource_ceilings_changed": false,
+    "scientific_code_changed": false,
+    "scientific_commands": [
+      "python3 manage.py pilot",
+      "python3 manage.py pilot",
+      "python3 manage.py pilot",
+      "python3 manage.py pilot"
+    ]
+  },
+  "status": "Four authorized pilots completed; stopped before confirmation freeze."
+}

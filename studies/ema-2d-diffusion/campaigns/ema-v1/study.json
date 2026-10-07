@@ -1,0 +1,88 @@
+{
+  "bundle_id": "b-2b63431e34a085598aaade78",
+  "capabilities": [
+    "artifact.read",
+    "artifact.write",
+    "execution.local"
+  ],
+  "configuration_origins": {
+    "budget.max_attempts": "current request",
+    "budget.max_seconds": "current request",
+    "budget.money_usd": "current request",
+    "budget.per_attempt_seconds": "current request",
+    "capabilities": "host authorization",
+    "context_chars": "module:context/active-brief",
+    "language": "profile:public/default",
+    "max_revisions": "recipe:recipe/research"
+  },
+  "constraints": [
+    "30-minute total study-computation ceiling including retries",
+    "M4 Pro /48GB /MPS in isolated study-owned environment",
+    "Preserve GUI model selection",
+    "Negative or inconclusive scientific findings are valid",
+    "No pilot reuse as confirmation",
+    "Prior15.3-second probe is feasibility only"
+  ],
+  "effective_configuration": {
+    "budget": {
+      "max_attempts": 18,
+      "max_seconds": 1650.0,
+      "money_usd": 0.0,
+      "per_attempt_seconds": 150.0
+    },
+    "capabilities": [
+      "artifact.read",
+      "artifact.write",
+      "execution.local"
+    ],
+    "context_chars": 12000,
+    "language": "English",
+    "max_revisions": 2
+  },
+  "lock": {
+    "media_type": "application/json",
+    "path": "campaigns/ema-v1/lock.yaml",
+    "retention": "retain-with-study",
+    "sha256": "cc0ef548e8ae7c018133a83bbe922cd201c5732728fd306a6cd3d5e98d7b320e"
+  },
+  "motivation": "Measure paired distribution-quality effects and qualify real native Codex workflow execution and recovery.",
+  "output": "Reproducible empirical study and native Codex qualification report",
+  "profile_provenance": [
+    {
+      "id": "public/default",
+      "sha256": "9f90c310cefb07153761645bd658f8ad6551578ccb6bf772074e44e8f8c17b9b"
+    }
+  ],
+  "protocol": {
+    "media_type": "application/json",
+    "path": "campaigns/ema-v1/protocol.json",
+    "retention": "retain-with-study",
+    "sha256": "09942fb8ed12194b9c2efb944b2c1d9a2b00f63c043bd5055ce6f42e0008cfb1"
+  },
+  "protocol_revision": "ema-2d-v1",
+  "question": "When does weight EMA help tiny 2D diffusion on two moons and an eight-component Gaussian mixture?",
+  "record_type": "StudySpec",
+  "release": "0.2.0",
+  "resources": {
+    "max_attempts": 18,
+    "max_seconds": 1650.0,
+    "money_usd": 0.0,
+    "per_attempt_seconds": 150.0
+  },
+  "schema_version": "0.2",
+  "stop_rules": [
+    "18 total training attempts",
+    "1800 total computation seconds including checks, retries and analysis",
+    "150seconds per training attempt",
+    "Two failures on same planned run",
+    "Stop before confirmation if qualification fails or forecast exceeds remaining budget",
+    "Ask before expanding budget or changing question"
+  ],
+  "study_id": "ema-2d-diffusion",
+  "success_criteria": [
+    "Two pilot seeds per dataset qualify implementation and cost",
+    "Five untouched confirmation seeds per dataset compare raw/EMA0.99/EMA0.999 at5000/10000 updates",
+    "Retained real native skill activation, exact campaign routing and fresh-session continuation after interruption",
+    "Recomputable results, figures, evidence-linked English manuscript and accurate host report"
+  ]
+}

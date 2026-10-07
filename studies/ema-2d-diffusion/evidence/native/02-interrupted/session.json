@@ -1,0 +1,34 @@
+{
+  "command": [
+    "/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex",
+    "-a",
+    "never",
+    "exec",
+    "--sandbox",
+    "danger-full-access",
+    "--json",
+    "-C",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion",
+    "-o",
+    "/Users/iyunseong/maangeek/allagma/studies/ema-2d-diffusion/evidence/native/02-interrupted/final.txt",
+    "-"
+  ],
+  "started_at": "2026-10-07T15:15:42.974016+00:00",
+  "cli_version": "codex-cli 0.160.1",
+  "prompt_sha256": "9a93f120d57fdeed45b8cffcc8f729ec960c10f96627fce301b7ddc03e15363f",
+  "model_override": null,
+  "authentication": "Existing ChatGPT CLI login; no credentials exported",
+  "sandbox": "danger-full-access on the user-authorized local host; not a security containment claim",
+  "fresh_session": true,
+  "host_interrupted": true,
+  "pid": 12677,
+  "interruption_reason": "SIGINT after the bounded 100-update pilot interruption and its compute receipt, before session continuation",
+  "interrupted_at": "2026-10-07T15:17:19.919218+00:00",
+  "exit_code": 1,
+  "ended_at": "2026-10-07T15:17:21.195925+00:00",
+  "thread_ids": [
+    "01a116ef-4939-7070-b7b3-ff6de94201a8"
+  ],
+  "usage": [],
+  "events_sha256": "0dfce76dcc46e0f3a1e8ff0d4b51d7ca959d4db4456579f593c243f0bd422a52"
+}
