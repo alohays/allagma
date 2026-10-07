@@ -1,0 +1,49 @@
+{
+  "id": "research/improve",
+  "kind": "method",
+  "entry": "SKILL.md",
+  "contract": "0.2",
+  "inputs": [
+    "StudySpec"
+  ],
+  "outputs": [
+    "ImprovementRecord"
+  ],
+  "requires": [
+    "artifact.read",
+    "artifact.write"
+  ],
+  "optional": [],
+  "settings": {},
+  "dependencies": [],
+  "resources": [],
+  "sources": [
+    {
+      "repository": "https://github.com/google-research/rrsi",
+      "revision": "be50316e1db05914068a973f322770ef08ed7ba1",
+      "path": "rrsi/history.py",
+      "relationship": "design inspiration"
+    }
+  ],
+  "adaptation": "Original Allagma implementation of the adopted v0.2 artifact boundaries; no upstream code or prose copied.",
+  "lifecycle": "stable",
+  "maintainer": "@alohays",
+  "evaluation": [
+    "example.json"
+  ],
+  "examples": [
+    "example.json"
+  ],
+  "compatibility": {
+    "contracts": [
+      "0.2"
+    ],
+    "python": ">=3.11 for optional helpers",
+    "hosts": [
+      "generic",
+      "codex",
+      "claude-code"
+    ]
+  },
+  "replacement": null
+}

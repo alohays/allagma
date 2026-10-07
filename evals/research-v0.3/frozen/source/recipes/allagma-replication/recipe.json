@@ -1,0 +1,103 @@
+{
+  "roles": {
+    "context": "context/active-brief",
+    "reviewer": "reviewer/checklist",
+    "runner": "runner/local-process"
+  },
+  "steps": [
+    {
+      "phase": "scope",
+      "method": "$context",
+      "consumes": [
+        "StudySpec"
+      ],
+      "produces": [
+        "ContextRecord"
+      ]
+    },
+    {
+      "phase": "scope",
+      "method": "research/scope",
+      "consumes": [
+        "StudySpec"
+      ],
+      "produces": [
+        "StudySpec"
+      ]
+    },
+    {
+      "phase": "protocol",
+      "method": "research/protocol",
+      "consumes": [
+        "StudySpec"
+      ],
+      "produces": [
+        "ExperimentSpec"
+      ]
+    },
+    {
+      "phase": "pilot",
+      "method": "research/experiment",
+      "consumes": [
+        "ExperimentSpec"
+      ],
+      "produces": [
+        "RunRecord"
+      ]
+    },
+    {
+      "phase": "campaign",
+      "method": "research/experiment",
+      "consumes": [
+        "ExperimentSpec"
+      ],
+      "produces": [
+        "RunRecord"
+      ]
+    },
+    {
+      "phase": "analysis",
+      "method": "research/analysis",
+      "consumes": [
+        "RunRecord"
+      ],
+      "produces": [
+        "AnalysisRecord"
+      ]
+    },
+    {
+      "phase": "manuscript",
+      "method": "research/writing",
+      "consumes": [
+        "AnalysisRecord"
+      ],
+      "produces": [
+        "ClaimRecord"
+      ]
+    },
+    {
+      "phase": "audit",
+      "method": "research/audit",
+      "consumes": [
+        "ClaimRecord"
+      ],
+      "produces": [
+        "ReviewRecord"
+      ]
+    }
+  ],
+  "branches": {
+    "pilot_failure": "stop with qualification report",
+    "interruption": "resume preserved attempts",
+    "budget_exhausted": "partial package",
+    "review_revise": "return to affected phase up to max_revisions"
+  },
+  "stop_rules": [
+    "declared completeness",
+    "resource ceiling",
+    "repeated failure",
+    "required external input"
+  ],
+  "execution": "sequential",
+  "analysis_repetitions": 2
+}

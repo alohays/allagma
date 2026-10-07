@@ -1,0 +1,22 @@
+{
+  "created_at": "2026-10-07T20:02:30.755382+00:00",
+  "profile": {
+    "attempt_limit": 64,
+    "budgets_seconds": {
+      "compute": 1800,
+      "setup": 300
+    },
+    "command_timeout_seconds": {
+      "compute": 180,
+      "setup": 180
+    },
+    "file_limit_bytes": 536870912,
+    "format": "allagma-resource-profile-v1",
+    "poll_seconds": 0.25,
+    "rss_limit_bytes": 8589934592,
+    "storage_limit_bytes": 6442450944,
+    "terminate_grace_seconds": 0.5
+  },
+  "profile_sha256": "414e27bc4e469b235c5f1423d2d27cacde1b7df7d65fcf64a9e0719225728552",
+  "workdir": "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r04/candidate"
+}
