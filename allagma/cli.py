@@ -82,6 +82,21 @@ def parser():
     res.add_argument("--timeout", type=float)
     res.add_argument("--attempt", action="store_true")
     res.epilog = "For run, put the supervised command after --."
+    research = sub.add_parser("research", help="Prepare a reusable brief/material/resource workspace or explicitly run its native workflow")
+    research.add_argument("operation", choices=["prepare", "run", "status"])
+    research.add_argument("--source", type=Path, default=ROOT)
+    research.add_argument("--study", type=Path, required=True)
+    research.add_argument("--control", type=Path, required=True)
+    research.add_argument("--brief", type=Path)
+    research.add_argument("--materials", type=Path)
+    research.add_argument("--profile", type=Path)
+    research.add_argument("--id", default="study")
+    research.add_argument("--session", default="session-001")
+    research.add_argument("--codex", type=Path)
+    research.add_argument("--timeout", type=float)
+    research.add_argument("--config", type=Path, default=Path.home()/".codex/config.toml")
+    research.add_argument("--auth", type=Path, default=Path.home()/".codex/auth.json")
+    research.add_argument("--interrupt-first-attempt", action="store_true")
     return p
 
 
@@ -94,6 +109,10 @@ def main(argv=None):
         parser_argv, command_argv = argv[:boundary], argv[boundary+1:]
     args = parser().parse_args(parser_argv)
     try:
+        if args.command == "research" and args.operation == "run":
+            root = bundles.bundle_path(args.study, bundles.verify_study(args.study))
+            if root.resolve() != ROOT:
+                return subprocess.run([sys.executable, str(root/"tools/allagma.py"), *argv]).returncode
         if args.command == "campaign" and args.operation in ("start", "run", "analyze", "audit"):
             if args.operation == "start":
                 lock = bundles.verify_study(args.study)
@@ -169,11 +188,27 @@ def main(argv=None):
                 result = resources.recover(args.ledger)
             else:
                 result = resources.summary(args.ledger)
+        elif args.command == "research":
+            from . import research
+            if args.operation == "prepare":
+                if not all((args.brief,args.materials,args.profile)):
+                    raise AllagmaError("Research preparation requires --brief, --materials and --profile")
+                result = research.prepare(args.source,args.study,args.control,brief=args.brief,materials=args.materials,
+                                          profile=read_json(args.profile),study_id=args.id)
+            elif args.operation == "run":
+                if args.codex is None or args.timeout is None:
+                    raise AllagmaError("Native execution requires explicit --codex and --timeout")
+                result = research.run(args.study,args.control,codex=args.codex,timeout=args.timeout,session_id=args.session,
+                    config=args.config,auth=args.auth,interrupt_first_attempt=args.interrupt_first_attempt)
+            else:
+                result = research.status(args.study,args.control)
         else:
             from .acceptance import run_acceptance
             result = run_acceptance(ROOT, args.output)
         print(canonical(result).decode(), end="")
         if args.command == "resource" and args.operation == "run" and result["status"] != "completed":
+            return 1
+        if args.command == "research" and args.operation == "run" and result["status"] != "completed":
             return 1
         if isinstance(result, dict) and (result.get("verdict") in ("revise", "blocked") or result.get("execution_status") in ("failed", "blocked", "budget_exhausted", "needs_revision")):
             return 1

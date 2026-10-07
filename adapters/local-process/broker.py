@@ -11,7 +11,9 @@ import json
 import os
 from pathlib import Path
 import re
+import subprocess
 import sys
+import time
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from allagma import resources
@@ -51,6 +53,11 @@ class Broker:
             raise AllagmaError("Broker isolation changed; use a new controller record")
         if not path.exists():
             path.write_text(self.isolation)
+        inherited=self.record/"preexisting-requests.json"
+        if not inherited.exists():
+            # A new controller must not replay a previous controller's queue.
+            write_json(inherited,[path.stem for path in (self.queue/"requests").glob("*.json")],immutable=True)
+        self.preexisting=set(read_json(inherited))
 
     def _snapshot_sources(self, destination):
         manifest = {}
@@ -59,11 +66,13 @@ class Broker:
                        and not (Path(root)/name).is_symlink()]
             for name in files:
                 path = Path(root)/name
-                if path.is_symlink() or path.suffix not in (".py", ".sh", ".toml", ".yaml"):
+                if path.is_symlink() or path.suffix not in (".py", ".sh", ".toml", ".yaml", ".json"):
                     continue
                 relative = path.relative_to(self.workspace)
                 if path.stat().st_size > 2_000_000:
-                    raise AllagmaError("Source snapshot exceeds the per-file control limit")
+                    manifest[str(relative)] = {"sha256": file_hash(path), "captured": False,
+                                               "reason": "file exceeds 2 MB snapshot threshold"}
+                    continue
                 output = destination/relative
                 output.parent.mkdir(parents=True, exist_ok=True)
                 output.write_bytes(path.read_bytes())
@@ -71,10 +80,61 @@ class Broker:
         write_json(destination.parent/"source-manifest.json", manifest, immutable=True)
         return manifest
 
+    def _publish(self, request_id, result, injected=False, reconciled=False):
+        destination = self.record/"requests"/request_id
+        response = {"request_id": request_id, "injected_interruption": injected,
+                    "isolation_sha256": self.profile_hash, "result": result,
+                    "reconciled_after_controller_restart": reconciled}
+        if "job" in result:
+            for name in ("stdout.txt", "stderr.txt"):
+                source = Path(result["job"])/name
+                if source.exists():
+                    data = source.read_bytes()
+                    (destination/name).write_bytes(data)
+                    (self.queue/"responses"/(request_id+"-"+name)).write_bytes(data)
+        write_json(destination/"response.json", response, immutable=True)
+        write_json(self.queue/"responses"/(request_id+".json"), response)
+        return response
+
+    def recover(self):
+        """Explicitly reconcile a stopped controller; never repeat its request."""
+        with resources._mutex(self.record):
+            # This refuses live resource operations/groups/observed descendants.
+            resources.recover(self.ledger)
+            with resources._mutex(self.ledger):
+                entries = resources.summary(self.ledger)["entries"]
+                recovered = []
+                for destination in sorted((self.record/"requests").glob("*")):
+                    if (destination/"response.json").exists():
+                        continue
+                    request_id = destination.name
+                    matches = [entry for entry in entries if
+                        entry["reservation"].get("request_id") == request_id or
+                        "ALLAGMA_COMPUTE_REQUEST="+request_id in entry["reservation"]["command"]]
+                    if len(matches) > 1:
+                        raise AllagmaError("Multiple resource jobs have the same computation request ID")
+                    if matches:
+                        entry = matches[0]
+                        result = {"job": str(self.ledger/"jobs"/entry["job"]), **entry["result"]}
+                    else:
+                        # Reservations precede process launch, and both mutexes
+                        # exclude live dispatch. This request never launched.
+                        result = {"status": "not_started", "charged_seconds": 0,
+                                  "error": "Controller stopped before a resource reservation; submit a new request"}
+                    marker = self.record/"interruption.json"
+                    injected = marker.exists() and read_json(marker)["request_id"] == request_id
+                    recovered.append(self._publish(request_id, result, injected, reconciled=True))
+                return recovered
+
     def poll(self, process=None, remaining=None):
         """Service at most one request. Suitable for the native adapter callback."""
+        with resources._mutex(self.record):
+            return self._poll(process, remaining)
+
+    def _poll(self, process, remaining):
         for path in sorted((self.queue/"requests").glob("*.json")):
             request_id = path.stem
+            if request_id in self.preexisting:continue
             if not re.fullmatch(r"[0-9a-f]{32}", request_id) or path.is_symlink():
                 raise AllagmaError("Invalid or symlinked computation request")
             destination = self.record/"requests"/request_id
@@ -100,6 +160,9 @@ class Broker:
                 if not isinstance(request["argv"], list) or not request["argv"] or not all(isinstance(x, str) and x and "\0" not in x for x in request["argv"]):
                     raise AllagmaError("Computation argv must be a nonempty string array")
                 resources._positive(request["timeout_seconds"], "timeout_seconds")
+                limits = resources._policy(self.ledger)["profile"]["command_timeout_seconds"]
+                if request["category"] not in limits or request["timeout_seconds"] > limits[request["category"]]:
+                    raise AllagmaError("Requested category or timeout exceeds the frozen resource policy")
                 cwd = (self.workspace/request["cwd"]).resolve()
                 if cwd != self.workspace and self.workspace not in cwd.parents:
                     raise AllagmaError("Computation cwd escapes its candidate workspace")
@@ -132,18 +195,71 @@ class Broker:
             command = [*environment, "/usr/bin/sandbox-exec", "-p", self.isolation, *request["argv"]]
             try:
                 result = resources.execute(self.ledger, command, label=request["label"],
-                    category=request["category"], timeout=timeout, attempt=request["attempt"], workdir=cwd)
+                    category=request["category"], timeout=timeout, attempt=request["category"]=="compute", workdir=cwd,
+                    request_id=request_id)
             except (AllagmaError, OSError, ValueError) as exc:
                 result = {"status": "rejected", "error": str(exc)}
-            response = {"request_id": request_id, "injected_interruption": injected,
-                        "isolation_sha256": self.profile_hash, "result": result}
-            if "job" in result:
-                for name in ("stdout.txt", "stderr.txt"):
-                    data = (Path(result["job"])/name).read_bytes()
-                    (destination/name).write_bytes(data)
-                    # Convenience copies; authoritative logs remain protected.
-                    (self.queue/"responses"/(request_id+"-"+name)).write_bytes(data)
-            write_json(destination/"response.json", response, immutable=True)
-            write_json(self.queue/"responses"/(request_id+".json"), response)
-            return response
+            return self._publish(request_id, result, injected)
         return None
+
+
+def run_driver(broker, command, *, timeout, destination):
+    """Execute a study-owned reproduction driver while servicing its requests.
+
+    The driver coordinates requests and is timed separately from computation.
+    It is confined to the same workspace and does not receive controller files.
+    """
+    resources._positive(timeout,"driver timeout")
+    if timeout>7200:raise AllagmaError("Driver deadline must not exceed two hours")
+    destination=Path(destination).resolve()
+    destination.mkdir(parents=True,exist_ok=False)
+    policy=resources._policy(broker.ledger)["profile"]
+    environment=["/usr/bin/env","-i","PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin",
+                 "HOME="+str(Path.home()),"LANG=en_US.UTF-8","TMPDIR="+str(broker.workspace/".tmp")]
+    (broker.workspace/".tmp").mkdir(exist_ok=True)
+    invocation=[*environment,"/usr/bin/sandbox-exec","-p",broker.isolation,*command]
+    record={"command":command,"started_at":utcnow(),"timeout_seconds":timeout,"status":"running"}
+    write_json(destination/"record.json",record)
+    started=time.monotonic();process=None;known={};peak_rss=0;peak_storage=0
+    try:
+        with (destination/"stdout.txt").open("wb") as out,(destination/"stderr.txt").open("wb") as err:
+            process=subprocess.Popen(invocation,cwd=broker.workspace,stdout=out,stderr=err,start_new_session=True)
+            record["pid"]=process.pid;write_json(destination/"record.json",record)
+            while process.poll() is None:
+                table=resources.process_table();known=resources._family(table,process.pid,known)
+                peak_rss=max(peak_rss,sum(table[pid]["rss"] for pid in known))
+                peak_storage=max(peak_storage,resources.storage_bytes(broker.workspace))
+                remaining=timeout-(time.monotonic()-started)
+                if remaining<=0 or peak_rss>policy["rss_limit_bytes"] or peak_storage>policy["storage_limit_bytes"]:
+                    record["status"]="timed_out" if remaining<=0 else "resource_exceeded"
+                    resources._stop(process,known,.5);break
+                broker.poll(remaining=remaining)
+                time.sleep(.1)
+            process.wait()
+            if record["status"]=="running":record["status"]="completed" if process.returncode==0 else "failed"
+    except BaseException:
+        record["status"]="interrupted"
+        if process is not None:resources._stop(process,known,.5)
+        raise
+    finally:
+        record.update(ended_at=utcnow(),wall_seconds=time.monotonic()-started,
+            exit_code=process.returncode if process else None,peak_rss_bytes=peak_rss,peak_storage_bytes=peak_storage)
+        write_json(destination/"record.json",record)
+    return record
+
+
+if __name__=="__main__":
+    import argparse
+    argv=sys.argv[1:]
+    if "--" not in argv:raise SystemExit("Place the study-owned driver command after --")
+    split=argv.index("--");parser=argparse.ArgumentParser()
+    for name in ("workspace","ledger","record","output"):
+        parser.add_argument("--"+name,type=Path,required=True)
+    parser.add_argument("--timeout",type=float,required=True)
+    parser.add_argument("--readonly",type=Path,action="append",default=[])
+    parser.add_argument("--protected",type=Path,action="append",default=[])
+    args=parser.parse_args(argv[:split])
+    broker=Broker(args.workspace,args.ledger,args.record,readonly=args.readonly,protected=args.protected)
+    broker.recover()
+    result=run_driver(broker,argv[split+1:],timeout=args.timeout,destination=args.output)
+    print(json.dumps(result,indent=2));raise SystemExit(0 if result["status"]=="completed" else 1)

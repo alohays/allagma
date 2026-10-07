@@ -17,7 +17,7 @@ import signal
 import subprocess
 import time
 
-from .files import AllagmaError, digest, read_json, utcnow, write_json
+from .files import AllagmaError, digest, file_hash, read_json, utcnow, write_json
 
 FORMAT = "allagma-resource-profile-v1"
 FIELDS = {"format", "budgets_seconds", "command_timeout_seconds", "attempt_limit",
@@ -189,6 +189,10 @@ def recover(directory):
                 child = read_json(child_path)
                 if any(item["group"] == child["pid"] for item in table.values()):
                     raise AllagmaError("An abandoned job still has live processes; inspect and terminate them before recovery")
+            for path in (job/"observed-processes").glob("*.json"):
+                observed = read_json(path)
+                if observed["pid"] in table and table[observed["pid"]]["started"] == observed["started"]:
+                    raise AllagmaError("An abandoned job still has a live observed descendant; inspect it before recovery")
             write_json(job / "result.json", {"status": "abandoned", "exit_code": None,
                 "ended_at": utcnow(), "charged_seconds": entry["reservation"]["reserved_seconds"],
                 "charge_basis": "full reservation: missing outcome", "peak_rss_bytes": None,
@@ -197,7 +201,7 @@ def recover(directory):
     return {"recovered": recovered, "summary": summary(directory)}
 
 
-def execute(directory, command, *, label, category, timeout, attempt=False, workdir=None):
+def execute(directory, command, *, label, category, timeout, attempt=False, workdir=None, request_id=None):
     directory = Path(directory).resolve()
     if not re.fullmatch(r"[a-zA-Z0-9][a-zA-Z0-9_-]{0,79}", label):
         raise AllagmaError("Invalid resource job label")
@@ -228,14 +232,15 @@ def execute(directory, command, *, label, category, timeout, attempt=False, work
         reservation = {"label": label, "command": command, "category": category,
             "attempt": bool(attempt), "timeout_seconds": timeout, "reserved_seconds": reserve,
             "workdir": str(workdir), "storage_root": str(storage_root), "profile_sha256": policy["profile_sha256"],
-            "started_at": utcnow(), "supervisor_pid": os.getpid()}
+            "started_at": utcnow(), "supervisor_pid": os.getpid(),
+            "supervisor_sha256": file_hash(Path(__file__)), "request_id": request_id}
         write_json(job / "reservation.json", reservation, immutable=True)
         environment = {**os.environ, "ALLAGMA_RESOURCE_RECEIPT": str(job / "reservation.json")}
         interrupted = []
         previous_handlers = {}
         for sig in (signal.SIGINT, signal.SIGTERM):
             previous_handlers[sig] = signal.signal(sig, lambda signum, frame: interrupted.append(signum))
-        process, known, status = None, {}, "failed"
+        process, known, status, observed_identities = None, {}, "failed", set()
         started, peak_rss, peak_storage = time.monotonic(), 0, initial_storage
 
         def file_limit():
@@ -250,6 +255,11 @@ def execute(directory, command, *, label, category, timeout, attempt=False, work
                 while True:
                     table = process_table()
                     known = _family(table, process.pid, known)
+                    for pid, identity in known.items():
+                        if (pid, identity) not in observed_identities:
+                            write_json(job/"observed-processes"/f"{pid}-{digest(identity)[:12]}.json",
+                                       {"pid": pid, "started": identity}, immutable=True)
+                            observed_identities.add((pid, identity))
                     peak_rss = max(peak_rss, sum(table[pid]["rss"] for pid in known))
                     peak_storage = max(peak_storage, storage_bytes(storage_root))
                     if interrupted:

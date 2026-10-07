@@ -18,7 +18,7 @@ import time
 import tomllib
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
-from allagma.resources import _family, _stop, process_table
+from allagma.resources import _family, _stop, process_table, storage_bytes
 
 SETTING_KEYS = ("model", "model_reasoning_effort", "model_context_window",
                 "model_auto_compact_token_limit", "model_provider")
@@ -111,9 +111,12 @@ def observations(runtime):
 
 
 def capture(*, codex, workspace, record, runtime, prompt, timeout,
-            config, auth, blocked=(), readonly=(), on_tick=None):
+            config, auth, blocked=(), readonly=(), on_tick=None,
+            rss_limit_bytes=8589934592, storage_limit_bytes=6442450944):
     if not 0 < timeout <= 7200:
         raise ValueError("Native session deadline must be finite and at most two hours")
+    if any(type(value) is not int or value <= 0 for value in (rss_limit_bytes, storage_limit_bytes)):
+        raise ValueError("Native RSS and storage ceilings must be finite positive integers")
     workspace, record, runtime = (Path(p).resolve() for p in (workspace, record, runtime))
     if not workspace.is_dir() or record.exists() or runtime.exists():
         raise ValueError("Require existing workspace and new record/runtime directories")
@@ -159,11 +162,13 @@ def capture(*, codex, workspace, record, runtime, prompt, timeout,
         "authentication": "Existing Codex auth file referenced locally; no credentials in evidence",
         "cli_version": subprocess.check_output([str(codex), "--version"], text=True).strip(),
         "cli_sha256": sha(codex), "adapter_sha256": sha(__file__), "command": command,
-        "timeout_seconds": timeout, "status": "running"}
+        "timeout_seconds": timeout, "rss_limit_bytes": rss_limit_bytes,
+        "storage_limit_bytes": storage_limit_bytes, "status": "running"}
     write(record/"session.json", receipt)
     started = time.monotonic()
     process = None
     known = {}
+    peak_rss, peak_storage, next_storage_check = 0, 0, 0.
     try:
         with (runtime/"stdout.jsonl").open("w") as out, (runtime/"stderr.txt").open("w") as err:
             process = subprocess.Popen(command, env=environment, cwd=workspace, stdin=subprocess.PIPE,
@@ -173,7 +178,16 @@ def capture(*, codex, workspace, record, runtime, prompt, timeout,
             process.stdin.write(prompt)
             process.stdin.close()
             while process.poll() is None:
-                known = _family(process_table(), process.pid, known)
+                table = process_table()
+                known = _family(table, process.pid, known)
+                peak_rss = max(peak_rss, sum(table[pid]["rss"] for pid in known))
+                if time.monotonic() >= next_storage_check:
+                    peak_storage = max(peak_storage, storage_bytes(workspace)+storage_bytes(runtime))
+                    next_storage_check = time.monotonic()+1
+                if peak_rss > rss_limit_bytes or peak_storage > storage_limit_bytes:
+                    receipt["status"] = "memory_exceeded" if peak_rss > rss_limit_bytes else "storage_exceeded"
+                    stop(process, known)
+                    break
                 if time.monotonic()-started >= timeout:
                     receipt["status"] = "timed_out"
                     stop(process, known)
@@ -191,7 +205,8 @@ def capture(*, codex, workspace, record, runtime, prompt, timeout,
         raise
     finally:
         receipt.update(ended_at=now(), wall_seconds=time.monotonic()-started,
-                       exit_code=process.returncode if process else None)
+                       exit_code=process.returncode if process else None,
+                       peak_rss_bytes=peak_rss, peak_storage_bytes=peak_storage)
         events, malformed = [], 0
         raw = runtime/"stdout.jsonl"
         if raw.exists():
