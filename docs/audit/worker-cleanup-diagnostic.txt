@@ -1,0 +1,39 @@
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/allagma/worker.py", line 66, in main
+    child.wait(timeout=job["timeout"])
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/subprocess.py", line 2038, in _wait
+    raise TimeoutExpired(self.args, timeout)
+subprocess.TimeoutExpired: Command '['/usr/local/bin/python3', '-c', 'import time; print(42, flush=True); time.sleep(30)']' timed out after 0.5 seconds
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/allagma/worker.py", line 69, in main
+    terminate()
+  File "/Users/iyunseong/maangeek/allagma/allagma/worker.py", line 37, in terminate
+    os.killpg(child.pid, 0)
+PermissionError: [Errno 1] Operation not permitted
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/allagma/worker.py", line 78, in main
+    terminate()
+  File "/Users/iyunseong/maangeek/allagma/allagma/worker.py", line 29, in terminate
+    os.killpg(child.pid, signal.SIGTERM)
+PermissionError: [Errno 1] Operation not permitted
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/allagma/worker.py", line 90, in <module>
+    raise SystemExit(main(sys.argv[1]))
+                     ^^^^^^^^^^^^^^^^^
+  File "/Users/iyunseong/maangeek/allagma/allagma/worker.py", line 80, in main
+    terminate()
+  File "/Users/iyunseong/maangeek/allagma/allagma/worker.py", line 29, in terminate
+    os.killpg(child.pid, signal.SIGTERM)
+PermissionError: [Errno 1] Operation not permitted

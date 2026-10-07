@@ -1,0 +1,17 @@
+{
+  "cases": 1557,
+  "checked_at": "2026-10-07T01:01:09.496470+00:00",
+  "coverage": "All record types: valid instances, missing required fields, unknown properties, field-type/boundary mutations, independent RFC 3339 timestamps. Semantic cross-record constraints are covered separately.",
+  "jsonschema_version": "4.23.0",
+  "mismatches": [
+    {
+      "builtin_valid": true,
+      "case": "2026-10-07T12:00:00+01:60",
+      "independent_valid": false,
+      "record": "date-time"
+    }
+  ],
+  "rfc3339_validator_version": "0.1.4",
+  "schemas": 8,
+  "status": "fail"
+}

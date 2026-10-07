@@ -143,7 +143,7 @@ def main(argv=None):
             from .acceptance import run_acceptance
             result = run_acceptance(ROOT, args.output)
         print(canonical(result).decode(), end="")
-        if isinstance(result, dict) and (result.get("verdict") == "revise" or result.get("execution_status") in ("failed", "budget_exhausted", "needs_revision")):
+        if isinstance(result, dict) and (result.get("verdict") in ("revise", "blocked") or result.get("execution_status") in ("failed", "blocked", "budget_exhausted", "needs_revision")):
             return 1
         return 0
     except (AllagmaError, OSError, KeyError, ValueError) as exc:

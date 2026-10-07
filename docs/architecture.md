@@ -25,7 +25,9 @@ explicit override files win. The lock records each leaf's origin, input digests,
 profile identity and effective values. Campaign snapshots freeze all of them.
 Configuration may narrow available capabilities; it cannot add authorization.
 
-`unset` budgets are not unlimited. The default local adapter has bounded job
+`unset` budgets are not unlimited. Campaign execution requires explicit attempt,
+time and monetary ceilings; a zero monetary ceiling is valid for local work.
+Planning can retain unset resources. The default local adapter has bounded job
 timeouts and requires a finite protocol. It performs no paid API calls, model
 calls or publication. Resource ceilings count every attempt, including failures
 and interruptions. Measured wall time includes process overhead; cancellation
@@ -51,11 +53,17 @@ changes require a new campaign; record the amendment's reason and affected runs
 in the new protocol. The prior protocol and attempts remain intact.
 
 Started and terminal attempt records have separate immutable paths. A retry
-uses a new attempt directory. Workers own their child timeout independently
+uses a new attempt directory. Initial campaigns and attempt preparations are
+published by atomic directory rename after validation. Workers own their child timeout independently
 of the controller. An uncertain attempt is recovered as interrupted, never as
 success inferred from a leftover file. Completed outputs are digest-checked
 before the engine skips a run. Local mutation locks prevent two controllers
 from writing one study concurrently.
+
+Workers terminate the launched process group, including descendants remaining
+after its leader exits. Analysis and review helpers use the same bounded worker.
+This is process cleanup, not containment of hostile code that deliberately
+creates another session or escapes the process group.
 
 Analysis records point to raw manifests, code revisions, configuration,
 exclusions, uncertainty and outputs. Claims include both supporting and

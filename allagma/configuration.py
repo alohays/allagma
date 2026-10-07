@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from copy import deepcopy
+import math
 from .files import AllagmaError, digest
 
 DEFAULT_BUDGET = {"max_attempts": "unset", "max_seconds": "unset", "money_usd": "unset",
@@ -43,7 +44,9 @@ def resolve_configuration(layers, host_capabilities):
     for key, value in budget.items():
         if value == "unset" and key != "per_attempt_seconds":
             continue
-        if isinstance(value, bool) or not isinstance(value, (int, float)) or value < (0 if key == "money_usd" else 0.001):
+        minimum = {"money_usd": 0, "max_attempts": 1, "max_seconds": 0.001, "per_attempt_seconds": 0.01}[key]
+        if (isinstance(value, bool) or not isinstance(value, (int, float))
+                or (isinstance(value, float) and not math.isfinite(value)) or value < minimum):
             raise AllagmaError(f"Invalid budget {key}: {value!r}")
         if key == "max_attempts" and not isinstance(value, int):
             raise AllagmaError("max_attempts must be an integer")

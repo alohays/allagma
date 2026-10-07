@@ -19,7 +19,7 @@ import uuid
 from .bundles import bundle_path, resolve_entry, verify_lock, verify_study
 from .contracts import validate_record
 from .files import (AllagmaError, canonical, confined, digest, file_hash, read_json,
-                    reference, study_mutex, utcnow, verify_reference, write_bytes,
+                    reference, publication_reference, staged_directory, study_mutex, utcnow, verify_reference, write_bytes,
                     write_json, write_text)
 
 
@@ -93,41 +93,50 @@ def start_campaign(study, campaign):
         for role in ("runner", "evaluator", "analyzer", "writer"):
             if protocol[role] not in protocol["code"]:
                 raise AllagmaError(f"{role} must be included in the frozen code manifest")
-        directory.mkdir(parents=True)
-        write_json(directory / "lock.yaml", lock, immutable=True)
-        write_json(directory / "protocol.json", protocol, immutable=True)
-        write_json(directory / "brief.json", brief, immutable=True)
-        for path in protocol["code"]:
-            write_bytes(confined(directory, f"materials/{path}"), confined(study, path).read_bytes(), immutable=True)
-        effective = lock["effective_configuration"]
-        spec = {"schema_version": "0.2", "record_type": "StudySpec", "study_id": brief["study_id"],
-                **{key: brief[key] for key in ("question", "motivation", "success_criteria", "constraints", "output", "stop_rules")},
-                "resources": effective["budget"], "capabilities": lock["capabilities"],
-                "release": lock["release"], "bundle_id": lock["bundle_id"],
-                "lock": reference(study, directory / "lock.yaml"),
-                "profile_provenance": lock["profile_provenance"],
-                "effective_configuration": effective, "configuration_origins": lock["configuration_origins"],
-                "protocol_revision": protocol["revision"], "protocol": reference(study, directory / "protocol.json")}
-        record(directory / "study.json", spec)
-        code_refs = {key: reference(study, directory / "materials" / protocol[key], "text/x-python")
-                     for key in ("runner", "evaluator", "analyzer", "writer")}
-        write_json(directory / "code-manifest.json", {path: reference(study, directory / "materials" / path) for path in protocol["code"]}, immutable=True)
-        for run in plan:
-            rdir = directory / "runs" / run["id"]
-            write_json(rdir / "parameters.json", run["input"], immutable=True)
-            experiment = {"schema_version": "0.2", "record_type": "ExperimentSpec", "experiment_id": run["id"],
-                          "hypothesis": protocol["hypothesis"], "inputs": [reference(study, rdir / "parameters.json")],
-                          "runner": code_refs["runner"], "evaluator": code_refs["evaluator"],
-                          "seed_policy": {"seed": run["input"]["seed"], "split": run["split"], "disjoint_confirmation": True},
-                          "budget": effective["budget"], "expected_artifacts": ["raw.json", "evaluation.json"],
-                          "editable": ["fault injection for conformance, excluded from successful science"],
-                          "fixed": ["runner", "evaluator", "seed", "parameters", "protocol", "analysis"],
-                          "protocol_revision": protocol["revision"], "split": run["split"], "parameters": run["input"]}
-            record(rdir / "spec.json", experiment)
-        write_json(directory / "experiment-manifest.json",
-                   {run["id"]: reference(study, directory / "runs" / run["id"] / "spec.json") for run in plan}, immutable=True)
-        _state(directory)
-        return spec
+        with staged_directory(study, directory) as staging:
+            return _prepare_campaign(study, lock, protocol, brief, staging, directory)
+
+
+def _prepare_campaign(study, lock, protocol, brief, directory, target):
+    plan = protocol["runs"]
+
+    def ref(path, media_type=None):
+        return publication_reference(study, path, directory, target, media_type)
+
+    write_json(directory / "lock.yaml", lock, immutable=True)
+    write_json(directory / "protocol.json", protocol, immutable=True)
+    write_json(directory / "brief.json", brief, immutable=True)
+    for path in protocol["code"]:
+        write_bytes(confined(directory, f"materials/{path}"), confined(study, path).read_bytes(), immutable=True)
+    effective = lock["effective_configuration"]
+    spec = {"schema_version": "0.2", "record_type": "StudySpec", "study_id": brief["study_id"],
+            **{key: brief[key] for key in ("question", "motivation", "success_criteria", "constraints", "output", "stop_rules")},
+            "resources": effective["budget"], "capabilities": lock["capabilities"],
+            "release": lock["release"], "bundle_id": lock["bundle_id"],
+            "lock": ref(directory / "lock.yaml"),
+            "profile_provenance": lock["profile_provenance"],
+            "effective_configuration": effective, "configuration_origins": lock["configuration_origins"],
+            "protocol_revision": protocol["revision"], "protocol": ref(directory / "protocol.json")}
+    record(directory / "study.json", spec)
+    code_refs = {key: ref(directory / "materials" / protocol[key], "text/x-python")
+                 for key in ("runner", "evaluator", "analyzer", "writer")}
+    write_json(directory / "code-manifest.json", {path: ref(directory / "materials" / path) for path in protocol["code"]}, immutable=True)
+    for run in plan:
+        rdir = directory / "runs" / run["id"]
+        write_json(rdir / "parameters.json", run["input"], immutable=True)
+        experiment = {"schema_version": "0.2", "record_type": "ExperimentSpec", "experiment_id": run["id"],
+                      "hypothesis": protocol["hypothesis"], "inputs": [ref(rdir / "parameters.json")],
+                      "runner": code_refs["runner"], "evaluator": code_refs["evaluator"],
+                      "seed_policy": {"seed": run["input"]["seed"], "split": run["split"], "disjoint_confirmation": True},
+                      "budget": effective["budget"], "expected_artifacts": ["raw.json", "evaluation.json"],
+                      "editable": ["fault injection for conformance, excluded from successful science"],
+                      "fixed": ["runner", "evaluator", "seed", "parameters", "protocol", "analysis"],
+                      "protocol_revision": protocol["revision"], "split": run["split"], "parameters": run["input"]}
+        record(rdir / "spec.json", experiment)
+    write_json(directory / "experiment-manifest.json",
+               {run["id"]: ref(directory / "runs" / run["id"] / "spec.json") for run in plan}, immutable=True)
+    _state(directory)
+    return spec
 
 
 def _attempts(directory):
@@ -209,8 +218,9 @@ def _execute(command, cwd, stdout, stderr, timeout, *, interrupt=False):
            "timeout": timeout, "interrupt": interrupt, "result": str(result_path),
            "deadline_epoch": time.time() + timeout + 3}
     write_json(job_path, job, immutable=True)
-    process = subprocess.Popen([sys.executable, str(Path(__file__).with_name("worker.py")), str(job_path)],
-                               cwd=cwd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
+    with stdout.with_suffix(".worker-stdout.txt").open("xb") as worker_out, stdout.with_suffix(".worker-stderr.txt").open("xb") as worker_err:
+        process = subprocess.Popen([sys.executable, str(Path(__file__).with_name("worker.py")), str(job_path)],
+                                   cwd=cwd, stdout=worker_out, stderr=worker_err, start_new_session=True)
     try:
         process.wait(timeout=timeout + 3)
     except subprocess.TimeoutExpired:
@@ -233,6 +243,9 @@ def run_campaign(study, campaign, *, fault=None, stop_after=None, crash_after_st
         _recover_attempts(study, directory)
         previous_state = read_json(directory / "state.json")
         budget = lock["effective_configuration"]["budget"]
+        unset = [key for key in ("max_attempts", "max_seconds", "money_usd") if budget[key] == "unset"]
+        if unset:
+            return _stop(directory, "blocked", "Execution requires explicit resource ceilings: " + ", ".join(unset) + ". Set the study budget and start a new frozen campaign.")
         completed_this_call = 0
         for run in protocol["runs"]:
             rdir = directory / "runs" / run["id"]
@@ -266,30 +279,31 @@ def run_campaign(study, campaign, *, fault=None, stop_after=None, crash_after_st
                 if len(pilots) != expected_pilots:
                     return _stop(directory, "failed", "Known-answer pilot qualification is incomplete.")
             phase = "pilot" if run["split"] == "pilot" else "campaign"
-            _state(directory, phase=phase, status="running")
+            _state(directory, phase=phase, status="running", assurance="unreviewed")
             number = len(prior) + 1
             attempt_id = f"{run['id']}-a{number:03d}"
             adir = rdir / "attempts" / f"{number:03d}"
-            adir.mkdir(parents=True, exist_ok=False)
             inputs = deepcopy(run["input"])
             mode = fault["mode"] if fault and fault["run_id"] == run["id"] else None
             if mode:
                 inputs["fault"] = mode
-            write_json(adir / "input.json", inputs, immutable=True)
             runner = verify_reference(study, spec["runner"])
             evaluator = verify_reference(study, spec["evaluator"])
             command = [sys.executable, str(runner), str(adir / "input.json"), str(adir / "raw.json")]
             started = {"schema_version": "0.2", "record_type": "RunRecord", "run_id": run["id"],
                        "attempt_id": attempt_id, "attempt_number": number, "campaign_id": campaign,
                        "experiment_id": run["id"], "started_at": utcnow(), "ended_at": None,
-                       "inputs": [reference(study, adir / "input.json"), reference(study, rdir / "spec.json"), spec["runner"], spec["evaluator"]],
+                       "inputs": [reference(study, rdir / "spec.json"), spec["runner"], spec["evaluator"]],
                        "outputs": [], "environment": {"python": platform.python_version(), "platform": platform.platform(), "executable": sys.executable,
                                                          "isolation": "local process; not an OS security sandbox"},
                        "model_revision": None, "data_revision": digest(run["input"]),
                        "usage": {"wall_seconds": 0.0, "money_usd": 0.0, "tokens": 0},
                        "status": "running", "error": None, "protocol_revision": protocol["revision"],
                        "bundle_id": lock["bundle_id"], "split": run["split"], "command": command, "exit_code": None}
-            record(adir / "started.json", started)
+            with staged_directory(study, adir) as staging:
+                write_json(staging / "input.json", inputs, immutable=True)
+                started["inputs"].insert(0, publication_reference(study, staging / "input.json", staging, adir))
+                record(staging / "started.json", started)
             if crash_after_start:
                 # Test-only deterministic controller crash before a child is launched.
                 os._exit(86)
@@ -339,15 +353,17 @@ def run_campaign(study, campaign, *, fault=None, stop_after=None, crash_after_st
         return _state(directory, phase="analysis", status="ready", reason="Declared run plan complete")
 
 
-def _run_helper(command, cwd, timeout=30):
-    try:
-        process = subprocess.run(command, cwd=cwd, text=True, capture_output=True, timeout=timeout,
-                                 env={**os.environ, "PYTHONDONTWRITEBYTECODE": "1"})
-    except subprocess.TimeoutExpired as exc:
-        raise AllagmaError(f"Study helper exceeded {timeout}s") from exc
-    if process.returncode:
-        raise AllagmaError(f"Study helper failed ({process.returncode}): {process.stderr[-2000:]}")
-    return {"command": command, "exit_code": process.returncode, "stdout": process.stdout, "stderr": process.stderr}
+def _run_helper(command, cwd, timeout=30, *, check=True):
+    with tempfile.TemporaryDirectory(prefix="allagma-helper-") as temp:
+        output = Path(temp)
+        code, stop = _execute(command, cwd, output / "stdout.txt", output / "stderr.txt", timeout)
+        stdout = (output / "stdout.txt").read_text()
+        stderr = (output / "stderr.txt").read_text()
+        if check and stop:
+            raise AllagmaError(f"Study helper exceeded {timeout}s or was interrupted: {stop}")
+        if check and code:
+            raise AllagmaError(f"Study helper failed ({code}): {stderr[-2000:]}")
+        return {"command": command, "exit_code": code, "stdout": stdout, "stderr": stderr, "stop": stop}
 
 
 def analyze_campaign(study, campaign, *, analysis_id="a001", allow_partial=False):
@@ -355,6 +371,7 @@ def analyze_campaign(study, campaign, *, analysis_id="a001", allow_partial=False
     with study_mutex(study):
         directory, lock, protocol = _load(study, campaign)
         _check_materials(study, directory)
+        _recover_attempts(study, directory)
         attempts = _attempts(directory)
         successes = {item["run_id"]: item for item in attempts if item["status"] == "succeeded"}
         if len(successes) != len(protocol["runs"]) and not allow_partial:
@@ -402,7 +419,7 @@ def analyze_campaign(study, campaign, *, analysis_id="a001", allow_partial=False
         for claim in claims:
             validate_record(claim)
         write_json(directory / "latest-analysis.json", {"id": analysis_id})
-        _state(directory, phase="audit", status="ready")
+        _state(directory, phase="audit", status="ready", assurance="unreviewed")
         return analysis
 
 
@@ -438,6 +455,7 @@ def audit_campaign(study, campaign, *, analysis_id=None):
     study = Path(study).resolve()
     with study_mutex(study):
         directory, lock, protocol = _load(study, campaign)
+        _recover_attempts(study, directory)
         analysis_id = analysis_id or read_json(directory / "latest-analysis.json")["id"]
         adir = confined(directory, f"analyses/{analysis_id}")
         analysis = read_json(adir / "record.json")
@@ -471,7 +489,10 @@ def audit_campaign(study, campaign, *, analysis_id=None):
                         raise AllagmaError(f"Manuscript/claim reproduction differs: {name}")
         except AllagmaError as exc:
             findings.append(str(exc))
-        review_id = f"review-{len(list((adir / 'reviews').glob('*/record.json'))) + 1:03d}"
+        number = 1
+        while (adir / "reviews" / f"review-{number:03d}").exists():
+            number += 1
+        review_id = f"review-{number:03d}"
         rdir = adir / "reviews" / review_id
         material = reference(study, adir / "paper/manuscript.md", "text/markdown")
         payload = {"study": str(study), "material": material, "claims": claims}

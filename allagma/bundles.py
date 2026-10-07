@@ -73,6 +73,7 @@ def seal_lock(lock):
 def build_bundle(source, study, intent, destination, *, _local_prepared=False):
     """Export closure and helpers; no symlinks or dependency on the source checkout."""
     source, destination = Path(source).resolve(), Path(destination)
+    initial_source = source_inventory(source)
     if intent.get("local_modules") and not _local_prepared:
         # An explicit local variant enters the same catalog/contract checks. The
         # virtual source is temporary; every required byte travels in the bundle.
@@ -101,8 +102,10 @@ def build_bundle(source, study, intent, destination, *, _local_prepared=False):
                 lineage.append({**variant, "base_source_revision": source_revision(source)})
             write_json(virtual / "registry.json", registry)
             lock = build_bundle(virtual, study, intent, destination, _local_prepared=True)
+            if source_inventory(source) != initial_source:
+                raise AllagmaError("Source changed during local bundle export; retry from a stable source revision")
             lock["local_modules"] = lineage
-            lock["upstream_source_revision"] = source_revision(source)
+            lock["upstream_source_revision"] = "sha256:" + digest(initial_source)
             lock["configuration_inputs"].update(local_inputs)
             return seal_lock(lock)
     catalog = Catalog(source)
@@ -114,20 +117,23 @@ def build_bundle(source, study, intent, destination, *, _local_prepared=False):
     destination.mkdir(parents=True, exist_ok=False)
     for name in sorted(paths):
         write_bytes(confined(destination, name), confined(source, name).read_bytes(), immutable=True)
-    registry = {"schema_version": "0.2", "modules": {key: catalog.registry["modules"][key] for key in composition["modules"]}}
+    registry = {"schema_version": "0.2", "modules": {key: catalog.registry["modules"][key] for key in composition["modules"]},
+                "composition": {"recipe": composition["recipe"], "roles": composition["roles"]}}
     write_json(destination / "registry.json", registry, immutable=True)
     write_text(destination / "CATALOG.md", "# Locked Allagma catalog\n\n" + "\n".join(
         f"- `{key}`: [{catalog.module(key)['entry']}]({registry['modules'][key]}/{catalog.module(key)['entry']})"
         for key in composition["modules"]) + "\n", immutable=True)
     files = inventory(destination)
-    revision = source_revision(source)
+    if source_inventory(source) != initial_source:
+        raise AllagmaError("Source changed during bundle export; retry from a stable source revision")
+    revision = "sha256:" + digest(initial_source)
     bundle_id = "b-" + digest({"files": files, "source": revision})[:24]
     lock = {"schema_version": "0.2", "release": catalog.release["release"],
             "release_tag": catalog.release["release_tag"], "publication": catalog.release["publication"],
             "source_revision": revision, "bundle_id": bundle_id, "files": files,
             "recipe": composition["recipe"], "roles": composition["roles"],
             "modules": {key: {"path": registry["modules"][key],
-                              "revision": "sha256:" + digest(inventory(catalog.directory(key))),
+                              "revision": "sha256:" + digest(inventory(destination / registry["modules"][key])),
                               "dependencies": catalog.module(key)["dependencies"]}
                         for key in composition["modules"]},
             "contracts": catalog.release["contracts"], "hosts": intent["hosts"],
@@ -167,7 +173,10 @@ def verify_lock(study, lock, *, directory=None):
     release = read_json(root / "release.json")
     if any(lock[key] != release[key] for key in ("release", "release_tag", "contracts", "publication")):
         raise AllagmaError("Lock release identity disagrees with the bundled release manifest")
-    registry = read_json(root / "registry.json")["modules"]
+    bundled_catalog = read_json(root / "registry.json")
+    if "composition" in bundled_catalog and bundled_catalog["composition"] != {"recipe": lock["recipe"], "roles": lock["roles"]}:
+        raise AllagmaError("Lock composition disagrees with the bundled catalog")
+    registry = bundled_catalog["modules"]
     if set(registry) != set(lock["modules"]):
         raise AllagmaError("Lock module selection disagrees with the bundled catalog")
     for key, module in lock["modules"].items():
@@ -411,6 +420,9 @@ def validate_update(study, update_id):
 
 
 def _boundary(study):
+    if any(not (path.parent / "record.json").exists()
+           for path in (Path(study) / "campaigns").glob("*/runs/*/attempts/*/started.json")):
+        raise AllagmaError("Adopt at a campaign boundary: recover unfinished attempts with campaign run first")
     for path in (Path(study) / "campaigns").glob("*/state.json"):
         if read_json(path)["execution_status"] == "running":
             raise AllagmaError("Adopt at a campaign boundary: an execution is still marked running")
@@ -428,7 +440,8 @@ def _commit_active(study, lock, intent, record_id, *, fault=None, restored_input
     for name in owner["files"].keys() - new_owner["files"].keys():
         updates[name] = None
     preimages = {name: confined(study, name).read_text() if confined(study, name).exists() else None for name in updates}
-    journal = {"id": record_id, "preimages": preimages, "target": lock["lock_id"]}
+    journal = {"id": record_id, "preimages": preimages, "target": lock["lock_id"],
+               "postimages": {name: value.decode() if value is not None else None for name, value in updates.items()}}
     write_json(study / ".allagma/transaction.json", journal, immutable=True)
     for i, (name, value) in enumerate(updates.items()):
         if name == ".allagma/lock.yaml":
@@ -471,6 +484,15 @@ def recover_update(study):
         if not path.exists():
             return {"recovered": False}
         transaction = read_json(path)
+        if "postimages" not in transaction:
+            raise AllagmaError("Legacy update journal has no postimages; reconcile it with its pinned recovery helper")
+        # Check every path before restoring any of them. Recovery must not erase
+        # new work made by a user after the interrupted operation.
+        for name, before in transaction["preimages"].items():
+            target = confined(study, name)
+            current = target.read_text() if target.exists() else None
+            if current not in (before, transaction["postimages"][name]):
+                raise AllagmaError(f"Post-interruption edit requires reconciliation: {name}")
         for name, content in transaction["preimages"].items():
             if content is None:
                 confined(study, name).unlink(missing_ok=True)

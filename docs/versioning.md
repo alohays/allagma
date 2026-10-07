@@ -67,7 +67,9 @@ the active lock last. An interrupted transaction blocks active use until:
 python3 -m allagma update recover --study work/my-study
 ```
 
-Recovery restores the preimage. Earlier campaign snapshots remain usable.
+Recovery checks preimages and expected postimages before restoring any file.
+Edits made after the interruption block recovery for reconciliation. Earlier
+campaign snapshots remain usable.
 Reconcile and validate a fresh plan if intent has changed.
 
 ## Rollback and scaffold migration

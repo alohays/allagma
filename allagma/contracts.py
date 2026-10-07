@@ -95,7 +95,9 @@ def validate(value, schema, path="$", *, root=None):
             raise AllagmaError(f"{path}: invalid string format")
         if schema.get("format") == "date-time":
             try:
-                parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+                if not re.fullmatch(r"\d{4}-\d{2}-\d{2}[Tt]\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:[Zz]|[+-](?:[01]\d|2[0-3]):[0-5]\d)", value):
+                    raise ValueError("expected RFC 3339 timestamp")
+                parsed = datetime.fromisoformat(value.upper().replace("Z", "+00:00"))
                 if parsed.tzinfo is None:
                     raise ValueError("timezone missing")
             except ValueError as exc:

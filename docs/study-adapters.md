@@ -12,6 +12,12 @@ with an explicit integer seed. The declared `code` list includes every local
 program, import, source document and configuration file needed by the study.
 At campaign creation those files are copied under `materials/` and hashed.
 
+Set explicit ceilings before executing a campaign. For example, an override
+file can contain `{"budget":{"max_attempts":28,"max_seconds":60,
+"money_usd":0,"per_attempt_seconds":5}}`. Adopt the settings through the update
+commands before starting the campaign. An unset attempt, time or monetary
+ceiling blocks execution; an existing campaign keeps its original budget.
+
 | Program | Command arguments after the Python script | Output |
 | --- | --- | --- |
 | Runner | `INPUT_JSON RAW_JSON` | Exact raw observations in the supplied new file |

@@ -11,6 +11,7 @@ from .files import AllagmaError, file_hash, read_json, reference, write_json, wr
 
 
 def qualify_examples(root, roles, output, *, reference_root=None):
+    from .campaigns import _run_helper
     root, output = Path(root).resolve(), Path(output).resolve()
     output.mkdir(parents=True, exist_ok=False)
     reference_root = Path(reference_root).resolve() if reference_root else output
@@ -20,9 +21,7 @@ def qualify_examples(root, roles, output, *, reference_root=None):
     case = read_json(context / "example.json")
     write_json(output / "context-input.json", case, immutable=True)
     command = [sys.executable, str(context / "select.py"), str(output / "context-input.json"), str(output / "context.json")]
-    executed = subprocess.run(command, capture_output=True, text=True, timeout=15)
-    if executed.returncode:
-        raise AllagmaError(f"Context example failed: {executed.stderr[-1000:]}")
+    _run_helper(command, output, timeout=15)
     produced = validate_record(read_json(output / "context.json"), root)
     if produced["method_id"] != roles["context"] or not all(produced["content"].get(key) == case["records"][key] for key in case["required"]):
         raise AllagmaError("Context example lost a required field or producer identity")
@@ -37,13 +36,13 @@ def qualify_examples(root, roles, output, *, reference_root=None):
     payload = {"study": str(output), "material": reference(output, output / "material.md"), "claims": [claim]}
     write_json(output / "review-input.json", payload, immutable=True)
     reviewer = catalog.directory(roles["reviewer"]) / "review.py"
-    executed = subprocess.run([sys.executable, str(reviewer), str(output / "review-input.json"), str(output / "review.json")], capture_output=True, text=True, timeout=15)
-    if executed.returncode or read_json(output / "review.json").get("verdict") != "pass":
+    _run_helper([sys.executable, str(reviewer), str(output / "review-input.json"), str(output / "review.json")], output, timeout=15)
+    if read_json(output / "review.json").get("verdict") != "pass":
         raise AllagmaError("Reviewer failed the valid-evidence handoff")
     payload["claims"][0]["supporting"][0]["sha256"] = "0" * 64
     write_json(output / "stale-review-input.json", payload, immutable=True)
-    executed = subprocess.run([sys.executable, str(reviewer), str(output / "stale-review-input.json"), str(output / "stale-review.json")], capture_output=True, text=True, timeout=15)
-    if executed.returncode or read_json(output / "stale-review.json").get("verdict") not in ("revise", "blocked"):
+    _run_helper([sys.executable, str(reviewer), str(output / "stale-review-input.json"), str(output / "stale-review.json")], output, timeout=15)
+    if read_json(output / "stale-review.json").get("verdict") not in ("revise", "blocked"):
         raise AllagmaError("Reviewer accepted stale evidence")
     results.append({"module": roles["reviewer"], "status": "pass", "coverage": "Valid evidence accepted; stale digest rejected",
                     "helper_sha256": file_hash(reviewer), "output": reference(reference_root, output / "review.json"),

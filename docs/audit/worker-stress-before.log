@@ -1,0 +1,81 @@
+test_worker_enforces_deadline_after_controller_is_killed (conformance.test_worker.Worker.test_worker_enforces_deadline_after_controller_is_killed) ... FAIL
+test_worker_enforces_deadline_after_controller_is_killed (conformance.test_worker.Worker.test_worker_enforces_deadline_after_controller_is_killed) ... FAIL
+test_worker_enforces_deadline_after_controller_is_killed (conformance.test_worker.Worker.test_worker_enforces_deadline_after_controller_is_killed) ... ok
+test_worker_enforces_deadline_after_controller_is_killed (conformance.test_worker.Worker.test_worker_enforces_deadline_after_controller_is_killed) ... ok
+test_worker_enforces_deadline_after_controller_is_killed (conformance.test_worker.Worker.test_worker_enforces_deadline_after_controller_is_killed) ... ok
+test_worker_enforces_deadline_after_controller_is_killed (conformance.test_worker.Worker.test_worker_enforces_deadline_after_controller_is_killed) ... ok
+test_worker_enforces_deadline_after_controller_is_killed (conformance.test_worker.Worker.test_worker_enforces_deadline_after_controller_is_killed) ... ok
+test_worker_enforces_deadline_after_controller_is_killed (conformance.test_worker.Worker.test_worker_enforces_deadline_after_controller_is_killed) ... FAIL
+test_worker_enforces_deadline_after_controller_is_killed (conformance.test_worker.Worker.test_worker_enforces_deadline_after_controller_is_killed) ... ok
+test_worker_enforces_deadline_after_controller_is_killed (conformance.test_worker.Worker.test_worker_enforces_deadline_after_controller_is_killed) ... ok
+test_worker_enforces_deadline_after_controller_is_killed (conformance.test_worker.Worker.test_worker_enforces_deadline_after_controller_is_killed) ... FAIL
+test_worker_enforces_deadline_after_controller_is_killed (conformance.test_worker.Worker.test_worker_enforces_deadline_after_controller_is_killed) ... FAIL
+test_worker_enforces_deadline_after_controller_is_killed (conformance.test_worker.Worker.test_worker_enforces_deadline_after_controller_is_killed) ... FAIL
+test_worker_enforces_deadline_after_controller_is_killed (conformance.test_worker.Worker.test_worker_enforces_deadline_after_controller_is_killed) ... ok
+test_worker_enforces_deadline_after_controller_is_killed (conformance.test_worker.Worker.test_worker_enforces_deadline_after_controller_is_killed) ... ok
+test_worker_enforces_deadline_after_controller_is_killed (conformance.test_worker.Worker.test_worker_enforces_deadline_after_controller_is_killed) ... ok
+test_worker_enforces_deadline_after_controller_is_killed (conformance.test_worker.Worker.test_worker_enforces_deadline_after_controller_is_killed) ... ok
+test_worker_enforces_deadline_after_controller_is_killed (conformance.test_worker.Worker.test_worker_enforces_deadline_after_controller_is_killed) ... ok
+test_worker_enforces_deadline_after_controller_is_killed (conformance.test_worker.Worker.test_worker_enforces_deadline_after_controller_is_killed) ... FAIL
+test_worker_enforces_deadline_after_controller_is_killed (conformance.test_worker.Worker.test_worker_enforces_deadline_after_controller_is_killed) ... ok
+
+======================================================================
+FAIL: test_worker_enforces_deadline_after_controller_is_killed (conformance.test_worker.Worker.test_worker_enforces_deadline_after_controller_is_killed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_worker.py", line 33, in test_worker_enforces_deadline_after_controller_is_killed
+    self.assertTrue(result.exists(), "Worker did not finish independently of the controller")
+AssertionError: False is not true : Worker did not finish independently of the controller
+
+======================================================================
+FAIL: test_worker_enforces_deadline_after_controller_is_killed (conformance.test_worker.Worker.test_worker_enforces_deadline_after_controller_is_killed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_worker.py", line 33, in test_worker_enforces_deadline_after_controller_is_killed
+    self.assertTrue(result.exists(), "Worker did not finish independently of the controller")
+AssertionError: False is not true : Worker did not finish independently of the controller
+
+======================================================================
+FAIL: test_worker_enforces_deadline_after_controller_is_killed (conformance.test_worker.Worker.test_worker_enforces_deadline_after_controller_is_killed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_worker.py", line 33, in test_worker_enforces_deadline_after_controller_is_killed
+    self.assertTrue(result.exists(), "Worker did not finish independently of the controller")
+AssertionError: False is not true : Worker did not finish independently of the controller
+
+======================================================================
+FAIL: test_worker_enforces_deadline_after_controller_is_killed (conformance.test_worker.Worker.test_worker_enforces_deadline_after_controller_is_killed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_worker.py", line 33, in test_worker_enforces_deadline_after_controller_is_killed
+    self.assertTrue(result.exists(), "Worker did not finish independently of the controller")
+AssertionError: False is not true : Worker did not finish independently of the controller
+
+======================================================================
+FAIL: test_worker_enforces_deadline_after_controller_is_killed (conformance.test_worker.Worker.test_worker_enforces_deadline_after_controller_is_killed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_worker.py", line 33, in test_worker_enforces_deadline_after_controller_is_killed
+    self.assertTrue(result.exists(), "Worker did not finish independently of the controller")
+AssertionError: False is not true : Worker did not finish independently of the controller
+
+======================================================================
+FAIL: test_worker_enforces_deadline_after_controller_is_killed (conformance.test_worker.Worker.test_worker_enforces_deadline_after_controller_is_killed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_worker.py", line 33, in test_worker_enforces_deadline_after_controller_is_killed
+    self.assertTrue(result.exists(), "Worker did not finish independently of the controller")
+AssertionError: False is not true : Worker did not finish independently of the controller
+
+======================================================================
+FAIL: test_worker_enforces_deadline_after_controller_is_killed (conformance.test_worker.Worker.test_worker_enforces_deadline_after_controller_is_killed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_worker.py", line 33, in test_worker_enforces_deadline_after_controller_is_killed
+    self.assertTrue(result.exists(), "Worker did not finish independently of the controller")
+AssertionError: False is not true : Worker did not finish independently of the controller
+
+----------------------------------------------------------------------
+Ran 20 tests in 36.292s
+
+FAILED (failures=7)

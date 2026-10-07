@@ -1,0 +1,62 @@
+test_export_rejects_source_changes_during_copy (conformance.test_audit.Audit.test_export_rejects_source_changes_during_copy) ... FAIL
+test_partial_analysis_recovers_interrupted_attempt_before_manifest (conformance.test_audit.Audit.test_partial_analysis_recovers_interrupted_attempt_before_manifest) ... FAIL
+test_new_analysis_does_not_inherit_review_assurance (conformance.test_audit.Audit.test_new_analysis_does_not_inherit_review_assurance) ... FAIL
+test_review_retry_preserves_incomplete_review_directory (conformance.test_audit.Audit.test_review_retry_preserves_incomplete_review_directory) ... ERROR
+
+======================================================================
+ERROR: test_review_retry_preserves_incomplete_review_directory (conformance.test_audit.Audit.test_review_retry_preserves_incomplete_review_directory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/allagma/files.py", line 94, in write_bytes
+    with path.open("xb") as stream:
+         ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileExistsError: [Errno 17] File exists: '/private/var/folders/41/bgxhqvj96qdbb67hzcfgxdy40000gn/T/allagma-conformance-_cb7y7vn/study/campaigns/partial/analyses/a001/reviews/review-001/input.json'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_audit.py", line 160, in test_review_retry_preserves_incomplete_review_directory
+    result = c.audit_campaign(study, "partial")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/iyunseong/maangeek/allagma/allagma/campaigns.py", line 493, in audit_campaign
+    write_json(rdir / "input.json", payload, immutable=True)
+  File "/Users/iyunseong/maangeek/allagma/allagma/files.py", line 115, in write_json
+    write_bytes(path, canonical(value), immutable=immutable)
+  File "/Users/iyunseong/maangeek/allagma/allagma/files.py", line 100, in write_bytes
+    raise AllagmaError(f"Immutable artifact already exists: {path}") from exc
+allagma.files.AllagmaError: Immutable artifact already exists: /private/var/folders/41/bgxhqvj96qdbb67hzcfgxdy40000gn/T/allagma-conformance-_cb7y7vn/study/campaigns/partial/analyses/a001/reviews/review-001/input.json
+
+======================================================================
+FAIL: test_export_rejects_source_changes_during_copy (conformance.test_audit.Audit.test_export_rejects_source_changes_during_copy)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_audit.py", line 127, in test_export_rejects_source_changes_during_copy
+    with patch.object(b, "write_bytes", side_effect=mutate), self.assertRaises(AllagmaError):
+AssertionError: AllagmaError not raised
+
+======================================================================
+FAIL: test_partial_analysis_recovers_interrupted_attempt_before_manifest (conformance.test_audit.Audit.test_partial_analysis_recovers_interrupted_attempt_before_manifest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_audit.py", line 140, in test_partial_analysis_recovers_interrupted_attempt_before_manifest
+    self.assertEqual(len(manifest["runs"]), 5)
+AssertionError: 4 != 5
+
+======================================================================
+FAIL: test_new_analysis_does_not_inherit_review_assurance (conformance.test_audit.Audit.test_new_analysis_does_not_inherit_review_assurance)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_audit.py", line 151, in test_new_analysis_does_not_inherit_review_assurance
+    self.assertEqual(state["assurance"], "unreviewed")
+AssertionError: 'deterministic' != 'unreviewed'
+- deterministic
++ unreviewed
+
+
+----------------------------------------------------------------------
+Ran 4 tests in 3.777s
+
+FAILED (failures=3, errors=1)

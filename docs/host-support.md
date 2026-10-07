@@ -9,7 +9,7 @@ loading method text. Existing root instructions and user skills are preserved.
 These paths follow [OpenAI's Build skills documentation](https://learn.chatgpt.com/docs/build-skills)
 and [Claude Code's skills documentation](https://code.claude.com/docs/en/skills).
 Shared frontmatter follows the [Agent Skills specification](https://agentskills.io/specification).
-The sources were checked on 6 October 2026. No provider-specific frontmatter,
+The sources were rechecked during the self-audit on 7 October 2026. No provider-specific frontmatter,
 hooks, subagents, tool allowlists or model overrides are required by the default
 recipe. Optional metadata can be added in a host adapter when actually needed.
 

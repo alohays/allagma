@@ -88,14 +88,20 @@ class Catalog:
 
     def _check_recipe(self, module):
         recipe = read_json(self.directory(module["id"]) / "recipe.json")
+        composition = self.registry.get("composition", {})
+        bound_roles = composition.get("roles", {}) if composition.get("recipe") == module["id"] else {}
+        roles = {**recipe["roles"], **bound_roles}
         phases = recipe["steps"]
         available = {"StudySpec"}
         if not recipe["stop_rules"] or not phases:
             raise AllagmaError("Recipes need steps and stopping rules")
+        repetitions = recipe.get("analysis_repetitions", 1)
+        if isinstance(repetitions, bool) or not isinstance(repetitions, int) or repetitions < 1:
+            raise AllagmaError("Analysis repetitions must be a positive integer; reproduction cannot be omitted")
         for step in phases:
-            method_id = recipe["roles"].get(step["method"].removeprefix("$"), step["method"])
+            method_id = roles.get(step["method"].removeprefix("$"), step["method"])
             method = self.module(method_id)
-            if method_id not in {*module["dependencies"], *recipe["roles"].values()}:
+            if method_id not in {*module["dependencies"], *roles.values()}:
                 raise AllagmaError(f"{module['id']}: undeclared method dependency {method_id}")
             if set(step["consumes"]) != set(method["inputs"]):
                 raise AllagmaError(f"{module['id']}: input contract disagrees with {method_id}")
@@ -105,8 +111,14 @@ class Catalog:
             if not set(step["produces"]) <= set(method["outputs"]):
                 raise AllagmaError(f"{module['id']}: step outputs disagree with {method_id}")
             available.update(step["produces"])
+        if not set(module["outputs"]) <= available:
+            raise AllagmaError(f"{module['id']}: declared recipe outputs are never produced")
         if module["lifecycle"] == "stable":
-            for selected in [*recipe["roles"].values(), *module["dependencies"]]:
+            # A bound bundle records an explicitly selected composition, which
+            # may opt into experimental replacements. Public defaults remain
+            # subject to the stable-only rule in the source catalog.
+            defaults = [] if bound_roles else list(recipe["roles"].values())
+            for selected in [*defaults, *module["dependencies"]]:
                 if self.module(selected)["lifecycle"] != "stable":
                     raise AllagmaError(f"Stable recipe selects non-stable module: {selected}")
 
@@ -142,7 +154,7 @@ class Catalog:
             visiting.remove(key)
             selected.add(key)
 
-        for key in [recipe_id, "profile/default", "policy/local", *recipe["roles"].values(), *roles.values(), *(f"host/{host}" for host in intent["hosts"])]:
+        for key in [recipe_id, "profile/default", "policy/local", *roles.values(), *(f"host/{host}" for host in intent["hosts"])]:
             visit(key)
         required = sorted({cap for key in selected for cap in self.module(key)["requires"]})
         missing = set(required) - set(intent["capabilities"])

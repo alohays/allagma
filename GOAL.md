@@ -14,6 +14,14 @@ Commit the work in appropriate, coherent Git increments as progress is made.
 Once all tasks and acceptance checks are complete, push the completed work to
 the Git remote named `origin`.
 
+## Follow-up goal — 7 October 2026
+
+Perform a thorough self-audit of the delivered implementation against the
+original specifications. Independently inspect requirement coverage, reproduce
+defects beyond the original tests, correct confirmed problems, retain the
+before/after evidence, and qualify the resulting source again. The commit-and-
+push instruction above also applies to this follow-up.
+
 ## Tracking and completion
 
 See [implementation status](docs/implementation-status.md) for the acceptance

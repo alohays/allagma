@@ -1,0 +1,150 @@
+test_configuration_matches_budget_schema (conformance.test_audit.Audit.test_configuration_matches_budget_schema) ... 
+  test_configuration_matches_budget_schema (conformance.test_audit.Audit.test_configuration_matches_budget_schema) (value=0.005) ... FAIL
+  test_configuration_matches_budget_schema (conformance.test_audit.Audit.test_configuration_matches_budget_schema) (value=inf) ... FAIL
+  test_configuration_matches_budget_schema (conformance.test_audit.Audit.test_configuration_matches_budget_schema) (value=nan) ... FAIL
+test_failed_campaign_creation_does_not_publish_partial_campaign (conformance.test_audit.Audit.test_failed_campaign_creation_does_not_publish_partial_campaign) ... FAIL
+test_helper_timeout_cleans_descendants (conformance.test_audit.Audit.test_helper_timeout_cleans_descendants) ... FAIL
+test_interrupted_attempt_preparation_can_resume (conformance.test_audit.Audit.test_interrupted_attempt_preparation_can_resume) ... ERROR
+test_json_exponent_overflow_is_rejected (conformance.test_audit.Audit.test_json_exponent_overflow_is_rejected) ... FAIL
+test_recovery_preserves_post_interruption_user_edits (conformance.test_audit.Audit.test_recovery_preserves_post_interruption_user_edits) ... FAIL
+test_reference_rejects_symlink_alias (conformance.test_audit.Audit.test_reference_rejects_symlink_alias) ... FAIL
+test_replacement_does_not_resolve_unused_default (conformance.test_audit.Audit.test_replacement_does_not_resolve_unused_default) ... FAIL
+test_timestamp_requires_rfc3339_time_and_zone (conformance.test_audit.Audit.test_timestamp_requires_rfc3339_time_and_zone) ... 
+  test_timestamp_requires_rfc3339_time_and_zone (conformance.test_audit.Audit.test_timestamp_requires_rfc3339_time_and_zone) (value='2026-10-07 12:00:00+00:00') ... FAIL
+  test_timestamp_requires_rfc3339_time_and_zone (conformance.test_audit.Audit.test_timestamp_requires_rfc3339_time_and_zone) (value='2026-10-07T12:00+00:00') ... FAIL
+  test_timestamp_requires_rfc3339_time_and_zone (conformance.test_audit.Audit.test_timestamp_requires_rfc3339_time_and_zone) (value='2026-W41-3T12:00:00+00:00') ... FAIL
+test_unset_resources_do_not_authorize_execution (conformance.test_audit.Audit.test_unset_resources_do_not_authorize_execution) ... FAIL
+test_worker_cleans_descendants_after_leader_exits (conformance.test_audit.Audit.test_worker_cleans_descendants_after_leader_exits) ... FAIL
+
+======================================================================
+ERROR: test_interrupted_attempt_preparation_can_resume (conformance.test_audit.Audit.test_interrupted_attempt_preparation_can_resume)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_audit.py", line 77, in test_interrupted_attempt_preparation_can_resume
+    result = c.run_campaign(study, "prepare", stop_after=1)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/iyunseong/maangeek/allagma/allagma/campaigns.py", line 273, in run_campaign
+    adir.mkdir(parents=True, exist_ok=False)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+FileExistsError: [Errno 17] File exists: '/private/var/folders/41/bgxhqvj96qdbb67hzcfgxdy40000gn/T/allagma-conformance-9ix1o_z_/study/campaigns/prepare/runs/pilot-zero/attempts/001'
+
+======================================================================
+FAIL: test_configuration_matches_budget_schema (conformance.test_audit.Audit.test_configuration_matches_budget_schema) (value=0.005)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_audit.py", line 42, in test_configuration_matches_budget_schema
+    with self.subTest(value=value), self.assertRaises(AllagmaError):
+AssertionError: AllagmaError not raised
+
+======================================================================
+FAIL: test_configuration_matches_budget_schema (conformance.test_audit.Audit.test_configuration_matches_budget_schema) (value=inf)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_audit.py", line 42, in test_configuration_matches_budget_schema
+    with self.subTest(value=value), self.assertRaises(AllagmaError):
+AssertionError: AllagmaError not raised
+
+======================================================================
+FAIL: test_configuration_matches_budget_schema (conformance.test_audit.Audit.test_configuration_matches_budget_schema) (value=nan)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_audit.py", line 42, in test_configuration_matches_budget_schema
+    with self.subTest(value=value), self.assertRaises(AllagmaError):
+AssertionError: AllagmaError not raised
+
+======================================================================
+FAIL: test_failed_campaign_creation_does_not_publish_partial_campaign (conformance.test_audit.Audit.test_failed_campaign_creation_does_not_publish_partial_campaign)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_audit.py", line 60, in test_failed_campaign_creation_does_not_publish_partial_campaign
+    self.assertFalse((study / "campaigns/invalid").exists())
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_helper_timeout_cleans_descendants (conformance.test_audit.Audit.test_helper_timeout_cleans_descendants)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_audit.py", line 130, in test_helper_timeout_cleans_descendants
+    self.assertFalse((self.work / "late").exists(), "Helper timeout left a descendant running")
+AssertionError: True is not false : Helper timeout left a descendant running
+
+======================================================================
+FAIL: test_json_exponent_overflow_is_rejected (conformance.test_audit.Audit.test_json_exponent_overflow_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_audit.py", line 24, in test_json_exponent_overflow_is_rejected
+    with self.assertRaises(AllagmaError):
+AssertionError: AllagmaError not raised
+
+======================================================================
+FAIL: test_recovery_preserves_post_interruption_user_edits (conformance.test_audit.Audit.test_recovery_preserves_post_interruption_user_edits)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_audit.py", line 91, in test_recovery_preserves_post_interruption_user_edits
+    with self.assertRaises(AllagmaError):
+AssertionError: AllagmaError not raised
+
+======================================================================
+FAIL: test_reference_rejects_symlink_alias (conformance.test_audit.Audit.test_reference_rejects_symlink_alias)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_audit.py", line 37, in test_reference_rejects_symlink_alias
+    with self.assertRaises(AllagmaError):
+AssertionError: AllagmaError not raised
+
+======================================================================
+FAIL: test_replacement_does_not_resolve_unused_default (conformance.test_audit.Audit.test_replacement_does_not_resolve_unused_default)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_audit.py", line 101, in test_replacement_does_not_resolve_unused_default
+    self.assertNotIn("context/active-brief", modules)
+AssertionError: 'context/active-brief' unexpectedly found in ['context/active-brief', 'context/full-record', 'host/claude-code', 'host/codex', 'host/generic', 'policy/local', 'profile/default', 'recipe/research', 'research/analysis', 'research/audit', 'research/experiment', 'research/protocol', 'research/scope', 'research/writing', 'reviewer/checklist', 'runner/local-process']
+
+======================================================================
+FAIL: test_timestamp_requires_rfc3339_time_and_zone (conformance.test_audit.Audit.test_timestamp_requires_rfc3339_time_and_zone) (value='2026-10-07 12:00:00+00:00')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_audit.py", line 30, in test_timestamp_requires_rfc3339_time_and_zone
+    with self.subTest(value=value), self.assertRaises(AllagmaError):
+AssertionError: AllagmaError not raised
+
+======================================================================
+FAIL: test_timestamp_requires_rfc3339_time_and_zone (conformance.test_audit.Audit.test_timestamp_requires_rfc3339_time_and_zone) (value='2026-10-07T12:00+00:00')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_audit.py", line 30, in test_timestamp_requires_rfc3339_time_and_zone
+    with self.subTest(value=value), self.assertRaises(AllagmaError):
+AssertionError: AllagmaError not raised
+
+======================================================================
+FAIL: test_timestamp_requires_rfc3339_time_and_zone (conformance.test_audit.Audit.test_timestamp_requires_rfc3339_time_and_zone) (value='2026-W41-3T12:00:00+00:00')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_audit.py", line 30, in test_timestamp_requires_rfc3339_time_and_zone
+    with self.subTest(value=value), self.assertRaises(AllagmaError):
+AssertionError: AllagmaError not raised
+
+======================================================================
+FAIL: test_unset_resources_do_not_authorize_execution (conformance.test_audit.Audit.test_unset_resources_do_not_authorize_execution)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_audit.py", line 50, in test_unset_resources_do_not_authorize_execution
+    self.assertEqual(result["execution_status"], "blocked")
+AssertionError: 'paused' != 'blocked'
+- paused
++ blocked
+
+
+======================================================================
+FAIL: test_worker_cleans_descendants_after_leader_exits (conformance.test_audit.Audit.test_worker_cleans_descendants_after_leader_exits)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_audit.py", line 113, in test_worker_cleans_descendants_after_leader_exits
+    self.assertFalse((self.work / "late").exists(), "Descendant survived the completed worker")
+AssertionError: True is not false : Descendant survived the completed worker
+
+----------------------------------------------------------------------
+Ran 11 tests in 2.384s
+
+FAILED (failures=14, errors=1)

@@ -6,6 +6,7 @@ from datetime import datetime, timezone
 import fcntl
 import hashlib
 import json
+import math
 import os
 from pathlib import Path, PurePosixPath
 import tempfile
@@ -51,9 +52,16 @@ def read_json(path):
             result[key] = value
         return result
 
+    def finite_float(value):
+        result = float(value)
+        if not math.isfinite(result):
+            raise AllagmaError(f"Non-finite JSON number: {value}")
+        return result
+
     try:
         return json.loads(Path(path).read_text(encoding="utf-8"),
-                          parse_constant=reject_constant, object_pairs_hook=unique)
+                          parse_constant=reject_constant, parse_float=finite_float,
+                          object_pairs_hook=unique)
     except (OSError, ValueError) as exc:
         raise AllagmaError(f"Cannot read {path}: {exc}. Use JSON-compatible YAML.") from exc
 
@@ -133,9 +141,17 @@ def verify_inventory(root, expected):
 
 
 def reference(root, path, media_type=None):
-    root, path = Path(root).resolve(), Path(path).resolve()
-    relative = path.relative_to(root).as_posix()
-    confined(root, relative)
+    root, path = Path(root).absolute(), Path(path).absolute()
+    # Inspect the supplied path before resolving it; resolution would hide an
+    # alias symlink and silently change the identity of the referenced file.
+    try:
+        relative = path.relative_to(root).as_posix()
+    except ValueError:
+        try:
+            relative = path.relative_to(root.resolve()).as_posix()
+        except ValueError as exc:
+            raise AllagmaError(f"Evidence path is outside its root: {path}") from exc
+    path = confined(root, relative)
     media_type = media_type or {".json": "application/json", ".yaml": "application/json", ".py": "text/x-python",
                                 ".md": "text/markdown", ".csv": "text/csv", ".txt": "text/plain"}.get(path.suffix, "application/octet-stream")
     return {"path": relative, "sha256": file_hash(path), "media_type": media_type,
@@ -147,6 +163,34 @@ def verify_reference(root, ref):
     if not path.is_file() or file_hash(path) != ref["sha256"]:
         raise AllagmaError(f"Missing or changed evidence: {ref['path']}")
     return path
+
+
+def publication_reference(root, path, staging, target, media_type=None):
+    """Hash prepared bytes while recording their eventual immutable location."""
+    result = reference(root, path, media_type)
+    published = Path(target) / Path(path).relative_to(staging)
+    result["path"] = published.relative_to(Path(root)).as_posix()
+    confined(root, result["path"])
+    return result
+
+
+@contextmanager
+def staged_directory(study, target):
+    """Publish a complete initial directory with one same-filesystem rename.
+
+    A killed preparer may leave a staging directory, but no executable job has
+    been launched and no incomplete campaign or attempt has been published.
+    """
+    parent = confined(study, ".allagma/staging")
+    parent.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix="prepare-", dir=parent) as temp:
+        staging = Path(temp)
+        yield staging
+        target = Path(target)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        if target.exists():
+            raise AllagmaError(f"Prepared artifact already exists: {target}")
+        staging.rename(target)
 
 
 @contextmanager

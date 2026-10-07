@@ -1,0 +1,14 @@
+test_toy_executes_the_selected_source_helper (conformance.test_audit.Audit.test_toy_executes_the_selected_source_helper) ... FAIL
+
+======================================================================
+FAIL: test_toy_executes_the_selected_source_helper (conformance.test_audit.Audit.test_toy_executes_the_selected_source_helper)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/conformance/test_audit.py", line 136, in test_toy_executes_the_selected_source_helper
+    with self.assertRaisesRegex(AllagmaError, "Pinned helper sentinel"):
+AssertionError: AllagmaError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 5.095s
+
+FAILED (failures=1)

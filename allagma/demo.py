@@ -2,13 +2,14 @@
 from __future__ import annotations
 
 from pathlib import Path
+import json
 import shutil
 import subprocess
 import sys
 import time
 
-from .bundles import default_intent, initialize, resolve_entry, source_revision
-from .campaigns import analyze_campaign, audit_campaign, run_campaign, start_campaign
+from .bundles import bundle_path, default_intent, initialize, resolve_entry, source_revision, verify_lock, verify_study
+from .campaigns import _run_helper
 from .catalog import Catalog
 from .contracts import validate_record
 from .files import AllagmaError, canonical, file_hash, inventory, read_json, reference, utcnow, write_json
@@ -34,12 +35,24 @@ def create_toy(source, destination, *, host="generic", roles=None, recipe="recip
     return destination
 
 
+def _campaign(study, operation, *options):
+    """Use the selected helper even when --source differs from this checkout."""
+    lock = verify_study(study) if operation == "start" else verify_lock(study, read_json(study / "campaigns/toy-v1/lock.yaml"))
+    command = [sys.executable, str(bundle_path(study, lock) / "tools/allagma.py"),
+               "campaign", operation, "--study", str(study), "--campaign", "toy-v1", *options]
+    process = subprocess.run(command, capture_output=True, text=True)
+    if process.returncode not in (0, 1):
+        raise AllagmaError(f"Pinned campaign helper failed: {process.stderr[-2000:]}")
+    return json.loads(process.stdout)
+
+
 def toy_workflow(source, destination, *, host="generic", faults=True, roles=None, recipe="recipe/research"):
     study = create_toy(source, destination, host=host, roles=roles, recipe=recipe)
-    start_campaign(study, "toy-v1")
+    _campaign(study, "start")
     entry = resolve_entry(study, "context", "toy-v1")
     meta = read_json(Path(entry["path"]).parent / "module.yaml")
     example = read_json(Path(entry["path"]).parent / "example.json")
+    example["max_chars"] = read_json(study / "campaigns/toy-v1/lock.yaml")["effective_configuration"]["context_chars"]
     example["context_id"] = "toy-v1-context"
     brief = read_json(study / "brief.json")
     example["records"].update({"question": brief["question"], "constraints": brief["constraints"],
@@ -50,20 +63,20 @@ def toy_workflow(source, destination, *, host="generic", faults=True, roles=None
     handoff = study / "campaigns/toy-v1/context-input.json"
     write_json(handoff, example, immutable=True)
     context_path = study / "campaigns/toy-v1/context.json"
-    subprocess.run([sys.executable, str(Path(entry["path"]).parent / "select.py"), str(handoff), str(context_path)], check=True)
+    _run_helper([sys.executable, str(Path(entry["path"]).parent / "select.py"), str(handoff), str(context_path)], study, timeout=15)
     validate_record(read_json(context_path))
     if faults:
-        failed = run_campaign(study, "toy-v1", fault={"run_id": "confirm-100", "mode": "failure"})
+        failed = _campaign(study, "run", "--fault-run", "confirm-100", "--fault-mode", "failure")
         if failed["execution_status"] != "failed":
             raise AllagmaError("Failure scenario did not execute as intended")
-        interrupted = run_campaign(study, "toy-v1", fault={"run_id": "confirm-101", "mode": "interrupt"})
+        interrupted = _campaign(study, "run", "--fault-run", "confirm-101", "--fault-mode", "interrupt")
         if interrupted["execution_status"] != "paused":
             raise AllagmaError("Interruption scenario did not execute as intended")
-    result = run_campaign(study, "toy-v1")
+    result = _campaign(study, "run")
     if result["execution_status"] != "ready":
         raise AllagmaError(f"Toy campaign did not complete: {result}")
-    analysis = analyze_campaign(study, "toy-v1")
-    audit = audit_campaign(study, "toy-v1")
+    analysis = _campaign(study, "analyze")
+    audit = _campaign(study, "audit")
     if audit["verdict"] != "pass":
         raise AllagmaError(f"Toy audit failed: {audit}")
     owner = read_json(study / ".allagma/ownership.json")
@@ -108,11 +121,14 @@ def compare_context(source, output, *, baseline_id="context/full-record", candid
                 inputs = output / f"case-{i}.json"
                 write_json(inputs, case, immutable=True)
                 result_path = output / f"{module_id.split('/')[-1]}-{i}.json"
-                executed = subprocess.run([sys.executable, str(directory / "select.py"), str(inputs), str(result_path)], capture_output=True, text=True, timeout=15)
-                traces.append({"module": module_id, "case": i, "exit_code": executed.returncode,
-                               "stdout": executed.stdout, "stderr": executed.stderr})
-                if executed.returncode:
-                    raise AllagmaError(f"{module_id} did not complete evaluation")
+                try:
+                    executed = _run_helper([sys.executable, str(directory / "select.py"), str(inputs), str(result_path)], output, timeout=15, check=False)
+                except AllagmaError as exc:
+                    traces.append({"module": module_id, "case": i, "exit_code": None, "error": str(exc)})
+                    raise
+                traces.append({"module": module_id, "case": i, **executed})
+                if executed["exit_code"] != 0 or executed["stop"]:
+                    raise AllagmaError(f"{module_id} did not complete evaluation: {executed['stderr'][-1000:]}; {executed['stop']}")
                 result = validate_record(read_json(result_path), package)
                 if result["method_id"] != module_id:
                     raise AllagmaError("Context producer identity mismatch")

@@ -112,7 +112,9 @@ def version_scenario(source, output):
     selected_old = read_json(study / "allagma.yaml")
     selected_old["roles"]["context"] = "context/active-brief"
     coexistence = Catalog(central).resolve(selected_old)
-    require({"context/active-brief", "context/full-record"} <= set(coexistence["modules"]), "replacement coexistence failed")
+    require("context/active-brief" in coexistence["modules"] and
+            "context/full-record" in Catalog(central).resolve(read_json(study / "allagma.yaml"))["modules"],
+            "old and replacement methods cannot be independently selected during coexistence")
     write_json(output / "coexistence.json", {"release": release, "resolution": coexistence}, immutable=True)
     _adopt(central, study)
     release.update(release="0.3.0", release_tag="v0.3.0"); write_json(central / "release.json", release)

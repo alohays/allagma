@@ -3,6 +3,10 @@
 Target: the four adopted specifications in `docs/specification/`, originally
 dated 6 October 2026. Noemetric's scientific experiments are a separate study.
 
+The [post-delivery self-audit](audit/README.md) found gaps beyond the original
+tests. Corrections are undergoing fresh qualification. The receipts below
+describe the original delivered source until replaced by the completed audit.
+
 | Milestone | Required demonstration | Implementation status |
 | --- | --- | --- |
 | I1 | Same contracts and artifacts through generic, Codex and Claude Code entrypoints; no native hooks or subagents | Passed |
