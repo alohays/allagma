@@ -18,6 +18,7 @@ def fixture():
                 rows.append({'run_id': f'r{len(rows) + 1:02d}', 'task': task,
                              'replicate': replicate, 'condition': condition,
                              'native_status': 'completed', 'verified_completion': treatment,
+                             'scientific_execution_verified': True,
                              'numerical': {'correct': 4 if treatment else 3, 'total': 4},
                              'evidence_completeness': [{'score': 1, 'reason': 'fixture'}] * (8 if treatment else 7),
                              'compute_seconds': 12 if treatment else 10,
@@ -36,6 +37,7 @@ class ComparisonTests(unittest.TestCase):
             self.assertEqual(pair['differences']['numerical_fraction'], .25)
             self.assertEqual(pair['differences']['evidence_score'], 1)
             self.assertEqual(pair['differences']['completed'], 1)
+            self.assertEqual(pair['differences']['execution_verified'], 0)
             self.assertEqual(pair['differences']['compute_seconds'], 2)
 
     def test_missing_evidence_stays_missing_and_pending_is_not_final(self):

@@ -43,6 +43,31 @@ def paths(root):
             if path.is_symlink() or path.is_file():yield path
 
 
+def verify_manifest(source):
+    """Check either common named list or a direct path-to-digest inventory."""
+    source=Path(source).resolve()
+    supplied=source/'artifact-manifest.json'
+    errors=[];checked=0
+    if not supplied.exists():return {'status':'fail','checked_files':0,'errors':['manifest-missing']}
+    try:
+        value=json.loads(supplied.read_text())
+        if isinstance(value,dict):
+            declared=value.get('files',value.get('artifacts',value))
+        else:declared=value
+        if isinstance(declared,dict):
+            declared=[{'path':k,**({'sha256':v} if isinstance(v,str) else v)} for k,v in declared.items()]
+        for entry in declared:
+            name=entry['path'];path=(source/name).resolve()
+            checked+=1
+            if source not in path.parents or not path.is_file() or sha(path)!=entry['sha256']:
+                errors.append(name)
+    except (ValueError,KeyError,TypeError,AttributeError):
+        errors.append('unsupported-or-invalid-manifest-format')
+    return {'status':'pass' if not errors else 'fail','checked_files':checked,'errors':errors,
+            'manifest_sha256':sha(supplied),
+            'scope':'Only declared artifact paths and SHA-256 values; no scientific or delivery-completion claim.'}
+
+
 def collect(source,destination):
     source,destination=Path(source).resolve(),Path(destination).resolve()
     if destination.exists():raise ValueError('Retention destination exists; do not overwrite a run package')
@@ -81,18 +106,7 @@ def collect(source,destination):
     for name,entry in links.items():
         if os.readlink(source/name)!=entry['original_target']:
             raise ValueError('Candidate link changed during collection: '+name)
-    manifest_errors=[]
-    supplied=source/'artifact-manifest.json'
-    if supplied.exists():
-        try:
-            value=json.loads(supplied.read_text());declared=value.get('files',value)
-            if isinstance(declared,dict):declared=[{'path':k,**({'sha256':v} if isinstance(v,str) else v)} for k,v in declared.items()]
-            for entry in declared:
-                name=entry['path'];path=(source/name).resolve()
-                if source not in path.parents or not path.is_file() or sha(path)!=entry['sha256']:
-                    manifest_errors.append(name)
-        except (ValueError,KeyError,TypeError,AttributeError):manifest_errors.append('unsupported-or-invalid-manifest-format')
-    else:manifest_errors.append('manifest-missing')
+    manifest_errors=verify_manifest(source)['errors']
     result={'format':'allagma-retained-package-v1','source':str(source),'archive_sha256':archive_sha,'parts':parts,
             'files':included,'external_wheels':wheels,'symlinks':links,'artifact_manifest_errors':manifest_errors,
             'scope':'Verbatim regular artifacts/source; exact-hash wheel hydration; confined links retain original target metadata and restore as relocatable aliases. No claim of scientific completion.',
@@ -210,11 +224,17 @@ def restore(package,destination,*,wheel_cache=None,download_wheels=False):
 
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('operation',choices=['collect','supplement','restore'])
+    parser=argparse.ArgumentParser();parser.add_argument('operation',choices=['collect','supplement','restore','verify-manifest'])
     parser.add_argument('--source',type=Path,required=True);parser.add_argument('--destination',type=Path,required=True)
     parser.add_argument('--wheel-cache',type=Path);parser.add_argument('--download-wheels',action='store_true')
     args=parser.parse_args()
     if args.operation=='collect':result=collect(args.source,args.destination)
     elif args.operation=='supplement':result=supplement(args.source,args.destination)
+    elif args.operation=='verify-manifest':
+        if args.destination.exists():raise ValueError('Use a new manifest-verification receipt')
+        result=verify_manifest(args.source)
+        args.destination.parent.mkdir(parents=True,exist_ok=True)
+        args.destination.write_text(json.dumps(result,indent=2)+'\n')
     else:result=restore(args.source,args.destination,wheel_cache=args.wheel_cache,download_wheels=args.download_wheels)
     print(json.dumps(result,indent=2))
+    if args.operation=='verify-manifest' and result['errors']:raise SystemExit(1)

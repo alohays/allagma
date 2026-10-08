@@ -85,6 +85,17 @@ class RetentionTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'escapes candidate'):
                 retention.collect(candidate, root / 'package')
 
+    def test_artifacts_container_receives_the_same_digest_checks(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            candidate = self.fixture(root)
+            manifest = candidate / 'artifact-manifest.json'
+            value = json.loads(manifest.read_text())
+            manifest.write_text(json.dumps({'format': 'research-artifact-manifest-v1', 'artifacts': value['files']}))
+            self.assertEqual(retention.verify_manifest(candidate)['status'], 'pass')
+            (candidate / '.compute/responses/request-1.json').write_text('altered')
+            self.assertEqual(retention.verify_manifest(candidate)['errors'], ['.compute/responses/request-1.json'])
+
 
 if __name__ == '__main__':
     unittest.main()

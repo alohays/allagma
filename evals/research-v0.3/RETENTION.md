@@ -75,3 +75,24 @@ candidate workspace are unchanged. The original absolute link string remains
 in metadata; relocation of that string is an explicit transport operation, not
 a claim of byte-identical symlink text. Tests cover internal alias relocation
 and rejection of external targets. Existing archives remain readable.
+
+## Artifact-manifest containers
+
+The common task brief does not prescribe the name of the manifest's entry list.
+Collection recognizes a `files` list, an `artifacts` list, a direct list, or a
+direct path-to-digest mapping, with the same path and SHA-256 checks. The first
+r06 collection reported an unsupported format because its list was named
+`artifacts`. That original index remains unchanged; the separate
+`runs/r06/manifest-verification.json` verifies all 456 entries. This is a
+controller-parser correction, not a missing candidate artifact or a scientific
+scoring change.
+
+```sh
+python3 evals/research-v0.3/retention.py verify-manifest \
+  --source /path/to/candidate-or-restored-package \
+  --destination /path/to/new-verification-receipt.json
+```
+
+The receipt reports only the declared paths/hashes and count actually checked.
+Scientific correctness, manifest coverage and package completion need their
+separate substantive review.

@@ -34,6 +34,7 @@ def run_row(assignment):
         statuses[state]=statuses.get(state,0)+1
     row={**assignment,'native_status':native['status'] if native else 'not_started',
         'claimed_execution_status':None,'verified_completion':None,
+        'scientific_execution_verified':None,
         'numerical':None,'evidence_completeness':None,
         'interventions':read(root/'interventions.json',[]),
         'compute_seconds':resources['charged_seconds'].get('compute'),
@@ -62,6 +63,8 @@ def run_row(assignment):
     review=read(root/'substantive-review.json')
     if review:
         row['verified_completion']=review.get('completion_verified')
+        row['scientific_execution_verified']=review.get('scientific_execution_verified',
+            True if review.get('completion_verified') is True else None)
         row['evidence_completeness']=review.get('evidence_items')
     return row
 

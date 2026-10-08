@@ -14,7 +14,7 @@ import statistics
 TASKS = ('core-culp', 'modular-addition', 'ema-schedule')
 CONDITIONS = ('plain', 'allagma')
 USAGE = ('input_tokens', 'cached_input_tokens', 'output_tokens', 'reasoning_output_tokens')
-METRICS = ('numerical_fraction', 'evidence_score', 'completed', 'compute_seconds',
+METRICS = ('numerical_fraction', 'evidence_score', 'execution_verified', 'completed', 'compute_seconds',
            'setup_seconds', 'native_wall_seconds', 'input_tokens', 'cached_input_tokens',
            'output_tokens', 'reasoning_output_tokens')
 
@@ -23,6 +23,10 @@ def compact(row):
     numerical = row.get('numerical') or {}
     correct, total = numerical.get('correct'), numerical.get('total')
     evidence = row.get('evidence_completeness')
+    execution = row.get('scientific_execution_verified')
+    if execution is None and row.get('verified_completion') is True:
+        # Frozen completion requires both the required execution and package.
+        execution = True
     value = {name: row.get(name) for name in (
         'run_id', 'task', 'condition', 'replicate', 'native_status',
         'claimed_execution_status', 'verified_completion', 'compute_seconds',
@@ -35,6 +39,7 @@ def compact(row):
                  numerical_fraction=correct / total if total else None,
                  evidence_score=sum(item['score'] for item in evidence) if evidence is not None else None,
                  evidence_items=evidence,
+                 execution_verified=int(execution) if execution is not None else None,
                  completed=int(row['verified_completion']) if row.get('verified_completion') is not None else None,
                  intervention_count=len(row.get('interventions', [])),
                  interventions=row.get('interventions', []))
@@ -102,12 +107,13 @@ def render(result):
     if result['pending_runs']:
         lines += ['Pending runs/reviews: ' + ', '.join(result['pending_runs']) + '. This is an interim report, not a completed evaluation.', '']
     lines += ['## Assigned outcomes', '',
-              '| Run | Task | Condition | Replicate | Native | Numerical | Evidence /8 | Verified complete |',
-              '| --- | --- | --- | ---: | --- | ---: | ---: | --- |']
+              '| Run | Task | Condition | Replicate | Native | Numerical | Evidence /8 | Required execution verified | Package complete |',
+              '| --- | --- | --- | ---: | --- | ---: | ---: | --- | --- |']
     for r in result['runs']:
         numeric = f"{r['numerical_correct']}/{r['numerical_total']}" if r['numerical_total'] else 'NA'
         completion = 'pending' if r['completed'] is None else 'yes' if r['completed'] else 'no'
-        lines.append(f"| {r['run_id']} | {r['task']} | {r['condition']} | {r['replicate']} | {r['native_status']} | {numeric} | {number(r['evidence_score'], 0)} | {completion} |")
+        execution = 'pending' if r['execution_verified'] is None else 'yes' if r['execution_verified'] else 'no'
+        lines.append(f"| {r['run_id']} | {r['task']} | {r['condition']} | {r['replicate']} | {r['native_status']} | {numeric} | {number(r['evidence_score'], 0)} | {execution} | {completion} |")
     lines += ['', '## Per-run evidence gaps and process outcomes', '']
     for r in result['runs']:
         if r['completed'] is None:
@@ -137,12 +143,12 @@ def render(result):
               '## Six paired contrasts', '',
               'Each contrast is Allagma minus plain Codex within the same task and replicate block.',
               'Positive correctness/evidence/completion values favor Allagma; positive time/token differences indicate greater recorded use.', '',
-              '| Task | Replicate | Numerical fraction Δ | Evidence Δ | Completion Δ | Compute s Δ | Native s Δ |',
-              '| --- | ---: | ---: | ---: | ---: | ---: | ---: |']
+              '| Task | Replicate | Numerical fraction Δ | Evidence Δ | Required execution Δ | Package completion Δ | Compute s Δ | Native s Δ |',
+              '| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |']
     for pair in result['paired_contrasts']:
         d = pair['differences']
         lines.append('| ' + ' | '.join([pair['task'], str(pair['replicate']), number(d['numerical_fraction'], 4),
-                     number(d['evidence_score'], 0), number(d['completed'], 0),
+                     number(d['evidence_score'], 0), number(d['execution_verified'], 0), number(d['completed'], 0),
                      number(d['compute_seconds']), number(d['native_wall_seconds'])]) + ' |')
     lines += ['', 'The companion JSON retains all token contrasts and within-task means, ranges and observed/assigned denominators.',
               'Pending runs may show accrued costs, but do not enter paired contrasts or within-task outcome averages.',
@@ -158,6 +164,9 @@ def render(result):
               'is part of these frozen outcomes. These results do not measure the GPU performance of a later correction.',
               'The inline-curve parser correction is applied uniformly in a separate scorer; original receipts and the exact correction are retained.',
               'Post-evaluation package repairs and controller validation costs must be reported separately from these original agent outcomes.', '',
+              'Required execution and full package completion are shown separately. A missing review-revision binding can make an otherwise executed,',
+              'numerically correct study incomplete under the evidence rubric; it does not mean the experiments or substantive critique were absent.',
+              'Resource timings are descriptive observations on a shared local host, not a dedicated hardware benchmark.', '',
               'No population confidence interval is presented for workflow effects: the two-session task-specific ranges are descriptive.',
               'Same-model author critique and controller checks are provisional; neither is independent scientific peer review.', '']
     return '\n'.join(lines)
