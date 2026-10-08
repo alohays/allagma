@@ -1,0 +1,58 @@
+{
+  "format": "allagma-video-render-v1",
+  "duration_seconds": 100.433333,
+  "bytes": 2875316,
+  "video_sha256": "a8ebf24f5786407bb210944cd21c9ffa46f24690987f23869a3c9cfed8e08254",
+  "raw_video_sha256": "c8cc4ddf892a04d7938b5037d304854bff230d37a2f8518e4fb6adbc82f8bbee",
+  "capture_timeline_sha256": "25d6cbf92d6a36be71050e6fab0969d7c120ad7ecc9ba63ec4ee0b669b9dea5c",
+  "script_sha256": "4c6411ce662ca8b1b3c75dc8e3f10cc752889a96d12a650d8972b79c50b3cfc3",
+  "renderer_sha256": "b6484ad5c21c9d81ad218b84695b2e2bb9677a258a911e159df02eff31853a41",
+  "scope": "Continuous capture of the real offline CLI through the supplied recording workbench. Final chapter shows explicitly labeled retained native EMA results. No accelerated computation or simulated model reasoning.",
+  "voice": "Samantha",
+  "voice_adjustments": [
+    {
+      "scene": "brief",
+      "original_seconds": 9.654965,
+      "narration_tempo": 1.0,
+      "video_tempo": 1.0
+    },
+    {
+      "scene": "execute",
+      "original_seconds": 14.865668999999999,
+      "narration_tempo": 1.0,
+      "video_tempo": 1.0
+    },
+    {
+      "scene": "results",
+      "original_seconds": 12.209387000000001,
+      "narration_tempo": 1.0,
+      "video_tempo": 1.0
+    },
+    {
+      "scene": "claims",
+      "original_seconds": 11.20576,
+      "narration_tempo": 1.0,
+      "video_tempo": 1.0
+    },
+    {
+      "scene": "report",
+      "original_seconds": 10.679728,
+      "narration_tempo": 1.0,
+      "video_tempo": 1.0
+    },
+    {
+      "scene": "audit",
+      "original_seconds": 11.057959,
+      "narration_tempo": 1.1824408066264005,
+      "video_tempo": 1.0
+    },
+    {
+      "scene": "native",
+      "original_seconds": 12.411337,
+      "narration_tempo": 1.0,
+      "video_tempo": 1.0
+    }
+  ],
+  "software": "Chromium/Playwright actual browser capture, Allagma CLI, macOS say, FFmpeg H.264/AAC",
+  "publication": "prepared locally, not a public upload"
+}

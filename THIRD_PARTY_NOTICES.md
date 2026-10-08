@@ -56,3 +56,28 @@ The modular-addition pilot is an original small MLP implementation inspired by
 [Power et al.](https://arxiv.org/abs/2201.02177), with the adaptation stated in
 its [study README](studies/modular-addition/README.md). No upstream transformer
 implementation is copied into that pilot.
+
+The frozen v0.3 modular-addition evaluation additionally supplies selected
+reference files from `openai/grok` at commit
+`3d64b1d8c1d595dd8ebdb7771998823f1b14c7b3`, with the OpenAI copyright notice
+and MIT license, inside candidate packages' `inputs/materials/openai-grok-reference/`.
+The [freeze manifest](evals/research-v0.3/frozen/freeze.json) pins those bytes.
+They are reference materials for a bounded MLP study, not evidence that the
+original transformer experiments or training horizons were reproduced.
+
+## Documentation and launch media
+
+The separate `site/` project uses Astro Starlight and its locked Node development
+dependencies. Those dependencies retain their upstream package licenses and do
+not enter the default Python runtime. The workflow graphics, mark and social
+preview are original Allagma assets; uv and marimo supplied editorial inspiration,
+with no copied branding or graphics.
+
+The flagship film captures actual local software. Narration is synthesized using
+the installed macOS Samantha voice; no voice model or operating-system asset is
+redistributed. The film's final chapter and `media/evidence/ema-r07.png` reuse the
+machine-generated EMA figure produced with AI Scientist-adapted code. The full
+study license accompanies that figure and the [video distribution](media/demo/EMA-LICENSE.txt),
+and the video, transcript and site disclose the reuse and machine generation.
+The compact core source archive excludes third-party study adaptations and
+scientific dependency wheels. See [artifact distribution](docs/launch/artifact-distribution.md).

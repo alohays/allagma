@@ -1,34 +1,167 @@
 [
-  {"source":"docs/guides/first-study.md","route":"guides/first-study","title":"Your first study"},
-  {"source":"docs/guides/native-study.md","route":"guides/native-study","title":"Start a native study"},
-  {"source":"docs/guides/reproduce.md","route":"guides/reproduce","title":"Resume and reproduce"},
-  {"source":"docs/guides/troubleshooting.md","route":"guides/troubleshooting","title":"Troubleshooting"},
-  {"source":"docs/research-workspaces.md","route":"guides/workspaces","title":"Research workspaces"},
-  {"source":"docs/resource-supervision.md","route":"guides/resources","title":"Resource supervision"},
-  {"source":"docs/versioning.md","route":"guides/versioning","title":"Updates and rollback"},
-  {"source":"docs/concepts.md","route":"reference/concepts","title":"The records behind a study"},
-  {"source":"docs/architecture.md","route":"reference/architecture","title":"Architecture"},
-  {"source":"docs/contracts.md","route":"reference/contracts","title":"Evidence contracts"},
-  {"source":"docs/study-adapters.md","route":"reference/study-programs","title":"Study-owned programs"},
-  {"source":"docs/cli.md","route":"reference/cli","title":"Command-line reference"},
-  {"source":"docs/showcase/index.md","route":"studies","title":"Studies you can inspect"},
-  {"source":"examples/toy-study/README.md","route":"studies/toy","title":"The offline toy study"},
-  {"source":"studies/core-culp/RESULTS.md","route":"studies/core-culp","title":"CORE CULP reproduction"},
-  {"source":"studies/modular-addition/RESULTS.md","route":"studies/modular-addition","title":"Modular addition"},
-  {"source":"studies/ema-schedule/RESULTS.md","route":"studies/ema-schedule","title":"Weight EMA"},
-  {"source":"docs/host-support.md","route":"evidence/hosts","title":"Host support and qualification"},
-  {"source":"docs/v0.3/COMPARISON.md","route":"evidence/comparison","title":"The twelve-session comparison"},
-  {"source":"docs/acceptance.md","route":"evidence/acceptance","title":"Acceptance scope"},
-  {"source":"docs/implementation-status.md","route":"evidence/implementation","title":"I1–I5 evidence"},
-  {"source":"docs/releases/0.3.0rc2.md","route":"releases/0.3.0rc2","title":"Release 0.3.0rc2"},
-  {"source":"docs/launch/artifact-distribution.md","route":"guides/artifacts","title":"Artifact distribution"},
-  {"source":"THIRD_PARTY_NOTICES.md","route":"project/licenses","title":"Licenses and source lineage"},
-  {"source":"CONTRIBUTING.md","route":"contributing","title":"Contribute to Allagma"},
-  {"source":"docs/module-authoring.md","route":"contributing/modules","title":"Author a module"},
-  {"source":"docs/contributing/starter-tasks.md","route":"contributing/starter-tasks","title":"Small contributions"},
-  {"source":"ROADMAP.md","route":"project/roadmap","title":"Roadmap"},
-  {"source":"SUPPORT.md","route":"project/support","title":"Getting help"},
-  {"source":"SECURITY.md","route":"project/security","title":"Security"},
-  {"source":"GOVERNANCE.md","route":"project/governance","title":"Governance"},
-  {"source":"CODE_OF_CONDUCT.md","route":"project/conduct","title":"Code of conduct"}
+  {
+    "source": "docs/guides/first-study.md",
+    "route": "guides/first-study",
+    "title": "Your first study"
+  },
+  {
+    "source": "docs/guides/native-study.md",
+    "route": "guides/native-study",
+    "title": "Start a native study"
+  },
+  {
+    "source": "docs/guides/reproduce.md",
+    "route": "guides/reproduce",
+    "title": "Resume and reproduce"
+  },
+  {
+    "source": "docs/guides/troubleshooting.md",
+    "route": "guides/troubleshooting",
+    "title": "Troubleshooting"
+  },
+  {
+    "source": "docs/research-workspaces.md",
+    "route": "guides/workspaces",
+    "title": "Research workspaces"
+  },
+  {
+    "source": "docs/resource-supervision.md",
+    "route": "guides/resources",
+    "title": "Resource supervision"
+  },
+  {
+    "source": "docs/versioning.md",
+    "route": "guides/versioning",
+    "title": "Updates and rollback"
+  },
+  {
+    "source": "docs/concepts.md",
+    "route": "reference/concepts",
+    "title": "The records behind a study"
+  },
+  {
+    "source": "docs/architecture.md",
+    "route": "reference/architecture",
+    "title": "Architecture"
+  },
+  {
+    "source": "docs/contracts.md",
+    "route": "reference/contracts",
+    "title": "Evidence contracts"
+  },
+  {
+    "source": "docs/study-adapters.md",
+    "route": "reference/study-programs",
+    "title": "Study-owned programs"
+  },
+  {
+    "source": "docs/cli.md",
+    "route": "reference/cli",
+    "title": "Command-line reference"
+  },
+  {
+    "source": "docs/showcase/index.md",
+    "route": "studies",
+    "title": "Studies you can inspect"
+  },
+  {
+    "source": "examples/toy-study/README.md",
+    "route": "studies/toy",
+    "title": "The offline toy study"
+  },
+  {
+    "source": "studies/core-culp/RESULTS.md",
+    "route": "studies/core-culp",
+    "title": "CORE CULP reproduction"
+  },
+  {
+    "source": "studies/modular-addition/RESULTS.md",
+    "route": "studies/modular-addition",
+    "title": "Modular addition"
+  },
+  {
+    "source": "studies/ema-schedule/RESULTS.md",
+    "route": "studies/ema-schedule",
+    "title": "Weight EMA"
+  },
+  {
+    "source": "docs/host-support.md",
+    "route": "evidence/hosts",
+    "title": "Host support and qualification"
+  },
+  {
+    "source": "docs/v0.3/COMPARISON.md",
+    "route": "evidence/comparison",
+    "title": "The twelve-session comparison"
+  },
+  {
+    "source": "docs/acceptance.md",
+    "route": "evidence/acceptance",
+    "title": "Acceptance scope"
+  },
+  {
+    "source": "docs/implementation-status.md",
+    "route": "evidence/implementation",
+    "title": "I1\u2013I5 evidence"
+  },
+  {
+    "source": "docs/releases/0.3.0rc2.md",
+    "route": "releases/0.3.0rc2",
+    "title": "Release 0.3.0rc2"
+  },
+  {
+    "source": "docs/launch/artifact-distribution.md",
+    "route": "guides/artifacts",
+    "title": "Artifact distribution"
+  },
+  {
+    "source": "THIRD_PARTY_NOTICES.md",
+    "route": "project/licenses",
+    "title": "Licenses and source lineage"
+  },
+  {
+    "source": "CONTRIBUTING.md",
+    "route": "contributing",
+    "title": "Contribute to Allagma"
+  },
+  {
+    "source": "docs/module-authoring.md",
+    "route": "contributing/modules",
+    "title": "Author a module"
+  },
+  {
+    "source": "docs/contributing/starter-tasks.md",
+    "route": "contributing/starter-tasks",
+    "title": "Small contributions"
+  },
+  {
+    "source": "ROADMAP.md",
+    "route": "project/roadmap",
+    "title": "Roadmap"
+  },
+  {
+    "source": "SUPPORT.md",
+    "route": "project/support",
+    "title": "Getting help"
+  },
+  {
+    "source": "SECURITY.md",
+    "route": "project/security",
+    "title": "Security"
+  },
+  {
+    "source": "GOVERNANCE.md",
+    "route": "project/governance",
+    "title": "Governance"
+  },
+  {
+    "source": "CODE_OF_CONDUCT.md",
+    "route": "project/conduct",
+    "title": "Code of conduct"
+  },
+  {
+    "source": "media/demo/transcript.md",
+    "route": "demo/transcript",
+    "title": "Video transcript"
+  }
 ]

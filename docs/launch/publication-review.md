@@ -48,3 +48,25 @@ author/test-fixture metadata. Binary content was pattern-scanned; scientific
 arrays were not executed as code. A final scan after the launch commits and
 manual redistribution inventory remain required. No scan alone certifies
 publication safety.
+
+## Manual redistribution inventory
+
+The selected package indexes retain nine license copies for CULP r01 (MIT code
+and CC0 data across original/adapted/frozen copies), two for modular r04
+(Allagma core and OpenAI's MIT reference), and four license/notice entries for
+EMA r07, including its frozen scientific license. The [inventory](evidence/license-inventory.json)
+records exact paths and digests. The complete applicable license text was
+inspected in the retained source materials; its presence alone does not imply
+unrestricted use of the AI Scientist adaptation.
+
+Archived development packages may contain dependency wheels with their own
+licenses and test fixtures. The recursive historical scan opens those wheel
+archives; the compact default source distribution excludes all wheels and
+third-party scientific adaptations. Final evaluation packages hydrate their
+declared software wheels by exact hash instead of silently choosing new versions.
+
+The launch notices now explicitly identify the OpenAI grok reference materials
+inside frozen evaluation packages and the separately licensed EMA figure in
+the film. Editable identity graphics are original. The documentation build
+toolchain is isolated from the Python core. No account authentication files,
+private runtime homes or credentials are selected for the site or release assets.

@@ -1,0 +1,45 @@
+{
+  "attempts": {
+    "failed": 1,
+    "interrupted": 1,
+    "succeeded": 26
+  },
+  "checked_at": "2026-10-08T10:21:34.470364+00:00",
+  "confirmation_replicates": 24,
+  "coverage": "Separate rational arithmetic and binomial enumeration; complete-toy eligibility, reference digests, primary and sensitivity CSVs, figure points, claims and manuscript numbers. No Allagma or study helper imports.",
+  "distinct_direct_references": 487,
+  "enumerated_population_mse": {
+    "biased": "5/64",
+    "mean": "1/64"
+  },
+  "exact_observed": {
+    "biased_mse": "247/3072",
+    "difference": "25/384",
+    "mean_mse": "47/3072"
+  },
+  "figure_points": 24,
+  "implementation_sha256": "21ff4857be543cdcc42975c29e36d5b700d09b3f9bd796e3f600d12901d999e9",
+  "scientific_summary": {
+    "biased_mse": 0.08040364583333333,
+    "ci95_normal": [
+      0.03985104178529497,
+      0.09035729154803837
+    ],
+    "counterexample_seeds": [
+      104,
+      108,
+      118,
+      121
+    ],
+    "difference": 0.06510416666666667,
+    "mean_mse": 0.015299479166666666,
+    "standard_error": 0.01288424738845495
+  },
+  "sensitivity": {
+    "maximum_difference": 0.07269021739130435,
+    "minimum_difference": 0.06182065217391304,
+    "positive_count": 24,
+    "replicates": 24
+  },
+  "status": "pass"
+}

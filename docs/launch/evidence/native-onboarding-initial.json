@@ -1,0 +1,71 @@
+{
+  "format": "allagma-native-onboarding-observation-v1",
+  "sessions": [
+    {
+      "session": "session-001",
+      "receipt_sha256": "4725d10c4817e87ea8083b938ee0f17d6f38974ba654670bc8ecdb46141b5ba8",
+      "status": "timed_out",
+      "started_at": "2026-10-08T09:29:40.138438+00:00",
+      "ended_at": "2026-10-08T09:44:40.845635+00:00",
+      "exit_code": -15,
+      "wall_seconds": 900.6900054169819,
+      "timeout_seconds": 900.0,
+      "peak_rss_bytes": 302317568,
+      "final_storage_bytes": 81845444,
+      "storage_limit_bytes": 1073741824,
+      "settings_unchanged": true,
+      "project_model_config_written": false,
+      "cli_version": "codex-cli 0.160.1",
+      "model_observations": [
+        {
+          "approval_policy": "never",
+          "cwd": "/Users/iyunseong/maangeek/allagma/work/launch/native-onboarding",
+          "effort": "max",
+          "model": "gpt-6-astra",
+          "sandbox_policy": {
+            "exclude_slash_tmp": true,
+            "exclude_tmpdir_env_var": false,
+            "network_access": false,
+            "type": "workspace-write"
+          }
+        }
+      ],
+      "usage": []
+    },
+    {
+      "session": "session-002",
+      "receipt_sha256": "9b9479e5dcf6eeb370d0a22c096d31680022ed62b07c13eb5652a31f2faec8b9",
+      "status": "timed_out",
+      "started_at": "2026-10-08T09:49:08.595275+00:00",
+      "ended_at": "2026-10-08T09:54:09.273077+00:00",
+      "exit_code": -15,
+      "wall_seconds": 300.6787894999143,
+      "timeout_seconds": 300.0,
+      "peak_rss_bytes": 323108864,
+      "final_storage_bytes": 79339372,
+      "storage_limit_bytes": 1073741824,
+      "settings_unchanged": true,
+      "project_model_config_written": false,
+      "cli_version": "codex-cli 0.160.1",
+      "model_observations": [
+        {
+          "approval_policy": "never",
+          "cwd": "/Users/iyunseong/maangeek/allagma/work/launch/native-onboarding",
+          "effort": "max",
+          "model": "gpt-6-astra",
+          "sandbox_policy": {
+            "exclude_slash_tmp": true,
+            "exclude_tmpdir_env_var": false,
+            "network_access": false,
+            "type": "workspace-write"
+          }
+        }
+      ],
+      "usage": []
+    }
+  ],
+  "science": "Primary and full replay campaigns completed deterministic audit; controller arithmetic independently verifies 24 confirmation seeds, 98304 rows and 9 summaries.",
+  "handoff": "Incomplete: no final PACKAGE-MANIFEST.json at the observed session limits.",
+  "scope": "Additional launch-onboarding probe, separate from the frozen twelve-session comparison. No original evaluation outcome is changed.",
+  "next_action": "A further bounded model continuation was requested from the owner; no additional model session is authorized by elapsed time."
+}

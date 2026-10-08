@@ -19,6 +19,8 @@ Scientist. It is not a fresh training result. The accompanying
 [study's source attribution](../studies/ema-schedule/REFERENCE.md) apply to the
 adapted study materials. Do not label this scientific adaptation uniformly MIT.
 
-The final video, captions, transcript, capture sources and instructions will be
-added as the actual capture is completed. No video completion is implied by
-the current graphic sources.
+The [flagship video](demo/allagma-workflow.mp4) is an actual continuous capture
+with local synthetic narration, [English captions](demo/allagma-workflow.en.vtt),
+a [transcript](demo/transcript.md), and [repeatable capture instructions](CAPTURE.md).
+It uses no accelerated computation. Its final chapter labels retained native
+EMA results explicitly. See `demo/provenance.json` for duration and digests.

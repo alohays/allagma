@@ -1,0 +1,41 @@
+{
+  "format": "allagma-launch-onboarding-v1",
+  "checkout_commit": "1d41f5a07e3cae4c08bd6a2f44be5ffeae6febd0",
+  "checkout_mode": "New local shared Git clone with sparse checkout; tracked source unchanged after execution.",
+  "catalog": "pass",
+  "toy_audit": "pass",
+  "second_audit": "pass",
+  "checked_references": 521,
+  "commands": [
+    "python3 -m allagma check",
+    "python3 -m allagma toy --destination work/first-study",
+    "python3 -m allagma campaign audit --study work/first-study --campaign toy-v1"
+  ],
+  "summary": {
+    "biased_mse": 0.08040364583333333,
+    "ci95_normal": [
+      0.039851041785294965,
+      0.09035729154803837
+    ],
+    "counterexample_seeds": [
+      104,
+      108,
+      118,
+      121
+    ],
+    "difference": 0.06510416666666667,
+    "leave_one_seed_out": {
+      "maximum_difference": 0.07269021739130435,
+      "minimum_difference": 0.06182065217391304,
+      "positive_count": 24,
+      "replicates": 24
+    },
+    "mean_mse": 0.015299479166666666,
+    "method": "paired differences across seeds; normal approximation, 1.96 standard errors",
+    "replicates": 24,
+    "samples_per_replicate": 64,
+    "standard_error": 0.012884247388454952
+  },
+  "python": "Python 3.11.6",
+  "network_transfer_validation": "Pending a remote sparse clone after final push."
+}

@@ -1,0 +1,29 @@
+
+> test
+> playwright test
+
+[WebServer] (node:23872) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 14 tests using 1 worker
+
+(node:23873) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [desktop] › tests/site.spec.ts:5:1 › landing page works in both themes without horizontal overflow (833ms)
+  ✓   2 [desktop] › tests/site.spec.ts:22:1 › production search finds the tutorial and navigates under the base path (532ms)
+  ✓   3 [desktop] › tests/site.spec.ts:34:1 › artifact tabs support keyboard navigation and show actual values (523ms)
+  ✓   4 [desktop] › tests/site.spec.ts:52:1 › study pages load figures and retain their scientific limits (179ms)
+  ✓   5 [desktop] › tests/site.spec.ts:65:1 › skip link and mobile menu are usable (97ms)
+  ✓   6 [desktop] › tests/site.spec.ts:79:1 › flagship video decodes, plays, seeks and loads English captions (1.3s)
+  ✓   7 [desktop] › tests/site.spec.ts:101:1 › every canonical page renders inside the viewport with no script errors (1.2s)
+(node:23919) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   8 [mobile] › tests/site.spec.ts:5:1 › landing page works in both themes without horizontal overflow (1.2s)
+  ✓   9 [mobile] › tests/site.spec.ts:22:1 › production search finds the tutorial and navigates under the base path (524ms)
+  ✓  10 [mobile] › tests/site.spec.ts:34:1 › artifact tabs support keyboard navigation and show actual values (572ms)
+  ✓  11 [mobile] › tests/site.spec.ts:52:1 › study pages load figures and retain their scientific limits (159ms)
+  ✓  12 [mobile] › tests/site.spec.ts:65:1 › skip link and mobile menu are usable (194ms)
+  ✓  13 [mobile] › tests/site.spec.ts:79:1 › flagship video decodes, plays, seeks and loads English captions (1.4s)
+  ✓  14 [mobile] › tests/site.spec.ts:101:1 › every canonical page renders inside the viewport with no script errors (1.2s)
+
+  14 passed (10.9s)

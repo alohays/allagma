@@ -56,6 +56,12 @@ for (const page of pages) {
 const help = execFileSync('python3', ['tools/cli_reference.py'], { cwd: root, encoding: 'utf8' });
 await fs.mkdir(path.join(generated, 'reference'), { recursive: true });
 await fs.writeFile(path.join(generated, 'reference/commands.md'), '---\ntitle: All command flags\nslug: reference/commands\n---\n\n' + help);
-await fs.cp(path.join(root, 'media'), path.join(assets, 'media'), { recursive: true });
+const mediaRoot = path.join(root, 'media');
+await fs.cp(mediaRoot, path.join(assets, 'media'), {
+  recursive: true,
+  // Editable capture sources live in Git. The workbench requires its local
+  // Python server and must never masquerade as a working static-site feature.
+  filter: file => path.relative(mediaRoot, file).split(path.sep)[0] !== 'source',
+});
 await fs.writeFile(path.join(assets, 'content-sources.json'), JSON.stringify(receipts, null, 2) + '\n');
 console.log(`Synced ${pages.length} canonical pages, command help, and selected media.`);

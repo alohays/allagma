@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
+import { readFileSync } from 'node:fs';
 
 test('landing page works in both themes without horizontal overflow', async ({ page }, info) => {
   await page.goto('./');
@@ -73,4 +74,39 @@ test('skip link and mobile menu are usable', async ({page}, info) => {
     await page.getByRole('link', {name:'Start a native study',exact:true}).click();
     await expect(page).toHaveURL(/guides\/native-study\/$/);
   }
+});
+
+test('flagship video decodes, plays, seeks and loads English captions', async ({page}, info) => {
+  await page.goto('demo/');
+  const video = page.locator('video');
+  await expect(video).toHaveAttribute('preload','none');
+  await video.evaluate(async (v:HTMLVideoElement) => { v.muted=true; await v.play(); });
+  await expect.poll(() => video.evaluate((v:HTMLVideoElement) => v.currentTime)).toBeGreaterThan(.5);
+  const decoded = await video.evaluate((v:HTMLVideoElement) => ({duration:v.duration,width:v.videoWidth,height:v.videoHeight,error:v.error?.code||null,tracks:v.textTracks.length}));
+  expect(decoded.duration).toBeGreaterThanOrEqual(60);
+  expect(decoded.duration).toBeLessThanOrEqual(120);
+  expect(decoded.width).toBe(1600);
+  expect(decoded.height).toBe(900);
+  expect(decoded.error).toBeNull();
+  expect(decoded.tracks).toBe(1);
+  await expect.poll(() => video.evaluate((v:HTMLVideoElement) => v.textTracks[0]?.cues?.length||0)).toBeGreaterThan(10);
+  await video.evaluate((v:HTMLVideoElement) => { v.currentTime=85; });
+  await expect.poll(() => video.evaluate((v:HTMLVideoElement) => v.currentTime)).toBeGreaterThan(85);
+  await page.screenshot({path:`test-results/${info.project.name}-video.png`});
+  await video.evaluate((v:HTMLVideoElement) => v.pause());
+  await page.getByRole('link',{name:'Read the transcript',exact:true}).click();
+  await expect(page.getByRole('heading',{level:1})).toHaveText('Video transcript');
+});
+
+test('every canonical page renders inside the viewport with no script errors', async ({page}) => {
+  const pages: {route:string}[] = JSON.parse(readFileSync('content-map.json','utf8'));
+  const errors:string[]=[];
+  page.on('pageerror', error=>errors.push(error.message));
+  for (const entry of pages) {
+    const response=await page.goto(entry.route+'/');
+    expect(response?.status(), entry.route).toBe(200);
+    await expect(page.getByRole('heading',{level:1})).toBeVisible();
+    expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),entry.route).toBe(true);
+  }
+  expect(errors).toEqual([]);
 });

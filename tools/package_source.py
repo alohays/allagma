@@ -18,6 +18,8 @@ from allagma.bundles import source_inventory  # noqa: E402
 
 
 def build(output: Path):
+    if output.exists() and any(output.iterdir()):
+        raise SystemExit("Use a new output directory; existing release assets are retained")
     output.mkdir(parents=True, exist_ok=True)
     version = json.loads((ROOT / "release.json").read_text())["release"]
     name = f"allagma-{version}-source"
@@ -47,6 +49,7 @@ def build(output: Path):
                 manifest[path] = {"bytes": len(data), "sha256": hashlib.sha256(data).hexdigest()}
     head = subprocess.check_output(["git", "-C", str(ROOT), "rev-parse", "HEAD"], text=True).strip()
     result = {"format": "allagma-source-distribution-v1", "release": version, "git_head": head,
+              "tracked_worktree_changes": bool(subprocess.check_output(["git", "-C", str(ROOT), "diff", "HEAD", "--name-only"], text=True).strip()),
               "archive": target.name, "bytes": target.stat().st_size,
               "sha256": hashlib.sha256(target.read_bytes()).hexdigest(), "files": manifest,
               "scope": "Core, all catalog modules, offline example, small native-study inputs, and conformance. No retained scientific archives, site toolchain, third-party study adaptations or wheels. Documentation links target the repository; use the site/full source for all guides.",

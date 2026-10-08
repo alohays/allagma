@@ -1,0 +1,54 @@
+{
+  "status": "pass",
+  "scope": "Controller arithmetic from every original hex mask, independent of the study modules; all 24 confirmation raw files bitwise match replay. Verifies numerical summaries and interval arithmetic, not interval coverage, PRNG independence or peer review. Native sessions still timed out before final package-index completion.",
+  "confirmation_seeds": 24,
+  "rows_decoded": 98304,
+  "checks": {
+    "mean16": {
+      "estimate": 0.06261920928955078,
+      "se": 0.0002803891105421143,
+      "interval_arithmetic": "pass"
+    },
+    "mean64": {
+      "estimate": 0.015674829483032227,
+      "se": 6.947545562993556e-05,
+      "interval_arithmetic": "pass"
+    },
+    "biased16": {
+      "estimate": 0.12468814849853516,
+      "se": 0.00045341632170881085,
+      "interval_arithmetic": "pass"
+    },
+    "biased64": {
+      "estimate": 0.07831120491027832,
+      "se": 0.000199840208770199,
+      "interval_arithmetic": "pass"
+    },
+    "gap16": {
+      "estimate": 0.062068939208984375,
+      "se": 0.0003265358770947576,
+      "interval_arithmetic": "pass"
+    },
+    "gap64": {
+      "estimate": 0.0626363754272461,
+      "se": 0.0001898652098328837,
+      "interval_arithmetic": "pass"
+    },
+    "mean_64_minus_16": {
+      "estimate": -0.046944379806518555,
+      "se": 0.00027279988747001507,
+      "interval_arithmetic": "pass"
+    },
+    "biased_64_minus_16": {
+      "estimate": -0.046376943588256836,
+      "se": 0.0004290490310902675,
+      "interval_arithmetic": "pass"
+    },
+    "gap_64_minus_16": {
+      "estimate": 0.0005674362182617188,
+      "se": 0.00031591972526701524,
+      "interval_arithmetic": "pass"
+    }
+  },
+  "result_sha256": "5c1bf1a8c47e856e4c37c185d14be1053727533a4b3a28b95590cb2c28577b5a"
+}

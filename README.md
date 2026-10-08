@@ -3,15 +3,14 @@
 **Research workflows for coding agents.** Pin the plan, retain every attempt,
 and connect claims to evidence you can inspect.
 
-<picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="media/workflow-dark-mobile.svg">
-  <source media="(max-width: 600px)" srcset="media/workflow-light-mobile.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="media/workflow-dark.svg">
-  <img src="media/workflow-light.svg" alt="Allagma follows one research question through a brief, pinned plan, retained attempts, and evidence-linked findings." width="1000">
-</picture>
-
 [First study](docs/guides/first-study.md) · [Native agent workflow](docs/guides/native-study.md) ·
 [Real studies](docs/showcase/index.md) · [Contribute](CONTRIBUTING.md)
+
+[![Watch the 100-second Allagma workflow: a research brief, real execution, and a checkable record.](media/demo/poster.png)](media/demo/allagma-workflow.mp4)
+
+[Watch the full demo](media/demo/allagma-workflow.mp4) · [Transcript](media/demo/transcript.md) ·
+[Captions](media/demo/allagma-workflow.en.vtt). Actual offline execution, followed
+by clearly labeled retained native-study results; no accelerated computation.
 
 A coding agent can write an experiment. Allagma gives it a reusable process for
 leaving a checkable research record: which question it asked, which methods it
@@ -100,6 +99,13 @@ A deterministic audit is not independent scientific peer review. See
 and [resource limits](docs/resource-supervision.md) before extending a claim.
 
 ## Understand and extend it
+
+<picture>
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="media/workflow-dark-mobile.svg">
+  <source media="(max-width: 600px)" srcset="media/workflow-light-mobile.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="media/workflow-dark.svg">
+  <img src="media/workflow-light.svg" alt="Allagma follows one research question through a brief, pinned plan, retained attempts, and evidence-linked findings." width="1000">
+</picture>
 
 Start with [the concepts](docs/concepts.md). Methods are portable Agent Skills;
 recipes compose them; adapters connect them to a host. A campaign pins its exact
