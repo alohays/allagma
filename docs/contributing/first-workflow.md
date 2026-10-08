@@ -7,14 +7,18 @@ complete outcome; actual GitHub objects and pushed-head checks are required.
 
 ## Current state
 
-GitHub inspection on 9 October 2026 found **no issues**, one open
-[Dependabot PR](https://github.com/alohays/allagma/pull/1), no milestone,
-disabled Pages and Discussions, and **public** visibility. Public visibility
-conflicts with the active goal's private-visibility instruction. A user-input
-question is pending: restore private visibility or retain the current public
-setting. No visibility change, GitHub backlog write or implementation-branch
-push has been made while that consequential choice is unresolved. The
-[historical-audio blocker](../launch/owner-actions.md) remains uncleared.
+Initial GitHub inspection on 9 October 2026 found no issues, one open
+[Dependabot PR](https://github.com/alohays/allagma/pull/1), no milestone, disabled
+Pages/Discussions and public visibility. Work was held while the earlier
+private-only instruction conflicted with that setting.
+
+The owner has now explicitly confirmed that visibility is intentional, instructed
+us to **keep it public**, and authorized contributor publication, Pages, repository
+entry-point settings and a pinned welcome Discussion. The previous visibility
+question is resolved; the [updated goal](../../GOAL.md#public-contributor-workflow-and-documentation-activation--9-october-2026)
+records this authorization without erasing the earlier decisions. Historical
+audio rights remain an unresolved maintainer issue, separate from this authorized
+public activation. No PR merge, new release or external outreach is authorized.
 
 ## Implemented locally
 
@@ -59,7 +63,7 @@ figure description; Python 3.13/Linux offline qualification; and the
 maintainer-owned audio blocker. The three small tasks are intended to remain
 unassigned, with `good first issue` only on the two bounded documentation tasks.
 
-After visibility is resolved, recheck GitHub for duplicates, publish the label
+Recheck GitHub for duplicates, then publish the label
 set/milestone/issues and pin the contributor overview. Push each implementation
 branch, open its linked draft PR, verify exact pushed-head CI and repair any
 failures. Publish the separate Dependabot recommendation. Connect the actual

@@ -204,3 +204,47 @@ verified. Handoff must link every created/updated issue and PR, recommend a
 review order and identify exact unresolved owner decisions. The
 [contributor workflow ledger](docs/contributing/first-workflow.md) records current
 progress and evidence without replacing these requirements.
+
+## Public contributor workflow and documentation activation — 9 October 2026
+
+The owner intentionally made `alohays/allagma` public and explicitly authorizes
+keeping it public. This supersedes the earlier private-only and deferred-
+publication restrictions for the following actions; no visibility reconfirmation
+is required. Preserve the historical decisions and evidence as historical facts.
+
+Reuse the three local implementation branches, seven issue drafts and prepared
+contributor materials. Publish the labels, focused milestone, task issues and a
+pinned contributor overview; leave the three smaller tasks unclaimed. Push the
+three `codex/contributor-*` implementation branches, open linked draft PRs
+against main, verify exact pushed-head CI and repair relevant failures. Record
+the separate Dependabot review. Keep all PRs unmerged for owner review.
+
+Enable GitHub Pages with Actions, set `ALLAGMA_PUBLIC_LAUNCH=true`, dispatch the
+existing workflow with deployment enabled and complete an actual successful
+deployment at `https://alohays.github.io/allagma/`. Verify the unauthenticated
+live site's navigation/deep links, search, desktop/mobile layouts, keyboard
+access, figures, video playback/seeking/captions and downloads. Verify the public
+README video and links, and run the documented lightweight anonymous clone and
+complete offline first study in a clean directory. Retain concise evidence of
+the deployed source commit, checks and any repairs.
+
+Set the repository website to the working docs URL, upload the prepared social
+preview, enable private vulnerability reporting and Discussions with Q&A, Show
+and tell, and Ideas. Publish and pin one concise welcome linking the tutorial,
+support, contributor overview and available tasks. Update README, roadmap,
+contributor guidance, starter tasks and community/status documents to the actual
+public URLs and GitHub objects. Public docs must describe main's capabilities
+and clearly identify draft-PR features as proposed. Repository settings, these
+issues/comments, draft PRs, the welcome Discussion, pushes, documentation/
+community/deployment commits to main and Pages deployment are authorized.
+New releases, PR merges and external outreach remain outside this goal.
+
+Historical-audio rights remain an unresolved maintainer issue. Public visibility
+is not clearance. Preserve history and frozen evidence, serve only the current
+cleared media on Pages, and do not treat that issue as a renewed private-only
+gate for this authorized work. Preserve the offline standard-library core,
+study-owned science, GUI model selection and existing model-usage limits. No new
+scientific campaign is required. Continue through publication, live verification
+and repairs until the contributor workflow and public site operate. Final
+handoff must link the docs, every issue/PR/Discussion, deployment/CI evidence,
+review order and exact remaining owner decisions.
