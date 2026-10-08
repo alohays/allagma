@@ -1,0 +1,83 @@
+{
+  "adapter_sha256": "490c37453da590302861f980f46ef16833ed038a9f11af064270d1c2618f1a7a",
+  "authentication": "Existing Codex auth file referenced locally; no credentials in evidence",
+  "cli_sha256": "f7dd31c19005846f37f1eda27b2bd61bf5b5e173f2b7369dcc71743ae13c7af4",
+  "cli_version": "offline-fixture-no-model",
+  "command": [
+    "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/postprocess-checks/native-final-storage-before/fixture-cli",
+    "--strict-config",
+    "--no-daemon",
+    "-a",
+    "never",
+    "exec",
+    "--ignore-rules",
+    "--skip-git-repo-check",
+    "--json",
+    "-C",
+    "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/postprocess-checks/native-final-storage-before/workspace",
+    "-o",
+    "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/postprocess-checks/native-final-storage-before/runtime/final.txt",
+    "-"
+  ],
+  "controlled_settings": {
+    "default_permissions": "allagma-eval",
+    "features": {
+      "multi_agent": false,
+      "multi_agent_v2": false
+    },
+    "model": "offline-fixture-no-model",
+    "permissions": {
+      "allagma-eval": {
+        "extends": ":workspace",
+        "filesystem": {
+          "/Applications/ChatGPT.app": "read",
+          "/Library/Frameworks/Python.framework": "read",
+          "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/postprocess-checks/native-final-storage-before/runtime": "deny",
+          "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/postprocess-checks/native-final-storage-before/workspace": "write",
+          "/usr/local/bin": "read",
+          ":minimal": "read",
+          ":root": "deny",
+          ":slash_tmp": "deny",
+          ":tmpdir": "write"
+        },
+        "network": {
+          "enabled": false
+        }
+      }
+    },
+    "project_doc_max_bytes": 0,
+    "web_search": "disabled"
+  },
+  "disabled_skill_count": 24,
+  "ended_at": "2026-10-08T06:57:20.668882+00:00",
+  "events_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "exit_code": 0,
+  "fresh_session": true,
+  "isolation": "Native allagma-eval permission profile; tool reads restricted, command network disabled",
+  "malformed_event_lines": 0,
+  "model_observations": [],
+  "peak_rss_bytes": 966656,
+  "peak_storage_bytes": 3537,
+  "pid": 72155,
+  "project_model_config_written": false,
+  "prompt_sha256": "77ad12c17a18e6cb7ff297e388aeab22f36e5dd5b2db86ea138a54ab75a968c0",
+  "resume": false,
+  "rss_limit_bytes": 200000000,
+  "runtime": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/postprocess-checks/native-final-storage-before/runtime",
+  "runtime_config_after_sha256": "101bd98460052749ecfd5eefb4fb910ccb3d63c6b1e61aaefaa880af6a2b8cc7",
+  "runtime_config_sha256": "101bd98460052749ecfd5eefb4fb910ccb3d63c6b1e61aaefaa880af6a2b8cc7",
+  "runtime_project_trust_entries": {},
+  "settings": {
+    "model": "offline-fixture-no-model"
+  },
+  "settings_source": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/postprocess-checks/native-final-storage-before/fixture-config.toml",
+  "settings_unchanged": true,
+  "started_at": "2026-10-08T06:57:20.041326+00:00",
+  "status": "completed",
+  "storage_limit_bytes": 100000,
+  "thread_ids": [],
+  "timeout_seconds": 10,
+  "usage": [],
+  "wall_seconds": 0.23073729197494686,
+  "workspace": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/postprocess-checks/native-final-storage-before/workspace"
+}

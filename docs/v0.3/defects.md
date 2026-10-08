@@ -79,3 +79,14 @@ retain that final measurement, and change a nominal successful result to
 `storage_exceeded` when appropriate. Preserve existing failure reasons and
 sampling limitations. The same actual-worker regression must then detect the
 violation, alongside the affected offline resource checks and final acceptance.
+
+The native session adapter has the analogous gap in its one-second storage
+sampling loop. A separately labeled offline fake-CLI fixture reproduces
+`completed` with 203,539 final bytes against a 100,000-byte cap. Its actual local
+process and controlled interleaving test only the adapter's lifecycle logic;
+they are not a hosted model run or native-host qualification. Evidence is at
+`postprocess-checks/native-final-storage-before/`. The correction must include
+this adapter's final workspace-plus-runtime footprint, with the same before/after
+fixture. Current terminal totals for r01–r11 are within their assigned limits;
+only byte totals, not private runtime content, are retained in
+`postprocess-checks/final-native-storage-r01-r11.json`.
