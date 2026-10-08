@@ -7,9 +7,11 @@ source/evidence files, and verifies they did not change during collection.
 
 Archives are divided into 32 MiB parts so individual files fit ordinary Git
 transport. The index records each part and the complete archive SHA-256, plus
-every retained file's hash and size. Virtual environments, caches and transient
-computation queues are excluded; authoritative computation history is retained
-separately by the controller. A missing or inconsistent candidate manifest is
+every retained file's hash and size. Virtual environments, caches and mutation
+locks are excluded. Terminal computation requests, responses and logs are
+retained because candidate manifests and reviews can link to these files.
+Authoritative computation history is also retained separately by the controller.
+A missing or inconsistent candidate manifest is
 reported as an error, not converted into evidence of completion.
 
 Supplied wheelhouse files are retained as exact filename/size/hash references.
@@ -31,3 +33,28 @@ environment from the package index. Dependency acquisition is setup work; all
 scientific execution remains local. Restoration verifies exact file bytes but
 does not establish scientific reproducibility. Execute the delivered full-study
 and raw-data recomputation commands separately and retain their actual outcomes.
+
+## Historical terminal-queue omission
+
+The first transport version excluded `.compute/`. Inspection of r04 showed that
+its manifest and review directly reference terminal receipts there. This was a
+controller transport omission, not a missing candidate artifact. The candidate
+bytes were still present and their authoritative counterparts were retained.
+
+For the already collected r01–r04 archives, retain the omitted bytes without
+replacing any original index or archive part:
+
+```sh
+python3 evals/research-v0.3/retention.py supplement \
+  --source /path/to/finished-candidate --destination /path/to/existing-package
+```
+
+The supplement verifies all originally indexed candidate files before copying,
+binds itself to the original package index, and records each added file's hash.
+`restore` automatically hydrates and checks this supplement. New collections
+include the terminal queue directly. Start a new broker for any reproduction;
+it ignores requests already present when it starts, so retained historical
+requests are evidence, not requests to execute again.
+
+The regression check `python3 evals/research-v0.3/test_retention.py -v` covers
+new collection, restoration of historical supplements and altered-byte rejection.

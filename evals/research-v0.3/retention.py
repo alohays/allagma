@@ -30,7 +30,7 @@ def sha(path):
 
 def paths(root):
     for directory,dirs,files in os.walk(root,followlinks=False):
-        dirs[:]=[name for name in dirs if name not in ('.git','.tmp','.compute','__pycache__','.cache')
+        dirs[:]=[name for name in dirs if name not in ('.git','.tmp','__pycache__','.cache')
                  and not name.startswith('.venv') and not (Path(directory)/name/'pyvenv.cfg').exists()]
         if any((Path(directory)/name).is_symlink() for name in dirs):
             raise ValueError('Unexpected retained directory symlink: '+directory)
@@ -78,9 +78,47 @@ def collect(source,destination):
     result={'format':'allagma-retained-package-v1','source':str(source),'archive_sha256':archive_sha,'parts':parts,
             'files':included,'external_wheels':wheels,'artifact_manifest_errors':manifest_errors,
             'scope':'Verbatim artifacts/source; software wheels require exact-hash hydration. No claim of scientific completion.',
-            'excluded':'Virtual environments, caches, transient compute queues and mutation locks.'}
+            'excluded':'Virtual environments, caches and mutation locks. Terminal compute queues are retained as evidence.'}
     (destination/'package-index.json').write_text(json.dumps(result,indent=2,sort_keys=True)+'\n')
     return {'retained_files':len(included),'wheel_files':len(wheels),'archive_parts':len(parts),'manifest_errors':manifest_errors}
+
+
+def confined(root,name):
+    relative=Path(name)
+    if relative.is_absolute() or '..' in relative.parts:
+        raise ValueError('Invalid retained path: '+name)
+    path=(root/relative).resolve()
+    if root not in path.parents:raise ValueError('Retained path escapes package: '+name)
+    return path
+
+
+def supplement(source,package):
+    """Add omitted terminal-queue bytes without replacing historical archives."""
+    source,package=Path(source).resolve(),Path(package).resolve()
+    index=json.loads((package/'package-index.json').read_text())
+    output=package/'terminal-queue'
+    receipt=package/'terminal-queue-index.json'
+    if output.exists() or receipt.exists():raise ValueError('Terminal queue supplement already exists')
+    for name,entry in {**index['files'],**index['external_wheels']}.items():
+        if sha(confined(source,name))!=entry['sha256']:
+            raise ValueError('Original candidate changed before queue retention: '+name)
+    entries={}
+    queue=source/'.compute'
+    if queue.is_symlink():raise ValueError('Unexpected queue symlink')
+    for path in sorted(paths(queue)):
+        name=str(path.relative_to(source))
+        if name in index['files']:continue
+        target=confined(output.resolve(),name)
+        entry={'sha256':sha(path),'bytes':path.stat().st_size}
+        target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(path,target)
+        if sha(target)!=entry['sha256'] or sha(path)!=entry['sha256']:
+            raise ValueError('Queue changed during retention: '+name)
+        entries[name]=entry
+    result={'format':'allagma-terminal-queue-supplement-v1','files':entries,
+            'package_index_sha256':sha(package/'package-index.json'),
+            'scope':'Verbatim terminal request/response/log bytes omitted by the original transport. No candidate edit, new execution or scientific repair.'}
+    receipt.write_text(json.dumps(result,indent=2,sort_keys=True)+'\n')
+    return {'supplemental_files':len(entries),'scope':result['scope']}
 
 
 def restore(package,destination,*,wheel_cache=None,download_wheels=False):
@@ -115,17 +153,35 @@ def restore(package,destination,*,wheel_cache=None,download_wheels=False):
                                 '--dest',str(path.parent),project+'=='+version],check=True)
             else:raise ValueError('Exact wheel unavailable; supply a cache or explicitly enable download: '+filename)
             if not path.exists() or sha(path)!=entry['sha256']:raise ValueError('Downloaded wheel identity differs: '+filename)
-    for name,entry in {**index['files'],**index['external_wheels']}.items():
+    supplemental={}
+    receipt=package/'terminal-queue-index.json'
+    if receipt.exists():
+        addition=json.loads(receipt.read_text())
+        if addition['package_index_sha256']!=sha(package/'package-index.json'):
+            raise ValueError('Terminal queue supplement targets a different archive index')
+        supplemental=addition['files']
+        for name,entry in supplemental.items():
+            if not name.startswith('.compute/') or name in index['files'] or name in index['external_wheels']:
+                raise ValueError('Unexpected supplemental path')
+            source=confined((package/'terminal-queue').resolve(),name)
+            target=confined(destination,name)
+            if not source.is_file() or sha(source)!=entry['sha256']:
+                raise ValueError('Terminal queue supplement changed: '+name)
+            target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(source,target)
+    for name,entry in {**index['files'],**index['external_wheels'],**supplemental}.items():
         path=destination/name
         if not path.is_file() or sha(path)!=entry['sha256']:raise ValueError('Restored file differs: '+name)
-    return {'status':'pass','restored_files':len(index['files'])+len(index['external_wheels']),
+    return {'status':'pass','restored_files':len(index['files'])+len(index['external_wheels'])+len(supplemental),
+            'terminal_queue_supplement_files':len(supplemental),
             'scope':'Exact file restoration and dependency hydration; execution/recomputation are separate checks'}
 
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('operation',choices=['collect','restore'])
+    parser=argparse.ArgumentParser();parser.add_argument('operation',choices=['collect','supplement','restore'])
     parser.add_argument('--source',type=Path,required=True);parser.add_argument('--destination',type=Path,required=True)
     parser.add_argument('--wheel-cache',type=Path);parser.add_argument('--download-wheels',action='store_true')
     args=parser.parse_args()
-    result=collect(args.source,args.destination) if args.operation=='collect' else restore(args.source,args.destination,wheel_cache=args.wheel_cache,download_wheels=args.download_wheels)
+    if args.operation=='collect':result=collect(args.source,args.destination)
+    elif args.operation=='supplement':result=supplement(args.source,args.destination)
+    else:result=restore(args.source,args.destination,wheel_cache=args.wheel_cache,download_wheels=args.download_wheels)
     print(json.dumps(result,indent=2))
