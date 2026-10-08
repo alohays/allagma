@@ -49,6 +49,11 @@ the small final MP4 plus caption/transcript/provenance assets. The movie's diges
 and original footage digest are recorded; regeneration may differ with browser,
 font, voice and machine timing versions. Scientific values must still verify.
 
+The public `capture-state.json` preview omits the local execution-directory
+field. Its source digest and this transformation are recorded in video
+provenance. The original state and scientific values remain unchanged in the
+capture directory; do not edit them to remove local metadata.
+
 ## Editing rules
 
 The current film is continuous, with no accelerated computation. Only synthetic

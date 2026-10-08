@@ -54,5 +54,12 @@
     }
   ],
   "software": "Chromium/Playwright actual browser capture, Allagma CLI, macOS say, FFmpeg H.264/AAC",
-  "publication": "prepared locally, not a public upload"
+  "publication": "prepared locally, not a public upload",
+  "public_preview": {
+    "capture-state.json": {
+      "source_sha256": "62f234c61b1e234c6ac26650df5ff0fe951bf23a1697e87c0318aafa0d77edd1",
+      "sha256": "78c2ab41763fcd485c059fe06efe6661fb22524dc08a904d6c43ab142eb2377c",
+      "transformation": "Omit the local execution-directory field. Preserve scientific values, attempts, claims, audits and command-status summaries. Original state retained in the capture directory."
+    }
+  }
 }
