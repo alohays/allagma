@@ -70,3 +70,20 @@ inside frozen evaluation packages and the separately licensed EMA figure in
 the film. Editable identity graphics are original. The documentation build
 toolchain is isolated from the Python core. No account authentication files,
 private runtime homes or credentials are selected for the site or release assets.
+
+## Final implementation review
+
+The [complete historical scan](evidence/history-review-final-source.json)
+through `2a7b488` covers 66 commits, 7,668 blob versions and 54,889 archive
+members, with no credential-pattern matches or unhandled archive errors.
+The [subsequent delta review](evidence/history-review-delta.json) covers the
+later narration correction and sparse-checkout guidance. Its two email-pattern
+matches are a Playwright filename and accidental compressed-video bytes, not
+contact information. Original source/evaluation/study trees remain byte-identical
+to the qualified implementation baseline.
+
+The built site was separately checked for the owner's absolute home-directory
+prefix, with no matches. Curated capture-state previews omit that operational
+field and record the transformation; raw capture evidence and the full Git
+history remain retained. The authoritative limitations of pattern scanning and
+the accepted historical metadata exposures still apply.

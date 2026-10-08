@@ -1,0 +1,24 @@
+{
+  "format": "allagma-source-distribution-v1",
+  "release": "0.3.0rc2",
+  "git_head": "4e673594ff6de6d0829906255525fc2b711671de",
+  "tracked_worktree_changes": false,
+  "archive": "allagma-0.3.0rc2-source.tar.gz",
+  "bytes": 133500,
+  "sha256": "78017221540fda56d72a91cab54a36a26b192f211f3400dfa3d08e8a21cf428d",
+  "scope": "Core, all catalog modules, offline example, small native-study inputs, and conformance. No retained scientific archives, site toolchain, third-party study adaptations or wheels. Documentation links target the repository; use the site/full source for all guides.",
+  "publication": "prepared-locally-not-published",
+  "qualification": {
+    "status": "pass",
+    "tests": 113,
+    "milestones": {
+      "I1": "pass",
+      "I2": "pass",
+      "I3": "pass",
+      "I4": "pass",
+      "I5": "pass"
+    },
+    "acceptance_sha256": "a6d841f9fe5d4149602b02adeeadec60cc3655881bb92494d84ad0021bf117ec",
+    "scope": "Full I1\u2013I5 acceptance executed from an independently extracted compact source archive; all 113 tests pass without skips."
+  }
+}

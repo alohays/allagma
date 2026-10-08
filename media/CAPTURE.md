@@ -10,7 +10,7 @@ The final EMA chapter explicitly reuses retained r07 results.
 Use Python 3.11+, Node 22.12+, the site's locked development dependencies,
 Chromium from Playwright, and FFmpeg/ffprobe. Narration rendering additionally
 uses macOS `say` with its Samantha voice. No API account, remote rendering,
-scientific dependency installation or GPU is used by the offline capture.
+scientific dependency installation or GPU is required for the offline capture.
 
 If you began with the small quickstart checkout, expand it from the repository
 root before using the capture tools:

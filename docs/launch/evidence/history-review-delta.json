@@ -1,0 +1,70 @@
+{
+  "base_full_history_scan": "2a7b48886f6bac322e6b836da2657d468f4c1175",
+  "head": "4e673594ff6de6d0829906255525fc2b711671de",
+  "scope": "All changed current blobs after the complete historical scan; intervening commits inspected separately by git diff. Narration, captions, rendering metadata and sparse-checkout documentation changes only.",
+  "files": {
+    "CONTRIBUTING.md": {
+      "sha256": "e115326f93420652a820fb2b4d7aa97aac55da891e2272b5f14848000d2f68d4",
+      "bytes": 4057
+    },
+    "media/CAPTURE.md": {
+      "sha256": "6cb4ce7883fe33b4dd3ed9e9cc23b64fd9576ce5072b592770d342592738c208",
+      "bytes": 4475
+    },
+    "media/demo/allagma-workflow.en.srt": {
+      "sha256": "a0a63b8c101007e960b3da413db9aff8ff4c1ca24d467d14a762b50ddfefbae0",
+      "bytes": 2234
+    },
+    "media/demo/allagma-workflow.en.vtt": {
+      "sha256": "5b57811cc0e5cf3e838d29192b4d4d2977a0eedf8ce507c95bcc40a38a760b67",
+      "bytes": 2242
+    },
+    "media/demo/allagma-workflow.mp4": {
+      "sha256": "1c69da3505a15cfe490d346c81f50b0e0339478865d6259416a20b44c6462a9e",
+      "bytes": 2895552
+    },
+    "media/demo/capture-timeline.json": {
+      "sha256": "e4aa31aae5aa19c549897fb550535d1cf243769da988f43c742e35246b7c9511",
+      "bytes": 1815
+    },
+    "media/demo/provenance.json": {
+      "sha256": "7ceaedf138dbf407e685e444726f10839c59e2ceec5f6203b4cad851fbf75932",
+      "bytes": 2791
+    },
+    "media/demo/transcript.md": {
+      "sha256": "6e168c6df68023b6a628696c9e70fa5b86d4b193a1c8e13b044a30b86a23cc52",
+      "bytes": 2846
+    },
+    "media/source/scenes.json": {
+      "sha256": "db91c299417e522b85c6c6331e7635538b65f0665fbd8256bbed1015cd158766",
+      "bytes": 2970
+    },
+    "site/README.md": {
+      "sha256": "dd154334e85b67178e4f664c7c17894ecf11f6b2f575f75351589de1b2d80592",
+      "bytes": 2222
+    },
+    "site/src/components/StudyExplorer.astro": {
+      "sha256": "2e6b4009c45a1cd56f2f2d61c5c376225c26b48b74f7539fb6c8d3307abc5ac8",
+      "bytes": 8047
+    },
+    "tools/render_demo.py": {
+      "sha256": "4f383b2f5bb87d24bff0ed7bce5739d5e4c9271f47fae47916616f9d44a8f4a6",
+      "bytes": 8084
+    }
+  },
+  "findings": [
+    {
+      "path": "media/demo/allagma-workflow.mp4",
+      "kind": "email",
+      "count": 1,
+      "disposition": "Accidental short ASCII match inside compressed video bytes, not contact metadata"
+    },
+    {
+      "path": "media/demo/capture-timeline.json",
+      "kind": "email",
+      "count": 1,
+      "disposition": "Playwright page@...webm filename, not an email address"
+    }
+  ],
+  "credential_pattern_matches": 0
+}

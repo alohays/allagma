@@ -1,0 +1,26 @@
+{
+  "category_counts": {
+    "email": 3962,
+    "home_path": 30367
+  },
+  "commits": 66,
+  "counts": {
+    "archive_members": 54889,
+    "binary_contents_pattern_scanned": 10071,
+    "blob_versions": 7668,
+    "commit_versions": 66,
+    "duplicate_contents": 31550,
+    "git_objects": 12514,
+    "gzip_members": 91,
+    "tar_archives": 19,
+    "unique_bytes": 8809554191,
+    "unique_contents": 31164,
+    "zip_archives": 934
+  },
+  "errors": [],
+  "head": "2a7b48886f6bac322e6b836da2657d468f4c1175",
+  "limitations": "Pattern review cannot prove absence of secrets or certify legal rights. Binary files are pattern-scanned and ZIP/TAR members opened, but tensor/model/pickle contents are not executed. Review findings manually. Uncommitted files need a subsequent committed-tree scan.",
+  "multipart_archives": 12,
+  "scope": "All objects reachable from all local refs, including historical commit metadata; all distinct multipart TAR combinations in their commit trees. Pattern matches never export matched values.",
+  "seconds": 271.77965058293194
+}

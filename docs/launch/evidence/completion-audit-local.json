@@ -1,0 +1,153 @@
+{
+  "format": "allagma-launch-completion-audit-v1",
+  "source_commit": "4e673594ff6de6d0829906255525fc2b711671de",
+  "overall": "local_package_verified_remote_verification_pending",
+  "checks": [
+    {
+      "id": "L1",
+      "requirement": "Positioning, opening preview, concrete use cases and useful verified first result",
+      "status": "locally_verified",
+      "evidence": [
+        "README.md",
+        "docs/guides/first-study.md",
+        "docs/launch/evidence/clean-onboarding-initial.json",
+        "docs/launch/evidence/public-claim-check.json"
+      ],
+      "scope": ""
+    },
+    {
+      "id": "L2",
+      "requirement": "Original visual system, workflow, actual outputs, mobile and both themes",
+      "status": "locally_verified",
+      "evidence": [
+        "media/workflow-light.svg",
+        "media/workflow-dark.svg",
+        "media/workflow-light-mobile.svg",
+        "media/workflow-dark-mobile.svg",
+        "media/social-preview.png",
+        "media/evidence/provenance.json",
+        "docs/launch/evidence/desktop-light-home.png",
+        "docs/launch/evidence/mobile-dark-home.png"
+      ],
+      "scope": ""
+    },
+    {
+      "id": "L3",
+      "requirement": "Actual 60\u2013120 second film with captions, transcript, provenance, preview and repeatable editable sources",
+      "status": "locally_verified",
+      "evidence": [
+        "media/demo/allagma-workflow.mp4",
+        "media/demo/allagma-workflow.en.vtt",
+        "media/demo/allagma-workflow.en.srt",
+        "media/demo/transcript.md",
+        "media/demo/poster.png",
+        "media/demo/provenance.json",
+        "media/demo/capture-timeline.json",
+        "media/CAPTURE.md",
+        "media/source/workbench.html",
+        "media/source/scenes.json",
+        "site/scripts/capture-demo.mjs",
+        "tools/render_demo.py"
+      ],
+      "scope": "Continuous actual offline execution; clearly labeled retained EMA results. Synthetic narration edited in postproduction. Three negative seeds and one tied seed are stated accurately."
+    },
+    {
+      "id": "L4",
+      "requirement": "Starlight landing/search/tutorial/guides/reference/showcase/support/contribution with canonical content",
+      "status": "locally_verified",
+      "evidence": [
+        "site/astro.config.mjs",
+        "site/content-map.json",
+        "site/scripts/sync-content.mjs",
+        "docs/concepts.md",
+        "docs/cli.md",
+        "docs/showcase/index.md",
+        "docs/guides/troubleshooting.md",
+        "CONTRIBUTING.md",
+        "docs/host-support.md"
+      ],
+      "scope": "38 generated pages; Node toolchain separate from Python runtime."
+    },
+    {
+      "id": "L5",
+      "requirement": "Real Pages base path and gated, fork-safe automated builds/links/dependency/release checks",
+      "status": "locally_verified",
+      "evidence": [
+        ".github/workflows/docs.yml",
+        ".github/workflows/pages.yml",
+        ".github/workflows/conformance.yml",
+        ".github/workflows/links.yml",
+        ".github/workflows/release-check.yml",
+        ".github/dependabot.yml",
+        "docs/launch/evidence/sparse-ci-checkout.json"
+      ],
+      "scope": "Actual /allagma/ build and browser checks pass. Hosted Actions pending private push; Pages activation intentionally deferred."
+    },
+    {
+      "id": "L6",
+      "requirement": "Metadata, citation, roadmap, release notes, support/security, contribution forms and launch plans",
+      "status": "locally_verified",
+      "evidence": [
+        "CITATION.cff",
+        "ROADMAP.md",
+        "CHANGELOG.md",
+        "docs/releases/0.3.0rc2.md",
+        "SUPPORT.md",
+        "SECURITY.md",
+        ".github/ISSUE_TEMPLATE/bug_report.yml",
+        ".github/ISSUE_TEMPLATE/question.yml",
+        ".github/PULL_REQUEST_TEMPLATE.md",
+        "docs/contributing/starter-tasks.md",
+        "docs/launch/community-plan.md",
+        "docs/launch/announcement.md",
+        "docs/launch/evidence/repository-settings.json"
+      ],
+      "scope": "Description/topics configured privately; social preview asset ready for later public upload. Discussions/releases/announcements remain unactivated."
+    },
+    {
+      "id": "L7",
+      "requirement": "Publication review, licenses, immutable history and practical distribution",
+      "status": "locally_verified",
+      "evidence": [
+        "docs/launch/publication-review.md",
+        "docs/launch/evidence/history-review-final-source.json",
+        "docs/launch/evidence/license-inventory.json",
+        "THIRD_PARTY_NOTICES.md",
+        "site/scripts/vendor-notices.mjs",
+        "docs/launch/artifact-distribution.md",
+        "tools/package_source.py"
+      ],
+      "scope": "All reachable history through 2a7b488 recursively scanned; later narration/docs corrections reviewed as an explicit delta. Owner accepted specified metadata exposure; no secret-pattern matches. Scan is not an absence guarantee."
+    },
+    {
+      "id": "L8",
+      "requirement": "Actual execution, clean onboarding, production/browser/keyboard/search/media checks and repairs",
+      "status": "locally_verified",
+      "evidence": [
+        "docs/launch/evidence/source-distribution-final.json",
+        "docs/launch/evidence/acceptance/acceptance.json",
+        "docs/launch/evidence/acceptance-archive-check.json",
+        "docs/launch/evidence/browser-final.json",
+        "docs/launch/evidence/flagship-final-independent.json"
+      ],
+      "scope": "I1\u2013I5, 113 tests, clean extracted archive, 14 browser tests. Additional native onboarding probe retained valid science but timed out before its final index; this is documented and is not a claimed completed handoff."
+    },
+    {
+      "id": "L9",
+      "requirement": "Private preparation, runnable previews, coherent commits and exact later owner actions",
+      "status": "locally_verified",
+      "evidence": [
+        "docs/launch/owner-actions.md",
+        "site/README.md",
+        "GOAL.md"
+      ],
+      "scope": "Private push and hosted CI still to verify; no public activation authorized."
+    }
+  ],
+  "preserved_core_source_revision": "sha256:a7a67e09548e40442f2ff72ba63898f66e02368046132a183588ebebdbc1a196",
+  "limitations": [
+    "Automated accessibility and mobile emulation do not certify every assistive technology or physical device.",
+    "Public deployment and initial social/security/Discussions activation require the later owner launch.",
+    "The extra bounded native onboarding probe is an incomplete native handoff, separately documented from the completed frozen release qualification."
+  ]
+}
