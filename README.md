@@ -3,14 +3,17 @@
 **Research workflows for coding agents.** Pin the plan, retain every attempt,
 and connect claims to evidence you can inspect.
 
+https://github.com/user-attachments/assets/df7c556b-9251-4514-9fb2-ecacc2de9162
+
+**100 seconds, actual software.** A research brief becomes an executed study,
+a figure, an evidence-linked report, and recomputed results. The final chapter
+shows clearly labeled retained native-study results; no accelerated computation.
+
+[Download the demo](media/demo/allagma-workflow.mp4) · [Transcript](media/demo/transcript.md) ·
+[English captions](media/demo/allagma-workflow.en.vtt) · [Media sources and licenses](media/CAPTURE.md)
+
 [First study](docs/guides/first-study.md) · [Native agent workflow](docs/guides/native-study.md) ·
 [Real studies](docs/showcase/index.md) · [Contribute](CONTRIBUTING.md)
-
-[![Watch the 100-second Allagma workflow: a research brief, real execution, and a checkable record.](media/demo/poster.png)](media/demo/allagma-workflow.mp4)
-
-[Watch the full demo](media/demo/allagma-workflow.mp4) · [Transcript](media/demo/transcript.md) ·
-[Captions](media/demo/allagma-workflow.en.vtt). Actual offline execution, followed
-by clearly labeled retained native-study results; no accelerated computation.
 
 A coding agent can write an experiment. Allagma gives it a reusable process for
 leaving a checkable research record: which question it asked, which methods it

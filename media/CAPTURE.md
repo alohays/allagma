@@ -5,6 +5,28 @@ workbench. The workbench is a demonstration utility, not the native agent UI.
 It exposes two fixed commands and serves selected files on loopback only.
 The final EMA chapter explicitly reuses retained r07 results.
 
+## Inline playback in the README
+
+The README opens with the current film uploaded as a GitHub repository
+attachment. Its permanent `https://github.com/user-attachments/assets/...` URL
+occupies its own paragraph, which GitHub renders as an expanded video player.
+The [attachment receipt](demo/github-attachment.json) records the original MP4
+digest, repository and upload date. The committed MP4, transcript, captions and
+source/license notices remain the maintained distribution files.
+
+When replacing the film, upload the reviewed MP4 through the README editor's
+attachment control, put the returned permanent URL in the opening paragraph,
+and update the receipt. Verify playback on the repository's rendered README.
+GitHub's Markdown API can also verify the generated video element using the
+repository as its rendering context. Private rendering may return temporary
+signed media URLs: never commit those URLs or the unredacted rendered HTML.
+Use only the permanent attachment URL in maintained documents.
+
+Attachments uploaded against this private repository require repository access;
+this upload does not activate public visibility, publish a software release or
+clear the historical-audio launch blocker. See GitHub's
+[attachment documentation](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/attaching-files).
+
 ## Prerequisites
 
 Use Python 3.11+, Node 22.12+, the site's locked development dependencies,
