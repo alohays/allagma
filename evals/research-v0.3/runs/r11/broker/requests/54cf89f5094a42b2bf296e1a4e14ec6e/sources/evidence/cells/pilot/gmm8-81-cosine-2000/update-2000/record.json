@@ -1,0 +1,75 @@
+{
+  "ancestors": [
+    "pilot-gmm8-segment1"
+  ],
+  "arrays": "evidence/cells/pilot/gmm8-81-cosine-2000/update-2000/arrays.npz",
+  "attempt_id": "pilot-gmm8-segment2",
+  "config": "evidence/attempts/pilot-gmm8-segment2/config.json",
+  "dataset": "gmm8",
+  "device": "mps",
+  "generation_noise_sha256": "6253489d3bd56a9576f823fd4ad0259f5e306dfbf44a4eb6777a27405c69ad42",
+  "heldout_sha256": "297339cbb819d0134f7d6a8287bd3f833596fb8df459e3651008db9da4eeb270",
+  "initial_state": "evidence/inputs-retained/pilot/gmm8-81/initial.npz",
+  "initial_weights_sha256": "d6ea992952efc324effbbb7a735444c850eb21ef1468c49da19ba749eb0f42ca",
+  "metrics": {
+    "ema099": {
+      "covered_modes": 8,
+      "inlier_count": 1975,
+      "inlier_fraction": 0.96435546875,
+      "mode_counts": [
+        240,
+        238,
+        262,
+        247,
+        275,
+        218,
+        245,
+        250
+      ],
+      "sw1": 0.05572572627957046
+    },
+    "ema0999": {
+      "covered_modes": 8,
+      "inlier_count": 1704,
+      "inlier_fraction": 0.83203125,
+      "mode_counts": [
+        185,
+        229,
+        204,
+        233,
+        230,
+        220,
+        188,
+        215
+      ],
+      "sw1": 0.12263809384887768
+    },
+    "raw": {
+      "covered_modes": 8,
+      "inlier_count": 1976,
+      "inlier_fraction": 0.96484375,
+      "mode_counts": [
+        241,
+        239,
+        263,
+        249,
+        275,
+        213,
+        245,
+        251
+      ],
+      "sw1": 0.05535402150277295
+    }
+  },
+  "phase": "pilot",
+  "provenance": "evidence/inputs-retained/pilot/gmm8-81/provenance.json",
+  "retained_inputs": "evidence/inputs-retained/pilot/gmm8-81/training.npz",
+  "schedule": "cosine",
+  "seed": 81,
+  "source_revision": "pilot-662eb0ef8e5395ca",
+  "training_prefix_5000_sha256": "7a5272302804cfbabd3de11e02971504f22d4b09a085ec715b116fb26caef9f5",
+  "training_trace": "evidence/attempts/pilot-gmm8-segment2/trace.jsonl",
+  "trajectory_terminal_updates": 2000,
+  "updates": 2000,
+  "weights": "evidence/cells/pilot/gmm8-81-cosine-2000/update-2000/weights.npz"
+}

@@ -1,0 +1,29 @@
+{"event": "training_start", "first_update": 1, "config": {"phase": "confirmation", "dataset": "moons", "seed": 4004, "policy": "constant", "total": 10000, "stop": 10000, "attempt_id": "confirm-moons-4004-constant-10000", "root": "evidence", "device": "mps", "resume": null, "checkpoint_every": 2500, "source_revision": "science-v1-662eb0ef8e5395ca", "source_hashes": {"science.py": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1", "study.py": "651c3d4d0a39a9102b046e51b914e6703f3d25d36de7b99472e45db2a65e9f7f", "qualify.py": "92a5018003540ce133c8dc15f22a0b2d04ad68885f836a32defd4cc350dec3ec", "analyze.py": "30a524ea5b76f0d4f7b7fc929536b1a51e4e6e36aeddcc1f03389004135ffe18", "protocol.json": "c83368d15fa6696452a350fca4005d671388843be93d4e92783d3009d01060e4"}}, "inputs": {"dataset": "moons", "seed": 4004, "phase": "confirmation", "directory": "evidence/inputs-retained/confirmation/moons-4004", "initial_weights_sha256": "4f874d5dcd0ca90a33922430cab35812bd5976a5d1dfa1cdf2c59e758d47c645", "training_prefix_5000_sha256": "8e8a3c6c9025ea803cb565ea0f26e6ea9589b3302d7f2748ab48d01eda8c1040", "training_prefix_definition": "SHA256(noisy[:5000] float32 bytes || noise[:5000] float32 bytes || timesteps[:5000] int16 bytes), C order", "heldout_sha256": "028ff6ca1973eb2d629dec90d409a3efcbdd258d9e02530897c350dff3d8507d", "generation_noise_sha256": "6a6ee5be59f210a27ff20723804f749b4095fbffa097c6f8efab174790d4b58c", "files": {"initial.npz": "d3836c3f08dadc977521c304aec4f2c05af9d035dc4b451aa141b3172e78e1f3", "training.npz": "57e50133a069bc4b71862839e663be0ff45f097fc8512d523c74b89829fe2746", "evaluation.npz": "20c81400625af5c82856f7bd3c4cd26291aa8083d1bae40065624a0375dce4e1"}}}
+{"step": 1, "noise_mse": 0.9756490588188171, "gradient_norm_before_clip": 2.769648551940918, "lr": 0.0003, "elapsed_seconds": 2.0935034591238946}
+{"step": 1000, "noise_mse": 0.5238382816314697, "gradient_norm_before_clip": 0.7981261610984802, "lr": 0.0003, "elapsed_seconds": 3.2216235001105815}
+{"step": 2000, "noise_mse": 0.3896915912628174, "gradient_norm_before_clip": 0.6277925968170166, "lr": 0.0003, "elapsed_seconds": 4.34576633409597}
+{"step": 3000, "noise_mse": 0.4619747996330261, "gradient_norm_before_clip": 0.4559546709060669, "lr": 0.0003, "elapsed_seconds": 5.470252542058006}
+{"step": 4000, "noise_mse": 0.43476933240890503, "gradient_norm_before_clip": 0.5350887775421143, "lr": 0.0003, "elapsed_seconds": 6.595883792033419}
+{"step": 5000, "noise_mse": 0.4095221161842346, "gradient_norm_before_clip": 0.432561457157135, "lr": 0.0003, "elapsed_seconds": 7.7477038751821965}
+{"step": 6000, "noise_mse": 0.45483696460723877, "gradient_norm_before_clip": 0.5004706978797913, "lr": 0.0003, "elapsed_seconds": 9.238390250131488}
+{"step": 7000, "noise_mse": 0.42168137431144714, "gradient_norm_before_clip": 0.6751385927200317, "lr": 0.0003, "elapsed_seconds": 10.351764375111088}
+{"step": 8000, "noise_mse": 0.48323583602905273, "gradient_norm_before_clip": 0.5223551988601685, "lr": 0.0003, "elapsed_seconds": 11.498111500171944}
+{"step": 9000, "noise_mse": 0.385684609413147, "gradient_norm_before_clip": 0.48794859647750854, "lr": 0.0003, "elapsed_seconds": 12.611192499985918}
+{"step": 10000, "noise_mse": 0.4249380826950073, "gradient_norm_before_clip": 0.3375285565853119, "lr": 0.0003, "elapsed_seconds": 13.718832542188466}
+{
+  "ancestors": [],
+  "device": "mps",
+  "evaluation_seconds": 0.5950904579367489,
+  "first_update": 1,
+  "last_update": 10000,
+  "parameter_count": 296450,
+  "records": [
+    "evidence/cells/confirmation/moons-4004-constant-10000/update-5000/record.json",
+    "evidence/cells/confirmation/moons-4004-constant-10000/update-10000/record.json"
+  ],
+  "source_revision": "science-v1-662eb0ef8e5395ca",
+  "status": "completed",
+  "total_seconds": 13.976370624965057,
+  "training_seconds": 12.560054667061195
+}
+

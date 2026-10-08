@@ -1,0 +1,16 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "regenerate.py",
+    "--dataset",
+    "moons",
+    "--out",
+    "evidence/regeneration-moons.json"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "regenerate-all-moons-states-from-saved-weights",
+  "request_id": "6e1668ddd08746738afadd3d42ed38ae",
+  "timeout_seconds": 60.0
+}

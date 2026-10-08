@@ -1,0 +1,34 @@
+{
+  "ancestors": [],
+  "arrays": "evidence/cells/confirmation/moons-4002-constant-10000/update-10000/arrays.npz",
+  "attempt_id": "confirm-moons-4002-constant-10000",
+  "config": "evidence/attempts/confirm-moons-4002-constant-10000/config.json",
+  "dataset": "moons",
+  "device": "mps",
+  "generation_noise_sha256": "e713cc4f52e2e9f44d5e2c4beb0c6d1abf12d09c035592a529990862c373dfdd",
+  "heldout_sha256": "54967586df1e2cd86b5bb7fe6f9a31dc728f58e5b8ac2ce10a28075e5d60d76b",
+  "initial_state": "evidence/inputs-retained/confirmation/moons-4002/initial.npz",
+  "initial_weights_sha256": "5b7647dffe4e7fd8fea1b1e627717d01eef8e4ecb652775a48824afd2a16c70d",
+  "metrics": {
+    "ema099": {
+      "sw1": 0.05137571812226262
+    },
+    "ema0999": {
+      "sw1": 0.05446969779880102
+    },
+    "raw": {
+      "sw1": 0.13891661481867115
+    }
+  },
+  "phase": "confirmation",
+  "provenance": "evidence/inputs-retained/confirmation/moons-4002/provenance.json",
+  "retained_inputs": "evidence/inputs-retained/confirmation/moons-4002/training.npz",
+  "schedule": "constant",
+  "seed": 4002,
+  "source_revision": "science-v1-662eb0ef8e5395ca",
+  "training_prefix_5000_sha256": "d182d905d8fa8610e36f594b71caf379462a30ef05247055408e2952823c3e87",
+  "training_trace": "evidence/attempts/confirm-moons-4002-constant-10000/trace.jsonl",
+  "trajectory_terminal_updates": 10000,
+  "updates": 10000,
+  "weights": "evidence/cells/confirmation/moons-4002-constant-10000/update-10000/weights.npz"
+}

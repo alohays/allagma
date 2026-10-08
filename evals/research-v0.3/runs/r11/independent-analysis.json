@@ -1,0 +1,246 @@
+{
+  "status": "pass",
+  "required_cells": 32,
+  "input_groups": [
+    {
+      "dataset": "moons",
+      "seed": 4001,
+      "cells": 4,
+      "regenerated_inputs_exact": true
+    },
+    {
+      "dataset": "moons",
+      "seed": 4002,
+      "cells": 4,
+      "regenerated_inputs_exact": true
+    },
+    {
+      "dataset": "moons",
+      "seed": 4003,
+      "cells": 4,
+      "regenerated_inputs_exact": true
+    },
+    {
+      "dataset": "moons",
+      "seed": 4004,
+      "cells": 4,
+      "regenerated_inputs_exact": true
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5001,
+      "cells": 4,
+      "regenerated_inputs_exact": true
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5002,
+      "cells": 4,
+      "regenerated_inputs_exact": true
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5003,
+      "cells": 4,
+      "regenerated_inputs_exact": true
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5004,
+      "cells": 4,
+      "regenerated_inputs_exact": true
+    }
+  ],
+  "actual_trajectories": [
+    {
+      "dataset": "gmm8",
+      "seed": 5001,
+      "policy": "constant",
+      "updates": 10000
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5001,
+      "policy": "cosine",
+      "updates": 10000
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5001,
+      "policy": "cosine",
+      "updates": 5000
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5002,
+      "policy": "constant",
+      "updates": 10000
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5002,
+      "policy": "cosine",
+      "updates": 10000
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5002,
+      "policy": "cosine",
+      "updates": 5000
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5003,
+      "policy": "constant",
+      "updates": 10000
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5003,
+      "policy": "cosine",
+      "updates": 10000
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5003,
+      "policy": "cosine",
+      "updates": 5000
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5004,
+      "policy": "constant",
+      "updates": 10000
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5004,
+      "policy": "cosine",
+      "updates": 10000
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5004,
+      "policy": "cosine",
+      "updates": 5000
+    },
+    {
+      "dataset": "moons",
+      "seed": 4001,
+      "policy": "constant",
+      "updates": 10000
+    },
+    {
+      "dataset": "moons",
+      "seed": 4001,
+      "policy": "cosine",
+      "updates": 10000
+    },
+    {
+      "dataset": "moons",
+      "seed": 4001,
+      "policy": "cosine",
+      "updates": 5000
+    },
+    {
+      "dataset": "moons",
+      "seed": 4002,
+      "policy": "constant",
+      "updates": 10000
+    },
+    {
+      "dataset": "moons",
+      "seed": 4002,
+      "policy": "cosine",
+      "updates": 10000
+    },
+    {
+      "dataset": "moons",
+      "seed": 4002,
+      "policy": "cosine",
+      "updates": 5000
+    },
+    {
+      "dataset": "moons",
+      "seed": 4003,
+      "policy": "constant",
+      "updates": 10000
+    },
+    {
+      "dataset": "moons",
+      "seed": 4003,
+      "policy": "cosine",
+      "updates": 10000
+    },
+    {
+      "dataset": "moons",
+      "seed": 4003,
+      "policy": "cosine",
+      "updates": 5000
+    },
+    {
+      "dataset": "moons",
+      "seed": 4004,
+      "policy": "constant",
+      "updates": 10000
+    },
+    {
+      "dataset": "moons",
+      "seed": 4004,
+      "policy": "cosine",
+      "updates": 10000
+    },
+    {
+      "dataset": "moons",
+      "seed": 4004,
+      "policy": "cosine",
+      "updates": 5000
+    }
+  ],
+  "actual_training_updates": 200000,
+  "statistical_rows_checked": 102,
+  "finite_sample_controls": [
+    {
+      "dataset": "moons",
+      "seed": 4001,
+      "reference_sw1": 0.10001281408520216
+    },
+    {
+      "dataset": "moons",
+      "seed": 4002,
+      "reference_sw1": 0.04861615449652418
+    },
+    {
+      "dataset": "moons",
+      "seed": 4003,
+      "reference_sw1": 0.04615067846385547
+    },
+    {
+      "dataset": "moons",
+      "seed": 4004,
+      "reference_sw1": 0.04002302079970201
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5001,
+      "reference_sw1": 0.03887226582700352
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5002,
+      "reference_sw1": 0.040320180163076605
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5003,
+      "reference_sw1": 0.07138606691129631
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5004,
+      "reference_sw1": 0.029439892777269536
+    }
+  ],
+  "cosine_convention": "Frozen denominator D-1: first applied rate .0003, final applied rate exactly zero.",
+  "scope": "Exact reference-based input regeneration, paired hashes, full optimizer/checkpoint identity, traces and 102 statistic summaries plus eight independent held-out controls. Separate original scoring verifies all 96 saved-state samples. No second training replay."
+}

@@ -1,0 +1,34 @@
+{
+  "ancestors": [],
+  "arrays": "evidence/cells/pilot/moons-71-constant-2000/update-2000/arrays.npz",
+  "attempt_id": "pilot-moons-recovered",
+  "config": "evidence/attempts/pilot-moons-recovered/config.json",
+  "dataset": "moons",
+  "device": "mps",
+  "generation_noise_sha256": "98e1cc8b325187e95c9253a943d365481dbb6d07252814b4bbd71503fa7aaedd",
+  "heldout_sha256": "b7323dd4adc077f6e61656b88bc349eac91100b7e21fe1cf8eeb47ad5f6066e6",
+  "initial_state": "evidence/inputs-retained/pilot/moons-71/initial.npz",
+  "initial_weights_sha256": "eb1a31a64e52905b7e3bd0e8a56d536aef5712021f907ac3b3b314589c527c2c",
+  "metrics": {
+    "ema099": {
+      "sw1": 0.057559628792132375
+    },
+    "ema0999": {
+      "sw1": 0.1041510004717362
+    },
+    "raw": {
+      "sw1": 0.059246168846967436
+    }
+  },
+  "phase": "pilot",
+  "provenance": "evidence/inputs-retained/pilot/moons-71/provenance.json",
+  "retained_inputs": "evidence/inputs-retained/pilot/moons-71/training.npz",
+  "schedule": "constant",
+  "seed": 71,
+  "source_revision": "pilot-662eb0ef8e5395ca",
+  "training_prefix_5000_sha256": "8da551bb8dd83025453d629dd07cfadc9f52f0306ce2fd0a97c0c0bede7de52b",
+  "training_trace": "evidence/attempts/pilot-moons-recovered/trace.jsonl",
+  "trajectory_terminal_updates": 2000,
+  "updates": 2000,
+  "weights": "evidence/cells/pilot/moons-71-constant-2000/update-2000/weights.npz"
+}

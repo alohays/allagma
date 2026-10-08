@@ -1,0 +1,73 @@
+{
+  "ancestors": [],
+  "arrays": "evidence/cells/pilot/gmm8-81-cosine-2000/update-1000/arrays.npz",
+  "attempt_id": "pilot-gmm8-segment1",
+  "config": "evidence/attempts/pilot-gmm8-segment1/config.json",
+  "dataset": "gmm8",
+  "device": "mps",
+  "generation_noise_sha256": "6253489d3bd56a9576f823fd4ad0259f5e306dfbf44a4eb6777a27405c69ad42",
+  "heldout_sha256": "297339cbb819d0134f7d6a8287bd3f833596fb8df459e3651008db9da4eeb270",
+  "initial_state": "evidence/inputs-retained/pilot/gmm8-81/initial.npz",
+  "initial_weights_sha256": "d6ea992952efc324effbbb7a735444c850eb21ef1468c49da19ba749eb0f42ca",
+  "metrics": {
+    "ema099": {
+      "covered_modes": 8,
+      "inlier_count": 1944,
+      "inlier_fraction": 0.94921875,
+      "mode_counts": [
+        230,
+        241,
+        248,
+        238,
+        263,
+        218,
+        243,
+        263
+      ],
+      "sw1": 0.04672227548846792
+    },
+    "ema0999": {
+      "covered_modes": 8,
+      "inlier_count": 585,
+      "inlier_fraction": 0.28564453125,
+      "mode_counts": [
+        48,
+        81,
+        67,
+        78,
+        65,
+        108,
+        63,
+        75
+      ],
+      "sw1": 0.8264557452862679
+    },
+    "raw": {
+      "covered_modes": 8,
+      "inlier_count": 1955,
+      "inlier_fraction": 0.95458984375,
+      "mode_counts": [
+        269,
+        266,
+        233,
+        158,
+        168,
+        182,
+        299,
+        380
+      ],
+      "sw1": 0.22748813096481577
+    }
+  },
+  "phase": "pilot",
+  "provenance": "evidence/inputs-retained/pilot/gmm8-81/provenance.json",
+  "retained_inputs": "evidence/inputs-retained/pilot/gmm8-81/training.npz",
+  "schedule": "cosine",
+  "seed": 81,
+  "source_revision": "pilot-662eb0ef8e5395ca",
+  "training_prefix_5000_sha256": "7a5272302804cfbabd3de11e02971504f22d4b09a085ec715b116fb26caef9f5",
+  "training_trace": "evidence/attempts/pilot-gmm8-segment1/trace.jsonl",
+  "trajectory_terminal_updates": 2000,
+  "updates": 1000,
+  "weights": "evidence/cells/pilot/gmm8-81-cosine-2000/update-1000/weights.npz"
+}

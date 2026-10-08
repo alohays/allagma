@@ -1,0 +1,264 @@
+{
+  "confirmation_data_used": false,
+  "duplicate_pilot_not_an_independent_replicate": true,
+  "matched_provenance": true,
+  "resume_equivalence": [
+    {
+      "exact_equal": true,
+      "file": "arrays.npz",
+      "key": "heldout",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "arrays.npz",
+      "key": "generation_noise",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "arrays.npz",
+      "key": "raw",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "arrays.npz",
+      "key": "ema099",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "arrays.npz",
+      "key": "ema0999",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "raw__time.frequencies",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "raw__coord.frequencies",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "raw__network.0.weight",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "raw__network.0.bias",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "raw__network.1.ff.weight",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "raw__network.1.ff.bias",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "raw__network.2.ff.weight",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "raw__network.2.ff.bias",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "raw__network.3.ff.weight",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "raw__network.3.ff.bias",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "raw__network.5.weight",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "raw__network.5.bias",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "ema099__time.frequencies",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "ema099__coord.frequencies",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "ema099__network.0.weight",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "ema099__network.0.bias",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "ema099__network.1.ff.weight",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "ema099__network.1.ff.bias",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "ema099__network.2.ff.weight",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "ema099__network.2.ff.bias",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "ema099__network.3.ff.weight",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "ema099__network.3.ff.bias",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "ema099__network.5.weight",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "ema099__network.5.bias",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "ema0999__time.frequencies",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "ema0999__coord.frequencies",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "ema0999__network.0.weight",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "ema0999__network.0.bias",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "ema0999__network.1.ff.weight",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "ema0999__network.1.ff.bias",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "ema0999__network.2.ff.weight",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "ema0999__network.2.ff.bias",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "ema0999__network.3.ff.weight",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "ema0999__network.3.ff.bias",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "ema0999__network.5.weight",
+      "max_absolute_error": 0.0
+    },
+    {
+      "exact_equal": true,
+      "file": "weights.npz",
+      "key": "ema0999__network.5.bias",
+      "max_absolute_error": 0.0
+    }
+  ],
+  "status": "passed",
+  "trace_update_ranges": [
+    [
+      1,
+      1000
+    ],
+    [
+      1001,
+      2000
+    ]
+  ]
+}

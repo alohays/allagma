@@ -1,0 +1,26 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "study.py",
+    "--phase",
+    "confirmation",
+    "--dataset",
+    "moons",
+    "--seed",
+    "4002",
+    "--policy",
+    "cosine",
+    "--total",
+    "10000",
+    "--stop",
+    "10000",
+    "--attempt-id",
+    "confirm-moons-4002-cosine-10000"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "confirm-moons-4002-cosine-10000",
+  "request_id": "1bcb6b0ce5d0467babca8bc738bcd654",
+  "timeout_seconds": 60.0
+}

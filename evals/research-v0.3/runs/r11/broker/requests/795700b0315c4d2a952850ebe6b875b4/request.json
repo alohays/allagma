@@ -1,0 +1,30 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "study.py",
+    "--phase",
+    "pilot",
+    "--dataset",
+    "gmm8",
+    "--seed",
+    "81",
+    "--policy",
+    "cosine",
+    "--total",
+    "2000",
+    "--stop",
+    "2000",
+    "--attempt-id",
+    "pilot-gmm8-uninterrupted",
+    "--root",
+    "evidence/pilot-equivalence",
+    "--checkpoint-every",
+    "1000"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "pilot-gmm8-uninterrupted-reference",
+  "request_id": "795700b0315c4d2a952850ebe6b875b4",
+  "timeout_seconds": 45.0
+}

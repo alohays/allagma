@@ -1,0 +1,17 @@
+{
+  "injected_interruption": true,
+  "isolation_sha256": "019fdc80c1dccf88cfa5419f22ba60532dc0fdd77141567ee54895462d91e1c6",
+  "reconciled_after_controller_restart": false,
+  "request_id": "564ac080984f4c08a86608b2bacfaf6f",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 1.1999562080018222,
+    "ended_at": "2026-10-08T06:22:05.761209+00:00",
+    "exit_code": -15,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r11/resources/jobs/0007-pilot-moons-controlled-first-attempt",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 4079616,
+    "peak_storage_bytes": 1096085856,
+    "status": "timed_out"
+  }
+}

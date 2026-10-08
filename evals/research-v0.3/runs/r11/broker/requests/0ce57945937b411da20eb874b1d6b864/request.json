@@ -1,0 +1,26 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "study.py",
+    "--phase",
+    "confirmation",
+    "--dataset",
+    "moons",
+    "--seed",
+    "4003",
+    "--policy",
+    "constant",
+    "--total",
+    "10000",
+    "--stop",
+    "10000",
+    "--attempt-id",
+    "confirm-moons-4003-constant-10000"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "confirm-moons-4003-constant-10000",
+  "request_id": "0ce57945937b411da20eb874b1d6b864",
+  "timeout_seconds": 60.0
+}

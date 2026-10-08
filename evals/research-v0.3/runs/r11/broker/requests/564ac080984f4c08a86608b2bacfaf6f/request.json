@@ -1,0 +1,28 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "study.py",
+    "--phase",
+    "pilot",
+    "--dataset",
+    "moons",
+    "--seed",
+    "71",
+    "--policy",
+    "constant",
+    "--total",
+    "2000",
+    "--stop",
+    "2000",
+    "--attempt-id",
+    "pilot-moons-interrupted",
+    "--checkpoint-every",
+    "100"
+  ],
+  "attempt": true,
+  "category": "compute",
+  "cwd": ".",
+  "label": "pilot-moons-controlled-first-attempt",
+  "request_id": "564ac080984f4c08a86608b2bacfaf6f",
+  "timeout_seconds": 90.0
+}

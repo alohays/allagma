@@ -1,0 +1,28 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "study.py",
+    "--phase",
+    "pilot",
+    "--dataset",
+    "moons",
+    "--seed",
+    "71",
+    "--policy",
+    "constant",
+    "--total",
+    "2000",
+    "--stop",
+    "2000",
+    "--attempt-id",
+    "pilot-moons-recovered",
+    "--checkpoint-every",
+    "1000"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "pilot-moons-recovery-from-seed",
+  "request_id": "4b46b175de21497abb1b0fae1668de37",
+  "timeout_seconds": 90.0
+}

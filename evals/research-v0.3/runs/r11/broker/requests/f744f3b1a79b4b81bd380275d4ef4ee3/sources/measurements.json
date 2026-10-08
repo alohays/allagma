@@ -1,0 +1,1719 @@
+{
+  "format": "research-measurements-v1",
+  "protocol": "protocol.json",
+  "runs": [
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/gmm8-5001-constant-10000/update-10000/arrays.npz",
+      "attempt_id": "confirm-gmm8-5001-constant-10000",
+      "config": "evidence/attempts/confirm-gmm8-5001-constant-10000/config.json",
+      "dataset": "gmm8",
+      "device": "mps",
+      "generation_noise_sha256": "3e84425ce8de61f0c7dbba82060546dcc74799338c665eb454a00854466a21d2",
+      "heldout_sha256": "eeb78e4a2bc4ab4e9155586f2e2321252c06d5a5fbfb5636d086ebd59b4fb3c8",
+      "initial_state": "evidence/inputs-retained/confirmation/gmm8-5001/initial.npz",
+      "initial_weights_sha256": "06237d004ee4c1ae2f2cf89b419c2d39081009bb01911ae463a5c3b98fcd42f5",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2036,
+          "inlier_fraction": 0.994140625,
+          "mode_counts": [
+            218,
+            239,
+            292,
+            256,
+            265,
+            267,
+            270,
+            229
+          ],
+          "sw1": 0.09147121143185241
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2028,
+          "inlier_fraction": 0.990234375,
+          "mode_counts": [
+            222,
+            241,
+            277,
+            260,
+            265,
+            267,
+            264,
+            232
+          ],
+          "sw1": 0.0851870726699071
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2010,
+          "inlier_fraction": 0.9814453125,
+          "mode_counts": [
+            217,
+            227,
+            281,
+            255,
+            268,
+            267,
+            274,
+            221
+          ],
+          "sw1": 0.104420601713935
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/gmm8-5001/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/gmm8-5001/training.npz",
+      "schedule": "constant",
+      "seed": 5001,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "50ae10fda70a6d46f6bcfd042a66ce0834b749501d5f2c9a3fcf593f4cec2e5d",
+      "training_trace": "evidence/attempts/confirm-gmm8-5001-constant-10000/trace.jsonl",
+      "trajectory_terminal_updates": 10000,
+      "updates": 10000,
+      "weights": "evidence/cells/confirmation/gmm8-5001-constant-10000/update-10000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/gmm8-5001-constant-10000/update-5000/arrays.npz",
+      "attempt_id": "confirm-gmm8-5001-constant-10000",
+      "config": "evidence/attempts/confirm-gmm8-5001-constant-10000/config.json",
+      "dataset": "gmm8",
+      "device": "mps",
+      "generation_noise_sha256": "3e84425ce8de61f0c7dbba82060546dcc74799338c665eb454a00854466a21d2",
+      "heldout_sha256": "eeb78e4a2bc4ab4e9155586f2e2321252c06d5a5fbfb5636d086ebd59b4fb3c8",
+      "initial_state": "evidence/inputs-retained/confirmation/gmm8-5001/initial.npz",
+      "initial_weights_sha256": "06237d004ee4c1ae2f2cf89b419c2d39081009bb01911ae463a5c3b98fcd42f5",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2027,
+          "inlier_fraction": 0.98974609375,
+          "mode_counts": [
+            228,
+            240,
+            274,
+            266,
+            257,
+            275,
+            252,
+            235
+          ],
+          "sw1": 0.0844828391721722
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2016,
+          "inlier_fraction": 0.984375,
+          "mode_counts": [
+            224,
+            243,
+            276,
+            256,
+            257,
+            270,
+            258,
+            232
+          ],
+          "sw1": 0.08260390130760391
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2000,
+          "inlier_fraction": 0.9765625,
+          "mode_counts": [
+            229,
+            233,
+            258,
+            251,
+            250,
+            266,
+            271,
+            242
+          ],
+          "sw1": 0.07153591498668763
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/gmm8-5001/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/gmm8-5001/training.npz",
+      "schedule": "constant",
+      "seed": 5001,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "50ae10fda70a6d46f6bcfd042a66ce0834b749501d5f2c9a3fcf593f4cec2e5d",
+      "training_trace": "evidence/attempts/confirm-gmm8-5001-constant-10000/trace.jsonl",
+      "trajectory_terminal_updates": 10000,
+      "updates": 5000,
+      "weights": "evidence/cells/confirmation/gmm8-5001-constant-10000/update-5000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/gmm8-5001-cosine-10000/update-10000/arrays.npz",
+      "attempt_id": "confirm-gmm8-5001-cosine-10000",
+      "config": "evidence/attempts/confirm-gmm8-5001-cosine-10000/config.json",
+      "dataset": "gmm8",
+      "device": "mps",
+      "generation_noise_sha256": "3e84425ce8de61f0c7dbba82060546dcc74799338c665eb454a00854466a21d2",
+      "heldout_sha256": "eeb78e4a2bc4ab4e9155586f2e2321252c06d5a5fbfb5636d086ebd59b4fb3c8",
+      "initial_state": "evidence/inputs-retained/confirmation/gmm8-5001/initial.npz",
+      "initial_weights_sha256": "06237d004ee4c1ae2f2cf89b419c2d39081009bb01911ae463a5c3b98fcd42f5",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2032,
+          "inlier_fraction": 0.9921875,
+          "mode_counts": [
+            229,
+            241,
+            275,
+            264,
+            268,
+            268,
+            262,
+            225
+          ],
+          "sw1": 0.08824944730060932
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2027,
+          "inlier_fraction": 0.98974609375,
+          "mode_counts": [
+            229,
+            238,
+            275,
+            262,
+            267,
+            264,
+            266,
+            226
+          ],
+          "sw1": 0.08568585010685809
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2032,
+          "inlier_fraction": 0.9921875,
+          "mode_counts": [
+            229,
+            241,
+            274,
+            263,
+            268,
+            268,
+            264,
+            225
+          ],
+          "sw1": 0.08839889701314847
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/gmm8-5001/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/gmm8-5001/training.npz",
+      "schedule": "cosine",
+      "seed": 5001,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "50ae10fda70a6d46f6bcfd042a66ce0834b749501d5f2c9a3fcf593f4cec2e5d",
+      "training_trace": "evidence/attempts/confirm-gmm8-5001-cosine-10000/trace.jsonl",
+      "trajectory_terminal_updates": 10000,
+      "updates": 10000,
+      "weights": "evidence/cells/confirmation/gmm8-5001-cosine-10000/update-10000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/gmm8-5001-cosine-5000/update-5000/arrays.npz",
+      "attempt_id": "confirm-gmm8-5001-cosine-5000",
+      "config": "evidence/attempts/confirm-gmm8-5001-cosine-5000/config.json",
+      "dataset": "gmm8",
+      "device": "mps",
+      "generation_noise_sha256": "3e84425ce8de61f0c7dbba82060546dcc74799338c665eb454a00854466a21d2",
+      "heldout_sha256": "eeb78e4a2bc4ab4e9155586f2e2321252c06d5a5fbfb5636d086ebd59b4fb3c8",
+      "initial_state": "evidence/inputs-retained/confirmation/gmm8-5001/initial.npz",
+      "initial_weights_sha256": "06237d004ee4c1ae2f2cf89b419c2d39081009bb01911ae463a5c3b98fcd42f5",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2016,
+          "inlier_fraction": 0.984375,
+          "mode_counts": [
+            228,
+            245,
+            270,
+            262,
+            261,
+            270,
+            253,
+            227
+          ],
+          "sw1": 0.08347131940554325
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2023,
+          "inlier_fraction": 0.98779296875,
+          "mode_counts": [
+            224,
+            246,
+            273,
+            257,
+            263,
+            269,
+            260,
+            231
+          ],
+          "sw1": 0.0828919936730845
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2015,
+          "inlier_fraction": 0.98388671875,
+          "mode_counts": [
+            228,
+            245,
+            270,
+            263,
+            261,
+            269,
+            253,
+            226
+          ],
+          "sw1": 0.0839656467258976
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/gmm8-5001/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/gmm8-5001/training.npz",
+      "schedule": "cosine",
+      "seed": 5001,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "50ae10fda70a6d46f6bcfd042a66ce0834b749501d5f2c9a3fcf593f4cec2e5d",
+      "training_trace": "evidence/attempts/confirm-gmm8-5001-cosine-5000/trace.jsonl",
+      "trajectory_terminal_updates": 5000,
+      "updates": 5000,
+      "weights": "evidence/cells/confirmation/gmm8-5001-cosine-5000/update-5000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/gmm8-5002-constant-10000/update-10000/arrays.npz",
+      "attempt_id": "confirm-gmm8-5002-constant-10000",
+      "config": "evidence/attempts/confirm-gmm8-5002-constant-10000/config.json",
+      "dataset": "gmm8",
+      "device": "mps",
+      "generation_noise_sha256": "b9a5974cea6b577eabc66f8bd4ea81a610ae5cdaff5d7c86888c6e4749507e79",
+      "heldout_sha256": "2d728e249f5917bba79ee9af4807f9192412d60a9243188b22b5f9fa29ff66b5",
+      "initial_state": "evidence/inputs-retained/confirmation/gmm8-5002/initial.npz",
+      "initial_weights_sha256": "8c78a706a2a29da7f89b91da28d6cef975f0c68d6dfdcd91c0d2d0a4dbb59541",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2025,
+          "inlier_fraction": 0.98876953125,
+          "mode_counts": [
+            223,
+            256,
+            287,
+            270,
+            260,
+            238,
+            255,
+            236
+          ],
+          "sw1": 0.0882198620033844
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2027,
+          "inlier_fraction": 0.98974609375,
+          "mode_counts": [
+            229,
+            263,
+            283,
+            262,
+            255,
+            250,
+            236,
+            249
+          ],
+          "sw1": 0.07848480827244936
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2030,
+          "inlier_fraction": 0.9912109375,
+          "mode_counts": [
+            229,
+            255,
+            308,
+            288,
+            259,
+            242,
+            236,
+            213
+          ],
+          "sw1": 0.14291134639925357
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/gmm8-5002/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/gmm8-5002/training.npz",
+      "schedule": "constant",
+      "seed": 5002,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "cb08251590fdf0764fe540421fca5b88bb8a09ad5570c6093658e9f8d817cc4c",
+      "training_trace": "evidence/attempts/confirm-gmm8-5002-constant-10000/trace.jsonl",
+      "trajectory_terminal_updates": 10000,
+      "updates": 10000,
+      "weights": "evidence/cells/confirmation/gmm8-5002-constant-10000/update-10000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/gmm8-5002-constant-10000/update-5000/arrays.npz",
+      "attempt_id": "confirm-gmm8-5002-constant-10000",
+      "config": "evidence/attempts/confirm-gmm8-5002-constant-10000/config.json",
+      "dataset": "gmm8",
+      "device": "mps",
+      "generation_noise_sha256": "b9a5974cea6b577eabc66f8bd4ea81a610ae5cdaff5d7c86888c6e4749507e79",
+      "heldout_sha256": "2d728e249f5917bba79ee9af4807f9192412d60a9243188b22b5f9fa29ff66b5",
+      "initial_state": "evidence/inputs-retained/confirmation/gmm8-5002/initial.npz",
+      "initial_weights_sha256": "8c78a706a2a29da7f89b91da28d6cef975f0c68d6dfdcd91c0d2d0a4dbb59541",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2017,
+          "inlier_fraction": 0.98486328125,
+          "mode_counts": [
+            239,
+            264,
+            273,
+            259,
+            272,
+            243,
+            233,
+            234
+          ],
+          "sw1": 0.08602145761323118
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2007,
+          "inlier_fraction": 0.97998046875,
+          "mode_counts": [
+            239,
+            265,
+            271,
+            248,
+            263,
+            247,
+            231,
+            243
+          ],
+          "sw1": 0.07157617790836907
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2003,
+          "inlier_fraction": 0.97802734375,
+          "mode_counts": [
+            235,
+            282,
+            283,
+            310,
+            319,
+            226,
+            165,
+            183
+          ],
+          "sw1": 0.24339072699771627
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/gmm8-5002/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/gmm8-5002/training.npz",
+      "schedule": "constant",
+      "seed": 5002,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "cb08251590fdf0764fe540421fca5b88bb8a09ad5570c6093658e9f8d817cc4c",
+      "training_trace": "evidence/attempts/confirm-gmm8-5002-constant-10000/trace.jsonl",
+      "trajectory_terminal_updates": 10000,
+      "updates": 5000,
+      "weights": "evidence/cells/confirmation/gmm8-5002-constant-10000/update-5000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/gmm8-5002-cosine-10000/update-10000/arrays.npz",
+      "attempt_id": "confirm-gmm8-5002-cosine-10000",
+      "config": "evidence/attempts/confirm-gmm8-5002-cosine-10000/config.json",
+      "dataset": "gmm8",
+      "device": "mps",
+      "generation_noise_sha256": "b9a5974cea6b577eabc66f8bd4ea81a610ae5cdaff5d7c86888c6e4749507e79",
+      "heldout_sha256": "2d728e249f5917bba79ee9af4807f9192412d60a9243188b22b5f9fa29ff66b5",
+      "initial_state": "evidence/inputs-retained/confirmation/gmm8-5002/initial.npz",
+      "initial_weights_sha256": "8c78a706a2a29da7f89b91da28d6cef975f0c68d6dfdcd91c0d2d0a4dbb59541",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2021,
+          "inlier_fraction": 0.98681640625,
+          "mode_counts": [
+            233,
+            258,
+            280,
+            257,
+            252,
+            251,
+            235,
+            255
+          ],
+          "sw1": 0.06837996942848605
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2019,
+          "inlier_fraction": 0.98583984375,
+          "mode_counts": [
+            234,
+            258,
+            278,
+            258,
+            252,
+            251,
+            234,
+            254
+          ],
+          "sw1": 0.06798001579373719
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2021,
+          "inlier_fraction": 0.98681640625,
+          "mode_counts": [
+            233,
+            258,
+            280,
+            257,
+            253,
+            250,
+            235,
+            255
+          ],
+          "sw1": 0.06882746949931369
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/gmm8-5002/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/gmm8-5002/training.npz",
+      "schedule": "cosine",
+      "seed": 5002,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "cb08251590fdf0764fe540421fca5b88bb8a09ad5570c6093658e9f8d817cc4c",
+      "training_trace": "evidence/attempts/confirm-gmm8-5002-cosine-10000/trace.jsonl",
+      "trajectory_terminal_updates": 10000,
+      "updates": 10000,
+      "weights": "evidence/cells/confirmation/gmm8-5002-cosine-10000/update-10000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/gmm8-5002-cosine-5000/update-5000/arrays.npz",
+      "attempt_id": "confirm-gmm8-5002-cosine-5000",
+      "config": "evidence/attempts/confirm-gmm8-5002-cosine-5000/config.json",
+      "dataset": "gmm8",
+      "device": "mps",
+      "generation_noise_sha256": "b9a5974cea6b577eabc66f8bd4ea81a610ae5cdaff5d7c86888c6e4749507e79",
+      "heldout_sha256": "2d728e249f5917bba79ee9af4807f9192412d60a9243188b22b5f9fa29ff66b5",
+      "initial_state": "evidence/inputs-retained/confirmation/gmm8-5002/initial.npz",
+      "initial_weights_sha256": "8c78a706a2a29da7f89b91da28d6cef975f0c68d6dfdcd91c0d2d0a4dbb59541",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2019,
+          "inlier_fraction": 0.98583984375,
+          "mode_counts": [
+            240,
+            262,
+            283,
+            244,
+            263,
+            239,
+            241,
+            247
+          ],
+          "sw1": 0.07316170230069693
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2014,
+          "inlier_fraction": 0.9833984375,
+          "mode_counts": [
+            235,
+            262,
+            284,
+            242,
+            262,
+            242,
+            240,
+            247
+          ],
+          "sw1": 0.06816646824033129
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2021,
+          "inlier_fraction": 0.98681640625,
+          "mode_counts": [
+            239,
+            261,
+            283,
+            246,
+            265,
+            240,
+            240,
+            247
+          ],
+          "sw1": 0.07369943723972264
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/gmm8-5002/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/gmm8-5002/training.npz",
+      "schedule": "cosine",
+      "seed": 5002,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "cb08251590fdf0764fe540421fca5b88bb8a09ad5570c6093658e9f8d817cc4c",
+      "training_trace": "evidence/attempts/confirm-gmm8-5002-cosine-5000/trace.jsonl",
+      "trajectory_terminal_updates": 5000,
+      "updates": 5000,
+      "weights": "evidence/cells/confirmation/gmm8-5002-cosine-5000/update-5000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/gmm8-5003-constant-10000/update-10000/arrays.npz",
+      "attempt_id": "confirm-gmm8-5003-constant-10000",
+      "config": "evidence/attempts/confirm-gmm8-5003-constant-10000/config.json",
+      "dataset": "gmm8",
+      "device": "mps",
+      "generation_noise_sha256": "d9be4794a0acbcb69da04c002651510988bfdf580df7c01fa4ada35443eadef2",
+      "heldout_sha256": "b62c1f70d47389e95a1a62bf3836096a396e92f50dabdf34ec070cc88dc975ba",
+      "initial_state": "evidence/inputs-retained/confirmation/gmm8-5003/initial.npz",
+      "initial_weights_sha256": "d97e2d122bab11660ffaf8d0c33745f4d27a593369c6512be91e8360cd1dbc3b",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2024,
+          "inlier_fraction": 0.98828125,
+          "mode_counts": [
+            276,
+            271,
+            243,
+            271,
+            255,
+            209,
+            260,
+            239
+          ],
+          "sw1": 0.08500228958799066
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2026,
+          "inlier_fraction": 0.9892578125,
+          "mode_counts": [
+            279,
+            271,
+            247,
+            269,
+            248,
+            210,
+            251,
+            251
+          ],
+          "sw1": 0.0928378489051592
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2024,
+          "inlier_fraction": 0.98828125,
+          "mode_counts": [
+            279,
+            278,
+            261,
+            278,
+            238,
+            215,
+            248,
+            227
+          ],
+          "sw1": 0.1082761241309105
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/gmm8-5003/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/gmm8-5003/training.npz",
+      "schedule": "constant",
+      "seed": 5003,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "4497676d06b0be2792effa33003d6d7218263b78a68759db2bba3e278186a1d8",
+      "training_trace": "evidence/attempts/confirm-gmm8-5003-constant-10000/trace.jsonl",
+      "trajectory_terminal_updates": 10000,
+      "updates": 10000,
+      "weights": "evidence/cells/confirmation/gmm8-5003-constant-10000/update-10000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/gmm8-5003-constant-10000/update-5000/arrays.npz",
+      "attempt_id": "confirm-gmm8-5003-constant-10000",
+      "config": "evidence/attempts/confirm-gmm8-5003-constant-10000/config.json",
+      "dataset": "gmm8",
+      "device": "mps",
+      "generation_noise_sha256": "d9be4794a0acbcb69da04c002651510988bfdf580df7c01fa4ada35443eadef2",
+      "heldout_sha256": "b62c1f70d47389e95a1a62bf3836096a396e92f50dabdf34ec070cc88dc975ba",
+      "initial_state": "evidence/inputs-retained/confirmation/gmm8-5003/initial.npz",
+      "initial_weights_sha256": "d97e2d122bab11660ffaf8d0c33745f4d27a593369c6512be91e8360cd1dbc3b",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2008,
+          "inlier_fraction": 0.98046875,
+          "mode_counts": [
+            270,
+            272,
+            229,
+            289,
+            227,
+            227,
+            254,
+            240
+          ],
+          "sw1": 0.08718632738516649
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2010,
+          "inlier_fraction": 0.9814453125,
+          "mode_counts": [
+            278,
+            265,
+            238,
+            279,
+            239,
+            213,
+            258,
+            240
+          ],
+          "sw1": 0.08914856032654976
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 1993,
+          "inlier_fraction": 0.97314453125,
+          "mode_counts": [
+            246,
+            304,
+            251,
+            289,
+            225,
+            203,
+            251,
+            224
+          ],
+          "sw1": 0.11803721287410325
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/gmm8-5003/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/gmm8-5003/training.npz",
+      "schedule": "constant",
+      "seed": 5003,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "4497676d06b0be2792effa33003d6d7218263b78a68759db2bba3e278186a1d8",
+      "training_trace": "evidence/attempts/confirm-gmm8-5003-constant-10000/trace.jsonl",
+      "trajectory_terminal_updates": 10000,
+      "updates": 5000,
+      "weights": "evidence/cells/confirmation/gmm8-5003-constant-10000/update-5000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/gmm8-5003-cosine-10000/update-10000/arrays.npz",
+      "attempt_id": "confirm-gmm8-5003-cosine-10000",
+      "config": "evidence/attempts/confirm-gmm8-5003-cosine-10000/config.json",
+      "dataset": "gmm8",
+      "device": "mps",
+      "generation_noise_sha256": "d9be4794a0acbcb69da04c002651510988bfdf580df7c01fa4ada35443eadef2",
+      "heldout_sha256": "b62c1f70d47389e95a1a62bf3836096a396e92f50dabdf34ec070cc88dc975ba",
+      "initial_state": "evidence/inputs-retained/confirmation/gmm8-5003/initial.npz",
+      "initial_weights_sha256": "d97e2d122bab11660ffaf8d0c33745f4d27a593369c6512be91e8360cd1dbc3b",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2030,
+          "inlier_fraction": 0.9912109375,
+          "mode_counts": [
+            278,
+            264,
+            248,
+            271,
+            252,
+            206,
+            257,
+            254
+          ],
+          "sw1": 0.0908827193851241
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2033,
+          "inlier_fraction": 0.99267578125,
+          "mode_counts": [
+            278,
+            266,
+            252,
+            268,
+            253,
+            206,
+            258,
+            252
+          ],
+          "sw1": 0.09229159528633538
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2030,
+          "inlier_fraction": 0.9912109375,
+          "mode_counts": [
+            278,
+            264,
+            248,
+            271,
+            252,
+            206,
+            257,
+            254
+          ],
+          "sw1": 0.09076166948296671
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/gmm8-5003/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/gmm8-5003/training.npz",
+      "schedule": "cosine",
+      "seed": 5003,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "4497676d06b0be2792effa33003d6d7218263b78a68759db2bba3e278186a1d8",
+      "training_trace": "evidence/attempts/confirm-gmm8-5003-cosine-10000/trace.jsonl",
+      "trajectory_terminal_updates": 10000,
+      "updates": 10000,
+      "weights": "evidence/cells/confirmation/gmm8-5003-cosine-10000/update-10000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/gmm8-5003-cosine-5000/update-5000/arrays.npz",
+      "attempt_id": "confirm-gmm8-5003-cosine-5000",
+      "config": "evidence/attempts/confirm-gmm8-5003-cosine-5000/config.json",
+      "dataset": "gmm8",
+      "device": "mps",
+      "generation_noise_sha256": "d9be4794a0acbcb69da04c002651510988bfdf580df7c01fa4ada35443eadef2",
+      "heldout_sha256": "b62c1f70d47389e95a1a62bf3836096a396e92f50dabdf34ec070cc88dc975ba",
+      "initial_state": "evidence/inputs-retained/confirmation/gmm8-5003/initial.npz",
+      "initial_weights_sha256": "d97e2d122bab11660ffaf8d0c33745f4d27a593369c6512be91e8360cd1dbc3b",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2016,
+          "inlier_fraction": 0.984375,
+          "mode_counts": [
+            280,
+            266,
+            241,
+            271,
+            240,
+            209,
+            259,
+            250
+          ],
+          "sw1": 0.09644813929291142
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2006,
+          "inlier_fraction": 0.9794921875,
+          "mode_counts": [
+            276,
+            265,
+            242,
+            268,
+            242,
+            211,
+            256,
+            246
+          ],
+          "sw1": 0.09074823672600799
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2016,
+          "inlier_fraction": 0.984375,
+          "mode_counts": [
+            280,
+            266,
+            241,
+            271,
+            240,
+            209,
+            259,
+            250
+          ],
+          "sw1": 0.09654814149434703
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/gmm8-5003/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/gmm8-5003/training.npz",
+      "schedule": "cosine",
+      "seed": 5003,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "4497676d06b0be2792effa33003d6d7218263b78a68759db2bba3e278186a1d8",
+      "training_trace": "evidence/attempts/confirm-gmm8-5003-cosine-5000/trace.jsonl",
+      "trajectory_terminal_updates": 5000,
+      "updates": 5000,
+      "weights": "evidence/cells/confirmation/gmm8-5003-cosine-5000/update-5000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/gmm8-5004-constant-10000/update-10000/arrays.npz",
+      "attempt_id": "confirm-gmm8-5004-constant-10000",
+      "config": "evidence/attempts/confirm-gmm8-5004-constant-10000/config.json",
+      "dataset": "gmm8",
+      "device": "mps",
+      "generation_noise_sha256": "6d7b0898897519e987c20ba750c3ed88454dc586a8be523c278b377133bc65a3",
+      "heldout_sha256": "b740ab3b19984bd95ef51d3b732e582d0886605388420b0fa6aeda9e2ccbad67",
+      "initial_state": "evidence/inputs-retained/confirmation/gmm8-5004/initial.npz",
+      "initial_weights_sha256": "d0f10eea8d98cab7bdc7fa9aecf5f75d20d1c2ff0ba934b102787e70ffcb87b2",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2021,
+          "inlier_fraction": 0.98681640625,
+          "mode_counts": [
+            242,
+            248,
+            244,
+            258,
+            273,
+            267,
+            249,
+            240
+          ],
+          "sw1": 0.025414555843830518
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2027,
+          "inlier_fraction": 0.98974609375,
+          "mode_counts": [
+            244,
+            240,
+            248,
+            261,
+            275,
+            271,
+            241,
+            247
+          ],
+          "sw1": 0.029079087290837455
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2001,
+          "inlier_fraction": 0.97705078125,
+          "mode_counts": [
+            243,
+            276,
+            228,
+            277,
+            223,
+            257,
+            244,
+            253
+          ],
+          "sw1": 0.04710466859787974
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/gmm8-5004/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/gmm8-5004/training.npz",
+      "schedule": "constant",
+      "seed": 5004,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "a80e4671175f48513254f37182e22db49224628521f38ae118550a48e16ac09f",
+      "training_trace": "evidence/attempts/confirm-gmm8-5004-constant-10000/trace.jsonl",
+      "trajectory_terminal_updates": 10000,
+      "updates": 10000,
+      "weights": "evidence/cells/confirmation/gmm8-5004-constant-10000/update-10000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/gmm8-5004-constant-10000/update-5000/arrays.npz",
+      "attempt_id": "confirm-gmm8-5004-constant-10000",
+      "config": "evidence/attempts/confirm-gmm8-5004-constant-10000/config.json",
+      "dataset": "gmm8",
+      "device": "mps",
+      "generation_noise_sha256": "6d7b0898897519e987c20ba750c3ed88454dc586a8be523c278b377133bc65a3",
+      "heldout_sha256": "b740ab3b19984bd95ef51d3b732e582d0886605388420b0fa6aeda9e2ccbad67",
+      "initial_state": "evidence/inputs-retained/confirmation/gmm8-5004/initial.npz",
+      "initial_weights_sha256": "d0f10eea8d98cab7bdc7fa9aecf5f75d20d1c2ff0ba934b102787e70ffcb87b2",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2019,
+          "inlier_fraction": 0.98583984375,
+          "mode_counts": [
+            236,
+            243,
+            254,
+            256,
+            282,
+            272,
+            237,
+            239
+          ],
+          "sw1": 0.03665016116241201
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2016,
+          "inlier_fraction": 0.984375,
+          "mode_counts": [
+            229,
+            233,
+            256,
+            252,
+            280,
+            278,
+            247,
+            241
+          ],
+          "sw1": 0.041535883442794595
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2003,
+          "inlier_fraction": 0.97802734375,
+          "mode_counts": [
+            232,
+            256,
+            255,
+            239,
+            309,
+            267,
+            228,
+            217
+          ],
+          "sw1": 0.07497515829806445
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/gmm8-5004/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/gmm8-5004/training.npz",
+      "schedule": "constant",
+      "seed": 5004,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "a80e4671175f48513254f37182e22db49224628521f38ae118550a48e16ac09f",
+      "training_trace": "evidence/attempts/confirm-gmm8-5004-constant-10000/trace.jsonl",
+      "trajectory_terminal_updates": 10000,
+      "updates": 5000,
+      "weights": "evidence/cells/confirmation/gmm8-5004-constant-10000/update-5000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/gmm8-5004-cosine-10000/update-10000/arrays.npz",
+      "attempt_id": "confirm-gmm8-5004-cosine-10000",
+      "config": "evidence/attempts/confirm-gmm8-5004-cosine-10000/config.json",
+      "dataset": "gmm8",
+      "device": "mps",
+      "generation_noise_sha256": "6d7b0898897519e987c20ba750c3ed88454dc586a8be523c278b377133bc65a3",
+      "heldout_sha256": "b740ab3b19984bd95ef51d3b732e582d0886605388420b0fa6aeda9e2ccbad67",
+      "initial_state": "evidence/inputs-retained/confirmation/gmm8-5004/initial.npz",
+      "initial_weights_sha256": "d0f10eea8d98cab7bdc7fa9aecf5f75d20d1c2ff0ba934b102787e70ffcb87b2",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2031,
+          "inlier_fraction": 0.99169921875,
+          "mode_counts": [
+            244,
+            243,
+            255,
+            262,
+            267,
+            268,
+            247,
+            245
+          ],
+          "sw1": 0.02272672838770461
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2031,
+          "inlier_fraction": 0.99169921875,
+          "mode_counts": [
+            244,
+            243,
+            255,
+            262,
+            266,
+            269,
+            248,
+            244
+          ],
+          "sw1": 0.022518026826371978
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2031,
+          "inlier_fraction": 0.99169921875,
+          "mode_counts": [
+            244,
+            243,
+            255,
+            261,
+            267,
+            268,
+            248,
+            245
+          ],
+          "sw1": 0.022826018298719157
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/gmm8-5004/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/gmm8-5004/training.npz",
+      "schedule": "cosine",
+      "seed": 5004,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "a80e4671175f48513254f37182e22db49224628521f38ae118550a48e16ac09f",
+      "training_trace": "evidence/attempts/confirm-gmm8-5004-cosine-10000/trace.jsonl",
+      "trajectory_terminal_updates": 10000,
+      "updates": 10000,
+      "weights": "evidence/cells/confirmation/gmm8-5004-cosine-10000/update-10000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/gmm8-5004-cosine-5000/update-5000/arrays.npz",
+      "attempt_id": "confirm-gmm8-5004-cosine-5000",
+      "config": "evidence/attempts/confirm-gmm8-5004-cosine-5000/config.json",
+      "dataset": "gmm8",
+      "device": "mps",
+      "generation_noise_sha256": "6d7b0898897519e987c20ba750c3ed88454dc586a8be523c278b377133bc65a3",
+      "heldout_sha256": "b740ab3b19984bd95ef51d3b732e582d0886605388420b0fa6aeda9e2ccbad67",
+      "initial_state": "evidence/inputs-retained/confirmation/gmm8-5004/initial.npz",
+      "initial_weights_sha256": "d0f10eea8d98cab7bdc7fa9aecf5f75d20d1c2ff0ba934b102787e70ffcb87b2",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2018,
+          "inlier_fraction": 0.9853515625,
+          "mode_counts": [
+            232,
+            244,
+            257,
+            261,
+            264,
+            268,
+            244,
+            248
+          ],
+          "sw1": 0.02552640002593416
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2012,
+          "inlier_fraction": 0.982421875,
+          "mode_counts": [
+            235,
+            241,
+            255,
+            257,
+            265,
+            270,
+            243,
+            246
+          ],
+          "sw1": 0.027529410452902987
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2017,
+          "inlier_fraction": 0.98486328125,
+          "mode_counts": [
+            231,
+            244,
+            257,
+            261,
+            265,
+            268,
+            243,
+            248
+          ],
+          "sw1": 0.025518123631304866
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/gmm8-5004/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/gmm8-5004/training.npz",
+      "schedule": "cosine",
+      "seed": 5004,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "a80e4671175f48513254f37182e22db49224628521f38ae118550a48e16ac09f",
+      "training_trace": "evidence/attempts/confirm-gmm8-5004-cosine-5000/trace.jsonl",
+      "trajectory_terminal_updates": 5000,
+      "updates": 5000,
+      "weights": "evidence/cells/confirmation/gmm8-5004-cosine-5000/update-5000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/moons-4001-constant-10000/update-10000/arrays.npz",
+      "attempt_id": "confirm-moons-4001-constant-10000",
+      "config": "evidence/attempts/confirm-moons-4001-constant-10000/config.json",
+      "dataset": "moons",
+      "device": "mps",
+      "generation_noise_sha256": "43fbba450dcafebd5d526033982832da94332ed75cba1c6ae3099a5f94feee52",
+      "heldout_sha256": "af014d6f09e70ef49262fff9d6a04ce2088908b4521a1d5ddcdf682b43ba84d2",
+      "initial_state": "evidence/inputs-retained/confirmation/moons-4001/initial.npz",
+      "initial_weights_sha256": "566524740e64b3138c12274977803aeb063725a5cf8de3b685862abdc720b1a1",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.03000720933833003
+        },
+        "ema0999": {
+          "sw1": 0.029497553819956696
+        },
+        "raw": {
+          "sw1": 0.05314394961946556
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/moons-4001/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/moons-4001/training.npz",
+      "schedule": "constant",
+      "seed": 4001,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "f83260676122f4ae2981e470303863e59e61c2d5b3c84a1b66526a548e6666cb",
+      "training_trace": "evidence/attempts/confirm-moons-4001-constant-10000/trace.jsonl",
+      "trajectory_terminal_updates": 10000,
+      "updates": 10000,
+      "weights": "evidence/cells/confirmation/moons-4001-constant-10000/update-10000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/moons-4001-constant-10000/update-5000/arrays.npz",
+      "attempt_id": "confirm-moons-4001-constant-10000",
+      "config": "evidence/attempts/confirm-moons-4001-constant-10000/config.json",
+      "dataset": "moons",
+      "device": "mps",
+      "generation_noise_sha256": "43fbba450dcafebd5d526033982832da94332ed75cba1c6ae3099a5f94feee52",
+      "heldout_sha256": "af014d6f09e70ef49262fff9d6a04ce2088908b4521a1d5ddcdf682b43ba84d2",
+      "initial_state": "evidence/inputs-retained/confirmation/moons-4001/initial.npz",
+      "initial_weights_sha256": "566524740e64b3138c12274977803aeb063725a5cf8de3b685862abdc720b1a1",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.026507339453742604
+        },
+        "ema0999": {
+          "sw1": 0.03339092093706764
+        },
+        "raw": {
+          "sw1": 0.1198590702099009
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/moons-4001/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/moons-4001/training.npz",
+      "schedule": "constant",
+      "seed": 4001,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "f83260676122f4ae2981e470303863e59e61c2d5b3c84a1b66526a548e6666cb",
+      "training_trace": "evidence/attempts/confirm-moons-4001-constant-10000/trace.jsonl",
+      "trajectory_terminal_updates": 10000,
+      "updates": 5000,
+      "weights": "evidence/cells/confirmation/moons-4001-constant-10000/update-5000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/moons-4001-cosine-10000/update-10000/arrays.npz",
+      "attempt_id": "confirm-moons-4001-cosine-10000",
+      "config": "evidence/attempts/confirm-moons-4001-cosine-10000/config.json",
+      "dataset": "moons",
+      "device": "mps",
+      "generation_noise_sha256": "43fbba450dcafebd5d526033982832da94332ed75cba1c6ae3099a5f94feee52",
+      "heldout_sha256": "af014d6f09e70ef49262fff9d6a04ce2088908b4521a1d5ddcdf682b43ba84d2",
+      "initial_state": "evidence/inputs-retained/confirmation/moons-4001/initial.npz",
+      "initial_weights_sha256": "566524740e64b3138c12274977803aeb063725a5cf8de3b685862abdc720b1a1",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.03272911389598185
+        },
+        "ema0999": {
+          "sw1": 0.03351173493972237
+        },
+        "raw": {
+          "sw1": 0.03271145416675132
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/moons-4001/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/moons-4001/training.npz",
+      "schedule": "cosine",
+      "seed": 4001,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "f83260676122f4ae2981e470303863e59e61c2d5b3c84a1b66526a548e6666cb",
+      "training_trace": "evidence/attempts/confirm-moons-4001-cosine-10000/trace.jsonl",
+      "trajectory_terminal_updates": 10000,
+      "updates": 10000,
+      "weights": "evidence/cells/confirmation/moons-4001-cosine-10000/update-10000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/moons-4001-cosine-5000/update-5000/arrays.npz",
+      "attempt_id": "confirm-moons-4001-cosine-5000",
+      "config": "evidence/attempts/confirm-moons-4001-cosine-5000/config.json",
+      "dataset": "moons",
+      "device": "mps",
+      "generation_noise_sha256": "43fbba450dcafebd5d526033982832da94332ed75cba1c6ae3099a5f94feee52",
+      "heldout_sha256": "af014d6f09e70ef49262fff9d6a04ce2088908b4521a1d5ddcdf682b43ba84d2",
+      "initial_state": "evidence/inputs-retained/confirmation/moons-4001/initial.npz",
+      "initial_weights_sha256": "566524740e64b3138c12274977803aeb063725a5cf8de3b685862abdc720b1a1",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.02937396392976839
+        },
+        "ema0999": {
+          "sw1": 0.03018464958705508
+        },
+        "raw": {
+          "sw1": 0.0291809483827586
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/moons-4001/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/moons-4001/training.npz",
+      "schedule": "cosine",
+      "seed": 4001,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "f83260676122f4ae2981e470303863e59e61c2d5b3c84a1b66526a548e6666cb",
+      "training_trace": "evidence/attempts/confirm-moons-4001-cosine-5000/trace.jsonl",
+      "trajectory_terminal_updates": 5000,
+      "updates": 5000,
+      "weights": "evidence/cells/confirmation/moons-4001-cosine-5000/update-5000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/moons-4002-constant-10000/update-10000/arrays.npz",
+      "attempt_id": "confirm-moons-4002-constant-10000",
+      "config": "evidence/attempts/confirm-moons-4002-constant-10000/config.json",
+      "dataset": "moons",
+      "device": "mps",
+      "generation_noise_sha256": "e713cc4f52e2e9f44d5e2c4beb0c6d1abf12d09c035592a529990862c373dfdd",
+      "heldout_sha256": "54967586df1e2cd86b5bb7fe6f9a31dc728f58e5b8ac2ce10a28075e5d60d76b",
+      "initial_state": "evidence/inputs-retained/confirmation/moons-4002/initial.npz",
+      "initial_weights_sha256": "5b7647dffe4e7fd8fea1b1e627717d01eef8e4ecb652775a48824afd2a16c70d",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.05137571812226262
+        },
+        "ema0999": {
+          "sw1": 0.05446969779880102
+        },
+        "raw": {
+          "sw1": 0.13891661481867115
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/moons-4002/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/moons-4002/training.npz",
+      "schedule": "constant",
+      "seed": 4002,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "d182d905d8fa8610e36f594b71caf379462a30ef05247055408e2952823c3e87",
+      "training_trace": "evidence/attempts/confirm-moons-4002-constant-10000/trace.jsonl",
+      "trajectory_terminal_updates": 10000,
+      "updates": 10000,
+      "weights": "evidence/cells/confirmation/moons-4002-constant-10000/update-10000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/moons-4002-constant-10000/update-5000/arrays.npz",
+      "attempt_id": "confirm-moons-4002-constant-10000",
+      "config": "evidence/attempts/confirm-moons-4002-constant-10000/config.json",
+      "dataset": "moons",
+      "device": "mps",
+      "generation_noise_sha256": "e713cc4f52e2e9f44d5e2c4beb0c6d1abf12d09c035592a529990862c373dfdd",
+      "heldout_sha256": "54967586df1e2cd86b5bb7fe6f9a31dc728f58e5b8ac2ce10a28075e5d60d76b",
+      "initial_state": "evidence/inputs-retained/confirmation/moons-4002/initial.npz",
+      "initial_weights_sha256": "5b7647dffe4e7fd8fea1b1e627717d01eef8e4ecb652775a48824afd2a16c70d",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.04537222488971815
+        },
+        "ema0999": {
+          "sw1": 0.05063066908571082
+        },
+        "raw": {
+          "sw1": 0.11671273029863717
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/moons-4002/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/moons-4002/training.npz",
+      "schedule": "constant",
+      "seed": 4002,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "d182d905d8fa8610e36f594b71caf379462a30ef05247055408e2952823c3e87",
+      "training_trace": "evidence/attempts/confirm-moons-4002-constant-10000/trace.jsonl",
+      "trajectory_terminal_updates": 10000,
+      "updates": 5000,
+      "weights": "evidence/cells/confirmation/moons-4002-constant-10000/update-5000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/moons-4002-cosine-10000/update-10000/arrays.npz",
+      "attempt_id": "confirm-moons-4002-cosine-10000",
+      "config": "evidence/attempts/confirm-moons-4002-cosine-10000/config.json",
+      "dataset": "moons",
+      "device": "mps",
+      "generation_noise_sha256": "e713cc4f52e2e9f44d5e2c4beb0c6d1abf12d09c035592a529990862c373dfdd",
+      "heldout_sha256": "54967586df1e2cd86b5bb7fe6f9a31dc728f58e5b8ac2ce10a28075e5d60d76b",
+      "initial_state": "evidence/inputs-retained/confirmation/moons-4002/initial.npz",
+      "initial_weights_sha256": "5b7647dffe4e7fd8fea1b1e627717d01eef8e4ecb652775a48824afd2a16c70d",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.0533239324202861
+        },
+        "ema0999": {
+          "sw1": 0.05319541244407049
+        },
+        "raw": {
+          "sw1": 0.05346493465208406
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/moons-4002/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/moons-4002/training.npz",
+      "schedule": "cosine",
+      "seed": 4002,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "d182d905d8fa8610e36f594b71caf379462a30ef05247055408e2952823c3e87",
+      "training_trace": "evidence/attempts/confirm-moons-4002-cosine-10000/trace.jsonl",
+      "trajectory_terminal_updates": 10000,
+      "updates": 10000,
+      "weights": "evidence/cells/confirmation/moons-4002-cosine-10000/update-10000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/moons-4002-cosine-5000/update-5000/arrays.npz",
+      "attempt_id": "confirm-moons-4002-cosine-5000",
+      "config": "evidence/attempts/confirm-moons-4002-cosine-5000/config.json",
+      "dataset": "moons",
+      "device": "mps",
+      "generation_noise_sha256": "e713cc4f52e2e9f44d5e2c4beb0c6d1abf12d09c035592a529990862c373dfdd",
+      "heldout_sha256": "54967586df1e2cd86b5bb7fe6f9a31dc728f58e5b8ac2ce10a28075e5d60d76b",
+      "initial_state": "evidence/inputs-retained/confirmation/moons-4002/initial.npz",
+      "initial_weights_sha256": "5b7647dffe4e7fd8fea1b1e627717d01eef8e4ecb652775a48824afd2a16c70d",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.06437583594321519
+        },
+        "ema0999": {
+          "sw1": 0.054567126807072076
+        },
+        "raw": {
+          "sw1": 0.06293489809325395
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/moons-4002/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/moons-4002/training.npz",
+      "schedule": "cosine",
+      "seed": 4002,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "d182d905d8fa8610e36f594b71caf379462a30ef05247055408e2952823c3e87",
+      "training_trace": "evidence/attempts/confirm-moons-4002-cosine-5000/trace.jsonl",
+      "trajectory_terminal_updates": 5000,
+      "updates": 5000,
+      "weights": "evidence/cells/confirmation/moons-4002-cosine-5000/update-5000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/moons-4003-constant-10000/update-10000/arrays.npz",
+      "attempt_id": "confirm-moons-4003-constant-10000",
+      "config": "evidence/attempts/confirm-moons-4003-constant-10000/config.json",
+      "dataset": "moons",
+      "device": "mps",
+      "generation_noise_sha256": "447201897ecf052dd30bcb7a9e6efc5e569d680de214cde84d10781e893a9ef8",
+      "heldout_sha256": "ea9f392029cf8b1c497ecd6d77472c3491857d20edde35d59f6520dc75b41333",
+      "initial_state": "evidence/inputs-retained/confirmation/moons-4003/initial.npz",
+      "initial_weights_sha256": "148bf5d43d00447d36c940a22b2c369e593d4fb283f2a4c801cf6d59f6dfe34c",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.038909625372717804
+        },
+        "ema0999": {
+          "sw1": 0.03185198097219277
+        },
+        "raw": {
+          "sw1": 0.04467605273291608
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/moons-4003/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/moons-4003/training.npz",
+      "schedule": "constant",
+      "seed": 4003,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "ba39f00ae21a3f46033780d41575032f18a9011c7104a1d7ecb214271074c618",
+      "training_trace": "evidence/attempts/confirm-moons-4003-constant-10000/trace.jsonl",
+      "trajectory_terminal_updates": 10000,
+      "updates": 10000,
+      "weights": "evidence/cells/confirmation/moons-4003-constant-10000/update-10000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/moons-4003-constant-10000/update-5000/arrays.npz",
+      "attempt_id": "confirm-moons-4003-constant-10000",
+      "config": "evidence/attempts/confirm-moons-4003-constant-10000/config.json",
+      "dataset": "moons",
+      "device": "mps",
+      "generation_noise_sha256": "447201897ecf052dd30bcb7a9e6efc5e569d680de214cde84d10781e893a9ef8",
+      "heldout_sha256": "ea9f392029cf8b1c497ecd6d77472c3491857d20edde35d59f6520dc75b41333",
+      "initial_state": "evidence/inputs-retained/confirmation/moons-4003/initial.npz",
+      "initial_weights_sha256": "148bf5d43d00447d36c940a22b2c369e593d4fb283f2a4c801cf6d59f6dfe34c",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.028442049622561867
+        },
+        "ema0999": {
+          "sw1": 0.03567374135955122
+        },
+        "raw": {
+          "sw1": 0.0696207309894579
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/moons-4003/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/moons-4003/training.npz",
+      "schedule": "constant",
+      "seed": 4003,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "ba39f00ae21a3f46033780d41575032f18a9011c7104a1d7ecb214271074c618",
+      "training_trace": "evidence/attempts/confirm-moons-4003-constant-10000/trace.jsonl",
+      "trajectory_terminal_updates": 10000,
+      "updates": 5000,
+      "weights": "evidence/cells/confirmation/moons-4003-constant-10000/update-5000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/moons-4003-cosine-10000/update-10000/arrays.npz",
+      "attempt_id": "confirm-moons-4003-cosine-10000",
+      "config": "evidence/attempts/confirm-moons-4003-cosine-10000/config.json",
+      "dataset": "moons",
+      "device": "mps",
+      "generation_noise_sha256": "447201897ecf052dd30bcb7a9e6efc5e569d680de214cde84d10781e893a9ef8",
+      "heldout_sha256": "ea9f392029cf8b1c497ecd6d77472c3491857d20edde35d59f6520dc75b41333",
+      "initial_state": "evidence/inputs-retained/confirmation/moons-4003/initial.npz",
+      "initial_weights_sha256": "148bf5d43d00447d36c940a22b2c369e593d4fb283f2a4c801cf6d59f6dfe34c",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.02938715788217091
+        },
+        "ema0999": {
+          "sw1": 0.02867431990022301
+        },
+        "raw": {
+          "sw1": 0.029414449543320426
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/moons-4003/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/moons-4003/training.npz",
+      "schedule": "cosine",
+      "seed": 4003,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "ba39f00ae21a3f46033780d41575032f18a9011c7104a1d7ecb214271074c618",
+      "training_trace": "evidence/attempts/confirm-moons-4003-cosine-10000/trace.jsonl",
+      "trajectory_terminal_updates": 10000,
+      "updates": 10000,
+      "weights": "evidence/cells/confirmation/moons-4003-cosine-10000/update-10000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/moons-4003-cosine-5000/update-5000/arrays.npz",
+      "attempt_id": "confirm-moons-4003-cosine-5000",
+      "config": "evidence/attempts/confirm-moons-4003-cosine-5000/config.json",
+      "dataset": "moons",
+      "device": "mps",
+      "generation_noise_sha256": "447201897ecf052dd30bcb7a9e6efc5e569d680de214cde84d10781e893a9ef8",
+      "heldout_sha256": "ea9f392029cf8b1c497ecd6d77472c3491857d20edde35d59f6520dc75b41333",
+      "initial_state": "evidence/inputs-retained/confirmation/moons-4003/initial.npz",
+      "initial_weights_sha256": "148bf5d43d00447d36c940a22b2c369e593d4fb283f2a4c801cf6d59f6dfe34c",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.03267928904902274
+        },
+        "ema0999": {
+          "sw1": 0.03216022856646542
+        },
+        "raw": {
+          "sw1": 0.03254891231736247
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/moons-4003/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/moons-4003/training.npz",
+      "schedule": "cosine",
+      "seed": 4003,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "ba39f00ae21a3f46033780d41575032f18a9011c7104a1d7ecb214271074c618",
+      "training_trace": "evidence/attempts/confirm-moons-4003-cosine-5000/trace.jsonl",
+      "trajectory_terminal_updates": 5000,
+      "updates": 5000,
+      "weights": "evidence/cells/confirmation/moons-4003-cosine-5000/update-5000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/moons-4004-constant-10000/update-10000/arrays.npz",
+      "attempt_id": "confirm-moons-4004-constant-10000",
+      "config": "evidence/attempts/confirm-moons-4004-constant-10000/config.json",
+      "dataset": "moons",
+      "device": "mps",
+      "generation_noise_sha256": "6a6ee5be59f210a27ff20723804f749b4095fbffa097c6f8efab174790d4b58c",
+      "heldout_sha256": "028ff6ca1973eb2d629dec90d409a3efcbdd258d9e02530897c350dff3d8507d",
+      "initial_state": "evidence/inputs-retained/confirmation/moons-4004/initial.npz",
+      "initial_weights_sha256": "4f874d5dcd0ca90a33922430cab35812bd5976a5d1dfa1cdf2c59e758d47c645",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.029179088726919867
+        },
+        "ema0999": {
+          "sw1": 0.024831578497631075
+        },
+        "raw": {
+          "sw1": 0.07103913086008667
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/moons-4004/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/moons-4004/training.npz",
+      "schedule": "constant",
+      "seed": 4004,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "8e8a3c6c9025ea803cb565ea0f26e6ea9589b3302d7f2748ab48d01eda8c1040",
+      "training_trace": "evidence/attempts/confirm-moons-4004-constant-10000/trace.jsonl",
+      "trajectory_terminal_updates": 10000,
+      "updates": 10000,
+      "weights": "evidence/cells/confirmation/moons-4004-constant-10000/update-10000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/moons-4004-constant-10000/update-5000/arrays.npz",
+      "attempt_id": "confirm-moons-4004-constant-10000",
+      "config": "evidence/attempts/confirm-moons-4004-constant-10000/config.json",
+      "dataset": "moons",
+      "device": "mps",
+      "generation_noise_sha256": "6a6ee5be59f210a27ff20723804f749b4095fbffa097c6f8efab174790d4b58c",
+      "heldout_sha256": "028ff6ca1973eb2d629dec90d409a3efcbdd258d9e02530897c350dff3d8507d",
+      "initial_state": "evidence/inputs-retained/confirmation/moons-4004/initial.npz",
+      "initial_weights_sha256": "4f874d5dcd0ca90a33922430cab35812bd5976a5d1dfa1cdf2c59e758d47c645",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.034624418923782034
+        },
+        "ema0999": {
+          "sw1": 0.029203302141963018
+        },
+        "raw": {
+          "sw1": 0.07967483512944204
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/moons-4004/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/moons-4004/training.npz",
+      "schedule": "constant",
+      "seed": 4004,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "8e8a3c6c9025ea803cb565ea0f26e6ea9589b3302d7f2748ab48d01eda8c1040",
+      "training_trace": "evidence/attempts/confirm-moons-4004-constant-10000/trace.jsonl",
+      "trajectory_terminal_updates": 10000,
+      "updates": 5000,
+      "weights": "evidence/cells/confirmation/moons-4004-constant-10000/update-5000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/moons-4004-cosine-10000/update-10000/arrays.npz",
+      "attempt_id": "confirm-moons-4004-cosine-10000",
+      "config": "evidence/attempts/confirm-moons-4004-cosine-10000/config.json",
+      "dataset": "moons",
+      "device": "mps",
+      "generation_noise_sha256": "6a6ee5be59f210a27ff20723804f749b4095fbffa097c6f8efab174790d4b58c",
+      "heldout_sha256": "028ff6ca1973eb2d629dec90d409a3efcbdd258d9e02530897c350dff3d8507d",
+      "initial_state": "evidence/inputs-retained/confirmation/moons-4004/initial.npz",
+      "initial_weights_sha256": "4f874d5dcd0ca90a33922430cab35812bd5976a5d1dfa1cdf2c59e758d47c645",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.028478458950773614
+        },
+        "ema0999": {
+          "sw1": 0.028148097051250057
+        },
+        "raw": {
+          "sw1": 0.028490634714222002
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/moons-4004/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/moons-4004/training.npz",
+      "schedule": "cosine",
+      "seed": 4004,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "8e8a3c6c9025ea803cb565ea0f26e6ea9589b3302d7f2748ab48d01eda8c1040",
+      "training_trace": "evidence/attempts/confirm-moons-4004-cosine-10000/trace.jsonl",
+      "trajectory_terminal_updates": 10000,
+      "updates": 10000,
+      "weights": "evidence/cells/confirmation/moons-4004-cosine-10000/update-10000/weights.npz"
+    },
+    {
+      "ancestors": [],
+      "arrays": "evidence/cells/confirmation/moons-4004-cosine-5000/update-5000/arrays.npz",
+      "attempt_id": "confirm-moons-4004-cosine-5000",
+      "config": "evidence/attempts/confirm-moons-4004-cosine-5000/config.json",
+      "dataset": "moons",
+      "device": "mps",
+      "generation_noise_sha256": "6a6ee5be59f210a27ff20723804f749b4095fbffa097c6f8efab174790d4b58c",
+      "heldout_sha256": "028ff6ca1973eb2d629dec90d409a3efcbdd258d9e02530897c350dff3d8507d",
+      "initial_state": "evidence/inputs-retained/confirmation/moons-4004/initial.npz",
+      "initial_weights_sha256": "4f874d5dcd0ca90a33922430cab35812bd5976a5d1dfa1cdf2c59e758d47c645",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.03308946406141974
+        },
+        "ema0999": {
+          "sw1": 0.027997318577374867
+        },
+        "raw": {
+          "sw1": 0.033120247370331396
+        }
+      },
+      "phase": "confirmation",
+      "provenance": "evidence/inputs-retained/confirmation/moons-4004/provenance.json",
+      "retained_inputs": "evidence/inputs-retained/confirmation/moons-4004/training.npz",
+      "schedule": "cosine",
+      "seed": 4004,
+      "source_revision": "science-v1-662eb0ef8e5395ca",
+      "training_prefix_5000_sha256": "8e8a3c6c9025ea803cb565ea0f26e6ea9589b3302d7f2748ab48d01eda8c1040",
+      "training_trace": "evidence/attempts/confirm-moons-4004-cosine-5000/trace.jsonl",
+      "trajectory_terminal_updates": 5000,
+      "updates": 5000,
+      "weights": "evidence/cells/confirmation/moons-4004-cosine-5000/update-5000/weights.npz"
+    }
+  ],
+  "task_id": "ema-schedule"
+}

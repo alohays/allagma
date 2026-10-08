@@ -1,0 +1,20 @@
+{"event": "training_start", "first_update": 1, "config": {"phase": "pilot", "dataset": "moons", "seed": 71, "policy": "constant", "total": 2000, "stop": 2000, "attempt_id": "pilot-moons-recovered", "root": "evidence", "device": "mps", "resume": null, "checkpoint_every": 1000, "source_revision": "pilot-662eb0ef8e5395ca", "source_hashes": {"science.py": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1", "study.py": "651c3d4d0a39a9102b046e51b914e6703f3d25d36de7b99472e45db2a65e9f7f", "qualify.py": "92a5018003540ce133c8dc15f22a0b2d04ad68885f836a32defd4cc350dec3ec", "analyze.py": "30a524ea5b76f0d4f7b7fc929536b1a51e4e6e36aeddcc1f03389004135ffe18", "protocol.json": "c83368d15fa6696452a350fca4005d671388843be93d4e92783d3009d01060e4"}}, "inputs": {"dataset": "moons", "seed": 71, "phase": "pilot", "directory": "evidence/inputs-retained/pilot/moons-71", "initial_weights_sha256": "eb1a31a64e52905b7e3bd0e8a56d536aef5712021f907ac3b3b314589c527c2c", "training_prefix_5000_sha256": "8da551bb8dd83025453d629dd07cfadc9f52f0306ce2fd0a97c0c0bede7de52b", "training_prefix_definition": "SHA256(noisy[:5000] float32 bytes || noise[:5000] float32 bytes || timesteps[:5000] int16 bytes), C order", "heldout_sha256": "b7323dd4adc077f6e61656b88bc349eac91100b7e21fe1cf8eeb47ad5f6066e6", "generation_noise_sha256": "98e1cc8b325187e95c9253a943d365481dbb6d07252814b4bbd71503fa7aaedd", "files": {"initial.npz": "155d8e6ce73824e58033da36ea27aa72661438cc9a0a3fd2b42ca5cd7d1fe3f7", "training.npz": "91e21dae5024264ea4a6dab0ff9587fc790eb25ce6d8bdf3a9925e7b81cb19c9", "evaluation.npz": "23b8ffb0fb781b4b807db8cb9dbf1f9c5c5eba2123371bebf9ca2ceaafd84c37"}}}
+{"step": 1, "noise_mse": 1.0200755596160889, "gradient_norm_before_clip": 1.4183000326156616, "lr": 0.0003, "elapsed_seconds": 2.8097467499319464}
+{"step": 1000, "noise_mse": 0.4564228653907776, "gradient_norm_before_clip": 1.2459396123886108, "lr": 0.0003, "elapsed_seconds": 4.137492249952629}
+{"step": 2000, "noise_mse": 0.39708825945854187, "gradient_norm_before_clip": 0.5825081467628479, "lr": 0.0003, "elapsed_seconds": 5.334483374841511}
+{
+  "ancestors": [],
+  "device": "mps",
+  "evaluation_seconds": 0.37075799982994795,
+  "first_update": 1,
+  "last_update": 2000,
+  "parameter_count": 296450,
+  "records": [
+    "evidence/cells/pilot/moons-71-constant-2000/update-2000/record.json"
+  ],
+  "source_revision": "pilot-662eb0ef8e5395ca",
+  "status": "completed",
+  "total_seconds": 5.72569387499243,
+  "training_seconds": 4.167788792168722
+}
+

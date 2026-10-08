@@ -1,0 +1,16 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "regenerate.py",
+    "--dataset",
+    "gmm8",
+    "--out",
+    "evidence/regeneration-gmm8.json"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "regenerate-all-gmm8-states-from-saved-weights",
+  "request_id": "6867085445e34541b75581cb40e9eb62",
+  "timeout_seconds": 60.0
+}

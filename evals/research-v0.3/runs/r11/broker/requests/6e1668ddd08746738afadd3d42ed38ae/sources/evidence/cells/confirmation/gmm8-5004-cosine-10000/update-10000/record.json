@@ -1,0 +1,73 @@
+{
+  "ancestors": [],
+  "arrays": "evidence/cells/confirmation/gmm8-5004-cosine-10000/update-10000/arrays.npz",
+  "attempt_id": "confirm-gmm8-5004-cosine-10000",
+  "config": "evidence/attempts/confirm-gmm8-5004-cosine-10000/config.json",
+  "dataset": "gmm8",
+  "device": "mps",
+  "generation_noise_sha256": "6d7b0898897519e987c20ba750c3ed88454dc586a8be523c278b377133bc65a3",
+  "heldout_sha256": "b740ab3b19984bd95ef51d3b732e582d0886605388420b0fa6aeda9e2ccbad67",
+  "initial_state": "evidence/inputs-retained/confirmation/gmm8-5004/initial.npz",
+  "initial_weights_sha256": "d0f10eea8d98cab7bdc7fa9aecf5f75d20d1c2ff0ba934b102787e70ffcb87b2",
+  "metrics": {
+    "ema099": {
+      "covered_modes": 8,
+      "inlier_count": 2031,
+      "inlier_fraction": 0.99169921875,
+      "mode_counts": [
+        244,
+        243,
+        255,
+        262,
+        267,
+        268,
+        247,
+        245
+      ],
+      "sw1": 0.02272672838770461
+    },
+    "ema0999": {
+      "covered_modes": 8,
+      "inlier_count": 2031,
+      "inlier_fraction": 0.99169921875,
+      "mode_counts": [
+        244,
+        243,
+        255,
+        262,
+        266,
+        269,
+        248,
+        244
+      ],
+      "sw1": 0.022518026826371978
+    },
+    "raw": {
+      "covered_modes": 8,
+      "inlier_count": 2031,
+      "inlier_fraction": 0.99169921875,
+      "mode_counts": [
+        244,
+        243,
+        255,
+        261,
+        267,
+        268,
+        248,
+        245
+      ],
+      "sw1": 0.022826018298719157
+    }
+  },
+  "phase": "confirmation",
+  "provenance": "evidence/inputs-retained/confirmation/gmm8-5004/provenance.json",
+  "retained_inputs": "evidence/inputs-retained/confirmation/gmm8-5004/training.npz",
+  "schedule": "cosine",
+  "seed": 5004,
+  "source_revision": "science-v1-662eb0ef8e5395ca",
+  "training_prefix_5000_sha256": "a80e4671175f48513254f37182e22db49224628521f38ae118550a48e16ac09f",
+  "training_trace": "evidence/attempts/confirm-gmm8-5004-cosine-10000/trace.jsonl",
+  "trajectory_terminal_updates": 10000,
+  "updates": 10000,
+  "weights": "evidence/cells/confirmation/gmm8-5004-cosine-10000/update-10000/weights.npz"
+}

@@ -1,0 +1,20 @@
+OMP: Warning #179: Function Can't set size of /tmp file failed:
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r11/candidate/qualify.py", line 68, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r11/candidate/qualify.py", line 50, in main
+    model=model.to(device)
+          ^^^^^^^^^^^^^^^^
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r11/candidate/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1388, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r11/candidate/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 933, in _apply
+    module._apply(fn)
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r11/candidate/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1036, in _apply
+    self._buffers[key] = fn(buf)
+                         ^^^^^^^
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r11/candidate/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1374, in convert
+    return t.to(
+           ^^^^^
+RuntimeError: invalid low watermark ratio 1.4

@@ -1,0 +1,26 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "study.py",
+    "--phase",
+    "confirmation",
+    "--dataset",
+    "gmm8",
+    "--seed",
+    "5002",
+    "--policy",
+    "cosine",
+    "--total",
+    "5000",
+    "--stop",
+    "5000",
+    "--attempt-id",
+    "confirm-gmm8-5002-cosine-5000"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "confirm-gmm8-5002-cosine-5000",
+  "request_id": "c940e30f969c48efadd3d7408c8b4d1e",
+  "timeout_seconds": 60.0
+}

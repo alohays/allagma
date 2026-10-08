@@ -1,0 +1,30 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "study.py",
+    "--phase",
+    "pilot",
+    "--dataset",
+    "gmm8",
+    "--seed",
+    "81",
+    "--policy",
+    "cosine",
+    "--total",
+    "2000",
+    "--stop",
+    "2000",
+    "--attempt-id",
+    "pilot-gmm8-segment2",
+    "--resume",
+    "evidence/attempts/pilot-gmm8-segment1/resume.pt",
+    "--checkpoint-every",
+    "500"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "pilot-gmm8-resume-second-segment",
+  "request_id": "2e77bd9838af47ee9b811049aa2a3d5d",
+  "timeout_seconds": 45.0
+}

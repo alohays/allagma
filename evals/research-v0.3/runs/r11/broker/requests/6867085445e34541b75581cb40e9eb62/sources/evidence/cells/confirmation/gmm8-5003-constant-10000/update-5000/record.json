@@ -1,0 +1,73 @@
+{
+  "ancestors": [],
+  "arrays": "evidence/cells/confirmation/gmm8-5003-constant-10000/update-5000/arrays.npz",
+  "attempt_id": "confirm-gmm8-5003-constant-10000",
+  "config": "evidence/attempts/confirm-gmm8-5003-constant-10000/config.json",
+  "dataset": "gmm8",
+  "device": "mps",
+  "generation_noise_sha256": "d9be4794a0acbcb69da04c002651510988bfdf580df7c01fa4ada35443eadef2",
+  "heldout_sha256": "b62c1f70d47389e95a1a62bf3836096a396e92f50dabdf34ec070cc88dc975ba",
+  "initial_state": "evidence/inputs-retained/confirmation/gmm8-5003/initial.npz",
+  "initial_weights_sha256": "d97e2d122bab11660ffaf8d0c33745f4d27a593369c6512be91e8360cd1dbc3b",
+  "metrics": {
+    "ema099": {
+      "covered_modes": 8,
+      "inlier_count": 2008,
+      "inlier_fraction": 0.98046875,
+      "mode_counts": [
+        270,
+        272,
+        229,
+        289,
+        227,
+        227,
+        254,
+        240
+      ],
+      "sw1": 0.08718632738516649
+    },
+    "ema0999": {
+      "covered_modes": 8,
+      "inlier_count": 2010,
+      "inlier_fraction": 0.9814453125,
+      "mode_counts": [
+        278,
+        265,
+        238,
+        279,
+        239,
+        213,
+        258,
+        240
+      ],
+      "sw1": 0.08914856032654976
+    },
+    "raw": {
+      "covered_modes": 8,
+      "inlier_count": 1993,
+      "inlier_fraction": 0.97314453125,
+      "mode_counts": [
+        246,
+        304,
+        251,
+        289,
+        225,
+        203,
+        251,
+        224
+      ],
+      "sw1": 0.11803721287410325
+    }
+  },
+  "phase": "confirmation",
+  "provenance": "evidence/inputs-retained/confirmation/gmm8-5003/provenance.json",
+  "retained_inputs": "evidence/inputs-retained/confirmation/gmm8-5003/training.npz",
+  "schedule": "constant",
+  "seed": 5003,
+  "source_revision": "science-v1-662eb0ef8e5395ca",
+  "training_prefix_5000_sha256": "4497676d06b0be2792effa33003d6d7218263b78a68759db2bba3e278186a1d8",
+  "training_trace": "evidence/attempts/confirm-gmm8-5003-constant-10000/trace.jsonl",
+  "trajectory_terminal_updates": 10000,
+  "updates": 5000,
+  "weights": "evidence/cells/confirmation/gmm8-5003-constant-10000/update-5000/weights.npz"
+}

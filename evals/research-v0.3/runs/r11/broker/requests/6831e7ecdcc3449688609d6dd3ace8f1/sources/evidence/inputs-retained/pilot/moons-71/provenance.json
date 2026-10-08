@@ -1,0 +1,16 @@
+{
+  "dataset": "moons",
+  "directory": "evidence/inputs-retained/pilot/moons-71",
+  "files": {
+    "evaluation.npz": "23b8ffb0fb781b4b807db8cb9dbf1f9c5c5eba2123371bebf9ca2ceaafd84c37",
+    "initial.npz": "155d8e6ce73824e58033da36ea27aa72661438cc9a0a3fd2b42ca5cd7d1fe3f7",
+    "training.npz": "91e21dae5024264ea4a6dab0ff9587fc790eb25ce6d8bdf3a9925e7b81cb19c9"
+  },
+  "generation_noise_sha256": "98e1cc8b325187e95c9253a943d365481dbb6d07252814b4bbd71503fa7aaedd",
+  "heldout_sha256": "b7323dd4adc077f6e61656b88bc349eac91100b7e21fe1cf8eeb47ad5f6066e6",
+  "initial_weights_sha256": "eb1a31a64e52905b7e3bd0e8a56d536aef5712021f907ac3b3b314589c527c2c",
+  "phase": "pilot",
+  "seed": 71,
+  "training_prefix_5000_sha256": "8da551bb8dd83025453d629dd07cfadc9f52f0306ce2fd0a97c0c0bede7de52b",
+  "training_prefix_definition": "SHA256(noisy[:5000] float32 bytes || noise[:5000] float32 bytes || timesteps[:5000] int16 bytes), C order"
+}

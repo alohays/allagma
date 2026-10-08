@@ -1,0 +1,16 @@
+{
+  "dataset": "gmm8",
+  "directory": "evidence/inputs-retained/confirmation/gmm8-5001",
+  "files": {
+    "evaluation.npz": "2bf73e3e2e536b92972fadc0ee94a9ffb1adefd76d36993f9d2f70e8c1388d25",
+    "initial.npz": "2002c5e9b0628d9430d01330911ed2db5ac0937b1a3a59135f9a1e2c992d2a31",
+    "training.npz": "8291f7a1896861cc7d765a554a3395933af816ee1c2128b20e18b522c8da4b58"
+  },
+  "generation_noise_sha256": "3e84425ce8de61f0c7dbba82060546dcc74799338c665eb454a00854466a21d2",
+  "heldout_sha256": "eeb78e4a2bc4ab4e9155586f2e2321252c06d5a5fbfb5636d086ebd59b4fb3c8",
+  "initial_weights_sha256": "06237d004ee4c1ae2f2cf89b419c2d39081009bb01911ae463a5c3b98fcd42f5",
+  "phase": "confirmation",
+  "seed": 5001,
+  "training_prefix_5000_sha256": "50ae10fda70a6d46f6bcfd042a66ce0834b749501d5f2c9a3fcf593f4cec2e5d",
+  "training_prefix_definition": "SHA256(noisy[:5000] float32 bytes || noise[:5000] float32 bytes || timesteps[:5000] int16 bytes), C order"
+}

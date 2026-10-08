@@ -1,0 +1,2865 @@
+{
+  "task_id": "ema-schedule",
+  "claimed_execution_status": "complete",
+  "numerical": {
+    "name": "independent EMA endpoint metrics",
+    "correct": 240,
+    "total": 240,
+    "checks": [
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          10000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.104420601713935,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          10000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          10000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          10000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.09147121143185241,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          10000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          10000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          10000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.0851870726699071,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          10000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          10000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          5000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.07153591498668763,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          5000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          5000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          5000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.0844828391721722,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          5000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          5000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          5000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.08260390130760391,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          5000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          5000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          10000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.08839889701314849,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          10000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          10000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.08824944730060932,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.08568585010685809,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          5000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.0839656467258976,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          5000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          5000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.08347131940554325,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.08289199367308453,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5001,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          10000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.14291134639925357,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          10000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          10000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          10000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.0882198620033844,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          10000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          10000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          10000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.07848480827244936,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          10000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          10000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          5000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.24339072699771624,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          5000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          5000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          5000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.08602145761323118,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          5000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          5000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          5000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.07157617790836907,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          5000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          5000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          10000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.06882746949931369,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          10000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          10000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.06837996942848605,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.06798001579373719,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          5000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.07369943723972264,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          5000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          5000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.07316170230069692,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.06816646824033129,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5002,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          10000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.1082761241309105,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          10000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          10000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          10000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.08500228958799066,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          10000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          10000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          10000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.0928378489051592,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          10000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          10000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          5000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.11803721287410324,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          5000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          5000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          5000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.08718632738516649,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          5000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          5000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          5000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.08914856032654976,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          5000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          5000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          10000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.09076166948296671,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          10000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          10000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.09088271938512409,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.09229159528633538,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          5000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.09654814149434703,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          5000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          5000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.09644813929291143,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.09074823672600799,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5003,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          10000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.04710466859787974,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          10000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          10000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          10000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.025414555843830518,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          10000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          10000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          10000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.029079087290837455,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          10000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          10000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          5000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.07497515829806445,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          5000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          5000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          5000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.036650161162412015,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          5000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          5000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          5000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.041535883442794595,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          5000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          5000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          10000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.022826018298719157,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          10000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          10000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.02272672838770461,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.022518026826371978,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          5000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.025518123631304866,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          5000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          5000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.025526400025934155,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.027529410452902987,
+        "pass": true
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "gmm8",
+          5004,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "mode_coverage",
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4001,
+          10000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.05314394961946556,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4001,
+          10000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4001,
+          10000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.03000720933833003,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4001,
+          10000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4001,
+          10000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.029497553819956696,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4001,
+          10000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4001,
+          5000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.1198590702099009,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4001,
+          5000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4001,
+          5000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.026507339453742604,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4001,
+          5000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4001,
+          5000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.03339092093706764,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4001,
+          5000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4001,
+          10000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.03271145416675132,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4001,
+          10000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4001,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.03272911389598185,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4001,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4001,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.03351173493972237,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4001,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4001,
+          5000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.029180948382758597,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4001,
+          5000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4001,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.02937396392976839,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4001,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4001,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.030184649587055083,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4001,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4002,
+          10000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.13891661481867112,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4002,
+          10000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4002,
+          10000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.05137571812226262,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4002,
+          10000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4002,
+          10000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.05446969779880102,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4002,
+          10000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4002,
+          5000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.11671273029863717,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4002,
+          5000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4002,
+          5000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.04537222488971815,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4002,
+          5000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4002,
+          5000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.050630669085710824,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4002,
+          5000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4002,
+          10000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.05346493465208406,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4002,
+          10000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4002,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.0533239324202861,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4002,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4002,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.05319541244407049,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4002,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4002,
+          5000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.06293489809325395,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4002,
+          5000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4002,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.06437583594321519,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4002,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4002,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.05456712680707208,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4002,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4003,
+          10000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.04467605273291609,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4003,
+          10000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4003,
+          10000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.038909625372717804,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4003,
+          10000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4003,
+          10000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.03185198097219277,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4003,
+          10000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4003,
+          5000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.0696207309894579,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4003,
+          5000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4003,
+          5000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.028442049622561867,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4003,
+          5000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4003,
+          5000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.03567374135955122,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4003,
+          5000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4003,
+          10000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.029414449543320426,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4003,
+          10000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4003,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.02938715788217091,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4003,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4003,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.028674319900223014,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4003,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4003,
+          5000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.03254891231736247,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4003,
+          5000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4003,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.03267928904902274,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4003,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4003,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.03216022856646542,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4003,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4004,
+          10000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.07103913086008667,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4004,
+          10000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4004,
+          10000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.029179088726919867,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4004,
+          10000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4004,
+          10000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.024831578497631075,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4004,
+          10000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4004,
+          5000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.07967483512944204,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4004,
+          5000,
+          "constant"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4004,
+          5000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.034624418923782034,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4004,
+          5000,
+          "constant"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4004,
+          5000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.029203302141963018,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4004,
+          5000,
+          "constant"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4004,
+          10000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.028490634714222005,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4004,
+          10000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4004,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.028478458950773618,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4004,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4004,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.028148097051250057,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4004,
+          10000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4004,
+          5000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "sw1",
+        "value": 0.033120247370331396,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4004,
+          5000,
+          "cosine"
+        ],
+        "variant": "raw",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4004,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "sw1",
+        "value": 0.03308946406141974,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4004,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema099",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "cell": [
+          "moons",
+          4004,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "sw1",
+        "value": 0.027997318577374867,
+        "pass": true
+      },
+      {
+        "cell": [
+          "moons",
+          4004,
+          5000,
+          "cosine"
+        ],
+        "variant": "ema0999",
+        "metric": "checkpoint_sample_replay",
+        "pass": true,
+        "maximum_absolute_error": 0.0
+      }
+    ],
+    "errors": [],
+    "required_cells": 32,
+    "observed_cells": 32,
+    "automatic_controls_pass": true,
+    "scope": "Saved-array metrics, paired evaluation inputs and all checkpoint sample replays using the trusted prior denoiser/sampler. Training duration/history and scientific inference still require separate review."
+  },
+  "artifacts": {
+    "manuscript": {
+      "path": "REPORT.md",
+      "sha256": "03d430bc62c1e5988349644378df725ee438a3e35c82b1758e34397555ac53a2"
+    },
+    "review": {
+      "path": "review.json",
+      "sha256": "adb6e8de81349f0edc50bcf09419b35c3e05690c70996959a5b82aa8468a05b7"
+    },
+    "artifact_manifest": {
+      "path": "artifact-manifest.json",
+      "sha256": "be77e6d42d242ead8037d3fb28a48de36db9f9b684d8d09b332e8ff3e4c35319"
+    }
+  },
+  "substantive_review": "pending",
+  "overall_completion": "unproven",
+  "scorer_sha256": "01a9248197d4fa3bdde09081c2861133783c41439f7025cf509ac42c9df41fda"
+}

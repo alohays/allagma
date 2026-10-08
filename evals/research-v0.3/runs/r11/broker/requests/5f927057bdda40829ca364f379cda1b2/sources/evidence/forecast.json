@@ -1,0 +1,27 @@
+{
+  "already_charged_seconds": {
+    "compute": 37.08482004166581,
+    "setup": 23.863409582758322
+  },
+  "assumptions": "Maximum observed fresh-start pilot rate for planned fresh-start confirmation workers; serial workers, 15% training/evaluation contingency. Resumed pilot timings are retained separately; actual broker receipts govern stopping.",
+  "ceiling_compute_seconds": 1800,
+  "ceiling_setup_seconds": 300,
+  "components_seconds": {
+    "analysis_and_verification": 70,
+    "endpoint_evaluation_32_cells": 11.864255994558334,
+    "regenerate_all_32_cells": 11.864255994558334,
+    "training_200000_updates": 500.92658321373165,
+    "workers_and_io": 72
+  },
+  "conservative_remaining_seconds": 743.5737210840919,
+  "contingency_seconds": 76.9186258812435,
+  "forecast_within_ceiling": true,
+  "nominal_remaining_seconds": 666.6550952028483,
+  "pilot_result_count": 2,
+  "planned_confirmation_requests": 24,
+  "resumed_pilot_seconds_per_update": [
+    0.008651700709015131
+  ],
+  "seconds_per_cell_evaluation": 0.37075799982994795,
+  "seconds_per_update": 0.002504632916068658
+}

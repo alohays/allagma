@@ -1,0 +1,19 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "-m",
+    "pip",
+    "install",
+    "--no-index",
+    "--find-links",
+    "inputs/materials/wheels",
+    "-r",
+    "inputs/materials/requirements-reference.lock"
+  ],
+  "attempt": false,
+  "category": "setup",
+  "cwd": ".",
+  "label": "install-offline-locked-packages",
+  "request_id": "663b2a2ef7844d96be770bc00db5b2a6",
+  "timeout_seconds": 120.0
+}

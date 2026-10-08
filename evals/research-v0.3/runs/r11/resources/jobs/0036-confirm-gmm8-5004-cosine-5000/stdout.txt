@@ -1,0 +1,23 @@
+{"event": "training_start", "first_update": 1, "config": {"phase": "confirmation", "dataset": "gmm8", "seed": 5004, "policy": "cosine", "total": 5000, "stop": 5000, "attempt_id": "confirm-gmm8-5004-cosine-5000", "root": "evidence", "device": "mps", "resume": null, "checkpoint_every": 2500, "source_revision": "science-v1-662eb0ef8e5395ca", "source_hashes": {"science.py": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1", "study.py": "651c3d4d0a39a9102b046e51b914e6703f3d25d36de7b99472e45db2a65e9f7f", "qualify.py": "92a5018003540ce133c8dc15f22a0b2d04ad68885f836a32defd4cc350dec3ec", "analyze.py": "30a524ea5b76f0d4f7b7fc929536b1a51e4e6e36aeddcc1f03389004135ffe18", "protocol.json": "c83368d15fa6696452a350fca4005d671388843be93d4e92783d3009d01060e4"}}, "inputs": {"dataset": "gmm8", "directory": "evidence/inputs-retained/confirmation/gmm8-5004", "files": {"evaluation.npz": "73f95608a2cb328ca44f91376ab51350da7c365482a99fc147f0cc07af58ba99", "initial.npz": "1536fadf52e1947daadad35382e950cd8b5b5951482b5ebb06ca81e22f6b1f70", "training.npz": "3a2101d1c2761b372318d8b20051eb6e1314d1d2a9a6c5e37a57ad7d2996715a"}, "generation_noise_sha256": "6d7b0898897519e987c20ba750c3ed88454dc586a8be523c278b377133bc65a3", "heldout_sha256": "b740ab3b19984bd95ef51d3b732e582d0886605388420b0fa6aeda9e2ccbad67", "initial_weights_sha256": "d0f10eea8d98cab7bdc7fa9aecf5f75d20d1c2ff0ba934b102787e70ffcb87b2", "phase": "confirmation", "seed": 5004, "training_prefix_5000_sha256": "a80e4671175f48513254f37182e22db49224628521f38ae118550a48e16ac09f", "training_prefix_definition": "SHA256(noisy[:5000] float32 bytes || noise[:5000] float32 bytes || timesteps[:5000] int16 bytes), C order"}}
+{"step": 1, "noise_mse": 0.9464737176895142, "gradient_norm_before_clip": 1.356371521949768, "lr": 0.0003, "elapsed_seconds": 1.9241189998574555}
+{"step": 1000, "noise_mse": 0.35483041405677795, "gradient_norm_before_clip": 0.5844953060150146, "lr": 0.0002713968606469575, "elapsed_seconds": 3.061191540909931}
+{"step": 2000, "noise_mse": 0.4472663998603821, "gradient_norm_before_clip": 0.7707605957984924, "lr": 0.00019640633759709678, "elapsed_seconds": 4.208773207850754}
+{"step": 3000, "noise_mse": 0.35960400104522705, "gradient_norm_before_clip": 0.6151273846626282, "lr": 0.00010368331346611474, "elapsed_seconds": 5.340236332966015}
+{"step": 4000, "noise_mse": 0.38139235973358154, "gradient_norm_before_clip": 0.6094026565551758, "lr": 2.865853350959781e-05, "elapsed_seconds": 6.505317582981661}
+{"step": 5000, "noise_mse": 0.44168102741241455, "gradient_norm_before_clip": 0.5917346477508545, "lr": 0.0, "elapsed_seconds": 7.734699749853462}
+{
+  "ancestors": [],
+  "device": "mps",
+  "evaluation_seconds": 0.3638536660000682,
+  "first_update": 1,
+  "last_update": 5000,
+  "parameter_count": 296450,
+  "records": [
+    "evidence/cells/confirmation/gmm8-5004-cosine-5000/update-5000/record.json"
+  ],
+  "source_revision": "science-v1-662eb0ef8e5395ca",
+  "status": "completed",
+  "total_seconds": 8.114551750011742,
+  "training_seconds": 7.086064668139443
+}
+

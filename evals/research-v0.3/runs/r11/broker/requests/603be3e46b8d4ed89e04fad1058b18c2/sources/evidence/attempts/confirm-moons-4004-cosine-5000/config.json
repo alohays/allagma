@@ -1,0 +1,21 @@
+{
+  "attempt_id": "confirm-moons-4004-cosine-5000",
+  "checkpoint_every": 2500,
+  "dataset": "moons",
+  "device": "mps",
+  "phase": "confirmation",
+  "policy": "cosine",
+  "resume": null,
+  "root": "evidence",
+  "seed": 4004,
+  "source_hashes": {
+    "analyze.py": "30a524ea5b76f0d4f7b7fc929536b1a51e4e6e36aeddcc1f03389004135ffe18",
+    "protocol.json": "c83368d15fa6696452a350fca4005d671388843be93d4e92783d3009d01060e4",
+    "qualify.py": "92a5018003540ce133c8dc15f22a0b2d04ad68885f836a32defd4cc350dec3ec",
+    "science.py": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1",
+    "study.py": "651c3d4d0a39a9102b046e51b914e6703f3d25d36de7b99472e45db2a65e9f7f"
+  },
+  "source_revision": "science-v1-662eb0ef8e5395ca",
+  "stop": 5000,
+  "total": 5000
+}

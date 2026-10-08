@@ -1,0 +1,30 @@
+{
+  "archive": "evidence/source/science-v1-662eb0ef8e5395ca",
+  "auxiliary_hashes": {
+    "campaign.py": "9289fd93f487870d4bd81cfd1c17f3f1ecf791ae96fbf6a33922bea2b4d33fab",
+    "freeze.py": "771c01dcfca2a0ccf605af18d894139077a9595400316934393699ab00a269e0",
+    "regenerate.py": "f6183d0674872cd246d88154a5d3fb5293780082fc1ee184e5e1db1f2b54ffa7",
+    "reproduce.py": "a592924d2244f2d245e3515ac914c4c36ad5e9fb4467fe978383f64950385db3",
+    "runner_audit.py": "2052e83dcb79d857f1b20c6ad07091bd79bba5257dfe33f311c76c13d6b7799e",
+    "verify.py": "68f08ecb5b051cd6b211e69650b4ecf889b3b725dd8267ba82e322bf00ab8cc5"
+  },
+  "confirmation_data_seen": false,
+  "device": "mps",
+  "forecast": "evidence/forecast.json",
+  "forecast_sha256": "1d543f28673bf84f5d4dbbc2db8feb5858a659a7e5a5d977bce99894b7ff68ac",
+  "format": "ema-schedule-freeze-v1",
+  "frozen_at": "2026-10-08T06:27:04.043736+00:00",
+  "protocol_sha256": "c83368d15fa6696452a350fca4005d671388843be93d4e92783d3009d01060e4",
+  "qualification": "evidence/qualification.json",
+  "qualification_sha256": "0b794127b4fde96381f34d68dddb8b6ee26d448360f85c5122887a1bc6724194",
+  "runner_audit": "evidence/runner-audit.json",
+  "runner_audit_sha256": "7122619e8ed90dcb9cc54b3b786869f57082775b7d4986c763945f406d6f3ab3",
+  "source_hashes": {
+    "analyze.py": "30a524ea5b76f0d4f7b7fc929536b1a51e4e6e36aeddcc1f03389004135ffe18",
+    "protocol.json": "c83368d15fa6696452a350fca4005d671388843be93d4e92783d3009d01060e4",
+    "qualify.py": "92a5018003540ce133c8dc15f22a0b2d04ad68885f836a32defd4cc350dec3ec",
+    "science.py": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1",
+    "study.py": "651c3d4d0a39a9102b046e51b914e6703f3d25d36de7b99472e45db2a65e9f7f"
+  },
+  "source_revision": "science-v1-662eb0ef8e5395ca"
+}

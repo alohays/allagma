@@ -1,0 +1,235 @@
+{
+  "cells": 32,
+  "checks": [
+    {
+      "dataset": "gmm8",
+      "passed": true,
+      "schedule": "constant",
+      "seed": 5001,
+      "updates": 10000
+    },
+    {
+      "dataset": "gmm8",
+      "passed": true,
+      "schedule": "constant",
+      "seed": 5001,
+      "updates": 5000
+    },
+    {
+      "dataset": "gmm8",
+      "passed": true,
+      "schedule": "cosine",
+      "seed": 5001,
+      "updates": 10000
+    },
+    {
+      "dataset": "gmm8",
+      "passed": true,
+      "schedule": "cosine",
+      "seed": 5001,
+      "updates": 5000
+    },
+    {
+      "dataset": "gmm8",
+      "passed": true,
+      "schedule": "constant",
+      "seed": 5002,
+      "updates": 10000
+    },
+    {
+      "dataset": "gmm8",
+      "passed": true,
+      "schedule": "constant",
+      "seed": 5002,
+      "updates": 5000
+    },
+    {
+      "dataset": "gmm8",
+      "passed": true,
+      "schedule": "cosine",
+      "seed": 5002,
+      "updates": 10000
+    },
+    {
+      "dataset": "gmm8",
+      "passed": true,
+      "schedule": "cosine",
+      "seed": 5002,
+      "updates": 5000
+    },
+    {
+      "dataset": "gmm8",
+      "passed": true,
+      "schedule": "constant",
+      "seed": 5003,
+      "updates": 10000
+    },
+    {
+      "dataset": "gmm8",
+      "passed": true,
+      "schedule": "constant",
+      "seed": 5003,
+      "updates": 5000
+    },
+    {
+      "dataset": "gmm8",
+      "passed": true,
+      "schedule": "cosine",
+      "seed": 5003,
+      "updates": 10000
+    },
+    {
+      "dataset": "gmm8",
+      "passed": true,
+      "schedule": "cosine",
+      "seed": 5003,
+      "updates": 5000
+    },
+    {
+      "dataset": "gmm8",
+      "passed": true,
+      "schedule": "constant",
+      "seed": 5004,
+      "updates": 10000
+    },
+    {
+      "dataset": "gmm8",
+      "passed": true,
+      "schedule": "constant",
+      "seed": 5004,
+      "updates": 5000
+    },
+    {
+      "dataset": "gmm8",
+      "passed": true,
+      "schedule": "cosine",
+      "seed": 5004,
+      "updates": 10000
+    },
+    {
+      "dataset": "gmm8",
+      "passed": true,
+      "schedule": "cosine",
+      "seed": 5004,
+      "updates": 5000
+    },
+    {
+      "dataset": "moons",
+      "passed": true,
+      "schedule": "constant",
+      "seed": 4001,
+      "updates": 10000
+    },
+    {
+      "dataset": "moons",
+      "passed": true,
+      "schedule": "constant",
+      "seed": 4001,
+      "updates": 5000
+    },
+    {
+      "dataset": "moons",
+      "passed": true,
+      "schedule": "cosine",
+      "seed": 4001,
+      "updates": 10000
+    },
+    {
+      "dataset": "moons",
+      "passed": true,
+      "schedule": "cosine",
+      "seed": 4001,
+      "updates": 5000
+    },
+    {
+      "dataset": "moons",
+      "passed": true,
+      "schedule": "constant",
+      "seed": 4002,
+      "updates": 10000
+    },
+    {
+      "dataset": "moons",
+      "passed": true,
+      "schedule": "constant",
+      "seed": 4002,
+      "updates": 5000
+    },
+    {
+      "dataset": "moons",
+      "passed": true,
+      "schedule": "cosine",
+      "seed": 4002,
+      "updates": 10000
+    },
+    {
+      "dataset": "moons",
+      "passed": true,
+      "schedule": "cosine",
+      "seed": 4002,
+      "updates": 5000
+    },
+    {
+      "dataset": "moons",
+      "passed": true,
+      "schedule": "constant",
+      "seed": 4003,
+      "updates": 10000
+    },
+    {
+      "dataset": "moons",
+      "passed": true,
+      "schedule": "constant",
+      "seed": 4003,
+      "updates": 5000
+    },
+    {
+      "dataset": "moons",
+      "passed": true,
+      "schedule": "cosine",
+      "seed": 4003,
+      "updates": 10000
+    },
+    {
+      "dataset": "moons",
+      "passed": true,
+      "schedule": "cosine",
+      "seed": 4003,
+      "updates": 5000
+    },
+    {
+      "dataset": "moons",
+      "passed": true,
+      "schedule": "constant",
+      "seed": 4004,
+      "updates": 10000
+    },
+    {
+      "dataset": "moons",
+      "passed": true,
+      "schedule": "constant",
+      "seed": 4004,
+      "updates": 5000
+    },
+    {
+      "dataset": "moons",
+      "passed": true,
+      "schedule": "cosine",
+      "seed": 4004,
+      "updates": 10000
+    },
+    {
+      "dataset": "moons",
+      "passed": true,
+      "schedule": "cosine",
+      "seed": 4004,
+      "updates": 5000
+    }
+  ],
+  "limitation": "Shared raw evidence and model definitions; computational audit, not independent scientific peer review",
+  "matched_seed_inputs": 8,
+  "max_sw1_absolute_disagreement": 2.7755575615628914e-17,
+  "method": "Independent vectorized float64 projection/sort, squared-distance coverage, literal df=3 critical value and sign enumeration",
+  "status": "passed",
+  "summary_statistics_checked": 90
+}

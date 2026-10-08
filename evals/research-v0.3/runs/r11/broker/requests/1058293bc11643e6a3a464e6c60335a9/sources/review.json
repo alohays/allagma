@@ -1,0 +1,80 @@
+{
+  "format": "research-review-v1",
+  "task_id": "ema-schedule",
+  "reviewer": "OpenAI Codex, same author as implementation and report; substantive self-critique, not independent peer review",
+  "material": {
+    "revision": "report-r1",
+    "path": "REPORT.r1.md",
+    "sha256": "55383593a793ccecba03d2e8cb198ab36962e00a81a81d06112a5df1e94e731e",
+    "scientific_revision": "science-v1-662eb0ef8e5395ca",
+    "analysis": "analysis/summary.json",
+    "renderer": "report_r1_renderer.py"
+  },
+  "overall_assessment": "The crossed experiment is executed completely and resolves the old duration-versus-schedule-position confound at the policy level. Its broad observed pattern is useful, but n=4 per dataset leaves large seed uncertainty. It does not isolate an endpoint-learning-rate mechanism, establish an interaction, or demonstrate general EMA superiority.",
+  "strengths": [
+    "True terminal cosine conditions at both durations, with valid constant checkpoint reuse and exactly matched actual inputs within seed.",
+    "Frozen protocol, known-answer qualification and resource forecast preceded any confirmation inputs.",
+    "All failures and the controlled interruption are retained; startup restart is explicitly distinguished from a separate real optimizer-resume equivalence test.",
+    "All 32 cells and 96 model states are retained in non-pickle NPZ, and direct regeneration from saved weights checks every state.",
+    "All seed effects, contrasts, small-seed uncertainty and fully saturated coverage are reported, including null and inconclusive findings."
+  ],
+  "findings": [
+    {
+      "id": "R1",
+      "severity": "major interpretive limitation",
+      "finding": "The abstract's 8/8 versus 7/8 count of negative means can obscure that all eight cosine effect intervals include zero. Only the two moons/5000 schedule contrast intervals exclude zero without correction; this is insufficient for a broad confirmatory claim across 36 primary effects and contrasts.",
+      "evidence": ["REPORT.r1.md", "analysis/tables.md", "analysis/summary.json"],
+      "requested_response": "State the observed magnitude contrast directly, identify the narrow unadjusted interval result, and state explicitly that all cosine effects, all duration effects and all interactions remain compatible with zero. Retain the exact-test minimum p=0.125 and multiplicity caveat.",
+      "response": "Report-r2 adds a direct fixed-duration policy paragraph, names both moons/5000 contrasts and intervals, and explicitly describes all cosine/duration/interaction intervals as compatible with zero. It makes no familywise significance or mechanism claim.",
+      "disposition": "addressed in reporting; statistical power remains limited"
+    },
+    {
+      "id": "R2",
+      "severity": "major causal limitation",
+      "finding": "Crossing duration with the policy name does not make the cosine duration contrast a pure continuation effect. Changing its terminal duration changes every preceding learning rate and total optimization exposure. The same zero terminal rate at 5000 and 10000 does not hold the optimizer history fixed.",
+      "evidence": ["protocol.json", "study.py", "REPORT.r1.md"],
+      "requested_response": "Keep the intervention defined as the full schedule and preserve the explicit distinction between constant continuation and cosine policy-duration assignment. Do not infer a noise-suppression or EMA-lag mechanism from endpoints.",
+      "response": "The methods and limitations retain the exact discrete schedule, including its one-step endpoint convention relative to the prior runner, and report-r2 ties the conclusion to full policy history rather than endpoint rate.",
+      "disposition": "scope limitation retained; new interventions would be needed for mechanism"
+    },
+    {
+      "id": "R3",
+      "severity": "moderate interpretation and robustness",
+      "finding": "The GMM8 5000 constant-policy effects include a large single-seed improvement and broad intervals. Large EMA-minus-raw improvement can also reflect poorer raw quality rather than a superior final EMA model. The draft links leave-one-seed-out diagnostics but does not state what they show.",
+      "evidence": ["analysis/main-figure.png", "analysis/seed-metrics.csv", "analysis/summary.json", "REPORT.r1.md"],
+      "requested_response": "Use the absolute score table to distinguish raw quality from incremental EMA benefit, and summarize the prespecified leave-one-seed-out schedule diagnostic without treating it as extra replication or a new confirmatory test.",
+      "response": "Report-r2 adds the absolute-quality interpretation and the verified leave-one-seed-out policy-contrast range. No extra seeds, tuning, selected decay or pooled duplicate run is introduced.",
+      "disposition": "addressed descriptively; high sampling uncertainty remains"
+    },
+    {
+      "id": "R4",
+      "severity": "moderate verification gap in draft",
+      "finding": "The primary independent audit checks endpoint coverage counts but does not separately verify the rendered inlier-fraction intervals, finite-sample control summaries or leave-one-seed-out summaries. The report uses these supporting numbers.",
+      "evidence": ["verify.py", "evidence/verification.json", "REPORT.r1.md"],
+      "requested_response": "Independently check supporting table arithmetic and heldout-versus-heldout metrics from retained evidence before finalizing the report.",
+      "response": "A targeted broker computation in supporting_verify.py checks all 12 coverage summaries, eight independent heldout controls and 90 leave-one-seed-out summaries. Report-r2 links evidence/supporting-verification.json; final packaging requires it to pass.",
+      "disposition": "addressed by additional verification, without changing frozen results"
+    },
+    {
+      "id": "R5",
+      "severity": "moderate measurement limitation",
+      "finding": "Coverage is 8/8 for all 48 GMM8 states and therefore has a complete ceiling effect. Shared finite heldout and generation draws improve pairing but do not remove estimation noise; a heldout-control average is not a model-score floor.",
+      "evidence": ["measurements.json", "analysis/summary.json", "REPORT.r1.md"],
+      "requested_response": "Retain all mode counts and inlier mass, avoid equivalence claims from saturation, and do not subtract the control score or interpret it as a bound.",
+      "response": "Report-r2 preserves the all-draw 21-count threshold, the complete saturation warning, per-state counts and fractions, and the no-subtraction/no-lower-bound wording.",
+      "disposition": "measurement limitation explicitly retained"
+    },
+    {
+      "id": "R6",
+      "severity": "moderate reproducibility boundary",
+      "finding": "All-state saved-weight regeneration is strong evidence that samples correspond to the supplied weights, but it does not independently validate training science or constitute a second full training replication. The interrupted marked request stopped before a usable checkpoint, whereas actual checkpoint resumption was separately qualified on a pilot.",
+      "evidence": ["evidence/recovery-notes.md", "evidence/runner-audit.json", "evidence/regeneration-moons.json", "evidence/regeneration-gmm8.json", "REPRODUCE.md"],
+      "requested_response": "Keep those checks and recovery claims distinct; provide executable fresh-environment training and raw-evidence recomputation procedures, while documenting that full training was not duplicated.",
+      "response": "Report-r2 and REPRODUCE.md distinguish startup restart, real pilot checkpoint resumption, all-state regeneration and the unexecuted second full reproduction procedure. The submission carries both required argv entrypoints.",
+      "disposition": "addressed through transparent boundaries; no independent peer review claimed"
+    }
+  ],
+  "response_revision": "report-r2",
+  "response_path": "REPORT.md",
+  "recommendation": "Complete for the bounded task after supporting numerical checks pass; descriptive schedule-dependent findings, inconclusive interaction, no general or mechanistic claim."
+}

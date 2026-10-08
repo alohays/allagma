@@ -18,7 +18,7 @@ verified implementation/evaluation progress; this is not a blocked state.
 | r08 | EMA schedule, plain, replicate 2 | 240/240 | 8 | verified | yes |
 | r09 | CORE, plain, replicate 1 | 6/6 | 8 | verified | yes |
 | r10 | CORE, Allagma, replicate 1 | 6/6 | 8 | verified | yes |
-| r11 | EMA schedule, plain, replicate 1 | 240/240 | pending | pending review | pending |
+| r11 | EMA schedule, plain, replicate 1 | 240/240 | 8 | verified | yes |
 | r12 | EMA schedule, Allagma, replicate 1 | pending | pending | active | pending |
 
 **Active native run: r12; exec session 84378. This is the final assigned session.** Poll that handle or
@@ -101,12 +101,12 @@ critique is not peer review.
 
 ## Remaining work
 
-1. Finish r11 substantive review and complete/score r12.
+1. Complete and score r12.
    Preserve all failed outcomes and record all eight evidence items honestly.
 2. Generate the complete comparison only after all twelve reviews. Keep required
    execution distinct from package completion: r03/r06 ran correct science but
    lack explicit review/material revision binding. Latest interim comparison is
-   `comparisons/after-r10-reviewed/`. Two sessions per condition support only
+   `comparisons/after-r11-reviewed/`. Two sessions per condition support only
    descriptive task-specific comparisons, not broad superiority.
 3. Repair the shared MPS prefix in a separately versioned release, execute the
    real broker regression without a worker-side workaround, and retain all
@@ -146,3 +146,30 @@ path too; its source has no final storage check, but a separate native-adapter
 fixture must establish that scope before claiming it tested. This work joins
 the already-required MPS prefix correction and actual full-broker GPU canary.
 Do not edit the controlled source while r12 remains active.
+
+## Eleventh run reviewed
+
+r11 is fully verified: 32 cells, 24 trajectories, 200000 updates, original score
+240/240 and evidence 8/8. Independent checks regenerate all inputs, verify all
+terminal optimizer/raw/EMA states and LR traces, reproduce 102 statistic rows
+and eight held-out controls. Its prospectively declared cosine denominator is
+D-1, with an exactly zero final applied LR. This permitted convention differs
+from r07/r08's D-denominator indexing and must remain explicit in comparison
+limits. All 560 restored manifest entries, the report-r1 review binding and final
+report-r2/review hashes pass. It used 400.11 compute seconds, 23.86 setup seconds
+and 1996.83 native seconds across 42 compute requests.
+
+The native session adapter's analogous storage-at-exit defect is now reproduced
+by `validation/probe_native_final_storage.py`: an offline fake CLI creates real
+files under a controlled interleaving, ending at 203539 bytes against a 100000-byte
+cap while the old adapter reports completed. This is explicitly not a model run
+or host qualification. Before evidence is retained; repair both the resource
+supervisor and native adapter after r12 terminates, then run both unchanged probes
+against the corrected code. The resource probe is a real-worker regression;
+the adapter probe uses a fake CLI solely for lifecycle coverage.
+
+Current terminal r01–r11 workspace-plus-private-runtime byte totals are all
+within their assigned 6 GiB limits. Only aggregate byte counts were retained;
+private runtime contents remain ignored. The last active handle is still
+**r12 / 84378**. Shared MPS, final-storage repairs, final comparison/release checks
+and origin push remain required. No controlled source has been changed.

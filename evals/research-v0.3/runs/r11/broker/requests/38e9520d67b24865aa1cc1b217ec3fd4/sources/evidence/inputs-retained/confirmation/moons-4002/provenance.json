@@ -1,0 +1,16 @@
+{
+  "dataset": "moons",
+  "directory": "evidence/inputs-retained/confirmation/moons-4002",
+  "files": {
+    "evaluation.npz": "bf8b2d3207e170a86de116ae0244a4e3e1e58b6f9f7db9ae2898137d9ae1a791",
+    "initial.npz": "bd8a67f8f5e70dc5519547f33631724178bb9d50394b89291fe6633211699667",
+    "training.npz": "498c6770bfc68cccd06b2e7f0af8c991a26c7048849e4004264675c8b4ac5875"
+  },
+  "generation_noise_sha256": "e713cc4f52e2e9f44d5e2c4beb0c6d1abf12d09c035592a529990862c373dfdd",
+  "heldout_sha256": "54967586df1e2cd86b5bb7fe6f9a31dc728f58e5b8ac2ce10a28075e5d60d76b",
+  "initial_weights_sha256": "5b7647dffe4e7fd8fea1b1e627717d01eef8e4ecb652775a48824afd2a16c70d",
+  "phase": "confirmation",
+  "seed": 4002,
+  "training_prefix_5000_sha256": "d182d905d8fa8610e36f594b71caf379462a30ef05247055408e2952823c3e87",
+  "training_prefix_definition": "SHA256(noisy[:5000] float32 bytes || noise[:5000] float32 bytes || timesteps[:5000] int16 bytes), C order"
+}

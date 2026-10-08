@@ -1,0 +1,16 @@
+{
+  "dataset": "gmm8",
+  "directory": "evidence/pilot-equivalence/inputs-retained/pilot/gmm8-81",
+  "files": {
+    "evaluation.npz": "78ac395b3ddb7aa2bdb366d951c79464cbd3b74690cd46a07ae2da06a63718a3",
+    "initial.npz": "9af9d06d3a933239f718db4a90b9f95a5b1ad9f4a1d2ba461cb28cfee315cf2f",
+    "training.npz": "679908fd91949e9f67e83eebc411a2340ee39a2cda195697f5e7576280067620"
+  },
+  "generation_noise_sha256": "6253489d3bd56a9576f823fd4ad0259f5e306dfbf44a4eb6777a27405c69ad42",
+  "heldout_sha256": "297339cbb819d0134f7d6a8287bd3f833596fb8df459e3651008db9da4eeb270",
+  "initial_weights_sha256": "d6ea992952efc324effbbb7a735444c850eb21ef1468c49da19ba749eb0f42ca",
+  "phase": "pilot",
+  "seed": 81,
+  "training_prefix_5000_sha256": "7a5272302804cfbabd3de11e02971504f22d4b09a085ec715b116fb26caef9f5",
+  "training_prefix_definition": "SHA256(noisy[:5000] float32 bytes || noise[:5000] float32 bytes || timesteps[:5000] int16 bytes), C order"
+}

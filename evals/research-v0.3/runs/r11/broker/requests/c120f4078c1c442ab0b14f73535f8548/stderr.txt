@@ -1,0 +1,11 @@
+OMP: Warning #179: Function Can't set size of /tmp file failed:
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r11/candidate/qualify.py", line 67, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r11/candidate/qualify.py", line 16, in main
+    check('SW1 permutation invariance',sliced_wasserstein(x,x[::-1])==0)
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r11/candidate/qualify.py", line 13, in check
+    if not ok: raise AssertionError(name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: SW1 permutation invariance

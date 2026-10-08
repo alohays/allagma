@@ -1,0 +1,21 @@
+{"event": "training_start", "first_update": 1001, "config": {"phase": "pilot", "dataset": "gmm8", "seed": 81, "policy": "cosine", "total": 2000, "stop": 2000, "attempt_id": "pilot-gmm8-segment2", "root": "evidence", "device": "mps", "resume": "evidence/attempts/pilot-gmm8-segment1/resume.pt", "checkpoint_every": 500, "source_revision": "pilot-662eb0ef8e5395ca", "source_hashes": {"science.py": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1", "study.py": "651c3d4d0a39a9102b046e51b914e6703f3d25d36de7b99472e45db2a65e9f7f", "qualify.py": "92a5018003540ce133c8dc15f22a0b2d04ad68885f836a32defd4cc350dec3ec", "analyze.py": "30a524ea5b76f0d4f7b7fc929536b1a51e4e6e36aeddcc1f03389004135ffe18", "protocol.json": "c83368d15fa6696452a350fca4005d671388843be93d4e92783d3009d01060e4"}}, "inputs": {"dataset": "gmm8", "directory": "evidence/inputs-retained/pilot/gmm8-81", "files": {"evaluation.npz": "78ac395b3ddb7aa2bdb366d951c79464cbd3b74690cd46a07ae2da06a63718a3", "initial.npz": "9af9d06d3a933239f718db4a90b9f95a5b1ad9f4a1d2ba461cb28cfee315cf2f", "training.npz": "679908fd91949e9f67e83eebc411a2340ee39a2cda195697f5e7576280067620"}, "generation_noise_sha256": "6253489d3bd56a9576f823fd4ad0259f5e306dfbf44a4eb6777a27405c69ad42", "heldout_sha256": "297339cbb819d0134f7d6a8287bd3f833596fb8df459e3651008db9da4eeb270", "initial_weights_sha256": "d6ea992952efc324effbbb7a735444c850eb21ef1468c49da19ba749eb0f42ca", "phase": "pilot", "seed": 81, "training_prefix_5000_sha256": "7a5272302804cfbabd3de11e02971504f22d4b09a085ec715b116fb26caef9f5", "training_prefix_definition": "SHA256(noisy[:5000] float32 bytes || noise[:5000] float32 bytes || timesteps[:5000] int16 bytes), C order"}}
+{"step": 1001, "noise_mse": 0.33955085277557373, "gradient_norm_before_clip": 1.0336648225784302, "lr": 0.00014988213135329098, "elapsed_seconds": 2.245012833038345}
+{"step": 2000, "noise_mse": 0.3610769510269165, "gradient_norm_before_clip": 0.5943999290466309, "lr": 0.0, "elapsed_seconds": 9.573912458028644}
+{
+  "ancestors": [
+    "pilot-gmm8-segment1"
+  ],
+  "device": "mps",
+  "evaluation_seconds": 0.38235404109582305,
+  "first_update": 1001,
+  "last_update": 2000,
+  "parameter_count": 296450,
+  "records": [
+    "evidence/cells/pilot/gmm8-81-cosine-2000/update-2000/record.json"
+  ],
+  "source_revision": "pilot-662eb0ef8e5395ca",
+  "status": "completed",
+  "total_seconds": 9.97444845805876,
+  "training_seconds": 8.651700709015131
+}
+

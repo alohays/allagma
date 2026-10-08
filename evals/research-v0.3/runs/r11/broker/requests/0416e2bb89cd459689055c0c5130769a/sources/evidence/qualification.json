@@ -1,0 +1,119 @@
+{
+  "checks": [
+    {
+      "name": "SW1 identity",
+      "passed": true
+    },
+    {
+      "name": "SW1 permutation invariance",
+      "observed": 2.300413310279487e-17,
+      "passed": true,
+      "tolerance": 1e-12
+    },
+    {
+      "expected": 0.5314651340012322,
+      "name": "SW1 exact translation",
+      "observed": 0.5314651340012322,
+      "passed": true
+    },
+    {
+      "name": "SW1 symmetry",
+      "passed": true
+    },
+    {
+      "name": "SW1 rejects unequal sizes",
+      "passed": true
+    },
+    {
+      "name": "coverage eight balanced exact centers",
+      "passed": true
+    },
+    {
+      "name": "coverage denominator all draws and 21-count threshold",
+      "observed": {
+        "counts": [
+          20,
+          21,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "covered": 1,
+        "inlier_fraction": 0.02001953125,
+        "total_variation": 0.489990234375
+      },
+      "passed": true
+    },
+    {
+      "name": "coverage radius",
+      "passed": true
+    },
+    {
+      "lr_first": 0.0003,
+      "lr_last": 0.0,
+      "lr_sum": 0.7499999999999999,
+      "name": "cosine endpoints and monotonicity T=5000",
+      "passed": true
+    },
+    {
+      "lr_first": 0.0003,
+      "lr_last": 0.0,
+      "lr_sum": 1.5,
+      "name": "cosine endpoints and monotonicity T=10000",
+      "passed": true
+    },
+    {
+      "name": "cosine5000 differs from cosine10000 prefix",
+      "passed": true
+    },
+    {
+      "name": "constant prefix exact",
+      "passed": true
+    },
+    {
+      "name": "reference parameter count",
+      "passed": true
+    },
+    {
+      "name": "reference embedding buffers retained",
+      "passed": true
+    },
+    {
+      "name": "EMA update decay=0.99",
+      "passed": true
+    },
+    {
+      "name": "EMA update decay=0.999",
+      "passed": true
+    },
+    {
+      "name": "DDPM beta endpoints and variance",
+      "passed": true
+    },
+    {
+      "device": "mps",
+      "max_absolute_error": 0.0,
+      "name": "NPZ state roundtrip and reference sampler determinism",
+      "passed": true
+    },
+    {
+      "name": "initial state hash stable through load",
+      "passed": true
+    },
+    {
+      "name": "moons finite float32 independent-shaped draws",
+      "passed": true
+    },
+    {
+      "name": "gmm8 finite float32 independent-shaped draws",
+      "passed": true
+    }
+  ],
+  "confirmation_data_used": false,
+  "device": "mps",
+  "seconds": 0.9566116658970714,
+  "status": "passed"
+}

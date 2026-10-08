@@ -1,0 +1,247 @@
+{
+  "run_id": "r11",
+  "criteria": "evals/research-v0.3/frozen/source/evals/research-v0.3/CRITERIA.md",
+  "scientific_execution_verified": true,
+  "completion_verified": true,
+  "evidence_score": 8,
+  "evidence_total": 8,
+  "evidence_items": [
+    {
+      "id": 1,
+      "score": 1,
+      "reason": "Question, exact supplied science and source license are retained with AI-generated/adapted disclosure. No prior training outputs are reused.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "protocol.json",
+          "sha256": "c83368d15fa6696452a350fca4005d671388843be93d4e92783d3009d01060e4"
+        },
+        {
+          "root": "candidate",
+          "path": "science.py",
+          "sha256": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1"
+        },
+        {
+          "root": "candidate",
+          "path": "LICENSE",
+          "sha256": "9c82e554a54dfcf2550b452801475a36f9cb909ede00b03e492089e4836a7462"
+        },
+        {
+          "root": "candidate",
+          "path": "inputs/materials/SOURCES.md",
+          "sha256": "77070b11bcd53025ef4f363cb5935885b9e42541c066b390efe9b811e4c8972b"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "score": 1,
+      "reason": "Protocol and scientific/analysis hashes are frozen before confirmation. Explicit denominator D-1 cosine schedules reach zero at the final update; separate cosine horizons and constant checkpoint reuse satisfy the crossed design. Pilot-only tolerance and MPS fixes precede confirmation.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "freeze.json",
+          "sha256": "074aacf1c3ad5ddde532ac2cb2b24a28e44ca07a3a5a79bbbc6f4328c303c2fc"
+        },
+        {
+          "root": "candidate",
+          "path": "protocol.json",
+          "sha256": "c83368d15fa6696452a350fca4005d671388843be93d4e92783d3009d01060e4"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/qualification.json",
+          "sha256": "0b794127b4fde96381f34d68dddb8b6ee26d448360f85c5122887a1bc6724194"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/forecast.json",
+          "sha256": "1d543f28673bf84f5d4dbbc2db8feb5858a659a7e5a5d977bce99894b7ff68ac"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/recovery-notes.md",
+          "sha256": "38eb7f02f0dc0e7674c08eebb4802912b30c0b92a8d6d9e7c74f85fcbe3413e0"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "score": 1,
+      "reason": "All 32 cells derive from 24 successful trajectories and 200000 updates. Source/configuration records, full LR traces, final optimizer/raw/EMA states and protected receipts support execution. Startup interruption and actual pilot optimizer resumption are kept distinct.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "measurements.json",
+          "sha256": "1f6c9685a1b3de75b3e9a9e3d1f255cfa7e3abe5519a8045e6c39dfe276afa95"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/broker-ledger.json",
+          "sha256": "912aeb7c489756170738283fdeb768f7db7e80b35a9a759d009aa0aab6dead89"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/runner-audit.json",
+          "sha256": "7122619e8ed90dcb9cc54b3b786869f57082775b7d4986c763945f406d6f3ab3"
+        },
+        {
+          "root": "candidate",
+          "path": "study.py",
+          "sha256": "651c3d4d0a39a9102b046e51b914e6703f3d25d36de7b99472e45db2a65e9f7f"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "score": 1,
+      "reason": "Original frozen score passes 240/240. Controller checks independently reconstruct all input groups and hashes, confirm every final optimizer/checkpoint state and LR trace, and reproduce 102 statistical summaries plus eight held-out reference controls.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "analysis/summary.json",
+          "sha256": "67120586f1eb4358b822d0cf6b6a64bcba44e8f6e5840129ea9b3492077313ce"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/verification.json",
+          "sha256": "424683a5f625c4ee6adca1024a1738e032915c2ec3377b441db47cde7c5fc85c"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/supporting-verification.json",
+          "sha256": "5f67cedd3f162f7773735f46d4c29fdeb6287eca5e0d6e3b1d3134879ea78e1c"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/regeneration-moons.json",
+          "sha256": "e56f878951e57f2736bf214a999d1807d566864fb0bde137271f159bc763df96"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/regeneration-gmm8.json",
+          "sha256": "4a7134586286ffbdd7504d806ee05a0f340fcf134dddd005283049e22dbbceb8"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "score": 1,
+      "reason": "Uses four paired seeds per dataset, explicit marginal t assumptions/multiplicity and coarse exact sign flips. Full policy history, cosine duration convention, coverage saturation, inconclusive interactions and unsubtracted finite-sample diagnostics are accurately scoped.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "REPORT.md",
+          "sha256": "03d430bc62c1e5988349644378df725ee438a3e35c82b1758e34397555ac53a2"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/summary.json",
+          "sha256": "67120586f1eb4358b822d0cf6b6a64bcba44e8f6e5840129ea9b3492077313ce"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/finite-sample-controls.csv",
+          "sha256": "f28fc810488b72eafaee71272f140e345601809ea672d06f74d260f06d24dd1b"
+        },
+        {
+          "root": "candidate",
+          "path": "review.json",
+          "sha256": "adb6e8de81349f0edc50bcf09419b35c3e05690c70996959a5b82aa8468a05b7"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "score": 1,
+      "reason": "English report and visually inspected figure trace results and uncertainty to raw evidence. The reporting revision adds required interpretation and supporting checks without changing frozen science or selecting results.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "REPORT.md",
+          "sha256": "03d430bc62c1e5988349644378df725ee438a3e35c82b1758e34397555ac53a2"
+        },
+        {
+          "root": "candidate",
+          "path": "REPORT.r1.md",
+          "sha256": "55383593a793ccecba03d2e8cb198ab36962e00a81a81d06112a5df1e94e731e"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/main-figure.png",
+          "sha256": "a6839d2fd9f63c73b999ac0fd982cd172a47c0945ea6311e3f95abd95170c607"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/final-verification.json",
+          "sha256": "021b24fbac53b364c6afae6be369fc4b0ade11e88628073e85902d9a83ecb2db"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "score": 1,
+      "reason": "Full fresh-environment reproduction, retained-data recomputation and distinct sample regeneration entrypoints are documented and source-inspected. Actual primary/recompute/regeneration records and all 560 restored manifest hashes pass. A second full training replay is explicitly unperformed.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "REPRODUCE.md",
+          "sha256": "ebdac546818091b7c23584f198bfcd68ceba71c0d4c9b79546a6a2866e1bc655"
+        },
+        {
+          "root": "candidate",
+          "path": "reproduce.py",
+          "sha256": "a592924d2244f2d245e3515ac914c4c36ad5e9fb4467fe978383f64950385db3"
+        },
+        {
+          "root": "candidate",
+          "path": "regenerate.py",
+          "sha256": "f6183d0674872cd246d88154a5d3fb5293780082fc1ee184e5e1db1f2b54ffa7"
+        },
+        {
+          "root": "candidate",
+          "path": "artifact-manifest.json",
+          "sha256": "be77e6d42d242ead8037d3fb28a48de36db9f9b684d8d09b332e8ff3e4c35319"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/final-verification.json",
+          "sha256": "021b24fbac53b364c6afae6be369fc4b0ade11e88628073e85902d9a83ecb2db"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "score": 1,
+      "reason": "Substantive critique binds exact report-r1 bytes and names a report-r2 response. Final verification binds the current report-r2 and review hashes; both versions remain retained. Findings led to supporting checks and narrower claims, with author-review limitations explicit.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "review.json",
+          "sha256": "adb6e8de81349f0edc50bcf09419b35c3e05690c70996959a5b82aa8468a05b7"
+        },
+        {
+          "root": "candidate",
+          "path": "REPORT.r1.md",
+          "sha256": "55383593a793ccecba03d2e8cb198ab36962e00a81a81d06112a5df1e94e731e"
+        },
+        {
+          "root": "candidate",
+          "path": "REPORT.md",
+          "sha256": "03d430bc62c1e5988349644378df725ee438a3e35c82b1758e34397555ac53a2"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/final-verification.json",
+          "sha256": "021b24fbac53b364c6afae6be369fc4b0ade11e88628073e85902d9a83ecb2db"
+        }
+      ]
+    }
+  ],
+  "critical_scientific_findings_unresolved": [],
+  "coordinator_task_messages": 0,
+  "candidate_edits_by_controller": 0,
+  "scientific_convention": "The brief allows a cosine policy ending at the chosen duration but does not fix indexing. r11 prospectively declares denominator D-1 and a zero final applied rate, unlike the D-denominator reference convention of r07/r08. This permitted discretization difference is retained, not silently normalized.",
+  "environment_recovery": "LOW=.1 in the study code preserves broker HIGH=.2. Permutation test tolerance was corrected to 1e-12 after a measured 2.30e-17 rounding residual; the reference metric remains unchanged.",
+  "scope": "Original candidate outcome. Full required execution and bounded numerical claims verified; no independent peer review, generic mechanism, or second full training replay."
+}
