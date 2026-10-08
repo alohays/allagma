@@ -1,0 +1,16 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "src/analyze.py",
+    "--root",
+    "artifacts",
+    "--output",
+    "analysis/preflight"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "recompute-retained-evidence",
+  "request_id": "df1e2259614247068d59a74f229be73a",
+  "timeout_seconds": 60.0
+}

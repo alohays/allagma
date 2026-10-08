@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "seed": 61,
+  "device": "cpu",
+  "fused": false,
+  "checks": [
+    "six_known_answer_labels",
+    "all_9409_labels_independent_loop",
+    "exact_disjoint_complete_split",
+    "one_hot_shape_and_values",
+    "37248_bias_free_parameters",
+    "float32",
+    "linear_lookup_equivalence",
+    "paired_initialization",
+    "seed_dependent_partition",
+    "AdamW_first_update_formula_both_decays",
+    "checkpoint_resume_bitwise_100_steps",
+    "heldout_labels_excluded_from_train_tensors"
+  ],
+  "adamw_first_update_max_errors": {
+    "0": 7.450580596923828e-09,
+    "1": 7.450580596923828e-09
+  },
+  "timing": {
+    "updates": 5000,
+    "seconds": 7.79485670896247,
+    "seconds_per_update": 0.001558971341792494,
+    "projected_800000_update_seconds": 1247.1770734339952
+  },
+  "environment": {
+    "python": "3.11.6 (v3.11.6:8b6ee5ba3b, Oct  2 2023, 11:18:21) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "torch": "2.14.1",
+    "numpy": "2.4.6",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "threads": 1
+  },
+  "source_sha256": {
+    "qualify.py": "3b2124d24becc545c04dacd49d482d1cbbbb2549c7e8d3d420ee6f0ff9ab5244",
+    "study.py": "13fc4259f8a7bebeec68caec3747817eb8d868225b705d8799a6c6c04e38cd25"
+  }
+}
+

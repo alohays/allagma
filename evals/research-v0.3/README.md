@@ -10,8 +10,8 @@ condition. Development decisions and evidence are in `development/`. The
 `frozen/freeze.json` manifest enumerates exact inputs, scorers, workflow source,
 resource ceilings, model/settings observations and run order. Current progress
 is in `progress.json`; terminal outcomes and complete traces are in `runs/`.
-Five sessions are terminal and four original packages are fully verified at
-the latest milestone. The remaining seven sessions and release audit are pending.
+Six sessions are terminal and four original packages are fully verified at
+the latest milestone. The remaining six sessions and release audit are pending.
 Native sessions use the existing Codex account; scientific processes run only
 on the local Mac. Final evaluation results are preserved even if later repaired
 packages are needed for release.
@@ -50,7 +50,7 @@ retains pending assignments and excludes their accrued costs from outcome
 contrasts. Missing measurements remain missing. It produces the six prespecified
 within-task/replicate contrasts, two-session descriptive ranges and separate raw
 usage fields; it does not add scientific seeds or infer broad superiority.
-The [five-run snapshot](comparisons/after-r05/REPORT.md) is an interim artifact.
+The [six-run snapshot](comparisons/after-r06/REPORT.md) is an interim artifact. Required scientific execution and package completeness are reported separately.
 
 `python3 evals/research-v0.3/test_comparison.py -v` checks assignment completeness,
 contrast direction, pending/missing handling and separate usage accounting.

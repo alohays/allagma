@@ -1,0 +1,28 @@
+{
+  "seed": 1002,
+  "weight_decay": 1,
+  "updates": 100000,
+  "phase": "confirmation",
+  "device": "cpu",
+  "arrays": "artifacts/runs/seed-1002-wd-1/arrays.npz",
+  "weights": "artifacts/runs/seed-1002-wd-1/weights.npz",
+  "curve": "artifacts/runs/seed-1002-wd-1/curve.json",
+  "checkpoint": "artifacts/runs/seed-1002-wd-1/checkpoints/step-100000-segment-05.pt",
+  "metrics": {
+    "train_loss": 3.570614732996819e-05,
+    "train_accuracy": 1.0,
+    "test_loss": 1.4215852971943845,
+    "test_accuracy": 0.6523455290724154
+  },
+  "initial_weights_sha256": "631f0574230cbebd8c8290a1e5b91cea5ecf9a8da387d637145d1ae585d6ae0b",
+  "initial_weights": "artifacts/inputs/seed-1002/initial.npz",
+  "partition": "artifacts/inputs/seed-1002/partition.npz",
+  "source_revision": "sha256:12fd07c5bf9130b33c27c3365bfb2c20f2d93a62846b7625fc4a874dbbf72130",
+  "attempt_id": "8260bcea265a4bd7829aa11d6879b4da",
+  "attempt_ids": [
+    "1ecf4c3257b54d7f972cece3c9df6f49",
+    "8260bcea265a4bd7829aa11d6879b4da"
+  ],
+  "config": "artifacts/runs/seed-1002-wd-1/config.json",
+  "complete": true
+}

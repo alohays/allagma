@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "original_measurements_sha256": "2de08d6e8d60b639624d7a62d5f1f2761cf6d206132080a8525f7c0d4f6dc937",
+  "checks": [
+    {
+      "seed": 1001,
+      "weight_decay": 0,
+      "updates": 100000,
+      "source_checkpoint": "artifacts/runs/seed-1001-wd-0/checkpoints/step-100000-segment-02.pt",
+      "endpoint_metrics_exactly_equal": true,
+      "curve_rows": 1001
+    },
+    {
+      "seed": 1001,
+      "weight_decay": 1,
+      "updates": 94900,
+      "source_checkpoint": "artifacts/runs/seed-1001-wd-1/checkpoints/step-094900-segment-02.pt",
+      "endpoint_metrics_exactly_equal": true,
+      "curve_rows": 950
+    }
+  ]
+}

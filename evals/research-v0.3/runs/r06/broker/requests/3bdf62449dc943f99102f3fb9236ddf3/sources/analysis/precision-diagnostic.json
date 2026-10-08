@@ -1,0 +1,152 @@
+{
+  "analysis_source_sha256": "627eee28220c0f29d17572dfce8684297b0cff0a385ffd6c091a53ed272a77e6",
+  "runs": [
+    {
+      "seed": 1001,
+      "weight_decay": 0,
+      "max_absolute_logit_error": 0.016755089094658615,
+      "number_prediction_disagreements": 0,
+      "number_correctness_disagreements": 0,
+      "details": []
+    },
+    {
+      "seed": 1001,
+      "weight_decay": 1,
+      "max_absolute_logit_error": 1.1621676716089269e-05,
+      "number_prediction_disagreements": 0,
+      "number_correctness_disagreements": 0,
+      "details": []
+    },
+    {
+      "seed": 1002,
+      "weight_decay": 0,
+      "max_absolute_logit_error": 0.01588709288625978,
+      "number_prediction_disagreements": 2,
+      "number_correctness_disagreements": 0,
+      "details": [
+        {
+          "index": 2571,
+          "pair": [
+            26,
+            49
+          ],
+          "label": 75,
+          "split": "test",
+          "fp32_prediction": 35,
+          "fp64_prediction": 82,
+          "fp32_winner_logit": -19060.177734375,
+          "fp32_alternative_logit": -19060.177734375,
+          "fp32_margin": 0.0,
+          "fp64_margin_for_fp64_winner": 0.0024497319536749274,
+          "row_max_absolute_logit_error": 0.008736992276681121
+        },
+        {
+          "index": 8805,
+          "pair": [
+            90,
+            75
+          ],
+          "label": 68,
+          "split": "test",
+          "fp32_prediction": 35,
+          "fp64_prediction": 76,
+          "fp32_winner_logit": -15895.5263671875,
+          "fp32_alternative_logit": -15895.5283203125,
+          "fp32_margin": 0.001953125,
+          "fp64_margin_for_fp64_winner": 0.0011438248893682612,
+          "row_max_absolute_logit_error": 0.006437034169721301
+        }
+      ]
+    },
+    {
+      "seed": 1002,
+      "weight_decay": 1,
+      "max_absolute_logit_error": 1.169870935768813e-05,
+      "number_prediction_disagreements": 0,
+      "number_correctness_disagreements": 0,
+      "details": []
+    },
+    {
+      "seed": 1003,
+      "weight_decay": 0,
+      "max_absolute_logit_error": 0.017741886174917454,
+      "number_prediction_disagreements": 2,
+      "number_correctness_disagreements": 0,
+      "details": [
+        {
+          "index": 84,
+          "pair": [
+            0,
+            84
+          ],
+          "label": 84,
+          "split": "test",
+          "fp32_prediction": 19,
+          "fp64_prediction": 28,
+          "fp32_winner_logit": -18588.4921875,
+          "fp32_alternative_logit": -18588.4921875,
+          "fp32_margin": 0.0,
+          "fp64_margin_for_fp64_winner": 0.00014556850510416552,
+          "row_max_absolute_logit_error": 0.010761700606963132
+        },
+        {
+          "index": 9279,
+          "pair": [
+            95,
+            64
+          ],
+          "label": 62,
+          "split": "test",
+          "fp32_prediction": 60,
+          "fp64_prediction": 83,
+          "fp32_winner_logit": -17497.51171875,
+          "fp32_alternative_logit": -17497.513671875,
+          "fp32_margin": 0.001953125,
+          "fp64_margin_for_fp64_winner": 0.00012172083734185435,
+          "row_max_absolute_logit_error": 0.009646969127061311
+        }
+      ]
+    },
+    {
+      "seed": 1003,
+      "weight_decay": 1,
+      "max_absolute_logit_error": 1.0803449423946176e-05,
+      "number_prediction_disagreements": 0,
+      "number_correctness_disagreements": 0,
+      "details": []
+    },
+    {
+      "seed": 1004,
+      "weight_decay": 0,
+      "max_absolute_logit_error": 0.01723861296704854,
+      "number_prediction_disagreements": 1,
+      "number_correctness_disagreements": 0,
+      "details": [
+        {
+          "index": 3542,
+          "pair": [
+            36,
+            50
+          ],
+          "label": 86,
+          "split": "test",
+          "fp32_prediction": 64,
+          "fp64_prediction": 11,
+          "fp32_winner_logit": -16329.6669921875,
+          "fp32_alternative_logit": -16329.669921875,
+          "fp32_margin": 0.0029296875,
+          "fp64_margin_for_fp64_winner": 0.005223210093390662,
+          "row_max_absolute_logit_error": 0.006826447435742011
+        }
+      ]
+    },
+    {
+      "seed": 1004,
+      "weight_decay": 1,
+      "max_absolute_logit_error": 1.1942568534095699e-05,
+      "number_prediction_disagreements": 0,
+      "number_correctness_disagreements": 0,
+      "details": []
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+Archived exact preflight analysis source and current final analysis source.
+[
+  {
+    "seed": 1001,
+    "weight_decay": 0,
+    "updates": 100000,
+    "source_checkpoint": "artifacts/runs/seed-1001-wd-0/checkpoints/step-100000-segment-02.pt",
+    "endpoint_metrics_exactly_equal": true,
+    "curve_rows": 1001
+  },
+  {
+    "seed": 1001,
+    "weight_decay": 1,
+    "updates": 94900,
+    "source_checkpoint": "artifacts/runs/seed-1001-wd-1/checkpoints/step-094900-segment-02.pt",
+    "endpoint_metrics_exactly_equal": true,
+    "curve_rows": 950
+  }
+]

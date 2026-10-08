@@ -1,0 +1,5 @@
+OMP: Warning #179: Function Can't set size of /tmp file failed:
+/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r06/candidate/src/qualify.py:51: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:821.)
+  err = max(float((a-b).abs().max()) for a, b in zip(one.parameters(), expected))
+WARNING: The directory '/Users/iyunseong/Library/Caches/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.

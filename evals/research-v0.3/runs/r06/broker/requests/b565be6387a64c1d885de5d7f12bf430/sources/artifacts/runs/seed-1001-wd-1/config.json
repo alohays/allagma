@@ -1,0 +1,64 @@
+{
+  "format": "modular-addition-protocol-v1",
+  "task_id": "modular-addition",
+  "frozen_at_utc": "2026-10-08T02:37:10.859363+00:00",
+  "source_revision": "sha256:12fd07c5bf9130b33c27c3365bfb2c20f2d93a62846b7625fc4a874dbbf72130",
+  "source_hashes": {
+    "src/study.py": "13fc4259f8a7bebeec68caec3747817eb8d868225b705d8799a6c6c04e38cd25",
+    "src/train.py": "f875fd5a4fcd5e7a22b07dfab8d4c169ae4e2dff8d87c76d79d989f012c3d1ff",
+    "src/qualify.py": "3b2124d24becc545c04dacd49d482d1cbbbb2549c7e8d3d420ee6f0ff9ab5244",
+    "PROTOCOL.md": "0f37e26d7024072aa3d4e248e92e64007b926f780d7b1abe60ca4bf7e8105c96"
+  },
+  "specification": "artifacts/frozen/source/PROTOCOL.md",
+  "qualification": "artifacts/pilot/attempt-03/qualification.json",
+  "seeds": [
+    1001,
+    1002,
+    1003,
+    1004
+  ],
+  "weight_decays": [
+    0,
+    1
+  ],
+  "horizon": 100000,
+  "evaluation_interval": 100,
+  "checkpoint_interval": 5000,
+  "device": "cpu",
+  "dtype": "float32",
+  "train_size": 2822,
+  "test_size": 6587,
+  "split_generator": "numpy.Generator(PCG64(seed))",
+  "initialization": "torch.manual_seed(seed); default bias-free Linear initialization",
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.001,
+    "betas": [
+      0.9,
+      0.98
+    ],
+    "eps": 1e-08,
+    "fused": false,
+    "foreach": false
+  },
+  "primary": {
+    "memorization_threshold": 0.99,
+    "generalization_threshold": 0.95,
+    "sustain_evaluations": 3,
+    "lag_minimum": 1000,
+    "test_accuracy_at_memorization_maximum": 0.5,
+    "training_must_persist_at_generalization": true
+  },
+  "uncertainty": "paired Student-t 95% CI and exact two-sided sign-flip reference test",
+  "qualification_timing": {
+    "updates": 5000,
+    "seconds": 7.79485670896247,
+    "seconds_per_update": 0.001558971341792494,
+    "projected_800000_update_seconds": 1247.1770734339952
+  },
+  "seed": 1001,
+  "weight_decay": 1,
+  "phase": "confirmation",
+  "initial_weights_sha256": "926246961f97c49f236e695c09afbf7372816d9359e9f42e7abc615b2b7f894c",
+  "partition_sha256": "66697577365565cdb9766fa7adf797ca7e2f3cbdc6831128d7008db0814301ca"
+}

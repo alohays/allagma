@@ -1,0 +1,22 @@
+Archived exact preflight analysis source and current final analysis source.
+{"ledger_charges": {"compute": 1319.7683126279153, "setup": 16.53301095799543}, "requests": 24}
+{
+  "passed": true,
+  "verified_artifact_count": 456,
+  "verified_internal_document_links": 30,
+  "measurement_runs": 8,
+  "submission_status": "complete",
+  "coverage": [
+    "SHA256 and sizes of manifest entries",
+    "submission paths and argv schema",
+    "complete eight-cell grid",
+    "measurement evidence paths",
+    "broker attempt IDs",
+    "analysis verification result",
+    "scientific analysis known-answer result",
+    "local document links"
+  ],
+  "not_executed": [
+    "fresh full-study reproduction command (would need a second scientific budget)"
+  ]
+}

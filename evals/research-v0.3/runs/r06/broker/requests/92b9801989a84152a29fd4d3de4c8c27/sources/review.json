@@ -1,0 +1,115 @@
+{
+  "format": "research-review-v1",
+  "task_id": "modular-addition",
+  "review_type": "Substantive self-critique, code audit and numerical verification; no separate reviewer agent",
+  "assessment": "PENDING FINAL NUMERICAL VERIFICATION",
+  "resolved_findings": [
+    {
+      "id": "R1",
+      "severity": "high",
+      "finding": "The first marked attempt was terminated before qualification completed.",
+      "resolution": "Preserved the interrupted request and startup record, then issued separate recovery requests. No interrupted output was counted as a confirmation seed or complete experiment.",
+      "evidence": ["artifacts/pilot/attempt-01/started.json", "provenance/attempt-ledger.json"]
+    },
+    {
+      "id": "R2",
+      "severity": "medium",
+      "finding": "The MPS probe could not initialize under the supplied memory cap because its default low watermark was too high.",
+      "resolution": "Retained the failed request, used the valid CPU implementation, and qualified its steady-state cost before freezing confirmation. No memory or time limit was expanded.",
+      "evidence": ["artifacts/pilot/attempt-02/timing.json", "artifacts/pilot/attempt-03/qualification.json", "artifacts/frozen/protocol.json"]
+    },
+    {
+      "id": "R3",
+      "severity": "high",
+      "finding": "A training-accuracy claim alone could be mistaken for generalization, or a late improvement could be labeled grokking after seeing curves.",
+      "resolution": "Froze separate memorization, held-out generalization and delayed-grokking definitions before confirmation; report right-censored missing events and a prespecified sensitivity grid.",
+      "evidence": ["artifacts/frozen/source/PROTOCOL.md", "analysis/results.json", "analysis/sensitivity.json", "analysis/analysis-tests.json"]
+    },
+    {
+      "id": "R4",
+      "severity": "high",
+      "finding": "Endpoint metrics or saved predictions could disagree with the actual saved model, split or optimizer update.",
+      "resolution": "Independently recompute endpoint measurements from logits, verify all labels and splits, reload every final checkpoint, check optimizer settings/update count, and run a second NumPy forward calculation from every final weight archive.",
+      "evidence": ["analysis/verification.json", "src/analyze.py"]
+    },
+    {
+      "id": "R5",
+      "severity": "medium",
+      "finding": "Wall-time segmentation could reset optimizer state or duplicate/omit learning-curve points.",
+      "resolution": "Save complete model and optimizer state with the exact update and curve; use new attempt IDs for segments. The pilot verified bitwise resumed training, and final verification checks the full 0:100:100000 cadence.",
+      "evidence": ["artifacts/pilot/attempt-03/qualification.json", "artifacts/attempts", "analysis/verification.json"]
+    },
+    {
+      "id": "R6",
+      "severity": "medium",
+      "finding": "Historical preflight analysis referenced working endpoint files that changed when training resumed.",
+      "resolution": "Keep the original preflight output unchanged and resolve archival paths to checkpoint-derived snapshots at the original updates, requiring exact metric agreement. Preserve the exact preflight analysis source by checking its recorded source hash.",
+      "evidence": ["analysis/preflight/archival-measurements.json", "analysis/preflight/archive-verification.json", "provenance/sources/analyze-preflight.py"]
+    },
+    {
+      "id": "R7",
+      "severity": "medium",
+      "finding": "The measurement interchange requires curve records as a JSON list, while an internal summary used a file path.",
+      "resolution": "The final interchange embeds the complete curve list and also supplies curve_path. Package validation checks exact equality with the standalone curve and all required steps.",
+      "evidence": ["analysis/measurements.json", "package-verification.json", "src/package.py"]
+    }
+  ],
+  "unresolved_findings": [
+    {
+      "id": "U1",
+      "severity": "high",
+      "finding": "Four seed pairs cannot support precise or distribution-free population inference.",
+      "consequence": "The t interval is assumption-sensitive; the two-sided sign-flip reference test cannot attain p < 0.05 with four nonzero pairs. Do not use held-out example count as the replication count.",
+      "recommended_followup": "A separately preregistered larger seed study with a budget adequate for the same fixed horizon.",
+      "evidence": ["analysis/results.json", "analysis/paired-differences.csv"]
+    },
+    {
+      "id": "U2",
+      "severity": "high",
+      "finding": "Right-censoring at 100,000 updates leaves later transitions unknown.",
+      "consequence": "Absence of primary grokking within the study cannot establish that grokking never occurs. Endpoint improvement below 95% is a distinct result.",
+      "recommended_followup": "An independently declared longer-horizon study, without retroactively changing this protocol.",
+      "evidence": ["analysis/results.json", "artifacts/frozen/source/PROTOCOL.md"]
+    },
+    {
+      "id": "U3",
+      "severity": "medium",
+      "finding": "The three-evaluation sustain rule, 1,000-update delay and 50% gate are operational conventions.",
+      "consequence": "Times are sampled at 100-update resolution and final short crossings cannot be confirmed; the sensitivity grid explores only selected alternatives.",
+      "recommended_followup": "Compare justified alternative definitions prospectively without selecting one to favor a desired conclusion.",
+      "evidence": ["analysis/sensitivity.json", "analysis/analysis-tests.json"]
+    },
+    {
+      "id": "U4",
+      "severity": "medium",
+      "finding": "Random ordered-pair holdout shares operands and sometimes reversed pairs with training.",
+      "consequence": "This measures the prescribed within-modulus random-pair generalization, not unseen-number extrapolation or independent-example sampling. It cannot transfer directly to transformers, other moduli or training fractions.",
+      "recommended_followup": "Separate tasks with explicitly grouped or operand-based splits, treated as new scientific questions.",
+      "evidence": ["analysis/verification.json", "inputs/BRIEF.md", "inputs/materials/SOURCES.md"]
+    },
+    {
+      "id": "U5",
+      "severity": "medium",
+      "finding": "Each seed jointly varies the partition and initialization, and only two weight-decay values were studied.",
+      "consequence": "Within-seed control supports the stated paired comparison but does not identify variance components, a dose-response relation, or an internal generalization mechanism.",
+      "recommended_followup": "A separately designed crossed partition/initialization experiment and mechanistic diagnostics with adequate replication.",
+      "evidence": ["artifacts/frozen/protocol.json", "analysis/results.json"]
+    },
+    {
+      "id": "U6",
+      "severity": "medium",
+      "finding": "Large unregularized logits and very small training losses make numerical scale relevant.",
+      "consequence": "Independent NumPy float64 forward results can differ in absolute logit values despite exact prediction agreement. Post hoc norms and ranges do not establish a causal mechanism, and float64 training was not evaluated.",
+      "recommended_followup": "Prospectively evaluate numerical precision and logit/weight dynamics without replacing the required float32 result.",
+      "evidence": ["analysis/verification.json"]
+    },
+    {
+      "id": "U7",
+      "severity": "low",
+      "finding": "Full retraining in a second fresh environment and cross-platform reproducibility were not executed within this run's budget.",
+      "consequence": "Reproduction is supported by executable orchestration, frozen dependencies, exact states and independent endpoint reloads, not a claim of an already completed second replication. Not every intermediate checkpoint was reloaded.",
+      "recommended_followup": "Run the documented full reproduction command under a fresh authorized allowance on the same platform, then assess portability separately.",
+      "evidence": ["REPRODUCE.md", "src/reproduce.py", "analysis/verification.json"]
+    }
+  ]
+}

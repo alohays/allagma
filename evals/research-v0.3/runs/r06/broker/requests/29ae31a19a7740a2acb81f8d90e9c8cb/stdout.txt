@@ -1,0 +1,22 @@
+{"seed": 1004, "wd": 0, "step": 85000, "segment_elapsed": 8.615455124992877}
+{"seed": 1004, "wd": 0, "step": 90000, "segment_elapsed": 16.409006707835943}
+{"seed": 1004, "wd": 0, "step": 95000, "segment_elapsed": 23.877541915979236}
+{"seed": 1004, "wd": 0, "step": 100000, "segment_elapsed": 31.70741399982944}
+{"seed": 1004, "weight_decay": 0, "updates": 100000, "metrics": {"train_loss": 3.651387446871754e-07, "train_accuracy": 1.0, "test_loss": 155.735547417007, "test_accuracy": 0.0001518141794443601}}
+{"seed": 1004, "wd": 1, "step": 5000, "segment_elapsed": 39.68537887488492}
+{"seed": 1004, "wd": 1, "step": 10000, "segment_elapsed": 47.52747229090892}
+{"seed": 1004, "wd": 1, "step": 15000, "segment_elapsed": 55.20302983280271}
+{"seed": 1004, "wd": 1, "step": 20000, "segment_elapsed": 63.20414783293381}
+{"seed": 1004, "wd": 1, "step": 25000, "segment_elapsed": 70.62956091598608}
+{"seed": 1004, "wd": 1, "step": 30000, "segment_elapsed": 78.07779845781624}
+{"seed": 1004, "wd": 1, "step": 35000, "segment_elapsed": 85.54242416587658}
+{"seed": 1004, "wd": 1, "step": 40000, "segment_elapsed": 93.06375429080799}
+{"seed": 1004, "wd": 1, "step": 45000, "segment_elapsed": 100.8723019999452}
+{"seed": 1004, "wd": 1, "step": 50000, "segment_elapsed": 108.44757754099555}
+{"seed": 1004, "wd": 1, "step": 55000, "segment_elapsed": 116.01874795788899}
+{"seed": 1004, "wd": 1, "step": 60000, "segment_elapsed": 123.57665508287027}
+{"seed": 1004, "wd": 1, "step": 65000, "segment_elapsed": 131.15302466601133}
+{"seed": 1004, "wd": 1, "step": 70000, "segment_elapsed": 138.92667337483726}
+{"seed": 1004, "wd": 1, "step": 75000, "segment_elapsed": 146.47512904088944}
+{"seed": 1004, "weight_decay": 1, "updates": 78700, "metrics": {"train_loss": 4.149655136007964e-05, "train_accuracy": 1.0, "test_loss": 2.384962208407159, "test_accuracy": 0.4741156824047366}}
+{"segment": "segment-08", "work": [{"seed": 1004, "weight_decay": 0, "from_update": 80000, "to_update": 100000, "trace": "artifacts/attempts/segment-08/seed-1004-wd-0.jsonl", "checkpoint": "artifacts/runs/seed-1004-wd-0/checkpoints/step-100000-segment-08.pt"}, {"seed": 1004, "weight_decay": 1, "from_update": 0, "to_update": 78700, "trace": "artifacts/attempts/segment-08/seed-1004-wd-1.jsonl", "checkpoint": "artifacts/runs/seed-1004-wd-1/checkpoints/step-078700-segment-08.pt"}]}

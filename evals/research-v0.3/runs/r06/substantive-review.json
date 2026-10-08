@@ -1,0 +1,230 @@
+{
+  "run_id": "r06",
+  "criteria": "evals/research-v0.3/frozen/source/evals/research-v0.3/CRITERIA.md",
+  "scientific_execution_verified": true,
+  "completion_verified": false,
+  "evidence_score": 7,
+  "evidence_total": 8,
+  "evidence_items": [
+    {
+      "id": 1,
+      "score": 1,
+      "reason": "Question, exact ordered-pair inputs, source identity and relevant license are retained; the bounded MLP scope is explicit.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "artifacts/frozen/protocol.json",
+          "sha256": "8bf8b5ec0dadbade15673ad3137c12d2a41534e3ef91dd5119994ec60dbfafb0"
+        },
+        {
+          "root": "candidate",
+          "path": "inputs/materials/SOURCES.md",
+          "sha256": "df4c3b6e39891b7b1925951c36606db2d34cf240696566199cce2d63ccf50fc4"
+        },
+        {
+          "root": "candidate",
+          "path": "inputs/materials/openai-grok-reference/LICENSE",
+          "sha256": "893951b3bf94db8df1b13e05da5cdeb499400960e4d44a3962a8b33ed0b4f28e"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "score": 1,
+      "reason": "The protected first-confirmation request retains the same frozen protocol hash as the final package. Qualification seed 61 is excluded, all eight 100k horizons are fixed, and transition, gate, uncertainty and sensitivity definitions precede confirmation.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "artifacts/frozen/source/PROTOCOL.md",
+          "sha256": "0f37e26d7024072aa3d4e248e92e64007b926f780d7b1abe60ca4bf7e8105c96"
+        },
+        {
+          "root": "candidate",
+          "path": "artifacts/frozen/protocol.json",
+          "sha256": "8bf8b5ec0dadbade15673ad3137c12d2a41534e3ef91dd5119994ec60dbfafb0"
+        },
+        {
+          "root": "candidate",
+          "path": "artifacts/pilot/attempt-03/qualification.json",
+          "sha256": "6c0b44af25afec2bbeb96e9bbf04347d351e96ac65a543bcf39408a1f307f819"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "score": 1,
+      "reason": "All eight full trajectories, optimizer states, 100-update curves and immutable segment traces are retained. Historical preflight views were archived from their original checkpoints and verified against original metrics; protected source copies match each retained analyzer revision.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "provenance/attempt-ledger.json",
+          "sha256": "4805088c0b6d1a146466d45587e1ea9d38674b5a66d6d58891dffe2e8b0cd803"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/preflight/archive-verification.json",
+          "sha256": "da7e1221935677d2578da6574296c7d9494492a27d02659bcf42bca2c687fdbd"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/source-and-archive-audit.json",
+          "sha256": "48380d309999d2034f4d05911980222b210713f528f59888ff2e867303c7273e"
+        },
+        {
+          "root": "candidate",
+          "path": "src/train.py",
+          "sha256": "f875fd5a4fcd5e7a22b07dfab8d4c169ae4e2dff8d87c76d79d989f012c3d1ff"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "score": 1,
+      "reason": "The compatibility scorer passes all 40 endpoint checks. Independent controller checks verify all final optimizer settings/counters, checkpoint-to-NPZ identity, paired statistics and 108 sensitivity rows. A separate float64 diagnostic confirms all five changed winners are incorrect held-out classes and fit the propagated bound.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "analysis/measurements.json",
+          "sha256": "a44dbfc136b4a48cd27d50f22536616e77e69dc8c098831d2ad6dd4cfbee515a"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/verification.json",
+          "sha256": "b1554f7398a0c4ad6aab9ca88fabe6d10608a5758561d67f3def8ee1db0c5fff"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/results.json",
+          "sha256": "0a9c389065b323147102068b851dbdf0a6ce8f9895a35bf346b5557aa6b097af"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/precision-diagnostic.json",
+          "sha256": "9e688b1dc94d7a6bddbac3f79e6522e36cbcb66e215300bf8429c76183625109"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/verification-amendment.json",
+          "sha256": "edcf687a9442c8fdb5947cf05f7a7698a3d38f499b980f6b8802ae62105af516"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "score": 1,
+      "reason": "Uses four seed pairs with marginal t intervals and explicit sign-flip assumptions; does not count examples or resumed segments as independent observations. Censored times remain null, and all operational definitions and finite-horizon limitations are explicit.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "REPORT.md",
+          "sha256": "4ef1aaa19ecd470d6a289366efb120497fce0404ea387af21777cbf63b90a900"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/results.json",
+          "sha256": "0a9c389065b323147102068b851dbdf0a6ce8f9895a35bf346b5557aa6b097af"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/sensitivity.json",
+          "sha256": "2240008fab10817a2dc7d8529ced67a9a6b406fe1f8ff96c4fac6a641309cc20"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "score": 1,
+      "reason": "English report and visually inspected figure trace endpoint and transition claims to evidence. Numerical-scale diagnostics are labeled post hoc and do not claim a causal mechanism or precision-invariant training.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "REPORT.md",
+          "sha256": "4ef1aaa19ecd470d6a289366efb120497fce0404ea387af21777cbf63b90a900"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/learning-curves.png",
+          "sha256": "54dc0050d2eed2118c0655f177456b5be504fc196c3d0e8b3a4922871cc56a03"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/report-numbers.json",
+          "sha256": "0bcd0638efdf34841e3e5903930ff4bc927a62db9d0205cfb651c14b64677898"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "score": 1,
+      "reason": "Frozen dependencies, full reproduction orchestration and actually executed raw recomputation are documented. All 456 manifest hashes pass before and after restoration. The initial transport parser did not recognize an artifacts container; this controller-only issue is resolved by a separate verification receipt without changing the original index. A second full training replay is not claimed.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "REPRODUCE.md",
+          "sha256": "a5cda2a38e2772e493d20c02c0dd24a541e38ed7520c0fdcf89851930fbb833e"
+        },
+        {
+          "root": "candidate",
+          "path": "src/reproduce.py",
+          "sha256": "6b203244f881bb681de76990b6871727e79a5c367540e19c5b13106f82071bc3"
+        },
+        {
+          "root": "candidate",
+          "path": "src/recompute.py",
+          "sha256": "6a7b79bab83b5f21bd5ba8c098610ad907d87d6d1e733dbe36a5b996068023cf"
+        },
+        {
+          "root": "candidate",
+          "path": "artifacts/frozen/requirements-lock.txt",
+          "sha256": "7decf0446de48124cc46ed9c1d69669a62b9daacfb00c070c10f44ed7a5b039d"
+        },
+        {
+          "root": "candidate",
+          "path": "artifact-manifest.json",
+          "sha256": "530cfa9b9e4f5a25ac8964d704cdbe983f73f6e818eb20f554d78953284e11ee"
+        },
+        {
+          "root": "candidate",
+          "path": "package-verification.json",
+          "sha256": "0609ef7e2a46d9de27c25dd1b28b9cc5372e76f43a0ccdf2b8e8fe40c2e26a92"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "score": 0,
+      "reason": "Critique is substantive, but review.json does not name an exact reviewed manuscript or material revision. A generic file manifest seals files without explicitly binding this review to the material it assessed. This is the same required-evidence gap applied to r03.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "review.json",
+          "sha256": "a7306fa0715fb354cad5db04caff2ff3c82556cfc94c20872133f83b83ef895d"
+        },
+        {
+          "root": "candidate",
+          "path": "artifact-manifest.json",
+          "sha256": "530cfa9b9e4f5a25ac8964d704cdbe983f73f6e818eb20f554d78953284e11ee"
+        },
+        {
+          "root": "candidate",
+          "path": "package-verification.json",
+          "sha256": "0609ef7e2a46d9de27c25dd1b28b9cc5372e76f43a0ccdf2b8e8fe40c2e26a92"
+        }
+      ]
+    }
+  ],
+  "completion_limitation": "The required explicit review/material revision binding is missing from the original delivery. Scientific execution and numerical results are verified; full package completion is not claimed.",
+  "critical_scientific_findings_unresolved": [],
+  "delivery_findings": [
+    {
+      "id": "R06-D1",
+      "severity": "required-evidence gap",
+      "finding": "Substantive review lacks a named reviewed material revision."
+    }
+  ],
+  "coordinator_task_messages": 0,
+  "candidate_edits_by_controller": 0,
+  "scoring_correction": "Original inline-curve parser failure retained; uniform loader-only compatible scorer passes 40/40.",
+  "transport_correction": "Original collection index retains its unsupported-format notice. A separate manifest verifier supports the artifacts list and passes all 456 actual entries; restoration also passes.",
+  "scope": "Original candidate outcome. A review-binding gap does not mean the experiments or substantive critique were absent. Controller/source checks remain provisional; no independent peer review or second full training replay."
+}

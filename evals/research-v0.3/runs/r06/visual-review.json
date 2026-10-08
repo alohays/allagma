@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "artifact": {
+    "root": "candidate",
+    "path": "analysis/learning-curves.png",
+    "sha256": "54dc0050d2eed2118c0655f177456b5be504fc196c3d0e8b3a4922871cc56a03"
+  },
+  "observations": [
+    "All four seeds and both decay conditions are shown separately.",
+    "Shared legend distinguishes decay by color and training/held-out data by line style.",
+    "Accuracy/log-loss axes and the linear-to-1000/logarithmic update scale are readable without clipping.",
+    "The individual trajectories support the report; no aggregate band treats curve points as independent samples."
+  ],
+  "scope": "Actual 2040 by 2040 PNG visually inspected at 1600 by 1600; numerical correctness is verified separately."
+}

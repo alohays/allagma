@@ -1,0 +1,22 @@
+{
+  "attempt_id": "937efacc5c3b4335b6a705f78159ecc9",
+  "work": [
+    {
+      "seed": 1001,
+      "weight_decay": 0,
+      "from_update": 98900,
+      "to_update": 100000,
+      "trace": "artifacts/attempts/segment-02/seed-1001-wd-0.jsonl",
+      "checkpoint": "artifacts/runs/seed-1001-wd-0/checkpoints/step-100000-segment-02.pt"
+    },
+    {
+      "seed": 1001,
+      "weight_decay": 1,
+      "from_update": 0,
+      "to_update": 94900,
+      "trace": "artifacts/attempts/segment-02/seed-1001-wd-1.jsonl",
+      "checkpoint": "artifacts/runs/seed-1001-wd-1/checkpoints/step-094900-segment-02.pt"
+    }
+  ],
+  "seconds": 152.0457663750276
+}

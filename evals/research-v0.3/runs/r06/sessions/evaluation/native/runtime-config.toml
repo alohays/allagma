@@ -1,0 +1,149 @@
+model = "gpt-6-astra"
+model_reasoning_effort = "max"
+model_context_window = 1000000
+model_auto_compact_token_limit = 900000
+web_search = "disabled"
+project_doc_max_bytes = 0
+default_permissions = "allagma-eval"
+
+[features]
+multi_agent = false
+multi_agent_v2 = false
+
+[permissions.allagma-eval]
+extends = ":workspace"
+
+[permissions.allagma-eval.filesystem]
+":root" = "deny"
+":minimal" = "read"
+":tmpdir" = "write"
+":slash_tmp" = "deny"
+"/Library/Frameworks/Python.framework" = "read"
+"/usr/local/bin" = "read"
+"/Applications/ChatGPT.app" = "read"
+"/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r06" = "deny"
+"/Users/iyunseong/.codex" = "deny"
+"/Users/iyunseong/.agents" = "deny"
+"/Users/iyunseong/Documents/vault" = "deny"
+"/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r06/sessions/evaluation/runtime" = "deny"
+"/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r06/candidate" = "write"
+"/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r06/candidate/inputs" = "read"
+
+[permissions.allagma-eval.network]
+enabled = false
+
+[[skills.config]]
+path = "/Users/iyunseong/.agents/skills/arxiv-database/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/iyunseong/.agents/skills/citation-management/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/iyunseong/.agents/skills/drawio/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/iyunseong/.agents/skills/excalidraw-diagram-generator/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/iyunseong/.agents/skills/find-skills/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/iyunseong/.agents/skills/humanizer/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/iyunseong/.agents/skills/matplotlib/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/iyunseong/.agents/skills/openalex-database/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/iyunseong/.agents/skills/pdf/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/iyunseong/.agents/skills/peer-review/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/iyunseong/.agents/skills/pptx/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/iyunseong/.agents/skills/ralphthon-seoul-mid-presentation-en/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/iyunseong/.agents/skills/scientific-slides/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/iyunseong/.agents/skills/scientific-visualization/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/iyunseong/.agents/skills/scientific-writing/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/iyunseong/.agents/skills/slides-grab-design/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/iyunseong/.agents/skills/slides-grab-export/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/iyunseong/.agents/skills/slides-grab-plan/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/iyunseong/.agents/skills/slides-grab/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/iyunseong/.agents/skills/venue-templates/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/iyunseong/.codex/skills/.system/imagegen/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/iyunseong/.codex/skills/.system/openai-docs/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/iyunseong/.codex/skills/.system/review-agent/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/iyunseong/.codex/skills/.system/skill-creator/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/iyunseong/.codex/skills/.system/skill-installer/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r06/sessions/evaluation/runtime/skills/.system/skill-creator/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r06/sessions/evaluation/runtime/skills/.system/skill-installer/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r06/sessions/evaluation/runtime/skills/.system/openai-docs/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r06/sessions/evaluation/runtime/skills/.system/imagegen/SKILL.md"
+enabled = false

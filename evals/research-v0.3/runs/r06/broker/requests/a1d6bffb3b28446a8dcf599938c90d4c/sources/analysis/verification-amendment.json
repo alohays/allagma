@@ -1,0 +1,10 @@
+{
+  "type": "auxiliary_numerical_verification_amendment",
+  "failed_request_id": "4e9cd2a188d1466ca4f792b066bd3e8a",
+  "failed_source": "provenance/sources/analyze-failed-float64-argmax.py",
+  "diagnostic": "analysis/precision-diagnostic.json",
+  "reason": "Requiring exact argmax equality between the prescribed float32 forward and an auxiliary float64 forward was too strict near ties. Five held-out class choices changed, all between wrong classes. Float32 checkpoint predictions reproduced exactly.",
+  "unchanged": ["all training code and weights", "all retained float32 logits and predictions", "endpoint estimands", "frozen transition definitions", "uncertainty and sensitivity analyses", "exact float32 checkpoint-reload requirement", "original NumPy logit allclose tolerance"],
+  "revised_auxiliary_check": "Disclose every float64 argmax disagreement. Require all logit differences to obey a propagated float32 dot-product error bound gamma_n=n*u/(1-n*u), u=2^-24, with n=194 and n=128 and the 1-Lipschitz ReLU. Require each changed winner to have a margin inside this bound and require unchanged classification correctness. Retain independent float64 endpoint metric differences.",
+  "scope": "This is a transparent correction to an auxiliary verification assertion, made after diagnosing the failed check. It does not change the frozen scientific protocol or use held-out labels to optimize or select any model. No failed receipt or original source is overwritten."
+}

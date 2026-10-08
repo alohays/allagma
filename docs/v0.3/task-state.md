@@ -7,7 +7,7 @@ receipts and frozen bundles remain unchanged.
 
 ## Current comparison
 
-Five of twelve native sessions are terminal. Four original packages meet all
+Six of twelve native sessions are terminal. Four original packages meet all
 required evidence items:
 
 | Run | Assignment | Numerical checks | Evidence | Verified package |
@@ -17,12 +17,13 @@ required evidence items:
 | r03 | Modular addition, plain, replicate 2 | 40/40 corrected parser | 7/8 | no: review lacks an explicit material revision |
 | r04 | Modular addition, Allagma, replicate 2 | 40/40 original and compatible | 8/8 | yes |
 | r05 | Modular addition, Allagma, replicate 1 | 40/40 corrected parser | 8/8 | yes |
+| r06 | Modular addition, plain, replicate 1 | 40/40 corrected parser | 7/8 | no: review lacks an explicit material revision |
 
-**Active: r06, modular addition, plain Codex, replicate 1. Exec session 51805.**
+**Active: r07, EMA schedule follow-up, Allagma, replicate 2. Exec session 51420.**
 The actual process remains live and has started confirmation after pilot
 qualification. Poll the known handle/process; do not restart based on an observation
-timeout or a running-state file. Next is r07, then the remaining frozen order.
-The pre-r06 account checkpoint permits ordinary use with 19% weekly usage.
+timeout or a running-state file. Next is r08, then the remaining frozen order.
+The pre-r07 account checkpoint permits ordinary use with 21% weekly usage.
 Check account limits again before starting the next session.
 
 Frozen source is `c369fe7`, with freeze commit `de6abce`. All twelve prepared
@@ -82,14 +83,14 @@ watermarks itself or claim native-agent qualification.
 
 ## Remaining work
 
-1. Complete and honestly score r06–r12. Preserve failed outcomes and all original
+1. Complete and honestly score r07–r12. Preserve failed outcomes and all original
    packages. Apply the eight-item substantive rubric and independent science
    checks without changing candidate artifacts.
 2. Finish the EMA task package and any separately identified package repairs.
    Do not rewrite unsuccessful original comparison outcomes.
 3. Generate the final comparison only when all twelve reviews are terminal.
    `comparison.py` reports all assigned runs, six paired contrasts, within-task
-   ranges, failures, interventions and separate usage fields. The five-run
+   ranges, failures, interventions and separate usage fields. The six-run
    snapshot is explicitly partial; it supports no broad superiority inference.
 4. Correct the MPS environment in a new release revision, execute the real
    broker regression, complete migration/release notes and exact-final-source
@@ -128,3 +129,28 @@ The new archive verifier checks historical frozen bytes after a later source
 repair, without altering the original launch guard. The latest partial archive
 check passes 127 frozen source files, all 12 prepared inputs/profiles, and all
 five retained packages. Final verification must require all twelve packages.
+
+## Sixth-run result and current EMA recovery
+
+r06 completed all eight 100k CPU trajectories. It independently diagnosed five
+auxiliary float64 near-tie class changes, all between wrong held-out classes,
+and retained the failed exact-argmax check, source and numerical amendment.
+Controller checks confirm all 40 required endpoint checks, all optimizer states,
+paired statistics, 108 sensitivity rows and the propagated numerical bound.
+The report and substantive critique are detailed, but the review does not name
+its reviewed material revision. Apply the same E8 gap as r03: required execution
+verified, 7/8 evidence, original package completion false. Do not conflate this
+binding gap with missing experiments or absent scientific critique.
+
+r06 used 1320.09 compute seconds, 16.53 setup seconds and 2663.10 native seconds,
+with 23 compute requests. Its manifest uses an `artifacts` list, which the first
+collector did not recognize. The original index notice remains; a separate
+identical hash check now verifies all 456 entries before and after restoration.
+This is controller parser support, not candidate repair.
+
+r07 independently set `PYTORCH_MPS_LOW_WATERMARK_RATIO` to 0.1 in its study runner
+before importing torch, while the broker's high limit stays 0.2. Its corrected
+MPS pilot and qualification passed, and GPU confirmation is active. No coordinator
+hint was supplied. This candidate-local recovery does not repair the frozen
+shared broker or establish completion of the EMA task yet. The release still
+requires the separately versioned full-broker repair and prepared actual test.

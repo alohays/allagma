@@ -1,0 +1,17 @@
+{
+  "injected_interruption": false,
+  "isolation_sha256": "0c48ce6dd7a8aee662016fae56173b4dc8358d947b06a3c6e8aff07fc97c31ce",
+  "reconciled_after_controller_restart": false,
+  "request_id": "ed7e3fef62cf4e26875904afce009c53",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 0.9576506249140948,
+    "ended_at": "2026-10-08T03:05:28.171179+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r06/resources/jobs/0020-investigate-float64-argmax-mismatch",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 360497152,
+    "peak_storage_bytes": 1229821750,
+    "status": "completed"
+  }
+}

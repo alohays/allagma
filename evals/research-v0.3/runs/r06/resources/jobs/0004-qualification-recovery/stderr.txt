@@ -1,0 +1,13 @@
+OMP: Warning #179: Function Can't set size of /tmp file failed:
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r06/candidate/src/study.py", line 140, in <module>
+    main()
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r06/candidate/src/study.py", line 136, in main
+    pilot(args)
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r06/candidate/src/study.py", line 101, in pilot
+    x, y, ti, vi = tensors(61, device)
+                   ^^^^^^^^^^^^^^^^^^^
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r06/candidate/src/study.py", line 49, in tensors
+    p = torch.tensor(pairs, device=device)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: invalid low watermark ratio 1.4

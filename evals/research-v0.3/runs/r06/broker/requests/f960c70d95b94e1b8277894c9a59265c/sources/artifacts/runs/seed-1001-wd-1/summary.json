@@ -1,0 +1,27 @@
+{
+  "seed": 1001,
+  "weight_decay": 1,
+  "updates": 94900,
+  "phase": "confirmation",
+  "device": "cpu",
+  "arrays": "artifacts/runs/seed-1001-wd-1/arrays.npz",
+  "weights": "artifacts/runs/seed-1001-wd-1/weights.npz",
+  "curve": "artifacts/runs/seed-1001-wd-1/curve.json",
+  "checkpoint": "artifacts/runs/seed-1001-wd-1/checkpoints/step-094900-segment-02.pt",
+  "metrics": {
+    "train_loss": 3.552264869603686e-05,
+    "train_accuracy": 1.0,
+    "test_loss": 1.4939342838931444,
+    "test_accuracy": 0.6402003947168665
+  },
+  "initial_weights_sha256": "926246961f97c49f236e695c09afbf7372816d9359e9f42e7abc615b2b7f894c",
+  "initial_weights": "artifacts/inputs/seed-1001/initial.npz",
+  "partition": "artifacts/inputs/seed-1001/partition.npz",
+  "source_revision": "sha256:12fd07c5bf9130b33c27c3365bfb2c20f2d93a62846b7625fc4a874dbbf72130",
+  "attempt_id": "937efacc5c3b4335b6a705f78159ecc9",
+  "attempt_ids": [
+    "937efacc5c3b4335b6a705f78159ecc9"
+  ],
+  "config": "artifacts/runs/seed-1001-wd-1/config.json",
+  "complete": false
+}

@@ -1,0 +1,7 @@
+{"seed": 1004, "wd": 1, "step": 80000, "segment_elapsed": 2.751983042107895}
+{"seed": 1004, "wd": 1, "step": 85000, "segment_elapsed": 10.285782041959465}
+{"seed": 1004, "wd": 1, "step": 90000, "segment_elapsed": 18.15739641711116}
+{"seed": 1004, "wd": 1, "step": 95000, "segment_elapsed": 26.950331625062972}
+{"seed": 1004, "wd": 1, "step": 100000, "segment_elapsed": 36.31910891691223}
+{"seed": 1004, "weight_decay": 1, "updates": 100000, "metrics": {"train_loss": 3.8251408013681676e-05, "train_accuracy": 1.0, "test_loss": 1.913074370999998, "test_accuracy": 0.5604979505085775}}
+{"segment": "segment-09", "work": [{"seed": 1004, "weight_decay": 1, "from_update": 78700, "to_update": 100000, "trace": "artifacts/attempts/segment-09/seed-1004-wd-1.jsonl", "checkpoint": "artifacts/runs/seed-1004-wd-1/checkpoints/step-100000-segment-09.pt"}]}

@@ -1,0 +1,48 @@
+{
+  "execution_status": "complete",
+  "runs_verified": 8,
+  "uncertainty": {
+    "test_accuracy": {
+      "n": 4,
+      "mean": 0.6745863063610141,
+      "ci95": [
+        0.5030873732297332,
+        0.8460852394922951
+      ],
+      "sd": 0.10777805290637396,
+      "degrees_of_freedom": 3,
+      "sign_flip_p_two_sided": 0.125,
+      "differences": [
+        0.6654015485046303,
+        0.6523455290724154,
+        0.8202520115378776,
+        0.5603461363291332
+      ],
+      "ci_method": "two-sided Student-t interval on independent seed-level paired differences",
+      "sign_flip_assumption": "exchangeable signs under the null; reference test, not an assigned-treatment design"
+    },
+    "test_loss": {
+      "n": 4,
+      "mean": -158.61652502956258,
+      "ci95": [
+        -165.7786731661581,
+        -151.45437689296708
+      ],
+      "sd": 4.501033135864341,
+      "degrees_of_freedom": 3,
+      "sign_flip_p_two_sided": 0.125,
+      "differences": [
+        -164.33198815724538,
+        -159.68943372406846,
+        -156.62220519092952,
+        -153.82247304600702
+      ],
+      "ci_method": "two-sided Student-t interval on independent seed-level paired differences",
+      "sign_flip_assumption": "exchangeable signs under the null; reference test, not an assigned-treatment design"
+    }
+  },
+  "primary_grokking_counts": {
+    "0": 0,
+    "1": 0
+  }
+}

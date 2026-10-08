@@ -1,0 +1,41 @@
+{
+  "status": "pass",
+  "protocol_precedes_confirmation": {
+    "protected_snapshot": "broker/requests/579532c6dcec4781a08521f5114352fb/sources/artifacts/frozen/protocol.json",
+    "sha256": "8bf8b5ec0dadbade15673ad3137c12d2a41534e3ef91dd5119994ec60dbfafb0"
+  },
+  "training": "Prescribed bias-free 194-128-97 ReLU MLP, full-batch float32 CPU AdamW with lr .001, betas .9/.98, eps 1e-8, decay 0/1. Same initialization/split per seed, no held-out optimization or stopping; all counters reach 100000.",
+  "historical_source_identity": {
+    "analyze-preflight.py": "broker/requests/df1e2259614247068d59a74f229be73a/sources/src/analyze.py",
+    "analyze-failed-float64-argmax.py": "broker/requests/4e9cd2a188d1466ca4f792b066bd3e8a/sources/src/analyze.py",
+    "analyze-final.py": "broker/requests/a1d6bffb3b28446a8dcf599938c90d4c/sources/src/analyze.py"
+  },
+  "precision_amendment": "Kept the failed exact float64-argmax gate and its source. All float32 checkpoint logits remain bitwise identical. Independent diagnosis verifies the five float64 changes are between wrong held-out classes; the original logit tolerance and all scientific estimands/definitions remain unchanged.",
+  "evidence": [
+    {
+      "root": "candidate",
+      "path": "src/train.py",
+      "sha256": "f875fd5a4fcd5e7a22b07dfab8d4c169ae4e2dff8d87c76d79d989f012c3d1ff"
+    },
+    {
+      "root": "candidate",
+      "path": "src/study.py",
+      "sha256": "13fc4259f8a7bebeec68caec3747817eb8d868225b705d8799a6c6c04e38cd25"
+    },
+    {
+      "root": "candidate",
+      "path": "src/analyze.py",
+      "sha256": "6c594a7ba0358a2e4d050c11f1b5332bcc2814242f1145a840190110a9b3f891"
+    },
+    {
+      "root": "candidate",
+      "path": "src/reproduce.py",
+      "sha256": "6b203244f881bb681de76990b6871727e79a5c367540e19c5b13106f82071bc3"
+    },
+    {
+      "root": "candidate",
+      "path": "analysis/verification-amendment.json",
+      "sha256": "edcf687a9442c8fdb5947cf05f7a7698a3d38f499b980f6b8802ae62105af516"
+    }
+  ]
+}
