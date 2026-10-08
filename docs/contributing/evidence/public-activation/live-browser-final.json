@@ -1,0 +1,137 @@
+{
+  "status": "pass",
+  "site": "https://alohays.github.io/allagma/",
+  "final_download_fix_commit": "a57ba0a2889cc6516be6685a2153e64541e5abf8",
+  "browser": "Codex in-app browser; GitHub Sign in link observed, no authenticated GitHub session",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "checks": [
+    {
+      "check": "desktop light home",
+      "heading": "From a research brief to checkable results.",
+      "scrollWidth": 1425,
+      "theme": "light",
+      "url": "https://alohays.github.io/allagma/",
+      "width": 1440
+    },
+    {
+      "check": "desktop dark home",
+      "scrollWidth": 1425,
+      "theme": "dark",
+      "width": 1440
+    },
+    {
+      "check": "public search navigation",
+      "url": "https://alohays.github.io/allagma/guides/first-study/",
+      "heading": "Your first study"
+    },
+    {
+      "check": "keyboard skip link",
+      "url": "https://alohays.github.io/allagma/guides/first-study/#_top"
+    },
+    {
+      "check": "EMA figure",
+      "complete": true,
+      "height": 1260,
+      "width": 1800
+    },
+    {
+      "check": "desktop video seek",
+      "before": 43.039388,
+      "after": 44.081871,
+      "jump": 1.0424829999999972
+    },
+    {
+      "check": "paused video seek",
+      "before": 44.090711,
+      "paused": true,
+      "time": 45.095033
+    },
+    {
+      "check": "mobile video layout",
+      "scrollWidth": 375,
+      "videoWidth": 343,
+      "width": 390
+    },
+    {
+      "check": "mobile menu navigation",
+      "url": "https://alohays.github.io/allagma/guides/first-study/",
+      "heading": "Your first study",
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "check": "mobile dark home",
+      "scrollWidth": 375,
+      "theme": "dark",
+      "width": 390
+    },
+    {
+      "check": "mobile artifact keyboard tabs",
+      "resultsContainActualDifference": true,
+      "claimsContainContradicted": true,
+      "focused": "Claims",
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "check": "mobile search and contributor deep link",
+      "url": "https://alohays.github.io/allagma/contributing/workflow/",
+      "heading": "Contributor workflow",
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "check": "anonymous README inline playback",
+      "signedOut": true,
+      "startTime": 0.054824,
+      "duration": 100.433333,
+      "error": null,
+      "height": 900,
+      "paused": false,
+      "readyState": 4,
+      "time": 94.534625,
+      "width": 1600
+    },
+    {
+      "check": "repaired caption download",
+      "downloaded": true,
+      "pageStayedOnDemo": true
+    },
+    {
+      "check": "actual browser downloads",
+      "movieBytes": 2875851,
+      "movieSha256": "6435ccbd6ba55757fd512e3b631478227831b9d77a80b300776bbe8164841cc3",
+      "captionBytes": 2242,
+      "captionSha256": "8f8bfd94926a2179891c47cd1f3d4ff9a1b73fea8ebf63d7b2fa05c42853e6ad",
+      "pageStayedOnDemo": true
+    },
+    {
+      "check": "transcript navigation",
+      "heading": "Video transcript",
+      "url": "https://alohays.github.io/allagma/demo/transcript/"
+    }
+  ],
+  "video": {
+    "duration_seconds": 100.433333,
+    "width": 1600,
+    "height": 900,
+    "error": null,
+    "english_captions_visibly_rendered": true,
+    "vtt_cues_verified_from_source": 22
+  },
+  "notes": [
+    "Desktop/mobile layouts were checked in light and dark themes; actual screenshots retained.",
+    "Read-only browser bridge does not expose TextTrack cue arrays. Caption content was visually observed and VTT bytes independently hash-verified.",
+    "Original caption link opened raw text; the repaired caption and MP4 links produced actual browser downloads without leaving the demo page.",
+    "Earlier full-page/browser checks used the preceding public deployment; the final change only adds download attributes/MP4 link, verified live after deployment."
+  ]
+}

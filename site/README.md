@@ -40,6 +40,15 @@ The build also assembles shipped dependency notices at
 license, so their pinned upstream notices are retained in `licenses/` and checked
 against installed versions. Review that fallback when updating Pagefind.
 
-Public Pages deployment is gated and manually activated later by the owner.
-Building this project or pushing source does not change repository visibility,
-publish a release, or enable Pages. See the launch owner checklist when complete.
+The owner activated [public Pages](https://alohays.github.io/allagma/) on
+9 October 2026. The repository uses Actions as its Pages source and
+`ALLAGMA_PUBLIC_LAUNCH=true`. Relevant pushes to `main` now build and deploy;
+manual dispatch also requires `deploy: true`. Deployment permissions remain
+scoped to the deploy job. A local build alone does not deploy or publish a release.
+
+The generated `/allagma/build-info.json` identifies the build's Git commit and
+current movie digest. After deployment, verify the live routes and interactions,
+not only the local preview. Public pages describe main's capabilities; unmerged
+feature PRs remain proposals. Only the current cleared media is copied to the
+site. See [owner decisions](../docs/launch/owner-actions.md) and the
+[delivery ledger](../docs/contributing/first-workflow.md).

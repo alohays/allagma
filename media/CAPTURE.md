@@ -22,9 +22,12 @@ repository as its rendering context. Private rendering may return temporary
 signed media URLs: never commit those URLs or the unredacted rendered HTML.
 Use only the permanent attachment URL in maintained documents.
 
-Attachments uploaded against this private repository require repository access;
-this upload does not activate public visibility, publish a software release or
-clear the historical-audio launch blocker. See GitHub's
+The attachment was uploaded while the repository was private, as recorded in
+the unchanged upload receipt. On 9 October 2026 the owner intentionally kept
+the repository public and authorized public documentation activation. The
+README video has now been verified while signed out, including its exact MP4
+digest. This does not publish a software release or resolve the
+[retained historical-audio rights issue](https://github.com/alohays/allagma/issues/8). See GitHub's
 [attachment documentation](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/attaching-files).
 
 ## Prerequisites
