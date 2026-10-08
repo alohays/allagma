@@ -1,185 +1,97 @@
 # v0.3 continuation state
 
-Status: active development. The full goal in [GOAL.md](../../GOAL.md) is unchanged.
-The [requirement ledger](requirements.md) remains the completion standard.
-There are **zero final evaluation runs**, no comparison report, and no v0.3
-release-candidate completion claim. This goal turn made implementation and
-experimental progress; it was not a blocked or no-progress turn.
+The full goal in [GOAL.md](../../GOAL.md) remains active and incomplete. Use the
+[acceptance ledger](requirements.md) for release requirements and
+`evals/research-v0.3/progress.json` for the current live handle. Historical
+receipts and frozen bundles remain unchanged.
 
-## Completed development work
+## Current comparison
 
-- The finite standard-library resource supervisor has real process tests and
-  preserved development receipts. A real setup run exposed and motivated a fix
-  for stale process snapshots being mistaken for live orphaned children.
-- CULP (`capsule-6460826`) passed CPU preflight with original science and scoring:
-  6/6 original answers, with only two container data-path changes. First-import
-  failure and diagnostic evidence are retained. Its original Iris/Zoo label bug
-  remains a disclosed limitation. A custom external-task fallback is unnecessary.
-- EMA pilots completed all four duration/schedule cells on GMM8, plus both
-  schedules at 10,000 updates on moons. Independent SciPy calculations reproduce
-  all 18 variant SW1 metrics and mixture counts; matching input hashes and
-  learning-rate schedules were checked. These are pilot results only.
-- Grokking pilots completed 100,000 updates with weight decay 0 and 1 for seeds
-  17 and 29, following an earlier 10,000-update probe. Both seeds memorized the
-  training partition. Regularized final test accuracy was about 67–70%; the
-  unregularized runs were near zero. No run reached the proposed 95% grokking
-  threshold. Aggregate-curve/partition checks pass; endpoint predictions and
-  checkpoints were not saved by these feasibility pilots and must be retained
-  in final study runs.
-- Native filesystem isolation and a separate sandboxed MPS computation-worker
-  prototype passed scoped canaries. All failed attempts remain recorded. The
-  common resource broker has passed a real interrupted-attempt/retry integration
-  check. See [native isolation](native-isolation.md).
+Four of twelve native sessions are terminal. Three original packages meet all
+required evidence items:
 
-The study-compute ceiling is still 1,800 seconds for development, with a separate
-900-second setup ceiling and at most 24 marked computational attempts. Consult
-`allagma resource status --ledger evals/research-v0.3/development/resource-ledger`
-for current authoritative usage. The last account checkpoint permits normal
-Codex use and records 6% weekly usage. Model usage is separate from study compute.
+| Run | Assignment | Numerical checks | Evidence | Verified package |
+| --- | --- | ---: | ---: | --- |
+| r01 | CORE, Allagma, replicate 2 | 6/6 original | 8/8 | yes |
+| r02 | CORE, plain, replicate 2 | 6/6 original | 8/8 | yes |
+| r03 | Modular addition, plain, replicate 2 | 40/40 corrected parser | 7/8 | no: review lacks an explicit material revision |
+| r04 | Modular addition, Allagma, replicate 2 | 40/40 original and compatible | 8/8 | yes |
 
-## Native development and current interface
+**Active: r05, modular addition, Allagma, replicate 1. Exec session 20443.**
+The actual process remains live and has started confirmation after pilot
+recovery. Poll the known handle/process; do not restart based on an observation
+timeout or a running-state file. Next is r06, then the remaining frozen order.
+The pre-r05 account checkpoint permits ordinary use with 17% weekly usage.
+Check account limits again before starting the next session.
 
-A complete fresh native CORE study finished with zero follow-up messages. It
-preserved and recovered the controlled interruption, repaired a fresh-environment
-verification timeout, and delivered a critically reviewed package. The original
-CORE-Bench scorer accepts 6/6 answers, and all 365 declared artifact hashes were
-verified before archiving the exact package. Evidence is under
-`evals/research-v0.3/development/sessions/dev-core-01/`.
+Frozen source is `c369fe7`, with freeze commit `de6abce`. All twelve prepared
+input inventories match within task. `evaluate.py verify` still passes after
+postprocessing/documentation changes. Keep runs serial, candidate workspaces
+isolated, and all frozen criteria, code, inputs, model/settings and ceilings
+unchanged. No task-specific coordinator messages have been sent.
 
-The source now provides `research prepare/run/status`, a standalone broker driver,
-explicit broker restart reconciliation and baseline preparation for controlled
-evaluation. The native task exposed a generic-helper two-observation assumption;
-analysis minima are now study-owned, and paired seed reuse requires explicit
-condition identities. Historical bundles remain unchanged. The release candidate
-is 0.3.0rc1. A full I1–I5 acceptance run and 109 conformance tests passed; subsequent
-focused control checks passed. The protected scorer's five scientific checks pass,
-including an actual development-checkpoint replay. The last account checkpoint
-permits ordinary use with 9% weekly usage consumed.
+The first fully verified Allagma packages, selected by the prespecified rule,
+are CORE r01 and modular addition r04. The latter completes all eight 100k
+trajectories: all memorized, none reached the sustained 95% held-out threshold.
+Mean paired held-out accuracy improvement is 67.46 percentage points, with
+four independent seeds and explicitly limited inference. Repeated sessions do
+not add scientific seeds. Detailed reports and reproduction instructions are in
+`studies/core-culp/RESULTS.md` and `studies/modular-addition/RESULTS.md`.
 
-## Next concrete work
+## Passed and pending release gates
 
-1. Commit the candidate controls/evidence, then freeze `evaluate.py`, `score.py`,
-   criteria, profiles, briefs, exact common materials, workflow source, CLI/model
-   settings and the counterbalanced 12-run order. No final run has started yet.
-2. Prepare and launch runs through `evals/research-v0.3/evaluate.py`, using the
-   public research workspace API for both arms (methods installed only for
-   Allagma). Check account limits before each run. Keep sessions serial and do
-   not change frozen control code or criteria during the comparison.
-3. Score all outcomes and complete the frozen substantive/evidence review;
-   preserve failures and distinguish model completion from task completion.
-   Retain software-wheel hashes without placing individual >100 MB files in Git;
-   provide verified hydration or chunked archives as appropriate.
-4. Complete all three task packages, a clean-checkout full-study reproduction,
-   raw-data recomputation, comparison report and final release/migration audit.
-   Preserve frozen outcomes when making later repairs. Push origin only when
-   the full goal is achieved.
+A clean Git clone at `a5ac168` restored the CORE r01 package and exact software
+wheels, built a fresh environment, reran the full study and separately
+recomputed the raw results. All six answers match. This passes the at-least-one
+full clean-checkout reproduction requirement, not a second training replay for
+modular addition or EMA.
 
-The original development attempt cap has been reached (24 marked attempts);
-no additional marked development experiment is authorized under that same
-policy. Bounded checks/recomputation and setup still have time remaining. Final
-run allocations are new, explicit profiles chosen from the completed pilots,
-not edits to the development ledger. No unresolved user choice is currently
-required. Do not mark the goal complete before all remaining gates pass.
+The pre-freeze source passed all I1–I5 acceptance and 109 conformance checks.
+Current version is 0.3.0rc1; no final v0.3 release qualification is claimed.
+The standard-library defaults and scientific study separation remain required.
 
-## Frozen evaluation started
+The separate controller-validation ledger retains a finite 1800-second compute,
+600-second setup and 64-request allocation. Check its actual status before new
+work. Scientific scoring/replay costs and native account usage are distinct.
+Development's 24 marked-attempt ceiling has been reached; do not reuse that
+allocation for new marked training or silently expand any ceiling.
 
-The controls are committed at `de6abce`; the frozen source is `c369fe7` plus the
-exact files in `evals/research-v0.3/frozen/freeze.json`. All twelve workspaces are
-prepared, and their common inputs match exactly within each task. Read the
-frozen run order and `evals/research-v0.3/progress.json` before continuing.
+## Defects and preservation rules
 
-Run **r01 (CORE CULP, Allagma, replicate 2)** is active under exec session
-**57392**. Poll that handle and inspect its authoritative process state; do not
-restart it just because an observation times out. Its controller/runtime files
-are under `evals/research-v0.3/runs/r01/`. Actual final-runtime probes deny reads
-of original answers, writes to the scorer, and reads of the other workspace.
-They changed no candidate or protected file content.
+- The shared frozen broker sets MPS HIGH=0.2 but leaves LOW at its incompatible
+  default 1.4. CPU recoveries remain part of the frozen outcomes. The optional
+  question about restarting the cohort has received no new direction; continue
+  the authorized frozen comparison, disclose the defect, then repair separately.
+  Do not claim corrected GPU-path performance from this cohort.
+- The frozen curve parser disagrees with the inline-list measurement contract.
+  Preserve original scoring receipts. The separate compatibility scorer changes
+  only that loader, applies uniformly, and reproduces the original calculations
+  on equivalent path-based data.
+- The initial archive transport omitted terminal `.compute/` evidence. Its
+  correction retains exact queue bytes in supplements for r01–r04, preserves
+  original archives/indexes, and includes them directly in future collections.
+  Actual r04 restoration verifies all 548 manifest files and 87 direct reviewed
+  references. This is controller transport repair, not candidate assistance.
 
-No final run is complete yet. After r01 terminates, retain/score its outcome and
-check account limits before launching r02. The prepared runs use the public
-research interface, matching model/CLI/tools and finite per-task ceilings. No
-frozen code, criterion or input may be edited during the comparison. All prior
-work and remaining full-goal requirements still apply.
+`docs/v0.3/defects.md` retains the reproduced infrastructure defects. The actual
+full-broker MPS regression is prepared in `validation/check_mps_broker.py` and
+`mps_broker_canary.py`; syntax/help only have passed. Execute it after the
+post-cohort source repair and retain actual outcomes. Its test does not set the
+watermarks itself or claim native-agent qualification.
 
-## First final outcome retained
+## Remaining work
 
-Run r01 is terminal and controller-verified: original CORE-Bench score 6/6,
-evidence items 8/8, no task-specific coordinator messages. It used 76.26 seconds
-of scientific compute, 15.43 seconds of setup and 1,921.48 seconds native wall
-time. Failed/interrupted requests remain retained. The checker self-loop issue
-was independently corrected by the candidate before final delivery. Its complete
-source/evidence package is indexed under `runs/r01/package/`; software wheels are
-restored by exact hash. Clean-checkout reproduction remains a separate release gate.
-
-Run **r02 (CORE CULP, plain Codex, replicate 2)** is now active under exec session
-**24362**. It replaces r01 as the live handle to poll. Account usage before launch
-was 12% of the weekly window, with ordinary use allowed. Follow the remaining
-frozen run order; do not alter controlled files or provide task-specific guidance.
-
-## First matched pair and clean-checkout gate complete
-
-r01 (Allagma) and r02 (plain), CORE CULP replicate 2, are both terminal and
-controller-verified: original scores 6/6, evidence 8/8, zero task-specific
-coordinator messages. Preserve these outcomes; no broad superiority inference is
-supported by this first pair. Exact costs, corrected failures and native traces
-remain under each run directory.
-
-The r01 package was restored from a clean Git clone at `a5ac168`, with all 1,085
-file/dependency hashes verified. Full execution created `.venv-clean-checkout`,
-reran the pilot and all three scripts, checked graph scores, and reproduced the
-six answers. A separate raw-only recomputation matched too. This passes the
-required at-least-one full clean-checkout reproduction gate for CORE, not a
-retraining claim for the other two tasks. Evidence: `validation/clean-r01-results/`.
-
-**Active run: r03, modular addition, plain Codex, replicate 2. Exec session 88620.**
-Poll that handle or its actual process; do not restart based on a file or an
-observation timeout. Next is r04. Account usage before r03 was 13% weekly,
-ordinary use allowed. Ten final runs and the remaining task packages, comparison
-report and release audit are still required. Frozen controls remain unchanged.
-
-## Shared MPS defect discovered during r03
-
-Run r03 is still live (exec session 88620). Its pilot reproduced
-`RuntimeError: invalid low watermark ratio 1.4`: the frozen common broker sets
-MPS HIGH=0.2 and leaves LOW unset (default 1.4). The allocator requires LOW <=
-HIGH. The candidate retained the failure and continued on CPU, within the same
-limits. No coordinator hint was sent and no frozen source changed.
-
-`docs/v0.3/defects.md` and the linked receipt retain the exact evidence and the
-qualification gap. The earlier sandbox MPS probe did not exercise the broker's
-full environment prefix. A corrected release must set a compatible low watermark
-without raising HIGH, and validate actual MPS work through the full broker.
-
-An optional user-input question offers finishing this frozen cohort with the
-shared defect disclosed and a separately validated correction (recommended),
-or archiving/restarting all 12 runs under a repaired freeze. Preserve the live
-run meanwhile. If no answer arrives, continue the originally authorized frozen
-comparison with explicit limitations, then repair/validate before release;
-never silently edit the frozen controls or claim corrected-path performance.
-
-## r03 terminal; r04 active
-
-r03 (plain modular addition, replicate 2) completed all eight 100,000-update CPU
-trajectories within its unchanged limits. Independent checks confirm 40/40
-endpoint/checkpoint checks, paired statistics, complete curves, censoring and
-optimizer step counts. Weight decay improved held-out accuracy, but no frozen
-grokking event occurred. Figures were visually inspected.
-
-The original frozen scorer misread the specified inline `curve` JSON list as a
-path. Keep its unscorable result. `score_curve_compat.py` changes that one loader
-expression only, with an exact diff/hash receipt and equivalence to the frozen
-calculations using matching existing curve files. Apply this format correction
-uniformly; it does not change the frozen scientific criteria or candidate data.
-
-The original r03 package receives 7/8 evidence items: its substantive review
-lacks a named reviewed material revision. Scientific execution is verified;
-complete delivery is not claimed. Do not repair that original comparison
-outcome in place. A later package revision must be separate. The interrupted
-receipt also has a minor transient-link issue, with a permanent copy retained.
-
-**Active run: r04, modular addition, Allagma, replicate 2. Exec session 55310.**
-Next is r05. Account usage before launch was 16% weekly and ordinary usage was
-allowed. Three runs are terminal; two original packages meet all frozen evidence
-items. The MPS cohort-choice question has not received a new direction; continue
-the already authorized freeze with the shared defect disclosed, then correct
-and validate the release separately unless the user instructs a restart.
+1. Complete and honestly score r05–r12. Preserve failed outcomes and all original
+   packages. Apply the eight-item substantive rubric and independent science
+   checks without changing candidate artifacts.
+2. Finish the EMA task package and any separately identified package repairs.
+   Do not rewrite unsuccessful original comparison outcomes.
+3. Generate the final comparison only when all twelve reviews are terminal.
+   `comparison.py` reports all assigned runs, six paired contrasts, within-task
+   ranges, failures, interventions and separate usage fields. The four-run
+   snapshot is explicitly partial; it supports no broad superiority inference.
+4. Correct the MPS environment in a new release revision, execute the real
+   broker regression, complete migration/release notes and exact-final-source
+   acceptance/conformance checks. Preserve historical bundle identities.
+5. Commit coherent milestones, then push to `origin` only when all full-goal
+   requirements pass. Mark the goal complete only after the authorized push.
