@@ -1,0 +1,17 @@
+{
+  "injected_interruption": false,
+  "isolation_sha256": "f5906ab4b6ccf909a2be2c202c53a180d854a9f044600a486756140591094869",
+  "reconciled_after_controller_restart": false,
+  "request_id": "03987e1007234456b805dea41ed02898",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 0.944157375022769,
+    "ended_at": "2026-10-08T00:36:36.743514+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r04/resources/jobs/0010-record-numerical-evaluator-amendment",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 4079616,
+    "peak_storage_bytes": 1111925922,
+    "status": "completed"
+  }
+}

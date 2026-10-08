@@ -1,0 +1,2378 @@
+[
+  {
+    "seed": 1001,
+    "weight_decay": 0,
+    "updates": 100000,
+    "metrics": {
+      "train_accuracy": 1.0,
+      "train_loss": 3.6777831617792113e-07,
+      "test_accuracy": 0.0,
+      "test_loss": 165.708668611274
+    },
+    "transition": {
+      "memorization": {
+        "event": true,
+        "time": 600,
+        "confirmed_at": 800,
+        "censored": false,
+        "censor_at": null
+      },
+      "generalization": {
+        "event": false,
+        "time": null,
+        "confirmed_at": null,
+        "censored": true,
+        "censor_at": 100000
+      },
+      "lag": null,
+      "time_ratio": null,
+      "lag_lower_bound_if_generalization_censored": 99400,
+      "delayed_grokking_observed": false,
+      "observed_horizon": 100000,
+      "definition": {
+        "train_threshold": 0.99,
+        "test_threshold": 0.95,
+        "persistence": 3,
+        "minimum_lag": 1000,
+        "minimum_time_ratio": 2
+      }
+    },
+    "sensitivity": [
+      {
+        "varied": "threshold",
+        "value": 0.9,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 800,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.9,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "threshold",
+        "value": 0.99,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 800,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.99,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "persistence",
+        "value": 1,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 600,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 1,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "persistence",
+        "value": 5,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 1000,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 5,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "lag_min",
+        "value": 500,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 800,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 500,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "lag_min",
+        "value": 5000,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 800,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 5000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "ratio_min",
+        "value": 1,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 800,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 1
+          }
+        }
+      },
+      {
+        "varied": "ratio_min",
+        "value": 5,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 800,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 5
+          }
+        }
+      }
+    ]
+  },
+  {
+    "seed": 1001,
+    "weight_decay": 1,
+    "updates": 100000,
+    "metrics": {
+      "train_accuracy": 1.0,
+      "train_loss": 3.476726383787277e-05,
+      "test_accuracy": 0.6654015485046303,
+      "test_loss": 1.3766804540286197
+    },
+    "transition": {
+      "memorization": {
+        "event": true,
+        "time": 800,
+        "confirmed_at": 1000,
+        "censored": false,
+        "censor_at": null
+      },
+      "generalization": {
+        "event": false,
+        "time": null,
+        "confirmed_at": null,
+        "censored": true,
+        "censor_at": 100000
+      },
+      "lag": null,
+      "time_ratio": null,
+      "lag_lower_bound_if_generalization_censored": 99200,
+      "delayed_grokking_observed": false,
+      "observed_horizon": 100000,
+      "definition": {
+        "train_threshold": 0.99,
+        "test_threshold": 0.95,
+        "persistence": 3,
+        "minimum_lag": 1000,
+        "minimum_time_ratio": 2
+      }
+    },
+    "sensitivity": [
+      {
+        "varied": "threshold",
+        "value": 0.9,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 1000,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.9,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "threshold",
+        "value": 0.99,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 1000,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.99,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "persistence",
+        "value": 1,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 800,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 1,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "persistence",
+        "value": 5,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 1200,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 5,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "lag_min",
+        "value": 500,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 1000,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 500,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "lag_min",
+        "value": 5000,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 1000,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 5000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "ratio_min",
+        "value": 1,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 1000,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 1
+          }
+        }
+      },
+      {
+        "varied": "ratio_min",
+        "value": 5,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 1000,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 5
+          }
+        }
+      }
+    ]
+  },
+  {
+    "seed": 1002,
+    "weight_decay": 0,
+    "updates": 100000,
+    "metrics": {
+      "train_accuracy": 1.0,
+      "train_loss": 3.7211916422179993e-07,
+      "test_accuracy": 0.0,
+      "test_loss": 161.11101902126285
+    },
+    "transition": {
+      "memorization": {
+        "event": true,
+        "time": 600,
+        "confirmed_at": 800,
+        "censored": false,
+        "censor_at": null
+      },
+      "generalization": {
+        "event": false,
+        "time": null,
+        "confirmed_at": null,
+        "censored": true,
+        "censor_at": 100000
+      },
+      "lag": null,
+      "time_ratio": null,
+      "lag_lower_bound_if_generalization_censored": 99400,
+      "delayed_grokking_observed": false,
+      "observed_horizon": 100000,
+      "definition": {
+        "train_threshold": 0.99,
+        "test_threshold": 0.95,
+        "persistence": 3,
+        "minimum_lag": 1000,
+        "minimum_time_ratio": 2
+      }
+    },
+    "sensitivity": [
+      {
+        "varied": "threshold",
+        "value": 0.9,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 800,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.9,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "threshold",
+        "value": 0.99,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 800,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.99,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "persistence",
+        "value": 1,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 600,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 1,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "persistence",
+        "value": 5,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 1000,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 5,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "lag_min",
+        "value": 500,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 800,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 500,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "lag_min",
+        "value": 5000,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 800,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 5000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "ratio_min",
+        "value": 1,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 800,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 1
+          }
+        }
+      },
+      {
+        "varied": "ratio_min",
+        "value": 5,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 800,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 5
+          }
+        }
+      }
+    ]
+  },
+  {
+    "seed": 1002,
+    "weight_decay": 1,
+    "updates": 100000,
+    "metrics": {
+      "train_accuracy": 1.0,
+      "train_loss": 3.570614732996819e-05,
+      "test_accuracy": 0.6523455290724154,
+      "test_loss": 1.4215852971943845
+    },
+    "transition": {
+      "memorization": {
+        "event": true,
+        "time": 800,
+        "confirmed_at": 1000,
+        "censored": false,
+        "censor_at": null
+      },
+      "generalization": {
+        "event": false,
+        "time": null,
+        "confirmed_at": null,
+        "censored": true,
+        "censor_at": 100000
+      },
+      "lag": null,
+      "time_ratio": null,
+      "lag_lower_bound_if_generalization_censored": 99200,
+      "delayed_grokking_observed": false,
+      "observed_horizon": 100000,
+      "definition": {
+        "train_threshold": 0.99,
+        "test_threshold": 0.95,
+        "persistence": 3,
+        "minimum_lag": 1000,
+        "minimum_time_ratio": 2
+      }
+    },
+    "sensitivity": [
+      {
+        "varied": "threshold",
+        "value": 0.9,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 1000,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.9,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "threshold",
+        "value": 0.99,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 1000,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.99,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "persistence",
+        "value": 1,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 800,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 1,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "persistence",
+        "value": 5,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 1200,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 5,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "lag_min",
+        "value": 500,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 1000,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 500,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "lag_min",
+        "value": 5000,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 1000,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 5000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "ratio_min",
+        "value": 1,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 1000,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 1
+          }
+        }
+      },
+      {
+        "varied": "ratio_min",
+        "value": 5,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 1000,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 5
+          }
+        }
+      }
+    ]
+  },
+  {
+    "seed": 1003,
+    "weight_decay": 0,
+    "updates": 100000,
+    "metrics": {
+      "train_accuracy": 1.0,
+      "train_loss": 3.563585949922327e-07,
+      "test_accuracy": 0.0,
+      "test_loss": 157.3275486048188
+    },
+    "transition": {
+      "memorization": {
+        "event": true,
+        "time": 600,
+        "confirmed_at": 800,
+        "censored": false,
+        "censor_at": null
+      },
+      "generalization": {
+        "event": false,
+        "time": null,
+        "confirmed_at": null,
+        "censored": true,
+        "censor_at": 100000
+      },
+      "lag": null,
+      "time_ratio": null,
+      "lag_lower_bound_if_generalization_censored": 99400,
+      "delayed_grokking_observed": false,
+      "observed_horizon": 100000,
+      "definition": {
+        "train_threshold": 0.99,
+        "test_threshold": 0.95,
+        "persistence": 3,
+        "minimum_lag": 1000,
+        "minimum_time_ratio": 2
+      }
+    },
+    "sensitivity": [
+      {
+        "varied": "threshold",
+        "value": 0.9,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 800,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.9,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "threshold",
+        "value": 0.99,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 800,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.99,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "persistence",
+        "value": 1,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 600,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 1,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "persistence",
+        "value": 5,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 1000,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 5,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "lag_min",
+        "value": 500,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 800,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 500,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "lag_min",
+        "value": 5000,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 800,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 5000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "ratio_min",
+        "value": 1,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 800,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 1
+          }
+        }
+      },
+      {
+        "varied": "ratio_min",
+        "value": 5,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 800,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 5
+          }
+        }
+      }
+    ]
+  },
+  {
+    "seed": 1003,
+    "weight_decay": 1,
+    "updates": 100000,
+    "metrics": {
+      "train_accuracy": 1.0,
+      "train_loss": 3.09277680550866e-05,
+      "test_accuracy": 0.8202520115378776,
+      "test_loss": 0.7053434138892786
+    },
+    "transition": {
+      "memorization": {
+        "event": true,
+        "time": 800,
+        "confirmed_at": 1000,
+        "censored": false,
+        "censor_at": null
+      },
+      "generalization": {
+        "event": false,
+        "time": null,
+        "confirmed_at": null,
+        "censored": true,
+        "censor_at": 100000
+      },
+      "lag": null,
+      "time_ratio": null,
+      "lag_lower_bound_if_generalization_censored": 99200,
+      "delayed_grokking_observed": false,
+      "observed_horizon": 100000,
+      "definition": {
+        "train_threshold": 0.99,
+        "test_threshold": 0.95,
+        "persistence": 3,
+        "minimum_lag": 1000,
+        "minimum_time_ratio": 2
+      }
+    },
+    "sensitivity": [
+      {
+        "varied": "threshold",
+        "value": 0.9,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 1000,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.9,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "threshold",
+        "value": 0.99,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 1000,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.99,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "persistence",
+        "value": 1,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 800,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 1,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "persistence",
+        "value": 5,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 1200,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 5,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "lag_min",
+        "value": 500,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 1000,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 500,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "lag_min",
+        "value": 5000,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 1000,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 5000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "ratio_min",
+        "value": 1,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 1000,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 1
+          }
+        }
+      },
+      {
+        "varied": "ratio_min",
+        "value": 5,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 1000,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 5
+          }
+        }
+      }
+    ]
+  },
+  {
+    "seed": 1004,
+    "weight_decay": 0,
+    "updates": 100000,
+    "metrics": {
+      "train_accuracy": 1.0,
+      "train_loss": 3.651387446871754e-07,
+      "test_accuracy": 0.0001518141794443601,
+      "test_loss": 155.735547417007
+    },
+    "transition": {
+      "memorization": {
+        "event": true,
+        "time": 600,
+        "confirmed_at": 800,
+        "censored": false,
+        "censor_at": null
+      },
+      "generalization": {
+        "event": false,
+        "time": null,
+        "confirmed_at": null,
+        "censored": true,
+        "censor_at": 100000
+      },
+      "lag": null,
+      "time_ratio": null,
+      "lag_lower_bound_if_generalization_censored": 99400,
+      "delayed_grokking_observed": false,
+      "observed_horizon": 100000,
+      "definition": {
+        "train_threshold": 0.99,
+        "test_threshold": 0.95,
+        "persistence": 3,
+        "minimum_lag": 1000,
+        "minimum_time_ratio": 2
+      }
+    },
+    "sensitivity": [
+      {
+        "varied": "threshold",
+        "value": 0.9,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 800,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.9,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "threshold",
+        "value": 0.99,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 800,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.99,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "persistence",
+        "value": 1,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 600,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 1,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "persistence",
+        "value": 5,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 1000,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 5,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "lag_min",
+        "value": 500,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 800,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 500,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "lag_min",
+        "value": 5000,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 800,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 5000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "ratio_min",
+        "value": 1,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 800,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 1
+          }
+        }
+      },
+      {
+        "varied": "ratio_min",
+        "value": 5,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 600,
+            "confirmed_at": 800,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99400,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 5
+          }
+        }
+      }
+    ]
+  },
+  {
+    "seed": 1004,
+    "weight_decay": 1,
+    "updates": 100000,
+    "metrics": {
+      "train_accuracy": 1.0,
+      "train_loss": 3.8251408013681676e-05,
+      "test_accuracy": 0.5604979505085775,
+      "test_loss": 1.913074370999998
+    },
+    "transition": {
+      "memorization": {
+        "event": true,
+        "time": 800,
+        "confirmed_at": 1000,
+        "censored": false,
+        "censor_at": null
+      },
+      "generalization": {
+        "event": false,
+        "time": null,
+        "confirmed_at": null,
+        "censored": true,
+        "censor_at": 100000
+      },
+      "lag": null,
+      "time_ratio": null,
+      "lag_lower_bound_if_generalization_censored": 99200,
+      "delayed_grokking_observed": false,
+      "observed_horizon": 100000,
+      "definition": {
+        "train_threshold": 0.99,
+        "test_threshold": 0.95,
+        "persistence": 3,
+        "minimum_lag": 1000,
+        "minimum_time_ratio": 2
+      }
+    },
+    "sensitivity": [
+      {
+        "varied": "threshold",
+        "value": 0.9,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 1000,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.9,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "threshold",
+        "value": 0.99,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 1000,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.99,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "persistence",
+        "value": 1,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 800,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 1,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "persistence",
+        "value": 5,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 1200,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 5,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "lag_min",
+        "value": 500,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 1000,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 500,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "lag_min",
+        "value": 5000,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 1000,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 5000,
+            "minimum_time_ratio": 2
+          }
+        }
+      },
+      {
+        "varied": "ratio_min",
+        "value": 1,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 1000,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 1
+          }
+        }
+      },
+      {
+        "varied": "ratio_min",
+        "value": 5,
+        "outcome": {
+          "memorization": {
+            "event": true,
+            "time": 800,
+            "confirmed_at": 1000,
+            "censored": false,
+            "censor_at": null
+          },
+          "generalization": {
+            "event": false,
+            "time": null,
+            "confirmed_at": null,
+            "censored": true,
+            "censor_at": 100000
+          },
+          "lag": null,
+          "time_ratio": null,
+          "lag_lower_bound_if_generalization_censored": 99200,
+          "delayed_grokking_observed": false,
+          "observed_horizon": 100000,
+          "definition": {
+            "train_threshold": 0.99,
+            "test_threshold": 0.95,
+            "persistence": 3,
+            "minimum_lag": 1000,
+            "minimum_time_ratio": 5
+          }
+        }
+      }
+    ]
+  }
+]

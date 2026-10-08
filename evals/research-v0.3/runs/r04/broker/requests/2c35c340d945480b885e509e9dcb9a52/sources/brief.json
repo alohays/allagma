@@ -1,0 +1,9 @@
+{
+  "study_id": "modular-addition",
+  "question": "Does weight decay 1 versus 0 improve held-out generalization after memorization, and does delayed grokking occur by 100000 updates in the prescribed modular-addition MLP?",
+  "motivation": "Distinguish memorization, endpoint generalization, and delayed threshold transitions in a bounded adaptation of Power et al. (2022).",
+  "success_criteria": ["Qualify correctness and runtime with pilot seed 61", "Freeze the primary protocol before confirmation", "Execute eight prescribed cells at 100000 updates if resource qualification permits", "Retain and recover the injected interruption", "Recompute endpoints and reload checkpoints", "Report uncertainty and critique, including a partial status when warranted"],
+  "constraints": ["Ordered modular addition modulo 97; 2822 training and 6587 held-out pairs per seed", "Bias-free float32 194-128-ReLU-97 MLP", "Paired seeds 1001,1002,1003,1004; weight decay 0 and 1", "AdamW lr .001 betas .9,.98 epsilon 1e-8", "No held-out-driven optimization or tuning", "All setup and computation via local broker, offline and sequential", "Compute 1800 seconds; setup 300 seconds; 64 attempts; per request at most 180 seconds; session 3600 seconds"],
+  "output": "English reproducible research package: REPORT.md, review.json, REPRODUCE.md, artifact-manifest.json, submission.json, measurements and supporting evidence",
+  "stop_rules": ["Failed correctness or infeasible cost qualification stops confirmation", "Resource ceiling produces a partial package", "Confirmation horizon is fixed at 100000 and never shortened based on results", "All attempts persist and retries get new identities", "At most two audit revision cycles"]
+}

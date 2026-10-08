@@ -1,0 +1,222 @@
+{
+  "study": "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r04/candidate",
+  "material": {
+    "path": "REPORT.md",
+    "sha256": "b00b63809213cca671d1c2948815e2771cd894b56854ef41074bdf7b45592ea5",
+    "media_type": "application/octet-stream",
+    "retention": "retained"
+  },
+  "criteria": [
+    "fixed protocol adherence",
+    "raw-evidence provenance",
+    "censoring and uncertainty",
+    "reproduction and stated limitations"
+  ],
+  "claims": [
+    {
+      "schema_version": "0.2",
+      "record_type": "ClaimRecord",
+      "claim_id": "memorization",
+      "text": "8 of 8 confirmation runs met the frozen training memorization criterion.",
+      "supporting": [
+        {
+          "path": "analysis/primary/summary.json",
+          "sha256": "e9cb9fde098606e9008bd8a1f61538fa1b1d1ea7497f9d83778991e13649aa1e",
+          "media_type": "application/json",
+          "retention": "retained"
+        },
+        {
+          "path": "analysis/primary/per-seed.json",
+          "sha256": "c40901b87800c6db1e25a8708544441a57a54bb4fae5bb3f14ff05fff6c9d5da",
+          "media_type": "application/json",
+          "retention": "retained"
+        }
+      ],
+      "contradicting": [],
+      "dependencies": [
+        {
+          "path": "analysis/primary/raw-manifest.json",
+          "sha256": "2b9c459c4e825167bae061559e5dd1c4375cffeb28b662e5091878372f03ee61",
+          "media_type": "application/json",
+          "retention": "retained"
+        },
+        {
+          "path": "campaigns/c001/protocol.json",
+          "sha256": "17188cc6952332178ed269b0269823214f71988a07f4f609ddeb08e7d4c35669",
+          "media_type": "application/json",
+          "retention": "retained"
+        }
+      ],
+      "scope": "Prescribed MLP, four paired seeds, 100000-update horizon",
+      "limitations": [
+        "Four independent paired seeds, not eight independent replicates",
+        "Finite 100000-update horizon",
+        "No extrapolation beyond this MLP or fixed optimizer",
+        "95% Student t intervals rely on small-sample distributional assumptions"
+      ],
+      "status": "supported",
+      "supersedes": null
+    },
+    {
+      "schema_version": "0.2",
+      "record_type": "ClaimRecord",
+      "claim_id": "generalization",
+      "text": "0 of 8 confirmation runs met the frozen held-out generalization criterion.",
+      "supporting": [
+        {
+          "path": "analysis/primary/summary.json",
+          "sha256": "e9cb9fde098606e9008bd8a1f61538fa1b1d1ea7497f9d83778991e13649aa1e",
+          "media_type": "application/json",
+          "retention": "retained"
+        },
+        {
+          "path": "analysis/primary/per-seed.json",
+          "sha256": "c40901b87800c6db1e25a8708544441a57a54bb4fae5bb3f14ff05fff6c9d5da",
+          "media_type": "application/json",
+          "retention": "retained"
+        }
+      ],
+      "contradicting": [],
+      "dependencies": [
+        {
+          "path": "analysis/primary/raw-manifest.json",
+          "sha256": "2b9c459c4e825167bae061559e5dd1c4375cffeb28b662e5091878372f03ee61",
+          "media_type": "application/json",
+          "retention": "retained"
+        },
+        {
+          "path": "campaigns/c001/protocol.json",
+          "sha256": "17188cc6952332178ed269b0269823214f71988a07f4f609ddeb08e7d4c35669",
+          "media_type": "application/json",
+          "retention": "retained"
+        }
+      ],
+      "scope": "Prescribed MLP, four paired seeds, 100000-update horizon",
+      "limitations": [
+        "Four independent paired seeds, not eight independent replicates",
+        "Finite 100000-update horizon",
+        "No extrapolation beyond this MLP or fixed optimizer",
+        "95% Student t intervals rely on small-sample distributional assumptions"
+      ],
+      "status": "supported",
+      "supersedes": null
+    },
+    {
+      "schema_version": "0.2",
+      "record_type": "ClaimRecord",
+      "claim_id": "grokking",
+      "text": "0 of 8 confirmation runs met the frozen delayed-grokking criterion.",
+      "supporting": [
+        {
+          "path": "analysis/primary/summary.json",
+          "sha256": "e9cb9fde098606e9008bd8a1f61538fa1b1d1ea7497f9d83778991e13649aa1e",
+          "media_type": "application/json",
+          "retention": "retained"
+        },
+        {
+          "path": "analysis/primary/per-seed.json",
+          "sha256": "c40901b87800c6db1e25a8708544441a57a54bb4fae5bb3f14ff05fff6c9d5da",
+          "media_type": "application/json",
+          "retention": "retained"
+        }
+      ],
+      "contradicting": [],
+      "dependencies": [
+        {
+          "path": "analysis/primary/raw-manifest.json",
+          "sha256": "2b9c459c4e825167bae061559e5dd1c4375cffeb28b662e5091878372f03ee61",
+          "media_type": "application/json",
+          "retention": "retained"
+        },
+        {
+          "path": "campaigns/c001/protocol.json",
+          "sha256": "17188cc6952332178ed269b0269823214f71988a07f4f609ddeb08e7d4c35669",
+          "media_type": "application/json",
+          "retention": "retained"
+        }
+      ],
+      "scope": "Prescribed MLP, four paired seeds, 100000-update horizon",
+      "limitations": [
+        "Four independent paired seeds, not eight independent replicates",
+        "Finite 100000-update horizon",
+        "No extrapolation beyond this MLP or fixed optimizer",
+        "95% Student t intervals rely on small-sample distributional assumptions"
+      ],
+      "status": "supported",
+      "supersedes": null
+    },
+    {
+      "schema_version": "0.2",
+      "record_type": "ClaimRecord",
+      "claim_id": "paired-endpoints",
+      "text": "Endpoint paired effects are reported with seed-level differences and fragile small-n uncertainty: {\"test_accuracy\": {\"n_independent_seeds\": 4, \"mean\": 0.6745863063610141, \"sd\": 0.10777805290637396, \"standard_error\": 0.05388902645318698, \"ci95_student_t\": [0.503087373245022, 0.8460852394770063], \"df\": 3, \"paired_sign_flip_two_sided_p\": 0.125, \"method\": \"Paired seed differences, Student t 95% interval df=3 for n=4; all 16 sign flips; small-n assumptions are fragile.\"}, \"test_loss\": {\"n_independent_seeds\": 4, \"mean\": -158.61652502956258, \"sd\": 4.501033135864341, \"standard_error\": 2.2505165679321704, \"ci95_student_t\": [-165.7786731655196, -151.45437689360557], \"df\": 3, \"paired_sign_flip_two_sided_p\": 0.125, \"method\": \"Paired seed differences, Student t 95% interval df=3 for n=4; all 16 sign flips; small-n assumptions are fragile.\"}}",
+      "supporting": [
+        {
+          "path": "analysis/primary/summary.json",
+          "sha256": "e9cb9fde098606e9008bd8a1f61538fa1b1d1ea7497f9d83778991e13649aa1e",
+          "media_type": "application/json",
+          "retention": "retained"
+        }
+      ],
+      "contradicting": [],
+      "dependencies": [
+        {
+          "path": "analysis/primary/raw-manifest.json",
+          "sha256": "2b9c459c4e825167bae061559e5dd1c4375cffeb28b662e5091878372f03ee61",
+          "media_type": "application/json",
+          "retention": "retained"
+        },
+        {
+          "path": "campaigns/c001/protocol.json",
+          "sha256": "17188cc6952332178ed269b0269823214f71988a07f4f609ddeb08e7d4c35669",
+          "media_type": "application/json",
+          "retention": "retained"
+        }
+      ],
+      "scope": "Metric differences at exactly 100000 updates; not a mechanism or universal effect",
+      "limitations": [
+        "Four independent paired seeds, not eight independent replicates",
+        "Finite 100000-update horizon",
+        "No extrapolation beyond this MLP or fixed optimizer",
+        "95% Student t intervals rely on small-sample distributional assumptions"
+      ],
+      "status": "supported",
+      "supersedes": null
+    },
+    {
+      "schema_version": "0.2",
+      "record_type": "ClaimRecord",
+      "claim_id": "definition-sensitivity",
+      "text": "Prespecified one-factor threshold sensitivity outcomes are [{\"varied\": \"threshold\", \"value\": 0.9, \"generalized_count\": 0, \"delayed_grokking_count\": 0, \"n_runs\": 8}, {\"varied\": \"threshold\", \"value\": 0.99, \"generalized_count\": 0, \"delayed_grokking_count\": 0, \"n_runs\": 8}, {\"varied\": \"persistence\", \"value\": 1, \"generalized_count\": 0, \"delayed_grokking_count\": 0, \"n_runs\": 8}, {\"varied\": \"persistence\", \"value\": 5, \"generalized_count\": 0, \"delayed_grokking_count\": 0, \"n_runs\": 8}, {\"varied\": \"lag_min\", \"value\": 500, \"generalized_count\": 0, \"delayed_grokking_count\": 0, \"n_runs\": 8}, {\"varied\": \"lag_min\", \"value\": 5000, \"generalized_count\": 0, \"delayed_grokking_count\": 0, \"n_runs\": 8}, {\"varied\": \"ratio_min\", \"value\": 1, \"generalized_count\": 0, \"delayed_grokking_count\": 0, \"n_runs\": 8}, {\"varied\": \"ratio_min\", \"value\": 5, \"generalized_count\": 0, \"delayed_grokking_count\": 0, \"n_runs\": 8}]",
+      "supporting": [
+        {
+          "path": "analysis/primary/sensitivity-summary.json",
+          "sha256": "1cf2dbf9110ae00a58c1fd6cbce3404c6fbeb9472d63e834f708a01a739e8cc5",
+          "media_type": "application/json",
+          "retention": "retained"
+        }
+      ],
+      "contradicting": [],
+      "dependencies": [
+        {
+          "path": "analysis/primary/per-seed.json",
+          "sha256": "c40901b87800c6db1e25a8708544441a57a54bb4fae5bb3f14ff05fff6c9d5da",
+          "media_type": "application/json",
+          "retention": "retained"
+        },
+        {
+          "path": "campaigns/c001/protocol.json",
+          "sha256": "17188cc6952332178ed269b0269823214f71988a07f4f609ddeb08e7d4c35669",
+          "media_type": "application/json",
+          "retention": "retained"
+        }
+      ],
+      "scope": "Only the listed definition changes and prescribed finite horizon",
+      "limitations": [
+        "Sensitivity analyses do not add independent seeds or establish a mechanism"
+      ],
+      "status": "supported",
+      "supersedes": null
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "-m",
+    "pip",
+    "install",
+    "--no-index",
+    "--find-links",
+    "inputs/materials/wheels",
+    "torch",
+    "numpy",
+    "scipy",
+    "matplotlib"
+  ],
+  "attempt": false,
+  "category": "setup",
+  "cwd": ".",
+  "label": "offline-packages",
+  "request_id": "a659103831034ad99e76b67957a46175",
+  "timeout_seconds": 120.0
+}

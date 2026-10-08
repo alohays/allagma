@@ -1,0 +1,17 @@
+{
+  "injected_interruption": false,
+  "isolation_sha256": "f5906ab4b6ccf909a2be2c202c53a180d854a9f044600a486756140591094869",
+  "reconciled_after_controller_restart": false,
+  "request_id": "43dab4890acb45de9a2d93f71728eb99",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 7.646688750013709,
+    "ended_at": "2026-10-08T00:27:03.805900+00:00",
+    "exit_code": 1,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r04/resources/jobs/0004-pilot-61-recovery-cost",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 384729088,
+    "peak_storage_bytes": 1095689438,
+    "status": "failed"
+  }
+}

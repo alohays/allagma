@@ -1,0 +1,16 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "study/qualify.py",
+    "--pilot",
+    "evidence/pilot-a003/result.json",
+    "--out",
+    "evidence/qualification-a004"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "cpu-correctness-and-cost-qualification",
+  "request_id": "3c193f6a77374c37b9eed5c101541fa3",
+  "timeout_seconds": 20.0
+}

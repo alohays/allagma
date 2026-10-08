@@ -1,0 +1,18 @@
+{
+  "valid": true,
+  "coverage": {
+    "seed": 1002,
+    "weight_decay": 1,
+    "metric_max_abs_error": 1.434412966183629e-07,
+    "checkpoint_reload_bitwise": true,
+    "npz_reload_bitwise": true,
+    "numpy_forward_max_abs_error": 0.0,
+    "split_labels_initialization_optimizer_step_and_curve_checks": true
+  },
+  "evaluation_evidence": {
+    "path": "analysis/primary/validation.json",
+    "sha256": "b53d00bea6d4a081961331e6f6be9cd65d8eebae3b72b50b778cfcf87ac547d6",
+    "media_type": "application/json",
+    "retention": "retained"
+  }
+}

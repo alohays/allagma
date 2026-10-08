@@ -1,0 +1,22 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "study/train.py",
+    "--seed",
+    "1001",
+    "--wd",
+    "0",
+    "--phase",
+    "confirmation",
+    "--out",
+    "evidence/confirmation/s1001-wd0-a001",
+    "--max-seconds",
+    "155"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "confirmation-s1001-wd0-a001",
+  "request_id": "4c64a8cbff92499d8e831248a17ca163",
+  "timeout_seconds": 175.0
+}

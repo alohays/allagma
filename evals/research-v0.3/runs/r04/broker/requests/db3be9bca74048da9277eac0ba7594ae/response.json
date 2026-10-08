@@ -1,0 +1,17 @@
+{
+  "injected_interruption": false,
+  "isolation_sha256": "f5906ab4b6ccf909a2be2c202c53a180d854a9f044600a486756140591094869",
+  "reconciled_after_controller_restart": false,
+  "request_id": "db3be9bca74048da9277eac0ba7594ae",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 2.6596237500198185,
+    "ended_at": "2026-10-08T00:54:09.378906+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r04/resources/jobs/0020-retained-evidence-recompute",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 601047040,
+    "peak_storage_bytes": 1186012911,
+    "status": "completed"
+  }
+}

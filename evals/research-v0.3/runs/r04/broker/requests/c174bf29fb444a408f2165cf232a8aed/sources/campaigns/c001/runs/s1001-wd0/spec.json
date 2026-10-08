@@ -1,0 +1,59 @@
+{
+  "budget": {
+    "max_attempts": 64,
+    "max_seconds": 1800,
+    "money_usd": 0,
+    "per_attempt_seconds": 180
+  },
+  "editable": [
+    "fault injection for conformance, excluded from successful science"
+  ],
+  "evaluator": {
+    "media_type": "text/x-python",
+    "path": "campaigns/c001/materials/study/qualify.py",
+    "retention": "retain-with-study",
+    "sha256": "9ee696a168d63fff86bad833a5193260d82cfa3c2a62d2206dd375b35aa742b1"
+  },
+  "expected_artifacts": [
+    "raw.json",
+    "evaluation.json"
+  ],
+  "experiment_id": "s1001-wd0",
+  "fixed": [
+    "runner",
+    "evaluator",
+    "seed",
+    "parameters",
+    "protocol",
+    "analysis"
+  ],
+  "hypothesis": "Weight decay may improve held-out endpoints after memorization; delayed grokking may or may not occur within the fixed horizon.",
+  "inputs": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/c001/runs/s1001-wd0/parameters.json",
+      "retention": "retain-with-study",
+      "sha256": "75df8c1ee6ec311aa85a7498c172a2d224bc9f091bdffb8a3bfcb83ad9fd8606"
+    }
+  ],
+  "parameters": {
+    "seed": 1001,
+    "updates": 100000,
+    "weight_decay": 0
+  },
+  "protocol_revision": "modular-addition-v1",
+  "record_type": "ExperimentSpec",
+  "runner": {
+    "media_type": "text/x-python",
+    "path": "campaigns/c001/materials/study/train.py",
+    "retention": "retain-with-study",
+    "sha256": "83c6d4b986080a3f580bb9aa5bd6a02fe4cb48ec00eca56a2a799eff3748ddaf"
+  },
+  "schema_version": "0.2",
+  "seed_policy": {
+    "disjoint_confirmation": true,
+    "seed": 1001,
+    "split": "confirmation"
+  },
+  "split": "confirmation"
+}

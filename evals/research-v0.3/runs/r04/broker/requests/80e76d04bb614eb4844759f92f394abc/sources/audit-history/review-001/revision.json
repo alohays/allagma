@@ -1,0 +1,31 @@
+{
+  "revision": 1,
+  "max_revisions": 2,
+  "finding": {
+    "id": "R10",
+    "status": "resolved",
+    "severity": "reporting clarity",
+    "finding": "The wording could imply confidence intervals for individual seeds, and the validation link named tolerances stored in the reproduction guide.",
+    "resolution": "Clarified that intervals describe the mean paired effect and linked the actual tolerance documentation; primary data and analyses are unchanged.",
+    "evidence": [
+      "REPORT.md",
+      "REPRODUCE.md",
+      "audit-history/review-001/REPORT.md"
+    ]
+  },
+  "old_report": {
+    "path": "audit-history/review-001/REPORT.md",
+    "sha256": "167cd49fda637587bf6b5883321a0963f5e8d943dadd75009ed840292a13966e",
+    "media_type": "application/octet-stream",
+    "retention": "retained"
+  },
+  "new_report": {
+    "path": "REPORT.md",
+    "sha256": "b00b63809213cca671d1c2948815e2771cd894b56854ef41074bdf7b45592ea5",
+    "media_type": "application/octet-stream",
+    "retention": "retained"
+  },
+  "history_note": "Archived review and verification retain their original material digests. Their original root-relative material paths refer to the then-current revision; the matching bytes are preserved beside them here.",
+  "analysis_unchanged": true,
+  "next_step": "Re-run current-material verification before packaging."
+}

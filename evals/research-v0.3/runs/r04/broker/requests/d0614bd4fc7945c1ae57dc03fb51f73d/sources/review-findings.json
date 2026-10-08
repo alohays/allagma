@@ -1,0 +1,117 @@
+{
+  "review_scope": "same-agent substantive critique of the exact current report and raw evidence",
+  "independent_peer_review": false,
+  "findings": [
+    {
+      "id": "R1",
+      "status": "resolved",
+      "severity": "execution",
+      "finding": "Controlled interruption left no trained endpoint; it cannot count as a scientific replicate.",
+      "resolution": "Retained pilot-a001 start/log/receipt and recovered under new attempt IDs; confirmation uses only seeds 1001--1004.",
+      "evidence": [
+        "attempts.json",
+        "evidence/pilot-a001/started.json"
+      ]
+    },
+    {
+      "id": "R2",
+      "status": "resolved",
+      "severity": "implementation",
+      "finding": "Pilot MPS allocation failed after CPU benchmarking.",
+      "resolution": "Kept failed attempt and separately qualified CPU with the full runner before freezing confirmation. No MPS measurements are analyzed.",
+      "evidence": [
+        "evidence/pilot-a002/qualification.json",
+        "evidence/qualification-a004/qualification.json"
+      ]
+    },
+    {
+      "id": "R3",
+      "status": "resolved",
+      "severity": "numerical validation",
+      "finding": "Fixed absolute 1e-5 endpoint tolerance failed on high cross-entropy despite identical checkpoint logits.",
+      "resolution": "Explicit evaluator-v1.1 handoff uses atol=rtol=1e-6; original analyzer and failed request persist. Endpoints are recomputed in float64, and all final checkpoint/NPZ logits must still match bitwise.",
+      "evidence": [
+        "campaigns/c001/amendments/evaluator-v1.1.json",
+        "analysis/primary/validation.json"
+      ]
+    },
+    {
+      "id": "R4",
+      "status": "unresolved",
+      "severity": "inferential limitation",
+      "finding": "Four independent paired seeds provide weak population uncertainty; t intervals assume a suitable sampling distribution and sign-flip p-values are coarse.",
+      "resolution": "Report each paired difference, SD, SE, 95% df=3 t interval and all-16 sign-flip calculation; make no broad population/significance claim. More independent seeds would be needed.",
+      "evidence": [
+        "analysis/primary/summary.json",
+        "REPORT.md"
+      ]
+    },
+    {
+      "id": "R5",
+      "status": "unresolved",
+      "severity": "scope limitation",
+      "finding": "A 100000-update horizon cannot establish whether censored runs ever generalize; only two decay levels and one MLP/optimizer/split fraction were tested.",
+      "resolution": "Use explicit censoring/null event times, separate memorization/improvement/grokking claims, and restrict every conclusion to this configuration.",
+      "evidence": [
+        "analysis/primary/per-seed.json",
+        "REPORT.md"
+      ]
+    },
+    {
+      "id": "R6",
+      "status": "unresolved",
+      "severity": "review limitation",
+      "finding": "The installed checklist supplies schema/direct-digest assurance, and this substantive critique is by the same agent.",
+      "resolution": "Label scientific critique provisional; do not claim independent scientific peer review. Independent review remains a future requirement for stronger assurance.",
+      "evidence": [
+        "review-checklist.json"
+      ]
+    },
+    {
+      "id": "R7",
+      "status": "resolved within stated scope",
+      "severity": "reproducibility",
+      "finding": "Code paths and training records alone do not verify saved predictions or reported numbers.",
+      "resolution": "Reload every final checkpoint and NPZ weight set, recompute every endpoint, verify raw digests, and repeat the numerical analysis in a second directory. A second complete fresh-environment training execution was not run.",
+      "evidence": [
+        "analysis/primary/validation.json",
+        "analysis/recomputed/comparison.json",
+        "REPRODUCE.md"
+      ]
+    },
+    {
+      "id": "R8",
+      "status": "unresolved",
+      "severity": "measurement convention",
+      "finding": "100-update evaluations and a first-of-three rule discretize event times; a three-point window is not proof of permanent generalization.",
+      "resolution": "Report both initial and confirming evaluation times plus one-factor definition sensitivity. No change to the frozen primary analysis.",
+      "evidence": [
+        "analysis/primary/per-seed.json",
+        "analysis/primary/sensitivity-summary.json"
+      ]
+    },
+    {
+      "id": "R9",
+      "status": "unresolved",
+      "severity": "external validity",
+      "finding": "Held-out ordered pairs share the same modular operation and may include swapped versions of training pairs; examples are not independent tasks.",
+      "resolution": "Use seed as the independent unit and avoid extrapolating to new operations or architectures. The supplied split is followed exactly.",
+      "evidence": [
+        "campaigns/c001/protocol.json",
+        "REPORT.md"
+      ]
+    },
+    {
+      "id": "R10",
+      "status": "resolved",
+      "severity": "reporting clarity",
+      "finding": "The wording could imply confidence intervals for individual seeds, and the validation link named tolerances stored in the reproduction guide.",
+      "resolution": "Clarified that intervals describe the mean paired effect and linked the actual tolerance documentation; primary data and analyses are unchanged.",
+      "evidence": [
+        "REPORT.md",
+        "REPRODUCE.md",
+        "audit-history/review-001/REPORT.md"
+      ]
+    }
+  ]
+}

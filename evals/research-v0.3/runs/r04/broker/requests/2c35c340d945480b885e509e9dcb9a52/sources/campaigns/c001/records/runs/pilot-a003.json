@@ -1,0 +1,142 @@
+{
+  "schema_version": "0.2",
+  "record_type": "RunRecord",
+  "run_id": "pilot61",
+  "attempt_id": "bab18ea2f4434143a10fee0e2f9a67f5",
+  "attempt_number": 3,
+  "campaign_id": "c001",
+  "experiment_id": "pilot61",
+  "started_at": "2026-10-08T00:28:40.697220+00:00",
+  "ended_at": "2026-10-08T00:28:46.789111+00:00",
+  "inputs": [
+    {
+      "path": ".compute/requests/bab18ea2f4434143a10fee0e2f9a67f5.json",
+      "sha256": "0ea62b13615f8941a47aa6c64aa2437f9d5e4c532297a5d43fce192fae9459b2",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "PROTOCOL-DRAFT.md",
+      "sha256": "ff5ef9d9e8baf04c963335121112cdba3936802a4f3b5a23a095c0e5c8f41444",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "evidence/pilot-a003/arrays.npz",
+      "sha256": "1700aad2ec63b7f033ab3c4a039b7248ac089d638f7ac64ffb8712241f55a418",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/pilot-a003/checkpoint-000000.pt",
+      "sha256": "f914b2645dc6b6ae4750594e8acf0fab2a8e12e1fb931e72d782dec180a621a3",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/pilot-a003/checkpoint-003000.pt",
+      "sha256": "d053a6bfc212990b4394c1716595ff9467f59c66ea30101c75d900ee52175ee7",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/pilot-a003/config.json",
+      "sha256": "ac66267814a65075a1e1f8cf613c7cd3b2d9c9f9d0a44e2eed85871d056d7405",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/pilot-a003/curve.json",
+      "sha256": "209457d3263408c5f375e610a9573b738ca303110cc53d1d8ecdd6102dbae163",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/pilot-a003/initial.npz",
+      "sha256": "86aacb86315f69fb78445b1c1ace3dcc6dcd041f4bd3af39724ca6aab7151c45",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/pilot-a003/partition.npz",
+      "sha256": "87544b0bd98dd71da26e408b00f1e12f000203cdf4214dbd3159f5c157ab4173",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/pilot-a003/progress.json",
+      "sha256": "226dbd15b3095a247fea6cb2a8b6f1998849759f80d8f5724569dfa961191604",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/pilot-a003/result.json",
+      "sha256": "5b307bbef19e6cb461899f3f45eacd750e5ec2454a64dcba535b390bc1104579",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/pilot-a003/started.json",
+      "sha256": "feea8e00f32b22b5ca0d0122bd1125d0acd8f689be2127e892446b748992368d",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/pilot-a003/trace.jsonl",
+      "sha256": "b7a486c08c55b027e96ae1e58dd29db01b6fa07185ed11a62066390ee197a6cc",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/pilot-a003/weights.npz",
+      "sha256": "9ed0cf1f3266fae3929005c138b983a52a67fa015c72334d67cdec90c61ed7f1",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": ".compute/responses/bab18ea2f4434143a10fee0e2f9a67f5.json",
+      "sha256": "302c12c4f92dc18b426523186d2bba331b96dcfcbe95d990927a7495763a8f7a",
+      "media_type": "application/json",
+      "retention": "retained"
+    }
+  ],
+  "environment": {
+    "python": "3.11.6",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "broker_isolation_sha256": "f5906ab4b6ccf909a2be2c202c53a180d854a9f044600a486756140591094869",
+    "device": "pilot (CPU success; MPS failure retained)"
+  },
+  "model_revision": null,
+  "data_revision": "87544b0bd98dd71da26e408b00f1e12f000203cdf4214dbd3159f5c157ab4173",
+  "usage": {
+    "wall_seconds": 6.121277792146429,
+    "money_usd": 0,
+    "tokens": 0
+  },
+  "status": "succeeded",
+  "error": null,
+  "protocol_revision": "pilot-draft-v1",
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "split": "pilot",
+  "command": [
+    ".venv/bin/python",
+    "study/train.py",
+    "--seed",
+    "61",
+    "--wd",
+    "1",
+    "--updates",
+    "3000",
+    "--phase",
+    "pilot",
+    "--out",
+    "evidence/pilot-a003",
+    "--max-seconds",
+    "25",
+    "--protocol",
+    "PROTOCOL-DRAFT.md"
+  ],
+  "exit_code": 0
+}

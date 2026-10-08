@@ -1,0 +1,10 @@
+{
+  "sources": [{
+    "id": "power2022",
+    "metadata": {"title":"Grokking: Generalization Beyond Overfitting on Small Algorithmic Datasets", "authors":["Alethea Power","Yuri Burda","Harri Edwards","Igor Babuschkin","Vedant Misra"], "year":2022,"url":"https://arxiv.org/abs/2201.02177","code_revision":"3d64b1d8c1d595dd8ebdb7771998823f1b14c7b3"},
+    "source_location": "inputs/materials/openai-grok-reference/README.md",
+    "support_assessment": "Supplied README verifies title/authors and links the paper; supplied code gives transformer context. The brief prescribes the present bounded MLP adaptation. No claim of exact replication or novelty.",
+    "uncertainties": ["Paper full text not supplied and network disabled", "No systematic literature search", "No independent verification of all paper results or general applicability to this MLP"]
+  }],
+  "mathematical_control": "For each label c there are exactly 97 ordered pairs because each a uniquely determines b=(c-a)%97; labels balance exactly. 97^2=9409 and floor(.30*9409)=2822."
+}

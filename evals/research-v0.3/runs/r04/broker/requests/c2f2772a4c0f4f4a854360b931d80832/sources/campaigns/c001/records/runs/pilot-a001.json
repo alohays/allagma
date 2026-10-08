@@ -1,0 +1,69 @@
+{
+  "schema_version": "0.2",
+  "record_type": "RunRecord",
+  "run_id": "pilot61",
+  "attempt_id": "6b2058d974e54811a0a9762e3b313160",
+  "attempt_number": 1,
+  "campaign_id": "c001",
+  "experiment_id": "pilot61",
+  "started_at": "2026-10-08T00:26:42.873210+00:00",
+  "ended_at": "2026-10-08T00:26:44.354466+00:00",
+  "inputs": [
+    {
+      "path": ".compute/requests/6b2058d974e54811a0a9762e3b313160.json",
+      "sha256": "10443ac6b6162c07cf419c2b10ced54bfd813423a8edc1d1897edf3a289e80ac",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "PROTOCOL-DRAFT.md",
+      "sha256": "ff5ef9d9e8baf04c963335121112cdba3936802a4f3b5a23a095c0e5c8f41444",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "evidence/pilot-a001/started.json",
+      "sha256": "655f73004415718dda0b10499af00e513350161b4825d6066328ad7b4a8d91de",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": ".compute/responses/6b2058d974e54811a0a9762e3b313160.json",
+      "sha256": "eb56e2ab51661da281907f2f9194558c472279b64e83bd4300a372757f476db2",
+      "media_type": "application/json",
+      "retention": "retained"
+    }
+  ],
+  "environment": {
+    "python": "3.11.6",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "broker_isolation_sha256": "f5906ab4b6ccf909a2be2c202c53a180d854a9f044600a486756140591094869",
+    "device": "pilot (CPU success; MPS failure retained)"
+  },
+  "model_revision": null,
+  "data_revision": "10443ac6b6162c07cf419c2b10ced54bfd813423a8edc1d1897edf3a289e80ac",
+  "usage": {
+    "wall_seconds": 1.481256457976997,
+    "money_usd": 0,
+    "tokens": 0
+  },
+  "status": "interrupted",
+  "error": {
+    "kind": "controlled_interruption",
+    "message": "See immutable broker receipt and logs for pilot-61-interruption-attempt"
+  },
+  "protocol_revision": "pilot-draft-v1",
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "split": "pilot",
+  "command": [
+    ".venv/bin/python",
+    "study/pilot.py",
+    "--out",
+    "evidence/pilot-a001",
+    "--steps",
+    "500"
+  ],
+  "exit_code": -15
+}

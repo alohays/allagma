@@ -1,0 +1,35 @@
+{
+  "revision": "evaluator-v1.1",
+  "kind": "numerical validation tolerance correction; primary analysis unchanged",
+  "reason": "Float32 mean cross-entropy at large loss has larger absolute rounding than a fixed 1e-5 bound. Reuse check failed even with bitwise identical checkpoint logits. Use atol=1e-6 plus rtol=1e-6; report all measured discrepancies.",
+  "trigger_receipt": {
+    "path": ".compute/responses/4b0598c1039944fa8eaea9b0d46a1071.json",
+    "sha256": "d19b89493e5bf03fb63ee394e066a7fb262f4cdffe46d0a182291a165b91d1ee",
+    "media_type": "application/json",
+    "retention": "retained"
+  },
+  "old_analyzer": {
+    "path": "study/analyze.py",
+    "sha256": "0c4b5d18ac18106f8993496c964cdb6b87920701cf5fa4ccb7e6747e27d01109",
+    "media_type": "application/octet-stream",
+    "retention": "retained"
+  },
+  "new_analyzer": {
+    "path": "scripts/analyze_v1_1.py",
+    "sha256": "4eac6e773986a3acafc80402575fa7ee2d7f1370817093f18b8a50b4bea58362",
+    "media_type": "application/octet-stream",
+    "retention": "retained"
+  },
+  "affected_runs": [
+    "s1001-wd0",
+    "s1001-wd1",
+    "s1002-wd0",
+    "s1002-wd1",
+    "s1003-wd0",
+    "s1003-wd1",
+    "s1004-wd0",
+    "s1004-wd1"
+  ],
+  "handoff_contract": "Existing and future c001 raw training evidence remains eligible: no model, split, optimizer, seed, horizon, transition rule, uncertainty formula or computed endpoint is changed. Only comparison acceptance tolerance changes; float64 recomputed values are still the reported metrics.",
+  "validation": "Check every final checkpoint/NPZ logits exactly, compare independent NumPy forward and metrics, and rerun analysis twice. Keep original analyzer frozen and executable for historical inspection."
+}

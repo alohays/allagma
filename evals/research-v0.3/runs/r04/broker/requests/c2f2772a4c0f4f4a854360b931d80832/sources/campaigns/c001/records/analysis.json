@@ -1,0 +1,106 @@
+{
+  "schema_version": "0.2",
+  "record_type": "AnalysisRecord",
+  "analysis_id": "c001-a001-evaluator-v1.1",
+  "raw_manifest": {
+    "path": "analysis/primary/raw-manifest.json",
+    "sha256": "2b9c459c4e825167bae061559e5dd1c4375cffeb28b662e5091878372f03ee61",
+    "media_type": "application/json",
+    "retention": "retained"
+  },
+  "analysis_revision": "4eac6e773986a3acafc80402575fa7ee2d7f1370817093f18b8a50b4bea58362",
+  "code": {
+    "path": "scripts/analyze_v1_1.py",
+    "sha256": "4eac6e773986a3acafc80402575fa7ee2d7f1370817093f18b8a50b4bea58362",
+    "media_type": "application/octet-stream",
+    "retention": "retained"
+  },
+  "configuration": {
+    "event_time": "first point of first qualifying triple",
+    "generalization_accuracy": 0.95,
+    "memorization_accuracy": 0.99,
+    "minimum_lag": 1000,
+    "minimum_time_ratio": 2,
+    "persistence": 3,
+    "right_censor_horizon": 100000
+  },
+  "outputs": [
+    {
+      "path": "analysis/primary/claims.json",
+      "sha256": "f1b34dff4a5521e79c55c809ca7622a3c0d1831b1fabf429977878f4736f3705",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "analysis/primary/learning-curves.png",
+      "sha256": "cbddce7c3844862f2af1953cb7712f12912450d554cbc140853eb340a5110f23",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "analysis/primary/learning-curves.svg",
+      "sha256": "7a156ce5204614820f6744cd12ac0544dc4081cbbff30717c00654ed31bb4092",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "analysis/primary/per-seed.json",
+      "sha256": "c40901b87800c6db1e25a8708544441a57a54bb4fae5bb3f14ff05fff6c9d5da",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "analysis/primary/sensitivity-summary.json",
+      "sha256": "1cf2dbf9110ae00a58c1fd6cbce3404c6fbeb9472d63e834f708a01a739e8cc5",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "analysis/primary/summary.json",
+      "sha256": "e9cb9fde098606e9008bd8a1f61538fa1b1d1ea7497f9d83778991e13649aa1e",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "analysis/primary/validation.json",
+      "sha256": "b53d00bea6d4a081961331e6f6be9cd65d8eebae3b72b50b778cfcf87ac547d6",
+      "media_type": "application/json",
+      "retention": "retained"
+    }
+  ],
+  "exclusions": [
+    {
+      "path": "evidence/pilot-a001",
+      "reason": "controlled interruption before training"
+    },
+    {
+      "path": "evidence/pilot-a002",
+      "reason": "pilot; MPS allocation failure"
+    },
+    {
+      "path": "evidence/pilot-a003",
+      "reason": "pilot seed 61, not confirmation"
+    }
+  ],
+  "uncertainty": "Paired seed differences, Student t 95% interval df=3 for n=4; all 16 sign flips; small-n assumptions are fragile.",
+  "dependencies": [
+    {
+      "path": "campaigns/c001/protocol.json",
+      "sha256": "17188cc6952332178ed269b0269823214f71988a07f4f609ddeb08e7d4c35669",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "campaigns/c001/amendments/evaluator-v1.1.json",
+      "sha256": "52c18a38c0cd9f908277013bf7611b27d8c72135a888a212f0f70671ae641753",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "analysis/recomputed/comparison.json",
+      "sha256": "680e6e1182e06f53233a92a84c775dbc9b03ee63ed6e21d88a7986950aeb6385",
+      "media_type": "application/json",
+      "retention": "retained"
+    }
+  ]
+}

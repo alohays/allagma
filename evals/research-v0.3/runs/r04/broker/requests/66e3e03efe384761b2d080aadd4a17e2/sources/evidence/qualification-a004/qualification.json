@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "checks": {
+    "known_labels": true,
+    "exhaustive_labels": true,
+    "class_balance": true,
+    "split": true,
+    "split_repeatable": true,
+    "architecture": true,
+    "adamw_first_step": true,
+    "resume_bitwise": true,
+    "independent_metric_formula": true,
+    "known_uniform_cross_entropy": true,
+    "known_perfect_predictions": true,
+    "pilot_checkpoint_reload": true,
+    "cost_feasible": true
+  },
+  "adamw_first_step_max_abs_error": 7.450580596923828e-09,
+  "metric_max_abs_error": 3.6933302549613245e-07,
+  "seconds_per_update_including_evaluation": 0.0014607487083412706,
+  "projected_training_seconds": 1168.5989666730165,
+  "margin_and_verification_seconds": 1580.7487083412707,
+  "budget_seconds": 1800,
+  "pilot": "evidence/pilot-a003/result.json",
+  "device": "cpu",
+  "seed": 61,
+  "mps_excluded": "Earlier pilot failed allocator configuration; CPU qualified independently."
+}

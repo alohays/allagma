@@ -1,0 +1,75 @@
+{
+  "execution_status": "complete",
+  "n_runs": 8,
+  "n_paired_seeds": 4,
+  "direction": "weight_decay_1_minus_weight_decay_0",
+  "per_seed": [
+    {
+      "seed": 1001,
+      "test_accuracy": 0.6654015485046303,
+      "test_loss": -164.33198815724538
+    },
+    {
+      "seed": 1002,
+      "test_accuracy": 0.6523455290724154,
+      "test_loss": -159.68943372406846
+    },
+    {
+      "seed": 1003,
+      "test_accuracy": 0.8202520115378776,
+      "test_loss": -156.62220519092952
+    },
+    {
+      "seed": 1004,
+      "test_accuracy": 0.5603461363291332,
+      "test_loss": -153.82247304600702
+    }
+  ],
+  "uncertainty": {
+    "test_accuracy": {
+      "n_independent_seeds": 4,
+      "mean": 0.6745863063610141,
+      "sd": 0.10777805290637396,
+      "standard_error": 0.05388902645318698,
+      "ci95_student_t": [
+        0.503087373245022,
+        0.8460852394770063
+      ],
+      "df": 3,
+      "paired_sign_flip_two_sided_p": 0.125,
+      "method": "Paired seed differences, Student t 95% interval df=3 for n=4; all 16 sign flips; small-n assumptions are fragile."
+    },
+    "test_loss": {
+      "n_independent_seeds": 4,
+      "mean": -158.61652502956258,
+      "sd": 4.501033135864341,
+      "standard_error": 2.2505165679321704,
+      "ci95_student_t": [
+        -165.7786731655196,
+        -151.45437689360557
+      ],
+      "df": 3,
+      "paired_sign_flip_two_sided_p": 0.125,
+      "method": "Paired seed differences, Student t 95% interval df=3 for n=4; all 16 sign flips; small-n assumptions are fragile."
+    }
+  },
+  "memorized_count": 8,
+  "generalized_count": 0,
+  "delayed_grokking_count": 0,
+  "protocol": "campaigns/c001/protocol.json",
+  "primary_definition": {
+    "event_time": "first point of first qualifying triple",
+    "generalization_accuracy": 0.95,
+    "memorization_accuracy": 0.99,
+    "minimum_lag": 1000,
+    "minimum_time_ratio": 2,
+    "persistence": 3,
+    "right_censor_horizon": 100000
+  },
+  "limitations": [
+    "Four independent paired seeds, not eight independent replicates",
+    "Finite 100000-update horizon",
+    "No extrapolation beyond this MLP or fixed optimizer",
+    "95% Student t intervals rely on small-sample distributional assumptions"
+  ]
+}

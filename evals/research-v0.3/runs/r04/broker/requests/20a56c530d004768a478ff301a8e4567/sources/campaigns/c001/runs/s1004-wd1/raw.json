@@ -1,0 +1,39 @@
+{
+  "format": "modular-addition-artifact-handoff-v1",
+  "result": {
+    "path": "evidence/confirmation/s1004-wd1-a001/result.json",
+    "sha256": "6c9adc3b6546fe4c0db3dba216f51ac724dfc879f20046ccf9a98a339cf8981f",
+    "media_type": "application/json",
+    "retention": "retained"
+  },
+  "arrays": {
+    "path": "evidence/confirmation/s1004-wd1-a001/arrays.npz",
+    "sha256": "9fb2d90e14da43fb24b2c4f11376282b99a1b9f3e80d76cb3cdf401b72386974",
+    "media_type": "application/octet-stream",
+    "retention": "retained"
+  },
+  "weights": {
+    "path": "evidence/confirmation/s1004-wd1-a001/weights.npz",
+    "sha256": "7889ae217acea8a62234c562f18c58de6a498e9c687677ae3f1e25fee9b66465",
+    "media_type": "application/octet-stream",
+    "retention": "retained"
+  },
+  "curve": {
+    "path": "evidence/confirmation/s1004-wd1-a001/curve.json",
+    "sha256": "1bb3ebfc780cc7d68e444d37862bd3e827cf52cb8f70ab30d4f6cb97023fa21b",
+    "media_type": "application/json",
+    "retention": "retained"
+  },
+  "checkpoint": {
+    "path": "evidence/confirmation/s1004-wd1-a001/checkpoint-100000.pt",
+    "sha256": "d6b7995c3f566d511a431a8ad5cce697a17f3daf0b6efa988f352753635f22f8",
+    "media_type": "application/octet-stream",
+    "retention": "retained"
+  },
+  "initial_weights": {
+    "path": "evidence/confirmation/s1004-wd1-a001/initial.npz",
+    "sha256": "a04f2d5d0c68b5ac5b726d077af9c017ff70e638fd184d37d7b466aa23407118",
+    "media_type": "application/octet-stream",
+    "retention": "retained"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "artifact": {
+    "root": "candidate",
+    "path": "analysis/primary/learning-curves.png",
+    "sha256": "cbddce7c3844862f2af1953cb7712f12912450d554cbc140853eb340a5110f23"
+  },
+  "status": "pass",
+  "observations": [
+    "All four seeds and both decay conditions are shown.",
+    "Train/test lines and the shared legend are readable; axes identify optimizer updates, accuracy and cross-entropy in nats.",
+    "Log loss scaling is visible; no cropped labels or overlapping title observed.",
+    "No uncertainty band presents repeated trajectories as independent samples."
+  ],
+  "scope": "Visual inspection of the actual 1920 by 2080 PNG, rendered at 1535 by 1664; numerical correctness is checked separately."
+}

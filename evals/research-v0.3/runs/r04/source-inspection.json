@@ -1,0 +1,49 @@
+{
+  "status": "pass",
+  "training": {
+    "architecture": "bias-free 194-128-ReLU-97; 37248 parameters; float32",
+    "optimizer": "AdamW lr .001, betas .9/.98, epsilon 1e-8, decay 0 or 1",
+    "updates": 100000,
+    "full_batch_examples": 2822,
+    "confirmation_seeds": [
+      1001,
+      1002,
+      1003,
+      1004
+    ],
+    "heldout_optimization": false,
+    "initialization_and_split": "torch.manual_seed and NumPy default_rng with the same paired seed"
+  },
+  "protocol_precedes_confirmation": {
+    "protected_snapshot": "broker/requests/4c64a8cbff92499d8e831248a17ca163/sources/campaigns/c001/protocol.json",
+    "sha256": "17188cc6952332178ed269b0269823214f71988a07f4f609ddeb08e7d4c35669"
+  },
+  "numerical_amendment": "Only source import-path setup and float32-versus-float64 comparison tolerance differ in scripts/analyze_v1_1.py versus frozen study/analyze.py. Training and analysis formulas unchanged; independent scorer passes.",
+  "evidence": [
+    {
+      "root": "candidate",
+      "path": "study/train.py",
+      "sha256": "83c6d4b986080a3f580bb9aa5bd6a02fe4cb48ec00eca56a2a799eff3748ddaf"
+    },
+    {
+      "root": "candidate",
+      "path": "study/common.py",
+      "sha256": "b0a412547882e7a518d28bbc2c8b568f0e0ab0665e7606a1333fca23db9c07df"
+    },
+    {
+      "root": "candidate",
+      "path": "study/analyze.py",
+      "sha256": "0c4b5d18ac18106f8993496c964cdb6b87920701cf5fa4ccb7e6747e27d01109"
+    },
+    {
+      "root": "candidate",
+      "path": "scripts/analyze_v1_1.py",
+      "sha256": "4eac6e773986a3acafc80402575fa7ee2d7f1370817093f18b8a50b4bea58362"
+    },
+    {
+      "root": "candidate",
+      "path": "scripts/driver.py",
+      "sha256": "9ceef5fdec512c6cd6ccaaae3719ecee15cf10def6e16c8713e89faa7a3b58c1"
+    }
+  ]
+}

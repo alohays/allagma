@@ -1,0 +1,81 @@
+{
+  "schema_version": "0.2",
+  "record_type": "RunRecord",
+  "run_id": "pilot61",
+  "attempt_id": "43dab4890acb45de9a2d93f71728eb99",
+  "attempt_number": 2,
+  "campaign_id": "c001",
+  "experiment_id": "pilot61",
+  "started_at": "2026-10-08T00:26:56.159211+00:00",
+  "ended_at": "2026-10-08T00:27:03.805900+00:00",
+  "inputs": [
+    {
+      "path": ".compute/requests/43dab4890acb45de9a2d93f71728eb99.json",
+      "sha256": "ca0a8d3a7298297cdbc44594b183b7b6455ca6b9681c2ee7ba789e3b4bd3acc4",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "PROTOCOL-DRAFT.md",
+      "sha256": "ff5ef9d9e8baf04c963335121112cdba3936802a4f3b5a23a095c0e5c8f41444",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "evidence/pilot-a002/inputs.npz",
+      "sha256": "fbaf669196fa612600ca206e6e4427191e83ca7b40621aae58d6ba514bd03cc5",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/pilot-a002/qualification.json",
+      "sha256": "8a733d187b153d9a50a1d698207e322e8fec66aeeb3b34d44c079324e67eba94",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/pilot-a002/started.json",
+      "sha256": "fd41958008f7d07be5cde3e16506303641d9214a4b5d5b8f254362c96ff5ed96",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": ".compute/responses/43dab4890acb45de9a2d93f71728eb99.json",
+      "sha256": "2a6cbec7091e15c2e51c53c9fd441617983291df0f68ea190491fcd735010808",
+      "media_type": "application/json",
+      "retention": "retained"
+    }
+  ],
+  "environment": {
+    "python": "3.11.6",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "broker_isolation_sha256": "f5906ab4b6ccf909a2be2c202c53a180d854a9f044600a486756140591094869",
+    "device": "pilot (CPU success; MPS failure retained)"
+  },
+  "model_revision": null,
+  "data_revision": "ca0a8d3a7298297cdbc44594b183b7b6455ca6b9681c2ee7ba789e3b4bd3acc4",
+  "usage": {
+    "wall_seconds": 7.646688750013709,
+    "money_usd": 0,
+    "tokens": 0
+  },
+  "status": "failed",
+  "error": {
+    "kind": "failed",
+    "message": "See immutable broker receipt and logs for pilot-61-recovery-cost"
+  },
+  "protocol_revision": "pilot-draft-v1",
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "split": "pilot",
+  "command": [
+    ".venv/bin/python",
+    "study/pilot.py",
+    "--out",
+    "evidence/pilot-a002",
+    "--steps",
+    "500"
+  ],
+  "exit_code": 1
+}

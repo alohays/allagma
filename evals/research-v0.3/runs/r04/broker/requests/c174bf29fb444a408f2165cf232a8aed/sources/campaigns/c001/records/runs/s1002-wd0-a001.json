@@ -1,0 +1,192 @@
+{
+  "schema_version": "0.2",
+  "record_type": "RunRecord",
+  "run_id": "s1002-wd0",
+  "attempt_id": "cfa1f41e875743a5b0ce446e1dae0ec1",
+  "attempt_number": 1,
+  "campaign_id": "c001",
+  "experiment_id": "s1002-wd0",
+  "started_at": "2026-10-08T00:39:13.848219+00:00",
+  "ended_at": "2026-10-08T00:41:36.635437+00:00",
+  "inputs": [
+    {
+      "path": ".compute/requests/cfa1f41e875743a5b0ce446e1dae0ec1.json",
+      "sha256": "dfbb717ca9258faf3dac078eba193879ad82bed599f3ae9db0e13308743efec0",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "campaigns/c001/protocol.json",
+      "sha256": "17188cc6952332178ed269b0269823214f71988a07f4f609ddeb08e7d4c35669",
+      "media_type": "application/json",
+      "retention": "retained"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "evidence/confirmation/s1002-wd0-a001/arrays.npz",
+      "sha256": "7190c6ebb0785e221e9391794cb66822e4dbcf4c8d1afb4b293acf5693f4b049",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/s1002-wd0-a001/checkpoint-000000.pt",
+      "sha256": "b17ceee681eb050598f028612e712c5d7b141a7850d11ce3182e9c54d11219db",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/s1002-wd0-a001/checkpoint-010000.pt",
+      "sha256": "8c8098e43fb44d4f4c3185369f7307d4526f54bf0f99bd1481f317ce52c75098",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/s1002-wd0-a001/checkpoint-020000.pt",
+      "sha256": "5463194226219716923cb97fc7bdb670076dee15ae577d96eaa295415dd377cb",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/s1002-wd0-a001/checkpoint-030000.pt",
+      "sha256": "3ec619a01c3a466aa0dd7a3276851b5a8c2e61744e37b074acf98f406c8c6e93",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/s1002-wd0-a001/checkpoint-040000.pt",
+      "sha256": "59f7d6e363d38307ead181292078811c99119b302f8a8043dfd149ce8aa331c4",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/s1002-wd0-a001/checkpoint-050000.pt",
+      "sha256": "4f6b9bb4440037f311191b17837da9c0e9e1ac572081421a07e2fe09336f6af7",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/s1002-wd0-a001/checkpoint-060000.pt",
+      "sha256": "77ec46907d87163223ce42e65941bd4d0bdd00b0fdeee818efcd7233cb9c2a11",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/s1002-wd0-a001/checkpoint-070000.pt",
+      "sha256": "dd08dbe39b788baa8662eccaf1dd80ff87d9c9d09c59e61d99c2eff5133dab62",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/s1002-wd0-a001/checkpoint-080000.pt",
+      "sha256": "0b5c21ed8c79a9917b7e188d51ab686e9ca9932b57b0f2ce97d02191220323b1",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/s1002-wd0-a001/checkpoint-090000.pt",
+      "sha256": "c20c2baadc8b5b02e53ddfc144f8867c65f15befda9c4941ae54f8e5a95cb84a",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/s1002-wd0-a001/checkpoint-100000.pt",
+      "sha256": "cbc66b28c05b0905f368b91ca69367c40d3cc2f0223fb5024d7b4df223692f49",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/s1002-wd0-a001/config.json",
+      "sha256": "b57638281f920272d992de70f5ac4b2fff291176b68ea846d7e1f0c235f4a301",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/s1002-wd0-a001/curve.json",
+      "sha256": "0c7c388893c84e518b62a5f9762de90e1c27484a04c2870c3b4d0b2ba7b82876",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/s1002-wd0-a001/initial.npz",
+      "sha256": "631f0574230cbebd8c8290a1e5b91cea5ecf9a8da387d637145d1ae585d6ae0b",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/s1002-wd0-a001/partition.npz",
+      "sha256": "7ab30031aa13b51f9ff11bb4b210d9e38ca6ebfcf009ffe2a153fde8d16fab45",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/s1002-wd0-a001/progress.json",
+      "sha256": "29901e08e7a2cd1f24d276dcf7ad19ac71880554f3eb35b698ba0921b58d2248",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/s1002-wd0-a001/result.json",
+      "sha256": "02d92bfd26d675fd27f0a23c0e03c98e24b28a71837a9546c5a0016609c9f5db",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/s1002-wd0-a001/started.json",
+      "sha256": "78468db47175b5fb7a6d241d1121cedc45825fbd8668cb64b2b206c67e8d1cbf",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/s1002-wd0-a001/trace.jsonl",
+      "sha256": "f06c78bca51242e4363d3f02ce63c304de7a734e05222a8eac352d48af59c607",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/s1002-wd0-a001/weights.npz",
+      "sha256": "91b330443892f189dfcdbc9097a4fef1290ceb946866996f9b4d18169c211521",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": ".compute/responses/cfa1f41e875743a5b0ce446e1dae0ec1.json",
+      "sha256": "86c654a76cebd987e5f25a7eca32c3fc57fd3c9f3b5dde0822abcfb5ef455a37",
+      "media_type": "application/json",
+      "retention": "retained"
+    }
+  ],
+  "environment": {
+    "python": "3.11.6",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "broker_isolation_sha256": "f5906ab4b6ccf909a2be2c202c53a180d854a9f044600a486756140591094869",
+    "device": "cpu"
+  },
+  "model_revision": null,
+  "data_revision": "7ab30031aa13b51f9ff11bb4b210d9e38ca6ebfcf009ffe2a153fde8d16fab45",
+  "usage": {
+    "wall_seconds": 142.82243470894173,
+    "money_usd": 0,
+    "tokens": 0
+  },
+  "status": "succeeded",
+  "error": null,
+  "protocol_revision": "modular-addition-v1",
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "split": "confirmation",
+  "command": [
+    ".venv/bin/python",
+    "study/train.py",
+    "--seed",
+    "1002",
+    "--wd",
+    "0",
+    "--phase",
+    "confirmation",
+    "--out",
+    "evidence/confirmation/s1002-wd0-a001",
+    "--max-seconds",
+    "155"
+  ],
+  "exit_code": 0
+}

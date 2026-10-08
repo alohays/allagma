@@ -1,0 +1,17 @@
+{
+  "injected_interruption": false,
+  "isolation_sha256": "f5906ab4b6ccf909a2be2c202c53a180d854a9f044600a486756140591094869",
+  "reconciled_after_controller_restart": false,
+  "request_id": "20a56c530d004768a478ff301a8e4567",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 0.9386219170410186,
+    "ended_at": "2026-10-08T00:56:36.336823+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r04/resources/jobs/0030-final-manifest-submission-and-resource-audit",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 336642048,
+    "peak_storage_bytes": 1186374557,
+    "status": "completed"
+  }
+}

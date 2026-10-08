@@ -1,0 +1,26 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "study/train.py",
+    "--seed",
+    "61",
+    "--wd",
+    "1",
+    "--updates",
+    "3000",
+    "--phase",
+    "pilot",
+    "--out",
+    "evidence/pilot-a003",
+    "--max-seconds",
+    "25",
+    "--protocol",
+    "PROTOCOL-DRAFT.md"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "pilot-61-cpu-full-runner",
+  "request_id": "bab18ea2f4434143a10fee0e2f9a67f5",
+  "timeout_seconds": 35.0
+}

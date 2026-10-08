@@ -1,0 +1,26 @@
+{
+  "seed": 61,
+  "weight_decay": 1,
+  "updates": 3000,
+  "phase": "pilot",
+  "device": "cpu",
+  "dtype": "float32",
+  "optimizer": "AdamW",
+  "lr": 0.001,
+  "betas": [
+    0.9,
+    0.98
+  ],
+  "eps": 1e-08,
+  "architecture": "Linear(194,128,bias=False),ReLU,Linear(128,97,bias=False)",
+  "batch": "all 2822 training pairs",
+  "evaluation_interval": 100,
+  "split_rng": "numpy.default_rng(seed)",
+  "initial_weights_sha256": "41e525dbc79f8c2bfa95470279b580b4dd5c38300476ea4cd8f8731f349230a5",
+  "source_revision": "be79ba79f5579f0cf9374881b95c5678360cfa015c21c474ae1f155a46670198",
+  "resume": null,
+  "protocol": "PROTOCOL-DRAFT.md",
+  "python": "3.11.6",
+  "torch": "2.14.1",
+  "numpy": "2.4.6"
+}

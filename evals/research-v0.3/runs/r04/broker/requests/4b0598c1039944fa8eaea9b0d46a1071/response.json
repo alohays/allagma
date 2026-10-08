@@ -1,0 +1,17 @@
+{
+  "injected_interruption": false,
+  "isolation_sha256": "f5906ab4b6ccf909a2be2c202c53a180d854a9f044600a486756140591094869",
+  "reconciled_after_controller_restart": false,
+  "request_id": "4b0598c1039944fa8eaea9b0d46a1071",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 1.4340811669826508,
+    "ended_at": "2026-10-08T00:35:27.013507+00:00",
+    "exit_code": 1,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r04/resources/jobs/0009-validate-existing-s1001-wd0",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 246480896,
+    "peak_storage_bytes": 1111908854,
+    "status": "failed"
+  }
+}

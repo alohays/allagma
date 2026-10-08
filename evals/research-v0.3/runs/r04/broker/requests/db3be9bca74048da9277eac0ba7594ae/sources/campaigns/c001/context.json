@@ -1,0 +1,64 @@
+{
+  "schema_version": "0.2",
+  "record_type": "ContextRecord",
+  "context_id": "c001-frozen",
+  "method_id": "context/active-brief",
+  "required": [
+    "question",
+    "constraints",
+    "stop_rules",
+    "protocol",
+    "unresolved"
+  ],
+  "selected": [
+    "question",
+    "constraints",
+    "stop_rules",
+    "protocol",
+    "unresolved",
+    "qualification",
+    "sources"
+  ],
+  "omitted": [],
+  "content": {
+    "question": "Does weight decay 1 versus 0 improve held-out generalization after memorization, and does delayed grokking occur by 100000 updates in the prescribed modular-addition MLP?",
+    "constraints": [
+      "Ordered modular addition modulo 97; 2822 training and 6587 held-out pairs per seed",
+      "Bias-free float32 194-128-ReLU-97 MLP",
+      "Paired seeds 1001,1002,1003,1004; weight decay 0 and 1",
+      "AdamW lr .001 betas .9,.98 epsilon 1e-8",
+      "No held-out-driven optimization or tuning",
+      "All setup and computation via local broker, offline and sequential",
+      "Compute 1800 seconds; setup 300 seconds; 64 attempts; per request at most 180 seconds; session 3600 seconds"
+    ],
+    "stop_rules": [
+      "Failed correctness or infeasible cost qualification stops confirmation",
+      "Resource ceiling produces a partial package",
+      "Confirmation horizon is fixed at 100000 and never shortened based on results",
+      "All attempts persist and retries get new identities",
+      "At most two audit revision cycles"
+    ],
+    "protocol": {
+      "path": "campaigns/c001/protocol.json",
+      "sha256": "17188cc6952332178ed269b0269823214f71988a07f4f609ddeb08e7d4c35669",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    "unresolved": [
+      "Confirmation, analysis and audit pending"
+    ],
+    "qualification": {
+      "path": "evidence/qualification-a004/qualification.json",
+      "sha256": "909726d2f8e96347c47b80e60fc2b700e8bedf9e5e336e6c8910b674fc891e27",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    "sources": {
+      "path": "literature.json",
+      "sha256": "c6afd97abbd40a70c35a6cebc8b35842040249b602c100ac381260fc76855b37",
+      "media_type": "application/json",
+      "retention": "retained"
+    }
+  },
+  "limitations": []
+}

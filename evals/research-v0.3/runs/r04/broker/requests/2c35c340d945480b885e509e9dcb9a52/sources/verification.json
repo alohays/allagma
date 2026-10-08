@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "analysis_controls": {
+    "first_of_triple_and_confirmation": true,
+    "primary_delay_boundary": true,
+    "below_delay_boundary": true,
+    "incomplete_triple_censored": true,
+    "persistence_resets_after_dip": true,
+    "known_uncertainty": true,
+    "zero_effect_control": true,
+    "all_controls_pass": true
+  },
+  "all_eight_cells_verified": true,
+  "recomputation": {
+    "path": "analysis/recomputed/comparison.json",
+    "sha256": "680e6e1182e06f53233a92a84c775dbc9b03ee63ed6e21d88a7986950aeb6385",
+    "media_type": "application/json",
+    "retention": "retained"
+  },
+  "checkpoint_and_array_checks": {
+    "path": "analysis/primary/validation.json",
+    "sha256": "b53d00bea6d4a081961331e6f6be9cd65d8eebae3b72b50b778cfcf87ac547d6",
+    "media_type": "application/json",
+    "retention": "retained"
+  },
+  "raw_manifest": {
+    "path": "analysis/primary/raw-manifest.json",
+    "sha256": "2b9c459c4e825167bae061559e5dd1c4375cffeb28b662e5091878372f03ee61",
+    "media_type": "application/json",
+    "retention": "retained"
+  },
+  "material": {
+    "path": "REPORT.md",
+    "sha256": "b00b63809213cca671d1c2948815e2771cd894b56854ef41074bdf7b45592ea5",
+    "media_type": "application/octet-stream",
+    "retention": "retained"
+  },
+  "evaluator_amendment": {
+    "path": "campaigns/c001/amendments/evaluator-v1.1.json",
+    "sha256": "52c18a38c0cd9f908277013bf7611b27d8c72135a888a212f0f70671ae641753",
+    "media_type": "application/json",
+    "retention": "retained"
+  },
+  "transitive_evidence_digests": true,
+  "allagma_contract_validation": true,
+  "study_lock_verified": true,
+  "manuscript_endpoint_and_paired_tables_independently_parsed": true,
+  "coverage": "Known-answer transition/persistence/censoring and uncertainty controls; exact repeated analysis JSONs; all-eight-cell endpoint/NPZ/checkpoint validation; all referenced evidence digests and Allagma schemas. No independent peer review and no second full fresh training execution.",
+  "controls_timing": "Metric/optimizer/split/resume controls ran before confirmation; these extra threshold-logic and audit controls ran after confirmation without changing primary definitions."
+}

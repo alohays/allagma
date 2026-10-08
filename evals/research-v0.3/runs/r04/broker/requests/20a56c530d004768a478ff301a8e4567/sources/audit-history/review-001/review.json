@@ -1,0 +1,66 @@
+{
+  "schema_version": "0.2",
+  "record_type": "ReviewRecord",
+  "review_id": "c001-r001",
+  "reviewer": "same-agent substantive critique plus locked reviewer/checklist",
+  "backend": "Allagma reviewer/checklist direct locked Python implementation + current-session critique",
+  "backend_version": "0.3.0rc1 / b-9a39b70665ba909edb8abc13",
+  "material": {
+    "path": "REPORT.md",
+    "sha256": "167cd49fda637587bf6b5883321a0963f5e8d943dadd75009ed840292a13966e",
+    "media_type": "application/octet-stream",
+    "retention": "retained"
+  },
+  "criteria": [
+    "fixed protocol adherence",
+    "raw-evidence provenance",
+    "censoring and uncertainty",
+    "reproduction and stated limitations"
+  ],
+  "verdict": "pass",
+  "findings": [
+    "R1 (resolved): Controlled interruption left no trained endpoint; it cannot count as a scientific replicate. Retained pilot-a001 start/log/receipt and recovered under new attempt IDs; confirmation uses only seeds 1001--1004.",
+    "R2 (resolved): Pilot MPS allocation failed after CPU benchmarking. Kept failed attempt and separately qualified CPU with the full runner before freezing confirmation. No MPS measurements are analyzed.",
+    "R3 (resolved): Fixed absolute 1e-5 endpoint tolerance failed on high cross-entropy despite identical checkpoint logits. Explicit evaluator-v1.1 handoff uses atol=rtol=1e-6; original analyzer and failed request persist. Endpoints are recomputed in float64, and all final checkpoint/NPZ logits must still match bitwise.",
+    "R4 (unresolved): Four independent paired seeds provide weak population uncertainty; t intervals assume a suitable sampling distribution and sign-flip p-values are coarse. Report each paired difference, SD, SE, 95% df=3 t interval and all-16 sign-flip calculation; make no broad population/significance claim. More independent seeds would be needed.",
+    "R5 (unresolved): A 100000-update horizon cannot establish whether censored runs ever generalize; only two decay levels and one MLP/optimizer/split fraction were tested. Use explicit censoring/null event times, separate memorization/improvement/grokking claims, and restrict every conclusion to this configuration.",
+    "R6 (unresolved): The installed checklist supplies schema/direct-digest assurance, and this substantive critique is by the same agent. Label scientific critique provisional; do not claim independent scientific peer review. Independent review remains a future requirement for stronger assurance.",
+    "R7 (resolved within stated scope): Code paths and training records alone do not verify saved predictions or reported numbers. Reload every final checkpoint and NPZ weight set, recompute every endpoint, verify raw digests, and repeat the numerical analysis in a second directory. A second complete fresh-environment training execution was not run.",
+    "R8 (unresolved): 100-update evaluations and a first-of-three rule discretize event times; a three-point window is not proof of permanent generalization. Report both initial and confirming evaluation times plus one-factor definition sensitivity. No change to the frozen primary analysis.",
+    "R9 (unresolved): Held-out ordered pairs share the same modular operation and may include swapped versions of training pairs; examples are not independent tasks. Use seed as the independent unit and avoid extrapolating to new operations or architectures. The supplied split is followed exactly."
+  ],
+  "trace": [
+    {
+      "path": "review-findings.json",
+      "sha256": "705f75a31128db88d7d34ecee9c3609b87046cd736330eba4f7d094c11a96af8",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "review-input.json",
+      "sha256": "ebe2dedb4f4323f5f439b6431b3e14215d5919eb0881b62a15cffd1b89756066",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "review-checklist.json",
+      "sha256": "587af7d4f320f6bbde5994d9b6d0fad3e1f533740abab01f396c82216bd5760a",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "analysis/primary/validation.json",
+      "sha256": "b53d00bea6d4a081961331e6f6be9cd65d8eebae3b72b50b778cfcf87ac547d6",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "analysis/recomputed/comparison.json",
+      "sha256": "680e6e1182e06f53233a92a84c775dbc9b03ee63ed6e21d88a7986950aeb6385",
+      "media_type": "application/json",
+      "retention": "retained"
+    }
+  ],
+  "assurance": "provisional",
+  "coverage": "Substantive same-agent review of methods, endpoints, uncertainty, censoring and scope; offline adapter checks schemas/material/direct-evidence digests. Does not constitute independent scientific review."
+}

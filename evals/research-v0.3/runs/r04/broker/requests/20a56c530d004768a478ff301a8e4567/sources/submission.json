@@ -1,0 +1,26 @@
+{
+  "task_id": "modular-addition",
+  "execution_status": "complete",
+  "manuscript": "REPORT.md",
+  "review": "review.json",
+  "artifact_manifest": "artifact-manifest.json",
+  "measurements": "measurements.json",
+  "reproduce": {
+    "argv": [
+      "python3",
+      "scripts/driver.py",
+      "reproduce"
+    ],
+    "cwd": "."
+  },
+  "recompute": {
+    "argv": [
+      "python3",
+      "scripts/driver.py",
+      "recompute"
+    ],
+    "cwd": "."
+  },
+  "verification": "verification.json",
+  "completion_assessment": "All eight prescribed cells completed 100000 updates, failed/interrupted attempts retained, endpoints and all checkpoints verified, and separate retained-data reanalysis agreed. Scientific review is provisional; a second fresh full training campaign was not repeated."
+}

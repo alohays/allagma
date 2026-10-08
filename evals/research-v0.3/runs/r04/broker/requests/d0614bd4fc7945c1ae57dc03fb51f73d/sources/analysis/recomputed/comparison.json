@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "primary": "analysis/primary",
+  "recomputed": "analysis/recomputed",
+  "checks": {
+    "summary.json": {
+      "identical_bytes": true,
+      "sha256": "e9cb9fde098606e9008bd8a1f61538fa1b1d1ea7497f9d83778991e13649aa1e"
+    },
+    "per-seed.json": {
+      "identical_bytes": true,
+      "sha256": "c40901b87800c6db1e25a8708544441a57a54bb4fae5bb3f14ff05fff6c9d5da"
+    },
+    "validation.json": {
+      "identical_bytes": true,
+      "sha256": "b53d00bea6d4a081961331e6f6be9cd65d8eebae3b72b50b778cfcf87ac547d6"
+    },
+    "raw-manifest.json": {
+      "identical_bytes": true,
+      "sha256": "2b9c459c4e825167bae061559e5dd1c4375cffeb28b662e5091878372f03ee61"
+    },
+    "sensitivity-summary.json": {
+      "identical_bytes": true,
+      "sha256": "1cf2dbf9110ae00a58c1fd6cbce3404c6fbeb9472d63e834f708a01a739e8cc5"
+    }
+  },
+  "coverage": "All endpoint, paired-effect, uncertainty, transition, sensitivity, verification and raw-manifest JSON values. Figures are regenerated; image bytes are not a numerical equality criterion."
+}

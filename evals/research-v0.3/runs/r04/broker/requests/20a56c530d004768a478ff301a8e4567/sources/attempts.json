@@ -1,0 +1,870 @@
+{
+  "attempts": [
+    {
+      "request_id": "d45c5fc2d6aa4dc6824df6dfc394bec5",
+      "category": "setup",
+      "label": "isolated-environment",
+      "command": [
+        "python3",
+        "-m",
+        "venv",
+        ".venv"
+      ],
+      "cwd": ".",
+      "requested_timeout_seconds": 60.0,
+      "receipt": {
+        "path": ".compute/responses/d45c5fc2d6aa4dc6824df6dfc394bec5.json",
+        "sha256": "9c1e6b885332579a54e908f27409936457def41d05341ed7dccfbd38a04aaa7b",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "request": {
+        "path": ".compute/requests/d45c5fc2d6aa4dc6824df6dfc394bec5.json",
+        "sha256": "59784657df96d28e5f6710fe563fabe56af906327ae7389c9958c9baf27f4323",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "status": "completed",
+      "charged_seconds": 1.7989281250629574,
+      "injected_interruption": false,
+      "ended_at": "2026-10-08T00:25:10.498895+00:00"
+    },
+    {
+      "request_id": "a659103831034ad99e76b67957a46175",
+      "category": "setup",
+      "label": "offline-packages",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "--no-index",
+        "--find-links",
+        "inputs/materials/wheels",
+        "torch",
+        "numpy",
+        "scipy",
+        "matplotlib"
+      ],
+      "cwd": ".",
+      "requested_timeout_seconds": 120.0,
+      "receipt": {
+        "path": ".compute/responses/a659103831034ad99e76b67957a46175.json",
+        "sha256": "1b7e29640e326724f1780b72fa7fd20fecafbb2aef9e10911096f9fd94108590",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "request": {
+        "path": ".compute/requests/a659103831034ad99e76b67957a46175.json",
+        "sha256": "1e8c6fc97f2e42fbdca7ae9b463e7b66bb5ed1f2a7b1145409324dd4d41cfe94",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "status": "completed",
+      "charged_seconds": 12.93236408289522,
+      "injected_interruption": false,
+      "ended_at": "2026-10-08T00:25:41.783189+00:00"
+    },
+    {
+      "request_id": "6b2058d974e54811a0a9762e3b313160",
+      "category": "compute",
+      "label": "pilot-61-interruption-attempt",
+      "command": [
+        ".venv/bin/python",
+        "study/pilot.py",
+        "--out",
+        "evidence/pilot-a001",
+        "--steps",
+        "500"
+      ],
+      "cwd": ".",
+      "requested_timeout_seconds": 90.0,
+      "receipt": {
+        "path": ".compute/responses/6b2058d974e54811a0a9762e3b313160.json",
+        "sha256": "eb56e2ab51661da281907f2f9194558c472279b64e83bd4300a372757f476db2",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "request": {
+        "path": ".compute/requests/6b2058d974e54811a0a9762e3b313160.json",
+        "sha256": "10443ac6b6162c07cf419c2b10ced54bfd813423a8edc1d1897edf3a289e80ac",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "status": "timed_out",
+      "charged_seconds": 1.481256457976997,
+      "injected_interruption": true,
+      "ended_at": "2026-10-08T00:26:44.354466+00:00"
+    },
+    {
+      "request_id": "43dab4890acb45de9a2d93f71728eb99",
+      "category": "compute",
+      "label": "pilot-61-recovery-cost",
+      "command": [
+        ".venv/bin/python",
+        "study/pilot.py",
+        "--out",
+        "evidence/pilot-a002",
+        "--steps",
+        "500"
+      ],
+      "cwd": ".",
+      "requested_timeout_seconds": 150.0,
+      "receipt": {
+        "path": ".compute/responses/43dab4890acb45de9a2d93f71728eb99.json",
+        "sha256": "2a6cbec7091e15c2e51c53c9fd441617983291df0f68ea190491fcd735010808",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "request": {
+        "path": ".compute/requests/43dab4890acb45de9a2d93f71728eb99.json",
+        "sha256": "ca0a8d3a7298297cdbc44594b183b7b6455ca6b9681c2ee7ba789e3b4bd3acc4",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "status": "failed",
+      "charged_seconds": 7.646688750013709,
+      "injected_interruption": false,
+      "ended_at": "2026-10-08T00:27:03.805900+00:00"
+    },
+    {
+      "request_id": "bab18ea2f4434143a10fee0e2f9a67f5",
+      "category": "compute",
+      "label": "pilot-61-cpu-full-runner",
+      "command": [
+        ".venv/bin/python",
+        "study/train.py",
+        "--seed",
+        "61",
+        "--wd",
+        "1",
+        "--updates",
+        "3000",
+        "--phase",
+        "pilot",
+        "--out",
+        "evidence/pilot-a003",
+        "--max-seconds",
+        "25",
+        "--protocol",
+        "PROTOCOL-DRAFT.md"
+      ],
+      "cwd": ".",
+      "requested_timeout_seconds": 35.0,
+      "receipt": {
+        "path": ".compute/responses/bab18ea2f4434143a10fee0e2f9a67f5.json",
+        "sha256": "302c12c4f92dc18b426523186d2bba331b96dcfcbe95d990927a7495763a8f7a",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "request": {
+        "path": ".compute/requests/bab18ea2f4434143a10fee0e2f9a67f5.json",
+        "sha256": "0ea62b13615f8941a47aa6c64aa2437f9d5e4c532297a5d43fce192fae9459b2",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "status": "completed",
+      "charged_seconds": 6.121277792146429,
+      "injected_interruption": false,
+      "ended_at": "2026-10-08T00:28:46.789111+00:00"
+    },
+    {
+      "request_id": "3c193f6a77374c37b9eed5c101541fa3",
+      "category": "compute",
+      "label": "cpu-correctness-and-cost-qualification",
+      "command": [
+        ".venv/bin/python",
+        "study/qualify.py",
+        "--pilot",
+        "evidence/pilot-a003/result.json",
+        "--out",
+        "evidence/qualification-a004"
+      ],
+      "cwd": ".",
+      "requested_timeout_seconds": 20.0,
+      "receipt": {
+        "path": ".compute/responses/3c193f6a77374c37b9eed5c101541fa3.json",
+        "sha256": "63d6e1d35a6e973fcc25dd0fd26b8d575bfd46ad989b3dd1fd1114976a48c527",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "request": {
+        "path": ".compute/requests/3c193f6a77374c37b9eed5c101541fa3.json",
+        "sha256": "4206ebc6ed110908a126db1ec2f800743634284d7d64b098699f57e281abf545",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "status": "completed",
+      "charged_seconds": 1.4258933749515563,
+      "injected_interruption": false,
+      "ended_at": "2026-10-08T00:30:09.515615+00:00"
+    },
+    {
+      "request_id": "855dc2080ad449a6b4f792d57b2faeea",
+      "category": "compute",
+      "label": "freeze-qualified-campaign-and-resolve-methods",
+      "command": [
+        ".venv/bin/python",
+        "study/freeze.py"
+      ],
+      "cwd": ".",
+      "requested_timeout_seconds": 20.0,
+      "receipt": {
+        "path": ".compute/responses/855dc2080ad449a6b4f792d57b2faeea.json",
+        "sha256": "d2a5e072d6ee853834ea672fd751fecc1f1aefc8765ec9b9252bf1fd5f4e8a5f",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "request": {
+        "path": ".compute/requests/855dc2080ad449a6b4f792d57b2faeea.json",
+        "sha256": "9d15b820a5c40a9ec0725b6cb9db09d6f450a2be17562744ab34acfa84182451",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "status": "completed",
+      "charged_seconds": 0.949805875075981,
+      "injected_interruption": false,
+      "ended_at": "2026-10-08T00:32:09.856949+00:00"
+    },
+    {
+      "request_id": "4c64a8cbff92499d8e831248a17ca163",
+      "category": "compute",
+      "label": "confirmation-s1001-wd0-a001",
+      "command": [
+        ".venv/bin/python",
+        "study/train.py",
+        "--seed",
+        "1001",
+        "--wd",
+        "0",
+        "--phase",
+        "confirmation",
+        "--out",
+        "evidence/confirmation/s1001-wd0-a001",
+        "--max-seconds",
+        "155"
+      ],
+      "cwd": ".",
+      "requested_timeout_seconds": 175.0,
+      "receipt": {
+        "path": ".compute/responses/4c64a8cbff92499d8e831248a17ca163.json",
+        "sha256": "30cebc4153a47dd923d31f72892e57ec982765a798d8d0aa2cce0f063d4ac405",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "request": {
+        "path": ".compute/requests/4c64a8cbff92499d8e831248a17ca163.json",
+        "sha256": "d7d89079d7eb24d7b495b66057f4ee786c5fc9f88f8a02d5cb2ad99dae8e5bbf",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "status": "completed",
+      "charged_seconds": 142.74323574989103,
+      "injected_interruption": false,
+      "ended_at": "2026-10-08T00:34:49.659399+00:00"
+    },
+    {
+      "request_id": "4b0598c1039944fa8eaea9b0d46a1071",
+      "category": "compute",
+      "label": "validate-existing-s1001-wd0",
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_existing.py",
+        "evidence/confirmation/s1001-wd0-a001/result.json"
+      ],
+      "cwd": ".",
+      "requested_timeout_seconds": 12.0,
+      "receipt": {
+        "path": ".compute/responses/4b0598c1039944fa8eaea9b0d46a1071.json",
+        "sha256": "d19b89493e5bf03fb63ee394e066a7fb262f4cdffe46d0a182291a165b91d1ee",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "request": {
+        "path": ".compute/requests/4b0598c1039944fa8eaea9b0d46a1071.json",
+        "sha256": "e456d127b491e3dc9e835bdbfc71270e6886a58341002c5b53fc0fe14eae98d4",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "status": "failed",
+      "charged_seconds": 1.4340811669826508,
+      "injected_interruption": false,
+      "ended_at": "2026-10-08T00:35:27.013507+00:00"
+    },
+    {
+      "request_id": "03987e1007234456b805dea41ed02898",
+      "category": "compute",
+      "label": "record-numerical-evaluator-amendment",
+      "command": [
+        ".venv/bin/python",
+        "scripts/revise_evaluator.py"
+      ],
+      "cwd": ".",
+      "requested_timeout_seconds": 10.0,
+      "receipt": {
+        "path": ".compute/responses/03987e1007234456b805dea41ed02898.json",
+        "sha256": "9bc5a98f48244b43b13dbaf2417715136c5682b046c59c0156e440c0436a443f",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "request": {
+        "path": ".compute/requests/03987e1007234456b805dea41ed02898.json",
+        "sha256": "7acb81cbb505e0d6add4e8c39859f065dc8c7ac3e0d98c204f35867001018ef2",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "status": "completed",
+      "charged_seconds": 0.944157375022769,
+      "injected_interruption": false,
+      "ended_at": "2026-10-08T00:36:36.743514+00:00"
+    },
+    {
+      "request_id": "fdb418ea3fda42e58082e7e27726841a",
+      "category": "compute",
+      "label": "validate-existing-s1001-wd0",
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_existing.py",
+        "evidence/confirmation/s1001-wd0-a001/result.json"
+      ],
+      "cwd": ".",
+      "requested_timeout_seconds": 12.0,
+      "receipt": {
+        "path": ".compute/responses/fdb418ea3fda42e58082e7e27726841a.json",
+        "sha256": "eb8fe9663f6a26acbaca8a3ace6175c122f7dadc0f962790ce61db51db0e9dc0",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "request": {
+        "path": ".compute/requests/fdb418ea3fda42e58082e7e27726841a.json",
+        "sha256": "7d3ec87f905b2b1194c45a91cab680e656d7a8c60d64b4537425abae04c7a9b4",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "status": "completed",
+      "charged_seconds": 1.498897290788591,
+      "injected_interruption": false,
+      "ended_at": "2026-10-08T00:36:49.909091+00:00"
+    },
+    {
+      "request_id": "3d65a0443c68472ca5c90fc7f703d56c",
+      "category": "compute",
+      "label": "confirmation-s1001-wd1-a001",
+      "command": [
+        ".venv/bin/python",
+        "study/train.py",
+        "--seed",
+        "1001",
+        "--wd",
+        "1",
+        "--phase",
+        "confirmation",
+        "--out",
+        "evidence/confirmation/s1001-wd1-a001",
+        "--max-seconds",
+        "155"
+      ],
+      "cwd": ".",
+      "requested_timeout_seconds": 175.0,
+      "receipt": {
+        "path": ".compute/responses/3d65a0443c68472ca5c90fc7f703d56c.json",
+        "sha256": "2ff2756c4105a52e7d8a340f6be63355ee4738db835062b899853065598caf5e",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "request": {
+        "path": ".compute/requests/3d65a0443c68472ca5c90fc7f703d56c.json",
+        "sha256": "17a7e50bf5f798164b746c4a9acb2800b833486fa025ed6384bcc4eccaf43641",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "status": "completed",
+      "charged_seconds": 142.0944370829966,
+      "injected_interruption": false,
+      "ended_at": "2026-10-08T00:39:12.910996+00:00"
+    },
+    {
+      "request_id": "cfa1f41e875743a5b0ce446e1dae0ec1",
+      "category": "compute",
+      "label": "confirmation-s1002-wd0-a001",
+      "command": [
+        ".venv/bin/python",
+        "study/train.py",
+        "--seed",
+        "1002",
+        "--wd",
+        "0",
+        "--phase",
+        "confirmation",
+        "--out",
+        "evidence/confirmation/s1002-wd0-a001",
+        "--max-seconds",
+        "155"
+      ],
+      "cwd": ".",
+      "requested_timeout_seconds": 175.0,
+      "receipt": {
+        "path": ".compute/responses/cfa1f41e875743a5b0ce446e1dae0ec1.json",
+        "sha256": "86c654a76cebd987e5f25a7eca32c3fc57fd3c9f3b5dde0822abcfb5ef455a37",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "request": {
+        "path": ".compute/requests/cfa1f41e875743a5b0ce446e1dae0ec1.json",
+        "sha256": "dfbb717ca9258faf3dac078eba193879ad82bed599f3ae9db0e13308743efec0",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "status": "completed",
+      "charged_seconds": 142.82243470894173,
+      "injected_interruption": false,
+      "ended_at": "2026-10-08T00:41:36.635437+00:00"
+    },
+    {
+      "request_id": "958da40b164b4bf2ab270d5c0fb3b912",
+      "category": "compute",
+      "label": "confirmation-s1002-wd1-a001",
+      "command": [
+        ".venv/bin/python",
+        "study/train.py",
+        "--seed",
+        "1002",
+        "--wd",
+        "1",
+        "--phase",
+        "confirmation",
+        "--out",
+        "evidence/confirmation/s1002-wd1-a001",
+        "--max-seconds",
+        "155"
+      ],
+      "cwd": ".",
+      "requested_timeout_seconds": 175.0,
+      "receipt": {
+        "path": ".compute/responses/958da40b164b4bf2ab270d5c0fb3b912.json",
+        "sha256": "25f47f9f0d21d4e41cbafdb9ba7f77afe58e39f8324145f96ffd62eaf945b759",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "request": {
+        "path": ".compute/requests/958da40b164b4bf2ab270d5c0fb3b912.json",
+        "sha256": "ff1f256da450fc2e525f3b3e7c9339f7bd69babc40a30f6216c0e5e1d8fa49b8",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "status": "completed",
+      "charged_seconds": 142.19785191700794,
+      "injected_interruption": false,
+      "ended_at": "2026-10-08T00:43:59.789086+00:00"
+    },
+    {
+      "request_id": "51fcf50e2e18400998e1c859bd56d397",
+      "category": "compute",
+      "label": "confirmation-s1003-wd0-a001",
+      "command": [
+        ".venv/bin/python",
+        "study/train.py",
+        "--seed",
+        "1003",
+        "--wd",
+        "0",
+        "--phase",
+        "confirmation",
+        "--out",
+        "evidence/confirmation/s1003-wd0-a001",
+        "--max-seconds",
+        "155"
+      ],
+      "cwd": ".",
+      "requested_timeout_seconds": 175.0,
+      "receipt": {
+        "path": ".compute/responses/51fcf50e2e18400998e1c859bd56d397.json",
+        "sha256": "a16e2631a59074544300e25a9b82355a1ed66ee09d559dd07a8b6f47761483a6",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "request": {
+        "path": ".compute/requests/51fcf50e2e18400998e1c859bd56d397.json",
+        "sha256": "2c9b5eefd37dd69c68beaf3265396574704dcadf1b6285a2c2274df8fb18b80b",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "status": "completed",
+      "charged_seconds": 141.4765922499355,
+      "injected_interruption": false,
+      "ended_at": "2026-10-08T00:46:22.104983+00:00"
+    },
+    {
+      "request_id": "58fccfae95fc4c8ba8f402f121749246",
+      "category": "compute",
+      "label": "confirmation-s1003-wd1-a001",
+      "command": [
+        ".venv/bin/python",
+        "study/train.py",
+        "--seed",
+        "1003",
+        "--wd",
+        "1",
+        "--phase",
+        "confirmation",
+        "--out",
+        "evidence/confirmation/s1003-wd1-a001",
+        "--max-seconds",
+        "155"
+      ],
+      "cwd": ".",
+      "requested_timeout_seconds": 175.0,
+      "receipt": {
+        "path": ".compute/responses/58fccfae95fc4c8ba8f402f121749246.json",
+        "sha256": "b50430cd5e2af5743fe0938543512cf437f3a8bf89940647fa2e52c877edbeb5",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "request": {
+        "path": ".compute/requests/58fccfae95fc4c8ba8f402f121749246.json",
+        "sha256": "34546eef4e350fe3a0ef9531cb5f724ec2dae13eea9d61caf0ea556c71e2bc84",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "status": "completed",
+      "charged_seconds": 143.19252670905553,
+      "injected_interruption": false,
+      "ended_at": "2026-10-08T00:48:46.140394+00:00"
+    },
+    {
+      "request_id": "d2ea101f90e44314b2272b96a79e0cee",
+      "category": "compute",
+      "label": "confirmation-s1004-wd0-a001",
+      "command": [
+        ".venv/bin/python",
+        "study/train.py",
+        "--seed",
+        "1004",
+        "--wd",
+        "0",
+        "--phase",
+        "confirmation",
+        "--out",
+        "evidence/confirmation/s1004-wd0-a001",
+        "--max-seconds",
+        "155"
+      ],
+      "cwd": ".",
+      "requested_timeout_seconds": 175.0,
+      "receipt": {
+        "path": ".compute/responses/d2ea101f90e44314b2272b96a79e0cee.json",
+        "sha256": "7177dd20c7df4f0bbd993e2994ddd8798f8b42d5aa3efdb59f00d76106a44082",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "request": {
+        "path": ".compute/requests/d2ea101f90e44314b2272b96a79e0cee.json",
+        "sha256": "ccd1d2bb9805b2549bafd8e3880397704e2e2f378ad1b2c385dc272dcb3046d3",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "status": "completed",
+      "charged_seconds": 142.38991895806976,
+      "injected_interruption": false,
+      "ended_at": "2026-10-08T00:51:09.473610+00:00"
+    },
+    {
+      "request_id": "40ab06f3003a43f19eb6905f6d8562cb",
+      "category": "compute",
+      "label": "confirmation-s1004-wd1-a001",
+      "command": [
+        ".venv/bin/python",
+        "study/train.py",
+        "--seed",
+        "1004",
+        "--wd",
+        "1",
+        "--phase",
+        "confirmation",
+        "--out",
+        "evidence/confirmation/s1004-wd1-a001",
+        "--max-seconds",
+        "155"
+      ],
+      "cwd": ".",
+      "requested_timeout_seconds": 175.0,
+      "receipt": {
+        "path": ".compute/responses/40ab06f3003a43f19eb6905f6d8562cb.json",
+        "sha256": "8f1d648b7ed01713429eadff34f16381fd442d246cdbb17c4fb5b891f5490ece",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "request": {
+        "path": ".compute/requests/40ab06f3003a43f19eb6905f6d8562cb.json",
+        "sha256": "c8e2fc0a025628a610e98f34087444cd95d7abe91616fd44158f078c632d7026",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "status": "completed",
+      "charged_seconds": 139.756687666988,
+      "injected_interruption": false,
+      "ended_at": "2026-10-08T00:53:30.178612+00:00"
+    },
+    {
+      "request_id": "ee7fd076c2ff49b4af034fe13723ecc5",
+      "category": "compute",
+      "label": "primary-retained-evidence-analysis",
+      "command": [
+        ".venv/bin/python",
+        "scripts/analyze_v1_1.py",
+        "--out",
+        "analysis/primary"
+      ],
+      "cwd": ".",
+      "requested_timeout_seconds": 45.0,
+      "receipt": {
+        "path": ".compute/responses/ee7fd076c2ff49b4af034fe13723ecc5.json",
+        "sha256": "b4f34f0283feaea9544111b9b6e83ef72fd6b5395ab7b4c70ae8bab2b2ed2671",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "request": {
+        "path": ".compute/requests/ee7fd076c2ff49b4af034fe13723ecc5.json",
+        "sha256": "cf00f1c215a0c65c5751323230443bf822fbdc59696cf9826633e9aa1b6ee56a",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "status": "completed",
+      "charged_seconds": 15.840895666973665,
+      "injected_interruption": false,
+      "ended_at": "2026-10-08T00:53:51.488750+00:00"
+    },
+    {
+      "request_id": "db3be9bca74048da9277eac0ba7594ae",
+      "category": "compute",
+      "label": "retained-evidence-recompute",
+      "command": [
+        ".venv/bin/python",
+        "scripts/analyze_v1_1.py",
+        "--out",
+        "analysis/recomputed",
+        "--read-measurements"
+      ],
+      "cwd": ".",
+      "requested_timeout_seconds": 45.0,
+      "receipt": {
+        "path": ".compute/responses/db3be9bca74048da9277eac0ba7594ae.json",
+        "sha256": "95717e51149084dbde686bfe93150fe66ca6dd45ba6de2ea8716a684e5c28468",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "request": {
+        "path": ".compute/requests/db3be9bca74048da9277eac0ba7594ae.json",
+        "sha256": "c79fc908a8a2d89a5fbb5603eb64ff878ac2b5f1ee9851d278c345053ae053b3",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "status": "completed",
+      "charged_seconds": 2.6596237500198185,
+      "injected_interruption": false,
+      "ended_at": "2026-10-08T00:54:09.378906+00:00"
+    },
+    {
+      "request_id": "5878a44d20f147d69091d29ae353f217",
+      "category": "compute",
+      "label": "recompute-numerical-comparison",
+      "command": [
+        ".venv/bin/python",
+        "scripts/compare.py",
+        "analysis/primary",
+        "analysis/recomputed"
+      ],
+      "cwd": ".",
+      "requested_timeout_seconds": 10.0,
+      "receipt": {
+        "path": ".compute/responses/5878a44d20f147d69091d29ae353f217.json",
+        "sha256": "19af90f016c40c1309687b848c9282fdf149fe57fa692310739fac53d9a1941b",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "request": {
+        "path": ".compute/requests/5878a44d20f147d69091d29ae353f217.json",
+        "sha256": "04da63d503ce7ed237212c94c5b4d6566fc840260224668b57a4cec2c4b44dea",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "status": "completed",
+      "charged_seconds": 0.32532049994915724,
+      "injected_interruption": false,
+      "ended_at": "2026-10-08T00:54:10.545355+00:00"
+    },
+    {
+      "request_id": "66e3e03efe384761b2d080aadd4a17e2",
+      "category": "compute",
+      "label": "evidence-linked-manuscript",
+      "command": [
+        ".venv/bin/python",
+        "study/write_report.py",
+        "--analysis",
+        "analysis/primary",
+        "--output",
+        "REPORT.md"
+      ],
+      "cwd": ".",
+      "requested_timeout_seconds": 15.0,
+      "receipt": {
+        "path": ".compute/responses/66e3e03efe384761b2d080aadd4a17e2.json",
+        "sha256": "3613353e32ce0980e8ee9327379072f26fe05dda85f0d6671d7b4937e10e3dcb",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "request": {
+        "path": ".compute/requests/66e3e03efe384761b2d080aadd4a17e2.json",
+        "sha256": "b6ea78f49b9b968e36ac8b8ce841e5346314269c234657a1acbc6b9aac8f63c7",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "status": "completed",
+      "charged_seconds": 0.9612667090259492,
+      "injected_interruption": false,
+      "ended_at": "2026-10-08T00:54:33.274306+00:00"
+    },
+    {
+      "request_id": "a8862f05655a4ed887a660abd644c8f3",
+      "category": "compute",
+      "label": "portable-attempt-records",
+      "command": [
+        ".venv/bin/python",
+        "scripts/record_attempts.py"
+      ],
+      "cwd": ".",
+      "requested_timeout_seconds": 10.0,
+      "receipt": {
+        "path": ".compute/responses/a8862f05655a4ed887a660abd644c8f3.json",
+        "sha256": "e501b420a1b3854f9d7d19a344eb00d6398abb0c642cab6c116bc98e1314a195",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "request": {
+        "path": ".compute/requests/a8862f05655a4ed887a660abd644c8f3.json",
+        "sha256": "dc5f92be63ae80520b1e5bf510ff8392da5a73aa7c1b1ca703ee127dcec96cb8",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "status": "completed",
+      "charged_seconds": 0.909190583974123,
+      "injected_interruption": false,
+      "ended_at": "2026-10-08T00:54:35.043929+00:00"
+    },
+    {
+      "request_id": "c174bf29fb444a408f2165cf232a8aed",
+      "category": "compute",
+      "label": "substantive-critique-and-locked-reviewer",
+      "command": [
+        ".venv/bin/python",
+        "scripts/assemble.py",
+        "prepare"
+      ],
+      "cwd": ".",
+      "requested_timeout_seconds": 15.0,
+      "receipt": {
+        "path": ".compute/responses/c174bf29fb444a408f2165cf232a8aed.json",
+        "sha256": "b3d5366b1753a26a16b650f90bf49e1826f430134d61658a0ea5b72eb8a08cb8",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "request": {
+        "path": ".compute/requests/c174bf29fb444a408f2165cf232a8aed.json",
+        "sha256": "1c5c17350cb2176bb1746f7e6f60d42fd527d962f4cd0ebde10bcdc01ec98550",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "status": "completed",
+      "charged_seconds": 0.9574934579432011,
+      "injected_interruption": false,
+      "ended_at": "2026-10-08T00:54:36.875893+00:00"
+    },
+    {
+      "request_id": "c2f2772a4c0f4f4a854360b931d80832",
+      "category": "compute",
+      "label": "final-scientific-and-transitive-evidence-verification",
+      "command": [
+        ".venv/bin/python",
+        "scripts/verify_analysis.py"
+      ],
+      "cwd": ".",
+      "requested_timeout_seconds": 20.0,
+      "receipt": {
+        "path": ".compute/responses/c2f2772a4c0f4f4a854360b931d80832.json",
+        "sha256": "be30278c3d30fd1f66d94fd98cc8efeb5a3987b46a1cc31bb68016b050032e8d",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "request": {
+        "path": ".compute/requests/c2f2772a4c0f4f4a854360b931d80832.json",
+        "sha256": "290c3c6ecb35159db6841754b766a89bfdbdce1fb2ca97acb51db9df0c59c8d5",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "status": "completed",
+      "charged_seconds": 1.5384597501251847,
+      "injected_interruption": false,
+      "ended_at": "2026-10-08T00:54:46.111085+00:00"
+    },
+    {
+      "request_id": "adcae480b4944076a73c1f13a5194d9a",
+      "category": "compute",
+      "label": "resolve-reporting-clarity-and-refresh-review",
+      "command": [
+        ".venv/bin/python",
+        "scripts/review_revision.py"
+      ],
+      "cwd": ".",
+      "requested_timeout_seconds": 10.0,
+      "receipt": {
+        "path": ".compute/responses/adcae480b4944076a73c1f13a5194d9a.json",
+        "sha256": "a62af6df8ebd18bcf7bbe4efee221b57cf3e27649fa4f35dc952c23207dac30f",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "request": {
+        "path": ".compute/requests/adcae480b4944076a73c1f13a5194d9a.json",
+        "sha256": "31058e007d8ce2c6437c90fc5910eb146eb648457ea42773b9ddc566ed9a585f",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "status": "completed",
+      "charged_seconds": 0.940734000178054,
+      "injected_interruption": false,
+      "ended_at": "2026-10-08T00:56:01.237083+00:00"
+    },
+    {
+      "request_id": "d0614bd4fc7945c1ae57dc03fb51f73d",
+      "category": "compute",
+      "label": "verify-final-report-revision",
+      "command": [
+        ".venv/bin/python",
+        "scripts/verify_analysis.py"
+      ],
+      "cwd": ".",
+      "requested_timeout_seconds": 20.0,
+      "receipt": {
+        "path": ".compute/responses/d0614bd4fc7945c1ae57dc03fb51f73d.json",
+        "sha256": "45af480339bdd8c4af0a7b1cca8ab5017a06b8488aaf52510a55d75eef682357",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "request": {
+        "path": ".compute/requests/d0614bd4fc7945c1ae57dc03fb51f73d.json",
+        "sha256": "170030a453f9a4c708c8d718be1268b8131267220ea1e639e61abbd2938126b2",
+        "media_type": "application/json",
+        "retention": "retained"
+      },
+      "status": "completed",
+      "charged_seconds": 1.4851623340509832,
+      "injected_interruption": false,
+      "ended_at": "2026-10-08T00:56:03.582360+00:00"
+    }
+  ],
+  "cutoff": "completed broker receipts at package assembly; final verification requests remain in .compute",
+  "charged_seconds": {
+    "setup": 14.731292207958177,
+    "compute": 1183.7938898780849
+  },
+  "compute_request_count": 25
+}

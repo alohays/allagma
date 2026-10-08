@@ -1,0 +1,193 @@
+{
+  "revision": "modular-addition-v1",
+  "frozen_at": "2026-10-08T00:32:09.343208+00:00",
+  "hypothesis": "Weight decay may improve held-out endpoints after memorization; delayed grokking may or may not occur within the fixed horizon.",
+  "runner": "study/train.py",
+  "evaluator": "study/qualify.py",
+  "analyzer": "study/analyze.py",
+  "writer": "study/write_report.py",
+  "code": [
+    "study/common.py",
+    "study/train.py",
+    "study/pilot.py",
+    "study/qualify.py",
+    "study/analyze.py",
+    "study/write_report.py"
+  ],
+  "source_hashes": {
+    "study/common.py": "b0a412547882e7a518d28bbc2c8b568f0e0ab0665e7606a1333fca23db9c07df",
+    "study/train.py": "83c6d4b986080a3f580bb9aa5bd6a02fe4cb48ec00eca56a2a799eff3748ddaf",
+    "study/pilot.py": "3f311ddc7a23397e9fe13e455b888746af82d8dbe19f3a99242a497e584935a1",
+    "study/qualify.py": "9ee696a168d63fff86bad833a5193260d82cfa3c2a62d2206dd375b35aa742b1",
+    "study/analyze.py": "0c4b5d18ac18106f8993496c964cdb6b87920701cf5fa4ccb7e6747e27d01109",
+    "study/write_report.py": "ca17f2e1b83d88be69783044d63b03cef60cdfb820fa79c034749ac7c727a09b"
+  },
+  "paired_seeds": true,
+  "minimum_confirmation_runs": 8,
+  "confirmation_seeds": [
+    1001,
+    1002,
+    1003,
+    1004
+  ],
+  "pilot_seeds": [
+    61
+  ],
+  "updates": 100000,
+  "evaluation_interval": 100,
+  "configuration": {
+    "modulus": 97,
+    "split_fraction": 0.3,
+    "n_train": 2822,
+    "n_test": 6587,
+    "dtype": "float32",
+    "device": "cpu",
+    "threads": 1,
+    "architecture": [
+      194,
+      128,
+      97
+    ],
+    "activation": "ReLU",
+    "bias": false,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "betas": [
+      0.9,
+      0.98
+    ],
+    "epsilon": 1e-08,
+    "weight_decay": [
+      0,
+      1
+    ]
+  },
+  "transitions": {
+    "memorization_accuracy": 0.99,
+    "generalization_accuracy": 0.95,
+    "persistence": 3,
+    "event_time": "first point of first qualifying triple",
+    "minimum_lag": 1000,
+    "minimum_time_ratio": 2,
+    "right_censor_horizon": 100000
+  },
+  "analysis": {
+    "independent_unit": "paired seed",
+    "direction": "decay1-minus-decay0",
+    "metrics": [
+      "test_accuracy",
+      "test_loss"
+    ],
+    "uncertainty": "95% Student t CI for mean paired difference with df=3; enumerate 16 sign flips as sensitivity",
+    "sensitivity": "One at a time: generalization threshold .90/.99; persistence 1/5; minimum lag 500/5000; minimum ratio 1/5",
+    "exclusions": "All pilot/failed/interrupted attempts; no imputation of incomplete endpoints"
+  },
+  "qualification": {
+    "passed": true,
+    "evidence": {
+      "path": "evidence/qualification-a004/qualification.json",
+      "sha256": "909726d2f8e96347c47b80e60fc2b700e8bedf9e5e336e6c8910b674fc891e27",
+      "media_type": "application/json",
+      "retention": "retained"
+    }
+  },
+  "stop_rules": [
+    "Failed correctness or infeasible cost qualification stops confirmation",
+    "Resource ceiling produces a partial package",
+    "Confirmation horizon is fixed at 100000 and never shortened based on results",
+    "All attempts persist and retries get new identities",
+    "At most two audit revision cycles"
+  ],
+  "dispatch": "Portable Allagma artifact handoffs; direct common broker requests run study-owned command-line runner. No nested unsupervised scientific subprocesses.",
+  "runs": [
+    {
+      "id": "pilot61",
+      "split": "pilot",
+      "input": {
+        "seed": 61,
+        "updates": 3000,
+        "weight_decay": 1
+      }
+    },
+    {
+      "id": "s1001-wd0",
+      "split": "confirmation",
+      "condition_id": "wd0",
+      "input": {
+        "seed": 1001,
+        "updates": 100000,
+        "weight_decay": 0
+      }
+    },
+    {
+      "id": "s1001-wd1",
+      "split": "confirmation",
+      "condition_id": "wd1",
+      "input": {
+        "seed": 1001,
+        "updates": 100000,
+        "weight_decay": 1
+      }
+    },
+    {
+      "id": "s1002-wd0",
+      "split": "confirmation",
+      "condition_id": "wd0",
+      "input": {
+        "seed": 1002,
+        "updates": 100000,
+        "weight_decay": 0
+      }
+    },
+    {
+      "id": "s1002-wd1",
+      "split": "confirmation",
+      "condition_id": "wd1",
+      "input": {
+        "seed": 1002,
+        "updates": 100000,
+        "weight_decay": 1
+      }
+    },
+    {
+      "id": "s1003-wd0",
+      "split": "confirmation",
+      "condition_id": "wd0",
+      "input": {
+        "seed": 1003,
+        "updates": 100000,
+        "weight_decay": 0
+      }
+    },
+    {
+      "id": "s1003-wd1",
+      "split": "confirmation",
+      "condition_id": "wd1",
+      "input": {
+        "seed": 1003,
+        "updates": 100000,
+        "weight_decay": 1
+      }
+    },
+    {
+      "id": "s1004-wd0",
+      "split": "confirmation",
+      "condition_id": "wd0",
+      "input": {
+        "seed": 1004,
+        "updates": 100000,
+        "weight_decay": 0
+      }
+    },
+    {
+      "id": "s1004-wd1",
+      "split": "confirmation",
+      "condition_id": "wd1",
+      "input": {
+        "seed": 1004,
+        "updates": 100000,
+        "weight_decay": 1
+      }
+    }
+  ]
+}

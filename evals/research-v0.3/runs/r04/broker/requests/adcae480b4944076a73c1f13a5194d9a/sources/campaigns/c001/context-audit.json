@@ -1,0 +1,124 @@
+{
+  "schema_version": "0.2",
+  "record_type": "ContextRecord",
+  "context_id": "c001-audit",
+  "method_id": "context/active-brief",
+  "required": [
+    "question",
+    "constraints",
+    "stop_rules",
+    "protocol",
+    "unresolved"
+  ],
+  "selected": [
+    "question",
+    "constraints",
+    "stop_rules",
+    "protocol",
+    "unresolved",
+    "analysis",
+    "report",
+    "review"
+  ],
+  "omitted": [],
+  "content": {
+    "question": "Does weight decay 1 versus 0 improve held-out generalization after memorization, and does delayed grokking occur by 100000 updates in the prescribed modular-addition MLP?",
+    "constraints": [
+      "Ordered modular addition modulo 97; 2822 training and 6587 held-out pairs per seed",
+      "Bias-free float32 194-128-ReLU-97 MLP",
+      "Paired seeds 1001,1002,1003,1004; weight decay 0 and 1",
+      "AdamW lr .001 betas .9,.98 epsilon 1e-8",
+      "No held-out-driven optimization or tuning",
+      "All setup and computation via local broker, offline and sequential",
+      "Compute 1800 seconds; setup 300 seconds; 64 attempts; per request at most 180 seconds; session 3600 seconds"
+    ],
+    "stop_rules": [
+      "Failed correctness or infeasible cost qualification stops confirmation",
+      "Resource ceiling produces a partial package",
+      "Confirmation horizon is fixed at 100000 and never shortened based on results",
+      "All attempts persist and retries get new identities",
+      "At most two audit revision cycles"
+    ],
+    "protocol": {
+      "path": "campaigns/c001/protocol.json",
+      "sha256": "17188cc6952332178ed269b0269823214f71988a07f4f609ddeb08e7d4c35669",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    "unresolved": [
+      {
+        "id": "R4",
+        "status": "unresolved",
+        "severity": "inferential limitation",
+        "finding": "Four independent paired seeds provide weak population uncertainty; t intervals assume a suitable sampling distribution and sign-flip p-values are coarse.",
+        "resolution": "Report each paired difference, SD, SE, 95% df=3 t interval and all-16 sign-flip calculation; make no broad population/significance claim. More independent seeds would be needed.",
+        "evidence": [
+          "analysis/primary/summary.json",
+          "REPORT.md"
+        ]
+      },
+      {
+        "id": "R5",
+        "status": "unresolved",
+        "severity": "scope limitation",
+        "finding": "A 100000-update horizon cannot establish whether censored runs ever generalize; only two decay levels and one MLP/optimizer/split fraction were tested.",
+        "resolution": "Use explicit censoring/null event times, separate memorization/improvement/grokking claims, and restrict every conclusion to this configuration.",
+        "evidence": [
+          "analysis/primary/per-seed.json",
+          "REPORT.md"
+        ]
+      },
+      {
+        "id": "R6",
+        "status": "unresolved",
+        "severity": "review limitation",
+        "finding": "The installed checklist supplies schema/direct-digest assurance, and this substantive critique is by the same agent.",
+        "resolution": "Label scientific critique provisional; do not claim independent scientific peer review. Independent review remains a future requirement for stronger assurance.",
+        "evidence": [
+          "review-checklist.json"
+        ]
+      },
+      {
+        "id": "R8",
+        "status": "unresolved",
+        "severity": "measurement convention",
+        "finding": "100-update evaluations and a first-of-three rule discretize event times; a three-point window is not proof of permanent generalization.",
+        "resolution": "Report both initial and confirming evaluation times plus one-factor definition sensitivity. No change to the frozen primary analysis.",
+        "evidence": [
+          "analysis/primary/per-seed.json",
+          "analysis/primary/sensitivity-summary.json"
+        ]
+      },
+      {
+        "id": "R9",
+        "status": "unresolved",
+        "severity": "external validity",
+        "finding": "Held-out ordered pairs share the same modular operation and may include swapped versions of training pairs; examples are not independent tasks.",
+        "resolution": "Use seed as the independent unit and avoid extrapolating to new operations or architectures. The supplied split is followed exactly.",
+        "evidence": [
+          "campaigns/c001/protocol.json",
+          "REPORT.md"
+        ]
+      }
+    ],
+    "analysis": {
+      "path": "analysis/primary/summary.json",
+      "sha256": "e9cb9fde098606e9008bd8a1f61538fa1b1d1ea7497f9d83778991e13649aa1e",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    "report": {
+      "path": "REPORT.md",
+      "sha256": "167cd49fda637587bf6b5883321a0963f5e8d943dadd75009ed840292a13966e",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    "review": {
+      "path": "review.json",
+      "sha256": "626a4f085e63094673816e2a5e3a631788a15ce484ae59f5e1939218701c1fe0",
+      "media_type": "application/json",
+      "retention": "retained"
+    }
+  },
+  "limitations": []
+}
