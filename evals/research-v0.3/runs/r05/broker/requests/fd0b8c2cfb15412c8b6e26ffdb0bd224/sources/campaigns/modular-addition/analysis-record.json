@@ -1,0 +1,170 @@
+{
+  "schema_version": "0.2",
+  "record_type": "AnalysisRecord",
+  "analysis_id": "retained-data-v1",
+  "raw_manifest": {
+    "path": "analysis/raw-manifest.json",
+    "sha256": "3daa265e485fbfb6bf1cab5e4f25b604184fa2e8f5ad6a025641fbf40e7b75c1",
+    "media_type": "application/json",
+    "retention": "retained"
+  },
+  "analysis_revision": "314d4c83f81d621d52d4f26cc0359c13ef39dad299723f0910d6ec92ea9fe4ef",
+  "code": {
+    "path": "study/analyze.py",
+    "sha256": "314d4c83f81d621d52d4f26cc0359c13ef39dad299723f0910d6ec92ea9fe4ef",
+    "media_type": "text/plain",
+    "retention": "retained"
+  },
+  "configuration": {
+    "protocol": {
+      "path": "campaigns/modular-addition/protocol.json",
+      "sha256": "18d50f47d00720e973317226aa523e1d5e44e1d3e83c7b7e7b4acca164b4bb4b",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    "independent_unit": "paired seed",
+    "n": 4,
+    "uncertainty": "approximate paired t interval; exact sign-flip sensitivity"
+  },
+  "outputs": [
+    {
+      "path": "analysis/learning-accuracy.png",
+      "sha256": "df996be98921076f535267b8b11c389ba1bf28ad6872ac4dd2ef42497a84426a",
+      "media_type": "text/plain",
+      "retention": "retained"
+    },
+    {
+      "path": "analysis/learning-accuracy.svg",
+      "sha256": "54b0399b408237ada618d8bc0115635dd51bb632dccb6ff6e0734eb2a00eb0dd",
+      "media_type": "text/plain",
+      "retention": "retained"
+    },
+    {
+      "path": "analysis/learning-loss.png",
+      "sha256": "10acc7682dbacc87929bd31d3786bb3707d1ba440457306e4eab97f99391519e",
+      "media_type": "text/plain",
+      "retention": "retained"
+    },
+    {
+      "path": "analysis/learning-loss.svg",
+      "sha256": "a325c7e8c08e32ff9e4cf26b7697336da8380b0bf323cf8d84c62280e57bd489",
+      "media_type": "text/plain",
+      "retention": "retained"
+    },
+    {
+      "path": "analysis/measurements.json",
+      "sha256": "bf1e358865de6a03e1704b2dfc535f1b1aee74eca80e8164841958f4adeeec7b",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "analysis/paired-differences.csv",
+      "sha256": "ced4551846803573a5b33c836741dca85f2cdfe4118993e296842e44b2b936b7",
+      "media_type": "text/plain",
+      "retention": "retained"
+    },
+    {
+      "path": "analysis/per-seed-results.csv",
+      "sha256": "a7d3b636a34ca8bd4dac5ce99716b45c851c02501ce0f7f8cea512afbf4a74bd",
+      "media_type": "text/plain",
+      "retention": "retained"
+    },
+    {
+      "path": "analysis/raw-manifest.json",
+      "sha256": "3daa265e485fbfb6bf1cab5e4f25b604184fa2e8f5ad6a025641fbf40e7b75c1",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "analysis/results.json",
+      "sha256": "36bf5e82955a65e39bc95962d280830917a79d3dbda338e007b24c0f6fd7500a",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "analysis/verification.json",
+      "sha256": "f915fc27f5413a1fea51dc9c3eec57dd6407a1c66a19991947da146e8de4f69c",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "figures/README.md",
+      "sha256": "7ba1c4c90d3d0c6683f369ee06cde7497ad48d428bdb609e012afc994a07fe1b",
+      "media_type": "text/plain",
+      "retention": "retained"
+    },
+    {
+      "path": "figures/learning-accuracy.png",
+      "sha256": "a170afaa8fe4ab63bab9772afda7a64c48c770f15d04dec0a2ca2823c47ef29a",
+      "media_type": "text/plain",
+      "retention": "retained"
+    },
+    {
+      "path": "figures/learning-accuracy.svg",
+      "sha256": "7e9b9cafb782641bb104aa1c4b7934296d630242add851c9c8535ec4d1cfcee4",
+      "media_type": "text/plain",
+      "retention": "retained"
+    },
+    {
+      "path": "figures/learning-loss.png",
+      "sha256": "7cba27ca4e52a5d54116c67c29842c8646fcff2740a146e5f929719121b186db",
+      "media_type": "text/plain",
+      "retention": "retained"
+    },
+    {
+      "path": "figures/learning-loss.svg",
+      "sha256": "e3aa218946891f27b69b1b200cc831a993749b7386b3868837284d16fa7aa8dd",
+      "media_type": "text/plain",
+      "retention": "retained"
+    }
+  ],
+  "exclusions": [
+    {
+      "path": "evidence/pilot-001",
+      "reason": "pilot, excluded from confirmation"
+    },
+    {
+      "path": "evidence/pilot-002",
+      "reason": "pilot, excluded from confirmation"
+    },
+    {
+      "path": "evidence/pilot-003",
+      "reason": "pilot, excluded from confirmation"
+    },
+    {
+      "path": "evidence/pilot-004",
+      "reason": "pilot, excluded from confirmation"
+    },
+    {
+      "path": "evidence/pilot-005",
+      "reason": "pilot, excluded from confirmation"
+    }
+  ],
+  "uncertainty": "Approximate paired t intervals over four seeds; finite seed sample, not uncertainty over architectures or tasks. Sign-flip p values are descriptive, with minimum possible two-sided p=0.125 for n=4.",
+  "dependencies": [
+    {
+      "path": "campaigns/modular-addition/protocol.json",
+      "sha256": "18d50f47d00720e973317226aa523e1d5e44e1d3e83c7b7e7b4acca164b4bb4b",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "analysis-repeat/recomputation-comparison.json",
+      "sha256": "95b21fb136173be94ddd8740f19e1b69a226b6b4e14fed03f87fad8869ef491c",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "study/plot.py",
+      "sha256": "ff8b9b2528a92c814126a98e4bfadca26abe410497358fc0acd3b8ecc9771144",
+      "media_type": "text/plain",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/analysis-controls.json",
+      "sha256": "c9c4c1fc1044847709054f1d794f8843800e0e14fddc3cfc55df45591a25e9f8",
+      "media_type": "application/json",
+      "retention": "retained"
+    }
+  ]
+}

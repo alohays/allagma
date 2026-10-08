@@ -1,0 +1,38 @@
+{
+  "task_id": "modular-addition",
+  "execution_status": "complete",
+  "manuscript": "REPORT.md",
+  "review": "review.json",
+  "artifact_manifest": "artifact-manifest.json",
+  "measurements": "measurements.json",
+  "reproduce": {
+    "argv": [
+      "python3",
+      "study/reproduce.py",
+      "--output",
+      "reproduced-study"
+    ],
+    "cwd": "."
+  },
+  "recompute": {
+    "argv": [
+      "python3",
+      "inputs/compute.py",
+      "--category",
+      "compute",
+      "--label",
+      "retained-data-recompute",
+      "--timeout",
+      "60",
+      "--",
+      ".venv/bin/python",
+      "study/recompute_worker.py",
+      "--out",
+      "recomputed",
+      "--compare",
+      "analysis"
+    ],
+    "cwd": "."
+  },
+  "completion_assessment": "All eight fixed-horizon cells, preserved interruption/failures, raw evidence, independent endpoint/checkpoint validation, repeated retained-data analysis and provisional scientific critique delivered. Full second training campaign not rerun; no independent peer review."
+}

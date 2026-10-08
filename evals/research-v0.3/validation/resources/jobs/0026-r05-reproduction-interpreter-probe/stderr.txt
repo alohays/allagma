@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/validation/check_r05_reproduction_interpreter.py", line 21, in <module>
+    assert Path(results['delivered_driver_resolved_interpreter']['prefix']).resolve() != environment.resolve()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

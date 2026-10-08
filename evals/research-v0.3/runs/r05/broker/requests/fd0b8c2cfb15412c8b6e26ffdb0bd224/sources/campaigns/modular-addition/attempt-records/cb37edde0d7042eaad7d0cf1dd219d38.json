@@ -1,0 +1,63 @@
+{
+  "schema_version": "0.2",
+  "record_type": "RunRecord",
+  "run_id": "pilot-first-interruption",
+  "attempt_id": "cb37edde0d7042eaad7d0cf1dd219d38",
+  "attempt_number": 1,
+  "campaign_id": "modular-addition",
+  "experiment_id": "pilot-seed61",
+  "started_at": "2026-10-08T01:48:41.646553+00:00",
+  "ended_at": "2026-10-08T01:48:43.098378+00:00",
+  "inputs": [
+    {
+      "path": "evidence/source-history/pilot-v1.py",
+      "sha256": "60fbefe880835349f2ed7ab6f6cf71c98d3e40cab1f20035e1bf3009d862fc59",
+      "media_type": "text/plain",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/pilot-001/started.json",
+      "sha256": "f96ed6a3576846aa7e14183f95d57f55c1554be7244dcbe846b0479dd8bab1cb",
+      "media_type": "application/json",
+      "retention": "retained"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "evidence/pilot-001/started.json",
+      "sha256": "f96ed6a3576846aa7e14183f95d57f55c1554be7244dcbe846b0479dd8bab1cb",
+      "media_type": "application/json",
+      "retention": "retained"
+    }
+  ],
+  "environment": {
+    "broker_receipt": ".compute/responses/cb37edde0d7042eaad7d0cf1dd219d38.json",
+    "category": "compute",
+    "source_capture": "retrospective reconstruction of exact pilot edit history",
+    "broker_status": "timed_out"
+  },
+  "model_revision": "60fbefe880835349f2ed7ab6f6cf71c98d3e40cab1f20035e1bf3009d862fc59",
+  "data_revision": "2450602c941c2448078a532ff16aa714a31085b9dfb958ebc3f5c627940c1df8",
+  "usage": {
+    "wall_seconds": 1.4815553340595216,
+    "money_usd": 0,
+    "tokens": 0
+  },
+  "status": "interrupted",
+  "error": {
+    "kind": "controlled_interruption",
+    "message": "See retained stdout/stderr and broker receipt; no unsuccessful attempt contributes a seed."
+  },
+  "protocol_revision": "preconfirmation-pilot",
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "split": "pilot",
+  "command": [
+    ".venv/bin/python",
+    "study/pilot.py",
+    "--out",
+    "evidence/pilot-001",
+    "--steps",
+    "300"
+  ],
+  "exit_code": -15
+}

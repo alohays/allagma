@@ -1,0 +1,43 @@
+{
+  "status": "pass",
+  "protocol_precedes_confirmation": {
+    "path": "broker/requests/ca4a6c31913e40159b64f6ec56f7d7df/sources/campaigns/modular-addition/protocol.json",
+    "sha256": "18d50f47d00720e973317226aa523e1d5e44e1d3e83c7b7e7b4acca164b4bb4b"
+  },
+  "implementation": "C input-column sums equal concatenated one-hot multiplication; ReLU backward, full-batch softmax cross-entropy gradients and decoupled AdamW equations inspected. Independent black-box checks retained in independent-engine.json.",
+  "source_coverage": "Broker copies Python/JSON but not C bytes directly. Its protected preconfirmation protocol and code manifest preserve the C SHA-256; the candidate retains matching prospective C source and built library. Each training segment checks frozen source hashes.",
+  "training": "Exactly four paired seeds, two decays, 100000 updates per condition, float32, fixed lr/betas/epsilon, no held-out optimization or stopping. Two 50000-update segments count as one trajectory.",
+  "audit_repair": "Final verifier initially rejected absolute module-resolution metadata. A separate v2 confines such entries to the same workspace and only accepts records with module and bundle identity. Original verifier and failure remain. Scientific data and report unchanged.",
+  "evidence": [
+    {
+      "root": "candidate",
+      "path": "study/engine.c",
+      "sha256": "fd439bee1b101264c2b71f8afdb6daa60a466ea8e5ccba3eacf21fa6c6e50d5c"
+    },
+    {
+      "root": "candidate",
+      "path": "study/engine.py",
+      "sha256": "9ebebe1839409b44c5da48af305f83de548a7c0deb32f7b4dec667fc65575fdc"
+    },
+    {
+      "root": "candidate",
+      "path": "study/build.py",
+      "sha256": "16fac18f75ef5f4c1beebacdb847cb1b8a35e8235fb2071668aca4c58c862f89"
+    },
+    {
+      "root": "candidate",
+      "path": "study/train.py",
+      "sha256": "554a1287d8db9221ac8275e8582b39b5f3a4b5192f5e530fd1a5d1171f0fe77c"
+    },
+    {
+      "root": "candidate",
+      "path": "study/reproduce.py",
+      "sha256": "6a38ca72f1291eb560a7dfbc28bf8381bf2bac2e93540408998687e7afe71b5b"
+    },
+    {
+      "root": "candidate",
+      "path": "study/stage_reproduction.py",
+      "sha256": "d54f29faa7ed7291bb2c8c9c9be73087b7f7f940dca187f29fbc7f8d96802709"
+    }
+  ]
+}

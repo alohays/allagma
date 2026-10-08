@@ -1,0 +1,60 @@
+{
+  "id": "recipe/research",
+  "kind": "recipe",
+  "entry": "SKILL.md",
+  "contract": "0.2",
+  "inputs": [
+    "StudySpec"
+  ],
+  "outputs": [
+    "ReviewRecord"
+  ],
+  "requires": [
+    "artifact.read",
+    "artifact.write"
+  ],
+  "optional": [],
+  "settings": {
+    "language": "English",
+    "budget": {
+      "max_attempts": "unset",
+      "max_seconds": "unset",
+      "money_usd": "unset",
+      "per_attempt_seconds": 30.0
+    },
+    "max_revisions": 2
+  },
+  "dependencies": [
+    "research/scope",
+    "research/protocol",
+    "research/experiment",
+    "research/analysis",
+    "research/writing",
+    "research/audit"
+  ],
+  "resources": [
+    "recipe.json"
+  ],
+  "sources": [],
+  "adaptation": "Original Allagma implementation of the adopted v0.2 artifact boundaries; no upstream code or prose copied.",
+  "lifecycle": "stable",
+  "maintainer": "@alohays",
+  "evaluation": [
+    "example.json"
+  ],
+  "examples": [
+    "example.json"
+  ],
+  "compatibility": {
+    "contracts": [
+      "0.2"
+    ],
+    "python": ">=3.11 for optional helpers",
+    "hosts": [
+      "generic",
+      "codex",
+      "claude-code"
+    ]
+  },
+  "replacement": null
+}

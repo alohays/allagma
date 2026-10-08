@@ -1,0 +1,11 @@
+{
+  "finding": "A suspected interpreter-symlink bypass was not reproduced.",
+  "failed_controller_job": "evals/research-v0.3/validation/resources/jobs/0026-r05-reproduction-interpreter-probe",
+  "failed_probe_source": "evals/research-v0.3/validation/check_r05_reproduction_interpreter_v1.py",
+  "failed_probe_source_sha256": "bbc27fbdd6edd5d4b339b62bfe0a54ea2180c77781317d378876d256b0ef009d",
+  "correction": "The first probe assumed a symlink and asserted the suspected defect. Actual staging uses venv.EnvBuilder with copied executables on this host. A second probe records both sys.prefix values and module availability; both remain inside the fresh environment.",
+  "verified_receipt": "reproduction-interpreter-check.json",
+  "candidate_defect": false,
+  "candidate_edits": 0,
+  "scope": "Preserved unsuccessful controller investigation; not a candidate failure or scientific repair."
+}

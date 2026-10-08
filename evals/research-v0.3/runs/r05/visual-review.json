@@ -1,0 +1,22 @@
+{
+  "status": "pass",
+  "artifacts": [
+    {
+      "root": "candidate",
+      "path": "figures/learning-accuracy.png",
+      "sha256": "a170afaa8fe4ab63bab9772afda7a64c48c770f15d04dec0a2ca2823c47ef29a"
+    },
+    {
+      "root": "candidate",
+      "path": "figures/learning-loss.png",
+      "sha256": "7cba27ca4e52a5d54116c67c29842c8646fcff2740a146e5f929719121b186db"
+    }
+  ],
+  "observations": [
+    "Eight clearly labeled seed/decay panels in each figure.",
+    "Train/held-out legend and update labels are readable without clipping.",
+    "The title explains linear updates to 1000 and logarithmic updates thereafter; the report explains symmetric-log loss scaling near zero.",
+    "No aggregate curve obscures individual cells or treats curve points as independent seeds."
+  ],
+  "scope": "Actual 2520 by 1080 PNGs visually inspected at 2048 by 878; numerical checks are separate."
+}

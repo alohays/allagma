@@ -1,0 +1,81 @@
+{
+  "schema_version": "0.2",
+  "record_type": "StudySpec",
+  "study_id": "modular-addition",
+  "question": "Does weight decay change generalization after memorization, and does delayed grokking occur within 100000 updates?",
+  "motivation": "Bounded controlled MLP adaptation of modular-addition grokking research",
+  "success_criteria": [
+    "Eight paired-seed conditions reach the fixed horizon",
+    "Preserved attempts and reproducible predictions/analysis",
+    "Negative and inconclusive results retained"
+  ],
+  "constraints": [
+    "No held-out optimization or tuning",
+    "Pilot seed 61 distinct from confirmation",
+    "Offline local broker, one scientific worker",
+    "Float32 fixed architecture/optimizer and 100000 updates"
+  ],
+  "output": "REPORT.md, review.json, REPRODUCE.md, artifact-manifest.json, measurements.json, submission.json",
+  "stop_rules": [
+    "Completion condition",
+    "Resource ceiling requires partial status"
+  ],
+  "resources": {
+    "max_attempts": 64,
+    "max_seconds": 1800,
+    "money_usd": 0,
+    "per_attempt_seconds": 180
+  },
+  "capabilities": [
+    "artifact.read",
+    "artifact.write",
+    "execution.local"
+  ],
+  "release": "0.3.0rc1",
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "lock": {
+    "path": "campaigns/modular-addition/lock.yaml",
+    "sha256": "d1b88e527de05bfd369358df518429c2955c0a83d9f0a8b580b0cd551855e1e2",
+    "media_type": "application/json",
+    "retention": "retained"
+  },
+  "profile_provenance": [
+    {
+      "id": "public/default",
+      "sha256": "9f90c310cefb07153761645bd658f8ad6551578ccb6bf772074e44e8f8c17b9b"
+    }
+  ],
+  "effective_configuration": {
+    "budget": {
+      "max_attempts": 64,
+      "max_seconds": 1800,
+      "money_usd": 0,
+      "per_attempt_seconds": 180
+    },
+    "capabilities": [
+      "artifact.read",
+      "artifact.write",
+      "execution.local"
+    ],
+    "context_chars": 12000,
+    "language": "English",
+    "max_revisions": 2
+  },
+  "configuration_origins": {
+    "budget.max_attempts": "current request",
+    "budget.max_seconds": "current request",
+    "budget.money_usd": "current request",
+    "budget.per_attempt_seconds": "current request",
+    "capabilities": "host authorization",
+    "context_chars": "module:context/active-brief",
+    "language": "profile:public/default",
+    "max_revisions": "recipe:recipe/research"
+  },
+  "protocol_revision": "modadd-v1",
+  "protocol": {
+    "path": "campaigns/modular-addition/protocol.json",
+    "sha256": "18d50f47d00720e973317226aa523e1d5e44e1d3e83c7b7e7b4acca164b4bb4b",
+    "media_type": "application/json",
+    "retention": "retained"
+  }
+}

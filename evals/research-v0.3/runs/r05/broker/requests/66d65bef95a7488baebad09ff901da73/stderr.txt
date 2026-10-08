@@ -1,0 +1,6 @@
+OMP: Warning #179: Function Can't set size of /tmp file failed:
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r05/candidate/study/pilot.py", line 38, in <module>
+    w1=torch.nn.Parameter(w1.to(dev)); w2=torch.nn.Parameter(w2.to(dev))
+                          ^^^^^^^^^^
+RuntimeError: invalid low watermark ratio 1.4

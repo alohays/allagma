@@ -1,0 +1,238 @@
+{
+  "run_id": "r05",
+  "criteria": "evals/research-v0.3/frozen/source/evals/research-v0.3/CRITERIA.md",
+  "scientific_execution_verified": true,
+  "completion_verified": true,
+  "evidence_score": 8,
+  "evidence_total": 8,
+  "evidence_items": [
+    {
+      "id": 1,
+      "score": 1,
+      "reason": "Exact question, ordered-pair inputs, source revision, MIT license and offline literature scope are retained. The study is identified as a bounded MLP adaptation.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "SCOPE.md",
+          "sha256": "8b52c30baa2e9fca0c9162852fb7bd61c9a5450a043f861dda3831265e5af805"
+        },
+        {
+          "root": "candidate",
+          "path": "inputs/materials/SOURCES.md",
+          "sha256": "df4c3b6e39891b7b1925951c36606db2d34cf240696566199cce2d63ccf50fc4"
+        },
+        {
+          "root": "candidate",
+          "path": "inputs/materials/openai-grok-reference/LICENSE",
+          "sha256": "893951b3bf94db8df1b13e05da5cdeb499400960e4d44a3962a8b33ed0b4f28e"
+        },
+        {
+          "root": "candidate",
+          "path": "campaigns/modular-addition/protocol.json",
+          "sha256": "18d50f47d00720e973317226aa523e1d5e44e1d3e83c7b7e7b4acca164b4bb4b"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "score": 1,
+      "reason": "Protocol and training source hashes were frozen before the first confirmation request. The C implementation and qualification-gate revision are explicit, seed 61 is excluded, and the full eight-cell horizon and stopping rules remain fixed.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "campaigns/modular-addition/protocol.json",
+          "sha256": "18d50f47d00720e973317226aa523e1d5e44e1d3e83c7b7e7b4acca164b4bb4b"
+        },
+        {
+          "root": "candidate",
+          "path": "campaigns/modular-addition/code-manifest.json",
+          "sha256": "cacbbea5d496dc4785a16748403b86fbe1f9b758bdd529e1451ac610f7967d8f"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/pilot-005/qualification.json",
+          "sha256": "a2cb6d2c629092911327f6a749836cae0bb8efb39833eaa4b2e1021bbbd3b0dc"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "score": 1,
+      "reason": "All eight full-horizon trajectories have two successful 50000-update segments, dense curves and final optimizer/model state. Protected requests and prospective protocol/source hashes support confirmation; reconstructed pilot-local snapshots are disclosed and authoritative controller snapshots remain available.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "evidence/attempt-ledger.json",
+          "sha256": "1d862da147eae77d840bea65bd12b3402185adfb795bc6a83bb59d58d480e713"
+        },
+        {
+          "root": "candidate",
+          "path": "measurements.json",
+          "sha256": "bf1e358865de6a03e1704b2dfc535f1b1aee74eca80e8164841958f4adeeec7b"
+        },
+        {
+          "root": "candidate",
+          "path": "study/train.py",
+          "sha256": "554a1287d8db9221ac8275e8582b39b5f3a4b5192f5e530fd1a5d1171f0fe77c"
+        },
+        {
+          "root": "candidate",
+          "path": "study/engine.c",
+          "sha256": "fd439bee1b101264c2b71f8afdb6daa60a466ea8e5ccba3eacf21fa6c6e50d5c"
+        },
+        {
+          "root": "candidate",
+          "path": "build/build.json",
+          "sha256": "d4003851abf58c0a6f381f45066910f9b3fd8006ccd6e5b739e7a1ac896a1059"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "score": 1,
+      "reason": "Uniform contract-compatible scoring passes all 40 checks. Independent controller tests verify gradients and individual AdamW updates at three optimizer ages, paired statistics, censoring, complete curves, final native checkpoints and segment coverage.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "analysis/verification.json",
+          "sha256": "f915fc27f5413a1fea51dc9c3eec57dd6407a1c66a19991947da146e8de4f69c"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/results.json",
+          "sha256": "36bf5e82955a65e39bc95962d280830917a79d3dbda338e007b24c0f6fd7500a"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis-repeat/recomputation-comparison.json",
+          "sha256": "95b21fb136173be94ddd8740f19e1b69a226b6b4e14fed03f87fad8869ef491c"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "score": 1,
+      "reason": "Uses four paired seeds with individual effects, small-sample t assumptions and exact p=0.125. Event times remain null when censored, lag bounds are conservative, and six prespecified definition sensitivities do not replace the primary analysis.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "analysis/results.json",
+          "sha256": "36bf5e82955a65e39bc95962d280830917a79d3dbda338e007b24c0f6fd7500a"
+        },
+        {
+          "root": "candidate",
+          "path": "REPORT.md",
+          "sha256": "16c6f05a857a3417af753bbecb2090a2ca54de44b4ffc760fc3a2b4f8bf8432e"
+        },
+        {
+          "root": "candidate",
+          "path": "campaigns/modular-addition/protocol.json",
+          "sha256": "18d50f47d00720e973317226aa523e1d5e44e1d3e83c7b7e7b4acca164b4bb4b"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "score": 1,
+      "reason": "English report links measured claims to retained evidence and distinguishes memorization, improved held-out metrics and grokking. Both final figures were visually inspected; all eight cells, scales and legends are readable.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "REPORT.md",
+          "sha256": "16c6f05a857a3417af753bbecb2090a2ca54de44b4ffc760fc3a2b4f8bf8432e"
+        },
+        {
+          "root": "candidate",
+          "path": "figures/learning-accuracy.png",
+          "sha256": "a170afaa8fe4ab63bab9772afda7a64c48c770f15d04dec0a2ca2823c47ef29a"
+        },
+        {
+          "root": "candidate",
+          "path": "figures/learning-loss.png",
+          "sha256": "7cba27ca4e52a5d54116c67c29842c8646fcff2740a146e5f929719121b186db"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "score": 1,
+      "reason": "Fresh-environment staging/build and a fresh pilot actually passed; raw-only entrypoint and second reanalysis passed. Full reproduction orchestration is retained and inspected; a suspected interpreter-resolution defect was disproved by actual prefix/package probes. Restored manifest and direct references match. No second full training replay is claimed.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "REPRODUCE.md",
+          "sha256": "39d44bda4a2bd19ddefe4c02fba718cee1e71e2a638b1ccc7f3ee48b8f1e5bd1"
+        },
+        {
+          "root": "candidate",
+          "path": "study/reproduce.py",
+          "sha256": "6a38ca72f1291eb560a7dfbc28bf8381bf2bac2e93540408998687e7afe71b5b"
+        },
+        {
+          "root": "candidate",
+          "path": "study/stage_reproduction.py",
+          "sha256": "d54f29faa7ed7291bb2c8c9c9be73087b7f7f940dca187f29fbc7f8d96802709"
+        },
+        {
+          "root": "candidate",
+          "path": "reproduction-smoke/evidence/pilot-fresh-environment/qualification.json",
+          "sha256": "be7cfc81d75345847d0b44ef9879bf7abf48879136e6ff42216d626a7a6427c9"
+        },
+        {
+          "root": "candidate",
+          "path": "artifact-manifest.json",
+          "sha256": "04f0298470b8d4c532e8c539bfa6f3708bc26f739c99f0f97501deac3ea536d4"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "score": 1,
+      "reason": "Critique is substantive and bound to the exact report digest. It records the revised pilot gate, floating-point trajectory limits, small-n uncertainty, reconstructed pilot provenance and lack of independent peer review. Final audit self-correction and both checker revisions remain retained.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "review.json",
+          "sha256": "32aba4000f7b1a6f7127ed06eec687ed61b9be55b3188d5ea3b8e96fe0a92616"
+        },
+        {
+          "root": "candidate",
+          "path": "review-input.json",
+          "sha256": "cb377ee8d49bddecc0464d81a04f17133ca6d9c3852ce2525ef4704f3253f8c9"
+        },
+        {
+          "root": "candidate",
+          "path": "critique.json",
+          "sha256": "58fbf13222976745bfee47f4f9caa80af4010daa7be3e9da7becabe5c303aeb6"
+        },
+        {
+          "root": "candidate",
+          "path": "verification-final.json",
+          "sha256": "68703456caa3931feff5c82f19f36032f945f70a8ae42e8bdf2a19361a07fae9"
+        },
+        {
+          "root": "candidate",
+          "path": "study/verify_package.py",
+          "sha256": "50e419631d63acbef7a7a5441d1f680d9cc661dd78c316d44c315545f7d0f4ac"
+        },
+        {
+          "root": "candidate",
+          "path": "study/verify_package_v2.py",
+          "sha256": "84306262c136c9f3ae67f5a7bba9763b8e5a4bad50cbfcd5fc946cc7fdc09d41"
+        }
+      ]
+    }
+  ],
+  "critical_scientific_findings_unresolved": [],
+  "coordinator_task_messages": 0,
+  "candidate_edits_by_controller": 0,
+  "scientific_limitations": [
+    "Native float32 C/Accelerate implementation is locally consistent with the specified model/AdamW but not bitwise identical to long PyTorch trajectories.",
+    "Pilot trajectory gate was revised before confirmation after observing a failed pilot; that methodological limit remains explicit.",
+    "Only four seed pairs, one finite horizon and one task configuration; author and controller critique are provisional."
+  ],
+  "scoring_correction": "Original inline-curve parser error retained; uniform loader-only compatibility scorer passes 40/40.",
+  "transport_correction": "First collection rejected an internal absolute wheel alias. Retained original literal link metadata and restored the same internal content through a relative alias; no candidate artifact was changed.",
+  "controller_investigation": "An initially suspected interpreter-resolution defect was not reproduced: the staging helper creates a copied executable on this host. Failed and corrected controller probes are preserved separately.",
+  "scope": "Original candidate outcome, with source/trace review and deterministic numerical coverage. No second full training replay or independent scientific peer review."
+}

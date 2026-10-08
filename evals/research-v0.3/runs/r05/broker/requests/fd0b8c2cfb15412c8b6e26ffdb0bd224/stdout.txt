@@ -1,0 +1,15 @@
+{
+  "reason": "The first terminal audit incorrectly applied the relative-artifact-path rule to absolute canonical module paths returned by the locked Allagma resolver. The new verifier accepts an absolute path only for a module entry containing module_id and bundle_id, requires it to be within the workspace, and still validates its hash. All ordinary artifact references remain relative.",
+  "failed_request_id": "d50380787e554cebb84f8a71cafc26b4",
+  "old_verifier": {
+    "path": "study/verify_package.py",
+    "sha256": "50e419631d63acbef7a7a5441d1f680d9cc661dd78c316d44c315545f7d0f4ac"
+  },
+  "new_verifier": {
+    "path": "study/verify_package_v2.py",
+    "sha256": "84306262c136c9f3ae67f5a7bba9763b8e5a4bad50cbfcd5fc946cc7fdc09d41"
+  },
+  "scientific_changes": false,
+  "report_unchanged_sha256": "16c6f05a857a3417af753bbecb2090a2ca54de44b4ffc760fc3a2b4f8bf8432e",
+  "manifest_revision": 2
+}

@@ -1,0 +1,75 @@
+{
+  "schema_version": "0.2",
+  "record_type": "RunRecord",
+  "run_id": "pilot-recovery-throughput",
+  "attempt_id": "66d65bef95a7488baebad09ff901da73",
+  "attempt_number": 2,
+  "campaign_id": "modular-addition",
+  "experiment_id": "pilot-seed61",
+  "started_at": "2026-10-08T01:49:29.576784+00:00",
+  "ended_at": "2026-10-08T01:49:38.714230+00:00",
+  "inputs": [
+    {
+      "path": "evidence/source-history/pilot-v1.py",
+      "sha256": "60fbefe880835349f2ed7ab6f6cf71c98d3e40cab1f20035e1bf3009d862fc59",
+      "media_type": "text/plain",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/pilot-002/started.json",
+      "sha256": "849940480c0d2a99789d2c6dd8736078c14e916759fdf57d2395a88e38bfb0d3",
+      "media_type": "application/json",
+      "retention": "retained"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "evidence/pilot-002/partition.npz",
+      "sha256": "87544b0bd98dd71da26e408b00f1e12f000203cdf4214dbd3159f5c157ab4173",
+      "media_type": "text/plain",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/pilot-002/progress.json",
+      "sha256": "783a947c847dfe5cb68ba5eedaa40311981c46578174951ab720cc6e40409e99",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/pilot-002/started.json",
+      "sha256": "849940480c0d2a99789d2c6dd8736078c14e916759fdf57d2395a88e38bfb0d3",
+      "media_type": "application/json",
+      "retention": "retained"
+    }
+  ],
+  "environment": {
+    "broker_receipt": ".compute/responses/66d65bef95a7488baebad09ff901da73.json",
+    "category": "compute",
+    "source_capture": "retrospective reconstruction of exact pilot edit history",
+    "broker_status": "failed"
+  },
+  "model_revision": "60fbefe880835349f2ed7ab6f6cf71c98d3e40cab1f20035e1bf3009d862fc59",
+  "data_revision": "2450602c941c2448078a532ff16aa714a31085b9dfb958ebc3f5c627940c1df8",
+  "usage": {
+    "wall_seconds": 9.169552959036082,
+    "money_usd": 0,
+    "tokens": 0
+  },
+  "status": "failed",
+  "error": {
+    "kind": "execution_failure",
+    "message": "See retained stdout/stderr and broker receipt; no unsuccessful attempt contributes a seed."
+  },
+  "protocol_revision": "preconfirmation-pilot",
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "split": "pilot",
+  "command": [
+    ".venv/bin/python",
+    "study/pilot.py",
+    "--out",
+    "evidence/pilot-002",
+    "--steps",
+    "300"
+  ],
+  "exit_code": 1
+}

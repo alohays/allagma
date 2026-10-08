@@ -1,0 +1,50 @@
+{
+  "schema_version": "0.2",
+  "record_type": "ClaimRecord",
+  "claim_id": "generalization-threshold",
+  "text": "The primary sustained 95% held-out-accuracy threshold was observed in 0/8 cells by 100000 updates.",
+  "supporting": [
+    {
+      "path": "analysis/results.json",
+      "sha256": "36bf5e82955a65e39bc95962d280830917a79d3dbda338e007b24c0f6fd7500a",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "analysis/verification.json",
+      "sha256": "f915fc27f5413a1fea51dc9c3eec57dd6407a1c66a19991947da146e8de4f69c",
+      "media_type": "application/json",
+      "retention": "retained"
+    }
+  ],
+  "contradicting": [],
+  "dependencies": [
+    {
+      "path": "analysis/raw-manifest.json",
+      "sha256": "3daa265e485fbfb6bf1cab5e4f25b604184fa2e8f5ad6a025641fbf40e7b75c1",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "campaigns/modular-addition/protocol.json",
+      "sha256": "18d50f47d00720e973317226aa523e1d5e44e1d3e83c7b7e7b4acca164b4bb4b",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "study/analyze.py",
+      "sha256": "314d4c83f81d621d52d4f26cc0359c13ef39dad299723f0910d6ec92ea9fe4ef",
+      "media_type": "text/plain",
+      "retention": "retained"
+    }
+  ],
+  "scope": "Four prescribed paired seeds, float32 bias-free MLP, fixed modular-addition split and 100000-update horizon",
+  "limitations": [
+    "Small seed count and approximate t intervals",
+    "Finite horizon and operational transition definition",
+    "Native float32 backend not a full transformer replication",
+    "Author critique is not independent peer review"
+  ],
+  "status": "supported",
+  "supersedes": null
+}

@@ -1,0 +1,637 @@
+{
+  "format": "immutable-raw-manifest-v1",
+  "eligible_final_runs": [
+    "evidence/confirmation/attempts/s1001-wd0-to100000/measurement.json",
+    "evidence/confirmation/attempts/s1001-wd1-to100000/measurement.json",
+    "evidence/confirmation/attempts/s1002-wd0-to100000/measurement.json",
+    "evidence/confirmation/attempts/s1002-wd1-to100000/measurement.json",
+    "evidence/confirmation/attempts/s1003-wd0-to100000/measurement.json",
+    "evidence/confirmation/attempts/s1003-wd1-to100000/measurement.json",
+    "evidence/confirmation/attempts/s1004-wd0-to100000/measurement.json",
+    "evidence/confirmation/attempts/s1004-wd1-to100000/measurement.json"
+  ],
+  "files": [
+    {
+      "path": "build/engine.dylib",
+      "sha256": "1c3b314204f96c08f1e3c0f090da18138dec6e21688997ce563a3abd3f1dc339",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "campaigns/modular-addition/PROTOCOL.md",
+      "sha256": "fc7e6c784e942e3fe0353aa8ce11e9071391a4ed183c81baee7825e032363ae3",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "campaigns/modular-addition/materials/engine.dylib",
+      "sha256": "1c3b314204f96c08f1e3c0f090da18138dec6e21688997ce563a3abd3f1dc339",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "campaigns/modular-addition/protocol.json",
+      "sha256": "18d50f47d00720e973317226aa523e1d5e44e1d3e83c7b7e7b4acca164b4bb4b",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1001-wd0-to050000/checkpoint-050000.npz",
+      "sha256": "5cedb8e6b407d7cde49a05d33b74585314709f442aff9ff11bfcdf7ea1370c9f",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1001-wd0-to050000/curve-050000.json",
+      "sha256": "5d645c775b5b198c1ea8f466bb3c5c2ff2b228d33094d1d80c09b467c66771d1",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1001-wd0-to050000/started.json",
+      "sha256": "110682c391ef9c06f2d91bd53002d6f353504ca2b37e5fe41ca9b2c6b2e2ec14",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1001-wd0-to100000/arrays.npz",
+      "sha256": "24b66115739d2403208fc8d77655e3e87544e9c0d9f1b3d5c988908d0a8d2105",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1001-wd0-to100000/checkpoint-100000.npz",
+      "sha256": "cf222ef3489a6b7d43bad70aa0c759ecf5e603ccb659bc20fb685a34bb6fc393",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1001-wd0-to100000/completed.json",
+      "sha256": "2cb9b83f9ed02cd4d206cf2b371bdff567a222ec9c427e483cec9ed989a0175b",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1001-wd0-to100000/curve.json",
+      "sha256": "befd16eb668aeb4d9c04826161e074fea63fc07035b601cec5e6721aa06e371e",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1001-wd0-to100000/measurement.json",
+      "sha256": "91d3b70c4bbc55e6debd4ac5561f3144878daea7ad25b34ac8b831cce67c6760",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1001-wd0-to100000/resume.json",
+      "sha256": "446901e2b746c8a4572b6f4b333a2861be0429cfea637a67ddf7f0f2fb117591",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1001-wd0-to100000/started.json",
+      "sha256": "1767982139201d24d7dccc64efdf58913b16519a507d11a416df4536c76b6ea8",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1001-wd0-to100000/weights.npz",
+      "sha256": "1266bff1d00e0e608d92314ccb4f2c7cd28e261ef70e3f5d40e66aff300d110c",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1001-wd1-to050000/checkpoint-050000.npz",
+      "sha256": "50144a1b6307fc00b932c575b541dcb5f6b67ccd7b863d7594aa80d02e9704bc",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1001-wd1-to050000/curve-050000.json",
+      "sha256": "0d1d8e27e55d8c91b3473cdad3a98ae5354e792f677bcff709fe6bd4efee52d6",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1001-wd1-to050000/started.json",
+      "sha256": "b1eadaefc7ae836482b55d5e574d6ad2d3a7d30329fa0df8a21fccef02cf770d",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1001-wd1-to100000/arrays.npz",
+      "sha256": "3fb20a59427c3cf426b9e3653efc0afcfc0b8f80b119899c1f6dc7a011da4d83",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1001-wd1-to100000/checkpoint-100000.npz",
+      "sha256": "3a4e2194f830ddc65dc596cb6eec3bd876b45bef86926c27e7301df0a34009f5",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1001-wd1-to100000/completed.json",
+      "sha256": "dbcbb32c3e9103f9d4be032afaa0e86eff8989e8e2edbd6fa838ccb88375e30b",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1001-wd1-to100000/curve.json",
+      "sha256": "bf667562c8f4b6ec443abd5068105ced289e3016db302e3cd97bd8f7b8d2ef21",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1001-wd1-to100000/measurement.json",
+      "sha256": "649bf6df4b52c2c5a27e136c5f8ee7b7b497c2b850a4c03771a2e018e4126a2d",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1001-wd1-to100000/resume.json",
+      "sha256": "63f902f52ec28c5707a153699f2fe986fa3b46628b7a43a8303dad38c98ae046",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1001-wd1-to100000/started.json",
+      "sha256": "0f847676eeb2260967355b028a22ad566b7776117e4090afa6d30fc56ed3f90e",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1001-wd1-to100000/weights.npz",
+      "sha256": "07eafa25665ce391e4f149ed8d3dbfd904223f496d02822ee783a900517d2e6d",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to050000/checkpoint-050000.npz",
+      "sha256": "e9e4dd60c353b7acaf389673e7e5720f29a9f450a5153eb5bb5ca4a9a84a8189",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to050000/curve-050000.json",
+      "sha256": "05a665d77089203fcc155fc2f4d095338d52b4ed546a5cacf1f44517f239b2ab",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to050000/started.json",
+      "sha256": "f19187dea79142bb25eda92e7c7e7871284e93ac7add45959ff96ff08ac6ca03",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to100000/arrays.npz",
+      "sha256": "aaab7919a83afdeff4fef6a699f0b80ceccbd48551f6c144ee5852f5ec639e64",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to100000/checkpoint-100000.npz",
+      "sha256": "9f1b4875f3bb31f6e0df5dc2c94b66818316d5e0af88aff2c86bff08ca71e15f",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to100000/completed.json",
+      "sha256": "d87041441450039665e1892b6765b81179eae44e6055b778bd17f0decb63776f",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to100000/curve.json",
+      "sha256": "7b4b61f8299bef9abdc96ac5148ed495f9b6c6de5ea0d2be067f7bef64e8597f",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to100000/measurement.json",
+      "sha256": "0d487f91fc9c64aa7ebcd7aa695515f4967a65ccaaebacde10b4215540694628",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to100000/resume.json",
+      "sha256": "9962cd8abd6981fe0b976ef9570b8fcc83566cdd302c73b834d707b0f706dea1",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to100000/started.json",
+      "sha256": "cdc4da771a1ee1948fde45608a442c6d8d9eb2e1d2470b059542d7f75af6bd9c",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to100000/weights.npz",
+      "sha256": "d7467125f1e536c64317896139c7d0ac3acb2cea349c41a436e7c05573a67843",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd1-to050000/checkpoint-050000.npz",
+      "sha256": "4a7817eb4ab4599b63b567096793ce5d1c055a2c382ef3462c4b05dd31d5c9f8",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd1-to050000/curve-050000.json",
+      "sha256": "5ec1462409d08ca0c57ddbbc5f309a4e5b9052fc1607f4639c685a9808213215",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd1-to050000/started.json",
+      "sha256": "84defc99091ae59a94ab70a4e83ce8024ed0a168226221a36dd5f9d71d5f54f7",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd1-to100000/arrays.npz",
+      "sha256": "f7a45303201c21f8cb06ee21a1eeb36259de1e2086f9adfe2d49ac5c07be5470",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd1-to100000/checkpoint-100000.npz",
+      "sha256": "b632a4d69d3d5c347b62842334edfa1c6f338877ad4ab368acfbcbce6699f26d",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd1-to100000/completed.json",
+      "sha256": "86ffc9688572daaa60392d5f1cdd7e590ef7ce494d9d5edd1945f0fa3ae6dd9e",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd1-to100000/curve.json",
+      "sha256": "e478a035bdc43687d7acb681553cabf46af7bd789f329dbe3bfcf5823470af67",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd1-to100000/measurement.json",
+      "sha256": "84b30a5b8dbf4f3db7409be8ce06912987776939f8e79796c34cf36eeed1c51c",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd1-to100000/resume.json",
+      "sha256": "15ad0a9b259f8107f003b342f882b17d8f0d7334a154aec42cabea4b5622ddfa",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd1-to100000/started.json",
+      "sha256": "d4754a620953cd842df926b4687d6d43acdc311e249180a699a955961d79d04d",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd1-to100000/weights.npz",
+      "sha256": "3948dc681d84d503590fb4b3c252e23766183618769b1ced9c313beb44b43f61",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1003-wd0-to050000/checkpoint-050000.npz",
+      "sha256": "3e10fa5c97ae4896419b850ec234155f8759d48668502309875de4fcc61f364c",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1003-wd0-to050000/curve-050000.json",
+      "sha256": "8e506ee8edfb9c17e3f0670f3bdb728bdade1acb8288ddddf280a90e4d06a6f3",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1003-wd0-to050000/started.json",
+      "sha256": "83a99e09cf6463f63f9b0213fc1fb4a44b82f30fd3e1551c2a095acc9cf60251",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1003-wd0-to100000/arrays.npz",
+      "sha256": "77c43a29ec0a58095649f0d8d8ea7affd2e815a9e7a55c058cbf9f8c8a332cef",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1003-wd0-to100000/checkpoint-100000.npz",
+      "sha256": "305b4cbe3a8cd46aa7442b4ae78305ee2f66aa31280bc81b11e29b38f1b7faad",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1003-wd0-to100000/completed.json",
+      "sha256": "5047918aa2e75c8eb184f8bbd6a52b0c23f9a09aac60ff7634252fda0aaa5c0f",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1003-wd0-to100000/curve.json",
+      "sha256": "0c2d63e1762e187f9e8db063176499d5fe3ee8c56573a297902d7b8f18839148",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1003-wd0-to100000/measurement.json",
+      "sha256": "98e8116d23bfef3a00daa9d2435e6ad3aed5582d51aca2296bbd452dabe65354",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1003-wd0-to100000/resume.json",
+      "sha256": "0922ef45a27bc0b0d51704d54eae7e1f6a8cd21c76d0754fb4cac3477d47b93d",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1003-wd0-to100000/started.json",
+      "sha256": "030539cce01b7950c444b2d01483c7c10263bb2e6eb609854d0ccf5d74c77473",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1003-wd0-to100000/weights.npz",
+      "sha256": "59c717894dbe36558a56a42e68d3b6ab16dd13dcc7cd313ec5f48b82234ceaec",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1003-wd1-to050000/checkpoint-050000.npz",
+      "sha256": "66ed5a31785776d45b71e5cf4cda3a037e264c60600891fbcb587c1c934aa92e",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1003-wd1-to050000/curve-050000.json",
+      "sha256": "71827fd7dda12fb842bd476c6b4ca9aeeee099d17282c51ea3f5a7c063cda330",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1003-wd1-to050000/started.json",
+      "sha256": "d7b26ce66ed3ecc50b440a7283ab57218fe153f01cb290667100f24c6f6345c6",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1003-wd1-to100000/arrays.npz",
+      "sha256": "9e3855eeafbe30f148f84738f0c0166fb1074ba4bbcd6353b5c9a8dce87948ba",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1003-wd1-to100000/checkpoint-100000.npz",
+      "sha256": "d531ec83f4e3fd56494b89152fa4fc9711d7edaf4a16d1b27873c5255869fbe4",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1003-wd1-to100000/completed.json",
+      "sha256": "72c1db924a486810d701eee5567045b11f477947ead6476f5bf4be5251e02fa8",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1003-wd1-to100000/curve.json",
+      "sha256": "787613c11e4e1e817db83689118866c698be1292f646d55402320e274777f5e7",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1003-wd1-to100000/measurement.json",
+      "sha256": "d9df5134e8b941990b9e02e75932f96a17c5e47f2e0e507f50c55992b207a842",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1003-wd1-to100000/resume.json",
+      "sha256": "6822327a9c57b9918895c05166015065db5b302f6067f6c7d6804b566e366236",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1003-wd1-to100000/started.json",
+      "sha256": "1d4576aa005d2346c5f6c017cd1f765805ba58620b9817541b79077edf4bea4e",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1003-wd1-to100000/weights.npz",
+      "sha256": "8e83ef351141374ee3c82e7b4eb68d93cd563c8b72b06b0732331d2b93a33fa9",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1004-wd0-to050000/checkpoint-050000.npz",
+      "sha256": "a91c0ed5c06941294bf150dd779daac53783544f47cd16defbd5687e83a535ec",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1004-wd0-to050000/curve-050000.json",
+      "sha256": "5b0a80a2cd80ba5a1c1867f43aa3a675dbcd5bb14c5a0d0f6f89bbef30e60036",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1004-wd0-to050000/started.json",
+      "sha256": "2be582d6baf69ee2ead40d8e6b33f81a905147a6a96e64537056a189420ceb40",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1004-wd0-to100000/arrays.npz",
+      "sha256": "91039520de6ae2252c38cb6cbffd92b66e4bb412a0a9d5c095fb97d6e0b216e0",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1004-wd0-to100000/checkpoint-100000.npz",
+      "sha256": "fce270e276b823cd04a2bf879a7df1241b81a0960f2dee98530c90e3945d597e",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1004-wd0-to100000/completed.json",
+      "sha256": "104de42ce880a24302eba74b16741c4141b21db3814adbe7b35c7ad10b50f3c4",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1004-wd0-to100000/curve.json",
+      "sha256": "4aea13a645cbd7d33345af93505b699d1f3e439fdc5f421641c7686a75a4a5f3",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1004-wd0-to100000/measurement.json",
+      "sha256": "688bac1a59471f16d0a671d0f050c448da47ab022a2ff742d2659abb0566b937",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1004-wd0-to100000/resume.json",
+      "sha256": "c1562bb56cd7d23c8ca296caf0edbe910f7b67490f9c5020abb01ea97f702384",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1004-wd0-to100000/started.json",
+      "sha256": "8c465771892fbd1f5e1b05142b5994de2748a165e7e6003d47f95557c6ad649b",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1004-wd0-to100000/weights.npz",
+      "sha256": "a13a700cbe79c0fdddbbef0b24401117b444647f9934ff943d45676f30e3a82f",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1004-wd1-to050000/checkpoint-050000.npz",
+      "sha256": "a2cbf101f743c84f21a50207c9e327885712492d126ceecfa911d4c4322d70b4",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1004-wd1-to050000/curve-050000.json",
+      "sha256": "3d3c792c3fd74121c32aa1dbca0b4b3710147ff6e44fdfeb5b1ab780910764c3",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1004-wd1-to050000/started.json",
+      "sha256": "b8cc5fa230b0cfcd51d6018d645e4cf2c8e8577510107a0537e4e39c6f078069",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1004-wd1-to100000/arrays.npz",
+      "sha256": "fac13eed0b01f4d3a84b3af5caee4a52e87d081785b3b729a430378c277b3d6b",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1004-wd1-to100000/checkpoint-100000.npz",
+      "sha256": "45baffac965ce538a26ac876bdcdb5866705e6fd6ec2cdaba6197e44c607d0e9",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1004-wd1-to100000/completed.json",
+      "sha256": "22ca5ebadfa741338ae808a07001fc5c8b08fc149414f9587f55dd88ea7b8ea2",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1004-wd1-to100000/curve.json",
+      "sha256": "df33d9daaebb3bddc4cbfbcdd5a39e670551141fcd4f07e6647953cadadf9de1",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1004-wd1-to100000/measurement.json",
+      "sha256": "84b59182dc70a31c613adeed5de103d273e0ecfbe837223a1b9c4755f9d63544",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1004-wd1-to100000/resume.json",
+      "sha256": "1edb1fbb299b571f5cb14027b6f2ab8207135b3a729c736a79e521f5e54e1906",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1004-wd1-to100000/started.json",
+      "sha256": "4699ddf5d4567ffa02905e526df39874e3d38392b790f89dcd043aadb5f99808",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1004-wd1-to100000/weights.npz",
+      "sha256": "d306e4cbfbffe9a39115bd4cbb2125c0dbc199df3152752bff503ef7c10c094b",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/seeds/1001/initial.npz",
+      "sha256": "0e16b97159bf563ff23c66d5f4d215e19d23d6547cb802d8b2a8819e91b056d7",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/seeds/1002/initial.npz",
+      "sha256": "0c1f5bd424ed20347ccd9bf57f4c29a678ed42f7ec28da821ef9badc645e0632",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/seeds/1003/initial.npz",
+      "sha256": "410726479dca6355598583402c5420a41899c999b50d5c9bdb789bd2c5bc79d8",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/seeds/1004/initial.npz",
+      "sha256": "b733d6c7c63718e8adac82f8a610bc28b79f8827cf69c1b4fb1e6c40c7de5ea7",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "study/build.py",
+      "sha256": "16fac18f75ef5f4c1beebacdb847cb1b8a35e8235fb2071668aca4c58c862f89",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "study/engine.c",
+      "sha256": "fd439bee1b101264c2b71f8afdb6daa60a466ea8e5ccba3eacf21fa6c6e50d5c",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "study/engine.py",
+      "sha256": "9ebebe1839409b44c5da48af305f83de548a7c0deb32f7b4dec667fc65575fdc",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    },
+    {
+      "path": "study/train.py",
+      "sha256": "554a1287d8db9221ac8275e8582b39b5f3a4b5192f5e530fd1a5d1171f0fe77c",
+      "media_type": "application/octet-stream",
+      "retention": "retained"
+    }
+  ],
+  "exclusions": [
+    {
+      "path": "evidence/pilot-001",
+      "reason": "pilot seed 61, qualification only; never an independent confirmation seed"
+    },
+    {
+      "path": "evidence/pilot-002",
+      "reason": "pilot seed 61, qualification only; never an independent confirmation seed"
+    },
+    {
+      "path": "evidence/pilot-003",
+      "reason": "pilot seed 61, qualification only; never an independent confirmation seed"
+    },
+    {
+      "path": "evidence/pilot-004",
+      "reason": "pilot seed 61, qualification only; never an independent confirmation seed"
+    },
+    {
+      "path": "evidence/pilot-005",
+      "reason": "pilot seed 61, qualification only; never an independent confirmation seed"
+    }
+  ]
+}

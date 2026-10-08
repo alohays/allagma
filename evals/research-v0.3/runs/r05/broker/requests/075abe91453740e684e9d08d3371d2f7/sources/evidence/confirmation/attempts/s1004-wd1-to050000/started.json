@@ -1,0 +1,37 @@
+{
+  "attempt_id": "s1004-wd1-to050000",
+  "started_at": "2026-10-08T02:14:48.443697+00:00",
+  "command": [
+    "study/train.py",
+    "--seed",
+    "1004",
+    "--weight-decay",
+    "1",
+    "--end-step",
+    "50000",
+    "--attempt-id",
+    "s1004-wd1-to050000",
+    "--root",
+    "evidence/confirmation"
+  ],
+  "configuration": {
+    "seed": 1004,
+    "weight_decay": 1,
+    "end_step": 50000,
+    "attempt_id": "s1004-wd1-to050000",
+    "root": "evidence/confirmation",
+    "protocol": "campaigns/modular-addition/protocol.json"
+  },
+  "protocol_sha256": "18d50f47d00720e973317226aa523e1d5e44e1d3e83c7b7e7b4acca164b4bb4b",
+  "source_hashes": {
+    "study/train.py": "554a1287d8db9221ac8275e8582b39b5f3a4b5192f5e530fd1a5d1171f0fe77c",
+    "study/engine.py": "9ebebe1839409b44c5da48af305f83de548a7c0deb32f7b4dec667fc65575fdc",
+    "study/engine.c": "fd439bee1b101264c2b71f8afdb6daa60a466ea8e5ccba3eacf21fa6c6e50d5c",
+    "study/build.py": "16fac18f75ef5f4c1beebacdb847cb1b8a35e8235fb2071668aca4c58c862f89"
+  },
+  "environment": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.11.6 (v3.11.6:8b6ee5ba3b, Oct  2 2023, 11:18:21) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "VECLIB_MAXIMUM_THREADS": null
+  }
+}

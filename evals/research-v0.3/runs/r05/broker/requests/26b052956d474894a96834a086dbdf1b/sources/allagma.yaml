@@ -1,0 +1,28 @@
+{
+  "allow_experimental": false,
+  "capabilities": [
+    "artifact.read",
+    "artifact.write",
+    "execution.local"
+  ],
+  "hosts": [
+    "codex"
+  ],
+  "overrides": [
+    "overrides/settings.json"
+  ],
+  "profile": "profiles/study.json",
+  "recipe": "recipe/research",
+  "request": {
+    "budget": {
+      "max_attempts": 64,
+      "max_seconds": 1800,
+      "money_usd": 0,
+      "per_attempt_seconds": 180
+    }
+  },
+  "roles": {},
+  "schema_version": "0.2",
+  "settings": {},
+  "study_id": "r05"
+}

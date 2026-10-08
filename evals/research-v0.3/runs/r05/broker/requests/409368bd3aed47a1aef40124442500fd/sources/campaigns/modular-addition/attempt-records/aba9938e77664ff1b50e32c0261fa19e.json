@@ -1,0 +1,108 @@
+{
+  "schema_version": "0.2",
+  "record_type": "RunRecord",
+  "run_id": "reproduction-pilot-smoke",
+  "attempt_id": "aba9938e77664ff1b50e32c0261fa19e",
+  "attempt_number": 6,
+  "campaign_id": "modular-addition",
+  "experiment_id": "pilot-seed61",
+  "started_at": "2026-10-08T02:18:22.291044+00:00",
+  "ended_at": "2026-10-08T02:18:41.611544+00:00",
+  "inputs": [
+    {
+      "path": "reproduction-smoke/study/native_pilot.py",
+      "sha256": "604f17d161ac838bcf045a09864da13cb2964ca2fd714ecc15369a47f55acc52",
+      "media_type": "text/plain",
+      "retention": "retained"
+    },
+    {
+      "path": "reproduction-smoke/evidence/pilot-fresh-environment/started.json",
+      "sha256": "eccfc81e82cf71d4ea0103b8d442e03ee7194a06bae531a1cc1ddba291059d29",
+      "media_type": "application/json",
+      "retention": "retained"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "reproduction-smoke/evidence/pilot-fresh-environment/agreement-wd0.json",
+      "sha256": "4dbd285efd9fd80059922935836b93b8a21e4992db84da961c9d5e3a7188acac",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "reproduction-smoke/evidence/pilot-fresh-environment/agreement-wd1.json",
+      "sha256": "847bb43881bcccb46f425719aab990aee7cce90b966b2848b107cf50aae90b08",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "reproduction-smoke/evidence/pilot-fresh-environment/benchmark-final.npz",
+      "sha256": "aa27b08fe9e88da42e1a983457747231dc16a9ab0688b8b3e5970b83d38043f3",
+      "media_type": "text/plain",
+      "retention": "retained"
+    },
+    {
+      "path": "reproduction-smoke/evidence/pilot-fresh-environment/checkpoint-wd0.npz",
+      "sha256": "a8e49b8de4a6f34e452026f19a2a3022eb74878a0335893e1b8f50a13caddb13",
+      "media_type": "text/plain",
+      "retention": "retained"
+    },
+    {
+      "path": "reproduction-smoke/evidence/pilot-fresh-environment/checkpoint-wd1.npz",
+      "sha256": "7764251008e19848a78bc483d63880ed4288fbd1215194b04c28d960ff8c365b",
+      "media_type": "text/plain",
+      "retention": "retained"
+    },
+    {
+      "path": "reproduction-smoke/evidence/pilot-fresh-environment/curve.json",
+      "sha256": "8f32591ca88219d26f6ad5848195dd17d5fe4986ad44b4b518b53a45859e124b",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "reproduction-smoke/evidence/pilot-fresh-environment/initial.npz",
+      "sha256": "ad3ab35a0dd02b5f9382bbddd73eb9535fdd4cb347d9758eabe8a4493e929a17",
+      "media_type": "text/plain",
+      "retention": "retained"
+    },
+    {
+      "path": "reproduction-smoke/evidence/pilot-fresh-environment/qualification.json",
+      "sha256": "be7cfc81d75345847d0b44ef9879bf7abf48879136e6ff42216d626a7a6427c9",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "reproduction-smoke/evidence/pilot-fresh-environment/started.json",
+      "sha256": "eccfc81e82cf71d4ea0103b8d442e03ee7194a06bae531a1cc1ddba291059d29",
+      "media_type": "application/json",
+      "retention": "retained"
+    }
+  ],
+  "environment": {
+    "broker_receipt": ".compute/responses/aba9938e77664ff1b50e32c0261fa19e.json",
+    "category": "compute",
+    "source_capture": "prospective staged reproduction source copy",
+    "broker_status": "completed"
+  },
+  "model_revision": "604f17d161ac838bcf045a09864da13cb2964ca2fd714ecc15369a47f55acc52",
+  "data_revision": "2450602c941c2448078a532ff16aa714a31085b9dfb958ebc3f5c627940c1df8",
+  "usage": {
+    "wall_seconds": 19.353239624993876,
+    "money_usd": 0,
+    "tokens": 0
+  },
+  "status": "succeeded",
+  "error": null,
+  "protocol_revision": "preconfirmation-pilot",
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "split": "pilot",
+  "command": [
+    ".venv/bin/python",
+    "study/native_pilot.py",
+    "--out",
+    "evidence/pilot-fresh-environment",
+    "--steps",
+    "5000"
+  ],
+  "exit_code": 0
+}

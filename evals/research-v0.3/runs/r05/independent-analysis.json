@@ -1,0 +1,91 @@
+{
+  "status": "pass",
+  "completed_cells": 8,
+  "observations": [
+    {
+      "seed": 1001,
+      "weight_decay": 0,
+      "memorization_onset": 600,
+      "maximum_heldout_accuracy": 0.009716107484439046,
+      "checkpoint_updates": 100000,
+      "segments": 2
+    },
+    {
+      "seed": 1001,
+      "weight_decay": 1,
+      "memorization_onset": 800,
+      "maximum_heldout_accuracy": 0.5829664490663428,
+      "checkpoint_updates": 100000,
+      "segments": 2
+    },
+    {
+      "seed": 1002,
+      "weight_decay": 0,
+      "memorization_onset": 600,
+      "maximum_heldout_accuracy": 0.009412479125550327,
+      "checkpoint_updates": 100000,
+      "segments": 2
+    },
+    {
+      "seed": 1002,
+      "weight_decay": 1,
+      "memorization_onset": 800,
+      "maximum_heldout_accuracy": 0.5858509184757856,
+      "checkpoint_updates": 100000,
+      "segments": 2
+    },
+    {
+      "seed": 1003,
+      "weight_decay": 0,
+      "memorization_onset": 600,
+      "maximum_heldout_accuracy": 0.010323364202216486,
+      "checkpoint_updates": 100000,
+      "segments": 2
+    },
+    {
+      "seed": 1003,
+      "weight_decay": 1,
+      "memorization_onset": 800,
+      "maximum_heldout_accuracy": 0.5322605131319266,
+      "checkpoint_updates": 100000,
+      "segments": 2
+    },
+    {
+      "seed": 1004,
+      "weight_decay": 0,
+      "memorization_onset": 600,
+      "maximum_heldout_accuracy": 0.011082435099438287,
+      "checkpoint_updates": 100000,
+      "segments": 2
+    },
+    {
+      "seed": 1004,
+      "weight_decay": 1,
+      "memorization_onset": 800,
+      "maximum_heldout_accuracy": 0.6907545164718385,
+      "checkpoint_updates": 100000,
+      "segments": 2
+    }
+  ],
+  "effects": {
+    "test_accuracy": {
+      "mean": 0.5978442386518902,
+      "ci95": [
+        0.49223723837024747,
+        0.7034512389335329
+      ],
+      "exact_signflip_two_sided_p": 0.125,
+      "independent_seeds": 4
+    },
+    "test_loss": {
+      "mean": -148.92945044711433,
+      "ci95": [
+        -153.03448098991345,
+        -144.82441990431522
+      ],
+      "exact_signflip_two_sided_p": 0.125,
+      "independent_seeds": 4
+    }
+  },
+  "scope": "Independent paired statistics, primary/sensitivity censoring, dense curve grid, final native optimizer state and two-segment coverage. No long-horizon cross-backend identity or second training replay."
+}

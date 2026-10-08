@@ -1,0 +1,14 @@
+{
+  "seed": 1002,
+  "weight_decay": 0,
+  "step": 100000,
+  "checkpoint": "evidence/confirmation/attempts/s1002-wd0-to100000/checkpoint-100000.npz",
+  "checkpoint_sha256": "9f1b4875f3bb31f6e0df5dc2c94b66818316d5e0af88aff2c86bff08ca71e15f",
+  "curve": "evidence/confirmation/attempts/s1002-wd0-to100000/curve-100000.json",
+  "curve_sha256": "7b4b61f8299bef9abdc96ac5148ed495f9b6c6de5ea0d2be067f7bef64e8597f",
+  "attempt_chain": [
+    "s1002-wd0-to050000",
+    "s1002-wd0-to100000"
+  ],
+  "initial_weights_sha256": "0c1f5bd424ed20347ccd9bf57f4c29a678ed42f7ec28da821ef9badc645e0632"
+}

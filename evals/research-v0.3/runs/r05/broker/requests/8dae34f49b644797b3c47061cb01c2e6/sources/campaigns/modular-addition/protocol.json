@@ -1,0 +1,90 @@
+{
+  "revision": "modadd-v1",
+  "frozen": true,
+  "frozen_at": "2026-10-08T01:55:42.094022+00:00",
+  "seeds": [
+    1001,
+    1002,
+    1003,
+    1004
+  ],
+  "pilot_seeds": [
+    61
+  ],
+  "weight_decay": [
+    0,
+    1
+  ],
+  "updates": 100000,
+  "evaluation_interval": 100,
+  "training_code": [
+    "study/train.py",
+    "study/engine.py",
+    "study/engine.c",
+    "study/build.py"
+  ],
+  "training_source_hashes": {
+    "study/train.py": "554a1287d8db9221ac8275e8582b39b5f3a4b5192f5e530fd1a5d1171f0fe77c",
+    "study/engine.py": "9ebebe1839409b44c5da48af305f83de548a7c0deb32f7b4dec667fc65575fdc",
+    "study/engine.c": "fd439bee1b101264c2b71f8afdb6daa60a466ea8e5ccba3eacf21fa6c6e50d5c",
+    "study/build.py": "16fac18f75ef5f4c1beebacdb847cb1b8a35e8235fb2071668aca4c58c862f89"
+  },
+  "training_source_revision": "4bb1fb11fd11206a5040a315d24982b157fd3156160ceaafd73ddd42bb334b8f",
+  "backend": "CPU Accelerate C, float32",
+  "optimizer": {
+    "name": "AdamW",
+    "learning_rate": 0.001,
+    "betas": [
+      0.9,
+      0.98
+    ],
+    "epsilon": 1e-08
+  },
+  "architecture": [
+    194,
+    128,
+    97
+  ],
+  "bias": false,
+  "activation": "ReLU",
+  "train_count": 2822,
+  "test_count": 6587,
+  "split": "default_rng(seed).permutation(9409), first 2822",
+  "primary": {
+    "memorization_accuracy": 0.99,
+    "generalization_accuracy": 0.95,
+    "sustain": 3,
+    "minimum_lag": 1000,
+    "require_continuous_memorization": true
+  },
+  "sensitivity": {
+    "generalization_accuracy": [
+      0.9,
+      0.99
+    ],
+    "sustain": [
+      1,
+      5
+    ],
+    "minimum_lag": [
+      500,
+      5000
+    ]
+  },
+  "independent_unit": "paired seed",
+  "uncertainty": "95% paired Student-t confidence interval with df=3; descriptive exact sign-flip sensitivity; no multiplicity-adjusted significance claims",
+  "qualification": {
+    "path": "evidence/pilot-005/qualification.json",
+    "sha256": "a2cb6d2c629092911327f6a749836cae0bb8efb39833eaa4b2e1021bbbd3b0dc",
+    "media_type": "application/json",
+    "retention": "retained"
+  },
+  "qualification_resolution": "An initial 50-update free-trajectory closeness gate failed for decay 0 (max weight difference 0.00103). Retained diagnostics show exact initial forward agreement, gradients within 8.74e-11, first 20 updates within 5.74e-7, and 20 updates anchored at identical PyTorch weights/moments within 1.50e-8 for both conditions. This qualifies mathematical float32 implementation but not bitwise long-horizon equivalence to PyTorch. Exact native checkpoint continuation passed. Gate revision is before confirmation and is explicitly disclosed.",
+  "compute_budget_seconds": 1800,
+  "analysis_reserve_seconds": 180,
+  "attempt_limit": 64,
+  "completion": "all eight cells at 100000 plus endpoint checks, reanalysis and audit",
+  "stop": "resource stop produces partial; no shorter confirmation horizon",
+  "paired_seeds": true,
+  "minimum_confirmation_runs": 8
+}

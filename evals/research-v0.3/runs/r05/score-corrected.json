@@ -1,0 +1,417 @@
+{
+  "task_id": "modular-addition",
+  "claimed_execution_status": "complete",
+  "numerical": {
+    "name": "independent modular-addition endpoints/checkpoints",
+    "correct": 40,
+    "total": 40,
+    "checks": [
+      {
+        "cell": [
+          1001,
+          0
+        ],
+        "metric": "train_accuracy",
+        "value": 1.0,
+        "pass": true
+      },
+      {
+        "cell": [
+          1001,
+          0
+        ],
+        "metric": "train_loss",
+        "value": 3.378801998592464e-07,
+        "pass": true
+      },
+      {
+        "cell": [
+          1001,
+          0
+        ],
+        "metric": "test_accuracy",
+        "value": 0.0,
+        "pass": true
+      },
+      {
+        "cell": [
+          1001,
+          0
+        ],
+        "metric": "test_loss",
+        "value": 154.1877332148868,
+        "pass": true
+      },
+      {
+        "cell": [
+          1001,
+          0
+        ],
+        "metric": "checkpoint_predictions",
+        "pass": true,
+        "exact_prediction_agreement": 9409,
+        "total_predictions": 9409,
+        "maximum_logit_error": 0.0,
+        "tolerance": "abs <= 1e-4 + 1e-4*abs(retained_logit)"
+      },
+      {
+        "cell": [
+          1001,
+          1
+        ],
+        "metric": "train_accuracy",
+        "value": 1.0,
+        "pass": true
+      },
+      {
+        "cell": [
+          1001,
+          1
+        ],
+        "metric": "train_loss",
+        "value": 3.69744468930198e-05,
+        "pass": true
+      },
+      {
+        "cell": [
+          1001,
+          1
+        ],
+        "metric": "test_accuracy",
+        "value": 0.5829664490663428,
+        "pass": true
+      },
+      {
+        "cell": [
+          1001,
+          1
+        ],
+        "metric": "test_loss",
+        "value": 1.758823221735254,
+        "pass": true
+      },
+      {
+        "cell": [
+          1001,
+          1
+        ],
+        "metric": "checkpoint_predictions",
+        "pass": true,
+        "exact_prediction_agreement": 9409,
+        "total_predictions": 9409,
+        "maximum_logit_error": 0.0,
+        "tolerance": "abs <= 1e-4 + 1e-4*abs(retained_logit)"
+      },
+      {
+        "cell": [
+          1002,
+          0
+        ],
+        "metric": "train_accuracy",
+        "value": 1.0,
+        "pass": true
+      },
+      {
+        "cell": [
+          1002,
+          0
+        ],
+        "metric": "train_loss",
+        "value": 3.342093673629669e-07,
+        "pass": true
+      },
+      {
+        "cell": [
+          1002,
+          0
+        ],
+        "metric": "test_accuracy",
+        "value": 0.0,
+        "pass": true
+      },
+      {
+        "cell": [
+          1002,
+          0
+        ],
+        "metric": "test_loss",
+        "value": 150.61330370878534,
+        "pass": true
+      },
+      {
+        "cell": [
+          1002,
+          0
+        ],
+        "metric": "checkpoint_predictions",
+        "pass": true,
+        "exact_prediction_agreement": 9409,
+        "total_predictions": 9409,
+        "maximum_logit_error": 0.0,
+        "tolerance": "abs <= 1e-4 + 1e-4*abs(retained_logit)"
+      },
+      {
+        "cell": [
+          1002,
+          1
+        ],
+        "metric": "train_accuracy",
+        "value": 1.0,
+        "pass": true
+      },
+      {
+        "cell": [
+          1002,
+          1
+        ],
+        "metric": "train_loss",
+        "value": 3.796193661817002e-05,
+        "pass": true
+      },
+      {
+        "cell": [
+          1002,
+          1
+        ],
+        "metric": "test_accuracy",
+        "value": 0.5858509184757856,
+        "pass": true
+      },
+      {
+        "cell": [
+          1002,
+          1
+        ],
+        "metric": "test_loss",
+        "value": 1.7578556053027055,
+        "pass": true
+      },
+      {
+        "cell": [
+          1002,
+          1
+        ],
+        "metric": "checkpoint_predictions",
+        "pass": true,
+        "exact_prediction_agreement": 9409,
+        "total_predictions": 9409,
+        "maximum_logit_error": 0.0,
+        "tolerance": "abs <= 1e-4 + 1e-4*abs(retained_logit)"
+      },
+      {
+        "cell": [
+          1003,
+          0
+        ],
+        "metric": "train_accuracy",
+        "value": 1.0,
+        "pass": true
+      },
+      {
+        "cell": [
+          1003,
+          0
+        ],
+        "metric": "train_loss",
+        "value": 3.2310787174022494e-07,
+        "pass": true
+      },
+      {
+        "cell": [
+          1003,
+          0
+        ],
+        "metric": "test_accuracy",
+        "value": 0.0,
+        "pass": true
+      },
+      {
+        "cell": [
+          1003,
+          0
+        ],
+        "metric": "test_loss",
+        "value": 148.38161037539362,
+        "pass": true
+      },
+      {
+        "cell": [
+          1003,
+          0
+        ],
+        "metric": "checkpoint_predictions",
+        "pass": true,
+        "exact_prediction_agreement": 9409,
+        "total_predictions": 9409,
+        "maximum_logit_error": 0.0,
+        "tolerance": "abs <= 1e-4 + 1e-4*abs(retained_logit)"
+      },
+      {
+        "cell": [
+          1003,
+          1
+        ],
+        "metric": "train_accuracy",
+        "value": 1.0,
+        "pass": true
+      },
+      {
+        "cell": [
+          1003,
+          1
+        ],
+        "metric": "train_loss",
+        "value": 3.988789933529124e-05,
+        "pass": true
+      },
+      {
+        "cell": [
+          1003,
+          1
+        ],
+        "metric": "test_accuracy",
+        "value": 0.5322605131319266,
+        "pass": true
+      },
+      {
+        "cell": [
+          1003,
+          1
+        ],
+        "metric": "test_loss",
+        "value": 2.1259984514843473,
+        "pass": true
+      },
+      {
+        "cell": [
+          1003,
+          1
+        ],
+        "metric": "checkpoint_predictions",
+        "pass": true,
+        "exact_prediction_agreement": 9409,
+        "total_predictions": 9409,
+        "maximum_logit_error": 0.0,
+        "tolerance": "abs <= 1e-4 + 1e-4*abs(retained_logit)"
+      },
+      {
+        "cell": [
+          1004,
+          0
+        ],
+        "metric": "train_accuracy",
+        "value": 1.0,
+        "pass": true
+      },
+      {
+        "cell": [
+          1004,
+          0
+        ],
+        "metric": "train_loss",
+        "value": 3.275207790153818e-07,
+        "pass": true
+      },
+      {
+        "cell": [
+          1004,
+          0
+        ],
+        "metric": "test_accuracy",
+        "value": 0.0004554425383330803,
+        "pass": true
+      },
+      {
+        "cell": [
+          1004,
+          0
+        ],
+        "metric": "test_loss",
+        "value": 149.41129963830582,
+        "pass": true
+      },
+      {
+        "cell": [
+          1004,
+          0
+        ],
+        "metric": "checkpoint_predictions",
+        "pass": true,
+        "exact_prediction_agreement": 9409,
+        "total_predictions": 9409,
+        "maximum_logit_error": 0.0,
+        "tolerance": "abs <= 1e-4 + 1e-4*abs(retained_logit)"
+      },
+      {
+        "cell": [
+          1004,
+          1
+        ],
+        "metric": "train_accuracy",
+        "value": 1.0,
+        "pass": true
+      },
+      {
+        "cell": [
+          1004,
+          1
+        ],
+        "metric": "train_loss",
+        "value": 3.358768291358951e-05,
+        "pass": true
+      },
+      {
+        "cell": [
+          1004,
+          1
+        ],
+        "metric": "test_accuracy",
+        "value": 0.6907545164718385,
+        "pass": true
+      },
+      {
+        "cell": [
+          1004,
+          1
+        ],
+        "metric": "test_loss",
+        "value": 1.2334678703919155,
+        "pass": true
+      },
+      {
+        "cell": [
+          1004,
+          1
+        ],
+        "metric": "checkpoint_predictions",
+        "pass": true,
+        "exact_prediction_agreement": 9409,
+        "total_predictions": 9409,
+        "maximum_logit_error": 0.0,
+        "tolerance": "abs <= 1e-4 + 1e-4*abs(retained_logit)"
+      }
+    ],
+    "errors": [],
+    "required_trajectories": 8,
+    "observed_trajectories": 8,
+    "automatic_controls_pass": true,
+    "scope": "Labels, partition coverage, endpoint metrics, final checkpoint predictions and curve coverage. Training history and scientific interpretation require separate review."
+  },
+  "artifacts": {
+    "manuscript": {
+      "path": "REPORT.md",
+      "sha256": "16c6f05a857a3417af753bbecb2090a2ca54de44b4ffc760fc3a2b4f8bf8432e"
+    },
+    "review": {
+      "path": "review.json",
+      "sha256": "32aba4000f7b1a6f7127ed06eec687ed61b9be55b3188d5ea3b8e96fe0a92616"
+    },
+    "artifact_manifest": {
+      "path": "artifact-manifest.json",
+      "sha256": "04f0298470b8d4c532e8c539bfa6f3708bc26f739c99f0f97501deac3ea536d4"
+    }
+  },
+  "substantive_review": "pending",
+  "overall_completion": "unproven",
+  "scorer_sha256": "91175b401b9415ba4ce3f16d67ce8db2b6a9a271e967019fae97bf87fae176e5"
+}

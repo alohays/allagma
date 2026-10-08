@@ -1,0 +1,37 @@
+{"wd": 0, "trace": [{"step": 1, "w1_max_error": 4.0838494896888733e-07, "w2_max_error": 5.401670932769775e-07}, {"step": 2, "w1_max_error": 4.0978193283081055e-07, "w2_max_error": 5.438923835754395e-07}, {"step": 5, "w1_max_error": 4.102475941181183e-07, "w2_max_error": 5.476176738739014e-07}, {"step": 10, "w1_max_error": 4.3958425521850586e-07, "w2_max_error": 5.364418029785156e-07}, {"step": 20, "w1_max_error": 5.736947059631348e-07, "w2_max_error": 5.364418029785156e-07}, {"step": 50, "w1_max_error": 0.001029781997203827, "w2_max_error": 3.06740403175354e-05}], "forward": 0.0, "gradient": 8.731149137020111e-11}
+{"wd": 1, "trace": [{"step": 1, "w1_max_error": 4.0885061025619507e-07, "w2_max_error": 5.401670932769775e-07}, {"step": 2, "w1_max_error": 4.102475941181183e-07, "w2_max_error": 5.401670932769775e-07}, {"step": 5, "w1_max_error": 4.093162715435028e-07, "w2_max_error": 5.401670932769775e-07}, {"step": 10, "w1_max_error": 4.3213367462158203e-07, "w2_max_error": 5.289912223815918e-07}, {"step": 20, "w1_max_error": 5.513429641723633e-07, "w2_max_error": 5.364418029785156e-07}, {"step": 50, "w1_max_error": 1.2889504432678223e-06, "w2_max_error": 2.1494925022125244e-06}], "forward": 0.0, "gradient": 8.731149137020111e-11}
+{
+  "qualification_passed": true,
+  "seed": 61,
+  "checks": [
+    {
+      "weight_decay": 0,
+      "forward_max_abs_error": 0.0,
+      "gradient_max_abs_error": 8.731149137020111e-11,
+      "free_trajectory_weights_after_50_max_abs_error": 0.001029781997203827,
+      "initial_20_update_max_error": 5.736947059631348e-07,
+      "aligned_optimizer_updates_51_to_70_max_abs_error": 1.4901161193847656e-08,
+      "resume_50_plus_50_exact": true
+    },
+    {
+      "weight_decay": 1,
+      "forward_max_abs_error": 0.0,
+      "gradient_max_abs_error": 8.731149137020111e-11,
+      "free_trajectory_weights_after_50_max_abs_error": 2.1494925022125244e-06,
+      "initial_20_update_max_error": 5.513429641723633e-07,
+      "aligned_optimizer_updates_51_to_70_max_abs_error": 1.4901161193847656e-08,
+      "resume_50_plus_50_exact": true
+    }
+  ],
+  "known_answer_labels": 5,
+  "split_disjoint_exhaustive": true,
+  "training_dtype": "float32",
+  "backend": "CPU Accelerate via C",
+  "steps": 5000,
+  "seconds_including_evaluation": 9.299603166989982,
+  "seconds_per_update": 0.0018599206333979965,
+  "projected_complete_study_seconds": 1487.9365067183971,
+  "torch": "2.14.1",
+  "numpy": "2.4.6",
+  "platform": "macOS-26.6.2-arm64-arm-64bit"
+}

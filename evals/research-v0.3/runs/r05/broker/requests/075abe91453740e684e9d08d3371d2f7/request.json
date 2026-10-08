@@ -1,0 +1,16 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "study/recompute_worker.py",
+    "--out",
+    "recompute-smoke",
+    "--compare",
+    "analysis"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "recompute-entrypoint-smoke",
+  "request_id": "075abe91453740e684e9d08d3371d2f7",
+  "timeout_seconds": 45.0
+}

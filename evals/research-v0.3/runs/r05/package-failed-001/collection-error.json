@@ -1,0 +1,6 @@
+{
+  "operation": "candidate package collection",
+  "status": "failed",
+  "error": "Unexpected retained directory symlink: reproduction-smoke/inputs/materials/wheels",
+  "scope": "Transport rejected an internal absolute dependency alias before copying. Candidate unchanged; preserve this failed collection and collect a new package after adding explicit confined-link metadata."
+}

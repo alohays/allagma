@@ -1,0 +1,174 @@
+{
+  "schema_version": "0.2",
+  "record_type": "RunRecord",
+  "run_id": "s1002-wd0-to100000",
+  "attempt_id": "c0c8ae6adaa54be08ddcb2d14593c2a5",
+  "attempt_number": 2,
+  "campaign_id": "modular-addition",
+  "experiment_id": "s1002-wd0",
+  "started_at": "2026-10-08T02:02:43.388437+00:00",
+  "ended_at": "2026-10-08T02:03:40.581270+00:00",
+  "inputs": [
+    {
+      "path": "campaigns/modular-addition/protocol.json",
+      "sha256": "18d50f47d00720e973317226aa523e1d5e44e1d3e83c7b7e7b4acca164b4bb4b",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "campaigns/modular-addition/materials/study/train.py",
+      "sha256": "554a1287d8db9221ac8275e8582b39b5f3a4b5192f5e530fd1a5d1171f0fe77c",
+      "media_type": "text/plain",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to100000/started.json",
+      "sha256": "cdc4da771a1ee1948fde45608a442c6d8d9eb2e1d2470b059542d7f75af6bd9c",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to100000/resume.json",
+      "sha256": "9962cd8abd6981fe0b976ef9570b8fcc83566cdd302c73b834d707b0f706dea1",
+      "media_type": "application/json",
+      "retention": "retained"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to100000/arrays.npz",
+      "sha256": "aaab7919a83afdeff4fef6a699f0b80ceccbd48551f6c144ee5852f5ec639e64",
+      "media_type": "text/plain",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to100000/checkpoint-060000.npz",
+      "sha256": "22ebd77367014d1b81f5b6c793091ebe7f4381836ad1b244c5d955b47bbe4f04",
+      "media_type": "text/plain",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to100000/checkpoint-070000.npz",
+      "sha256": "e1a6be691ffb538427201247791a436a47a9f5357d5525c1f385df32c7b7154e",
+      "media_type": "text/plain",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to100000/checkpoint-080000.npz",
+      "sha256": "3aa6312baf17366a0c87cc9854b3ee91da52a355126090015edfa5f43cac8752",
+      "media_type": "text/plain",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to100000/checkpoint-090000.npz",
+      "sha256": "9a67b9ea7b0cb33be877d129eb027288acd6553dde2142bc5d4cb3e0870510a5",
+      "media_type": "text/plain",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to100000/checkpoint-100000.npz",
+      "sha256": "9f1b4875f3bb31f6e0df5dc2c94b66818316d5e0af88aff2c86bff08ca71e15f",
+      "media_type": "text/plain",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to100000/completed.json",
+      "sha256": "d87041441450039665e1892b6765b81179eae44e6055b778bd17f0decb63776f",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to100000/curve-060000.json",
+      "sha256": "5de8417883fe7a0362f132fbaee38bf58c106331eb7d425f37400d1acfabdfc4",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to100000/curve-070000.json",
+      "sha256": "06ebd361d1d3b366ec6153b3e2ebde1bea2ce917df58d625a4f2ba16cac06496",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to100000/curve-080000.json",
+      "sha256": "1c12377c0d0b33683efff3ba318e3e20da839a910c2c72c2ceca38a7e4c9c2a4",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to100000/curve-090000.json",
+      "sha256": "aa4b741e4ec10b7bc0e12e82c5f5414b4538b0c4382e3f5a16af7d32d3f31f9e",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to100000/curve-100000.json",
+      "sha256": "7b4b61f8299bef9abdc96ac5148ed495f9b6c6de5ea0d2be067f7bef64e8597f",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to100000/curve.json",
+      "sha256": "7b4b61f8299bef9abdc96ac5148ed495f9b6c6de5ea0d2be067f7bef64e8597f",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to100000/measurement.json",
+      "sha256": "0d487f91fc9c64aa7ebcd7aa695515f4967a65ccaaebacde10b4215540694628",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to100000/resume.json",
+      "sha256": "9962cd8abd6981fe0b976ef9570b8fcc83566cdd302c73b834d707b0f706dea1",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to100000/started.json",
+      "sha256": "cdc4da771a1ee1948fde45608a442c6d8d9eb2e1d2470b059542d7f75af6bd9c",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/confirmation/attempts/s1002-wd0-to100000/weights.npz",
+      "sha256": "d7467125f1e536c64317896139c7d0ac3acb2cea349c41a436e7c05573a67843",
+      "media_type": "text/plain",
+      "retention": "retained"
+    }
+  ],
+  "environment": {
+    "broker_receipt": ".compute/responses/c0c8ae6adaa54be08ddcb2d14593c2a5.json",
+    "category": "compute",
+    "source_capture": "prospective frozen confirmation",
+    "broker_status": "completed"
+  },
+  "model_revision": "4bb1fb11fd11206a5040a315d24982b157fd3156160ceaafd73ddd42bb334b8f",
+  "data_revision": "18d50f47d00720e973317226aa523e1d5e44e1d3e83c7b7e7b4acca164b4bb4b",
+  "usage": {
+    "wall_seconds": 57.25787654099986,
+    "money_usd": 0,
+    "tokens": 0
+  },
+  "status": "succeeded",
+  "error": null,
+  "protocol_revision": "modadd-v1",
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "split": "confirmation",
+  "command": [
+    ".venv/bin/python",
+    "study/train.py",
+    "--seed",
+    "1002",
+    "--weight-decay",
+    "0",
+    "--end-step",
+    "100000",
+    "--attempt-id",
+    "s1002-wd0-to100000",
+    "--root",
+    "evidence/confirmation"
+  ],
+  "exit_code": 0
+}

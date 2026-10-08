@@ -1,0 +1,25 @@
+{
+  "files": {
+    ".agents/skills/allagma-analysis/SKILL.md": "8349c948e952d3b468cf78b99b54404f0e99bf7d6bdaf1fd4c4eff17a9e6d924",
+    ".agents/skills/allagma-audit/SKILL.md": "2e65f6fe5425bdecdbd0b6e651eb1f011c301bf0c682aa5e990d7d93676687d9",
+    ".agents/skills/allagma-context-active-brief/SKILL.md": "9f82f6e10ea891731ba6dd95b30aa72bb8f5f2f46fd5512fd002f48b4cfd0def",
+    ".agents/skills/allagma-experiment/SKILL.md": "bc2e0f29d5b195675e7dbeaa2b657d722d7b205a217dea3eefb5534654b79b28",
+    ".agents/skills/allagma-protocol/SKILL.md": "05cf212885f959fee8515d1e0d957a8e70d658c9e3235a7a439ae662203f1a33",
+    ".agents/skills/allagma-research/SKILL.md": "912a9de08f09dc577ef296a12cb2f90f2be31b72bba4223386af514dcc8aa3d2",
+    ".agents/skills/allagma-scope/SKILL.md": "073c3d29103085ce63877d676b03d9c8efb1c34d00e695106585c45ab9a8f02f",
+    ".agents/skills/allagma-writing/SKILL.md": "b4dd79a119d497f04207c743c154129c28f65368de276e395ad58f8e1077d484",
+    "ALLAGMA.md": "42d9373fc55e6decf22549960f435edcd3d191ad089dd52026c7e0caf7ed8b44"
+  },
+  "mapping": {
+    "codex:context/active-brief": ".agents/skills/allagma-context-active-brief/SKILL.md",
+    "codex:recipe/research": ".agents/skills/allagma-research/SKILL.md",
+    "codex:research/analysis": ".agents/skills/allagma-analysis/SKILL.md",
+    "codex:research/audit": ".agents/skills/allagma-audit/SKILL.md",
+    "codex:research/experiment": ".agents/skills/allagma-experiment/SKILL.md",
+    "codex:research/protocol": ".agents/skills/allagma-protocol/SKILL.md",
+    "codex:research/scope": ".agents/skills/allagma-scope/SKILL.md",
+    "codex:research/writing": ".agents/skills/allagma-writing/SKILL.md",
+    "generic": "ALLAGMA.md"
+  },
+  "schema_version": "0.2"
+}

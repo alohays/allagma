@@ -1,0 +1,10 @@
+{
+  "input_contracts": [
+    "ExperimentSpec"
+  ],
+  "output_contracts": [
+    "RunRecord"
+  ],
+  "request": "Execute study-owned runner and evaluator in bounded local subprocesses.",
+  "expected": "Preserve evidence identity, version and declared capability boundaries."
+}

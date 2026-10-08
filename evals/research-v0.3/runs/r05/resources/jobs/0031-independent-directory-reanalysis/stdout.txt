@@ -1,0 +1,33 @@
+{
+  "complete_cells": 8,
+  "n_complete_pairs": 4,
+  "paired_uncertainty": {
+    "test_accuracy_difference": {
+      "n": 4,
+      "mean": 0.5978442386518902,
+      "sample_sd": 0.06636844122479427,
+      "standard_error": 0.03318422061239713,
+      "t_df": 3,
+      "t_critical": 3.1824463052837078,
+      "ci95": [
+        0.49223723837024747,
+        0.7034512389335329
+      ],
+      "exact_signflip_two_sided_p": 0.125
+    },
+    "test_loss_difference": {
+      "n": 4,
+      "mean": -148.92945044711433,
+      "sample_sd": 2.5797956345617954,
+      "standard_error": 1.2898978172808977,
+      "t_df": 3,
+      "t_critical": 3.1824463052837078,
+      "ci95": [
+        -153.03448098991345,
+        -144.82441990431522
+      ],
+      "exact_signflip_two_sided_p": 0.125
+    }
+  },
+  "output": "analysis-repeat"
+}

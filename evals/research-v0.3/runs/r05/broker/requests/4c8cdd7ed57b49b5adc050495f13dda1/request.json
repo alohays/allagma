@@ -1,0 +1,22 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "study/train.py",
+    "--seed",
+    "1004",
+    "--weight-decay",
+    "0",
+    "--end-step",
+    "100000",
+    "--attempt-id",
+    "s1004-wd0-to100000",
+    "--root",
+    "evidence/confirmation"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "s1004-wd0-to100000",
+  "request_id": "4c8cdd7ed57b49b5adc050495f13dda1",
+  "timeout_seconds": 125.0
+}

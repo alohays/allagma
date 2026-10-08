@@ -1,0 +1,1388 @@
+{
+  "task_id": "modular-addition",
+  "execution_status": "complete",
+  "protocol_sha256": "18d50f47d00720e973317226aa523e1d5e44e1d3e83c7b7e7b4acca164b4bb4b",
+  "independent_unit": "seed",
+  "n_complete_pairs": 4,
+  "runs": [
+    {
+      "seed": 1001,
+      "weight_decay": 0,
+      "updates": 100000,
+      "train_accuracy": 1.0,
+      "train_loss": 3.3788018938447535e-07,
+      "test_accuracy": 0.0,
+      "test_loss": 154.18773321488678,
+      "transition": {
+        "memorization": {
+          "observed": true,
+          "time": 600,
+          "confirmation_time": 800,
+          "censor_time": null
+        },
+        "generalization": {
+          "observed": false,
+          "time": null,
+          "confirmation_time": null,
+          "censor_time": 100000
+        },
+        "lag": null,
+        "lag_lower_bound_exclusive": 99200,
+        "memorization_retained_until_generalization_confirmation": null,
+        "delayed_grokking": false,
+        "classification": "not_observed_censored",
+        "generalization_level": 0.95,
+        "sustain": 3,
+        "minimum_lag": 1000
+      },
+      "sensitivity": {
+        "generalization_0.9": {
+          "memorization": {
+            "observed": true,
+            "time": 600,
+            "confirmation_time": 800,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99200,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.9,
+          "sustain": 3,
+          "minimum_lag": 1000
+        },
+        "generalization_0.99": {
+          "memorization": {
+            "observed": true,
+            "time": 600,
+            "confirmation_time": 800,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99200,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.99,
+          "sustain": 3,
+          "minimum_lag": 1000
+        },
+        "sustain_1": {
+          "memorization": {
+            "observed": true,
+            "time": 600,
+            "confirmation_time": 600,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99400,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 1,
+          "minimum_lag": 1000
+        },
+        "sustain_5": {
+          "memorization": {
+            "observed": true,
+            "time": 600,
+            "confirmation_time": 1000,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99000,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 5,
+          "minimum_lag": 1000
+        },
+        "lag_500": {
+          "memorization": {
+            "observed": true,
+            "time": 600,
+            "confirmation_time": 800,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99200,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 3,
+          "minimum_lag": 500
+        },
+        "lag_5000": {
+          "memorization": {
+            "observed": true,
+            "time": 600,
+            "confirmation_time": 800,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99200,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 3,
+          "minimum_lag": 5000
+        }
+      },
+      "evidence": "evidence/confirmation/attempts/s1001-wd0-to100000/measurement.json"
+    },
+    {
+      "seed": 1001,
+      "weight_decay": 1,
+      "updates": 100000,
+      "train_accuracy": 1.0,
+      "train_loss": 3.6974446893047215e-05,
+      "test_accuracy": 0.5829664490663428,
+      "test_loss": 1.758823221735254,
+      "transition": {
+        "memorization": {
+          "observed": true,
+          "time": 800,
+          "confirmation_time": 1000,
+          "censor_time": null
+        },
+        "generalization": {
+          "observed": false,
+          "time": null,
+          "confirmation_time": null,
+          "censor_time": 100000
+        },
+        "lag": null,
+        "lag_lower_bound_exclusive": 99000,
+        "memorization_retained_until_generalization_confirmation": null,
+        "delayed_grokking": false,
+        "classification": "not_observed_censored",
+        "generalization_level": 0.95,
+        "sustain": 3,
+        "minimum_lag": 1000
+      },
+      "sensitivity": {
+        "generalization_0.9": {
+          "memorization": {
+            "observed": true,
+            "time": 800,
+            "confirmation_time": 1000,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99000,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.9,
+          "sustain": 3,
+          "minimum_lag": 1000
+        },
+        "generalization_0.99": {
+          "memorization": {
+            "observed": true,
+            "time": 800,
+            "confirmation_time": 1000,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99000,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.99,
+          "sustain": 3,
+          "minimum_lag": 1000
+        },
+        "sustain_1": {
+          "memorization": {
+            "observed": true,
+            "time": 800,
+            "confirmation_time": 800,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99200,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 1,
+          "minimum_lag": 1000
+        },
+        "sustain_5": {
+          "memorization": {
+            "observed": true,
+            "time": 800,
+            "confirmation_time": 1200,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 98800,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 5,
+          "minimum_lag": 1000
+        },
+        "lag_500": {
+          "memorization": {
+            "observed": true,
+            "time": 800,
+            "confirmation_time": 1000,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99000,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 3,
+          "minimum_lag": 500
+        },
+        "lag_5000": {
+          "memorization": {
+            "observed": true,
+            "time": 800,
+            "confirmation_time": 1000,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99000,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 3,
+          "minimum_lag": 5000
+        }
+      },
+      "evidence": "evidence/confirmation/attempts/s1001-wd1-to100000/measurement.json"
+    },
+    {
+      "seed": 1002,
+      "weight_decay": 0,
+      "updates": 100000,
+      "train_accuracy": 1.0,
+      "train_loss": 3.342093730487979e-07,
+      "test_accuracy": 0.0,
+      "test_loss": 150.61330370878537,
+      "transition": {
+        "memorization": {
+          "observed": true,
+          "time": 600,
+          "confirmation_time": 800,
+          "censor_time": null
+        },
+        "generalization": {
+          "observed": false,
+          "time": null,
+          "confirmation_time": null,
+          "censor_time": 100000
+        },
+        "lag": null,
+        "lag_lower_bound_exclusive": 99200,
+        "memorization_retained_until_generalization_confirmation": null,
+        "delayed_grokking": false,
+        "classification": "not_observed_censored",
+        "generalization_level": 0.95,
+        "sustain": 3,
+        "minimum_lag": 1000
+      },
+      "sensitivity": {
+        "generalization_0.9": {
+          "memorization": {
+            "observed": true,
+            "time": 600,
+            "confirmation_time": 800,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99200,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.9,
+          "sustain": 3,
+          "minimum_lag": 1000
+        },
+        "generalization_0.99": {
+          "memorization": {
+            "observed": true,
+            "time": 600,
+            "confirmation_time": 800,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99200,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.99,
+          "sustain": 3,
+          "minimum_lag": 1000
+        },
+        "sustain_1": {
+          "memorization": {
+            "observed": true,
+            "time": 600,
+            "confirmation_time": 600,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99400,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 1,
+          "minimum_lag": 1000
+        },
+        "sustain_5": {
+          "memorization": {
+            "observed": true,
+            "time": 600,
+            "confirmation_time": 1000,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99000,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 5,
+          "minimum_lag": 1000
+        },
+        "lag_500": {
+          "memorization": {
+            "observed": true,
+            "time": 600,
+            "confirmation_time": 800,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99200,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 3,
+          "minimum_lag": 500
+        },
+        "lag_5000": {
+          "memorization": {
+            "observed": true,
+            "time": 600,
+            "confirmation_time": 800,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99200,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 3,
+          "minimum_lag": 5000
+        }
+      },
+      "evidence": "evidence/confirmation/attempts/s1002-wd0-to100000/measurement.json"
+    },
+    {
+      "seed": 1002,
+      "weight_decay": 1,
+      "updates": 100000,
+      "train_accuracy": 1.0,
+      "train_loss": 3.796193661819639e-05,
+      "test_accuracy": 0.5858509184757856,
+      "test_loss": 1.7578556053027055,
+      "transition": {
+        "memorization": {
+          "observed": true,
+          "time": 800,
+          "confirmation_time": 1000,
+          "censor_time": null
+        },
+        "generalization": {
+          "observed": false,
+          "time": null,
+          "confirmation_time": null,
+          "censor_time": 100000
+        },
+        "lag": null,
+        "lag_lower_bound_exclusive": 99000,
+        "memorization_retained_until_generalization_confirmation": null,
+        "delayed_grokking": false,
+        "classification": "not_observed_censored",
+        "generalization_level": 0.95,
+        "sustain": 3,
+        "minimum_lag": 1000
+      },
+      "sensitivity": {
+        "generalization_0.9": {
+          "memorization": {
+            "observed": true,
+            "time": 800,
+            "confirmation_time": 1000,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99000,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.9,
+          "sustain": 3,
+          "minimum_lag": 1000
+        },
+        "generalization_0.99": {
+          "memorization": {
+            "observed": true,
+            "time": 800,
+            "confirmation_time": 1000,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99000,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.99,
+          "sustain": 3,
+          "minimum_lag": 1000
+        },
+        "sustain_1": {
+          "memorization": {
+            "observed": true,
+            "time": 800,
+            "confirmation_time": 800,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99200,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 1,
+          "minimum_lag": 1000
+        },
+        "sustain_5": {
+          "memorization": {
+            "observed": true,
+            "time": 800,
+            "confirmation_time": 1200,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 98800,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 5,
+          "minimum_lag": 1000
+        },
+        "lag_500": {
+          "memorization": {
+            "observed": true,
+            "time": 800,
+            "confirmation_time": 1000,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99000,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 3,
+          "minimum_lag": 500
+        },
+        "lag_5000": {
+          "memorization": {
+            "observed": true,
+            "time": 800,
+            "confirmation_time": 1000,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99000,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 3,
+          "minimum_lag": 5000
+        }
+      },
+      "evidence": "evidence/confirmation/attempts/s1002-wd1-to100000/measurement.json"
+    },
+    {
+      "seed": 1003,
+      "weight_decay": 0,
+      "updates": 100000,
+      "train_accuracy": 1.0,
+      "train_loss": 3.231078654310551e-07,
+      "test_accuracy": 0.0,
+      "test_loss": 148.38161037539362,
+      "transition": {
+        "memorization": {
+          "observed": true,
+          "time": 600,
+          "confirmation_time": 800,
+          "censor_time": null
+        },
+        "generalization": {
+          "observed": false,
+          "time": null,
+          "confirmation_time": null,
+          "censor_time": 100000
+        },
+        "lag": null,
+        "lag_lower_bound_exclusive": 99200,
+        "memorization_retained_until_generalization_confirmation": null,
+        "delayed_grokking": false,
+        "classification": "not_observed_censored",
+        "generalization_level": 0.95,
+        "sustain": 3,
+        "minimum_lag": 1000
+      },
+      "sensitivity": {
+        "generalization_0.9": {
+          "memorization": {
+            "observed": true,
+            "time": 600,
+            "confirmation_time": 800,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99200,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.9,
+          "sustain": 3,
+          "minimum_lag": 1000
+        },
+        "generalization_0.99": {
+          "memorization": {
+            "observed": true,
+            "time": 600,
+            "confirmation_time": 800,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99200,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.99,
+          "sustain": 3,
+          "minimum_lag": 1000
+        },
+        "sustain_1": {
+          "memorization": {
+            "observed": true,
+            "time": 600,
+            "confirmation_time": 600,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99400,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 1,
+          "minimum_lag": 1000
+        },
+        "sustain_5": {
+          "memorization": {
+            "observed": true,
+            "time": 600,
+            "confirmation_time": 1000,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99000,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 5,
+          "minimum_lag": 1000
+        },
+        "lag_500": {
+          "memorization": {
+            "observed": true,
+            "time": 600,
+            "confirmation_time": 800,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99200,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 3,
+          "minimum_lag": 500
+        },
+        "lag_5000": {
+          "memorization": {
+            "observed": true,
+            "time": 600,
+            "confirmation_time": 800,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99200,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 3,
+          "minimum_lag": 5000
+        }
+      },
+      "evidence": "evidence/confirmation/attempts/s1003-wd0-to100000/measurement.json"
+    },
+    {
+      "seed": 1003,
+      "weight_decay": 1,
+      "updates": 100000,
+      "train_accuracy": 1.0,
+      "train_loss": 3.988789933531478e-05,
+      "test_accuracy": 0.5322605131319266,
+      "test_loss": 2.1259984514843473,
+      "transition": {
+        "memorization": {
+          "observed": true,
+          "time": 800,
+          "confirmation_time": 1000,
+          "censor_time": null
+        },
+        "generalization": {
+          "observed": false,
+          "time": null,
+          "confirmation_time": null,
+          "censor_time": 100000
+        },
+        "lag": null,
+        "lag_lower_bound_exclusive": 99000,
+        "memorization_retained_until_generalization_confirmation": null,
+        "delayed_grokking": false,
+        "classification": "not_observed_censored",
+        "generalization_level": 0.95,
+        "sustain": 3,
+        "minimum_lag": 1000
+      },
+      "sensitivity": {
+        "generalization_0.9": {
+          "memorization": {
+            "observed": true,
+            "time": 800,
+            "confirmation_time": 1000,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99000,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.9,
+          "sustain": 3,
+          "minimum_lag": 1000
+        },
+        "generalization_0.99": {
+          "memorization": {
+            "observed": true,
+            "time": 800,
+            "confirmation_time": 1000,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99000,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.99,
+          "sustain": 3,
+          "minimum_lag": 1000
+        },
+        "sustain_1": {
+          "memorization": {
+            "observed": true,
+            "time": 800,
+            "confirmation_time": 800,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99200,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 1,
+          "minimum_lag": 1000
+        },
+        "sustain_5": {
+          "memorization": {
+            "observed": true,
+            "time": 800,
+            "confirmation_time": 1200,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 98800,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 5,
+          "minimum_lag": 1000
+        },
+        "lag_500": {
+          "memorization": {
+            "observed": true,
+            "time": 800,
+            "confirmation_time": 1000,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99000,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 3,
+          "minimum_lag": 500
+        },
+        "lag_5000": {
+          "memorization": {
+            "observed": true,
+            "time": 800,
+            "confirmation_time": 1000,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99000,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 3,
+          "minimum_lag": 5000
+        }
+      },
+      "evidence": "evidence/confirmation/attempts/s1003-wd1-to100000/measurement.json"
+    },
+    {
+      "seed": 1004,
+      "weight_decay": 0,
+      "updates": 100000,
+      "train_accuracy": 1.0,
+      "train_loss": 3.275207669196471e-07,
+      "test_accuracy": 0.0004554425383330803,
+      "test_loss": 149.41129963830582,
+      "transition": {
+        "memorization": {
+          "observed": true,
+          "time": 600,
+          "confirmation_time": 800,
+          "censor_time": null
+        },
+        "generalization": {
+          "observed": false,
+          "time": null,
+          "confirmation_time": null,
+          "censor_time": 100000
+        },
+        "lag": null,
+        "lag_lower_bound_exclusive": 99200,
+        "memorization_retained_until_generalization_confirmation": null,
+        "delayed_grokking": false,
+        "classification": "not_observed_censored",
+        "generalization_level": 0.95,
+        "sustain": 3,
+        "minimum_lag": 1000
+      },
+      "sensitivity": {
+        "generalization_0.9": {
+          "memorization": {
+            "observed": true,
+            "time": 600,
+            "confirmation_time": 800,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99200,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.9,
+          "sustain": 3,
+          "minimum_lag": 1000
+        },
+        "generalization_0.99": {
+          "memorization": {
+            "observed": true,
+            "time": 600,
+            "confirmation_time": 800,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99200,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.99,
+          "sustain": 3,
+          "minimum_lag": 1000
+        },
+        "sustain_1": {
+          "memorization": {
+            "observed": true,
+            "time": 600,
+            "confirmation_time": 600,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99400,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 1,
+          "minimum_lag": 1000
+        },
+        "sustain_5": {
+          "memorization": {
+            "observed": true,
+            "time": 600,
+            "confirmation_time": 1000,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99000,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 5,
+          "minimum_lag": 1000
+        },
+        "lag_500": {
+          "memorization": {
+            "observed": true,
+            "time": 600,
+            "confirmation_time": 800,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99200,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 3,
+          "minimum_lag": 500
+        },
+        "lag_5000": {
+          "memorization": {
+            "observed": true,
+            "time": 600,
+            "confirmation_time": 800,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99200,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 3,
+          "minimum_lag": 5000
+        }
+      },
+      "evidence": "evidence/confirmation/attempts/s1004-wd0-to100000/measurement.json"
+    },
+    {
+      "seed": 1004,
+      "weight_decay": 1,
+      "updates": 100000,
+      "train_accuracy": 1.0,
+      "train_loss": 3.358768291358561e-05,
+      "test_accuracy": 0.6907545164718385,
+      "test_loss": 1.2334678703919153,
+      "transition": {
+        "memorization": {
+          "observed": true,
+          "time": 800,
+          "confirmation_time": 1000,
+          "censor_time": null
+        },
+        "generalization": {
+          "observed": false,
+          "time": null,
+          "confirmation_time": null,
+          "censor_time": 100000
+        },
+        "lag": null,
+        "lag_lower_bound_exclusive": 99000,
+        "memorization_retained_until_generalization_confirmation": null,
+        "delayed_grokking": false,
+        "classification": "not_observed_censored",
+        "generalization_level": 0.95,
+        "sustain": 3,
+        "minimum_lag": 1000
+      },
+      "sensitivity": {
+        "generalization_0.9": {
+          "memorization": {
+            "observed": true,
+            "time": 800,
+            "confirmation_time": 1000,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99000,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.9,
+          "sustain": 3,
+          "minimum_lag": 1000
+        },
+        "generalization_0.99": {
+          "memorization": {
+            "observed": true,
+            "time": 800,
+            "confirmation_time": 1000,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99000,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.99,
+          "sustain": 3,
+          "minimum_lag": 1000
+        },
+        "sustain_1": {
+          "memorization": {
+            "observed": true,
+            "time": 800,
+            "confirmation_time": 800,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99200,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 1,
+          "minimum_lag": 1000
+        },
+        "sustain_5": {
+          "memorization": {
+            "observed": true,
+            "time": 800,
+            "confirmation_time": 1200,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 98800,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 5,
+          "minimum_lag": 1000
+        },
+        "lag_500": {
+          "memorization": {
+            "observed": true,
+            "time": 800,
+            "confirmation_time": 1000,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99000,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 3,
+          "minimum_lag": 500
+        },
+        "lag_5000": {
+          "memorization": {
+            "observed": true,
+            "time": 800,
+            "confirmation_time": 1000,
+            "censor_time": null
+          },
+          "generalization": {
+            "observed": false,
+            "time": null,
+            "confirmation_time": null,
+            "censor_time": 100000
+          },
+          "lag": null,
+          "lag_lower_bound_exclusive": 99000,
+          "memorization_retained_until_generalization_confirmation": null,
+          "delayed_grokking": false,
+          "classification": "not_observed_censored",
+          "generalization_level": 0.95,
+          "sustain": 3,
+          "minimum_lag": 5000
+        }
+      },
+      "evidence": "evidence/confirmation/attempts/s1004-wd1-to100000/measurement.json"
+    }
+  ],
+  "paired_differences": [
+    {
+      "seed": 1001,
+      "test_accuracy_difference": 0.5829664490663428,
+      "test_loss_difference": -152.42890999315154
+    },
+    {
+      "seed": 1002,
+      "test_accuracy_difference": 0.5858509184757856,
+      "test_loss_difference": -148.85544810348267
+    },
+    {
+      "seed": 1003,
+      "test_accuracy_difference": 0.5322605131319266,
+      "test_loss_difference": -146.25561192390927
+    },
+    {
+      "seed": 1004,
+      "test_accuracy_difference": 0.6902990739335054,
+      "test_loss_difference": -148.17783176791391
+    }
+  ],
+  "paired_uncertainty": {
+    "test_accuracy_difference": {
+      "n": 4,
+      "mean": 0.5978442386518902,
+      "sample_sd": 0.06636844122479427,
+      "standard_error": 0.03318422061239713,
+      "t_df": 3,
+      "t_critical": 3.1824463052837078,
+      "ci95": [
+        0.49223723837024747,
+        0.7034512389335329
+      ],
+      "exact_signflip_two_sided_p": 0.125
+    },
+    "test_loss_difference": {
+      "n": 4,
+      "mean": -148.92945044711433,
+      "sample_sd": 2.5797956345617954,
+      "standard_error": 1.2898978172808977,
+      "t_df": 3,
+      "t_critical": 3.1824463052837078,
+      "ci95": [
+        -153.03448098991345,
+        -144.82441990431522
+      ],
+      "exact_signflip_two_sided_p": 0.125
+    }
+  },
+  "uncertainty_scope": "Approximate paired t intervals over four seeds; finite seed sample, not uncertainty over architectures or tasks. Sign-flip p values are descriptive, with minimum possible two-sided p=0.125 for n=4."
+}

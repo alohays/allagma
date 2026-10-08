@@ -1,0 +1,25 @@
+{
+  "status": "pass",
+  "source": "study/reproduce.py",
+  "expression": "str((Path(args.output)/'.venv/bin/python').resolve())",
+  "probe_environment": "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r05/candidate/reproduction-smoke/.venv",
+  "probes": {
+    "fresh_environment_interpreter": {
+      "executable": "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r05/candidate/reproduction-smoke/.venv/bin/python",
+      "prefix": "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r05/candidate/reproduction-smoke/.venv",
+      "base_prefix": "/Library/Frameworks/Python.framework/Versions/3.11",
+      "numpy_available": true,
+      "torch_available": true
+    },
+    "delivered_driver_resolved_interpreter": {
+      "executable": "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r05/candidate/reproduction-smoke/.venv/bin/python",
+      "prefix": "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r05/candidate/reproduction-smoke/.venv",
+      "base_prefix": "/Library/Frameworks/Python.framework/Versions/3.11",
+      "numpy_available": true,
+      "torch_available": true
+    }
+  },
+  "interpreter_is_symlink": false,
+  "impact": "The tested staging path uses a copied interpreter. Resolving that path retains the fresh environment and its packages; the suspected defect is not reproduced.",
+  "scope": "Actual interpreter executions with sys.prefix and module-availability observations. No confirmation retraining, candidate edit or mocked-host claim."
+}

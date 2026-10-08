@@ -1,0 +1,58 @@
+{
+  "schema_version": "0.2",
+  "record_type": "ContextRecord",
+  "context_id": "confirmation-v1",
+  "method_id": "context/active-brief",
+  "required": [
+    "question",
+    "constraints",
+    "stop_rules",
+    "protocol",
+    "unresolved_findings"
+  ],
+  "selected": [
+    "question",
+    "constraints",
+    "stop_rules",
+    "protocol",
+    "unresolved_findings",
+    "qualification",
+    "scope"
+  ],
+  "omitted": [],
+  "content": {
+    "question": "Does weight decay change generalization after memorization, and does delayed grokking occur within 100000 updates?",
+    "constraints": [
+      "No held-out optimization or tuning",
+      "Pilot seed 61 distinct from confirmation",
+      "Offline local broker, one scientific worker",
+      "Float32 fixed architecture/optimizer and 100000 updates"
+    ],
+    "stop_rules": [
+      "Completion condition",
+      "Resource ceiling requires partial status"
+    ],
+    "protocol": {
+      "path": "campaigns/modular-addition/protocol.json",
+      "sha256": "18d50f47d00720e973317226aa523e1d5e44e1d3e83c7b7e7b4acca164b4bb4b",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    "unresolved_findings": [
+      "Small seed count; finite horizon; offline literature; float32 backend trajectory differences; no independent peer reviewer"
+    ],
+    "qualification": {
+      "path": "evidence/pilot-005/qualification.json",
+      "sha256": "a2cb6d2c629092911327f6a749836cae0bb8efb39833eaa4b2e1021bbbd3b0dc",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    "scope": {
+      "path": "SCOPE.md",
+      "sha256": "8b52c30baa2e9fca0c9162852fb7bd61c9a5450a043f861dda3831265e5af805",
+      "media_type": "text/plain",
+      "retention": "retained"
+    }
+  },
+  "limitations": []
+}

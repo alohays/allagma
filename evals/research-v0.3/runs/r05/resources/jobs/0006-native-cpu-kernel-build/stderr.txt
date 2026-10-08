@@ -1,0 +1,23 @@
+clang: error: couldn't create cache file '/var/folders/41/bgxhqvj96qdbb67hzcfgxdy40000gn/T/xcrun_db-NhMUhH1O' (errno=Operation not permitted)
+clang: error: couldn't create cache file '/var/folders/41/bgxhqvj96qdbb67hzcfgxdy40000gn/T/xcrun_db-IEpQvi3r' (errno=Operation not permitted)
+study/engine.c:29:3: warning: 'cblas_sgemm' is deprecated: first deprecated in macOS 13.3 - An updated CBLAS interface supporting ILP64 is available.  Please compile with -DACCELERATE_NEW_LAPACK to access the new headers and -DACCELERATE_LAPACK_ILP64 for ILP64 support. [-Wdeprecated-declarations]
+   29 |   cblas_sgemm(CblasRowMajor,CblasNoTrans,CblasTrans,n,97,128,1,h,128,v,128,0,z,97);
+      |   ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/vecLib.framework/Headers/cblas.h:610:6: note: 'cblas_sgemm' has been explicitly marked deprecated here
+  610 | void cblas_sgemm(const enum CBLAS_ORDER __Order,
+      |      ^
+study/engine.c:43:3: warning: 'cblas_sgemm' is deprecated: first deprecated in macOS 13.3 - An updated CBLAS interface supporting ILP64 is available.  Please compile with -DACCELERATE_NEW_LAPACK to access the new headers and -DACCELERATE_LAPACK_ILP64 for ILP64 support. [-Wdeprecated-declarations]
+   43 |   cblas_sgemm(CblasRowMajor,CblasTrans,CblasNoTrans,97,128,n,1,w->p,97,w->h,128,0,g2,128);
+      |   ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/vecLib.framework/Headers/cblas.h:610:6: note: 'cblas_sgemm' has been explicitly marked deprecated here
+  610 | void cblas_sgemm(const enum CBLAS_ORDER __Order,
+      |      ^
+study/engine.c:44:3: warning: 'cblas_sgemm' is deprecated: first deprecated in macOS 13.3 - An updated CBLAS interface supporting ILP64 is available.  Please compile with -DACCELERATE_NEW_LAPACK to access the new headers and -DACCELERATE_LAPACK_ILP64 for ILP64 support. [-Wdeprecated-declarations]
+   44 |   cblas_sgemm(CblasRowMajor,CblasNoTrans,CblasNoTrans,n,128,97,1,w->p,97,v,128,0,w->dh,128);
+      |   ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/vecLib.framework/Headers/cblas.h:610:6: note: 'cblas_sgemm' has been explicitly marked deprecated here
+  610 | void cblas_sgemm(const enum CBLAS_ORDER __Order,
+      |      ^
+3 warnings generated.
+clang: error: couldn't create cache file '/var/folders/41/bgxhqvj96qdbb67hzcfgxdy40000gn/T/xcrun_db-1nZy4UUi' (errno=Operation not permitted)
+clang: error: couldn't create cache file '/var/folders/41/bgxhqvj96qdbb67hzcfgxdy40000gn/T/xcrun_db-AOD16MkZ' (errno=Operation not permitted)

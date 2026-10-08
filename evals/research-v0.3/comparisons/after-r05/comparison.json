@@ -1,0 +1,2104 @@
+{
+  "format": "allagma-descriptive-comparison-v1",
+  "status": "partial",
+  "pending_runs": [
+    "r06",
+    "r07",
+    "r08",
+    "r09",
+    "r10",
+    "r11",
+    "r12"
+  ],
+  "runs": [
+    {
+      "run_id": "r01",
+      "task": "core-culp",
+      "condition": "allagma",
+      "replicate": 2,
+      "native_status": "completed",
+      "claimed_execution_status": "complete",
+      "verified_completion": true,
+      "compute_seconds": 76.25502349692397,
+      "setup_seconds": 15.429592083673924,
+      "compute_requests": 20,
+      "job_outcomes": {
+        "completed": 24,
+        "timed_out": 1,
+        "failed": 1
+      },
+      "native_wall_seconds": 1921.4762337910943,
+      "peak_native_rss_bytes": 323829760,
+      "peak_worker_rss_bytes": 211795968,
+      "peak_native_storage_bytes": 783885316,
+      "observed_model_settings_match": true,
+      "inputs_unchanged": true,
+      "scoring_correction_applied": false,
+      "runtime_settings_unchanged": true,
+      "fresh_single_session": true,
+      "subsequent_coordinator_messages": 0,
+      "planned_interruption": {
+        "at": "2026-10-07T20:19:58.286408+00:00",
+        "mechanism": "First attempt receives a 0.5-second timeout; preserve its actual outcome",
+        "request_id": "e550d4a662d646c0b49e2af31dbe570e",
+        "observed_status": "timed_out",
+        "actual_timeout_observed": true,
+        "charged_seconds": 1.1173052920494229
+      },
+      "numerical_correct": 6,
+      "numerical_total": 6,
+      "numerical_fraction": 1.0,
+      "evidence_score": 8,
+      "evidence_items": [
+        {
+          "id": 1,
+          "score": 1,
+          "reason": "Source identity, exact input bytes and code/data licenses retained; only Wine/Zoo location adapters differ.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "inputs/materials/SOURCES.md",
+              "sha256": "07ea54a345de52c6f5f9416ad46e81ae5a45425cfb2b5ff4eef172d3727fec21"
+            },
+            {
+              "root": "candidate",
+              "path": "evidence/provenance.json",
+              "sha256": "15553929726e34de35cbdf0c3206568777f695fab19d912ce9985864c796538f"
+            },
+            {
+              "root": "candidate",
+              "path": "source/original/code/LICENSE",
+              "sha256": "86f24132a2af026b022666ac11bef2c3b73575ec072f4d33f750e6a9255a486f"
+            },
+            {
+              "root": "candidate",
+              "path": "source/original/data/LICENSE",
+              "sha256": "36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "score": 1,
+          "reason": "Protocol predates confirmation, preserves original controls, excludes synthetic pilot and retries, and defines no population inference.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "campaigns/culp-reproduction/protocol.json",
+              "sha256": "4673ef730fcda1c3e92dbf93c00690b953d369f644be86de5bad30fc25364a3d"
+            },
+            {
+              "root": "candidate",
+              "path": "evidence/raw-manifest.json",
+              "sha256": "0ed3cf56b6a90b85af10074bccba8d90036d1eca645d937c83654800f6665f96"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "score": 1,
+          "reason": "All three requested scripts executed through authoritative broker jobs; interrupted Iris and failed graph checker remain retained with distinct retries.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "evidence/attempt-history.json",
+              "sha256": "bf3c073e71780042b0681676a62454a32608770a0e6b9c4bae5f4f12f71e6e8a"
+            },
+            {
+              "root": "candidate",
+              "path": "evidence/jobs/iris-a01/client-result.json",
+              "sha256": "fa941b27cf83af5be2bed2aa7c83a2e1f895d098b94440d37acda65cdc99a310"
+            },
+            {
+              "root": "candidate",
+              "path": "evidence/jobs/iris-a02/client-result.json",
+              "sha256": "b62fbe30805dc7600feaefa15dc8fd9a09fbca61dc26f50d7ae789ff43449e3f"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "score": 1,
+          "reason": "Original protected scorer accepts 6/6; separate-directory recomputation and graph scores agree, fresh environment reproduces all answers/120 arrays, and ordinary uninstrumented stdout agrees.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "analysis/recomputed/recomputation-check.json",
+              "sha256": "a776e7643a282fa97a15cdee2dc1fbd66c78fcf432a0bafa17cadb304c60aa71"
+            },
+            {
+              "root": "candidate",
+              "path": "analysis/graph-audit.json",
+              "sha256": "5fbcd636531effcd55a6cd854d275e17d2840fcd2e4b1b4f00705eef40dde26e"
+            },
+            {
+              "root": "candidate",
+              "path": "reproduction/verified/agreement.json",
+              "sha256": "50140b9fd3b4af88487e8093fe2e4fa3d4746ee8bb8e2bfdf72c6b50e781c030"
+            },
+            {
+              "root": "candidate",
+              "path": "verification/unprofiled/check.json",
+              "sha256": "0fa3780ca171deb30908a99c982f666d87063ea2894cf23b094f7cf0a7f2bc48"
+            },
+            {
+              "root": "candidate",
+              "path": "verification/final.json",
+              "sha256": "76b4376f4602009d4be788470cd24965a43d9d6cd429602750492df454735b6f"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "score": 1,
+          "reason": "Correctly limits inference to fixed transductive splits, avoids population intervals and retry pseudoreplication, and explains original label/self-loop limitations.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "REPORT.md",
+              "sha256": "428b2af47aa2ce21633561c52c32ea35eba7b242ce43a21a4ccb8cb6279a3598"
+            },
+            {
+              "root": "candidate",
+              "path": "review-findings.json",
+              "sha256": "e9879822ac8351f7d7fe9a8462bb97698780e2b6c23cced1b84ee3f879520e46"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "score": 1,
+          "reason": "English report/table identify actual predictor calls and connect all numerical claims to retained predictions, graphs, stdout and analysis.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "REPORT.md",
+              "sha256": "428b2af47aa2ce21633561c52c32ea35eba7b242ce43a21a4ccb8cb6279a3598"
+            },
+            {
+              "root": "candidate",
+              "path": "report.json",
+              "sha256": "e5d07d5a6b2983fdd14a6cd9364fc9c88210d12d73da7df0a958fec3275d42c5"
+            },
+            {
+              "root": "candidate",
+              "path": "analysis/primary/summary.json",
+              "sha256": "c211ac06da93cf0676d61a9aed5e02a83cb9ca078bcec84d18d09f16aceff330"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "score": 1,
+          "reason": "Exact environment pins, broker-based full reproduction and raw-only recomputation are documented and exercised; 1048 declared hashes and supplemental files retain identity. Default reproduction/recompute output paths are unused.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "requirements.lock.txt",
+              "sha256": "75ca99f2cd2bdad786a1d9b09bf7a101e4582ca465d52befde3823dd118c37ef"
+            },
+            {
+              "root": "candidate",
+              "path": "REPRODUCE.md",
+              "sha256": "8700c4d5e7f7eb50479b56dc5391ce90fd7b56d115e9de28b4fec94389fdfecd"
+            },
+            {
+              "root": "candidate",
+              "path": "submission.json",
+              "sha256": "b78aadb69183493577c7c3222453d26b0fabc1448547a28e337d33374bb1f330"
+            },
+            {
+              "root": "candidate",
+              "path": "artifact-manifest.json",
+              "sha256": "3093e2c9af79386215f7eab9db5a62b90cfd40d0adab699dea71bde9be80942c"
+            },
+            {
+              "root": "candidate",
+              "path": "verification/final.json",
+              "sha256": "76b4376f4602009d4be788470cd24965a43d9d6cd429602750492df454735b6f"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "score": 1,
+          "reason": "Revision-bound critique records real upstream limitations, the corrected independent-checker defect, recovery and explicit assurance limits.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "review.json",
+              "sha256": "9f81028b827efa4a30f2439f713d7aa3d39de6b2e6b0475d8425dfba4bd1bf6e"
+            },
+            {
+              "root": "candidate",
+              "path": "review-material.json",
+              "sha256": "1d22445b822e357ddb1e78c54f2e83d3461311131fcbe182389f6f6257301ec2"
+            },
+            {
+              "root": "candidate",
+              "path": "evidence/verification-revision.json",
+              "sha256": "13d0e88675ff32396a98088c91a5753b7fb8bdb53f5fc33039431ea08924c77c"
+            }
+          ]
+        }
+      ],
+      "completed": 1,
+      "intervention_count": 0,
+      "interventions": [],
+      "input_tokens": 2456774,
+      "cached_input_tokens": 2330112,
+      "output_tokens": 40977,
+      "reasoning_output_tokens": 9368,
+      "original_scorer_status": "scored",
+      "original_scorer_error": null
+    },
+    {
+      "run_id": "r02",
+      "task": "core-culp",
+      "condition": "plain",
+      "replicate": 2,
+      "native_status": "completed",
+      "claimed_execution_status": "complete",
+      "verified_completion": true,
+      "compute_seconds": 77.43184583564289,
+      "setup_seconds": 15.14354933355935,
+      "compute_requests": 11,
+      "job_outcomes": {
+        "completed": 15,
+        "timed_out": 1
+      },
+      "native_wall_seconds": 1065.6695522079244,
+      "peak_native_rss_bytes": 330973184,
+      "peak_worker_rss_bytes": 215400448,
+      "peak_native_storage_bytes": 779962816,
+      "observed_model_settings_match": true,
+      "inputs_unchanged": true,
+      "scoring_correction_applied": false,
+      "runtime_settings_unchanged": true,
+      "fresh_single_session": true,
+      "subsequent_coordinator_messages": 0,
+      "planned_interruption": {
+        "at": "2026-10-07T20:44:40.178810+00:00",
+        "mechanism": "First attempt receives a 0.5-second timeout; preserve its actual outcome",
+        "request_id": "315e7642997b41399b4378fbf1a803e1",
+        "observed_status": "timed_out",
+        "actual_timeout_observed": true,
+        "charged_seconds": 1.130271750036627
+      },
+      "numerical_correct": 6,
+      "numerical_total": 6,
+      "numerical_fraction": 1.0,
+      "evidence_score": 8,
+      "evidence_items": [
+        {
+          "id": 1,
+          "score": 1,
+          "reason": "Original capsule bytes and licenses retained; only two data-path adaptations and required imports differ.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "source/provenance.json",
+              "sha256": "276d5cb7870a9cb807504cf518fcbaa6f13cdec1635557ac769c5a296d0e66ce"
+            },
+            {
+              "root": "candidate",
+              "path": "source/compatibility.patch",
+              "sha256": "2fa4434d311b20c0149e61229fe614c34ed130fe4b26a89f68ea6f968b31435e"
+            },
+            {
+              "root": "candidate",
+              "path": "source/original/code/LICENSE",
+              "sha256": "86f24132a2af026b022666ac11bef2c3b73575ec072f4d33f750e6a9255a486f"
+            },
+            {
+              "root": "candidate",
+              "path": "source/original/data/LICENSE",
+              "sha256": "36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "score": 1,
+          "reason": "Frozen protocol and fixed source definitions precede successful execution; authoritative recovery-request snapshot retains the earlier protocol hash. Controls and resource stops are explicit; no invented confirmation replicates.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "PROTOCOL.md",
+              "sha256": "5b8a2bf473a5a32a41f166bec945772313600d937e2f7f376e02af2ef27cb438"
+            },
+            {
+              "root": "candidate",
+              "path": "runs/attempt01/execution.json",
+              "sha256": "c90b6e794d23366ffb485dfcef108178ba73c5a4812d6c3f3bf3fd6cb14a3bfb"
+            },
+            {
+              "root": "candidate",
+              "path": "runs/attempt02/execution.json",
+              "sha256": "19d9dd80f21e59b44586026e75366c9911dd3d91ecb165225d1f088b80e8ce2b"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "score": 1,
+          "reason": "All required source scripts actually executed; the controlled incomplete attempt, separate recovery and exact broker receipts remain retained.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "runs/attempt01/execution.json",
+              "sha256": "c90b6e794d23366ffb485dfcef108178ba73c5a4812d6c3f3bf3fd6cb14a3bfb"
+            },
+            {
+              "root": "candidate",
+              "path": "runs/attempt02/execution.json",
+              "sha256": "19d9dd80f21e59b44586026e75366c9911dd3d91ecb165225d1f088b80e8ce2b"
+            },
+            {
+              "root": "candidate",
+              "path": "evidence/broker/315e7642997b41399b4378fbf1a803e1/response.json",
+              "sha256": "33157ce6b13b86ae831043acd5b5272eec839956ef3c7e433e0085cca3d308fb"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "score": 1,
+          "reason": "Protected original score is 6/6; raw prediction/label arithmetic, independent graph formulas, fresh-environment repeatability and direct-script stdout equivalence pass.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "analysis/final/verification.json",
+              "sha256": "97a55fc829107db242227bd3ea29cb8dc29be3e156cd368df67a3cda13dc2b26"
+            },
+            {
+              "root": "candidate",
+              "path": "recomputed/verification.json",
+              "sha256": "97a55fc829107db242227bd3ea29cb8dc29be3e156cd368df67a3cda13dc2b26"
+            },
+            {
+              "root": "candidate",
+              "path": "reproductions/validation/reproduction.json",
+              "sha256": "794d2e368d89888807bebc16bf00a227be6c3511875b48269a3e6bf5a76b77de"
+            },
+            {
+              "root": "candidate",
+              "path": "runs/direct-cli/verification.json",
+              "sha256": "e0e8d2710d345fdea09683e8885204c95e63455343c1b79588c2a80167321930"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "score": 1,
+          "reason": "Report avoids population intervals and repeated-run pseudoreplication; discloses transduction, missing Zoo test class, duplicates, self-loops and label mismatch.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "REPORT.md",
+              "sha256": "0a5d652a055c9aa0f63e2e953ad453f15f3c1775b7c2b8fcca7b3b7405f8f03d"
+            },
+            {
+              "root": "candidate",
+              "path": "analysis/final/metrics.json",
+              "sha256": "59d4673bd40fa600dab4a42603f91e3f7dbe8e825a951ffcaed36b1c9c225739"
+            },
+            {
+              "root": "candidate",
+              "path": "review.json",
+              "sha256": "b7962a9c22c437dcda24b8d47f19df40246f27f2213d81bb7600b8157cc59496"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "score": 1,
+          "reason": "English report/table trace printed labels versus actual predictors and numerical findings to retained evidence; no generalization/superiority claim is made.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "REPORT.md",
+              "sha256": "0a5d652a055c9aa0f63e2e953ad453f15f3c1775b7c2b8fcca7b3b7405f8f03d"
+            },
+            {
+              "root": "candidate",
+              "path": "analysis/final/results.csv",
+              "sha256": "fc3963dd056688b765e98fdabdbd1fa58e5d0010e3c20ffc6056ee1f2db35151"
+            },
+            {
+              "root": "candidate",
+              "path": "measurements.json",
+              "sha256": "cc420759bd72907178b7bf0d2b9916ca13a12630c353eb32254a377e5ab23043"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "score": 1,
+          "reason": "Pinned environment, full reproduction and raw-only recomputation are documented and actually tested; all declared manifest hashes and retained package files verify.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "requirements.lock",
+              "sha256": "17753afeced7ad96dfe472dccf601b909485c8ae29cd7c3779f9ef46cbc6a451"
+            },
+            {
+              "root": "candidate",
+              "path": "REPRODUCE.md",
+              "sha256": "823589ea96b184f32bf3e8b6eb06ff634f3bdc31311d7d242d733e762732f2b0"
+            },
+            {
+              "root": "candidate",
+              "path": "scripts/reproduce.py",
+              "sha256": "e1a500eb971f1b8a641a007718fb3fcb31310704cc684348b7177197ab0fd4c6"
+            },
+            {
+              "root": "candidate",
+              "path": "scripts/recompute_entry.py",
+              "sha256": "f259beadbd40cb46f0afbbdeec52005ebc8e2089877152801c017663c53f4ba2"
+            },
+            {
+              "root": "candidate",
+              "path": "artifact-manifest.json",
+              "sha256": "f19adfe0d417fee3629ef5cc53663a44e9ce9a394e0f8549d11583a643c856e7"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "score": 1,
+          "reason": "Concrete self-review identifies upstream limitations and verification boundaries at the exact reviewed source/artifact revision.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "review.json",
+              "sha256": "b7962a9c22c437dcda24b8d47f19df40246f27f2213d81bb7600b8157cc59496"
+            },
+            {
+              "root": "candidate",
+              "path": "analysis/final/verification.json",
+              "sha256": "97a55fc829107db242227bd3ea29cb8dc29be3e156cd368df67a3cda13dc2b26"
+            }
+          ]
+        }
+      ],
+      "completed": 1,
+      "intervention_count": 0,
+      "interventions": [],
+      "input_tokens": 1266718,
+      "cached_input_tokens": 1164288,
+      "output_tokens": 38837,
+      "reasoning_output_tokens": 13311,
+      "original_scorer_status": "scored",
+      "original_scorer_error": null
+    },
+    {
+      "run_id": "r03",
+      "task": "modular-addition",
+      "condition": "plain",
+      "replicate": 2,
+      "native_status": "completed",
+      "claimed_execution_status": "complete",
+      "verified_completion": false,
+      "compute_seconds": 1215.9650204144418,
+      "setup_seconds": 14.303388041909784,
+      "compute_requests": 18,
+      "job_outcomes": {
+        "completed": 17,
+        "timed_out": 1,
+        "failed": 2
+      },
+      "native_wall_seconds": 2012.2648201668635,
+      "peak_native_rss_bytes": 390070272,
+      "peak_worker_rss_bytes": 615727104,
+      "peak_native_storage_bytes": 1225374166,
+      "observed_model_settings_match": true,
+      "inputs_unchanged": true,
+      "scoring_correction_applied": true,
+      "runtime_settings_unchanged": true,
+      "fresh_single_session": true,
+      "subsequent_coordinator_messages": 0,
+      "planned_interruption": {
+        "at": "2026-10-07T21:08:25.200174+00:00",
+        "mechanism": "First attempt receives a 0.5-second timeout; preserve its actual outcome",
+        "request_id": "d880d6f88a464b1e931723d2116e23d9",
+        "observed_status": "timed_out",
+        "actual_timeout_observed": true,
+        "charged_seconds": 1.470634917030111
+      },
+      "numerical_correct": 40,
+      "numerical_total": 40,
+      "numerical_fraction": 1.0,
+      "evidence_score": 7,
+      "evidence_items": [
+        {
+          "id": 1,
+          "score": 1,
+          "reason": "Question, reference identity/license, fixed model/optimizer and exact input partitions retained.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "protocol.json",
+              "sha256": "523f23f3751c979e8347e2fbd9c328b1cfa46928e8318b3c54dc280c190bf5c4"
+            },
+            {
+              "root": "candidate",
+              "path": "inputs/materials/SOURCES.md",
+              "sha256": "df4c3b6e39891b7b1925951c36606db2d34cf240696566199cce2d63ccf50fc4"
+            },
+            {
+              "root": "candidate",
+              "path": "inputs/materials/openai-grok-reference/LICENSE",
+              "sha256": "893951b3bf94db8df1b13e05da5cdeb499400960e4d44a3962a8b33ed0b4f28e"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "score": 1,
+          "reason": "Protocol/source hashes frozen before confirmation; seed 61 qualification excluded; all four paired seeds and the 100k horizon remain fixed.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "artifacts/protocol-freeze.json",
+              "sha256": "b37d38bb1f680db7496b5db980cdb92932339b8f44bdbabc3196bd4d6bfe8fa8"
+            },
+            {
+              "root": "candidate",
+              "path": "protocol.json",
+              "sha256": "523f23f3751c979e8347e2fbd9c328b1cfa46928e8318b3c54dc280c190bf5c4"
+            },
+            {
+              "root": "candidate",
+              "path": "study.py",
+              "sha256": "25b905b534adcfc99cd80b712a634b708e9ed4e16db08cfe3b11f70f5d5eb672"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "score": 1,
+          "reason": "All eight full trajectories completed with 1001 curve entries each; interrupted and failed qualifications retained; saved optimizer counters independently equal 100000.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "analysis/final-attempts.json",
+              "sha256": "3093b211f35bdf9ef6a9046565a97977e93fa00d7e980f0320c62d8d6e3d99a8"
+            },
+            {
+              "root": "candidate",
+              "path": "analysis/verification.json",
+              "sha256": "c000d576c8ee0158417552b4e472b60fab284741bcebdeef97d1171c025814ef"
+            },
+            {
+              "root": "candidate",
+              "path": "analysis/measurements.json",
+              "sha256": "d9170c75167579d69cec9a06cee6f0824e387d42650372edb996b8362b07b4a3"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "score": 1,
+          "reason": "All 40 numerical checks pass after a documented parser-only correction for the frozen inline-curve contract; independent t intervals, sign flips, censoring and checkpoint identities also pass.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "analysis/measurements.json",
+              "sha256": "d9170c75167579d69cec9a06cee6f0824e387d42650372edb996b8362b07b4a3"
+            },
+            {
+              "root": "candidate",
+              "path": "analysis/results.json",
+              "sha256": "6d92ea2cfe85c33325a6ab237b4aedc60ad35596963e353c130230220737df8b"
+            },
+            {
+              "root": "candidate",
+              "path": "analysis/verification.json",
+              "sha256": "c000d576c8ee0158417552b4e472b60fab284741bcebdeef97d1171c025814ef"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "score": 1,
+          "reason": "Uses four paired seeds, reports t assumptions and coarse exact p=0.125, keeps onset/lag null when censored, and treats no-grokking as a finite-horizon finding.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "REPORT.md",
+              "sha256": "ed41122ef6ee16b30c7ebb2001a5a46d0d4282edce3293c8fa63a8239d72a6cf"
+            },
+            {
+              "root": "candidate",
+              "path": "analysis/results.json",
+              "sha256": "6d92ea2cfe85c33325a6ab237b4aedc60ad35596963e353c130230220737df8b"
+            },
+            {
+              "root": "candidate",
+              "path": "analysis/sensitivity_summary.json",
+              "sha256": "47de416f991c68d32a971d679d52142933787df983f7fe006d8cd7b5240d50e6"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "score": 1,
+          "reason": "English report and visually inspected figures accurately show individual curves and scoped endpoint claims. Minor portability issue: one interruption link points to excluded .compute, but an identified permanent receipt copy is retained.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "REPORT.md",
+              "sha256": "ed41122ef6ee16b30c7ebb2001a5a46d0d4282edce3293c8fa63a8239d72a6cf"
+            },
+            {
+              "root": "candidate",
+              "path": "analysis/learning_curves.png",
+              "sha256": "5c7e3770c1eea9ea88648c8f961a74842929d456c61483197b9ebd46a6166d5f"
+            },
+            {
+              "root": "candidate",
+              "path": "evidence/receipts/d880d6f88a464b1e931723d2116e23d9-response.json",
+              "sha256": "1fde8c093ec58c3873cc7eb63d38a4e217b278362779a05eb51851a6b70e3b26"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "score": 1,
+          "reason": "Pinned wheelhouse/environment metadata and complete reproduction dispatcher retained; runner/analysis components and advertised raw-only command executed. Source/help checks support the full dispatcher, while the unperformed second full training replay is explicitly disclosed.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "REPRODUCE.md",
+              "sha256": "fbcce0240c7227f237b26e5a5f57b3a2be5102a442ddf042032f0e015540c15a"
+            },
+            {
+              "root": "candidate",
+              "path": "reproduce.py",
+              "sha256": "a031542b9d4eb00a51426eda8eff0d8474aec46a3c4bae837b130d54dbab421b"
+            },
+            {
+              "root": "candidate",
+              "path": "analysis/environment.json",
+              "sha256": "18365bd1529b49796e16bbedd6d121e07e9576827b3be969bd6237b3df143657"
+            },
+            {
+              "root": "candidate",
+              "path": "analysis/package-verification.json",
+              "sha256": "7678af908eb7423fac78e3385b6f1ee2d3a8bd298ca09b868f5d84364ed2663d"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "score": 0,
+          "reason": "Substantive findings and resolutions are present, but review.json does not identify an exact reviewed source/artifact revision. The separate manifest seals files, but does not explicitly bind this review to its material revision as required by item 8.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "review.json",
+              "sha256": "707545b6e0a73fd484d5daef17111a9c24d833ddac557c38d477ffdd923cee7d"
+            },
+            {
+              "root": "candidate",
+              "path": "artifact-manifest.json",
+              "sha256": "af65d446e2338eb0cc63ca80ecd9d2985e63547812cae107907b03dca87fc3ac"
+            }
+          ]
+        }
+      ],
+      "completed": 0,
+      "intervention_count": 0,
+      "interventions": [],
+      "input_tokens": 3153372,
+      "cached_input_tokens": 2925440,
+      "output_tokens": 62222,
+      "reasoning_output_tokens": 30813,
+      "original_scorer_status": "unscorable",
+      "original_scorer_error": "Evidence paths must be confined relative paths"
+    },
+    {
+      "run_id": "r04",
+      "task": "modular-addition",
+      "condition": "allagma",
+      "replicate": 2,
+      "native_status": "completed",
+      "claimed_execution_status": "complete",
+      "verified_completion": true,
+      "compute_seconds": 1186.5861240450758,
+      "setup_seconds": 14.731292207958177,
+      "compute_requests": 28,
+      "job_outcomes": {
+        "completed": 27,
+        "timed_out": 1,
+        "failed": 2
+      },
+      "native_wall_seconds": 1942.91314337519,
+      "peak_native_rss_bytes": 414646272,
+      "peak_worker_rss_bytes": 663994368,
+      "peak_native_storage_bytes": 1262256229,
+      "observed_model_settings_match": true,
+      "inputs_unchanged": true,
+      "scoring_correction_applied": true,
+      "runtime_settings_unchanged": true,
+      "fresh_single_session": true,
+      "subsequent_coordinator_messages": 0,
+      "planned_interruption": {
+        "at": "2026-10-08T00:26:42.604690+00:00",
+        "mechanism": "First attempt receives a 0.5-second timeout; preserve its actual outcome",
+        "request_id": "6b2058d974e54811a0a9762e3b313160",
+        "observed_status": "timed_out",
+        "actual_timeout_observed": true,
+        "charged_seconds": 1.481256457976997
+      },
+      "numerical_correct": 40,
+      "numerical_total": 40,
+      "numerical_fraction": 1.0,
+      "evidence_score": 8,
+      "evidence_items": [
+        {
+          "id": 1,
+          "score": 1,
+          "reason": "Question, fixed scientific inputs, source revision and MIT license are retained. The report identifies this as a bounded MLP adaptation.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "protocol.json",
+              "sha256": "13331beaeba33a1001a5437921fb0bc468dcc8c467a0ca24b2bfc27dabf34419"
+            },
+            {
+              "root": "candidate",
+              "path": "inputs/materials/SOURCES.md",
+              "sha256": "df4c3b6e39891b7b1925951c36606db2d34cf240696566199cce2d63ccf50fc4"
+            },
+            {
+              "root": "candidate",
+              "path": "inputs/materials/openai-grok-reference/LICENSE",
+              "sha256": "893951b3bf94db8df1b13e05da5cdeb499400960e4d44a3962a8b33ed0b4f28e"
+            },
+            {
+              "root": "candidate",
+              "path": "literature.json",
+              "sha256": "c6afd97abbd40a70c35a6cebc8b35842040249b602c100ac381260fc76855b37"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "score": 1,
+          "reason": "Frozen campaign protocol and code manifest precede confirmation and match the first protected request snapshot. Seed 61 qualification is excluded; all four paired confirmation seeds and the full horizon remain fixed.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "campaigns/c001/protocol.json",
+              "sha256": "17188cc6952332178ed269b0269823214f71988a07f4f609ddeb08e7d4c35669"
+            },
+            {
+              "root": "candidate",
+              "path": "campaigns/c001/code-manifest.json",
+              "sha256": "2fff541e49606e4c34237fb32d2ded92141827feca9294efb84557c22e6df987"
+            },
+            {
+              "root": "candidate",
+              "path": "evidence/qualification-a004/qualification.json",
+              "sha256": "909726d2f8e96347c47b80e60fc2b700e8bedf9e5e336e6c8910b674fc891e27"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "score": 1,
+          "reason": "All eight 100000-update trajectories are supported by protected source snapshots, terminal process receipts, complete curves and final optimizer counters. Interruption, failed MPS probe and failed initial numerical check remain retained.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "attempts.json",
+              "sha256": "231d4269ac32d358e01451bca090b1fda498b4523037f7dd453a37445523d40c"
+            },
+            {
+              "root": "candidate",
+              "path": "measurements.json",
+              "sha256": "fa94018b73edaf3d6b4addb7b6a9cda860bed1e89e49acebf124d11d8fb7e386"
+            },
+            {
+              "root": "candidate",
+              "path": "study/train.py",
+              "sha256": "83c6d4b986080a3f580bb9aa5bd6a02fe4cb48ec00eca56a2a799eff3748ddaf"
+            },
+            {
+              "root": "candidate",
+              "path": "study/common.py",
+              "sha256": "b0a412547882e7a518d28bbc2c8b568f0e0ab0665e7606a1333fca23db9c07df"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "score": 1,
+          "reason": "Original and contract-compatible scorers independently pass all 40 numerical checks. Controller checks also confirm final optimizer counters, checkpoint/NPZ identity, censoring, sensitivity, t intervals and exact sign flips.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "analysis/primary/validation.json",
+              "sha256": "b53d00bea6d4a081961331e6f6be9cd65d8eebae3b72b50b778cfcf87ac547d6"
+            },
+            {
+              "root": "candidate",
+              "path": "analysis/primary/summary.json",
+              "sha256": "e9cb9fde098606e9008bd8a1f61538fa1b1d1ea7497f9d83778991e13649aa1e"
+            },
+            {
+              "root": "candidate",
+              "path": "analysis/recomputed/comparison.json",
+              "sha256": "680e6e1182e06f53233a92a84c775dbc9b03ee63ed6e21d88a7986950aeb6385"
+            },
+            {
+              "root": "candidate",
+              "path": "verification.json",
+              "sha256": "af21bec714dd9a93864a2f41c24e648d2bb37c8a01e80faefa3a9eb9dc4fff1c"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "score": 1,
+          "reason": "Uses four independent paired seeds, reports each effect and small-sample assumptions, preserves null censored times and separates endpoint improvement from threshold-level grokking. Rounded t critical values differ only below 1e-8 nats.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "REPORT.md",
+              "sha256": "b00b63809213cca671d1c2948815e2771cd894b56854ef41074bdf7b45592ea5"
+            },
+            {
+              "root": "candidate",
+              "path": "analysis/primary/per-seed.json",
+              "sha256": "c40901b87800c6db1e25a8708544441a57a54bb4fae5bb3f14ff05fff6c9d5da"
+            },
+            {
+              "root": "candidate",
+              "path": "analysis/primary/summary.json",
+              "sha256": "e9cb9fde098606e9008bd8a1f61538fa1b1d1ea7497f9d83778991e13649aa1e"
+            },
+            {
+              "root": "candidate",
+              "path": "analysis/primary/sensitivity-summary.json",
+              "sha256": "1cf2dbf9110ae00a58c1fd6cbce3404c6fbeb9472d63e834f708a01a739e8cc5"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "score": 1,
+          "reason": "English report links claims and tables to retained evidence; the complete individual learning-curve figure was visually inspected and is legible. Conclusions remain specific to this MLP, optimizer, split fraction, seeds and finite horizon.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "REPORT.md",
+              "sha256": "b00b63809213cca671d1c2948815e2771cd894b56854ef41074bdf7b45592ea5"
+            },
+            {
+              "root": "candidate",
+              "path": "analysis/primary/learning-curves.png",
+              "sha256": "cbddce7c3844862f2af1953cb7712f12912450d554cbc140853eb340a5110f23"
+            },
+            {
+              "root": "candidate",
+              "path": "analysis/primary/claims.json",
+              "sha256": "f1b34dff4a5521e79c55c809ca7622a3c0d1831b1fabf429977878f4736f3705"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "score": 1,
+          "reason": "Pinned software metadata, executable full-study dispatcher and actual repeated raw-only analysis are retained. All 548 artifact-manifest entries and 87 direct evidence references match after exact restoration with the controller terminal-queue supplement. A second full training replay was not performed and is not claimed.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "REPRODUCE.md",
+              "sha256": "1c8b750b6abff52b01380afc541aeaa7adc16c9e16f685ab0f964da6b072262c"
+            },
+            {
+              "root": "candidate",
+              "path": "scripts/driver.py",
+              "sha256": "9ceef5fdec512c6cd6ccaaae3719ecee15cf10def6e16c8713e89faa7a3b58c1"
+            },
+            {
+              "root": "candidate",
+              "path": "environment.json",
+              "sha256": "ddb6492ce74560a8ec46bce0edb8ebc5ff3ec90947c1ec82b2938fe2d885a51c"
+            },
+            {
+              "root": "candidate",
+              "path": "analysis/recomputed/comparison.json",
+              "sha256": "680e6e1182e06f53233a92a84c775dbc9b03ee63ed6e21d88a7986950aeb6385"
+            },
+            {
+              "root": "candidate",
+              "path": "artifact-manifest.json",
+              "sha256": "0d79ce859061d1c61e1986c37f6015af3a8113297331a16d1068e49730039b39"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "score": 1,
+          "reason": "Substantive critique identifies actual failures, numerical amendment, resolved wording and remaining scientific limits. Review material and all direct evidence hashes match the final revision; same-agent critique is explicitly provisional.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "review.json",
+              "sha256": "2b89935314d39819cde17cd361feb09edb75e9f9324a7a98f2e4a1f9e1e9df94"
+            },
+            {
+              "root": "candidate",
+              "path": "review-findings.json",
+              "sha256": "de0184e881969e70e44e35b32fda336f40e1c79d04038ec63bc869b8d497133d"
+            },
+            {
+              "root": "candidate",
+              "path": "review-input.json",
+              "sha256": "90f09740cbc16d1bf4e0bd1494eec7ecf9682f725ad459011f3ace2135cefa32"
+            },
+            {
+              "root": "candidate",
+              "path": "campaigns/c001/amendments/evaluator-v1.1.json",
+              "sha256": "52c18a38c0cd9f908277013bf7611b27d8c72135a888a212f0f70671ae641753"
+            }
+          ]
+        }
+      ],
+      "completed": 1,
+      "intervention_count": 0,
+      "interventions": [],
+      "input_tokens": 5885533,
+      "cached_input_tokens": 5732608,
+      "output_tokens": 58533,
+      "reasoning_output_tokens": 22150,
+      "original_scorer_status": "scored",
+      "original_scorer_error": null
+    },
+    {
+      "run_id": "r05",
+      "task": "modular-addition",
+      "condition": "allagma",
+      "replicate": 1,
+      "native_status": "completed",
+      "claimed_execution_status": "complete",
+      "verified_completion": true,
+      "compute_seconds": 1403.9125260428991,
+      "setup_seconds": 35.2645348738879,
+      "compute_requests": 32,
+      "job_outcomes": {
+        "completed": 32,
+        "timed_out": 1,
+        "failed": 4
+      },
+      "native_wall_seconds": 2442.5838864170946,
+      "peak_native_rss_bytes": 394559488,
+      "peak_worker_rss_bytes": 764018688,
+      "peak_native_storage_bytes": 2182968245,
+      "observed_model_settings_match": true,
+      "inputs_unchanged": true,
+      "scoring_correction_applied": true,
+      "runtime_settings_unchanged": true,
+      "fresh_single_session": true,
+      "subsequent_coordinator_messages": 0,
+      "planned_interruption": {
+        "at": "2026-10-08T01:48:41.310999+00:00",
+        "mechanism": "First attempt receives a 0.5-second timeout; preserve its actual outcome",
+        "request_id": "cb37edde0d7042eaad7d0cf1dd219d38",
+        "observed_status": "timed_out",
+        "actual_timeout_observed": true,
+        "charged_seconds": 1.4815553340595216
+      },
+      "numerical_correct": 40,
+      "numerical_total": 40,
+      "numerical_fraction": 1.0,
+      "evidence_score": 8,
+      "evidence_items": [
+        {
+          "id": 1,
+          "score": 1,
+          "reason": "Exact question, ordered-pair inputs, source revision, MIT license and offline literature scope are retained. The study is identified as a bounded MLP adaptation.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "SCOPE.md",
+              "sha256": "8b52c30baa2e9fca0c9162852fb7bd61c9a5450a043f861dda3831265e5af805"
+            },
+            {
+              "root": "candidate",
+              "path": "inputs/materials/SOURCES.md",
+              "sha256": "df4c3b6e39891b7b1925951c36606db2d34cf240696566199cce2d63ccf50fc4"
+            },
+            {
+              "root": "candidate",
+              "path": "inputs/materials/openai-grok-reference/LICENSE",
+              "sha256": "893951b3bf94db8df1b13e05da5cdeb499400960e4d44a3962a8b33ed0b4f28e"
+            },
+            {
+              "root": "candidate",
+              "path": "campaigns/modular-addition/protocol.json",
+              "sha256": "18d50f47d00720e973317226aa523e1d5e44e1d3e83c7b7e7b4acca164b4bb4b"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "score": 1,
+          "reason": "Protocol and training source hashes were frozen before the first confirmation request. The C implementation and qualification-gate revision are explicit, seed 61 is excluded, and the full eight-cell horizon and stopping rules remain fixed.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "campaigns/modular-addition/protocol.json",
+              "sha256": "18d50f47d00720e973317226aa523e1d5e44e1d3e83c7b7e7b4acca164b4bb4b"
+            },
+            {
+              "root": "candidate",
+              "path": "campaigns/modular-addition/code-manifest.json",
+              "sha256": "cacbbea5d496dc4785a16748403b86fbe1f9b758bdd529e1451ac610f7967d8f"
+            },
+            {
+              "root": "candidate",
+              "path": "evidence/pilot-005/qualification.json",
+              "sha256": "a2cb6d2c629092911327f6a749836cae0bb8efb39833eaa4b2e1021bbbd3b0dc"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "score": 1,
+          "reason": "All eight full-horizon trajectories have two successful 50000-update segments, dense curves and final optimizer/model state. Protected requests and prospective protocol/source hashes support confirmation; reconstructed pilot-local snapshots are disclosed and authoritative controller snapshots remain available.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "evidence/attempt-ledger.json",
+              "sha256": "1d862da147eae77d840bea65bd12b3402185adfb795bc6a83bb59d58d480e713"
+            },
+            {
+              "root": "candidate",
+              "path": "measurements.json",
+              "sha256": "bf1e358865de6a03e1704b2dfc535f1b1aee74eca80e8164841958f4adeeec7b"
+            },
+            {
+              "root": "candidate",
+              "path": "study/train.py",
+              "sha256": "554a1287d8db9221ac8275e8582b39b5f3a4b5192f5e530fd1a5d1171f0fe77c"
+            },
+            {
+              "root": "candidate",
+              "path": "study/engine.c",
+              "sha256": "fd439bee1b101264c2b71f8afdb6daa60a466ea8e5ccba3eacf21fa6c6e50d5c"
+            },
+            {
+              "root": "candidate",
+              "path": "build/build.json",
+              "sha256": "d4003851abf58c0a6f381f45066910f9b3fd8006ccd6e5b739e7a1ac896a1059"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "score": 1,
+          "reason": "Uniform contract-compatible scoring passes all 40 checks. Independent controller tests verify gradients and individual AdamW updates at three optimizer ages, paired statistics, censoring, complete curves, final native checkpoints and segment coverage.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "analysis/verification.json",
+              "sha256": "f915fc27f5413a1fea51dc9c3eec57dd6407a1c66a19991947da146e8de4f69c"
+            },
+            {
+              "root": "candidate",
+              "path": "analysis/results.json",
+              "sha256": "36bf5e82955a65e39bc95962d280830917a79d3dbda338e007b24c0f6fd7500a"
+            },
+            {
+              "root": "candidate",
+              "path": "analysis-repeat/recomputation-comparison.json",
+              "sha256": "95b21fb136173be94ddd8740f19e1b69a226b6b4e14fed03f87fad8869ef491c"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "score": 1,
+          "reason": "Uses four paired seeds with individual effects, small-sample t assumptions and exact p=0.125. Event times remain null when censored, lag bounds are conservative, and six prespecified definition sensitivities do not replace the primary analysis.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "analysis/results.json",
+              "sha256": "36bf5e82955a65e39bc95962d280830917a79d3dbda338e007b24c0f6fd7500a"
+            },
+            {
+              "root": "candidate",
+              "path": "REPORT.md",
+              "sha256": "16c6f05a857a3417af753bbecb2090a2ca54de44b4ffc760fc3a2b4f8bf8432e"
+            },
+            {
+              "root": "candidate",
+              "path": "campaigns/modular-addition/protocol.json",
+              "sha256": "18d50f47d00720e973317226aa523e1d5e44e1d3e83c7b7e7b4acca164b4bb4b"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "score": 1,
+          "reason": "English report links measured claims to retained evidence and distinguishes memorization, improved held-out metrics and grokking. Both final figures were visually inspected; all eight cells, scales and legends are readable.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "REPORT.md",
+              "sha256": "16c6f05a857a3417af753bbecb2090a2ca54de44b4ffc760fc3a2b4f8bf8432e"
+            },
+            {
+              "root": "candidate",
+              "path": "figures/learning-accuracy.png",
+              "sha256": "a170afaa8fe4ab63bab9772afda7a64c48c770f15d04dec0a2ca2823c47ef29a"
+            },
+            {
+              "root": "candidate",
+              "path": "figures/learning-loss.png",
+              "sha256": "7cba27ca4e52a5d54116c67c29842c8646fcff2740a146e5f929719121b186db"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "score": 1,
+          "reason": "Fresh-environment staging/build and a fresh pilot actually passed; raw-only entrypoint and second reanalysis passed. Full reproduction orchestration is retained and inspected; a suspected interpreter-resolution defect was disproved by actual prefix/package probes. Restored manifest and direct references match. No second full training replay is claimed.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "REPRODUCE.md",
+              "sha256": "39d44bda4a2bd19ddefe4c02fba718cee1e71e2a638b1ccc7f3ee48b8f1e5bd1"
+            },
+            {
+              "root": "candidate",
+              "path": "study/reproduce.py",
+              "sha256": "6a38ca72f1291eb560a7dfbc28bf8381bf2bac2e93540408998687e7afe71b5b"
+            },
+            {
+              "root": "candidate",
+              "path": "study/stage_reproduction.py",
+              "sha256": "d54f29faa7ed7291bb2c8c9c9be73087b7f7f940dca187f29fbc7f8d96802709"
+            },
+            {
+              "root": "candidate",
+              "path": "reproduction-smoke/evidence/pilot-fresh-environment/qualification.json",
+              "sha256": "be7cfc81d75345847d0b44ef9879bf7abf48879136e6ff42216d626a7a6427c9"
+            },
+            {
+              "root": "candidate",
+              "path": "artifact-manifest.json",
+              "sha256": "04f0298470b8d4c532e8c539bfa6f3708bc26f739c99f0f97501deac3ea536d4"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "score": 1,
+          "reason": "Critique is substantive and bound to the exact report digest. It records the revised pilot gate, floating-point trajectory limits, small-n uncertainty, reconstructed pilot provenance and lack of independent peer review. Final audit self-correction and both checker revisions remain retained.",
+          "evidence": [
+            {
+              "root": "candidate",
+              "path": "review.json",
+              "sha256": "32aba4000f7b1a6f7127ed06eec687ed61b9be55b3188d5ea3b8e96fe0a92616"
+            },
+            {
+              "root": "candidate",
+              "path": "review-input.json",
+              "sha256": "cb377ee8d49bddecc0464d81a04f17133ca6d9c3852ce2525ef4704f3253f8c9"
+            },
+            {
+              "root": "candidate",
+              "path": "critique.json",
+              "sha256": "58fbf13222976745bfee47f4f9caa80af4010daa7be3e9da7becabe5c303aeb6"
+            },
+            {
+              "root": "candidate",
+              "path": "verification-final.json",
+              "sha256": "68703456caa3931feff5c82f19f36032f945f70a8ae42e8bdf2a19361a07fae9"
+            },
+            {
+              "root": "candidate",
+              "path": "study/verify_package.py",
+              "sha256": "50e419631d63acbef7a7a5441d1f680d9cc661dd78c316d44c315545f7d0f4ac"
+            },
+            {
+              "root": "candidate",
+              "path": "study/verify_package_v2.py",
+              "sha256": "84306262c136c9f3ae67f5a7bba9763b8e5a4bad50cbfcd5fc946cc7fdc09d41"
+            }
+          ]
+        }
+      ],
+      "completed": 1,
+      "intervention_count": 0,
+      "interventions": [],
+      "input_tokens": 5572883,
+      "cached_input_tokens": 5406976,
+      "output_tokens": 72526,
+      "reasoning_output_tokens": 31065,
+      "original_scorer_status": "unscorable",
+      "original_scorer_error": "Evidence paths must be confined relative paths"
+    },
+    {
+      "run_id": "r06",
+      "task": "modular-addition",
+      "condition": "plain",
+      "replicate": 1,
+      "native_status": "running",
+      "claimed_execution_status": null,
+      "verified_completion": null,
+      "compute_seconds": 171.63169358531013,
+      "setup_seconds": 16.53301095799543,
+      "compute_requests": 5,
+      "job_outcomes": {
+        "completed": 5,
+        "timed_out": 1,
+        "failed": 1
+      },
+      "native_wall_seconds": null,
+      "peak_native_rss_bytes": null,
+      "peak_worker_rss_bytes": 517865472,
+      "peak_native_storage_bytes": null,
+      "observed_model_settings_match": null,
+      "inputs_unchanged": null,
+      "scoring_correction_applied": false,
+      "runtime_settings_unchanged": null,
+      "fresh_single_session": null,
+      "subsequent_coordinator_messages": null,
+      "planned_interruption": {
+        "at": "2026-10-08T02:32:43.937786+00:00",
+        "mechanism": "First attempt receives a 0.5-second timeout; preserve its actual outcome",
+        "request_id": "339f849f4c694df98c8cada2af352e87",
+        "observed_status": "timed_out",
+        "actual_timeout_observed": true,
+        "charged_seconds": 1.5047412500716746
+      },
+      "numerical_correct": null,
+      "numerical_total": null,
+      "numerical_fraction": null,
+      "evidence_score": null,
+      "evidence_items": null,
+      "completed": null,
+      "intervention_count": 0,
+      "interventions": [],
+      "input_tokens": null,
+      "cached_input_tokens": null,
+      "output_tokens": null,
+      "reasoning_output_tokens": null,
+      "original_scorer_status": "missing",
+      "original_scorer_error": null
+    },
+    {
+      "run_id": "r07",
+      "task": "ema-schedule",
+      "condition": "allagma",
+      "replicate": 2,
+      "native_status": "not_started",
+      "claimed_execution_status": null,
+      "verified_completion": null,
+      "compute_seconds": 0.0,
+      "setup_seconds": 0.0,
+      "compute_requests": 0,
+      "job_outcomes": {},
+      "native_wall_seconds": null,
+      "peak_native_rss_bytes": null,
+      "peak_worker_rss_bytes": null,
+      "peak_native_storage_bytes": null,
+      "observed_model_settings_match": null,
+      "inputs_unchanged": null,
+      "scoring_correction_applied": false,
+      "runtime_settings_unchanged": null,
+      "fresh_single_session": null,
+      "subsequent_coordinator_messages": null,
+      "planned_interruption": null,
+      "numerical_correct": null,
+      "numerical_total": null,
+      "numerical_fraction": null,
+      "evidence_score": null,
+      "evidence_items": null,
+      "completed": null,
+      "intervention_count": 0,
+      "interventions": [],
+      "input_tokens": null,
+      "cached_input_tokens": null,
+      "output_tokens": null,
+      "reasoning_output_tokens": null,
+      "original_scorer_status": "missing",
+      "original_scorer_error": null
+    },
+    {
+      "run_id": "r08",
+      "task": "ema-schedule",
+      "condition": "plain",
+      "replicate": 2,
+      "native_status": "not_started",
+      "claimed_execution_status": null,
+      "verified_completion": null,
+      "compute_seconds": 0.0,
+      "setup_seconds": 0.0,
+      "compute_requests": 0,
+      "job_outcomes": {},
+      "native_wall_seconds": null,
+      "peak_native_rss_bytes": null,
+      "peak_worker_rss_bytes": null,
+      "peak_native_storage_bytes": null,
+      "observed_model_settings_match": null,
+      "inputs_unchanged": null,
+      "scoring_correction_applied": false,
+      "runtime_settings_unchanged": null,
+      "fresh_single_session": null,
+      "subsequent_coordinator_messages": null,
+      "planned_interruption": null,
+      "numerical_correct": null,
+      "numerical_total": null,
+      "numerical_fraction": null,
+      "evidence_score": null,
+      "evidence_items": null,
+      "completed": null,
+      "intervention_count": 0,
+      "interventions": [],
+      "input_tokens": null,
+      "cached_input_tokens": null,
+      "output_tokens": null,
+      "reasoning_output_tokens": null,
+      "original_scorer_status": "missing",
+      "original_scorer_error": null
+    },
+    {
+      "run_id": "r09",
+      "task": "core-culp",
+      "condition": "plain",
+      "replicate": 1,
+      "native_status": "not_started",
+      "claimed_execution_status": null,
+      "verified_completion": null,
+      "compute_seconds": 0.0,
+      "setup_seconds": 0.0,
+      "compute_requests": 0,
+      "job_outcomes": {},
+      "native_wall_seconds": null,
+      "peak_native_rss_bytes": null,
+      "peak_worker_rss_bytes": null,
+      "peak_native_storage_bytes": null,
+      "observed_model_settings_match": null,
+      "inputs_unchanged": null,
+      "scoring_correction_applied": false,
+      "runtime_settings_unchanged": null,
+      "fresh_single_session": null,
+      "subsequent_coordinator_messages": null,
+      "planned_interruption": null,
+      "numerical_correct": null,
+      "numerical_total": null,
+      "numerical_fraction": null,
+      "evidence_score": null,
+      "evidence_items": null,
+      "completed": null,
+      "intervention_count": 0,
+      "interventions": [],
+      "input_tokens": null,
+      "cached_input_tokens": null,
+      "output_tokens": null,
+      "reasoning_output_tokens": null,
+      "original_scorer_status": "missing",
+      "original_scorer_error": null
+    },
+    {
+      "run_id": "r10",
+      "task": "core-culp",
+      "condition": "allagma",
+      "replicate": 1,
+      "native_status": "not_started",
+      "claimed_execution_status": null,
+      "verified_completion": null,
+      "compute_seconds": 0.0,
+      "setup_seconds": 0.0,
+      "compute_requests": 0,
+      "job_outcomes": {},
+      "native_wall_seconds": null,
+      "peak_native_rss_bytes": null,
+      "peak_worker_rss_bytes": null,
+      "peak_native_storage_bytes": null,
+      "observed_model_settings_match": null,
+      "inputs_unchanged": null,
+      "scoring_correction_applied": false,
+      "runtime_settings_unchanged": null,
+      "fresh_single_session": null,
+      "subsequent_coordinator_messages": null,
+      "planned_interruption": null,
+      "numerical_correct": null,
+      "numerical_total": null,
+      "numerical_fraction": null,
+      "evidence_score": null,
+      "evidence_items": null,
+      "completed": null,
+      "intervention_count": 0,
+      "interventions": [],
+      "input_tokens": null,
+      "cached_input_tokens": null,
+      "output_tokens": null,
+      "reasoning_output_tokens": null,
+      "original_scorer_status": "missing",
+      "original_scorer_error": null
+    },
+    {
+      "run_id": "r11",
+      "task": "ema-schedule",
+      "condition": "plain",
+      "replicate": 1,
+      "native_status": "not_started",
+      "claimed_execution_status": null,
+      "verified_completion": null,
+      "compute_seconds": 0.0,
+      "setup_seconds": 0.0,
+      "compute_requests": 0,
+      "job_outcomes": {},
+      "native_wall_seconds": null,
+      "peak_native_rss_bytes": null,
+      "peak_worker_rss_bytes": null,
+      "peak_native_storage_bytes": null,
+      "observed_model_settings_match": null,
+      "inputs_unchanged": null,
+      "scoring_correction_applied": false,
+      "runtime_settings_unchanged": null,
+      "fresh_single_session": null,
+      "subsequent_coordinator_messages": null,
+      "planned_interruption": null,
+      "numerical_correct": null,
+      "numerical_total": null,
+      "numerical_fraction": null,
+      "evidence_score": null,
+      "evidence_items": null,
+      "completed": null,
+      "intervention_count": 0,
+      "interventions": [],
+      "input_tokens": null,
+      "cached_input_tokens": null,
+      "output_tokens": null,
+      "reasoning_output_tokens": null,
+      "original_scorer_status": "missing",
+      "original_scorer_error": null
+    },
+    {
+      "run_id": "r12",
+      "task": "ema-schedule",
+      "condition": "allagma",
+      "replicate": 1,
+      "native_status": "not_started",
+      "claimed_execution_status": null,
+      "verified_completion": null,
+      "compute_seconds": 0.0,
+      "setup_seconds": 0.0,
+      "compute_requests": 0,
+      "job_outcomes": {},
+      "native_wall_seconds": null,
+      "peak_native_rss_bytes": null,
+      "peak_worker_rss_bytes": null,
+      "peak_native_storage_bytes": null,
+      "observed_model_settings_match": null,
+      "inputs_unchanged": null,
+      "scoring_correction_applied": false,
+      "runtime_settings_unchanged": null,
+      "fresh_single_session": null,
+      "subsequent_coordinator_messages": null,
+      "planned_interruption": null,
+      "numerical_correct": null,
+      "numerical_total": null,
+      "numerical_fraction": null,
+      "evidence_score": null,
+      "evidence_items": null,
+      "completed": null,
+      "intervention_count": 0,
+      "interventions": [],
+      "input_tokens": null,
+      "cached_input_tokens": null,
+      "output_tokens": null,
+      "reasoning_output_tokens": null,
+      "original_scorer_status": "missing",
+      "original_scorer_error": null
+    }
+  ],
+  "paired_contrasts": [
+    {
+      "task": "core-culp",
+      "replicate": 1,
+      "plain_run": "r09",
+      "allagma_run": "r10",
+      "direction": "Allagma minus plain Codex",
+      "differences": {
+        "numerical_fraction": null,
+        "evidence_score": null,
+        "completed": null,
+        "compute_seconds": null,
+        "setup_seconds": null,
+        "native_wall_seconds": null,
+        "input_tokens": null,
+        "cached_input_tokens": null,
+        "output_tokens": null,
+        "reasoning_output_tokens": null
+      }
+    },
+    {
+      "task": "core-culp",
+      "replicate": 2,
+      "plain_run": "r02",
+      "allagma_run": "r01",
+      "direction": "Allagma minus plain Codex",
+      "differences": {
+        "numerical_fraction": 0.0,
+        "evidence_score": 0,
+        "completed": 0,
+        "compute_seconds": -1.176822338718921,
+        "setup_seconds": 0.28604275011457503,
+        "native_wall_seconds": 855.8066815831698,
+        "input_tokens": 1190056,
+        "cached_input_tokens": 1165824,
+        "output_tokens": 2140,
+        "reasoning_output_tokens": -3943
+      }
+    },
+    {
+      "task": "modular-addition",
+      "replicate": 1,
+      "plain_run": "r06",
+      "allagma_run": "r05",
+      "direction": "Allagma minus plain Codex",
+      "differences": {
+        "numerical_fraction": null,
+        "evidence_score": null,
+        "completed": null,
+        "compute_seconds": null,
+        "setup_seconds": null,
+        "native_wall_seconds": null,
+        "input_tokens": null,
+        "cached_input_tokens": null,
+        "output_tokens": null,
+        "reasoning_output_tokens": null
+      }
+    },
+    {
+      "task": "modular-addition",
+      "replicate": 2,
+      "plain_run": "r03",
+      "allagma_run": "r04",
+      "direction": "Allagma minus plain Codex",
+      "differences": {
+        "numerical_fraction": 0.0,
+        "evidence_score": 1,
+        "completed": 1,
+        "compute_seconds": -29.378896369365975,
+        "setup_seconds": 0.42790416604839265,
+        "native_wall_seconds": -69.35167679167353,
+        "input_tokens": 2732161,
+        "cached_input_tokens": 2807168,
+        "output_tokens": -3689,
+        "reasoning_output_tokens": -8663
+      }
+    },
+    {
+      "task": "ema-schedule",
+      "replicate": 1,
+      "plain_run": "r11",
+      "allagma_run": "r12",
+      "direction": "Allagma minus plain Codex",
+      "differences": {
+        "numerical_fraction": null,
+        "evidence_score": null,
+        "completed": null,
+        "compute_seconds": null,
+        "setup_seconds": null,
+        "native_wall_seconds": null,
+        "input_tokens": null,
+        "cached_input_tokens": null,
+        "output_tokens": null,
+        "reasoning_output_tokens": null
+      }
+    },
+    {
+      "task": "ema-schedule",
+      "replicate": 2,
+      "plain_run": "r08",
+      "allagma_run": "r07",
+      "direction": "Allagma minus plain Codex",
+      "differences": {
+        "numerical_fraction": null,
+        "evidence_score": null,
+        "completed": null,
+        "compute_seconds": null,
+        "setup_seconds": null,
+        "native_wall_seconds": null,
+        "input_tokens": null,
+        "cached_input_tokens": null,
+        "output_tokens": null,
+        "reasoning_output_tokens": null
+      }
+    }
+  ],
+  "within_task_variability": [
+    {
+      "task": "core-culp",
+      "condition": "plain",
+      "metrics": {
+        "numerical_fraction": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0
+        },
+        "evidence_score": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 8,
+          "minimum": 8,
+          "maximum": 8
+        },
+        "completed": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 1,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "compute_seconds": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 77.43184583564289,
+          "minimum": 77.43184583564289,
+          "maximum": 77.43184583564289
+        },
+        "setup_seconds": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 15.14354933355935,
+          "minimum": 15.14354933355935,
+          "maximum": 15.14354933355935
+        },
+        "native_wall_seconds": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 1065.6695522079244,
+          "minimum": 1065.6695522079244,
+          "maximum": 1065.6695522079244
+        },
+        "input_tokens": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 1266718,
+          "minimum": 1266718,
+          "maximum": 1266718
+        },
+        "cached_input_tokens": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 1164288,
+          "minimum": 1164288,
+          "maximum": 1164288
+        },
+        "output_tokens": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 38837,
+          "minimum": 38837,
+          "maximum": 38837
+        },
+        "reasoning_output_tokens": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 13311,
+          "minimum": 13311,
+          "maximum": 13311
+        }
+      }
+    },
+    {
+      "task": "core-culp",
+      "condition": "allagma",
+      "metrics": {
+        "numerical_fraction": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0
+        },
+        "evidence_score": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 8,
+          "minimum": 8,
+          "maximum": 8
+        },
+        "completed": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 1,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "compute_seconds": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 76.25502349692397,
+          "minimum": 76.25502349692397,
+          "maximum": 76.25502349692397
+        },
+        "setup_seconds": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 15.429592083673924,
+          "minimum": 15.429592083673924,
+          "maximum": 15.429592083673924
+        },
+        "native_wall_seconds": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 1921.4762337910943,
+          "minimum": 1921.4762337910943,
+          "maximum": 1921.4762337910943
+        },
+        "input_tokens": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 2456774,
+          "minimum": 2456774,
+          "maximum": 2456774
+        },
+        "cached_input_tokens": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 2330112,
+          "minimum": 2330112,
+          "maximum": 2330112
+        },
+        "output_tokens": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 40977,
+          "minimum": 40977,
+          "maximum": 40977
+        },
+        "reasoning_output_tokens": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 9368,
+          "minimum": 9368,
+          "maximum": 9368
+        }
+      }
+    },
+    {
+      "task": "modular-addition",
+      "condition": "plain",
+      "metrics": {
+        "numerical_fraction": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0
+        },
+        "evidence_score": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 7,
+          "minimum": 7,
+          "maximum": 7
+        },
+        "completed": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "compute_seconds": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 1215.9650204144418,
+          "minimum": 1215.9650204144418,
+          "maximum": 1215.9650204144418
+        },
+        "setup_seconds": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 14.303388041909784,
+          "minimum": 14.303388041909784,
+          "maximum": 14.303388041909784
+        },
+        "native_wall_seconds": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 2012.2648201668635,
+          "minimum": 2012.2648201668635,
+          "maximum": 2012.2648201668635
+        },
+        "input_tokens": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 3153372,
+          "minimum": 3153372,
+          "maximum": 3153372
+        },
+        "cached_input_tokens": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 2925440,
+          "minimum": 2925440,
+          "maximum": 2925440
+        },
+        "output_tokens": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 62222,
+          "minimum": 62222,
+          "maximum": 62222
+        },
+        "reasoning_output_tokens": {
+          "observed": 1,
+          "assigned": 2,
+          "mean": 30813,
+          "minimum": 30813,
+          "maximum": 30813
+        }
+      }
+    },
+    {
+      "task": "modular-addition",
+      "condition": "allagma",
+      "metrics": {
+        "numerical_fraction": {
+          "observed": 2,
+          "assigned": 2,
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0
+        },
+        "evidence_score": {
+          "observed": 2,
+          "assigned": 2,
+          "mean": 8,
+          "minimum": 8,
+          "maximum": 8
+        },
+        "completed": {
+          "observed": 2,
+          "assigned": 2,
+          "mean": 1,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "compute_seconds": {
+          "observed": 2,
+          "assigned": 2,
+          "mean": 1295.2493250439875,
+          "minimum": 1186.5861240450758,
+          "maximum": 1403.9125260428991
+        },
+        "setup_seconds": {
+          "observed": 2,
+          "assigned": 2,
+          "mean": 24.997913540923037,
+          "minimum": 14.731292207958177,
+          "maximum": 35.2645348738879
+        },
+        "native_wall_seconds": {
+          "observed": 2,
+          "assigned": 2,
+          "mean": 2192.7485148961423,
+          "minimum": 1942.91314337519,
+          "maximum": 2442.5838864170946
+        },
+        "input_tokens": {
+          "observed": 2,
+          "assigned": 2,
+          "mean": 5729208,
+          "minimum": 5572883,
+          "maximum": 5885533
+        },
+        "cached_input_tokens": {
+          "observed": 2,
+          "assigned": 2,
+          "mean": 5569792,
+          "minimum": 5406976,
+          "maximum": 5732608
+        },
+        "output_tokens": {
+          "observed": 2,
+          "assigned": 2,
+          "mean": 65529.5,
+          "minimum": 58533,
+          "maximum": 72526
+        },
+        "reasoning_output_tokens": {
+          "observed": 2,
+          "assigned": 2,
+          "mean": 26607.5,
+          "minimum": 22150,
+          "maximum": 31065
+        }
+      }
+    },
+    {
+      "task": "ema-schedule",
+      "condition": "plain",
+      "metrics": {
+        "numerical_fraction": {
+          "observed": 0,
+          "assigned": 2,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "evidence_score": {
+          "observed": 0,
+          "assigned": 2,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "completed": {
+          "observed": 0,
+          "assigned": 2,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "compute_seconds": {
+          "observed": 0,
+          "assigned": 2,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "setup_seconds": {
+          "observed": 0,
+          "assigned": 2,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "native_wall_seconds": {
+          "observed": 0,
+          "assigned": 2,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "input_tokens": {
+          "observed": 0,
+          "assigned": 2,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "cached_input_tokens": {
+          "observed": 0,
+          "assigned": 2,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "output_tokens": {
+          "observed": 0,
+          "assigned": 2,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "reasoning_output_tokens": {
+          "observed": 0,
+          "assigned": 2,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "task": "ema-schedule",
+      "condition": "allagma",
+      "metrics": {
+        "numerical_fraction": {
+          "observed": 0,
+          "assigned": 2,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "evidence_score": {
+          "observed": 0,
+          "assigned": 2,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "completed": {
+          "observed": 0,
+          "assigned": 2,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "compute_seconds": {
+          "observed": 0,
+          "assigned": 2,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "setup_seconds": {
+          "observed": 0,
+          "assigned": 2,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "native_wall_seconds": {
+          "observed": 0,
+          "assigned": 2,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "input_tokens": {
+          "observed": 0,
+          "assigned": 2,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "cached_input_tokens": {
+          "observed": 0,
+          "assigned": 2,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "output_tokens": {
+          "observed": 0,
+          "assigned": 2,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        },
+        "reasoning_output_tokens": {
+          "observed": 0,
+          "assigned": 2,
+          "mean": null,
+          "minimum": null,
+          "maximum": null
+        }
+      }
+    }
+  ],
+  "verified_complete_packages": 4,
+  "scope": "All assigned runs retained. Task-specific two-session descriptive ranges and six paired agent-session contrasts; no population confidence interval or general superiority claim. Repeated agent sessions do not add independent scientific seeds.",
+  "source_summary_sha256": "04c27ebf4ffdefe1a9eec4e71f542b2403fd7e62d6902791fa339dcef7f50778",
+  "postprocessor_sha256": "bb5bfcf956bee717bf252cb9023bfbee841ef4984cad7e54fcca2f19b4d67bcf"
+}

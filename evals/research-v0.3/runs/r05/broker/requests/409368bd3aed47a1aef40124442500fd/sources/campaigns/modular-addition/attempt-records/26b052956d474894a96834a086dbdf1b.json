@@ -1,0 +1,69 @@
+{
+  "schema_version": "0.2",
+  "record_type": "RunRecord",
+  "run_id": "native-pilot-qualification",
+  "attempt_id": "26b052956d474894a96834a086dbdf1b",
+  "attempt_number": 3,
+  "campaign_id": "modular-addition",
+  "experiment_id": "pilot-seed61",
+  "started_at": "2026-10-08T01:51:33.056145+00:00",
+  "ended_at": "2026-10-08T01:51:35.728728+00:00",
+  "inputs": [
+    {
+      "path": "evidence/source-history/native-pilot-v1.py",
+      "sha256": "60d6e437f64ca6d5f2d8d315705645becd88ace29147d8137ebaeb3ff4cc227b",
+      "media_type": "text/plain",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/pilot-003/started.json",
+      "sha256": "d0994ad9aa767cc6eac9ea50e98bb3fcbce90db4aaf94f8d7180d2b16f88fa39",
+      "media_type": "application/json",
+      "retention": "retained"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "evidence/pilot-003/initial.npz",
+      "sha256": "ad3ab35a0dd02b5f9382bbddd73eb9535fdd4cb347d9758eabe8a4493e929a17",
+      "media_type": "text/plain",
+      "retention": "retained"
+    },
+    {
+      "path": "evidence/pilot-003/started.json",
+      "sha256": "d0994ad9aa767cc6eac9ea50e98bb3fcbce90db4aaf94f8d7180d2b16f88fa39",
+      "media_type": "application/json",
+      "retention": "retained"
+    }
+  ],
+  "environment": {
+    "broker_receipt": ".compute/responses/26b052956d474894a96834a086dbdf1b.json",
+    "category": "compute",
+    "source_capture": "retrospective reconstruction of exact pilot edit history",
+    "broker_status": "failed"
+  },
+  "model_revision": "60d6e437f64ca6d5f2d8d315705645becd88ace29147d8137ebaeb3ff4cc227b",
+  "data_revision": "2450602c941c2448078a532ff16aa714a31085b9dfb958ebc3f5c627940c1df8",
+  "usage": {
+    "wall_seconds": 2.70364304096438,
+    "money_usd": 0,
+    "tokens": 0
+  },
+  "status": "failed",
+  "error": {
+    "kind": "execution_failure",
+    "message": "See retained stdout/stderr and broker receipt; no unsuccessful attempt contributes a seed."
+  },
+  "protocol_revision": "preconfirmation-pilot",
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "split": "pilot",
+  "command": [
+    ".venv/bin/python",
+    "study/native_pilot.py",
+    "--out",
+    "evidence/pilot-003",
+    "--steps",
+    "3000"
+  ],
+  "exit_code": 1
+}

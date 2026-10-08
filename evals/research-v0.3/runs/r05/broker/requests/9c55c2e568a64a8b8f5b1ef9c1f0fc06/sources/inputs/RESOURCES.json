@@ -1,0 +1,22 @@
+{
+  "model_usage": "Accounted separately by the native adapter; existing Codex authentication only",
+  "network": false,
+  "profile": {
+    "attempt_limit": 64,
+    "budgets_seconds": {
+      "compute": 1800,
+      "setup": 300
+    },
+    "command_timeout_seconds": {
+      "compute": 180,
+      "setup": 180
+    },
+    "file_limit_bytes": 536870912,
+    "format": "allagma-resource-profile-v1",
+    "poll_seconds": 0.25,
+    "rss_limit_bytes": 8589934592,
+    "storage_limit_bytes": 6442450944,
+    "terminate_grace_seconds": 0.5
+  },
+  "scientific_execution": "CPU or MPS through the local resource broker; isolated environment inside this study"
+}

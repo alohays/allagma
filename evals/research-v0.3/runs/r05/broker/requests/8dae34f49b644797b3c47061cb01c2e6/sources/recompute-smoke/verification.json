@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "seed": 1001,
+      "weight_decay": 0,
+      "all_9409_labels_checked": true,
+      "partition_exact_and_disjoint": true,
+      "metrics_max_abs_error": 0.0,
+      "dense_numpy_logits_max_abs_error": 0.0,
+      "dense_predictions_exact": true,
+      "checkpoint_torch_logits_max_abs_error": 0.0,
+      "checkpoint_predictions_exact": true,
+      "curve_evaluations": 1001
+    },
+    {
+      "seed": 1001,
+      "weight_decay": 1,
+      "all_9409_labels_checked": true,
+      "partition_exact_and_disjoint": true,
+      "metrics_max_abs_error": 1.3850682753502319e-17,
+      "dense_numpy_logits_max_abs_error": 0.0,
+      "dense_predictions_exact": true,
+      "checkpoint_torch_logits_max_abs_error": 0.0,
+      "checkpoint_predictions_exact": true,
+      "curve_evaluations": 1001
+    },
+    {
+      "seed": 1002,
+      "weight_decay": 0,
+      "all_9409_labels_checked": true,
+      "partition_exact_and_disjoint": true,
+      "metrics_max_abs_error": 1.2891490997328525e-15,
+      "dense_numpy_logits_max_abs_error": 0.0,
+      "dense_predictions_exact": true,
+      "checkpoint_torch_logits_max_abs_error": 0.0,
+      "checkpoint_predictions_exact": true,
+      "curve_evaluations": 1001
+    },
+    {
+      "seed": 1002,
+      "weight_decay": 1,
+      "all_9409_labels_checked": true,
+      "partition_exact_and_disjoint": true,
+      "metrics_max_abs_error": 2.2659825404947043e-17,
+      "dense_numpy_logits_max_abs_error": 0.0,
+      "dense_predictions_exact": true,
+      "checkpoint_torch_logits_max_abs_error": 0.0,
+      "checkpoint_predictions_exact": true,
+      "curve_evaluations": 1001
+    },
+    {
+      "seed": 1003,
+      "weight_decay": 0,
+      "all_9409_labels_checked": true,
+      "partition_exact_and_disjoint": true,
+      "metrics_max_abs_error": 0.0,
+      "dense_numpy_logits_max_abs_error": 0.0,
+      "dense_predictions_exact": true,
+      "checkpoint_torch_logits_max_abs_error": 0.0,
+      "checkpoint_predictions_exact": true,
+      "curve_evaluations": 1001
+    },
+    {
+      "seed": 1003,
+      "weight_decay": 1,
+      "all_9409_labels_checked": true,
+      "partition_exact_and_disjoint": true,
+      "metrics_max_abs_error": 7.548757625930325e-18,
+      "dense_numpy_logits_max_abs_error": 0.0,
+      "dense_predictions_exact": true,
+      "checkpoint_torch_logits_max_abs_error": 0.0,
+      "checkpoint_predictions_exact": true,
+      "curve_evaluations": 1001
+    },
+    {
+      "seed": 1004,
+      "weight_decay": 0,
+      "all_9409_labels_checked": true,
+      "partition_exact_and_disjoint": true,
+      "metrics_max_abs_error": 0.0,
+      "dense_numpy_logits_max_abs_error": 0.0,
+      "dense_predictions_exact": true,
+      "checkpoint_torch_logits_max_abs_error": 0.0,
+      "checkpoint_predictions_exact": true,
+      "curve_evaluations": 1001
+    },
+    {
+      "seed": 1004,
+      "weight_decay": 1,
+      "all_9409_labels_checked": true,
+      "partition_exact_and_disjoint": true,
+      "metrics_max_abs_error": 2.5173819192397806e-17,
+      "dense_numpy_logits_max_abs_error": 0.0,
+      "dense_predictions_exact": true,
+      "checkpoint_torch_logits_max_abs_error": 0.0,
+      "checkpoint_predictions_exact": true,
+      "curve_evaluations": 1001
+    }
+  ],
+  "complete_cells": 8,
+  "checkpoint_backend": "independent dense PyTorch CPU"
+}

@@ -1,0 +1,30 @@
+Looking in links: /Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r05/candidate/inputs/materials/wheels
+Processing ./inputs/materials/wheels/torch-2.14.1-cp311-cp311-macosx_14_0_arm64.whl
+Processing ./inputs/materials/wheels/numpy-2.4.6-cp311-cp311-macosx_14_0_arm64.whl
+Processing ./inputs/materials/wheels/scipy-1.17.1-cp311-cp311-macosx_14_0_arm64.whl
+Processing ./inputs/materials/wheels/matplotlib-3.11.2-cp311-cp311-macosx_11_0_arm64.whl
+Processing ./inputs/materials/wheels/filelock-4.0.12-py3-none-any.whl (from torch)
+Processing ./inputs/materials/wheels/typing_extensions-4.16.0-py3-none-any.whl (from torch)
+Processing ./inputs/materials/wheels/setuptools-84.0.0-py3-none-any.whl (from torch)
+Processing ./inputs/materials/wheels/sympy-1.14.0-py3-none-any.whl (from torch)
+Processing ./inputs/materials/wheels/networkx-3.6.1-py3-none-any.whl (from torch)
+Processing ./inputs/materials/wheels/jinja2-3.1.6-py3-none-any.whl (from torch)
+Processing ./inputs/materials/wheels/fsspec-2026.9.0-py3-none-any.whl (from torch)
+Processing ./inputs/materials/wheels/contourpy-1.3.3-cp311-cp311-macosx_11_0_arm64.whl (from matplotlib)
+Processing ./inputs/materials/wheels/cycler-0.12.1-py3-none-any.whl (from matplotlib)
+Processing ./inputs/materials/wheels/fonttools-4.66.1-cp311-cp311-macosx_10_9_universal2.whl (from matplotlib)
+Processing ./inputs/materials/wheels/kiwisolver-1.5.1-cp311-cp311-macosx_11_0_arm64.whl (from matplotlib)
+Processing ./inputs/materials/wheels/packaging-26.3-py3-none-any.whl (from matplotlib)
+Processing ./inputs/materials/wheels/pillow-12.3.0-cp311-cp311-macosx_11_0_arm64.whl (from matplotlib)
+Processing ./inputs/materials/wheels/pyparsing-3.3.3-py3-none-any.whl (from matplotlib)
+Processing ./inputs/materials/wheels/python_dateutil-2.9.0.post0-py2.py3-none-any.whl (from matplotlib)
+Processing ./inputs/materials/wheels/six-1.17.0-py2.py3-none-any.whl (from python-dateutil>=2.7->matplotlib)
+Processing ./inputs/materials/wheels/mpmath-1.3.0-py3-none-any.whl (from sympy>=1.13.3->torch)
+Processing ./inputs/materials/wheels/markupsafe-3.0.4-cp311-cp311-macosx_11_0_arm64.whl (from jinja2->torch)
+Installing collected packages: mpmath, typing-extensions, sympy, six, setuptools, pyparsing, pillow, packaging, numpy, networkx, MarkupSafe, kiwisolver, fsspec, fonttools, filelock, cycler, scipy, python-dateutil, jinja2, contourpy, torch, matplotlib
+  Attempting uninstall: setuptools
+    Found existing installation: setuptools 65.5.0
+    Uninstalling setuptools-65.5.0:
+      Successfully uninstalled setuptools-65.5.0
+Successfully installed MarkupSafe-3.0.4 contourpy-1.3.3 cycler-0.12.1 filelock-4.0.12 fonttools-4.66.1 fsspec-2026.9.0 jinja2-3.1.6 kiwisolver-1.5.1 matplotlib-3.11.2 mpmath-1.3.0 networkx-3.6.1 numpy-2.4.6 packaging-26.3 pillow-12.3.0 pyparsing-3.3.3 python-dateutil-2.9.0.post0 scipy-1.17.1 setuptools-84.0.0 six-1.17.0 sympy-1.14.0 torch-2.14.1 typing-extensions-4.16.0
+Fresh offline environment staged at /Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r05/candidate/reproduction-smoke

@@ -1,0 +1,62 @@
+{
+  "schema_version": "0.2",
+  "record_type": "ExperimentSpec",
+  "experiment_id": "s1004-wd0",
+  "hypothesis": "Weight decay improves endpoint generalization and may cause a delayed transition after memorization",
+  "inputs": [
+    {
+      "path": "campaigns/modular-addition/protocol.json",
+      "sha256": "18d50f47d00720e973317226aa523e1d5e44e1d3e83c7b7e7b4acca164b4bb4b",
+      "media_type": "application/json",
+      "retention": "retained"
+    }
+  ],
+  "runner": {
+    "path": "campaigns/modular-addition/materials/study/train.py",
+    "sha256": "554a1287d8db9221ac8275e8582b39b5f3a4b5192f5e530fd1a5d1171f0fe77c",
+    "media_type": "text/plain",
+    "retention": "retained"
+  },
+  "evaluator": {
+    "path": "campaigns/modular-addition/materials/study/engine.py",
+    "sha256": "9ebebe1839409b44c5da48af305f83de548a7c0deb32f7b4dec667fc65575fdc",
+    "media_type": "text/plain",
+    "retention": "retained"
+  },
+  "seed_policy": {
+    "seed": 1004,
+    "split": "confirmation",
+    "disjoint_confirmation": true
+  },
+  "budget": {
+    "max_attempts": 64,
+    "max_seconds": 1800,
+    "money_usd": 0,
+    "per_attempt_seconds": 180
+  },
+  "expected_artifacts": [
+    "arrays.npz",
+    "weights.npz",
+    "curve.json",
+    "measurement.json",
+    "checkpoint-100000.npz"
+  ],
+  "editable": [
+    "Execution chunk size only; independent of outcome"
+  ],
+  "fixed": [
+    "Architecture",
+    "seeds",
+    "optimizer",
+    "partitions",
+    "horizon",
+    "primary analysis"
+  ],
+  "protocol_revision": "modadd-v1",
+  "split": "confirmation",
+  "parameters": {
+    "seed": 1004,
+    "weight_decay": 0,
+    "updates": 100000
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "0.2",
+  "record_type": "ReviewRecord",
+  "review_id": "modular-addition-review-v1",
+  "reviewer": "Locked Allagma checklist plus author scientific critique",
+  "backend": "reviewer/checklist; study-owned numerical audit; author reasoning",
+  "backend_version": "sha256:6798471f8addbf3cd35dbb1bc3514caf9c46f2043d9229a04714b631b74308d4",
+  "material": {
+    "path": "REPORT.md",
+    "sha256": "16c6f05a857a3417af753bbecb2090a2ca54de44b4ffc760fc3a2b4f8bf8432e",
+    "media_type": "text/plain",
+    "retention": "retained"
+  },
+  "criteria": [
+    "Exact eight-cell fixed horizon",
+    "No held-out optimization or adaptive confirmation selection",
+    "Four paired seeds and explicit uncertainty",
+    "Censoring and primary/sensitivity definitions",
+    "Raw logits, checkpoints and repeated analysis",
+    "Material/evidence hashes and explicit review scope"
+  ],
+  "verdict": "pass",
+  "findings": [
+    "C01 [resolved]: The requested endpoint is exactly 100000 updates in all eight cells; shorter trajectories cannot substitute. Check cell coverage, checkpoint step, 1001 evaluations, source/protocol hashes and paired partitions before complete status.",
+    "C02 [resolved]: Training accuracy alone cannot support generalization, particularly with extreme held-out losses. Recompute every endpoint from logits and reproduce all final predictions using saved weights and independently reloaded PyTorch checkpoints. Report memorization, endpoint improvement and delayed grokking separately.",
+    "C03 [unresolved_limitation]: The native qualification gate was revised after a 50-update trajectory comparison failed for decay 0. The preconfirmation revision and failed attempts are preserved. Same-state gradient and optimizer comparisons establish local algorithm agreement; no full-horizon cross-backend equivalence is claimed. Tiny floating-point perturbations and ReLU boundaries can separate trajectories, but their complete causal contribution was not isolated.",
+    "C04 [unresolved_limitation]: Four paired seeds give unstable small-sample uncertainty; the paired-t interval relies on assumptions that cannot be assessed well with n=4. Expose all paired differences, sample SD, approximate t intervals and descriptive exact sign-flip results. The minimum two-sided exact p is 0.125. Do not claim generality to other tasks or broad significance.",
+    "C05 [unresolved_limitation]: No event by 100000 updates does not imply that a transition can never occur. Keep event times null, right-censor at the observed horizon, and separate conservative lag bounds from exact lags. Report threshold/sustain/lag sensitivities without replacing the primary criterion.",
+    "C06 [unresolved_limitation]: Ordered-pair splitting allows a held-out pair's commutative reverse to occur in training, and many examples share operands. Retain the requested split, disclose its scope, and use paired seeds rather than test examples as independent uncertainty units.",
+    "C07 [resolved]: Interrupted and failed attempts must not be dropped or pooled as additional independent seeds. Preserve the injected interruption, MPS setup failure and failed native gates, with new request identities on recovery. Use only the eight successful final cells and four paired seeds in the analysis.",
+    "C08 [unresolved_limitation]: Early pilot code copies were reconstructed after execution from the exact edit history; they are not prospective local snapshots. Label reconstructed pilot provenance explicitly. Confirmation used a prospective frozen snapshot and validates its hashes on every segment. The protected controller retains authoritative source snapshots and was not accessed.",
+    "C09 [unresolved_limitation]: Final-state reload and repeated analysis do not independently reproduce every historical gradient or intermediate curve point. Retain dense 100-update curves and 10000-update optimizer checkpoints, report exact validation coverage, and provide full fresh-environment retraining commands. No second full training campaign was run under the original ceiling.",
+    "C10 [unresolved_limitation]: The offline source set and deterministic Allagma checker do not provide independent scientific peer review or a comprehensive literature search. Verify supplied metadata separately from support, make no novelty claim, and label the scientific critique provisional and author-generated.",
+    "C11 [resolved]: Reported numbers, claims and manuscript revision must remain bound to retained evidence. Generate numeric tables from verified analysis, compare a second reanalysis, execute the locked reviewer adapter, verify dependency hashes and bind the review to the exact report SHA-256."
+  ],
+  "trace": [
+    {
+      "path": "review-input.json",
+      "sha256": "cb377ee8d49bddecc0464d81a04f17133ca6d9c3852ce2525ef4704f3253f8c9",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "review-checklist.json",
+      "sha256": "9c40d222178102c0e002a95cd63d53b1af3187c4a847bc233e5c181b568f38cd",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "critique.json",
+      "sha256": "58fbf13222976745bfee47f4f9caa80af4010daa7be3e9da7becabe5c303aeb6",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "analysis/verification.json",
+      "sha256": "f915fc27f5413a1fea51dc9c3eec57dd6407a1c66a19991947da146e8de4f69c",
+      "media_type": "application/json",
+      "retention": "retained"
+    },
+    {
+      "path": "analysis-repeat/recomputation-comparison.json",
+      "sha256": "95b21fb136173be94ddd8740f19e1b69a226b6b4e14fed03f87fad8869ef491c",
+      "media_type": "application/json",
+      "retention": "retained"
+    }
+  ],
+  "assurance": "provisional",
+  "coverage": "Schema, material and direct evidence digests. No independent assessment of scientific validity. Study-owned checks additionally cover all final arrays, exact partitions, predictions from saved weights, eight independent PyTorch checkpoint reloads, source/protocol/parent hashes and repeated numerical analysis. Scientific interpretation is author-reviewed, not independent peer review. Historical gradient trajectories and a second fresh training campaign were not independently replayed."
+}

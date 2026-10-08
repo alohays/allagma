@@ -1,0 +1,209 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://allagma.org/contracts/0.2/StudySpec",
+  "title": "StudySpec",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "0.2"
+    },
+    "record_type": {
+      "const": "StudySpec"
+    },
+    "study_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "question": {
+      "type": "string",
+      "minLength": 1
+    },
+    "motivation": {
+      "type": "string",
+      "minLength": 1
+    },
+    "success_criteria": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "resources": {
+      "type": "object",
+      "properties": {
+        "max_attempts": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1
+            },
+            {
+              "const": "unset"
+            }
+          ]
+        },
+        "max_seconds": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0.001
+            },
+            {
+              "const": "unset"
+            }
+          ]
+        },
+        "money_usd": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0
+            },
+            {
+              "const": "unset"
+            }
+          ]
+        },
+        "per_attempt_seconds": {
+          "type": "number",
+          "minimum": 0.01
+        }
+      },
+      "required": [
+        "max_attempts",
+        "max_seconds",
+        "money_usd",
+        "per_attempt_seconds"
+      ],
+      "additionalProperties": false
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "output": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stop_rules": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "release": {
+      "type": "string",
+      "minLength": 1
+    },
+    "bundle_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "lock": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "media_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "retention": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "path",
+        "sha256",
+        "media_type",
+        "retention"
+      ],
+      "additionalProperties": false
+    },
+    "profile_provenance": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "effective_configuration": {
+      "type": "object"
+    },
+    "configuration_origins": {
+      "type": "object"
+    },
+    "protocol_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "protocol": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "media_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "retention": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "path",
+        "sha256",
+        "media_type",
+        "retention"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "record_type",
+    "study_id",
+    "question",
+    "motivation",
+    "success_criteria",
+    "resources",
+    "capabilities",
+    "constraints",
+    "output",
+    "stop_rules",
+    "release",
+    "bundle_id",
+    "lock",
+    "profile_provenance",
+    "effective_configuration",
+    "configuration_origins",
+    "protocol_revision",
+    "protocol"
+  ],
+  "additionalProperties": false
+}

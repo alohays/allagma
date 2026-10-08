@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "verifier_source_sha256": "84306262c136c9f3ae67f5a7bba9763b8e5a4bad50cbfcd5fc946cc7fdc09d41",
+  "manifest_sha256": "04f0298470b8d4c532e8c539bfa6f3708bc26f739c99f0f97501deac3ea536d4",
+  "report_sha256": "16c6f05a857a3417af753bbecb2090a2ca54de44b4ffc760fc3a2b4f8bf8432e",
+  "files_hashed": 575,
+  "allagma_records_validated": 38,
+  "transitive_references_verified": 542,
+  "eight_fixed_horizon_cells": true,
+  "protocol_frozen_before_confirmation": true,
+  "numerical_reanalysis_exact": true,
+  "all_eight_checkpoint_predictions_verified": true,
+  "local_report_links_valid": true,
+  "resource_usage_through_prior_receipts": {
+    "compute": 1403.271101750899,
+    "setup": 35.2645348738879
+  },
+  "compute_requests_through_prior_receipts": 31,
+  "injected_interruption_receipts": 1,
+  "coverage": "Final hash/schema/path/temporal/coverage audit plus prior independently executed endpoint/checkpoint and numerical reanalysis checks. This audit output and its broker receipt are intentionally outside the earlier manifest snapshot."
+}

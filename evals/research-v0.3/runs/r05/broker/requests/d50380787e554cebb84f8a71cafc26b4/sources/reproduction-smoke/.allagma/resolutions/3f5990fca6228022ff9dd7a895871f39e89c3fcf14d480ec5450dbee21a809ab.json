@@ -1,0 +1,261 @@
+{
+  "inputs": {
+    "overrides/settings.json": "{}\n",
+    "profiles/study.json": "{\n  \"id\": \"public/default\",\n  \"private\": false,\n  \"settings\": {\n    \"language\": \"English\"\n  }\n}\n"
+  },
+  "intent": {
+    "allow_experimental": false,
+    "capabilities": [
+      "artifact.read",
+      "artifact.write",
+      "execution.local"
+    ],
+    "hosts": [
+      "codex"
+    ],
+    "overrides": [
+      "overrides/settings.json"
+    ],
+    "profile": "profiles/study.json",
+    "recipe": "recipe/research",
+    "request": {
+      "budget": {
+        "max_attempts": 64,
+        "max_seconds": 1800,
+        "money_usd": 0,
+        "per_attempt_seconds": 180
+      }
+    },
+    "roles": {},
+    "schema_version": "0.2",
+    "settings": {},
+    "study_id": "r05"
+  },
+  "lock": {
+    "bundle_id": "b-9a39b70665ba909edb8abc13",
+    "capabilities": [
+      "artifact.read",
+      "artifact.write",
+      "execution.local"
+    ],
+    "configuration_inputs": {
+      "overrides/settings.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "profiles/study.json": "9f90c310cefb07153761645bd658f8ad6551578ccb6bf772074e44e8f8c17b9b"
+    },
+    "configuration_origins": {
+      "budget.max_attempts": "current request",
+      "budget.max_seconds": "current request",
+      "budget.money_usd": "current request",
+      "budget.per_attempt_seconds": "current request",
+      "capabilities": "host authorization",
+      "context_chars": "module:context/active-brief",
+      "language": "profile:public/default",
+      "max_revisions": "recipe:recipe/research"
+    },
+    "contracts": [
+      "0.2"
+    ],
+    "created_at": "2026-10-07T20:02:31.291162+00:00",
+    "effective_configuration": {
+      "budget": {
+        "max_attempts": 64,
+        "max_seconds": 1800,
+        "money_usd": 0,
+        "per_attempt_seconds": 180
+      },
+      "capabilities": [
+        "artifact.read",
+        "artifact.write",
+        "execution.local"
+      ],
+      "context_chars": 12000,
+      "language": "English",
+      "max_revisions": 2
+    },
+    "files": {
+      "CATALOG.md": "db92f782c5348cdb6251233373aad90e7299fcbadadec1aa1635a1c1f74d292c",
+      "LICENSE": "50cdd713229d07fd7e2bbb9c22e239dd789ba7f767a43ff55158ee31a9aa70d9",
+      "adapters/codex/README.md": "fe9d3d56c96c2e63f94917f953e068486b9b899f19473ce085badc68b551f461",
+      "adapters/codex/example.json": "4f655e2d7dfe0d891d0d433d7351ca6b447fbb3aac90b1cc4e4bd70ee7d0facf",
+      "adapters/codex/host.json": "a694ac00a39b573b50703c9ff457f03e9ec9ce6ab089aa12780a35e9aa4fa661",
+      "adapters/codex/module.yaml": "08b6b3d46a237d61fb03176589a9b8c92b2f1971ec25357f8c34d0a8e6a61728",
+      "adapters/codex/session.py": "490c37453da590302861f980f46ef16833ed038a9f11af064270d1c2618f1a7a",
+      "adapters/local-process/COMPUTE.md": "ac8f4265812035ab9c856bfb6805bacf6e991fd4ea5e9a7d28f44956f9aabae7",
+      "adapters/local-process/README.md": "d4a51b0bd87529b79ee080389bc91bd7d0ee4ff060c8ca274dfb09fe14c1746f",
+      "adapters/local-process/broker.py": "d070fae13968a40c5b060e1581d2b087cfc6505dba64c06e4cf44b5a1d4d8e97",
+      "adapters/local-process/compute_client.py": "837cd519f5dba2c7a72162fdacb4af769a879e8cb21a99796c86e60fe89d6045",
+      "adapters/local-process/example.json": "25f2399e184bf2b0658d401fd6cb116fc3aaaad3232342a3523cee2a0030e07f",
+      "adapters/local-process/module.yaml": "11efdb77a13f5d28585498998f288ea37d41738788e0d563c6c196d16d0a1190",
+      "adapters/reviewer-checklist/README.md": "9973791cf1694f3a57f927ec10d2a39b072c9915a752b15aa91d4c4b249742d2",
+      "adapters/reviewer-checklist/example.json": "e4d36c4593450ce78ae7a4243027a0f6ffdb4fd62708eb397041d93d6d9106f2",
+      "adapters/reviewer-checklist/module.yaml": "82d1e5b31248d99353cd7dcef7616e2b156cfd716e5c82a90a7fde108a92fd1e",
+      "adapters/reviewer-checklist/review.py": "fdf40beff8632370695f82228ab428d983600c1f83076ba975eb86fd26a83e6c",
+      "allagma/__init__.py": "1b968b9005929e080973f3848816a75b553e8f6c255b676f5f50575eac8614d8",
+      "allagma/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "allagma/acceptance.py": "9cd13c984cfbdfa66c33ef7ecbe70053c2b28100a066b09f025231ec5c1a46fd",
+      "allagma/bundles.py": "94aaf212c4e6c6439d041032a1421ce78df5b207a34dd0ba2c95f5ac375f0aae",
+      "allagma/campaigns.py": "c695c3ff8e9413c217fb6159bd94e984dfe574d7e866983a79032bfcd6b6c3ad",
+      "allagma/catalog.py": "710e62cf10e4f59fcde9f40d4b65a56ba120a02d63c8c36d18bddd3b7cc52c50",
+      "allagma/cli.py": "6c2094929e702d8361aa24da4760fa9c04d6fa10b9dd84f249abcc9f4aca59aa",
+      "allagma/composition.py": "3e0fd293ccf471ca2b43077e76245a783134b0f5370482274eaa0164444eeee8",
+      "allagma/configuration.py": "bb04c05f6244a14a853baaf2ce47b0a2fcb9acac9ebe1b38ea429633f2a75cdc",
+      "allagma/contracts.py": "ede363ff2a1def2e10509ffc9f0374c0c25e70b667d14d4da7263a1d5d7d125c",
+      "allagma/demo.py": "466016de41754e6ea997b1d5de807ae786ee6c9181c14ca8c7685a7ce1a6cdd6",
+      "allagma/files.py": "0632c47a10d7027ba3211c29fbb2cd4290b229f89be19e789dd23b5108cc7c88",
+      "allagma/migrations.py": "3a78c192ce97d574e8825d3262e1ea3e8a9aafdfbeee36e3249447e0b959df44",
+      "allagma/qualification.py": "3b406dc316acd985fb89e78018208b9a987506cbbe0bcdab53d7d736f1726613",
+      "allagma/research.py": "a347983d0217b3459532ddc362d2dca878c7f8e6c63696157b16c9271c62991c",
+      "allagma/resources.py": "392f7975f4a4ae77a11e23a2e167cd4cee53d7f0d63a58a42f5782d244f3da8f",
+      "allagma/worker.py": "28fca99886bf39f81df4a7ca65545f151fb2d2356148d78c3776cc72a0eb3f9d",
+      "contracts/AnalysisRecord.schema.json": "92bfc45735f5b596416527516e46b3090534cfff3e0c38ff0f8a0031b1cbc661",
+      "contracts/ClaimRecord.schema.json": "0cbf04aea5a27f616200b84c215f0249e6baa0dda86ad952ce1166efd8a23819",
+      "contracts/ContextRecord.schema.json": "837da16a17cf76b981f1d6f211ff1e3c5a2bcf6e2adf4eeb632d88bb9f9ea8fa",
+      "contracts/ExperimentSpec.schema.json": "8f43c34b150897118643a7632ef16f5e8260c6bb5cceb77e10d9270ecaabe12c",
+      "contracts/ImprovementRecord.schema.json": "0c2d37c478b4694969c8c7cb80631e843f453c0f1271dd390bf8f8be4ab20f55",
+      "contracts/ReviewRecord.schema.json": "e33fe17311cfcc7132ca03623a8cdbc50afb8fde9e346faa123d03e5d50346c6",
+      "contracts/RunRecord.schema.json": "014c059acf6d5bff333101505d6d9cc6acaeba802519caa335e2513f6f4e5a52",
+      "contracts/StudySpec.schema.json": "5e7826267f43c811fb26b273162f8101bf1b391e6e2e99c65bb59c531c4098ba",
+      "contracts/compatibility.json": "26a0034e787df0cdc5e570a9171034584ac8a0d8341bcd23664a9e0437a57ca1",
+      "methods/allagma-analysis/SKILL.md": "577e8f8059856b3d38d72d419abc0cf1a38fb25a29d246dd20b61644154a9f7c",
+      "methods/allagma-analysis/example.json": "cb6651d604d8604b14df4939b9ffc9f2021b11bea5118917f98facf1b5fa18cd",
+      "methods/allagma-analysis/module.yaml": "629b717916809323abd3aeca92da63989af253ff3a626c66b8fe7849e54ab416",
+      "methods/allagma-audit/SKILL.md": "7f151e4dc792fa50e593613798c3e079f7c6dfa8112a78da0d0f43ccc1067e35",
+      "methods/allagma-audit/example.json": "32d28febc25101c8a4625fc39d25d6b0f4747b7d8ad4c696f70816f1d1ca784f",
+      "methods/allagma-audit/module.yaml": "7617a366705649741c34f72e34ff9b746154347aa28ee71c7c3f9c943ef86370",
+      "methods/allagma-context-active-brief/SKILL.md": "f228c1bcd94646b8b96d9694f43f5f480c1dca0284618260fc1a143e8960de23",
+      "methods/allagma-context-active-brief/example.json": "9d5975ee5ecc46870a2ba2d92647c4e96f4db3edc58f9228e1c6c18f25bea61d",
+      "methods/allagma-context-active-brief/module.yaml": "ac878db5f2d708934465536e1958842237f9536856ca55fff911b7127d44107b",
+      "methods/allagma-context-active-brief/select.py": "e5c32b1e32207a91efe16a1ac4575c765a24f0a75fbfbe80a19f6e526dd9f128",
+      "methods/allagma-experiment/SKILL.md": "81e6590ae9113a3f0a9508af58b3d70ad60ba970f86750d4ce5751e662e6b5c9",
+      "methods/allagma-experiment/example.json": "a83fd4ccfe6809237285e3fbc5d95bc37f0fb2d52336144fe4c18df9cf5c3226",
+      "methods/allagma-experiment/module.yaml": "b0dab32a91b98ffa449e9ecc116e7195dccbbf58925ef785ae24569081c9dd5c",
+      "methods/allagma-protocol/SKILL.md": "a89b094556d76a0a370363ab54f943d4342f5322042ed7ff4424c90171b754ac",
+      "methods/allagma-protocol/example.json": "b664d33cb6272dca670a0726f4020e6efeec4fb6b5e5266513e72fc4b0980da3",
+      "methods/allagma-protocol/module.yaml": "ce030bc45bac1c8419d1fa88b31778d4bace4a9fc53064ac3145a3072403f577",
+      "methods/allagma-scope/SKILL.md": "54164304a1dcfd0dae3f962c69e723ac6d7db4df756d63fdfcb7b12648b9a0ea",
+      "methods/allagma-scope/example.json": "cc2be6ec24873ffb9a55a7d0a8893dd40a6bfe1ded90f7b9eb86c0e2adfaa935",
+      "methods/allagma-scope/module.yaml": "e955d2932dfa7ee66d694baf306b50d4e85187933189c96944f586c20f8b7388",
+      "methods/allagma-writing/SKILL.md": "1c6926bb5fdedcd3357e20d53914f6174d021d18f187045e59df5ac5305b3e11",
+      "methods/allagma-writing/example.json": "f398c1cceacf34080f6652a8f705bb5469ed3200e15be1f9b6003b4111daa8ae",
+      "methods/allagma-writing/module.yaml": "a9c61d35fda6867f1324859137758eae2880e192e0cc35a65ccdb53809e2ba98",
+      "policies/local/README.md": "84bb5a33ae21b1b0381d23593875e8ba10cffcbdef1cc7cb54f17c62ff49a2f0",
+      "policies/local/example.json": "d9f53cdb35bb54ddc2ce25015b8d3c30e280547daa394fe4b4727f91380adf78",
+      "policies/local/module.yaml": "a48ae425a2362356d26ee002b5b29207deee83c1ac0d759e653333e80a19f929",
+      "policies/local/policy.json": "69a7c9e4d6dbf819f6fffce15397b00555015cfefba73becb3fc89f65f8bd397",
+      "profiles/default/README.md": "ac6b57e99a90319ad01bb579a36ad668cbd929ced7831973d22882c072868d7a",
+      "profiles/default/example.json": "70b1cc63c5f5d4b61a23bdffa01efdfafb57d688999f6a8c5da520fa6cefe194",
+      "profiles/default/module.yaml": "6cf5c10315dc749f19cdceca19ebf2fbbdc0c889a923a115cb0db7859927b441",
+      "profiles/default/profile.json": "22bf8cfc5a958e42158debb76a82428041af623005e8300bf774431f4b6f338f",
+      "recipes/allagma-research/SKILL.md": "d31d0ac886623e1944ddf536717a5ddb9fe965775fdba8b764354bafc538b0e2",
+      "recipes/allagma-research/example.json": "7ecbcb431589f2ab8eeb3339d3fe7b46e949b703fbb6843a598199cb698640ce",
+      "recipes/allagma-research/module.yaml": "ed796463b8622c88933c5f1e6e2c5680824aaf2f2f8d472a17d661e7c46d38da",
+      "recipes/allagma-research/recipe.json": "d7fae4ac1257a25d3124ce95ef9e4b7c6178cd68ed2f08cabda03a7dc4feef35",
+      "registry.json": "01064addfe20113283af436688e126ca47697568c980938b31c14ae8ffe091e3",
+      "release.json": "357adeab719b324bcf180503fe6b5a68c3050a2d83dff0d27638ef2473d38d78",
+      "tools/allagma.py": "baf064528308ded0d0357e24a386d027155b55ca3926cb78070a85beefdd4530"
+    },
+    "generator_version": "0.3.0rc1",
+    "hosts": [
+      "codex"
+    ],
+    "intent_digest": "47eec7a713a38424d21f713d94fe9fe5c3e33c32a5d5391ecbc7417802ba6cab",
+    "lock_id": "3f5990fca6228022ff9dd7a895871f39e89c3fcf14d480ec5450dbee21a809ab",
+    "modules": {
+      "context/active-brief": {
+        "dependencies": [],
+        "path": "methods/allagma-context-active-brief",
+        "revision": "sha256:22a50caccde3c9cced58e751e31265cdf1547811a785efb2e5679bb13083baa7"
+      },
+      "host/codex": {
+        "dependencies": [],
+        "path": "adapters/codex",
+        "revision": "sha256:fdda48b0c1d0f6eaaafb35f8399777fdb627efc9237d1c4b5e295319161b1a0e"
+      },
+      "policy/local": {
+        "dependencies": [],
+        "path": "policies/local",
+        "revision": "sha256:44e1e4d38b7dec7aaea8570c088349b59682f940f87d3b473b086bcdd6c44bc3"
+      },
+      "profile/default": {
+        "dependencies": [],
+        "path": "profiles/default",
+        "revision": "sha256:5ed9b45a2c34432019ec2efa727088bf98130613d60bfd7ee71f2105e525f4b4"
+      },
+      "recipe/research": {
+        "dependencies": [
+          "research/scope",
+          "research/protocol",
+          "research/experiment",
+          "research/analysis",
+          "research/writing",
+          "research/audit"
+        ],
+        "path": "recipes/allagma-research",
+        "revision": "sha256:cbeb5b3ed172630018b0cb391f50635825ed2208f7db1da9ea56beb49518dd44"
+      },
+      "research/analysis": {
+        "dependencies": [],
+        "path": "methods/allagma-analysis",
+        "revision": "sha256:3823b84a1316b7309a49bc89e1cb6338d3a85b6a7e558058a0544045dce33590"
+      },
+      "research/audit": {
+        "dependencies": [],
+        "path": "methods/allagma-audit",
+        "revision": "sha256:e0521d523acb713d8d17b15f66b9f7729dfdb5802d8155ae0ec18065ebe145f6"
+      },
+      "research/experiment": {
+        "dependencies": [],
+        "path": "methods/allagma-experiment",
+        "revision": "sha256:1e6f7bd94513788116402b43f270d283603090be19b7c823a3ec92c6dbf96c2a"
+      },
+      "research/protocol": {
+        "dependencies": [],
+        "path": "methods/allagma-protocol",
+        "revision": "sha256:ae5279e0b7efe433a4964bc2d03b43d9de10c91d017c1587c882315ab42e8f08"
+      },
+      "research/scope": {
+        "dependencies": [],
+        "path": "methods/allagma-scope",
+        "revision": "sha256:cba7476085e2141cbedb7fb0b4ff465e8a92dbf8d099ba6026c13a2b14dd6f6c"
+      },
+      "research/writing": {
+        "dependencies": [],
+        "path": "methods/allagma-writing",
+        "revision": "sha256:842b093f10ef0a9d08804b7951540f86c9861f00c446943bc923c03988ab4e6a"
+      },
+      "reviewer/checklist": {
+        "dependencies": [],
+        "path": "adapters/reviewer-checklist",
+        "revision": "sha256:6798471f8addbf3cd35dbb1bc3514caf9c46f2043d9229a04714b631b74308d4"
+      },
+      "runner/local-process": {
+        "dependencies": [],
+        "path": "adapters/local-process",
+        "revision": "sha256:fe1577580f24e351eb7f892c44e5746cb4c4ae9fabd8c76cd5ef8cea495add37"
+      }
+    },
+    "profile_provenance": [
+      {
+        "id": "public/default",
+        "sha256": "9f90c310cefb07153761645bd658f8ad6551578ccb6bf772074e44e8f8c17b9b"
+      }
+    ],
+    "publication": "local-unpublished",
+    "recipe": "recipe/research",
+    "release": "0.3.0rc1",
+    "release_tag": "v0.3.0rc1",
+    "roles": {
+      "context": "context/active-brief",
+      "reviewer": "reviewer/checklist",
+      "runner": "runner/local-process"
+    },
+    "scaffold": {
+      "answers": {
+        "study_id": "r05"
+      },
+      "version": "1"
+    },
+    "schema_version": "0.2",
+    "source_revision": "sha256:3a684d3836331b6141076a6e86aa35ad5a5bc4768e90aa6679cf3486da0b0a01"
+  }
+}
