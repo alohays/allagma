@@ -1,4 +1,4 @@
-# Local resource supervision (v0.3 development)
+# Local resource supervision
 
 `allagma resource` runs study-owned commands under a finite, frozen resource
 profile. It contains no scientific model, metric, training loop or result
@@ -53,6 +53,12 @@ overshoot. RSS omits some GPU allocations; studies using MPS need a separate
 device-allocation limit. Unobserved detached descendants and writes outside the
 work directory require host isolation. This helper is not an adversarial
 sandbox, a filesystem quota, or a guarantee of instantaneous hard limits.
+
+After termination, rc2 measures final persistent storage again. A nominally
+successful command above the cap becomes `storage_exceeded`; an existing
+failure retains its reason and also records `final_storage_limit_exceeded`.
+The final measurement contributes to the reported peak. This closes a fast-exit
+sampling race, while retaining the limits of polling and logical-byte accounting.
 
 The evaluation controller must keep the policy, ledger and scorer outside
 candidate-writable paths. A study-owned ledger alone cannot prove resistance to

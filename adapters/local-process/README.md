@@ -2,7 +2,7 @@
 
 The helper launches argument arrays without a shell. It snapshots executable inputs, bounds each attempt, saves stdout/stderr, records failure/interruption and never overwrites an attempt. The study owns scientific code. No network or paid API runner is supplied. This adapter requires artifact access and authorized local execution.
 
-## Additional v0.3 development supervisor
+## Additional v0.3 resource supervisor
 
 The optional [local resource supervisor](../../docs/resource-supervision.md)
 wraps study-owned commands with explicit finite profiles and immutable job
@@ -10,7 +10,7 @@ receipts. It is separate from the existing campaign budget and does not change
 historical campaign execution. Its watchdog coverage and limits are documented
 in that guide.
 
-The experimental `broker.py` and `compute_client.py` provide a common local
+The optional `broker.py` and `compute_client.py` provide a common local
 resource queue for controlled agent evaluations. Controller-owned policies,
 receipts and source snapshots stay outside candidate access. Both comparison
 conditions use the same client. It supplies process accounting and isolation,
@@ -23,8 +23,12 @@ from the authoritative outcome without executing again.
 The native Codex permission profile and this scientific worker sandbox are
 separate: the former keeps direct agent commands confined, while the latter
 permits the GPU runtime needed by requested scientific computation. The
-controller must service the queue and retain its own records. This development
-adapter still needs complete native study-workflow qualification before the
-v0.3 comparison can be frozen. A controller killed mid-request also requires
+controller must service the queue and retain its own records. The frozen v0.3
+cohort used this interface for twelve native research sessions. The rc2 broker
+corrects an MPS allocator mismatch by explicitly setting high watermark 0.2,
+low watermark 0.1 and disabled implicit fallback. An actual full-broker MPS
+forward/backward, AdamW, checkpoint/resume and access-denial regression passes.
+The frozen comparison retains the original defect and autonomous recoveries;
+it does not measure corrected GPU throughput. A controller killed mid-request requires
 explicit reconciliation of its resource receipt; never infer that an absent
 response permits a retry.

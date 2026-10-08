@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.3.0rc2 — reusable workflow release candidate, 8 October 2026
+
+- Add brief/material/resource preparation, isolated native Codex capture,
+  bounded local computation, interrupted-request recovery and delivered-study
+  reproduction through a common broker. Keep scientific code study-owned.
+- Retain twelve frozen fresh sessions across CORE CULP, modular addition and
+  EMA duration/schedule: all required science verified; ten complete packages.
+  Publish every outcome, six paired contrasts, failures and uncertainty.
+- Correct the complete broker MPS allocator prefix and final-storage exit races
+  in both supervisors, with preserved before/after evidence and actual MPS work.
+- Correct inline-curve evaluator compatibility and streaming evidence transport
+  separately from the frozen comparison. Preserve all original artifacts.
+- Read release identity from the inspected source in acceptance receipts.
+  Record contracts remain 0.2; old bundles stay immutable. See the
+  [release notes](docs/releases/0.3.0rc2.md) for qualification and migration scope.
+
 ## Unreleased v0.2 self-audit corrections — 7 October 2026
 
 - Preserve post-interruption edits during update recovery; atomically publish

@@ -8,3 +8,5 @@ runs/*/resources/jobs/*/stdout.txt -text -whitespace
 runs/*/resources/jobs/*/stderr.txt -text -whitespace
 runs/*/package/terminal-queue/.compute/responses/*-stdout.txt -text -whitespace
 runs/*/package/terminal-queue/.compute/responses/*-stderr.txt -text -whitespace
+validation/**/stdout.txt -text -whitespace
+validation/**/stderr.txt -text -whitespace

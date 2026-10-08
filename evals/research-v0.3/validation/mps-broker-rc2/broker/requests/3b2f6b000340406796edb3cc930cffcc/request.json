@@ -1,0 +1,20 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "-m",
+    "pip",
+    "install",
+    "--no-index",
+    "--no-cache-dir",
+    "--find-links",
+    "inputs/wheels",
+    "torch==2.14.1",
+    "numpy==2.4.6"
+  ],
+  "attempt": false,
+  "category": "setup",
+  "cwd": ".",
+  "label": "mps-canary-offline-packages",
+  "request_id": "3b2f6b000340406796edb3cc930cffcc",
+  "timeout_seconds": 120
+}

@@ -165,8 +165,9 @@ def run_acceptance(source, output):
     if output.exists():
         raise AllagmaError("Acceptance output already exists; use a fresh directory to preserve evidence")
     output.mkdir(parents=True)
+    release = read_json(source / "release.json")["release"]
     report = {"schema_version": "0.2", "status": "running", "started_at": utcnow(),
-              "release": "0.2.0", "source_revision": b.source_revision(source),
+              "release": release, "source_revision": b.source_revision(source),
               "source_inventory": b.source_inventory(source), "conformance_inventory": inventory(source / "conformance"),
               "example_inventory": inventory(source / "examples"),
               "environment": {"python": platform.python_version(), "platform": platform.platform(), "timezone_for_reporting": "Asia/Seoul",
@@ -248,7 +249,7 @@ def run_acceptance(source, output):
         report["status"] = "pass"
         report["completed_at"] = utcnow()
         write_json(output / "acceptance.json", report, immutable=True)
-        write_text(output / "README.md", "# Allagma v0.2 acceptance\n\nAll I1–I5 checks passed. See acceptance.json for exact source, checks, artifacts and limits.\n\n"
+        write_text(output / "README.md", f"# Allagma {release} acceptance\n\nAll I1–I5 checks passed. See acceptance.json for exact source, checks, artifacts and limits.\n\n"
                    "The full toy manuscript is in `generic/campaigns/toy-v1/analyses/a001/paper/manuscript.md`.\n"
                    "Native host paths are contract fixtures; no real-model qualification is claimed.\n", immutable=True)
         return {"status": "pass", "milestones": {key: value["status"] for key, value in sorted(report["milestones"].items())},

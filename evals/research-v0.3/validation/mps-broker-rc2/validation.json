@@ -1,0 +1,104 @@
+{
+  "scope": "Actual local scientific broker and MPS regression, not native-agent qualification.",
+  "broker_sha256": "8656e389092f2638c19a81a4387b1af9b97e4052b15b921f3ab14e68f3fa237d",
+  "canary_sha256": "95c54a24e02bde8a7f0e6f7e0549263baaa587c55546877dba67e7e91945bdcf",
+  "source_commit": "5910b36f51a6e7efd1b5db8c83050309c1027187",
+  "profile_sha256": "d9ed8b7b47a1c369f31cda162c19023d2942b562f994970218fb55279cc67ced",
+  "requests": [
+    {
+      "request_id": "8c27cfa3ff934e78a9d6106eb6343bc0",
+      "label": "mps-canary-venv",
+      "response": {
+        "request_id": "8c27cfa3ff934e78a9d6106eb6343bc0",
+        "injected_interruption": false,
+        "isolation_sha256": "3a5ed5120fb17bfb34241a03fddd04b50993fe81130697935949f022274af84b",
+        "result": {
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/validation/resources/jobs/0051-mps-canary-venv",
+          "status": "completed",
+          "exit_code": 0,
+          "ended_at": "2026-10-08T07:32:29.066412+00:00",
+          "charged_seconds": 1.9775510830804706,
+          "charge_basis": "measured supervisor wall time",
+          "peak_rss_bytes": 193921024,
+          "peak_storage_bytes": 3761058383,
+          "final_storage_bytes": 3759749436,
+          "final_storage_limit_exceeded": false,
+          "monitor_scope": "Polled process-tree RSS and logical file bytes, plus final persistent storage after termination; RSS excludes some GPU allocations; not adversarial containment"
+        },
+        "reconciled_after_controller_restart": false
+      }
+    },
+    {
+      "request_id": "3b2f6b000340406796edb3cc930cffcc",
+      "label": "mps-canary-offline-packages",
+      "response": {
+        "request_id": "3b2f6b000340406796edb3cc930cffcc",
+        "injected_interruption": false,
+        "isolation_sha256": "3a5ed5120fb17bfb34241a03fddd04b50993fe81130697935949f022274af84b",
+        "result": {
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/validation/resources/jobs/0052-mps-canary-offline-packages",
+          "status": "completed",
+          "exit_code": 0,
+          "ended_at": "2026-10-08T07:32:40.689529+00:00",
+          "charged_seconds": 11.412427542032674,
+          "charge_basis": "measured supervisor wall time",
+          "peak_rss_bytes": 284229632,
+          "peak_storage_bytes": 4477804628,
+          "final_storage_bytes": 4477804628,
+          "final_storage_limit_exceeded": false,
+          "monitor_scope": "Polled process-tree RSS and logical file bytes, plus final persistent storage after termination; RSS excludes some GPU allocations; not adversarial containment"
+        },
+        "reconciled_after_controller_restart": false
+      }
+    },
+    {
+      "request_id": "3fcf67a780b44931b5200632140e203d",
+      "label": "mps-full-broker-regression",
+      "response": {
+        "request_id": "3fcf67a780b44931b5200632140e203d",
+        "injected_interruption": false,
+        "isolation_sha256": "3a5ed5120fb17bfb34241a03fddd04b50993fe81130697935949f022274af84b",
+        "result": {
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/validation/resources/jobs/0053-mps-full-broker-regression",
+          "status": "completed",
+          "exit_code": 0,
+          "ended_at": "2026-10-08T07:32:50.112957+00:00",
+          "charged_seconds": 8.909850333817303,
+          "charge_basis": "measured supervisor wall time",
+          "peak_rss_bytes": 461979648,
+          "peak_storage_bytes": 4477814233,
+          "final_storage_bytes": 4477814233,
+          "final_storage_limit_exceeded": false,
+          "monitor_scope": "Polled process-tree RSS and logical file bytes, plus final persistent storage after termination; RSS excludes some GPU allocations; not adversarial containment"
+        },
+        "reconciled_after_controller_restart": false
+      }
+    }
+  ],
+  "controller_loopback_positive_control": true,
+  "status": "pass",
+  "worker": {
+    "status": "pass",
+    "checks": {
+      "readonly_input_read": true,
+      "readonly_input_write_denied": true,
+      "protected_read_denied": true,
+      "outside_workspace_write_denied": true,
+      "network_denied_with_permission_error": true,
+      "known_forward": true,
+      "known_gradient": true,
+      "checkpoint_prediction_agreement": true,
+      "resumed_training_agreement": true,
+      "finite_training": true,
+      "optimizer_updates": true
+    },
+    "backend": "actual local MPS",
+    "torch": "2.14.1",
+    "python": "3.11.6",
+    "high_watermark": "0.2",
+    "low_watermark": "0.1",
+    "checkpoint": "evidence/checkpoint-8.pt",
+    "maximum_resume_prediction_error": 0.0,
+    "scope": "Complete broker environment, MPS allocation/forward/backward/AdamW/checkpoint/resume and actual filesystem/network denials. No native agent qualification, research-result claim, or instantaneous GPU-memory containment claim."
+  }
+}

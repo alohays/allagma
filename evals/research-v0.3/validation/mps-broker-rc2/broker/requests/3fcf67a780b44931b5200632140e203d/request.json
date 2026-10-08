@@ -1,0 +1,20 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "inputs/mps_broker_canary.py",
+    "--output",
+    "evidence",
+    "--readonly",
+    "/Users/iyunseong/maangeek/allagma/work/v03-validation/mps-broker-rc2/inputs/readonly.txt",
+    "--protected",
+    "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/validation/mps-broker-rc2/synthetic-protected",
+    "--port",
+    "54186"
+  ],
+  "attempt": true,
+  "category": "compute",
+  "cwd": ".",
+  "label": "mps-full-broker-regression",
+  "request_id": "3fcf67a780b44931b5200632140e203d",
+  "timeout_seconds": 90
+}

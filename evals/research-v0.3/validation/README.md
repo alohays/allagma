@@ -9,15 +9,16 @@ include failed validation attempts. Per-command limits are finite. The allowance
 is based on measured development execution/replay costs with room for cold setup
 and the complete required validation scope. Any expansion needs user input.
 
-## Prepared MPS regression — execution pending
+## Actual full-broker MPS regression — passed
 
-`check_mps_broker.py` and its worker `mps_broker_canary.py` are prepared for the
-post-cohort broker correction. At this checkpoint only syntax and CLI parsing
-have been checked; these files do not establish MPS qualification yet. Keep the
-frozen comparison source unchanged until every assigned session is terminal.
+`check_mps_broker.py` and `mps_broker_canary.py` passed against corrected source
+commit `5910b36` after every assigned native session was terminal. The receipt is
+[mps-broker-rc2/validation.json](mps-broker-rc2/validation.json); the actual worker
+result and checkpoint are retained in that directory with an evidence index.
+The frozen comparison source remains unchanged.
 
-After the release broker explicitly supplies high watermark 0.2 and low
-watermark 0.1, execute through the complete broker environment:
+The executed command used the complete broker environment with high watermark
+0.2, low watermark 0.1 and disabled implicit fallback:
 
 ```sh
 python3 evals/research-v0.3/validation/check_mps_broker.py \
@@ -40,3 +41,18 @@ must use new output directories for any retry.
 This test covers the scientific broker. Native-agent permission-profile checks,
 scientific results, default offline conformance and GPU-memory-accounting limits
 remain separate qualification dimensions.
+
+## Final scorer qualification and controller failure
+
+All five optional scientific-scorer tests pass in job
+`0057-rc2-scientific-scorer-qualification-absolute-paths`, including actual MPS
+sample regeneration from a development checkpoint using trusted science. The
+first invocation, job 0056, mistakenly supplied repository-relative executable
+paths even though the ledger runs from `work/v03-validation`. Launch failed
+before a process receipt. Explicit recovery preserved an abandoned outcome and
+conservatively charged the full 124.75-second reservation; the corrected command
+used absolute paths under a new job ID. No historical receipt or ceiling changed.
+
+The final controller allocation and every failed scientific or transport check
+remain in the ledger. Controller work is separate from native candidate costs
+and cannot improve their original comparison outcomes.

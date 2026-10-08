@@ -1,0 +1,18 @@
+Looking in links: inputs/wheels
+Processing ./inputs/wheels/torch-2.14.1-cp311-cp311-macosx_14_0_arm64.whl
+Processing ./inputs/wheels/numpy-2.4.6-cp311-cp311-macosx_14_0_arm64.whl
+Processing ./inputs/wheels/filelock-4.0.12-py3-none-any.whl (from torch==2.14.1)
+Processing ./inputs/wheels/typing_extensions-4.16.0-py3-none-any.whl (from torch==2.14.1)
+Processing ./inputs/wheels/setuptools-84.0.0-py3-none-any.whl (from torch==2.14.1)
+Processing ./inputs/wheels/sympy-1.14.0-py3-none-any.whl (from torch==2.14.1)
+Processing ./inputs/wheels/networkx-3.6.1-py3-none-any.whl (from torch==2.14.1)
+Processing ./inputs/wheels/jinja2-3.1.6-py3-none-any.whl (from torch==2.14.1)
+Processing ./inputs/wheels/fsspec-2026.9.0-py3-none-any.whl (from torch==2.14.1)
+Processing ./inputs/wheels/mpmath-1.3.0-py3-none-any.whl (from sympy>=1.13.3->torch==2.14.1)
+Processing ./inputs/wheels/markupsafe-3.0.4-cp311-cp311-macosx_11_0_arm64.whl (from jinja2->torch==2.14.1)
+Installing collected packages: mpmath, typing-extensions, sympy, setuptools, numpy, networkx, MarkupSafe, fsspec, filelock, jinja2, torch
+  Attempting uninstall: setuptools
+    Found existing installation: setuptools 65.5.0
+    Uninstalling setuptools-65.5.0:
+      Successfully uninstalled setuptools-65.5.0
+Successfully installed MarkupSafe-3.0.4 filelock-4.0.12 fsspec-2026.9.0 jinja2-3.1.6 mpmath-1.3.0 networkx-3.6.1 numpy-2.4.6 setuptools-84.0.0 sympy-1.14.0 torch-2.14.1 typing-extensions-4.16.0

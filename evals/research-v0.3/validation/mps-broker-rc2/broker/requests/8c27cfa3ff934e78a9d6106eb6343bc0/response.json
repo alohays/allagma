@@ -1,0 +1,19 @@
+{
+  "injected_interruption": false,
+  "isolation_sha256": "3a5ed5120fb17bfb34241a03fddd04b50993fe81130697935949f022274af84b",
+  "reconciled_after_controller_restart": false,
+  "request_id": "8c27cfa3ff934e78a9d6106eb6343bc0",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 1.9775510830804706,
+    "ended_at": "2026-10-08T07:32:29.066412+00:00",
+    "exit_code": 0,
+    "final_storage_bytes": 3759749436,
+    "final_storage_limit_exceeded": false,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/validation/resources/jobs/0051-mps-canary-venv",
+    "monitor_scope": "Polled process-tree RSS and logical file bytes, plus final persistent storage after termination; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 193921024,
+    "peak_storage_bytes": 3761058383,
+    "status": "completed"
+  }
+}

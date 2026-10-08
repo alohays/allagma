@@ -22,7 +22,11 @@ scorer result. The compatibility correction applies uniformly to every applicabl
 run. Summaries retain the original scoring outcome and explicitly mark use of
 the correction. No candidate artifact was modified.
 
-## MPS allocator watermarks — reproduced, correction pending
+The current release scorer is byte-identical to the qualified compatibility
+scorer, recorded in `postprocess-checks/release-scorer-equivalence.json`. The
+frozen source and every original scoring receipt remain unchanged.
+
+## MPS allocator watermarks — corrected and tested on actual MPS
 
 The common broker in frozen source `c369fe7` sets
 `PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.2` without setting the low watermark. On this
@@ -34,29 +38,27 @@ continued on CPU without coordinator guidance.
 The [native failure receipt](../../evals/research-v0.3/postprocess-checks/frozen-mps-watermark-defect.json)
 identifies the exact request and logs. The installed allocator header and
 [PyTorch's environment-variable documentation](https://docs.pytorch.org/docs/2.14/mps_environment_variables.html)
-require a low watermark between zero and the high watermark. The proposed fix
-sets the low watermark to 0.1 while retaining the high limit of 0.2.
+require a low watermark between zero and the high watermark. Commit `5910b36`
+sets the low watermark to 0.1 while retaining high 0.2 and disabled fallback.
 
 Earlier validation established that the scientific worker's filesystem/network
 sandbox permits MPS and that a per-process memory fraction works. It did not
 exercise the broker's complete environment prefix. That validation gap is now
-explicit. The release correction must include an actual broker-mediated MPS
-allocation/training/checkpoint test, with both memory settings and the existing
-protection checks; a configuration-string or mocked-process test is insufficient.
+explicit. The [actual full-broker regression](../../evals/research-v0.3/validation/mps-broker-rc2/validation.json)
+now passes with a fresh environment: known forward/gradient values, AdamW,
+checkpoint reload, resumed-training agreement and finite optimizer states. The
+worker does not modify the allocator environment. Actual input-write,
+protected-read, outside-workspace-write and live-listener network denials pass.
 
 This defect is shared by both comparison conditions. It can affect backend
 choice and throughput, so the comparison must disclose it and cannot support
 claims about corrected GPU-path performance. The frozen source, criteria and
-candidate work remain unchanged. A user-input question offers retaining the
-current comparison with a separately validated correction, or archiving it and
-restarting all twelve runs under a new freeze. In the meantime, the already
-authorized run continues within its existing CPU-compatible limits.
+candidate work remain unchanged. All twelve assigned sessions completed under
+the original freeze; the repair and regression followed the cohort. The result
+qualifies this local broker/GPU path, not another model session, other hardware
+or instantaneous GPU-memory accounting.
 
-No release completion claim is permitted while this reproduced defect remains
-unresolved. Any correction and its validation retain a new source revision;
-they must not overwrite or silently relabel the current frozen outcomes.
-
-## Storage sampling at process exit — reproduced, correction pending
+## Storage sampling at process exit — corrected with retained regressions
 
 A supervised worker can finish after the last storage sample but before the
 exit-status check. The frozen supervisor then reports `completed` using the
@@ -74,19 +76,38 @@ Separate final-size checks of r01–r10 pass in
 `postprocess-checks/final-workspace-sizes-r01-r10.json`; these are current final
 footprints, not continuous historical peak observations.
 
-After the cohort, remeasure persistent storage after process termination,
-retain that final measurement, and change a nominal successful result to
-`storage_exceeded` when appropriate. Preserve existing failure reasons and
-sampling limitations. The same actual-worker regression must then detect the
-violation, alongside the affected offline resource checks and final acceptance.
+After the cohort, commit `5910b36` adds final persistent-storage measurement to
+both supervisors. The unchanged actual-worker probe now returns
+`storage_exceeded`, with final and peak 2,002 bytes, in
+`postprocess-checks/final-storage-after/`. Existing failure reasons remain
+unchanged while a separate flag records any final storage violation. Conformance
+also covers this failure-preservation case. Polling limitations remain explicit.
 
 The native session adapter has the analogous gap in its one-second storage
 sampling loop. A separately labeled offline fake-CLI fixture reproduces
 `completed` with 203,539 final bytes against a 100,000-byte cap. Its actual local
 process and controlled interleaving test only the adapter's lifecycle logic;
 they are not a hosted model run or native-host qualification. Evidence is at
-`postprocess-checks/native-final-storage-before/`. The correction must include
-this adapter's final workspace-plus-runtime footprint, with the same before/after
-fixture. Current terminal totals for r01–r11 are within their assigned limits;
-only byte totals, not private runtime content, are retained in
-`postprocess-checks/final-native-storage-r01-r11.json`.
+`postprocess-checks/native-final-storage-before/`. The same fixture against rc2
+returns `storage_exceeded`, with final and peak 203,533 bytes, in
+`postprocess-checks/native-final-storage-after/`. All twelve actual terminal
+workspace-plus-runtime totals are within their assigned limits in
+`postprocess-checks/cohort-controls-final.json`. Only aggregate byte totals are
+retained; private runtime contents are not exported.
+
+## Retention and release metadata
+
+Controller retention fixes preserve terminal queue references, restore declared
+internal directory aliases, recognize the documented manifest entry forms and
+stream multi-part archives under per-file limits. Original archives and the
+failed oversized-intermediate restoration remain retained. Supplements bind the
+original archive index rather than replacing it. The exact cases are documented
+in [RETENTION.md](../../evals/research-v0.3/RETENTION.md); six transport regressions
+and the final twelve-package archive audit pass.
+
+The final audit also found that the acceptance receipt hard-coded release
+`0.2.0`. It now reads the inspected source's `release.json`; the rc2 receipt
+records `0.3.0rc2`. This changes release identification, not contract version or
+acceptance criteria. The [final I1–I5 run](evidence/rc2/acceptance/acceptance.json)
+passes all milestones and 113 conformance tests. No reproduced critical defect
+remains open within the documented release scope.
