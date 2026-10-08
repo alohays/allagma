@@ -285,11 +285,20 @@ def execute(directory, command, *, label, category, timeout, attempt=False, work
                         continue
                     _stop(process, known, profile["terminate_grace_seconds"])
                     break
+            # A short worker can finish between the sample and poll above.
+            # Recheck its persistent footprint before accepting success.
+            final_storage = storage_bytes(storage_root)
+            peak_storage = max(peak_storage, final_storage)
+            storage_exceeded = final_storage > profile["storage_limit_bytes"]
+            if status == "completed" and storage_exceeded:
+                status = "storage_exceeded"
             outcome = {"status": status, "exit_code": process.returncode,
                 "ended_at": utcnow(), "charged_seconds": time.monotonic()-started,
                 "charge_basis": "measured supervisor wall time", "peak_rss_bytes": peak_rss,
                 "peak_storage_bytes": peak_storage,
-                "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment"}
+                "final_storage_bytes": final_storage,
+                "final_storage_limit_exceeded": storage_exceeded,
+                "monitor_scope": "Polled process-tree RSS and logical file bytes, plus final persistent storage after termination; RSS excludes some GPU allocations; not adversarial containment"}
         except BaseException:
             if process is not None:
                 _stop(process, known, profile["terminate_grace_seconds"])

@@ -1,0 +1,30 @@
+{
+  "status": "pass",
+  "copies": [
+    {
+      "run_id": "r04",
+      "temporary_copy": "work/v03-validation/restored-r04",
+      "verified_files": 572,
+      "verified_links": 0,
+      "logical_bytes_released": 272543071,
+      "authoritative_archive": "evals/research-v0.3/runs/r04/package"
+    },
+    {
+      "run_id": "r05",
+      "temporary_copy": "work/v03-validation/restored-r05",
+      "verified_files": 851,
+      "verified_links": 1,
+      "logical_bytes_released": 280645669,
+      "authoritative_archive": "evals/research-v0.3/runs/r05/package"
+    },
+    {
+      "run_id": "r06",
+      "temporary_copy": "work/v03-validation/restored-r06",
+      "verified_files": 595,
+      "verified_links": 0,
+      "logical_bytes_released": 327877608,
+      "authoritative_archive": "evals/research-v0.3/runs/r06/package"
+    }
+  ],
+  "scope": "Removed only exact verified temporary restoration copies. Original candidates, archive parts, indexes and validation/process receipts remain retained; no scientific attempt was erased."
+}

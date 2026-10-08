@@ -1,0 +1,7 @@
+#!/usr/bin/env python3
+import sys,time
+from pathlib import Path
+if "--version" in sys.argv: print("offline-fixture-no-model"); raise SystemExit(0)
+sys.stdin.read()
+while not Path("go").exists(): time.sleep(.005)
+Path("payload").write_bytes(b"x"*200000)

@@ -1,0 +1,19 @@
+{
+  "result": {
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/postprocess-checks/final-storage-after/ledger/jobs/0001-fast-final-write",
+    "status": "storage_exceeded",
+    "exit_code": 0,
+    "ended_at": "2026-10-08T07:25:29.400806+00:00",
+    "charged_seconds": 0.05722799990326166,
+    "charge_basis": "measured supervisor wall time",
+    "peak_rss_bytes": 6078464,
+    "peak_storage_bytes": 2002,
+    "final_storage_bytes": 2002,
+    "final_storage_limit_exceeded": true,
+    "monitor_scope": "Polled process-tree RSS and logical file bytes, plus final persistent storage after termination; RSS excludes some GPU allocations; not adversarial containment"
+  },
+  "actual_final_storage_bytes": 2002,
+  "limit_bytes": 1000,
+  "violation_detected": true,
+  "scope": "Actual worker and file-size growth under a controlled storage-sampling/exit interleaving. Hook models a permissible scheduling race; not a native-host qualification or a claim of a violation in the research cohort."
+}

@@ -72,6 +72,15 @@ class BrokerTests(unittest.TestCase):
         self.assertIn(str(self.root/"controller"), text)
         self.assertIn(str(self.workspace/"inputs"), text)
 
+    def test_worker_environment_preserves_high_cap_with_compatible_low_watermark(self):
+        self.request()
+        with patch.object(broker_module.resources, "execute", return_value={"status": "completed"}) as execute:
+            self.broker.poll()
+        command = execute.call_args.args[1]
+        self.assertIn("PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.2", command)
+        self.assertIn("PYTORCH_MPS_LOW_WATERMARK_RATIO=0.1", command)
+        self.assertIn("PYTORCH_ENABLE_MPS_FALLBACK=0", command)
+
     def test_recovery_delivers_completed_job_without_a_second_execution(self):
         self.request()
         actual_execute = resources.execute

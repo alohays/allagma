@@ -190,6 +190,7 @@ class Broker:
                 "HOME="+str(Path.home()), "LANG=en_US.UTF-8", "TMPDIR="+str(self.workspace/".tmp"),
                 "OMP_NUM_THREADS=1", "OPENBLAS_NUM_THREADS=1", "MKL_NUM_THREADS=1",
                 "PYTORCH_ENABLE_MPS_FALLBACK=0", "PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.2",
+                "PYTORCH_MPS_LOW_WATERMARK_RATIO=0.1",
                 "ALLAGMA_COMPUTE_REQUEST="+request_id,
                 "MPLCONFIGDIR="+str(self.workspace/".tmp/matplotlib")]
             (self.workspace/".tmp").mkdir(exist_ok=True)

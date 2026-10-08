@@ -205,7 +205,7 @@ def score_grok(workspace, measurements):
                        "exact_prediction_agreement":int((~disagreement).sum()),"total_predictions":9409,
                        "maximum_logit_error":float(np.abs(reconstructed-logits).max()),
                        "tolerance":"abs <= 1e-4 + 1e-4*abs(retained_logit)"})
-        curve=read(confined(workspace,run["curve"]))
+        curve=run["curve"] if isinstance(run["curve"],list) else read(confined(workspace,run["curve"]))
         steps=[row["step"] for row in curve]
         if steps[0]!=0 or steps[-1]!=100000 or any(not 0<v-u<=100 for u,v in zip(steps,steps[1:])):
             errors.append(f"Incomplete or unordered learning curve: {key}")

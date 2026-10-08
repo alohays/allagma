@@ -4,6 +4,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from allagma.files import AllagmaError, read_json, write_json
 from allagma import resources
@@ -70,6 +71,36 @@ class ResourceTests(unittest.TestCase):
         result = self.run_code("from pathlib import Path; Path('too-big').write_bytes(b'x'*800000)")
         self.assertEqual(result["status"], "failed")
         self.assertLessEqual((self.work/"too-big").stat().st_size, self.profile["file_limit_bytes"])
+
+    def test_final_storage_is_checked_after_fast_exit_without_masking_failure(self):
+        for exit_code, expected_status in [(0, "storage_exceeded"), (3, "failed")]:
+            with self.subTest(exit_code=exit_code), tempfile.TemporaryDirectory() as temporary:
+                base = Path(temporary); work = base/"work"; work.mkdir()
+                ledger = base/"ledger"
+                resources.initialize(ledger, {**self.profile, "storage_limit_bytes": 1000}, work)
+                original_popen, original_storage = subprocess.Popen, resources.storage_bytes
+                state = {"process": None, "gated": False}
+                def capture(*args, **kwargs):
+                    process = original_popen(*args, **kwargs)
+                    if kwargs.get("preexec_fn") is not None: state["process"] = process
+                    return process
+                def storage(path):
+                    value = original_storage(path)
+                    if state["process"] is not None and not state["gated"]:
+                        state["gated"] = True
+                        (work/"go").touch()
+                        state["process"].wait(timeout=3)
+                    return value
+                code = ("from pathlib import Path; import time,sys\n"
+                        "while not Path('go').exists(): time.sleep(.005)\n"
+                        f"Path('payload').write_bytes(b'x'*2000)\nsys.exit({exit_code})\n")
+                with patch.object(subprocess, "Popen", capture), patch.object(resources, "storage_bytes", storage):
+                    result = resources.execute(ledger, [sys.executable, "-c", code],
+                                               label="final-storage", category="compute", timeout=4)
+                self.assertEqual(result["status"], expected_status)
+                self.assertEqual(result["final_storage_bytes"], 2000)
+                self.assertEqual(result["peak_storage_bytes"], 2000)
+                self.assertTrue(result["final_storage_limit_exceeded"])
 
     def test_cli_preserves_command_arguments_and_nonzero_status(self):
         self.initialize()
