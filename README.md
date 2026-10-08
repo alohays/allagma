@@ -5,11 +5,13 @@ that compose them, adapters that connect them to a host, and evidence records
 that link a scientific question to a manuscript. A study pins an exact local
 bundle. Central edits and later releases cannot change an existing campaign.
 
-**v0.3 release candidate:** [research workspaces](docs/research-workspaces.md)
+**v0.3.0rc2 release candidate:** [research workspaces](docs/research-workspaces.md)
 prepare a brief, source materials and finite resource profile for a fresh native
-Codex session. The [qualification ledger](docs/v0.3/requirements.md) tracks the
-three studies, controlled comparison and reproduction gates. Evaluation is in
-progress; the version label does not claim those gates are complete.
+Codex session. The [twelve-session comparison](docs/v0.3/COMPARISON.md) verifies
+required scientific execution in every run and complete packages in ten.
+Three illustrative study packages, full clean-checkout CULP reproduction and
+all I1–I5 acceptance scenarios pass. See the [qualification ledger](docs/v0.3/requirements.md)
+and [release notes](docs/releases/0.3.0rc2.md) for exact evidence and limits.
 
 The v0.2 implementation includes an offline toy study, generic/Codex/Claude
 Code packaging, replaceable context and reviewer examples, update and rollback
@@ -133,7 +135,7 @@ rollback.
 
 Read [architecture](docs/architecture.md), [module authoring](docs/module-authoring.md),
 [host support](docs/host-support.md), [contributing](CONTRIBUTING.md),
-[governance](GOVERNANCE.md), and [release notes](docs/releases/0.2.0.md).
+[governance](GOVERNANCE.md), and [release notes](docs/releases/0.3.0rc2.md).
 The [adopted specifications](docs/specification/README.md) and
 [design lineage](docs/design-lineage.md) explain the design's origins.
 

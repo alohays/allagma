@@ -1,20 +1,24 @@
 {
-  "phase": "post-cohort verification and release repairs",
+  "phase": "verified release candidate; authorized publication pending",
   "freeze_commit": "de6abce",
   "frozen_source_commit": "c369fe7aabb5bd5575f967b3e3704cf463a97eb0",
   "prepared_runs": 12,
   "completed_runs": 12,
   "active_run": null,
   "next_run": null,
-  "instructions": "All twelve native sessions are terminal. Finish r12 substantive review and retain original outcomes. Preserve frozen/source and existing bundles/attempts. New release source may now receive separately validated repairs. Complete comparison, final acceptance and authorized origin push before goal completion.",
-  "verified_complete_packages": 9,
+  "instructions": "All twelve native sessions and substantive reviews are complete. The frozen comparison records 12 verified scientific executions and 10 complete packages, preserving r03/r06 review-binding gaps. Corrected rc2 source passes I1-I5/113 conformance tests, real full-broker MPS and final-storage regressions. Finish final documentation checks and coherent commits, then perform the authorized fast-forward origin publication and verify remote equality before completing the goal.",
+  "verified_complete_packages": 10,
   "release_gates": {
     "clean_checkout_full_study_reproduction": "passed for r01 CORE CULP",
-    "raw_data_recomputation": "passed for r01 clean checkout"
+    "raw_data_recomputation": "passed for r01 clean checkout",
+    "final_acceptance": "passed: I1-I5 and 113 tests",
+    "real_broker_mps": "passed",
+    "complete_comparison": "passed: 12 outcomes and six paired contrasts",
+    "origin_push": "pending"
   },
   "known_frozen_defects": [
-    "MPS allocator high/low mismatch; CPU remains available; release repair pending",
-    "Inline curve parser mismatch; original error preserved and transparent contract-compatible correction applied uniformly",
-    "Final-storage sampling/exit race reproduced with a controlled actual worker; final r01-r10 footprints are within caps; post-cohort repair required."
+    "MPS allocator mismatch retained in frozen outcomes; rc2 repair passes actual full-broker MPS regression.",
+    "Inline curve loader mismatch retained in original scores; uniform protected correction qualified and adopted in current scorer.",
+    "Final-storage sampling/exit races retained in frozen supervisors; rc2 actual-worker and offline fake-CLI regressions pass; all twelve terminal native footprints are within caps."
   ]
 }

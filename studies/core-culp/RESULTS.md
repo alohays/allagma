@@ -2,8 +2,8 @@
 
 The first fully verified Allagma package in the frozen run order is **r01**
 (replicate 2). It is the illustrative package selected by the prespecified
-criteria. The complete 12-run comparison remains in progress; this result does
-not establish a workflow advantage.
+criteria. The [12-run comparison is complete](../../docs/v0.3/COMPARISON.md);
+this individual result does not establish a workflow advantage.
 
 | Dataset | Requested printed label | Actual predictor | Accuracy |
 | --- | --- | --- | ---: |

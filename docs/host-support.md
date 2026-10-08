@@ -19,6 +19,15 @@ recipe. Optional metadata can be added in a host adapter when actually needed.
 | Codex CLI 0.160.1 | Real explicit skill activation, campaign-lock routing, interrupted/fresh-session continuation and complete MPS diffusion study | Other models/versions, implicit triggering, desktop UI interaction and general research quality |
 | Claude Code | Format and contract checked; registration/conflict/campaign-routing fixtures | Real native activation/tool-use smoke; model quality |
 
+The subsequent [v0.3 comparison](v0.3/COMPARISON.md) retains twelve distinct
+fresh CLI 0.160.1 sessions under the same inherited model/settings. All twelve
+complete required scientific execution; ten complete all evidence requirements.
+All six Allagma sessions read the exact locked recipe and seven methods. The
+corrected rc2 scientific broker separately passes real MPS training/checkpoint
+and access-denial checks. The frozen cohort includes the earlier allocator
+defect and cannot establish corrected GPU throughput. Other models, hosts,
+implicit skill triggering and broad research superiority remain unqualified.
+
 The acceptance report records OS, Python, installed host versions when found,
 date, capabilities and exact tested scope. Local inspection found `codex-cli
 0.151.0` and Claude Code `2.1.217` on 6 October 2026; these are **version probes**,

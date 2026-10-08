@@ -2,8 +2,8 @@
 
 The first fully verified Allagma package in frozen run order is **r07**
 (replicate 2). It is the illustrative package selected by the prespecified rule.
-The workflow comparison remains in progress; this result does not establish
-an Allagma advantage over plain Codex.
+The [workflow comparison is complete](../../docs/v0.3/COMPARISON.md); this
+individual result does not establish an Allagma advantage over plain Codex.
 
 All **32 required cells and 96 raw/EMA model states** were completed on this
 Mac's MPS backend. There are four independent seeds per dataset. The 24 actual
@@ -48,7 +48,8 @@ and [eight-item evidence review](../../evals/research-v0.3/runs/r07/substantive-
 The agent recovered the controlled interruption and an MPS initialization failure
 without coordinator guidance. Its study runner lowered the allocator's low
 watermark to 0.1 while preserving the broker's high cap of 0.2. The shared
-framework still requires its separately validated release correction. Charged
+framework's separately validated rc2 correction now passes actual full-broker
+MPS checks; the original frozen outcome is unchanged. Charged
 compute was 362.39 seconds, setup 20.43 seconds and native wall time 1,511.68
 seconds, with 35 compute requests. Failures remain retained. The same-assistant
 critique and controller audit are provisional, not independent scientific peer

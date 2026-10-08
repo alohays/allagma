@@ -10,10 +10,11 @@ condition. Development decisions and evidence are in `development/`. The
 `frozen/freeze.json` manifest enumerates exact inputs, scorers, workflow source,
 resource ceilings, model/settings observations and run order. Current progress
 is in `progress.json`; terminal outcomes and complete traces are in `runs/`.
-Eleven sessions are terminal and reviewed; nine original packages are fully
-verified. Run r12 is active. Both incomplete deliveries have verified science
-but lack explicit review/material revision binding. Release repairs/audit remain
-pending.
+All twelve sessions are terminal and reviewed; ten original packages are fully
+verified. Both incomplete deliveries have verified science but lack explicit
+review/material revision binding. The [final comparison](../../docs/v0.3/COMPARISON.md)
+retains every outcome and distinguishes this narrow gap from scientific failure.
+The corrected rc2 source passes final acceptance and actual MPS regression.
 Native sessions use the existing Codex account; scientific processes run only
 on the local Mac. Final evaluation results are preserved even if later repaired
 packages are needed for release.
@@ -52,7 +53,9 @@ retains pending assignments and excludes their accrued costs from outcome
 contrasts. Missing measurements remain missing. It produces the six prespecified
 within-task/replicate contrasts, two-session descriptive ranges and separate raw
 usage fields; it does not add scientific seeds or infer broad superiority.
-The [latest reviewed snapshot](comparisons/after-r11-reviewed/REPORT.md) is an interim artifact. Required scientific execution and package completeness are reported separately.
+The [final report](comparisons/final/REPORT.md) covers all twelve assignments.
+Required scientific execution and package completeness are reported separately.
+Earlier snapshots remain explicitly interim historical artifacts.
 
 `python3 evals/research-v0.3/test_comparison.py -v` checks assignment completeness,
 contrast direction, pending/missing handling and separate usage accounting.

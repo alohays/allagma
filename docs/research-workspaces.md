@@ -1,6 +1,6 @@
 # From a brief to a local research workspace
 
-The v0.3 development interface prepares the same basic inputs used by the native
+The v0.3 interface prepares the same basic inputs used by the native
 workflow: a research brief, supplied source materials and a finite resource
 profile. It does not supply scientific hypotheses, runners, metrics or answers.
 The fresh agent develops those within the brief, using the pinned Allagma methods.
@@ -57,9 +57,11 @@ Explicit `paired_seeds: true` allows conditions to share a seed when their run
 entries have unique nonempty `condition_id` labels. It does not allow pilot seeds
 to masquerade as untouched confirmation or make paired cells independent.
 
-This interface is under v0.3 qualification. Native CORE-Bench development has
-demonstrated the underlying brief-to-package workflow with no follow-up guidance;
-the full controlled comparison and release audit remain pending. Existing v0.2
+The [twelve-session comparison](v0.3/COMPARISON.md) demonstrates required
+scientific execution across three task families with zero follow-up guidance.
+Ten packages meet every evidence requirement, including all six Allagma
+packages. The corrected source passes the [rc2 release checks](releases/0.3.0rc2.md).
+This is bounded local qualification, not a general research-quality guarantee. Existing v0.2
 campaigns keep their original bundle helpers. Prepare a new v0.3 workspace or
 adopt a compatible update at a campaign boundary; do not rewrite historical locks.
 

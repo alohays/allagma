@@ -1,0 +1,82 @@
+{
+  "status": "pass",
+  "scope": "Implementation, three illustrative packages, all twelve original outcomes, preserved historical evidence, clean-checkout full execution, corrected broker, and final I1-I5 acceptance. Publication is a separate final gate.",
+  "release": "0.3.0rc2",
+  "accepted_source_revision": "sha256:a7a67e09548e40442f2ff72ba63898f66e02368046132a183588ebebdbc1a196",
+  "conformance_tests": 113,
+  "I1_I5": {
+    "I1": "pass",
+    "I2": "pass",
+    "I3": "pass",
+    "I4": "pass",
+    "I5": "pass"
+  },
+  "assigned_runs": 12,
+  "verified_scientific_executions": 12,
+  "complete_original_packages": 10,
+  "illustrative_packages": {
+    "core-culp": "r01",
+    "modular-addition": "r04",
+    "ema-schedule": "r07"
+  },
+  "critical_reproduced_defects_open": [],
+  "evidence": [
+    {
+      "path": "docs/v0.3/evidence/rc2/acceptance/acceptance.json",
+      "sha256": "d2309f1418ec66fa19951576a246e4cd0514f33daf45b7a5bce52ce5b7031f1c"
+    },
+    {
+      "path": "docs/v0.3/evidence/rc2/acceptance/archive-manifest.json",
+      "sha256": "b30a707dde187def24931143e6eab57589c1c1ccfebe878379f5732b99881927"
+    },
+    {
+      "path": "docs/v0.3/evidence/rc2/archive-reproduction.json",
+      "sha256": "0b9c799d81e4c3d6844840ba41c15e192cbecb37df3e1e5bed5f8423cf845f65"
+    },
+    {
+      "path": "docs/v0.3/evidence/rc2/independent-toy.json",
+      "sha256": "b9f5837549092c5a60c5bd52dff231f1bad71ff6473fa2d4762c3d0409f7c034"
+    },
+    {
+      "path": "docs/v0.3/evidence/rc2/specification-provenance.json",
+      "sha256": "10809ce5946c700c708d71d48d934243a90e461126b00bba71004837c513f258"
+    },
+    {
+      "path": "docs/v0.3/evidence/rc2/documentation-and-inventory.json",
+      "sha256": "39c2ed7463fe6272467ee03361c606718b7eae55f875953b11289192f85514e4"
+    },
+    {
+      "path": "evals/research-v0.3/outcomes-final.json",
+      "sha256": "cf874a5ef02b11207f51ac20e15b6cf9d9aa76e7a043d0b5a10c0dd9abb97869"
+    },
+    {
+      "path": "evals/research-v0.3/comparisons/final/comparison.json",
+      "sha256": "ccddb8bae4d271d91fe4c820364bd7ce6101ed25d56a951dff5d8fb59816ad0c"
+    },
+    {
+      "path": "evals/research-v0.3/postprocess-checks/cohort-controls-final.json",
+      "sha256": "ccd00503d73628aad555332bcb9960dedbe34c253d6d437ea407ac562f5834ef"
+    },
+    {
+      "path": "evals/research-v0.3/postprocess-checks/treatment-compliance-final.json",
+      "sha256": "5ed53668feffa4652c21a73b9a9088c439779940ef2c2a985ae0f8b1c875c241"
+    },
+    {
+      "path": "evals/research-v0.3/postprocess-checks/frozen-archive-final.json",
+      "sha256": "d62f37dfa555b4c82391b4cebe6481363a0768990cf78013b18910d5d571bbe8"
+    },
+    {
+      "path": "evals/research-v0.3/validation/clean-r01-results/verification.json",
+      "sha256": "e563e1df374c4c1a52a95520ce30550014c49825dbc998c41aef5a9840292804"
+    },
+    {
+      "path": "evals/research-v0.3/validation/mps-broker-rc2/validation.json",
+      "sha256": "87ae3a4b19ec7f629e974c27ebf0af8f54157d7a2e536d1af777a3e7c5b507ca"
+    },
+    {
+      "path": "evals/research-v0.3/validation/final-accounting.json",
+      "sha256": "f3a040112272732ce04f830fa0fcdbfbb9651988e80ca89722f1f410d2b5e1d9"
+    }
+  ],
+  "publication": "pending authorized origin push"
+}

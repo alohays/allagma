@@ -1,8 +1,8 @@
 # Modular addition: regularization and generalization
 
 Status: the first fully verified Allagma confirmation package is r04. See
-[results and reproduction](RESULTS.md). The 12-session comparison remains in
-progress. This study investigates generalization after memorization
+[results and reproduction](RESULTS.md). The [12-session comparison](../../docs/v0.3/COMPARISON.md)
+is complete. This study investigates generalization after memorization
 on modular addition, comparing regularized and unregularized training on a
 fixed held-out partition. Its scientific code belongs to the study, separate
 from Allagma's workflow and resource adapters.

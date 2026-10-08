@@ -3,8 +3,9 @@
 The executable acceptance command builds fresh studies, runs conformance and
 retains a machine-readable report. It marks a milestone passing only after the
 associated scenarios execute successfully. This document maps the criteria to
-the implementation; `docs/audit/evidence/acceptance.json` records the qualified source
-and actual results.
+the implementation. The current [rc2 receipt](v0.3/evidence/rc2/acceptance/acceptance.json)
+records 113 passing tests and all I1–I5 scenarios; the v0.2 audited receipt in
+`docs/audit/evidence/acceptance.json` remains historical evidence.
 
 ```sh
 python3 -m allagma acceptance --output build/acceptance
@@ -30,16 +31,17 @@ a separate JSON Schema implementation and a YAML parser/skill validator.
 
 ## Retained and reproducible evidence
 
-The repository retains a compressed acceptance tree plus plain JSON receipts
-under `docs/audit/evidence/`. The original archive in `docs/evidence/` is retained
-as historical evidence. The audited archive includes every toy raw observation and
+The repository retains the current compressed acceptance tree and JSON receipts
+under `docs/v0.3/evidence/rc2/acceptance/`. The v0.2 archives in
+`docs/audit/evidence/` and `docs/evidence/` remain historical evidence.
+The acceptance archive includes every toy raw observation and
 attempt, exact bundles, protocols, comparison candidates, update histories,
 migration examples, manuscripts and review traces. Its inventory and SHA-256
 are recorded in `archive-manifest.json`.
 
 ```sh
 mkdir -p work/reproduction
-tar -xzf docs/audit/evidence/acceptance.tar.gz -C work/reproduction
+tar -xzf docs/v0.3/evidence/rc2/acceptance/acceptance.tar.gz -C work/reproduction
 python3 -m allagma campaign audit \
   --study work/reproduction/allagma-acceptance/generic --campaign toy-v1
 ```

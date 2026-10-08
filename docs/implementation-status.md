@@ -1,5 +1,17 @@
 # Allagma v0.2 implementation and audit
 
+The current [0.3.0rc2 release](releases/0.3.0rc2.md) requalifies I1–I5 against
+the corrected source: [113 conformance tests and all five scenarios pass](v0.3/evidence/rc2/acceptance/acceptance.json),
+including the complete toy and 521-reference audit. Its
+[5,944-file archive](v0.3/evidence/rc2/acceptance/archive-manifest.json),
+[relocated replay](v0.3/evidence/rc2/archive-reproduction.json) and
+[independent toy calculation](v0.3/evidence/rc2/independent-toy.json) pass.
+The accepted distributable source is
+`sha256:a7a67e09548e40442f2ff72ba63898f66e02368046132a183588ebebdbc1a196`.
+The [v0.3 ledger](v0.3/requirements.md) and [comparison](v0.3/COMPARISON.md)
+cover the subsequent three-task native scope. The evidence below is the retained
+7 October v0.2 audit, not a claim that old receipts describe the new source.
+
 Target: the four adopted specifications in `docs/specification/`, originally
 dated 6 October 2026. Noemetric's scientific experiments are a separate study.
 

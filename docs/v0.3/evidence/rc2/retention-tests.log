@@ -1,0 +1,11 @@
+test_artifacts_container_receives_the_same_digest_checks (__main__.RetentionTests.test_artifacts_container_receives_the_same_digest_checks) ... ok
+test_external_dependency_alias_is_rejected (__main__.RetentionTests.test_external_dependency_alias_is_rejected) ... ok
+test_internal_absolute_dependency_alias_is_explicit_and_relocatable (__main__.RetentionTests.test_internal_absolute_dependency_alias_is_explicit_and_relocatable) ... ok
+test_legacy_supplement_restores_exact_bytes_and_rejects_tampering (__main__.RetentionTests.test_legacy_supplement_restores_exact_bytes_and_rejects_tampering) ... ok
+test_multipart_restore_does_not_create_an_oversized_combined_file (__main__.RetentionTests.test_multipart_restore_does_not_create_an_oversized_combined_file) ... ok
+test_new_collection_retains_direct_queue_references (__main__.RetentionTests.test_new_collection_retains_direct_queue_references) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.066s
+
+OK

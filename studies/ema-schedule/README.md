@@ -1,8 +1,8 @@
 # Weight EMA, training duration and learning-rate schedules
 
 Status: the first fully verified Allagma package is r07; see
-[results and reproduction](RESULTS.md). The complete workflow comparison and
-release audit remain in progress. This follow-up addresses the duration/schedule
+[results and reproduction](RESULTS.md). The [workflow comparison](../../docs/v0.3/COMPARISON.md)
+and [release audit](../../docs/releases/0.3.0rc2.md) are complete. This follow-up addresses the duration/schedule
 confounding documented in the [completed EMA study](../ema-2d-diffusion/publication/v2/manuscript.md).
 It crosses terminal training duration (5,000 or 10,000 updates) with constant
 learning rate or cosine decay over that duration. Paired raw/EMA effects at a

@@ -1,8 +1,9 @@
 # Local computational reproduction: CULP
 
-Status: compatibility preflight and the first final Allagma run passed. Its
-[verified results and retained package](RESULTS.md) are available; the remaining
-controlled comparison is still in progress. The clean-checkout full-study and raw-recomputation checks have passed.
+Status: all four final runs pass the original six-question score and evidence
+review. The illustrative [results and retained package](RESULTS.md) are from r01.
+The [controlled comparison](../../docs/v0.3/COMPARISON.md), clean-checkout
+full-study execution and raw-recomputation checks are complete.
 
 This study uses CORE-Bench's public training task `capsule-6460826`, **CULP:
 Classification Using Link Prediction**. The original task requires execution

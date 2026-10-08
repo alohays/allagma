@@ -2,8 +2,8 @@
 
 The first fully verified Allagma package in frozen run order is **r04**
 (replicate 2). This is the illustrative package required by the prespecified
-criteria. The complete comparison remains in progress and does not yet support
-a workflow-effect estimate.
+criteria. The [complete comparison](../../docs/v0.3/COMPARISON.md) reports the
+observed workflow differences and their substantial uncertainty.
 
 All eight prescribed trajectories completed 100,000 full-batch AdamW updates on
 the fixed 37,248-parameter MLP. Within each of four independent seeds, weight
