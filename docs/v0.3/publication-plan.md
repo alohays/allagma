@@ -1,22 +1,31 @@
-# Publish the completed v0.3 work
+# Publication of the completed v0.3 work
 
 The owner's instruction in [GOAL.md](../../GOAL.md) is authoritative: commit
 coherent progress and push to `origin` after all required work and checks pass.
-No v0.3 push has been made at this planning checkpoint.
+That instruction is also retained in the goal document. The qualified release
+commit `46fd7855796a3c0885c6730ce8622350c7877a8a` has now been pushed to
+`origin/main`, with exact local/remote equality verified in the
+[publication receipt](evidence/publication/push.json).
 
 Origin is hosted on GitHub. The retained source, scientific arrays and archives
-already occupy approximately 1.7 GiB of local Git objects, before the final EMA
-packages. Each archive part is at most 32 MiB. GitHub enforces a
+required approximately 3.4 GiB of new uncompressed Git objects for this work.
+Final scientific archive parts are at most 32 MiB. GitHub enforces a
 [2 GiB limit per push](https://docs.github.com/en/get-started/using-git/troubleshooting-the-2-gb-push-limit),
-so the final publication may need multiple transfers.
+so publication used three transfers.
 
-After completing the cohort, release repair and acceptance audit, inspect the
-actual remote branch and choose ascending milestone commits whose incremental
-objects fit comfortably below that limit. Push them as ordinary fast-forward
-updates to the existing branch, ending at the verified release head. Do not
-force-push, rewrite historical evidence, or change model configuration. All such
-transfers occur during the authorized final publication step, not during active
-evaluation. Record the final remote/local commit equality and push outcomes.
+After cohort completion, release repairs and acceptance, the original remote
+head was verified as `6d2daf0`. Ordinary fast-forward batches published
+`c937e43`, then `82d2cb9`, then the qualified release head `46fd785`. The batches
+contained approximately 1.16, 1.33 and 0.91 GiB of new uncompressed objects,
+respectively; these are object-size sums, not measured network payloads. Each
+push succeeded. No force push, history rewrite, model configuration change or
+paid storage service was used. GitHub accepted a preserved 60.25 MB development
+archive with a recommendation warning; no artifact exceeded its 100 MB limit.
+
+The first two CI workflows completed successfully for both targeted conformance
+and acceptance. The receipt records those observations; later CI results remain
+available in the repository's Actions history. The final publication bookkeeping
+is a separate commit, followed by another ordinary push and remote-head check.
 
 Full scientific artifacts remain retained. Archive transport and dependency
 hydration are described in [RETENTION.md](../../evals/research-v0.3/RETENTION.md).

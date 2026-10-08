@@ -1,8 +1,9 @@
 # Allagma v0.3 acceptance ledger
 
 Status: implementation, twelve-session evaluation, three task packages, release
-repairs, reproduction and rc2 acceptance are verified. Final authorized Git
-publication remains pending. The full owner request and commit/push instruction
+repairs, reproduction, rc2 acceptance and authorized source publication are
+verified. The [publication receipt](evidence/publication/push.json) records the
+qualified release commit on `origin/main`. The full owner request and commit/push instruction
 are retained in [GOAL.md](../../GOAL.md). Historical v0.2 and frozen evaluation
 evidence remain immutable; each receipt identifies its actual source and scope.
 
@@ -20,7 +21,7 @@ evidence remain immutable; each receipt identifies its actual source and scope.
 | V3-10 | General support follows demonstrated need | Need-to-change ledger, study-owned science, offline standard-library conformance/toy | [Development record](development.md), [defect corrections](defects.md), and final [I1–I5 receipt](evidence/rc2/acceptance/acceptance.json): 113 tests with no skips, complete toy, independent rational-arithmetic audit and archived replay. |
 | V3-11 | Full clean-checkout reproduction | Fresh setup, full execution of at least one study, result recomputation/comparison | [Passed for r01](../../evals/research-v0.3/validation/clean-r01-results/verification.json): clean Git clone, exact package/wheels, fresh environment, all original scripts, graph checks and separate raw recomputation. Source revision predates rc2 repairs, which have separate final checks. |
 | V3-12 | Critically reviewed task packages | Three full packages, scoped critique and resolved critical defects | CORE r01, modular r04 and EMA r07 retained and verified. Every numerical state/manifest/review requirement audited. Full-broker MPS, exit-storage and transport defects corrected with unchanged before evidence. No reproduced critical defect remains open in scope. |
-| V3-13 | Release candidate and migration | English notes/migration, historical bundle verification, acceptance, commits and origin push | [0.3.0rc2 notes](../releases/0.3.0rc2.md), contract 0.2 compatibility and 5,944-file acceptance archive complete. Coherent commits retained; final authorized publication pending. |
+| V3-13 | Release candidate and migration | English notes/migration, historical bundle verification, acceptance, commits and origin push | [0.3.0rc2 notes](../releases/0.3.0rc2.md), contract 0.2 compatibility and 5,944-file acceptance archive complete. Coherent commits and three successful ordinary fast-forward pushes are retained in the [publication receipt](evidence/publication/push.json); qualified release/local/remote commit equality passed. |
 
 ## Development order and decision boundaries
 

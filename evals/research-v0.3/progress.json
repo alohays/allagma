@@ -1,12 +1,12 @@
 {
-  "phase": "verified release candidate; authorized publication pending",
+  "phase": "qualified release candidate published",
   "freeze_commit": "de6abce",
   "frozen_source_commit": "c369fe7aabb5bd5575f967b3e3704cf463a97eb0",
   "prepared_runs": 12,
   "completed_runs": 12,
   "active_run": null,
   "next_run": null,
-  "instructions": "All twelve native sessions and substantive reviews are complete. The frozen comparison records 12 verified scientific executions and 10 complete packages, preserving r03/r06 review-binding gaps. Corrected rc2 source passes I1-I5/113 conformance tests, real full-broker MPS and final-storage regressions. Finish final documentation checks and coherent commits, then perform the authorized fast-forward origin publication and verify remote equality before completing the goal.",
+  "instructions": "Implementation, twelve-session comparison, three illustrative task packages, scoped defect repairs and final acceptance are complete. Qualified source/evidence is published in three ordinary fast-forward batches. Preserve frozen history and distinct scientific/assurance claims. Verify the final publication-bookkeeping head against origin and observe its CI before closing the goal.",
   "verified_complete_packages": 10,
   "release_gates": {
     "clean_checkout_full_study_reproduction": "passed for r01 CORE CULP",
@@ -14,7 +14,7 @@
     "final_acceptance": "passed: I1-I5 and 113 tests",
     "real_broker_mps": "passed",
     "complete_comparison": "passed: 12 outcomes and six paired contrasts",
-    "origin_push": "pending"
+    "origin_push": "passed: qualified commit 46fd7855796a3c0885c6730ce8622350c7877a8a matches origin/main; publication bookkeeping follows separately"
   },
   "known_frozen_defects": [
     "MPS allocator mismatch retained in frozen outcomes; rc2 repair passes actual full-broker MPS regression.",

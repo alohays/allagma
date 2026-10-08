@@ -32,7 +32,9 @@ seconds and 39 compute requests, including failures and a conservatively charged
 No candidate ceiling, frozen result, user model preference or project model
 configuration was changed.
 
-Remaining delivery step: finish final documentation/inventory checks, commit
-coherent increments, publish to origin with ordinary fast-forward batches below
-GitHub's transfer limit, and verify the remote head. Do not mark the goal complete
-before that authorized publication succeeds. See [publication plan](publication-plan.md).
+The qualified release/evidence commit `46fd7855796a3c0885c6730ce8622350c7877a8a`
+was published to `origin/main` in three ordinary fast-forward batches; local and
+remote equality was verified. Both first-batch and second-batch CI workflows
+passed acceptance and targeted checks. The [publication receipt](evidence/publication/push.json)
+records the exact checkpoint and logs. Publication bookkeeping is committed
+separately; verify its final remote equality before marking the goal complete.

@@ -1,0 +1,149 @@
+{
+  "conclusion": "success",
+  "jobs": [
+    {
+      "completedAt": "2026-10-08T08:13:36Z",
+      "conclusion": "success",
+      "databaseId": 113214595779,
+      "name": "acceptance",
+      "startedAt": "2026-10-08T08:11:18Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-08T08:11:20Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-08T08:11:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-08T08:11:53Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 2,
+          "startedAt": "2026-10-08T08:11:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-08T08:11:53Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v5",
+          "number": 3,
+          "startedAt": "2026-10-08T08:11:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-08T08:13:31Z",
+          "conclusion": "success",
+          "name": "Run python3 -m allagma acceptance --output build/acceptance",
+          "number": 4,
+          "startedAt": "2026-10-08T08:11:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-08T08:13:34Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@v4",
+          "number": 5,
+          "startedAt": "2026-10-08T08:13:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-08T08:13:34Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@v5",
+          "number": 9,
+          "startedAt": "2026-10-08T08:13:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-08T08:13:35Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 10,
+          "startedAt": "2026-10-08T08:13:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-08T08:13:35Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "startedAt": "2026-10-08T08:13:35Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/alohays/allagma/actions/runs/37748176257/job/113214595779"
+    },
+    {
+      "completedAt": "2026-10-08T08:12:52Z",
+      "conclusion": "success",
+      "databaseId": 113214595836,
+      "name": "targeted",
+      "startedAt": "2026-10-08T08:11:18Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-08T08:11:19Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-08T08:11:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-08T08:11:56Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 2,
+          "startedAt": "2026-10-08T08:11:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-08T08:11:57Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v5",
+          "number": 3,
+          "startedAt": "2026-10-08T08:11:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-08T08:12:50Z",
+          "conclusion": "success",
+          "name": "Check affected modules and interfaces",
+          "number": 4,
+          "startedAt": "2026-10-08T08:11:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-08T08:12:50Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@v5",
+          "number": 7,
+          "startedAt": "2026-10-08T08:12:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-08T08:12:50Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 8,
+          "startedAt": "2026-10-08T08:12:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-08T08:12:50Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "startedAt": "2026-10-08T08:12:50Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/alohays/allagma/actions/runs/37748176257/job/113214595836"
+    }
+  ],
+  "status": "completed",
+  "url": "https://github.com/alohays/allagma/actions/runs/37748176257"
+}

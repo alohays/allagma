@@ -1,0 +1,68 @@
+{
+  "format": "git-publication-v1",
+  "status": "pass",
+  "verified_at": "2026-10-08T08:26:48.836659+00:00",
+  "remote": "origin",
+  "url": "https://github.com/alohays/allagma",
+  "branch": "main",
+  "qualified_release_commit": "46fd7855796a3c0885c6730ce8622350c7877a8a",
+  "observed_local_head": "46fd7855796a3c0885c6730ce8622350c7877a8a",
+  "observed_remote_head": "46fd7855796a3c0885c6730ce8622350c7877a8a",
+  "heads_match": true,
+  "accepted_source_revision": "sha256:a7a67e09548e40442f2ff72ba63898f66e02368046132a183588ebebdbc1a196",
+  "batches": [
+    {
+      "number": 1,
+      "from": "6d2daf041144d520b372a8d2196774bbcee6306c",
+      "to": "c937e43048292e1a8ce4e3c61f5eec2ea6df2d5c",
+      "ordinary_fast_forward": true,
+      "result": "success",
+      "log": "batch-1.log",
+      "log_sha256": "2272b755b660c2702982903110e9071613d92c6dd1ea43bd7215ade0aafca4bd",
+      "new_objects": 6265,
+      "uncompressed_object_bytes": 1249428465,
+      "largest_new_object_bytes": 63179889
+    },
+    {
+      "number": 2,
+      "from": "c937e43048292e1a8ce4e3c61f5eec2ea6df2d5c",
+      "to": "82d2cb9741c99e42c39347693c91a2d0a977da1d",
+      "ordinary_fast_forward": true,
+      "result": "success",
+      "log": "batch-2.log",
+      "log_sha256": "dccacc38abbdd4bd86c76435b2bda9782292fb8017533eb9d73f8b079d14d3d1",
+      "new_objects": 3231,
+      "uncompressed_object_bytes": 1425492409,
+      "largest_new_object_bytes": 33554432
+    },
+    {
+      "number": 3,
+      "from": "82d2cb9741c99e42c39347693c91a2d0a977da1d",
+      "to": "46fd7855796a3c0885c6730ce8622350c7877a8a",
+      "ordinary_fast_forward": true,
+      "result": "success",
+      "log": "batch-3.log",
+      "log_sha256": "2b91485070913e575a83704f3f5805024330b54037ad2059b5410b879604f43f",
+      "new_objects": 1806,
+      "uncompressed_object_bytes": 973806813,
+      "largest_new_object_bytes": 33554432
+    }
+  ],
+  "completed_ci_at_checkpoint": [
+    {
+      "batch": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/alohays/allagma/actions/runs/37748176257",
+      "record": "ci-batch-1.json"
+    },
+    {
+      "batch": 2,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/alohays/allagma/actions/runs/37748429679",
+      "record": "ci-batch-2.json"
+    }
+  ],
+  "scope": "Qualified implementation and evidence commit published in three ordinary fast-forward updates. This receipt and final documentation/account checkpoint are subsequent publication bookkeeping; remote equality for the resulting bookkeeping commit is checked before goal completion. No force push, history rewrite, LFS purchase or package-index release."
+}
