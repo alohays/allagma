@@ -1,0 +1,19 @@
+{
+  "seed": 61,
+  "weight_decay": 1,
+  "horizon": 100000,
+  "dtype": "float32",
+  "device": "cpu",
+  "implementation": "dense",
+  "learning_rate": 0.001,
+  "betas": [
+    0.9,
+    0.98
+  ],
+  "epsilon": 1e-08,
+  "full_batch": true,
+  "architecture": "Linear(194,128,bias=False),ReLU,Linear(128,97,bias=False)",
+  "evaluation_interval": 100,
+  "source_revision": "a5c0605a4ba98047df82c9a4203000da01a4654f0730a64d0d113427bcc4ac6f",
+  "initial_weights_sha256": "86aacb86315f69fb78445b1c1ace3dcc6dcd041f4bd3af39724ca6aab7151c45"
+}

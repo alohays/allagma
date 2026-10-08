@@ -1,0 +1,29 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "study.py",
+    "run",
+    "--seed",
+    "1004",
+    "--wd",
+    "0",
+    "--device",
+    "cpu",
+    "--implementation",
+    "dense",
+    "--target",
+    "100000",
+    "--seconds",
+    "155",
+    "--output",
+    "artifacts",
+    "--label",
+    "confirmation-1004-wd0-dispatch6"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "confirmation-1004-wd0-dispatch6",
+  "request_id": "e509850ee31945cca858d1d920c5494f",
+  "timeout_seconds": 175.0
+}

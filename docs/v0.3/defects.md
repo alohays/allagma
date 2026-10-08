@@ -1,5 +1,27 @@
 # Defects found after the evaluation freeze
 
+## Inline learning-curve parser — corrected in a separate evaluator
+
+The frozen measurement document defines `curve` as a JSON list. Run r03 supplied
+that list correctly, plus the same curve in a separate artifact. The frozen
+scorer instead treated the field as a path and reported an unscorable result.
+That original result remains at `runs/r03/score.json`; it is an evaluator defect,
+not a missing candidate measurement.
+
+`evals/research-v0.3/score_curve_compat.py` is a separate protected correction.
+It changes only curve loading: accept the specified inline list, while retaining
+the original relative-path branch. All formulas, tolerances, controls, totals,
+task requirements and frozen source remain unchanged. The exact replacement and
+both code hashes are retained in
+`evals/research-v0.3/postprocess-checks/curve-parser-correction.json`.
+
+The corrected scorer passes all 40 r03 numerical checks. A separate equivalence
+check supplied the original frozen scorer with existing curve-file references
+whose contents equal the inline lists; its complete result equals the corrected
+scorer result. The compatibility correction applies uniformly to every applicable
+run. Summaries retain the original scoring outcome and explicitly mark use of
+the correction. No candidate artifact was modified.
+
 ## MPS allocator watermarks — reproduced, correction pending
 
 The common broker in frozen source `c369fe7` sets

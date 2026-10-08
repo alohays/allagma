@@ -1,0 +1,15 @@
+{
+  "format": "evaluation-correction-v1",
+  "defect": "Frozen measurement contract specifies curve as a JSON list, but frozen scorer treats it as a file path.",
+  "scope": "Parser compatibility only; no data, thresholds, numerical formulas, controls, totals or task criteria changed. Applied uniformly to any run supplying the documented inline list.",
+  "original_scorer": "evals/research-v0.3/frozen/source/evals/research-v0.3/score.py",
+  "original_sha256": "01a9248197d4fa3bdde09081c2861133783c41439f7025cf509ac42c9df41fda",
+  "corrected_scorer": "evals/research-v0.3/score_curve_compat.py",
+  "corrected_sha256": "91175b401b9415ba4ce3f16d67ce8db2b6a9a271e967019fae97bf87fae176e5",
+  "exact_replacement": {
+    "before": "curve=read(confined(workspace,run[\"curve\"]))",
+    "after": "curve=run[\"curve\"] if isinstance(run[\"curve\"],list) else read(confined(workspace,run[\"curve\"]))"
+  },
+  "original_outcomes_preserved": true,
+  "candidate_files_modified": false
+}

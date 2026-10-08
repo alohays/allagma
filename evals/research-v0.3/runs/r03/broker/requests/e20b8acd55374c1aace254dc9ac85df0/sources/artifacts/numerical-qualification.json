@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "seed": 61,
+  "heldout_used_for_optimization": false,
+  "independent_reference": "NumPy float64 analytic forward, cross-entropy, gradients and first AdamW update",
+  "loss_abs_error": 6.750290628687594e-07,
+  "gradient_input_max_abs_error": 7.116959967320632e-11,
+  "gradient_output_max_abs_error": 3.745917773626613e-10,
+  "independent_float64_gradient_adamw_update_max_abs_error": 2.087577862817068e-06,
+  "first_adamw_same_gradient_max_abs_error": 8.300404058525501e-09,
+  "qualification_recovery": "Initial composite 2e-6 tolerance failed at 2.0876e-6; separate gradient accuracy from Adam normalization sensitivity. Same-gradient optimizer tolerance 5e-8.",
+  "resume": "20 updates continuous vs 10+reload+10: bitwise equal parameters and logits",
+  "paired_initialization_sha256": [
+    "8baaf505245e4fd5e32c79f3d36f49e3da5e904e00f94cbce3889569f9f83f80",
+    "8baaf505245e4fd5e32c79f3d36f49e3da5e904e00f94cbce3889569f9f83f80"
+  ],
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "python": "3.11.6",
+  "torch_version": "2.14.1",
+  "numpy_version": "2.4.6",
+  "source_revision": "25b905b534adcfc99cd80b712a634b708e9ed4e16db08cfe3b11f70f5d5eb672",
+  "qualification_source_sha256": "d987a5b0d85b249e0f4acc622db690b5dd020221af94b678ee3dc8351711a52e"
+}

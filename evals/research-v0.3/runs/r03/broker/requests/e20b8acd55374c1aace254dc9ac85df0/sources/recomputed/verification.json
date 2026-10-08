@@ -1,0 +1,154 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "seed": 1001,
+      "weight_decay": 0,
+      "updates": 100000,
+      "evaluations": 1001,
+      "max_endpoint_metric_abs_differences": {
+        "train_accuracy": 0.0,
+        "train_loss": 1.1544519838032419e-08,
+        "test_accuracy": 0.0,
+        "test_loss": 1.992963342445364e-05
+      },
+      "numpy_logits_max_abs_error": 0.0,
+      "numpy_all_9409_predictions_equal": true,
+      "pytorch_reload_logits_max_abs_error": 0.0,
+      "checkpoint_reload": "all logits bitwise equal",
+      "partition_and_initialization": "passed"
+    },
+    {
+      "seed": 1001,
+      "weight_decay": 1,
+      "updates": 100000,
+      "evaluations": 1001,
+      "max_endpoint_metric_abs_differences": {
+        "train_accuracy": 0.0,
+        "train_loss": 5.00357197984514e-08,
+        "test_accuracy": 2.944489363443381e-08,
+        "test_loss": 3.932617764768054e-08
+      },
+      "numpy_logits_max_abs_error": 0.0,
+      "numpy_all_9409_predictions_equal": true,
+      "pytorch_reload_logits_max_abs_error": 0.0,
+      "checkpoint_reload": "all logits bitwise equal",
+      "partition_and_initialization": "passed"
+    },
+    {
+      "seed": 1002,
+      "weight_decay": 0,
+      "updates": 100000,
+      "evaluations": 1001,
+      "max_endpoint_metric_abs_differences": {
+        "train_accuracy": 0.0,
+        "train_loss": 1.3688741409992902e-08,
+        "test_accuracy": 0.0,
+        "test_loss": 1.1330833160627662e-05
+      },
+      "numpy_logits_max_abs_error": 0.0,
+      "numpy_all_9409_predictions_equal": true,
+      "pytorch_reload_logits_max_abs_error": 0.0,
+      "checkpoint_reload": "all logits bitwise equal",
+      "partition_and_initialization": "passed"
+    },
+    {
+      "seed": 1002,
+      "weight_decay": 1,
+      "updates": 100000,
+      "evaluations": 1001,
+      "max_endpoint_metric_abs_differences": {
+        "train_accuracy": 0.0,
+        "train_loss": 5.208509934273933e-08,
+        "test_accuracy": 9.066927875167607e-09,
+        "test_loss": 1.434412963963183e-07
+      },
+      "numpy_logits_max_abs_error": 0.0,
+      "numpy_all_9409_predictions_equal": true,
+      "pytorch_reload_logits_max_abs_error": 0.0,
+      "checkpoint_reload": "all logits bitwise equal",
+      "partition_and_initialization": "passed"
+    },
+    {
+      "seed": 1003,
+      "weight_decay": 0,
+      "updates": 100000,
+      "evaluations": 1001,
+      "max_endpoint_metric_abs_differences": {
+        "train_accuracy": 0.0,
+        "train_loss": 8.953573578263121e-09,
+        "test_accuracy": 0.0,
+        "test_loss": 1.1819985900274332e-05
+      },
+      "numpy_logits_max_abs_error": 0.0,
+      "numpy_all_9409_predictions_equal": true,
+      "pytorch_reload_logits_max_abs_error": 0.0,
+      "checkpoint_reload": "all logits bitwise equal",
+      "partition_and_initialization": "passed"
+    },
+    {
+      "seed": 1003,
+      "weight_decay": 1,
+      "updates": 100000,
+      "evaluations": 1001,
+      "max_endpoint_metric_abs_differences": {
+        "train_accuracy": 0.0,
+        "train_loss": 5.3649817093608554e-08,
+        "test_accuracy": 1.0252324655901646e-08,
+        "test_loss": 1.1384616693810301e-08
+      },
+      "numpy_logits_max_abs_error": 0.0,
+      "numpy_all_9409_predictions_equal": true,
+      "pytorch_reload_logits_max_abs_error": 0.0,
+      "checkpoint_reload": "all logits bitwise equal",
+      "partition_and_initialization": "passed"
+    },
+    {
+      "seed": 1004,
+      "weight_decay": 0,
+      "updates": 100000,
+      "evaluations": 1001,
+      "max_endpoint_metric_abs_differences": {
+        "train_accuracy": 0.0,
+        "train_loss": 1.363616300981056e-08,
+        "test_accuracy": 3.998628685109029e-13,
+        "test_loss": 2.509750800072652e-06
+      },
+      "numpy_logits_max_abs_error": 0.0,
+      "numpy_all_9409_predictions_equal": true,
+      "pytorch_reload_logits_max_abs_error": 0.0,
+      "checkpoint_reload": "all logits bitwise equal",
+      "partition_and_initialization": "passed"
+    },
+    {
+      "seed": 1004,
+      "weight_decay": 1,
+      "updates": 100000,
+      "evaluations": 1001,
+      "max_endpoint_metric_abs_differences": {
+        "train_accuracy": 0.0,
+        "train_loss": 4.928359868672233e-08,
+        "test_accuracy": 1.092193813168052e-08,
+        "test_loss": 3.1989155768741284e-09
+      },
+      "numpy_logits_max_abs_error": 0.0,
+      "numpy_all_9409_predictions_equal": true,
+      "pytorch_reload_logits_max_abs_error": 0.0,
+      "checkpoint_reload": "all logits bitwise equal",
+      "partition_and_initialization": "passed"
+    }
+  ],
+  "analysis_self_checks": [
+    "inclusive thresholds",
+    "three-evaluation onset and confirmation times",
+    "1000-update delay boundary",
+    "persistence violation",
+    "generalization before memorization",
+    "insufficient horizon persistence is censored with null onset and lag",
+    "four-pair sign-flip resolution",
+    "uniform-logit cross-entropy and accuracy known answers"
+  ],
+  "paired_partitions_and_initial_weights": "passed",
+  "independent_label_and_split_checks": "all 9409 labels and all eight partitions",
+  "replay_scope": "all eight final checkpoints; pilot 10+reload+10 optimizer continuity; no second full training run"
+}

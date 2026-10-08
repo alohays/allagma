@@ -1,0 +1,17 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "analyze.py",
+    "--data",
+    "artifacts",
+    "--out",
+    "recomputed",
+    "--verify"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "recompute-delivery",
+  "request_id": "2bf8e5972b194da39d4f70b0b514b0db",
+  "timeout_seconds": 90.0
+}

@@ -1,0 +1,282 @@
+{
+  "execution_status": "complete",
+  "planned_runs": 8,
+  "completed_runs": 8,
+  "incomplete_runs": 0,
+  "missing_runs": [],
+  "paired_differences": [
+    {
+      "seed": 1001,
+      "test_accuracy_difference": 0.6654015485046303,
+      "test_loss_difference": -164.33198815724543
+    },
+    {
+      "seed": 1002,
+      "test_accuracy_difference": 0.6523455290724154,
+      "test_loss_difference": -159.68943372406846
+    },
+    {
+      "seed": 1003,
+      "test_accuracy_difference": 0.8202520115378776,
+      "test_loss_difference": -156.62220519092952
+    },
+    {
+      "seed": 1004,
+      "test_accuracy_difference": 0.5603461363291332,
+      "test_loss_difference": -153.82247304600702
+    }
+  ],
+  "effects": {
+    "test_accuracy": {
+      "n": 4,
+      "mean": 0.6745863063610141,
+      "sd": 0.10777805290637396,
+      "ci95": [
+        0.5030873732297332,
+        0.8460852394922951
+      ],
+      "exact_sign_flip_p": 0.125,
+      "method": "Student t 95% interval across independent paired seeds; paired absolute-mean sign flips",
+      "degrees_of_freedom": 3,
+      "sign_flip_count": 16,
+      "caveat": "Four seeds give coarse inference; t intervals assume approximately normal seed differences."
+    },
+    "test_loss": {
+      "n": 4,
+      "mean": -158.61652502956264,
+      "sd": 4.501033135864365,
+      "ci95": [
+        -165.77867316615817,
+        -151.4543768929671
+      ],
+      "exact_sign_flip_p": 0.125,
+      "method": "Student t 95% interval across independent paired seeds; paired absolute-mean sign flips",
+      "degrees_of_freedom": 3,
+      "sign_flip_count": 16,
+      "caveat": "Four seeds give coarse inference; t intervals assume approximately normal seed differences."
+    }
+  },
+  "primary_transitions": [
+    {
+      "seed": 1001,
+      "weight_decay": 0,
+      "memorization": {
+        "observed": true,
+        "onset_step": 600,
+        "confirmed_step": 800,
+        "censor_step": null
+      },
+      "generalization": {
+        "observed": false,
+        "onset_step": null,
+        "confirmed_step": null,
+        "censor_step": 100000
+      },
+      "lag_updates": null,
+      "lag_lower_bound_updates": 99200,
+      "lag_lower_bound_relation": "strictly greater than",
+      "train_persistent": null,
+      "test_below_threshold_at_memorization": null,
+      "delayed_grokking": false,
+      "test_threshold": 0.95,
+      "consecutive_evaluations": 3,
+      "minimum_delay_updates": 1000,
+      "planned_horizon": 100000,
+      "observed_horizon": 100000
+    },
+    {
+      "seed": 1001,
+      "weight_decay": 1,
+      "memorization": {
+        "observed": true,
+        "onset_step": 800,
+        "confirmed_step": 1000,
+        "censor_step": null
+      },
+      "generalization": {
+        "observed": false,
+        "onset_step": null,
+        "confirmed_step": null,
+        "censor_step": 100000
+      },
+      "lag_updates": null,
+      "lag_lower_bound_updates": 99000,
+      "lag_lower_bound_relation": "strictly greater than",
+      "train_persistent": null,
+      "test_below_threshold_at_memorization": null,
+      "delayed_grokking": false,
+      "test_threshold": 0.95,
+      "consecutive_evaluations": 3,
+      "minimum_delay_updates": 1000,
+      "planned_horizon": 100000,
+      "observed_horizon": 100000
+    },
+    {
+      "seed": 1002,
+      "weight_decay": 0,
+      "memorization": {
+        "observed": true,
+        "onset_step": 600,
+        "confirmed_step": 800,
+        "censor_step": null
+      },
+      "generalization": {
+        "observed": false,
+        "onset_step": null,
+        "confirmed_step": null,
+        "censor_step": 100000
+      },
+      "lag_updates": null,
+      "lag_lower_bound_updates": 99200,
+      "lag_lower_bound_relation": "strictly greater than",
+      "train_persistent": null,
+      "test_below_threshold_at_memorization": null,
+      "delayed_grokking": false,
+      "test_threshold": 0.95,
+      "consecutive_evaluations": 3,
+      "minimum_delay_updates": 1000,
+      "planned_horizon": 100000,
+      "observed_horizon": 100000
+    },
+    {
+      "seed": 1002,
+      "weight_decay": 1,
+      "memorization": {
+        "observed": true,
+        "onset_step": 800,
+        "confirmed_step": 1000,
+        "censor_step": null
+      },
+      "generalization": {
+        "observed": false,
+        "onset_step": null,
+        "confirmed_step": null,
+        "censor_step": 100000
+      },
+      "lag_updates": null,
+      "lag_lower_bound_updates": 99000,
+      "lag_lower_bound_relation": "strictly greater than",
+      "train_persistent": null,
+      "test_below_threshold_at_memorization": null,
+      "delayed_grokking": false,
+      "test_threshold": 0.95,
+      "consecutive_evaluations": 3,
+      "minimum_delay_updates": 1000,
+      "planned_horizon": 100000,
+      "observed_horizon": 100000
+    },
+    {
+      "seed": 1003,
+      "weight_decay": 0,
+      "memorization": {
+        "observed": true,
+        "onset_step": 600,
+        "confirmed_step": 800,
+        "censor_step": null
+      },
+      "generalization": {
+        "observed": false,
+        "onset_step": null,
+        "confirmed_step": null,
+        "censor_step": 100000
+      },
+      "lag_updates": null,
+      "lag_lower_bound_updates": 99200,
+      "lag_lower_bound_relation": "strictly greater than",
+      "train_persistent": null,
+      "test_below_threshold_at_memorization": null,
+      "delayed_grokking": false,
+      "test_threshold": 0.95,
+      "consecutive_evaluations": 3,
+      "minimum_delay_updates": 1000,
+      "planned_horizon": 100000,
+      "observed_horizon": 100000
+    },
+    {
+      "seed": 1003,
+      "weight_decay": 1,
+      "memorization": {
+        "observed": true,
+        "onset_step": 800,
+        "confirmed_step": 1000,
+        "censor_step": null
+      },
+      "generalization": {
+        "observed": false,
+        "onset_step": null,
+        "confirmed_step": null,
+        "censor_step": 100000
+      },
+      "lag_updates": null,
+      "lag_lower_bound_updates": 99000,
+      "lag_lower_bound_relation": "strictly greater than",
+      "train_persistent": null,
+      "test_below_threshold_at_memorization": null,
+      "delayed_grokking": false,
+      "test_threshold": 0.95,
+      "consecutive_evaluations": 3,
+      "minimum_delay_updates": 1000,
+      "planned_horizon": 100000,
+      "observed_horizon": 100000
+    },
+    {
+      "seed": 1004,
+      "weight_decay": 0,
+      "memorization": {
+        "observed": true,
+        "onset_step": 600,
+        "confirmed_step": 800,
+        "censor_step": null
+      },
+      "generalization": {
+        "observed": false,
+        "onset_step": null,
+        "confirmed_step": null,
+        "censor_step": 100000
+      },
+      "lag_updates": null,
+      "lag_lower_bound_updates": 99200,
+      "lag_lower_bound_relation": "strictly greater than",
+      "train_persistent": null,
+      "test_below_threshold_at_memorization": null,
+      "delayed_grokking": false,
+      "test_threshold": 0.95,
+      "consecutive_evaluations": 3,
+      "minimum_delay_updates": 1000,
+      "planned_horizon": 100000,
+      "observed_horizon": 100000
+    },
+    {
+      "seed": 1004,
+      "weight_decay": 1,
+      "memorization": {
+        "observed": true,
+        "onset_step": 800,
+        "confirmed_step": 1000,
+        "censor_step": null
+      },
+      "generalization": {
+        "observed": false,
+        "onset_step": null,
+        "confirmed_step": null,
+        "censor_step": 100000
+      },
+      "lag_updates": null,
+      "lag_lower_bound_updates": 99000,
+      "lag_lower_bound_relation": "strictly greater than",
+      "train_persistent": null,
+      "test_below_threshold_at_memorization": null,
+      "delayed_grokking": false,
+      "test_threshold": 0.95,
+      "consecutive_evaluations": 3,
+      "minimum_delay_updates": 1000,
+      "planned_horizon": 100000,
+      "observed_horizon": 100000
+    }
+  ],
+  "primary_memorization_count": 8,
+  "primary_generalization_count": 0,
+  "primary_delayed_grokking_count": 0,
+  "analysis_source_sha256": "e130e232cd112a8ae3087afc3071910044a77fdaf2a05aab122ea99cf4db29f6",
+  "protocol_sha256": "523f23f3751c979e8347e2fbd9c328b1cfa46928e8318b3c54dc280c190bf5c4"
+}

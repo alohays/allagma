@@ -1,0 +1,32 @@
+{
+  "known_answer_checks": "passed; six explicit examples and all 9409 labels",
+  "partition_checks": "passed; 2822 train, 6587 held out, disjoint exhaustive",
+  "benchmark": [
+    {
+      "device": "cpu",
+      "implementation": "dense",
+      "steps": 1000,
+      "seconds": 1.4728327090851963,
+      "seconds_per_update": 0.0014728327090851962,
+      "initial_logits_max_abs_difference": 0.0
+    },
+    {
+      "device": "cpu",
+      "implementation": "gather",
+      "steps": 1000,
+      "seconds": 1.9480809168890119,
+      "seconds_per_update": 0.0019480809168890118,
+      "initial_logits_max_abs_difference": 0.0
+    },
+    {
+      "device": "mps",
+      "implementation": "dense",
+      "status": "unavailable",
+      "error": "invalid low watermark ratio 1.4"
+    }
+  ],
+  "torch_version": "2.14.1",
+  "numpy_version": "2.4.6",
+  "threads": 1,
+  "source_revision": "25b905b534adcfc99cd80b712a634b708e9ed4e16db08cfe3b11f70f5d5eb672"
+}

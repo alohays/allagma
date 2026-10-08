@@ -3,21 +3,25 @@
   "freeze_commit": "de6abce",
   "frozen_source_commit": "c369fe7aabb5bd5575f967b3e3704cf463a97eb0",
   "prepared_runs": 12,
-  "completed_runs": 2,
+  "completed_runs": 3,
   "active_run": {
-    "run_id": "r03",
+    "run_id": "r04",
     "task": "modular-addition",
-    "condition": "plain",
+    "condition": "allagma",
     "replicate": 2,
-    "control": "evals/research-v0.3/runs/r03",
-    "runtime": "evals/research-v0.3/runs/r03/sessions/evaluation/runtime",
-    "exec_session_id": 88620
+    "control": "evals/research-v0.3/runs/r04",
+    "runtime": "evals/research-v0.3/runs/r04/sessions/evaluation/runtime",
+    "exec_session_id": 55310
   },
-  "next_run": "r04",
+  "next_run": "r05",
   "instructions": "Observe the live handle/process. Do not restart from a running-state file or timeout. Do not edit any path covered by frozen/freeze.json. Complete and score all 12 frozen runs, then finish task packages, clean-checkout reproduction, comparison and release audit; push only at full completion.",
   "verified_complete_packages": 2,
   "release_gates": {
     "clean_checkout_full_study_reproduction": "passed for r01 CORE CULP",
     "raw_data_recomputation": "passed for r01 clean checkout"
-  }
+  },
+  "known_frozen_defects": [
+    "MPS allocator high/low mismatch; CPU remains available; release repair pending",
+    "Inline curve parser mismatch; original error preserved and transparent contract-compatible correction applied uniformly"
+  ]
 }

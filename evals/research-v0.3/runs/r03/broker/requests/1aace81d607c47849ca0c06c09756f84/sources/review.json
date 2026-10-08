@@ -1,0 +1,102 @@
+{
+  "format": "research-review-v1",
+  "task_id": "modular-addition",
+  "review_type": "Author self-critique and executable evidence audit; not independent peer review",
+  "assessment": "The design fixes the requested intervention and separates memorization, final held-out improvement, and threshold-defined delayed grokking. Execution and numerical conclusions are subject to the final package audit. Small-seed and finite-horizon limitations remain substantive even when execution is complete.",
+  "findings": [
+    {
+      "id": "R01",
+      "severity": "major",
+      "status": "resolved",
+      "finding": "A controlled interruption could silently erase an attempt or contaminate confirmation with pilot recovery.",
+      "resolution": "The injected first attempt is retained. It was terminated during imports before any model update; seed 61 was restarted successfully. Confirmation uses only seeds 1001–1004. A separate pilot test verifies bitwise optimizer continuation after checkpoint reload.",
+      "evidence": ["artifacts/numerical-qualification.json", "artifacts/protocol-freeze.json", ".compute/responses/d880d6f88a464b1e931723d2116e23d9.json"]
+    },
+    {
+      "id": "R02",
+      "severity": "moderate",
+      "status": "resolved",
+      "finding": "The MPS pilot initialization failed under the supplied memory configuration.",
+      "resolution": "The failure is retained. CPU dense training was already faster than the CPU lookup implementation and was selected before confirmation. The broker memory limits were not changed.",
+      "evidence": ["artifacts/qualification.json", ".compute/responses/7fffec6bc421479d8e724f2152bb4128.json", "protocol.json"]
+    },
+    {
+      "id": "R03",
+      "severity": "major",
+      "status": "resolved",
+      "finding": "An initial combined float32 versus float64 AdamW comparison exceeded a 2e-6 tolerance, so merely loosening that threshold would not establish correctness.",
+      "resolution": "Retained the original failure and source. Separated the analytic gradient comparison from the optimizer formula. Maximum gradient errors were below 4e-10; the same-gradient AdamW reference agreed within 8.31e-9. The larger composite error is reported as sensitivity of normalization near zero gradients, not hidden as a passed original check.",
+      "evidence": ["qualify_numerics_v1.py", "qualify_numerics.py", "artifacts/numerical-qualification.json", ".compute/responses/2f518ef9839e4e05a91fb5296a3b58b1.json"]
+    },
+    {
+      "id": "R04",
+      "severity": "major",
+      "status": "resolved",
+      "finding": "Pairing or label/index errors could imitate a weight-decay effect, especially with very poor held-out performance.",
+      "resolution": "Exhaustive label and split checks, independent PCG64 partition reconstruction, identical paired initial weights, and independent checkpoint/logit reconstruction are required for every run. The training objective indexes only the training labels. Reported endpoint metrics are recomputed from retained all-pair logits.",
+      "evidence": ["study.py", "qualify_numerics.py", "analyze.py", "analysis/verification.json", "analysis/measurements.json"]
+    },
+    {
+      "id": "R05",
+      "severity": "major",
+      "status": "resolved",
+      "finding": "Choosing a grokking definition after seeing confirmation curves would permit a convenient positive result.",
+      "resolution": "Protocol and source hashes were frozen before confirmation. Primary thresholds, persistence and delay remain fixed. All 27 prespecified sensitivities are retained, regardless of outcome. Unobserved threshold onsets and lags remain null with explicit right-censoring.",
+      "evidence": ["PROTOCOL.md", "protocol.json", "artifacts/protocol-freeze.json", "analysis/results.json", "analysis/sensitivity.json"]
+    },
+    {
+      "id": "R06",
+      "severity": "major",
+      "status": "unresolved_limitation",
+      "finding": "Four seeds do not provide precise population inference or a reliable check of normality for paired t intervals.",
+      "implication": "Treat individual seed effects as the strongest direct evidence. Report the assumption-dependent t intervals and the exact sign-flip reference together. With four pairs its smallest possible two-sided p-value is 0.125. Neither 6,587 held-out pairs nor 1,001 evaluations creates additional independent seeds.",
+      "evidence": ["PROTOCOL.md", "analysis/results.json", "analysis/per_seed_results.csv"],
+      "future_resolution": "A separately authorized, preregistered study with more independent seeds. Do not pool repeated executions of these same seeds as new replicates."
+    },
+    {
+      "id": "R07",
+      "severity": "major",
+      "status": "unresolved_limitation",
+      "finding": "A 100,000-update horizon cannot distinguish an absent transition from one occurring later.",
+      "implication": "Censor at the horizon and avoid saying that a condition can never generalize or grok. Three-point persistence also leaves the last two candidate onset evaluations unconfirmable. Conservative lag bounds account for this window; they are not observed event times.",
+      "evidence": ["PROTOCOL.md", "analysis/results.json", "analysis/sensitivity.json"],
+      "future_resolution": "An independently specified longer-horizon study with retained late checkpoints."
+    },
+    {
+      "id": "R08",
+      "severity": "moderate",
+      "status": "unresolved_limitation",
+      "finding": "The 95% threshold, three-record persistence, 1,000-update delay and uninterrupted training-accuracy requirement are operational choices, not a universal definition of grokking.",
+      "implication": "Partial held-out improvement can be scientifically meaningful while failing this definition. The reported sensitivity grid varies thresholds, persistence windows and delays, but keeps the uninterrupted-training rule fixed and cannot establish invariance to every reasonable definition.",
+      "evidence": ["PROTOCOL.md", "analysis/sensitivity_summary.json"],
+      "future_resolution": "Compare additional definitions in a new, separately prespecified analysis rather than recategorizing this primary result."
+    },
+    {
+      "id": "R09",
+      "severity": "moderate",
+      "status": "unresolved_limitation",
+      "finding": "The task tests held-out ordered pairs from the same finite addition table. Both operands and sometimes the reversed pair are represented in training.",
+      "implication": "This is the required interpolation-style generalization task. It does not demonstrate transfer to unseen operands, other moduli, new arithmetic operations or a general addition algorithm. The MLP study is not a replication of the reference transformer's architecture or horizon.",
+      "evidence": ["inputs/BRIEF.md", "inputs/materials/SOURCES.md", "PROTOCOL.md"],
+      "future_resolution": "Use separately designed distribution shifts and architecture comparisons."
+    },
+    {
+      "id": "R10",
+      "severity": "moderate",
+      "status": "unresolved_limitation",
+      "finding": "Changing AdamW weight decay changes both weight shrinkage and the optimization trajectory; endpoint differences alone do not identify the learned mechanism.",
+      "implication": "The paired intervention estimates the effect of this optimizer setting under this protocol. It does not establish a specific circuit, minimum-norm mechanism, or cause of any confidently wrong held-out predictions.",
+      "evidence": ["protocol.json", "analysis/learning_curves.png", "analysis/measurements.json"],
+      "future_resolution": "A separate mechanistic analysis and controlled optimizer comparisons."
+    },
+    {
+      "id": "R11",
+      "severity": "moderate",
+      "status": "unresolved_limitation",
+      "finding": "Evidence-only recomputation and all-checkpoint reloads do not equal a second independent execution of the entire training study.",
+      "implication": "The package supplies a fresh-environment full-study command and exact dependency/source evidence. The delivered verification covers retained predictions, all eight final checkpoints, and a pilot optimizer-resume test. A second complete training replay was not performed within this budget, and bitwise reproducibility across other numerical libraries or hardware is not claimed.",
+      "evidence": ["REPRODUCE.md", "reproduce.py", "analysis/verification.json", "recomputed/verification.json"],
+      "future_resolution": "Run the supplied reproduction command with a fresh resource allowance and compare the resulting evidence without counting it as additional seeds."
+    }
+  ]
+}

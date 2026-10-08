@@ -1,0 +1,63 @@
+{
+  "format": "modular-addition-protocol-v1",
+  "frozen": true,
+  "task_id": "modular-addition",
+  "reference": "Power et al. (2022), arXiv:2201.02177; context only, not exact replication",
+  "confirmation_seeds": [1001, 1002, 1003, 1004],
+  "pilot_seed": 61,
+  "weight_decays": [0, 1],
+  "horizon": 100000,
+  "evaluation_interval": 100,
+  "data": {
+    "modulus": 97,
+    "pair_order": "lexicographic a then b",
+    "split_rng": "numpy.random.Generator(numpy.random.PCG64(seed))",
+    "train_count": 2822,
+    "test_count": 6587,
+    "train_selection": "first 2822 entries of a uniform permutation of all 9409 pairs"
+  },
+  "model": {
+    "inputs": "concatenated one-hot vectors",
+    "architecture": [194, 128, 97],
+    "activation": "ReLU",
+    "bias": false,
+    "initialization": "torch.manual_seed(seed); torch.nn.Linear defaults",
+    "dtype": "float32"
+  },
+  "optimizer": {
+    "name": "AdamW",
+    "learning_rate": 0.001,
+    "betas": [0.9, 0.98],
+    "epsilon": 1e-8,
+    "foreach": false,
+    "full_batch": true,
+    "loss": "mean cross entropy",
+    "schedule": null
+  },
+  "backend": {"device": "cpu", "implementation": "dense", "threads": 1},
+  "backend_selection": "pilot correctness and throughput only; dense CPU faster than gather; MPS unavailable under provided memory configuration",
+  "primary_transition": {
+    "train_threshold": 0.99,
+    "test_threshold": 0.95,
+    "consecutive_evaluations": 3,
+    "time_definition": "first evaluation in qualifying consecutive run",
+    "minimum_delay_updates": 1000,
+    "test_below_threshold_at_memorization": true,
+    "train_persistence_through_generalization_confirmation": true,
+    "unobserved_onset": null,
+    "right_censor_at_observed_horizon": true
+  },
+  "primary_endpoints": ["test_accuracy_at_100000", "test_loss_at_100000"],
+  "paired_difference_direction": "weight_decay_1_minus_weight_decay_0",
+  "uncertainty": "seed-level mean and two-sided 95% Student t interval; df=3 when all four pairs complete",
+  "auxiliary_inference": "exact 16 paired sign flips of absolute mean difference",
+  "sensitivity": {
+    "train_threshold": [0.99],
+    "test_threshold": [0.9, 0.95, 0.99],
+    "consecutive_evaluations": [1, 3, 5],
+    "minimum_delay_updates": [500, 1000, 5000]
+  },
+  "execution_order": "ascending seed, weight decay 0 then 1; finish or resource-resume each cell before proceeding",
+  "heldout_adaptation": "none",
+  "resource_stop_policy": "retain actual updates and censoring; never relabel a truncated run as a 100000-update confirmation endpoint"
+}

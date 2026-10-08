@@ -1,0 +1,17 @@
+{
+  "injected_interruption": false,
+  "isolation_sha256": "97c0efa575bd1b4cfa1ae2ed05d8891683171e10f608bb212119a7cf6c69654e",
+  "reconciled_after_controller_restart": false,
+  "request_id": "af9d350ae61c484cb60f5df6ed749438",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 7.636314291041344,
+    "ended_at": "2026-10-07T21:08:51.254348+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r03/resources/jobs/0004-pilot-recovery-and-checkpoint",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 404979712,
+    "peak_storage_bytes": 1099956216,
+    "status": "completed"
+  }
+}

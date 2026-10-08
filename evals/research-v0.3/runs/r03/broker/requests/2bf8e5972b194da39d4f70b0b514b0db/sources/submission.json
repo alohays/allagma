@@ -1,0 +1,16 @@
+{
+  "task_id": "modular-addition",
+  "execution_status": "complete",
+  "manuscript": "REPORT.md",
+  "review": "review.json",
+  "artifact_manifest": "artifact-manifest.json",
+  "measurements": "analysis/measurements.json",
+  "reproduce": {
+    "argv": ["python3", "reproduce.py", "--environment", ".venv-reproduction", "--output", "reproduction"],
+    "cwd": "."
+  },
+  "recompute": {
+    "argv": ["python3", "inputs/compute.py", "--category", "compute", "--label", "recompute-delivery", "--timeout", "90", "--", ".venv/bin/python", "analyze.py", "--data", "artifacts", "--out", "recomputed", "--verify"],
+    "cwd": "."
+  }
+}

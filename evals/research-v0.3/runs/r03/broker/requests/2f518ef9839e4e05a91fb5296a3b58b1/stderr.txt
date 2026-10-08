@@ -1,0 +1,6 @@
+OMP: Warning #179: Function Can't set size of /tmp file failed:
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r03/candidate/qualify_numerics.py", line 43, in <module>
+    assert adam_error < 2e-6, adam_error
+           ^^^^^^^^^^^^^^^^^
+AssertionError: 2.087577862817068e-06

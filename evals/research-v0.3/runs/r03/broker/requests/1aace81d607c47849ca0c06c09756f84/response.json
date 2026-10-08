@@ -1,0 +1,17 @@
+{
+  "injected_interruption": false,
+  "isolation_sha256": "97c0efa575bd1b4cfa1ae2ed05d8891683171e10f608bb212119a7cf6c69654e",
+  "reconciled_after_controller_restart": false,
+  "request_id": "1aace81d607c47849ca0c06c09756f84",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 29.324491792125627,
+    "ended_at": "2026-10-07T21:32:56.192789+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r03/resources/jobs/0018-endpoints-transitions-figures-and-reload",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 615727104,
+    "peak_storage_bytes": 1146667598,
+    "status": "completed"
+  }
+}

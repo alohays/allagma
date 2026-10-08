@@ -40,6 +40,10 @@ def run_row(assignment):
         'inputs_unchanged':outcome.get('common_inputs_unchanged'),
         'scope':'Raw usage fields are reported separately; cached/reasoning counts are not added again to other token fields.'}
     score=read(root/'score.json')
+    row['original_scorer_outcome']=score
+    corrected=read(root/'score-corrected.json')
+    row['scoring_correction_applied']=corrected is not None
+    if corrected:score=corrected
     if score:
         row['claimed_execution_status']=score.get('claimed_execution_status')
         row['numerical']=score.get('numerical',{'status':score.get('status'),'error':score.get('error')})

@@ -1,0 +1,205 @@
+{
+  "run_id": "r03",
+  "criteria": "evals/research-v0.3/frozen/source/evals/research-v0.3/CRITERIA.md",
+  "scientific_execution_verified": true,
+  "completion_verified": false,
+  "evidence_score": 7,
+  "evidence_total": 8,
+  "evidence_items": [
+    {
+      "id": 1,
+      "score": 1,
+      "reason": "Question, reference identity/license, fixed model/optimizer and exact input partitions retained.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "protocol.json",
+          "sha256": "523f23f3751c979e8347e2fbd9c328b1cfa46928e8318b3c54dc280c190bf5c4"
+        },
+        {
+          "root": "candidate",
+          "path": "inputs/materials/SOURCES.md",
+          "sha256": "df4c3b6e39891b7b1925951c36606db2d34cf240696566199cce2d63ccf50fc4"
+        },
+        {
+          "root": "candidate",
+          "path": "inputs/materials/openai-grok-reference/LICENSE",
+          "sha256": "893951b3bf94db8df1b13e05da5cdeb499400960e4d44a3962a8b33ed0b4f28e"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "score": 1,
+      "reason": "Protocol/source hashes frozen before confirmation; seed 61 qualification excluded; all four paired seeds and the 100k horizon remain fixed.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "artifacts/protocol-freeze.json",
+          "sha256": "b37d38bb1f680db7496b5db980cdb92932339b8f44bdbabc3196bd4d6bfe8fa8"
+        },
+        {
+          "root": "candidate",
+          "path": "protocol.json",
+          "sha256": "523f23f3751c979e8347e2fbd9c328b1cfa46928e8318b3c54dc280c190bf5c4"
+        },
+        {
+          "root": "candidate",
+          "path": "study.py",
+          "sha256": "25b905b534adcfc99cd80b712a634b708e9ed4e16db08cfe3b11f70f5d5eb672"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "score": 1,
+      "reason": "All eight full trajectories completed with 1001 curve entries each; interrupted and failed qualifications retained; saved optimizer counters independently equal 100000.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "analysis/final-attempts.json",
+          "sha256": "3093b211f35bdf9ef6a9046565a97977e93fa00d7e980f0320c62d8d6e3d99a8"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/verification.json",
+          "sha256": "c000d576c8ee0158417552b4e472b60fab284741bcebdeef97d1171c025814ef"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/measurements.json",
+          "sha256": "d9170c75167579d69cec9a06cee6f0824e387d42650372edb996b8362b07b4a3"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "score": 1,
+      "reason": "All 40 numerical checks pass after a documented parser-only correction for the frozen inline-curve contract; independent t intervals, sign flips, censoring and checkpoint identities also pass.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "analysis/measurements.json",
+          "sha256": "d9170c75167579d69cec9a06cee6f0824e387d42650372edb996b8362b07b4a3"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/results.json",
+          "sha256": "6d92ea2cfe85c33325a6ab237b4aedc60ad35596963e353c130230220737df8b"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/verification.json",
+          "sha256": "c000d576c8ee0158417552b4e472b60fab284741bcebdeef97d1171c025814ef"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "score": 1,
+      "reason": "Uses four paired seeds, reports t assumptions and coarse exact p=0.125, keeps onset/lag null when censored, and treats no-grokking as a finite-horizon finding.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "REPORT.md",
+          "sha256": "ed41122ef6ee16b30c7ebb2001a5a46d0d4282edce3293c8fa63a8239d72a6cf"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/results.json",
+          "sha256": "6d92ea2cfe85c33325a6ab237b4aedc60ad35596963e353c130230220737df8b"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/sensitivity_summary.json",
+          "sha256": "47de416f991c68d32a971d679d52142933787df983f7fe006d8cd7b5240d50e6"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "score": 1,
+      "reason": "English report and visually inspected figures accurately show individual curves and scoped endpoint claims. Minor portability issue: one interruption link points to excluded .compute, but an identified permanent receipt copy is retained.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "REPORT.md",
+          "sha256": "ed41122ef6ee16b30c7ebb2001a5a46d0d4282edce3293c8fa63a8239d72a6cf"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/learning_curves.png",
+          "sha256": "5c7e3770c1eea9ea88648c8f961a74842929d456c61483197b9ebd46a6166d5f"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/receipts/d880d6f88a464b1e931723d2116e23d9-response.json",
+          "sha256": "1fde8c093ec58c3873cc7eb63d38a4e217b278362779a05eb51851a6b70e3b26"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "score": 1,
+      "reason": "Pinned wheelhouse/environment metadata and complete reproduction dispatcher retained; runner/analysis components and advertised raw-only command executed. Source/help checks support the full dispatcher, while the unperformed second full training replay is explicitly disclosed.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "REPRODUCE.md",
+          "sha256": "fbcce0240c7227f237b26e5a5f57b3a2be5102a442ddf042032f0e015540c15a"
+        },
+        {
+          "root": "candidate",
+          "path": "reproduce.py",
+          "sha256": "a031542b9d4eb00a51426eda8eff0d8474aec46a3c4bae837b130d54dbab421b"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/environment.json",
+          "sha256": "18365bd1529b49796e16bbedd6d121e07e9576827b3be969bd6237b3df143657"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/package-verification.json",
+          "sha256": "7678af908eb7423fac78e3385b6f1ee2d3a8bd298ca09b868f5d84364ed2663d"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "score": 0,
+      "reason": "Substantive findings and resolutions are present, but review.json does not identify an exact reviewed source/artifact revision. The separate manifest seals files, but does not explicitly bind this review to its material revision as required by item 8.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "review.json",
+          "sha256": "707545b6e0a73fd484d5daef17111a9c24d833ddac557c38d477ffdd923cee7d"
+        },
+        {
+          "root": "candidate",
+          "path": "artifact-manifest.json",
+          "sha256": "af65d446e2338eb0cc63ca80ecd9d2985e63547812cae107907b03dca87fc3ac"
+        }
+      ]
+    }
+  ],
+  "completion_limitation": "Required revision-bound review remains insufficiently explicit in the original package; preserve this outcome and any later repair separately.",
+  "critical_scientific_findings_unresolved": [],
+  "delivery_findings": [
+    {
+      "id": "R03-D1",
+      "severity": "required-evidence gap",
+      "finding": "Review lacks a named reviewed material revision."
+    },
+    {
+      "id": "R03-D2",
+      "severity": "minor portability issue",
+      "finding": "Report references transient .compute interruption receipt, although a permanent receipt copy is present."
+    }
+  ],
+  "coordinator_task_messages": 0,
+  "candidate_edits_by_controller": 0,
+  "scoring_correction": "Original unscorable receipt preserved; a one-line inline-curve loader correction reproduces the original frozen calculations exactly on equivalent existing curve-file data.",
+  "environment_limitation": "Frozen common broker MPS watermark defect forced CPU qualification; no resource ceiling changed.",
+  "scope": "Original candidate outcome only. Numerical and scientific execution are verified; full delivery completeness is not claimed. No second full training replay or independent peer review claim."
+}

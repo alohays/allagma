@@ -156,3 +156,30 @@ or archiving/restarting all 12 runs under a repaired freeze. Preserve the live
 run meanwhile. If no answer arrives, continue the originally authorized frozen
 comparison with explicit limitations, then repair/validate before release;
 never silently edit the frozen controls or claim corrected-path performance.
+
+## r03 terminal; r04 active
+
+r03 (plain modular addition, replicate 2) completed all eight 100,000-update CPU
+trajectories within its unchanged limits. Independent checks confirm 40/40
+endpoint/checkpoint checks, paired statistics, complete curves, censoring and
+optimizer step counts. Weight decay improved held-out accuracy, but no frozen
+grokking event occurred. Figures were visually inspected.
+
+The original frozen scorer misread the specified inline `curve` JSON list as a
+path. Keep its unscorable result. `score_curve_compat.py` changes that one loader
+expression only, with an exact diff/hash receipt and equivalence to the frozen
+calculations using matching existing curve files. Apply this format correction
+uniformly; it does not change the frozen scientific criteria or candidate data.
+
+The original r03 package receives 7/8 evidence items: its substantive review
+lacks a named reviewed material revision. Scientific execution is verified;
+complete delivery is not claimed. Do not repair that original comparison
+outcome in place. A later package revision must be separate. The interrupted
+receipt also has a minor transient-link issue, with a permanent copy retained.
+
+**Active run: r04, modular addition, Allagma, replicate 2. Exec session 55310.**
+Next is r05. Account usage before launch was 16% weekly and ordinary usage was
+allowed. Three runs are terminal; two original packages meet all frozen evidence
+items. The MPS cohort-choice question has not received a new direction; continue
+the already authorized freeze with the shared defect disclosed, then correct
+and validate the release separately unless the user instructs a restart.

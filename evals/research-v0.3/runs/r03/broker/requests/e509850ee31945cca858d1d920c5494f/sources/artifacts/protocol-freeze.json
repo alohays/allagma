@@ -1,0 +1,21 @@
+{
+  "frozen_at_utc": "2026-10-07T21:12:29.085566+00:00",
+  "confirmation_started": false,
+  "source_sha256": {
+    "protocol.json": "523f23f3751c979e8347e2fbd9c328b1cfa46928e8318b3c54dc280c190bf5c4",
+    "PROTOCOL.md": "f32a877244b69e285da4e47376cf780c127394a071e645866c0efea22348fccf",
+    "study.py": "25b905b534adcfc99cd80b712a634b708e9ed4e16db08cfe3b11f70f5d5eb672",
+    "study_pilot_v1.py": "a5c0605a4ba98047df82c9a4203000da01a4654f0730a64d0d113427bcc4ac6f",
+    "qualify_numerics.py": "d987a5b0d85b249e0f4acc622db690b5dd020221af94b678ee3dc8351711a52e",
+    "qualify_numerics_v1.py": "86ec17346a3f5aea8e337be62ca7f0b6939c5d3b71cf36817c2118bde1b5e112"
+  },
+  "pilot_seconds_per_update": 0.0014728327090851962,
+  "projected_core_training_seconds_800000": 1178.266167268157,
+  "budget_compute_seconds": 1800,
+  "budget_setup_seconds": 300,
+  "decision": "Proceed with full prescribed horizon on CPU; retain at least 120 seconds for analysis and verification.",
+  "qualification_paths": [
+    "artifacts/qualification.json",
+    "artifacts/numerical-qualification.json"
+  ]
+}

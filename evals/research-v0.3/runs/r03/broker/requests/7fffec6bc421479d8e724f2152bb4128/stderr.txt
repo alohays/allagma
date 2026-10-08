@@ -1,0 +1,22 @@
+OMP: Warning #179: Function Can't set size of /tmp file failed:
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r03/candidate/study.py", line 237, in <module>
+    main()
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r03/candidate/study.py", line 234, in main
+    run(args) if args.mode=='run' else qualify(args)
+                                       ^^^^^^^^^^^^^
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r03/candidate/study.py", line 192, in qualify
+    model=Net('cpu',implementation).to(device)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r03/candidate/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1388, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r03/candidate/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 933, in _apply
+    module._apply(fn)
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r03/candidate/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 966, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r03/candidate/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1374, in convert
+    return t.to(
+           ^^^^^
+RuntimeError: invalid low watermark ratio 1.4

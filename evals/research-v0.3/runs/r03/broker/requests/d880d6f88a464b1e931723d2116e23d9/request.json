@@ -1,0 +1,27 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "study.py",
+    "run",
+    "--seed",
+    "61",
+    "--wd",
+    "1",
+    "--device",
+    "cpu",
+    "--implementation",
+    "dense",
+    "--target",
+    "10000",
+    "--seconds",
+    "60",
+    "--label",
+    "pilot-first-interrupted"
+  ],
+  "attempt": true,
+  "category": "compute",
+  "cwd": ".",
+  "label": "pilot-first-interrupted",
+  "request_id": "d880d6f88a464b1e931723d2116e23d9",
+  "timeout_seconds": 90.0
+}

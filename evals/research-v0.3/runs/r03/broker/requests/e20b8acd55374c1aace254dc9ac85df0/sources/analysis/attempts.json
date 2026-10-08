@@ -1,0 +1,778 @@
+[
+  {
+    "request": {
+      "request_id": "3ce643f732fb4801813dfb22155043d0",
+      "argv": [
+        "python3",
+        "-m",
+        "venv",
+        ".venv"
+      ],
+      "cwd": ".",
+      "category": "setup",
+      "timeout_seconds": 70.0,
+      "attempt": false,
+      "label": "isolated-environment"
+    },
+    "response": {
+      "injected_interruption": false,
+      "isolation_sha256": "97c0efa575bd1b4cfa1ae2ed05d8891683171e10f608bb212119a7cf6c69654e",
+      "reconciled_after_controller_restart": false,
+      "request_id": "3ce643f732fb4801813dfb22155043d0",
+      "result": {
+        "charge_basis": "measured supervisor wall time",
+        "charged_seconds": 1.4815191249363124,
+        "ended_at": "2026-10-07T21:06:04.417400+00:00",
+        "exit_code": 0,
+        "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r03/resources/jobs/0001-isolated-environment",
+        "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+        "peak_rss_bytes": 150110208,
+        "peak_storage_bytes": 203846607,
+        "status": "completed"
+      }
+    },
+    "request_path": ".compute/requests/3ce643f732fb4801813dfb22155043d0.json",
+    "response_path": ".compute/responses/3ce643f732fb4801813dfb22155043d0.json",
+    "stdout_path": ".compute/responses/3ce643f732fb4801813dfb22155043d0-stdout.txt",
+    "stderr_path": ".compute/responses/3ce643f732fb4801813dfb22155043d0-stderr.txt"
+  },
+  {
+    "request": {
+      "request_id": "adf908529561444b89f15aa2180da910",
+      "argv": [
+        ".venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "--no-index",
+        "--find-links",
+        "inputs/materials/wheels",
+        "numpy",
+        "torch",
+        "scipy",
+        "matplotlib"
+      ],
+      "cwd": ".",
+      "category": "setup",
+      "timeout_seconds": 150.0,
+      "attempt": false,
+      "label": "offline-packages"
+    },
+    "response": {
+      "injected_interruption": false,
+      "isolation_sha256": "97c0efa575bd1b4cfa1ae2ed05d8891683171e10f608bb212119a7cf6c69654e",
+      "reconciled_after_controller_restart": false,
+      "request_id": "adf908529561444b89f15aa2180da910",
+      "result": {
+        "charge_basis": "measured supervisor wall time",
+        "charged_seconds": 12.821868916973472,
+        "ended_at": "2026-10-07T21:06:42.321183+00:00",
+        "exit_code": 0,
+        "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r03/resources/jobs/0002-offline-packages",
+        "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+        "peak_rss_bytes": 281722880,
+        "peak_storage_bytes": 1094851481,
+        "status": "completed"
+      }
+    },
+    "request_path": ".compute/requests/adf908529561444b89f15aa2180da910.json",
+    "response_path": ".compute/responses/adf908529561444b89f15aa2180da910.json",
+    "stdout_path": ".compute/responses/adf908529561444b89f15aa2180da910-stdout.txt",
+    "stderr_path": ".compute/responses/adf908529561444b89f15aa2180da910-stderr.txt"
+  },
+  {
+    "request": {
+      "request_id": "d880d6f88a464b1e931723d2116e23d9",
+      "argv": [
+        ".venv/bin/python",
+        "study.py",
+        "run",
+        "--seed",
+        "61",
+        "--wd",
+        "1",
+        "--device",
+        "cpu",
+        "--implementation",
+        "dense",
+        "--target",
+        "10000",
+        "--seconds",
+        "60",
+        "--label",
+        "pilot-first-interrupted"
+      ],
+      "cwd": ".",
+      "category": "compute",
+      "timeout_seconds": 90.0,
+      "attempt": true,
+      "label": "pilot-first-interrupted"
+    },
+    "response": {
+      "injected_interruption": true,
+      "isolation_sha256": "97c0efa575bd1b4cfa1ae2ed05d8891683171e10f608bb212119a7cf6c69654e",
+      "reconciled_after_controller_restart": false,
+      "request_id": "d880d6f88a464b1e931723d2116e23d9",
+      "result": {
+        "charge_basis": "measured supervisor wall time",
+        "charged_seconds": 1.470634917030111,
+        "ended_at": "2026-10-07T21:08:26.930244+00:00",
+        "exit_code": -15,
+        "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r03/resources/jobs/0003-pilot-first-interrupted",
+        "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+        "peak_rss_bytes": 33308672,
+        "peak_storage_bytes": 1094868252,
+        "status": "timed_out"
+      }
+    },
+    "request_path": ".compute/requests/d880d6f88a464b1e931723d2116e23d9.json",
+    "response_path": ".compute/responses/d880d6f88a464b1e931723d2116e23d9.json",
+    "stdout_path": ".compute/responses/d880d6f88a464b1e931723d2116e23d9-stdout.txt",
+    "stderr_path": ".compute/responses/d880d6f88a464b1e931723d2116e23d9-stderr.txt"
+  },
+  {
+    "request": {
+      "request_id": "af9d350ae61c484cb60f5df6ed749438",
+      "argv": [
+        ".venv/bin/python",
+        "study.py",
+        "run",
+        "--seed",
+        "61",
+        "--wd",
+        "1",
+        "--device",
+        "cpu",
+        "--implementation",
+        "dense",
+        "--target",
+        "1000",
+        "--seconds",
+        "45",
+        "--label",
+        "pilot-recovery-and-checkpoint"
+      ],
+      "cwd": ".",
+      "category": "compute",
+      "timeout_seconds": 100.0,
+      "attempt": false,
+      "label": "pilot-recovery-and-checkpoint"
+    },
+    "response": {
+      "injected_interruption": false,
+      "isolation_sha256": "97c0efa575bd1b4cfa1ae2ed05d8891683171e10f608bb212119a7cf6c69654e",
+      "reconciled_after_controller_restart": false,
+      "request_id": "af9d350ae61c484cb60f5df6ed749438",
+      "result": {
+        "charge_basis": "measured supervisor wall time",
+        "charged_seconds": 7.636314291041344,
+        "ended_at": "2026-10-07T21:08:51.254348+00:00",
+        "exit_code": 0,
+        "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r03/resources/jobs/0004-pilot-recovery-and-checkpoint",
+        "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+        "peak_rss_bytes": 404979712,
+        "peak_storage_bytes": 1099956216,
+        "status": "completed"
+      }
+    },
+    "request_path": ".compute/requests/af9d350ae61c484cb60f5df6ed749438.json",
+    "response_path": ".compute/responses/af9d350ae61c484cb60f5df6ed749438.json",
+    "stdout_path": ".compute/responses/af9d350ae61c484cb60f5df6ed749438-stdout.txt",
+    "stderr_path": ".compute/responses/af9d350ae61c484cb60f5df6ed749438-stderr.txt"
+  },
+  {
+    "request": {
+      "request_id": "7fffec6bc421479d8e724f2152bb4128",
+      "argv": [
+        ".venv/bin/python",
+        "study.py",
+        "qualify",
+        "--benchmark-steps",
+        "500"
+      ],
+      "cwd": ".",
+      "category": "compute",
+      "timeout_seconds": 75.0,
+      "attempt": false,
+      "label": "pilot-correctness-and-throughput"
+    },
+    "response": {
+      "injected_interruption": false,
+      "isolation_sha256": "97c0efa575bd1b4cfa1ae2ed05d8891683171e10f608bb212119a7cf6c69654e",
+      "reconciled_after_controller_restart": false,
+      "request_id": "7fffec6bc421479d8e724f2152bb4128",
+      "result": {
+        "charge_basis": "measured supervisor wall time",
+        "charged_seconds": 3.186696416931227,
+        "ended_at": "2026-10-07T21:09:03.457139+00:00",
+        "exit_code": 1,
+        "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r03/resources/jobs/0005-pilot-correctness-and-throughput",
+        "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+        "peak_rss_bytes": 386400256,
+        "peak_storage_bytes": 1099957760,
+        "status": "failed"
+      }
+    },
+    "request_path": ".compute/requests/7fffec6bc421479d8e724f2152bb4128.json",
+    "response_path": ".compute/responses/7fffec6bc421479d8e724f2152bb4128.json",
+    "stdout_path": ".compute/responses/7fffec6bc421479d8e724f2152bb4128-stdout.txt",
+    "stderr_path": ".compute/responses/7fffec6bc421479d8e724f2152bb4128-stderr.txt"
+  },
+  {
+    "request": {
+      "request_id": "eb0cbd29b1f04f56af151e9a22bd06cb",
+      "argv": [
+        ".venv/bin/python",
+        "study.py",
+        "qualify",
+        "--benchmark-steps",
+        "1000"
+      ],
+      "cwd": ".",
+      "category": "compute",
+      "timeout_seconds": 30.0,
+      "attempt": false,
+      "label": "cpu-qualification-recovery"
+    },
+    "response": {
+      "injected_interruption": false,
+      "isolation_sha256": "97c0efa575bd1b4cfa1ae2ed05d8891683171e10f608bb212119a7cf6c69654e",
+      "reconciled_after_controller_restart": false,
+      "request_id": "eb0cbd29b1f04f56af151e9a22bd06cb",
+      "result": {
+        "charge_basis": "measured supervisor wall time",
+        "charged_seconds": 4.914366250159219,
+        "ended_at": "2026-10-07T21:10:58.721367+00:00",
+        "exit_code": 0,
+        "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r03/resources/jobs/0006-cpu-qualification-recovery",
+        "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+        "peak_rss_bytes": 395182080,
+        "peak_storage_bytes": 1099983480,
+        "status": "completed"
+      }
+    },
+    "request_path": ".compute/requests/eb0cbd29b1f04f56af151e9a22bd06cb.json",
+    "response_path": ".compute/responses/eb0cbd29b1f04f56af151e9a22bd06cb.json",
+    "stdout_path": ".compute/responses/eb0cbd29b1f04f56af151e9a22bd06cb-stdout.txt",
+    "stderr_path": ".compute/responses/eb0cbd29b1f04f56af151e9a22bd06cb-stderr.txt"
+  },
+  {
+    "request": {
+      "request_id": "2f518ef9839e4e05a91fb5296a3b58b1",
+      "argv": [
+        ".venv/bin/python",
+        "qualify_numerics.py"
+      ],
+      "cwd": ".",
+      "category": "compute",
+      "timeout_seconds": 30.0,
+      "attempt": false,
+      "label": "independent-numerics-and-resume"
+    },
+    "response": {
+      "injected_interruption": false,
+      "isolation_sha256": "97c0efa575bd1b4cfa1ae2ed05d8891683171e10f608bb212119a7cf6c69654e",
+      "reconciled_after_controller_restart": false,
+      "request_id": "2f518ef9839e4e05a91fb5296a3b58b1",
+      "result": {
+        "charge_basis": "measured supervisor wall time",
+        "charged_seconds": 1.4823486658278853,
+        "ended_at": "2026-10-07T21:11:12.989285+00:00",
+        "exit_code": 1,
+        "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r03/resources/jobs/0007-independent-numerics-and-resume",
+        "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+        "peak_rss_bytes": 264749056,
+        "peak_storage_bytes": 1100009837,
+        "status": "failed"
+      }
+    },
+    "request_path": ".compute/requests/2f518ef9839e4e05a91fb5296a3b58b1.json",
+    "response_path": ".compute/responses/2f518ef9839e4e05a91fb5296a3b58b1.json",
+    "stdout_path": ".compute/responses/2f518ef9839e4e05a91fb5296a3b58b1-stdout.txt",
+    "stderr_path": ".compute/responses/2f518ef9839e4e05a91fb5296a3b58b1-stderr.txt"
+  },
+  {
+    "request": {
+      "request_id": "05531cb9811a42068bf3409ea29e3b78",
+      "argv": [
+        ".venv/bin/python",
+        "qualify_numerics.py"
+      ],
+      "cwd": ".",
+      "category": "compute",
+      "timeout_seconds": 30.0,
+      "attempt": false,
+      "label": "numerics-isolated-adam-and-resume"
+    },
+    "response": {
+      "injected_interruption": false,
+      "isolation_sha256": "97c0efa575bd1b4cfa1ae2ed05d8891683171e10f608bb212119a7cf6c69654e",
+      "reconciled_after_controller_restart": false,
+      "request_id": "05531cb9811a42068bf3409ea29e3b78",
+      "result": {
+        "charge_basis": "measured supervisor wall time",
+        "charged_seconds": 2.214818499982357,
+        "ended_at": "2026-10-07T21:12:22.286451+00:00",
+        "exit_code": 0,
+        "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r03/resources/jobs/0008-numerics-isolated-adam-and-resume",
+        "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+        "peak_rss_bytes": 323485696,
+        "peak_storage_bytes": 1100473846,
+        "status": "completed"
+      }
+    },
+    "request_path": ".compute/requests/05531cb9811a42068bf3409ea29e3b78.json",
+    "response_path": ".compute/responses/05531cb9811a42068bf3409ea29e3b78.json",
+    "stdout_path": ".compute/responses/05531cb9811a42068bf3409ea29e3b78-stdout.txt",
+    "stderr_path": ".compute/responses/05531cb9811a42068bf3409ea29e3b78-stderr.txt"
+  },
+  {
+    "request": {
+      "request_id": "3fbbd86f479c44159bfaf47206610f94",
+      "argv": [
+        ".venv/bin/python",
+        "freeze.py"
+      ],
+      "cwd": ".",
+      "category": "compute",
+      "timeout_seconds": 10.0,
+      "attempt": false,
+      "label": "protocol-freeze-before-confirmation"
+    },
+    "response": {
+      "injected_interruption": false,
+      "isolation_sha256": "97c0efa575bd1b4cfa1ae2ed05d8891683171e10f608bb212119a7cf6c69654e",
+      "reconciled_after_controller_restart": false,
+      "request_id": "3fbbd86f479c44159bfaf47206610f94",
+      "result": {
+        "charge_basis": "measured supervisor wall time",
+        "charged_seconds": 0.32268033316358924,
+        "ended_at": "2026-10-07T21:12:29.374034+00:00",
+        "exit_code": 0,
+        "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r03/resources/jobs/0009-protocol-freeze-before-confirmation",
+        "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+        "peak_rss_bytes": 4063232,
+        "peak_storage_bytes": 1100476215,
+        "status": "completed"
+      }
+    },
+    "request_path": ".compute/requests/3fbbd86f479c44159bfaf47206610f94.json",
+    "response_path": ".compute/responses/3fbbd86f479c44159bfaf47206610f94.json",
+    "stdout_path": ".compute/responses/3fbbd86f479c44159bfaf47206610f94-stdout.txt",
+    "stderr_path": ".compute/responses/3fbbd86f479c44159bfaf47206610f94-stderr.txt"
+  },
+  {
+    "request": {
+      "request_id": "f8c79e42081141bc86cef5fd5261246e",
+      "argv": [
+        ".venv/bin/python",
+        "study.py",
+        "run",
+        "--seed",
+        "1001",
+        "--wd",
+        "0",
+        "--device",
+        "cpu",
+        "--implementation",
+        "dense",
+        "--target",
+        "100000",
+        "--seconds",
+        "155",
+        "--label",
+        "confirmation-1001-wd0"
+      ],
+      "cwd": ".",
+      "category": "compute",
+      "timeout_seconds": 175.0,
+      "attempt": false,
+      "label": "confirmation-1001-wd0"
+    },
+    "response": {
+      "injected_interruption": false,
+      "isolation_sha256": "97c0efa575bd1b4cfa1ae2ed05d8891683171e10f608bb212119a7cf6c69654e",
+      "reconciled_after_controller_restart": false,
+      "request_id": "f8c79e42081141bc86cef5fd5261246e",
+      "result": {
+        "charge_basis": "measured supervisor wall time",
+        "charged_seconds": 144.58373616589233,
+        "ended_at": "2026-10-07T21:14:58.004640+00:00",
+        "exit_code": 0,
+        "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r03/resources/jobs/0010-confirmation-1001-wd0",
+        "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+        "peak_rss_bytes": 502284288,
+        "peak_storage_bytes": 1105863927,
+        "status": "completed"
+      }
+    },
+    "request_path": ".compute/requests/f8c79e42081141bc86cef5fd5261246e.json",
+    "response_path": ".compute/responses/f8c79e42081141bc86cef5fd5261246e.json",
+    "stdout_path": ".compute/responses/f8c79e42081141bc86cef5fd5261246e-stdout.txt",
+    "stderr_path": ".compute/responses/f8c79e42081141bc86cef5fd5261246e-stderr.txt"
+  },
+  {
+    "request": {
+      "request_id": "1825444caefd4feab189e000e47bacab",
+      "argv": [
+        ".venv/bin/python",
+        "study.py",
+        "run",
+        "--seed",
+        "1001",
+        "--wd",
+        "1",
+        "--device",
+        "cpu",
+        "--implementation",
+        "dense",
+        "--target",
+        "100000",
+        "--seconds",
+        "155",
+        "--output",
+        "artifacts",
+        "--label",
+        "confirmation-1001-wd1-dispatch1"
+      ],
+      "cwd": ".",
+      "category": "compute",
+      "timeout_seconds": 175.0,
+      "attempt": false,
+      "label": "confirmation-1001-wd1-dispatch1"
+    },
+    "response": {
+      "injected_interruption": false,
+      "isolation_sha256": "97c0efa575bd1b4cfa1ae2ed05d8891683171e10f608bb212119a7cf6c69654e",
+      "reconciled_after_controller_restart": false,
+      "request_id": "1825444caefd4feab189e000e47bacab",
+      "result": {
+        "charge_basis": "measured supervisor wall time",
+        "charged_seconds": 144.6899549169466,
+        "ended_at": "2026-10-07T21:17:32.019770+00:00",
+        "exit_code": 0,
+        "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r03/resources/jobs/0011-confirmation-1001-wd1-dispatch1",
+        "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+        "peak_rss_bytes": 521125888,
+        "peak_storage_bytes": 1111284459,
+        "status": "completed"
+      }
+    },
+    "request_path": ".compute/requests/1825444caefd4feab189e000e47bacab.json",
+    "response_path": ".compute/responses/1825444caefd4feab189e000e47bacab.json",
+    "stdout_path": ".compute/responses/1825444caefd4feab189e000e47bacab-stdout.txt",
+    "stderr_path": ".compute/responses/1825444caefd4feab189e000e47bacab-stderr.txt"
+  },
+  {
+    "request": {
+      "request_id": "d4bfa5aba9a742abaa06d32e536f73b9",
+      "argv": [
+        ".venv/bin/python",
+        "study.py",
+        "run",
+        "--seed",
+        "1002",
+        "--wd",
+        "0",
+        "--device",
+        "cpu",
+        "--implementation",
+        "dense",
+        "--target",
+        "100000",
+        "--seconds",
+        "155",
+        "--output",
+        "artifacts",
+        "--label",
+        "confirmation-1002-wd0-dispatch2"
+      ],
+      "cwd": ".",
+      "category": "compute",
+      "timeout_seconds": 175.0,
+      "attempt": false,
+      "label": "confirmation-1002-wd0-dispatch2"
+    },
+    "response": {
+      "injected_interruption": false,
+      "isolation_sha256": "97c0efa575bd1b4cfa1ae2ed05d8891683171e10f608bb212119a7cf6c69654e",
+      "reconciled_after_controller_restart": false,
+      "request_id": "d4bfa5aba9a742abaa06d32e536f73b9",
+      "result": {
+        "charge_basis": "measured supervisor wall time",
+        "charged_seconds": 145.1703440840356,
+        "ended_at": "2026-10-07T21:19:58.069946+00:00",
+        "exit_code": 0,
+        "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r03/resources/jobs/0012-confirmation-1002-wd0-dispatch2",
+        "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+        "peak_rss_bytes": 520568832,
+        "peak_storage_bytes": 1116708635,
+        "status": "completed"
+      }
+    },
+    "request_path": ".compute/requests/d4bfa5aba9a742abaa06d32e536f73b9.json",
+    "response_path": ".compute/responses/d4bfa5aba9a742abaa06d32e536f73b9.json",
+    "stdout_path": ".compute/responses/d4bfa5aba9a742abaa06d32e536f73b9-stdout.txt",
+    "stderr_path": ".compute/responses/d4bfa5aba9a742abaa06d32e536f73b9-stderr.txt"
+  },
+  {
+    "request": {
+      "request_id": "4b40867495b2488394cfcb33844af61a",
+      "argv": [
+        ".venv/bin/python",
+        "study.py",
+        "run",
+        "--seed",
+        "1002",
+        "--wd",
+        "1",
+        "--device",
+        "cpu",
+        "--implementation",
+        "dense",
+        "--target",
+        "100000",
+        "--seconds",
+        "155",
+        "--output",
+        "artifacts",
+        "--label",
+        "confirmation-1002-wd1-dispatch3"
+      ],
+      "cwd": ".",
+      "category": "compute",
+      "timeout_seconds": 175.0,
+      "attempt": false,
+      "label": "confirmation-1002-wd1-dispatch3"
+    },
+    "response": {
+      "injected_interruption": false,
+      "isolation_sha256": "97c0efa575bd1b4cfa1ae2ed05d8891683171e10f608bb212119a7cf6c69654e",
+      "reconciled_after_controller_restart": false,
+      "request_id": "4b40867495b2488394cfcb33844af61a",
+      "result": {
+        "charge_basis": "measured supervisor wall time",
+        "charged_seconds": 144.60071233310737,
+        "ended_at": "2026-10-07T21:22:23.572327+00:00",
+        "exit_code": 0,
+        "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r03/resources/jobs/0013-confirmation-1002-wd1-dispatch3",
+        "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+        "peak_rss_bytes": 522665984,
+        "peak_storage_bytes": 1122120718,
+        "status": "completed"
+      }
+    },
+    "request_path": ".compute/requests/4b40867495b2488394cfcb33844af61a.json",
+    "response_path": ".compute/responses/4b40867495b2488394cfcb33844af61a.json",
+    "stdout_path": ".compute/responses/4b40867495b2488394cfcb33844af61a-stdout.txt",
+    "stderr_path": ".compute/responses/4b40867495b2488394cfcb33844af61a-stderr.txt"
+  },
+  {
+    "request": {
+      "request_id": "7c075c59a7f84e1b899147020f9b61c6",
+      "argv": [
+        ".venv/bin/python",
+        "study.py",
+        "run",
+        "--seed",
+        "1003",
+        "--wd",
+        "0",
+        "--device",
+        "cpu",
+        "--implementation",
+        "dense",
+        "--target",
+        "100000",
+        "--seconds",
+        "155",
+        "--output",
+        "artifacts",
+        "--label",
+        "confirmation-1003-wd0-dispatch4"
+      ],
+      "cwd": ".",
+      "category": "compute",
+      "timeout_seconds": 175.0,
+      "attempt": false,
+      "label": "confirmation-1003-wd0-dispatch4"
+    },
+    "response": {
+      "injected_interruption": false,
+      "isolation_sha256": "97c0efa575bd1b4cfa1ae2ed05d8891683171e10f608bb212119a7cf6c69654e",
+      "reconciled_after_controller_restart": false,
+      "request_id": "7c075c59a7f84e1b899147020f9b61c6",
+      "result": {
+        "charge_basis": "measured supervisor wall time",
+        "charged_seconds": 144.44470166694373,
+        "ended_at": "2026-10-07T21:24:48.928770+00:00",
+        "exit_code": 0,
+        "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r03/resources/jobs/0014-confirmation-1003-wd0-dispatch4",
+        "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+        "peak_rss_bytes": 509231104,
+        "peak_storage_bytes": 1127531652,
+        "status": "completed"
+      }
+    },
+    "request_path": ".compute/requests/7c075c59a7f84e1b899147020f9b61c6.json",
+    "response_path": ".compute/responses/7c075c59a7f84e1b899147020f9b61c6.json",
+    "stdout_path": ".compute/responses/7c075c59a7f84e1b899147020f9b61c6-stdout.txt",
+    "stderr_path": ".compute/responses/7c075c59a7f84e1b899147020f9b61c6-stderr.txt"
+  },
+  {
+    "request": {
+      "request_id": "cdbca9a1cad14c4dafb55a48b0dbc934",
+      "argv": [
+        ".venv/bin/python",
+        "study.py",
+        "run",
+        "--seed",
+        "1003",
+        "--wd",
+        "1",
+        "--device",
+        "cpu",
+        "--implementation",
+        "dense",
+        "--target",
+        "100000",
+        "--seconds",
+        "155",
+        "--output",
+        "artifacts",
+        "--label",
+        "confirmation-1003-wd1-dispatch5"
+      ],
+      "cwd": ".",
+      "category": "compute",
+      "timeout_seconds": 175.0,
+      "attempt": false,
+      "label": "confirmation-1003-wd1-dispatch5"
+    },
+    "response": {
+      "injected_interruption": false,
+      "isolation_sha256": "97c0efa575bd1b4cfa1ae2ed05d8891683171e10f608bb212119a7cf6c69654e",
+      "reconciled_after_controller_restart": false,
+      "request_id": "cdbca9a1cad14c4dafb55a48b0dbc934",
+      "result": {
+        "charge_basis": "measured supervisor wall time",
+        "charged_seconds": 146.90614933287725,
+        "ended_at": "2026-10-07T21:27:16.737445+00:00",
+        "exit_code": 0,
+        "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r03/resources/jobs/0015-confirmation-1003-wd1-dispatch5",
+        "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+        "peak_rss_bytes": 500629504,
+        "peak_storage_bytes": 1128767789,
+        "status": "completed"
+      }
+    },
+    "request_path": ".compute/requests/cdbca9a1cad14c4dafb55a48b0dbc934.json",
+    "response_path": ".compute/responses/cdbca9a1cad14c4dafb55a48b0dbc934.json",
+    "stdout_path": ".compute/responses/cdbca9a1cad14c4dafb55a48b0dbc934-stdout.txt",
+    "stderr_path": ".compute/responses/cdbca9a1cad14c4dafb55a48b0dbc934-stderr.txt"
+  },
+  {
+    "request": {
+      "request_id": "e509850ee31945cca858d1d920c5494f",
+      "argv": [
+        ".venv/bin/python",
+        "study.py",
+        "run",
+        "--seed",
+        "1004",
+        "--wd",
+        "0",
+        "--device",
+        "cpu",
+        "--implementation",
+        "dense",
+        "--target",
+        "100000",
+        "--seconds",
+        "155",
+        "--output",
+        "artifacts",
+        "--label",
+        "confirmation-1004-wd0-dispatch6"
+      ],
+      "cwd": ".",
+      "category": "compute",
+      "timeout_seconds": 175.0,
+      "attempt": false,
+      "label": "confirmation-1004-wd0-dispatch6"
+    },
+    "response": {
+      "injected_interruption": false,
+      "isolation_sha256": "97c0efa575bd1b4cfa1ae2ed05d8891683171e10f608bb212119a7cf6c69654e",
+      "reconciled_after_controller_restart": false,
+      "request_id": "e509850ee31945cca858d1d920c5494f",
+      "result": {
+        "charge_basis": "measured supervisor wall time",
+        "charged_seconds": 145.7680939580314,
+        "ended_at": "2026-10-07T21:29:43.323834+00:00",
+        "exit_code": 0,
+        "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r03/resources/jobs/0016-confirmation-1004-wd0-dispatch6",
+        "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+        "peak_rss_bytes": 502677504,
+        "peak_storage_bytes": 1138364674,
+        "status": "completed"
+      }
+    },
+    "request_path": ".compute/requests/e509850ee31945cca858d1d920c5494f.json",
+    "response_path": ".compute/responses/e509850ee31945cca858d1d920c5494f.json",
+    "stdout_path": ".compute/responses/e509850ee31945cca858d1d920c5494f-stdout.txt",
+    "stderr_path": ".compute/responses/e509850ee31945cca858d1d920c5494f-stderr.txt"
+  },
+  {
+    "request": {
+      "request_id": "b19226bb06b6442baa0891a7a46b1763",
+      "argv": [
+        ".venv/bin/python",
+        "study.py",
+        "run",
+        "--seed",
+        "1004",
+        "--wd",
+        "1",
+        "--device",
+        "cpu",
+        "--implementation",
+        "dense",
+        "--target",
+        "100000",
+        "--seconds",
+        "155",
+        "--output",
+        "artifacts",
+        "--label",
+        "confirmation-1004-wd1-dispatch7"
+      ],
+      "cwd": ".",
+      "category": "compute",
+      "timeout_seconds": 175.0,
+      "attempt": false,
+      "label": "confirmation-1004-wd1-dispatch7"
+    },
+    "response": {
+      "injected_interruption": false,
+      "isolation_sha256": "97c0efa575bd1b4cfa1ae2ed05d8891683171e10f608bb212119a7cf6c69654e",
+      "reconciled_after_controller_restart": false,
+      "request_id": "b19226bb06b6442baa0891a7a46b1763",
+      "result": {
+        "charge_basis": "measured supervisor wall time",
+        "charged_seconds": 145.12809845805168,
+        "ended_at": "2026-10-07T21:32:09.345941+00:00",
+        "exit_code": 0,
+        "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r03/resources/jobs/0017-confirmation-1004-wd1-dispatch7",
+        "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+        "peak_rss_bytes": 497123328,
+        "peak_storage_bytes": 1143775664,
+        "status": "completed"
+      }
+    },
+    "request_path": ".compute/requests/b19226bb06b6442baa0891a7a46b1763.json",
+    "response_path": ".compute/responses/b19226bb06b6442baa0891a7a46b1763.json",
+    "stdout_path": ".compute/responses/b19226bb06b6442baa0891a7a46b1763-stdout.txt",
+    "stderr_path": ".compute/responses/b19226bb06b6442baa0891a7a46b1763-stderr.txt"
+  }
+]
