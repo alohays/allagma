@@ -23,7 +23,7 @@ const tabs = ['Brief', 'Results', 'Claims', 'Report'];
     <p class="artifact-type">outputs/summary.json + paired-differences.svg</p>
     <h2>An average effect, with individual counterexamples.</h2>
     <div class="result-stats"><div><strong>+{summary.difference.toFixed(5)}</strong><span>mean paired MSE difference</span></div><div><strong>{summary.replicates}</strong><span>independent confirmation seeds</span></div></div>
-    <img src={`${base}toy-paired-differences.svg`} alt="Each dot is one confirmation seed's squared-error difference. The mean is positive, while four seeds lie below zero." width="760" height="380" loading="lazy" />
+    <img src={`${base}toy-paired-differences.svg`} alt="Each dot is one confirmation seed's squared-error difference. The mean is positive. Three seeds have negative differences and one is tied at zero." width="760" height="380" loading="lazy" />
     <p>Approximate 95% interval: [{summary.ci95_normal.map(x => x.toFixed(5)).join(', ')}]. Mean ±1.96 standard errors across seeds; not an exact small-sample guarantee.</p>
     <a class="artifact-source" href={`${base}toy-summary.json`}>Read the exact summary JSON ↗</a>
   </section>

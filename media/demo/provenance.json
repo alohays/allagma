@@ -1,12 +1,12 @@
 {
   "format": "allagma-video-render-v1",
   "duration_seconds": 100.433333,
-  "bytes": 2875316,
-  "video_sha256": "a8ebf24f5786407bb210944cd21c9ffa46f24690987f23869a3c9cfed8e08254",
+  "bytes": 2895552,
+  "video_sha256": "1c69da3505a15cfe490d346c81f50b0e0339478865d6259416a20b44c6462a9e",
   "raw_video_sha256": "c8cc4ddf892a04d7938b5037d304854bff230d37a2f8518e4fb6adbc82f8bbee",
   "capture_timeline_sha256": "25d6cbf92d6a36be71050e6fab0969d7c120ad7ecc9ba63ec4ee0b669b9dea5c",
-  "script_sha256": "4c6411ce662ca8b1b3c75dc8e3f10cc752889a96d12a650d8972b79c50b3cfc3",
-  "renderer_sha256": "b6484ad5c21c9d81ad218b84695b2e2bb9677a258a911e159df02eff31853a41",
+  "script_sha256": "db91c299417e522b85c6c6331e7635538b65f0665fbd8256bbed1015cd158766",
+  "renderer_sha256": "4f383b2f5bb87d24bff0ed7bce5739d5e4c9271f47fae47916616f9d44a8f4a6",
   "scope": "Continuous capture of the real offline CLI through the supplied recording workbench. Final chapter shows explicitly labeled retained native EMA results. No accelerated computation or simulated model reasoning.",
   "voice": "Samantha",
   "voice_adjustments": [
@@ -24,8 +24,8 @@
     },
     {
       "scene": "results",
-      "original_seconds": 12.209387000000001,
-      "narration_tempo": 1.0,
+      "original_seconds": 13.637415,
+      "narration_tempo": 1.0214707658441007,
       "video_tempo": 1.0
     },
     {
@@ -54,12 +54,18 @@
     }
   ],
   "software": "Chromium/Playwright actual browser capture, Allagma CLI, macOS say, FFmpeg H.264/AAC",
+  "narration_editing": "Current narration script applied to the original continuous footage and recorded scene times; footage is not accelerated or replaced.",
   "publication": "prepared locally, not a public upload",
   "public_preview": {
     "capture-state.json": {
       "source_sha256": "62f234c61b1e234c6ac26650df5ff0fe951bf23a1697e87c0318aafa0d77edd1",
       "sha256": "78c2ab41763fcd485c059fe06efe6661fb22524dc08a904d6c43ab142eb2377c",
-      "transformation": "Omit the local execution-directory field. Preserve scientific values, attempts, claims, audits and command-status summaries. Original state retained in the capture directory."
+      "transformation": "Omit local execution-directory field; retain all scientific values and operation outcomes."
+    },
+    "capture-timeline.json": {
+      "source_sha256": "25d6cbf92d6a36be71050e6fab0969d7c120ad7ecc9ba63ec4ee0b669b9dea5c",
+      "sha256": "e4aa31aae5aa19c549897fb550535d1cf243769da988f43c742e35246b7c9511",
+      "transformation": "Retain observed timings/source hashes; omit draft narration and caption text superseded during postproduction."
     }
   }
 }

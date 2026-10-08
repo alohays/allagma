@@ -65,6 +65,10 @@ capture directory; do not edit them to remove local metadata.
 
 The current film is continuous, with no accelerated computation. Only synthetic
 narration tempo is adjusted to fit each actual scene; those factors are recorded.
+Narration text can be edited without replacing footage: rendering reads the
+current `scenes.json` against the frozen observed scene times. Public timeline
+previews omit superseded draft narration; the original capture plan remains in
+the capture directory. Final speech and captions are recorded in the transcript.
 If future editing removes waits or speeds up footage, label that explicitly in
 the video, transcript and manifest. Do not manufacture terminal output, a model
 thought process, or successful results.

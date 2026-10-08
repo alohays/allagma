@@ -16,58 +16,45 @@
     {
       "id": "brief",
       "seconds": 12,
-      "caption": "Start with a question. Keep a record someone else can check.",
-      "narration": "A coding agent can write an experiment. Allagma gives it a research workflow that leaves a checkable record. Start with a small question: does adding a bias increase squared error?",
       "start": 0.07163691700000004,
       "end": 12.073499917000001
     },
     {
       "id": "execute",
       "seconds": 20,
-      "caption": "Actual offline execution. Failures and interruptions stay in the record.",
-      "narration": "This button runs the actual offline example on this machine. Two pilot controls qualify the runner, followed by twenty-four new confirmation seeds. A failure and an interruption are deliberate. Their retries get new identities, and every attempt stays in the record.",
       "start": 12.172901083000001,
       "end": 32.175364458
     },
     {
       "id": "results",
       "seconds": 14,
-      "caption": "A positive average does not mean every seed agrees.",
-      "narration": "The generated figure shows individual paired differences, not just the average. Adding the bias raises mean squared error here, but four seeds go the other way. The interval is an explicitly approximate calculation.",
       "start": 32.219920375,
       "end": 46.22068425
     },
     {
       "id": "claims",
       "seconds": 15,
-      "caption": "Claims carry evidence, scope and limitations.",
-      "narration": "The claim ledger keeps that distinction. Higher average error is supported. Higher error on every seed is contradicted. Each statement points to the exact numerical evidence, with its scope and limitations.",
       "start": 46.302756499999994,
       "end": 61.304156417
     },
     {
       "id": "report",
       "seconds": 12,
-      "caption": "The report is generated from the study’s actual results.",
-      "narration": "The study writes a report with methods, measured results, limitations, and an evidence chain. These are ordinary files you can read, share, and inspect without a hosted dashboard.",
       "start": 61.387045125,
       "end": 73.38879795800001
     },
     {
       "id": "audit",
       "seconds": 10,
-      "caption": "Actual recomputation. A new review is appended; the original stays.",
-      "narration": "Run the audit to recompute the analysis and manuscript, and verify five hundred twenty-one evidence references. This is deterministic verification, not independent scientific peer review.",
       "start": 73.446063667,
       "end": 83.44787133300001
     },
     {
       "id": "native",
       "seconds": 15,
-      "caption": "Retained native study results — no new training in this recording.",
-      "narration": "For your own question, a native agent develops the study-owned science. These are retained results from a real weight-averaging study, not new training in this recording. Start with the offline tutorial. Then follow the evidence.",
       "start": 83.5164035,
       "end": 98.517788167
     }
-  ]
+  ],
+  "scope_note": "Observed capture times and source digests. The original capture plan is retained locally; final narration is in the transcript and current narration script."
 }

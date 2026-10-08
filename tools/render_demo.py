@@ -42,10 +42,15 @@ def render(capture, output):
     if movie.exists():
         raise SystemExit("Choose a fresh output directory; prior rendered movies are preserved")
     output.mkdir(parents=True, exist_ok=True)
-    sound = capture / "narration"
-    sound.mkdir(exist_ok=False)
+    sound = capture / "narration" / output.name
+    sound.mkdir(parents=True, exist_ok=False)
+    # Footage and observed times remain frozen. Narration is editable in
+    # postproduction; keep its current source distinct from the capture plan.
+    narration = {scene['id']:scene for scene in script['scenes']}
+    scenes = [{**scene, 'narration':narration[scene['id']]['narration'],
+               'caption':narration[scene['id']]['caption']} for scene in timeline['scenes']]
     inputs, filters, captions, voice_records = [], [], [], []
-    for scene in timeline["scenes"]:
+    for scene in scenes:
         sentences = re.split(r'(?<=[.!?])\s+', scene["narration"])
         pieces, lengths = [], []
         for n, sentence in enumerate(sentences):
@@ -83,7 +88,7 @@ def render(capture, output):
     srt = '\n\n'.join(f"{i}\n{timestamp(start,',')} --> {timestamp(end,',')}\n" + '\n'.join(textwrap.wrap(text,64)) for i,(start,end,text) in enumerate(captions,1)) + '\n'
     (output / 'allagma-workflow.en.srt').write_text(srt)
     transcript = "# Allagma workflow video — transcript\n\n" + script['scope'] + "\n\nNarration is synthesized locally with the macOS Samantha system voice. The recording workbench is a shipped demo utility, not the native agent UI. Displayed command paths are abbreviated. No computation is accelerated; scene navigation is automated. The final EMA figure is machine-generated using AI Scientist-adapted code, with its separate license and source disclosure retained.\n"
-    for scene in timeline['scenes']:
+    for scene in scenes:
         transcript += f"\n## {timestamp(scene['start'])} — {scene['id'].capitalize()}\n\n{scene['narration']}\n\nOn screen: {scene['caption']}\n"
     (output/'transcript.md').write_text(transcript)
     manifest = {"format":"allagma-video-render-v1", "duration_seconds":duration(movie), "bytes":movie.stat().st_size,
@@ -94,7 +99,18 @@ def render(capture, output):
                 "renderer_sha256":hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
                 "scope":script['scope'], "voice":script['voice'], "voice_adjustments":voice_records,
                 "software":"Chromium/Playwright actual browser capture, Allagma CLI, macOS say, FFmpeg H.264/AAC",
+                "narration_editing":"Current narration script applied to the original continuous footage and recorded scene times; footage is not accelerated or replaced.",
                 "publication":"prepared locally, not a public upload"}
+    raw_state=(capture/'state.json').read_bytes()
+    public_state=json.loads(raw_state)
+    public_state.pop('capture_root',None)
+    (output/'capture-state.json').write_text(json.dumps(public_state,indent=2)+'\n')
+    public_timeline={**timeline,'scenes':[{k:v for k,v in scene.items() if k not in ('narration','caption')} for scene in timeline['scenes']]}
+    public_timeline['scope_note']='Observed capture times and source digests. The original capture plan is retained locally; final narration is in the transcript and current narration script.'
+    (output/'capture-timeline.json').write_text(json.dumps(public_timeline,indent=2)+'\n')
+    manifest['public_preview']={
+      'capture-state.json':{'source_sha256':hashlib.sha256(raw_state).hexdigest(),'sha256':hashlib.sha256((output/'capture-state.json').read_bytes()).hexdigest(),'transformation':'Omit local execution-directory field; retain all scientific values and operation outcomes.'},
+      'capture-timeline.json':{'source_sha256':manifest['capture_timeline_sha256'],'sha256':hashlib.sha256((output/'capture-timeline.json').read_bytes()).hexdigest(),'transformation':'Retain observed timings/source hashes; omit draft narration and caption text superseded during postproduction.'}}
     (output/'provenance.json').write_text(json.dumps(manifest, indent=2)+'\n')
     shutil.copyfile(ROOT/'media/evidence/EMA-LICENSE.txt', output/'EMA-LICENSE.txt')
     print(json.dumps(manifest,indent=2))

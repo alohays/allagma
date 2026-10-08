@@ -18,7 +18,7 @@ On screen: Actual offline execution. Failures and interruptions stay in the reco
 
 ## 00:00:32.220 — Results
 
-The generated figure shows individual paired differences, not just the average. Adding the bias raises mean squared error here, but four seeds go the other way. The interval is an explicitly approximate calculation.
+The generated figure shows individual paired differences, not just the average. Adding the bias raises mean squared error here, but three seeds favor the biased estimator and one is tied. The interval is an explicitly approximate calculation.
 
 On screen: A positive average does not mean every seed agrees.
 
