@@ -1,0 +1,104 @@
+{
+  "attempt_id": "pilot-a002",
+  "attempt_number": 2,
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "campaign_id": "ema-schedule-v1",
+  "command": [
+    ".venv/bin/python",
+    "study/runner.py",
+    "pilot",
+    "--attempt",
+    "pilot-a002",
+    "--steps",
+    "500"
+  ],
+  "data_revision": "653b98ae7e9910c6d81e33fc853eefc0f809cfa51e8b4de02762fe888672146c",
+  "ended_at": "2026-10-08T06:51:49.524537+00:00",
+  "environment": {
+    "interpreter": ".venv/bin/python",
+    "qualification": "pilot"
+  },
+  "error": {
+    "kind": "failed",
+    "message": "See retained broker receipt/stderr and attempt error"
+  },
+  "exit_code": 1,
+  "experiment_id": "pilot-qualification",
+  "inputs": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/pilot-a002/input.json",
+      "retention": "retained",
+      "sha256": "653b98ae7e9910c6d81e33fc853eefc0f809cfa51e8b4de02762fe888672146c"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/protocol.json",
+      "retention": "retained",
+      "sha256": "dca3cbe24ecc9d7310c1bbd16a329043cfab040c48a287e76012e45aff77d90a"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/lock.yaml",
+      "retention": "retained",
+      "sha256": "6f211f947c838760db7926dc7420081f680724612d83c8a8a5dfd50a6d1d4bcb"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": ".compute/requests/9c70527f00384050aae07e48a02b2384.json",
+      "retention": "retained",
+      "sha256": "9e3a4b4480e8f2d89718cc3ffa18b31df29c8e4c2b1fc5b507df6f72a0044e43"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/pilot-a002/source/common.py",
+      "retention": "retained",
+      "sha256": "c4f6d2456baaa09270a4622be007c45ef7a5080992e9508697feeca8012f0bc0"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/pilot-a002/source/prepare.py",
+      "retention": "retained",
+      "sha256": "b1e43e1662becff618cbff688f6a1ab8dcc3859235513ada978c7c3797f7d527"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/pilot-a002/source/reference.py",
+      "retention": "retained",
+      "sha256": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/pilot-a002/source/runner.py",
+      "retention": "retained",
+      "sha256": "23982510806bcf1e717e29927c747bf32a7c921b7b9bc292f8d9bf2633bdd001"
+    }
+  ],
+  "model_revision": "996f07b73702783d000a4bdee22c334c65b8998aa5effda2a1c7ff2b426863fb",
+  "outputs": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/pilot-a002/finished.json",
+      "retention": "retained",
+      "sha256": "b45bc8de51e6947540173eac0656301db0136a066bf9b388f94d8b92cdc5ff4d"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": ".compute/responses/9c70527f00384050aae07e48a02b2384.json",
+      "retention": "retained",
+      "sha256": "a9dedd72051eb48e62870d0143d25b05c280b9e69fbd56029ccd16bf37ede2b7"
+    }
+  ],
+  "protocol_revision": "ema-schedule-v1",
+  "record_type": "RunRecord",
+  "run_id": "pilot-a002",
+  "schema_version": "0.2",
+  "split": "pilot",
+  "started_at": "2026-10-08T06:51:43.318966+00:00",
+  "status": "failed",
+  "usage": {
+    "money_usd": 0,
+    "tokens": 0,
+    "wall_seconds": 6.24138025008142
+  }
+}

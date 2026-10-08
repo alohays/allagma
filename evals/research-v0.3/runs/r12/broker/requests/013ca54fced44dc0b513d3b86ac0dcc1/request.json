@@ -1,0 +1,23 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "study/runner.py",
+    "train",
+    "--attempt",
+    "confirm-022-gmm8-5004-constant-10000",
+    "--dataset",
+    "gmm8",
+    "--seed",
+    "5004",
+    "--policy",
+    "constant",
+    "--horizon",
+    "10000"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "confirm-022-gmm8-5004-constant-10000",
+  "request_id": "013ca54fced44dc0b513d3b86ac0dcc1",
+  "timeout_seconds": 45.0
+}

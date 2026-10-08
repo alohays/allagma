@@ -1,0 +1,46 @@
+{
+  "argv": [
+    "study/runner.py",
+    "train",
+    "--attempt",
+    "confirm-001-moons-4001-constant-10000",
+    "--dataset",
+    "moons",
+    "--seed",
+    "4001",
+    "--policy",
+    "constant",
+    "--horizon",
+    "10000"
+  ],
+  "attempt_id": "confirm-001-moons-4001-constant-10000",
+  "input": {
+    "media_type": "application/octet-stream",
+    "path": "campaigns/ema-schedule-v1/attempts/confirm-001-moons-4001-constant-10000/input.json",
+    "retention": "retained",
+    "sha256": "909dc5d221f71d5933aa4c1578206f3c8d97dc0c495dfe98af9eda5b6be21dce"
+  },
+  "lock": {
+    "media_type": "application/octet-stream",
+    "path": "campaigns/ema-schedule-v1/lock.yaml",
+    "retention": "retained",
+    "sha256": "6f211f947c838760db7926dc7420081f680724612d83c8a8a5dfd50a6d1d4bcb"
+  },
+  "protocol": {
+    "media_type": "application/octet-stream",
+    "path": "campaigns/ema-schedule-v1/protocol.json",
+    "retention": "retained",
+    "sha256": "dca3cbe24ecc9d7310c1bbd16a329043cfab040c48a287e76012e45aff77d90a"
+  },
+  "source_hashes": {
+    "study/analyze.py": "6d68129831145b23347a7788d3283c11c1957d038a973db7d4ead8c26d5edb6b",
+    "study/common.py": "c4f6d2456baaa09270a4622be007c45ef7a5080992e9508697feeca8012f0bc0",
+    "study/dispatch.py": "e9757148134a6ee46f3be9b0fa316a030579706071c038b9e995a5a2d5aab0ed",
+    "study/freeze.py": "67d3300f528a24ee93d4e32c3aa0f126c824614601d00dfe200edd97ff72560d",
+    "study/prepare.py": "b1e43e1662becff618cbff688f6a1ab8dcc3859235513ada978c7c3797f7d527",
+    "study/reference.py": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1",
+    "study/runner.py": "cfa0bf5ae9c5f882db59d5a4a5a3b92958725138e886f0c6ba9facd443fdc084"
+  },
+  "source_revision": "c3db720b132fea8b499dbfd86c2e81c7b43487b9432bdf98c96017b2ab3fc4d8",
+  "started_at": "2026-10-08T06:57:02.428934+00:00"
+}

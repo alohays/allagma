@@ -1,0 +1,17 @@
+{
+  "injected_interruption": false,
+  "isolation_sha256": "8e651245c613fc3ce9b53a26ed07d31927405e897ee69ed15ebfc759bd5f2afa",
+  "reconciled_after_controller_restart": false,
+  "request_id": "ed28b40b793e4b148e572b3c9c9c3ef4",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 5.775566000025719,
+    "ended_at": "2026-10-08T07:13:47.705051+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r12/resources/jobs/0065-recomputation-records-and-manuscript",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 550862848,
+    "peak_storage_bytes": 3610055298,
+    "status": "completed"
+  }
+}

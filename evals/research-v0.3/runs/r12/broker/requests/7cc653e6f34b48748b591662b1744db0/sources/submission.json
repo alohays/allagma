@@ -1,0 +1,43 @@
+{
+  "artifact_manifest": "artifact-manifest.json",
+  "completion_assessment": "All 32 confirmation cells, 96 checkpoints/sample states, paired effects/contrasts, figure, raw-evidence recomputation, saved-weight regeneration and full fresh-environment retraining completed. Scientific inference is limited by four seeds and multiplicity; review is provisional, not independent peer review.",
+  "execution_status": "complete",
+  "manuscript": "REPORT.md",
+  "material_revision": "material-r1",
+  "measurements": "analysis/measurements.json",
+  "recompute": {
+    "argv": [
+      "python3",
+      "inputs/compute.py",
+      "--category",
+      "compute",
+      "--label",
+      "retained-recompute-submission",
+      "--timeout",
+      "30",
+      "--",
+      ".venv/bin/python",
+      "study/analyze.py",
+      "--raw-manifest",
+      "analysis/raw-manifest.json",
+      "--output",
+      "recomputed-r2",
+      "--compare",
+      "analysis"
+    ],
+    "cwd": "."
+  },
+  "reproduce": {
+    "argv": [
+      "python3",
+      "study/reproduce.py",
+      "--destination",
+      "reproduction/full-r2"
+    ],
+    "cwd": "."
+  },
+  "review": "review.json",
+  "saved_weight_verification": "evidence/verification.json",
+  "successful_full_reproduction": "reproduction/full-r1/comparison.json",
+  "task_id": "ema-schedule"
+}

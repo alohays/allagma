@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "reproduction/full-r1/.venv/bin/python",
+    "-m",
+    "pip",
+    "install",
+    "--no-index",
+    "--find-links",
+    "inputs/materials/wheels",
+    "-r",
+    "inputs/materials/requirements-reference.lock"
+  ],
+  "attempt": false,
+  "category": "setup",
+  "cwd": ".",
+  "label": "full-r1-install",
+  "request_id": "69fc7995ac6a484891f533ebcc90f7f9",
+  "timeout_seconds": 150.0
+}

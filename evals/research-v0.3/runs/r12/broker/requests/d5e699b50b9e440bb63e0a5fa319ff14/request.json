@@ -1,0 +1,23 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "study/runner.py",
+    "train",
+    "--attempt",
+    "confirm-001-moons-4001-constant-10000",
+    "--dataset",
+    "moons",
+    "--seed",
+    "4001",
+    "--policy",
+    "constant",
+    "--horizon",
+    "10000"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "confirm-001-moons-4001-constant-10000",
+  "request_id": "d5e699b50b9e440bb63e0a5fa319ff14",
+  "timeout_seconds": 45.0
+}

@@ -1,0 +1,154 @@
+{
+  "environment": {
+    "device": "cpu",
+    "dtype": "float32",
+    "numpy": "2.4.6",
+    "python": "3.11.6",
+    "torch": "2.14.1"
+  },
+  "runs": [
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/replay-016-gmm8-5002-constant-10000/step-5000/arrays.npz",
+      "attempt_id": "replay-016-gmm8-5002-constant-10000",
+      "dataset": "gmm8",
+      "device": "cpu",
+      "generation_noise_sha256": "b9a5974cea6b577eabc66f8bd4ea81a610ae5cdaff5d7c86888c6e4749507e79",
+      "heldout_sha256": "2d728e249f5917bba79ee9af4807f9192412d60a9243188b22b5f9fa29ff66b5",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/gmm8-5002/initial.npz",
+      "initial_weights_sha256": "8c78a706a2a29da7f89b91da28d6cef975f0c68d6dfdcd91c0d2d0a4dbb59541",
+      "inputs": "campaigns/ema-schedule-v1/inputs/gmm8-5002/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2016,
+          "inlier_fraction": 0.984375,
+          "mode_counts": [
+            245,
+            258,
+            271,
+            257,
+            275,
+            242,
+            233,
+            235
+          ],
+          "sw1": 0.08207563723310132
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2017,
+          "inlier_fraction": 0.98486328125,
+          "mode_counts": [
+            241,
+            265,
+            277,
+            248,
+            257,
+            250,
+            232,
+            247
+          ],
+          "sw1": 0.06893116097544667
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2018,
+          "inlier_fraction": 0.9853515625,
+          "mode_counts": [
+            250,
+            281,
+            277,
+            306,
+            317,
+            227,
+            172,
+            188
+          ],
+          "sw1": 0.22288134044894997
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "constant",
+      "seed": 5002,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "deea879af17a53c97cd1a294a3590ed861d513c662275ad49abffe67c05b5ba1",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/replay-016-gmm8-5002-constant-10000/trace.jsonl",
+      "updates": 5000,
+      "weights": "campaigns/ema-schedule-v1/attempts/replay-016-gmm8-5002-constant-10000/step-5000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/replay-016-gmm8-5002-constant-10000/step-10000/arrays.npz",
+      "attempt_id": "replay-016-gmm8-5002-constant-10000",
+      "dataset": "gmm8",
+      "device": "cpu",
+      "generation_noise_sha256": "b9a5974cea6b577eabc66f8bd4ea81a610ae5cdaff5d7c86888c6e4749507e79",
+      "heldout_sha256": "2d728e249f5917bba79ee9af4807f9192412d60a9243188b22b5f9fa29ff66b5",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/gmm8-5002/initial.npz",
+      "initial_weights_sha256": "8c78a706a2a29da7f89b91da28d6cef975f0c68d6dfdcd91c0d2d0a4dbb59541",
+      "inputs": "campaigns/ema-schedule-v1/inputs/gmm8-5002/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2025,
+          "inlier_fraction": 0.98876953125,
+          "mode_counts": [
+            223,
+            256,
+            287,
+            270,
+            257,
+            242,
+            255,
+            235
+          ],
+          "sw1": 0.08593250128504154
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2022,
+          "inlier_fraction": 0.9873046875,
+          "mode_counts": [
+            227,
+            260,
+            278,
+            263,
+            253,
+            251,
+            241,
+            249
+          ],
+          "sw1": 0.07340860322482613
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2026,
+          "inlier_fraction": 0.9892578125,
+          "mode_counts": [
+            224,
+            258,
+            299,
+            282,
+            266,
+            246,
+            240,
+            211
+          ],
+          "sw1": 0.1341416766726183
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "constant",
+      "seed": 5002,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "deea879af17a53c97cd1a294a3590ed861d513c662275ad49abffe67c05b5ba1",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/replay-016-gmm8-5002-constant-10000/trace.jsonl",
+      "updates": 10000,
+      "weights": "campaigns/ema-schedule-v1/attempts/replay-016-gmm8-5002-constant-10000/step-10000/weights.npz"
+    }
+  ],
+  "timing": {
+    "sampling_and_save_seconds": 2.9260305827483535,
+    "training_seconds": 13.506142084253952,
+    "updates": 10000
+  }
+}

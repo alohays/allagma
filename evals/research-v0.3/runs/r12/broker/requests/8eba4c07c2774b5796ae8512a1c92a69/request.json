@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "reproduction/full-r1/.venv/bin/python",
+    "reproduction/full-r1/study/runner.py",
+    "train",
+    "--attempt",
+    "replay-023-gmm8-5004-cosine-5000",
+    "--dataset",
+    "gmm8",
+    "--seed",
+    "5004",
+    "--policy",
+    "cosine",
+    "--horizon",
+    "5000"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "full-r1-replay-023-gmm8-5004-cosine-5000",
+  "request_id": "8eba4c07c2774b5796ae8512a1c92a69",
+  "timeout_seconds": 45.0
+}

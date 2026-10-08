@@ -1,0 +1,24 @@
+{
+  "constraints": [
+    "All computation/setup through supplied broker",
+    "Offline",
+    "AI-generated adaptation disclosure and source license retained",
+    "No confirmation tuning",
+    "Float32 reference mechanism"
+  ],
+  "motivation": "Prior duration comparison followed one cosine trajectory and confounded duration with schedule position.",
+  "output": "REPORT.md, review.json, REPRODUCE.md, artifact-manifest.json, submission.json and measurements",
+  "question": "How does full learning-rate policy change the apparent benefit of weight EMA at fixed duration, and how do duration effects differ across policies?",
+  "stop_rules": [
+    "Failed qualification: no confirmation",
+    "Forecast cannot fit remaining resource ceiling: partial report",
+    "Nonfinite loss/weights/samples: preserve failed attempt and diagnose without using confirmation quality to tune",
+    "Controlled first-attempt interruption: retain original outcome and retry with new attempt ID",
+    "Never exceed broker or native session ceilings"
+  ],
+  "study_id": "ema-schedule",
+  "success_criteria": [
+    "32 cells with loadable raw/EMA weights, heldout/noise/samples, provenance, traces, 4 seeds per dataset, paired contrasts and uncertainty, figure, raw-data recomputation, saved-weight regeneration check, named-revision critique, all requested deliverables",
+    "Negative and inconclusive findings count as scientific success when design and evidence are complete."
+  ]
+}

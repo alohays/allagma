@@ -1,0 +1,23 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "study/runner.py",
+    "train",
+    "--attempt",
+    "confirm-015-gmm8-5001-cosine-10000",
+    "--dataset",
+    "gmm8",
+    "--seed",
+    "5001",
+    "--policy",
+    "cosine",
+    "--horizon",
+    "10000"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "confirm-015-gmm8-5001-cosine-10000",
+  "request_id": "bd48da172ce64e67bdbb8159856dd2a8",
+  "timeout_seconds": 45.0
+}

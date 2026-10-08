@@ -1,0 +1,19 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "-m",
+    "pip",
+    "install",
+    "--no-index",
+    "--find-links",
+    "inputs/materials/wheels",
+    "-r",
+    "inputs/materials/requirements-reference.lock"
+  ],
+  "attempt": false,
+  "category": "setup",
+  "cwd": ".",
+  "label": "pinned-packages",
+  "request_id": "d4eec13441ab4576a3be9e6585a81ccf",
+  "timeout_seconds": 150.0
+}

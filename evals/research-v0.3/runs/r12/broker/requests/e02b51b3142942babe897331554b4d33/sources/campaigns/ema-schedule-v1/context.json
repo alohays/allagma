@@ -1,0 +1,72 @@
+{
+  "content": {
+    "constraints": [
+      "All computation/setup through supplied broker",
+      "Offline",
+      "AI-generated adaptation disclosure and source license retained",
+      "No confirmation tuning",
+      "Float32 reference mechanism"
+    ],
+    "forecast": {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/forecast.json",
+      "retention": "retained",
+      "sha256": "c29c69ce7441f8a89311ed4736e46ab507af66ddaeca0107efe6d521a11e5956"
+    },
+    "lock": {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/lock.yaml",
+      "retention": "retained",
+      "sha256": "6f211f947c838760db7926dc7420081f680724612d83c8a8a5dfd50a6d1d4bcb"
+    },
+    "pilot": {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/pilot-a005/pilot.json",
+      "retention": "retained",
+      "sha256": "b2acb9f5aeefd77188320caf0bb7c28dee3aec88dba9ae6e3380d22113fe513f"
+    },
+    "protocol": {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/protocol.json",
+      "retention": "retained",
+      "sha256": "dca3cbe24ecc9d7310c1bbd16a329043cfab040c48a287e76012e45aff77d90a"
+    },
+    "question": "How does full learning-rate policy change the apparent benefit of weight EMA at fixed duration, and how do duration effects differ across policies?",
+    "stops": [
+      "Failed qualification: no confirmation",
+      "Forecast cannot fit remaining resource ceiling: partial report",
+      "Nonfinite loss/weights/samples: preserve failed attempt and diagnose without using confirmation quality to tune",
+      "Controlled first-attempt interruption: retain original outcome and retry with new attempt ID",
+      "Never exceed broker or native session ceilings"
+    ],
+    "unresolved": [
+      "Four-seed uncertainty and multiplicity; no independent peer review",
+      "Offline literature limits"
+    ]
+  },
+  "context_id": "confirmation-v1",
+  "limitations": [],
+  "method_id": "context/active-brief",
+  "omitted": [
+    "historical_report"
+  ],
+  "record_type": "ContextRecord",
+  "required": [
+    "question",
+    "constraints",
+    "stops",
+    "protocol",
+    "unresolved"
+  ],
+  "schema_version": "0.2",
+  "selected": [
+    "question",
+    "constraints",
+    "stops",
+    "protocol",
+    "unresolved",
+    "pilot",
+    "forecast",
+    "lock"
+  ]
+}

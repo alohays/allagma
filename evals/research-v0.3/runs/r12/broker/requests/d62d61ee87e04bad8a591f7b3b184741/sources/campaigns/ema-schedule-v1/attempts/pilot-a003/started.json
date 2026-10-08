@@ -1,0 +1,37 @@
+{
+  "argv": [
+    "study/runner.py",
+    "pilot",
+    "--attempt",
+    "pilot-a003",
+    "--steps",
+    "500"
+  ],
+  "attempt_id": "pilot-a003",
+  "input": {
+    "media_type": "application/octet-stream",
+    "path": "campaigns/ema-schedule-v1/attempts/pilot-a003/input.json",
+    "retention": "retained",
+    "sha256": "f38e8125a3b7dbf058174a49dec35a9e001a99c82214a9c92c52c969822b0304"
+  },
+  "lock": {
+    "media_type": "application/octet-stream",
+    "path": "campaigns/ema-schedule-v1/lock.yaml",
+    "retention": "retained",
+    "sha256": "6f211f947c838760db7926dc7420081f680724612d83c8a8a5dfd50a6d1d4bcb"
+  },
+  "protocol": {
+    "media_type": "application/octet-stream",
+    "path": "campaigns/ema-schedule-v1/protocol.json",
+    "retention": "retained",
+    "sha256": "dca3cbe24ecc9d7310c1bbd16a329043cfab040c48a287e76012e45aff77d90a"
+  },
+  "source_hashes": {
+    "study/common.py": "c4f6d2456baaa09270a4622be007c45ef7a5080992e9508697feeca8012f0bc0",
+    "study/prepare.py": "b1e43e1662becff618cbff688f6a1ab8dcc3859235513ada978c7c3797f7d527",
+    "study/reference.py": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1",
+    "study/runner.py": "efc828a323da4a33a9f66d26b0695240f20f1a1f65b6087af1734f9343ff9bf2"
+  },
+  "source_revision": "fe170b280972fbff5fc9f801d21b602f8f901e2fa0dd043632e12f6976b1c3c1",
+  "started_at": "2026-10-08T06:52:29.368218+00:00"
+}

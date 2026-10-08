@@ -1,0 +1,1881 @@
+{
+  "checks": [
+    {
+      "dataset": "gmm8",
+      "device": "cpu",
+      "schedule": "constant",
+      "seed": 5001,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.98486328125,
+            "mode_counts": [
+              225,
+              237,
+              272,
+              267,
+              257,
+              271,
+              251,
+              237
+            ]
+          },
+          "independent_sw1": 0.0807337660498342,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "6a71d777ae5916cf4636c3a571c7cc1fc59ee152e327643056fcaa15ddb58b2e",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "6a71d777ae5916cf4636c3a571c7cc1fc59ee152e327643056fcaa15ddb58b2e",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.986328125,
+            "mode_counts": [
+              222,
+              239,
+              272,
+              256,
+              263,
+              275,
+              262,
+              231
+            ]
+          },
+          "independent_sw1": 0.0870501646045283,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "1d4c77a35844680d30656a8096c709115e75e2e5a6dd044ca40f689fd6032a39",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "1d4c77a35844680d30656a8096c709115e75e2e5a6dd044ca40f689fd6032a39",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.97607421875,
+            "mode_counts": [
+              241,
+              236,
+              269,
+              245,
+              241,
+              257,
+              277,
+              233
+            ]
+          },
+          "independent_sw1": 0.05725001362228775,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "dcc035f4d4e8845ddd0cd7d4239a3e51857706c5c059ba8c212684c2f2ac6cf8",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "dcc035f4d4e8845ddd0cd7d4239a3e51857706c5c059ba8c212684c2f2ac6cf8",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "device": "cpu",
+      "schedule": "cosine",
+      "seed": 5001,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.98779296875,
+            "mode_counts": [
+              227,
+              242,
+              272,
+              262,
+              265,
+              266,
+              256,
+              233
+            ]
+          },
+          "independent_sw1": 0.08323314883653612,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "5ab7f56d53defce6b90af79ba778c5a0c577f8823818e86cef1b4e1b39cbddce",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "5ab7f56d53defce6b90af79ba778c5a0c577f8823818e86cef1b4e1b39cbddce",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.98583984375,
+            "mode_counts": [
+              223,
+              245,
+              272,
+              258,
+              264,
+              266,
+              261,
+              230
+            ]
+          },
+          "independent_sw1": 0.08214048285119446,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "f527a00dcaf26c0de5ca316397999c84285e963ea960126b9971fb377272c057",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "f527a00dcaf26c0de5ca316397999c84285e963ea960126b9971fb377272c057",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.98681640625,
+            "mode_counts": [
+              227,
+              243,
+              271,
+              263,
+              265,
+              264,
+              256,
+              232
+            ]
+          },
+          "independent_sw1": 0.0838344804655593,
+          "metric_abs_error": 1.3877787807814457e-17,
+          "regenerated_sha256": "c3e375d01d52aaec570a9b6b0e0f093ab39a8aeba858e07d81c52b9b6e038357",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "c3e375d01d52aaec570a9b6b0e0f093ab39a8aeba858e07d81c52b9b6e038357",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "device": "cpu",
+      "schedule": "constant",
+      "seed": 5001,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.98974609375,
+            "mode_counts": [
+              214,
+              239,
+              287,
+              257,
+              267,
+              264,
+              273,
+              226
+            ]
+          },
+          "independent_sw1": 0.0926061977628998,
+          "metric_abs_error": 1.3877787807814457e-17,
+          "regenerated_sha256": "be73f977d1f184afa26d14364a03464fd2c287f5df37cb2d17d4294f0d27bac9",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "be73f977d1f184afa26d14364a03464fd2c287f5df37cb2d17d4294f0d27bac9",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.99169921875,
+            "mode_counts": [
+              225,
+              239,
+              278,
+              261,
+              265,
+              269,
+              265,
+              229
+            ]
+          },
+          "independent_sw1": 0.08663560061159174,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "5d91a3d4a197eaa83e1f6f44f52f397aecde381fa9cda6ef10fe59f2b08ff721",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "5d91a3d4a197eaa83e1f6f44f52f397aecde381fa9cda6ef10fe59f2b08ff721",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.9833984375,
+            "mode_counts": [
+              218,
+              225,
+              288,
+              260,
+              269,
+              268,
+              267,
+              219
+            ]
+          },
+          "independent_sw1": 0.10714579524135219,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "b444b69343fc21a9dc0443551c3935c5ce42190dc5a711e4e3bf57449285bf8f",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "b444b69343fc21a9dc0443551c3935c5ce42190dc5a711e4e3bf57449285bf8f",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "device": "cpu",
+      "schedule": "cosine",
+      "seed": 5001,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.9931640625,
+            "mode_counts": [
+              229,
+              241,
+              276,
+              266,
+              266,
+              266,
+              266,
+              224
+            ]
+          },
+          "independent_sw1": 0.0881154636282233,
+          "metric_abs_error": 1.3877787807814457e-17,
+          "regenerated_sha256": "d4cf55b3e3ed4b17204e4bfeab28230fee881162014cc93e6444f4f2646770f0",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "d4cf55b3e3ed4b17204e4bfeab28230fee881162014cc93e6444f4f2646770f0",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.99169921875,
+            "mode_counts": [
+              227,
+              240,
+              277,
+              262,
+              267,
+              263,
+              267,
+              228
+            ]
+          },
+          "independent_sw1": 0.0852745617276448,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "6d1ef1f4d0d4226863eec704039c8a2dba3a2e6100ab7a36d27f2bc77fb120eb",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "6d1ef1f4d0d4226863eec704039c8a2dba3a2e6100ab7a36d27f2bc77fb120eb",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.994140625,
+            "mode_counts": [
+              229,
+              241,
+              276,
+              266,
+              266,
+              266,
+              266,
+              226
+            ]
+          },
+          "independent_sw1": 0.08828677839934268,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "0f0a3e83384ffe6ab54b892483dc05f894dc2a1c86fdcd3db6330b2ad401d91a",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "0f0a3e83384ffe6ab54b892483dc05f894dc2a1c86fdcd3db6330b2ad401d91a",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "device": "cpu",
+      "schedule": "constant",
+      "seed": 5002,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.984375,
+            "mode_counts": [
+              245,
+              258,
+              271,
+              257,
+              275,
+              242,
+              233,
+              235
+            ]
+          },
+          "independent_sw1": 0.08207563723310132,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "deb3534e486c83c931d10080c647a7c91efa07ee845ca56eac7c7320966487b3",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "deb3534e486c83c931d10080c647a7c91efa07ee845ca56eac7c7320966487b3",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.98486328125,
+            "mode_counts": [
+              241,
+              265,
+              277,
+              248,
+              257,
+              250,
+              232,
+              247
+            ]
+          },
+          "independent_sw1": 0.06893116097544666,
+          "metric_abs_error": 1.3877787807814457e-17,
+          "regenerated_sha256": "832c2d9bc57d36857b92b05ed34cccf09b5fbdd5832305c65ea6214a932e2839",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "832c2d9bc57d36857b92b05ed34cccf09b5fbdd5832305c65ea6214a932e2839",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.9853515625,
+            "mode_counts": [
+              250,
+              281,
+              277,
+              306,
+              317,
+              227,
+              172,
+              188
+            ]
+          },
+          "independent_sw1": 0.22288134044894997,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "672701ae8f4e028a75e619c232ab6e017de32da440b8fd00e5bf0ddf3b8e2a33",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "672701ae8f4e028a75e619c232ab6e017de32da440b8fd00e5bf0ddf3b8e2a33",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "device": "cpu",
+      "schedule": "cosine",
+      "seed": 5002,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.98486328125,
+            "mode_counts": [
+              241,
+              257,
+              287,
+              246,
+              259,
+              240,
+              242,
+              245
+            ]
+          },
+          "independent_sw1": 0.07362056033223734,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "abd12ebe87fae9f7921a6f72052e6eb2dcc5cde256654bf530d84016a7699515",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "abd12ebe87fae9f7921a6f72052e6eb2dcc5cde256654bf530d84016a7699515",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.97998046875,
+            "mode_counts": [
+              235,
+              262,
+              280,
+              246,
+              254,
+              247,
+              241,
+              242
+            ]
+          },
+          "independent_sw1": 0.06836757134920086,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "be4b9b15a7a1ea804b9989a5c4fa1a2348c61025a30d0312e4a81b2cfd66a455",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "be4b9b15a7a1ea804b9989a5c4fa1a2348c61025a30d0312e4a81b2cfd66a455",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.98486328125,
+            "mode_counts": [
+              240,
+              257,
+              286,
+              246,
+              261,
+              240,
+              242,
+              245
+            ]
+          },
+          "independent_sw1": 0.07465001447018486,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "4fe904464b5b9860eae11b7a77700bc0378e2f3c154df52ff7784df1fd1f0098",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "4fe904464b5b9860eae11b7a77700bc0378e2f3c154df52ff7784df1fd1f0098",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "device": "cpu",
+      "schedule": "constant",
+      "seed": 5002,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.98876953125,
+            "mode_counts": [
+              223,
+              256,
+              287,
+              270,
+              257,
+              242,
+              255,
+              235
+            ]
+          },
+          "independent_sw1": 0.08593250128504154,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "e891ecb841c6c622046a6b4fb5cdb9c1f852be23e2f7c83950db8285c98f2276",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "e891ecb841c6c622046a6b4fb5cdb9c1f852be23e2f7c83950db8285c98f2276",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.9873046875,
+            "mode_counts": [
+              227,
+              260,
+              278,
+              263,
+              253,
+              251,
+              241,
+              249
+            ]
+          },
+          "independent_sw1": 0.07340860322482613,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "b640a090d7fbb1f312ac2f2a51ce00ead03bc9db617082c43be7f4e5ecbbf554",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "b640a090d7fbb1f312ac2f2a51ce00ead03bc9db617082c43be7f4e5ecbbf554",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.9892578125,
+            "mode_counts": [
+              224,
+              258,
+              299,
+              282,
+              266,
+              246,
+              240,
+              211
+            ]
+          },
+          "independent_sw1": 0.13414167667261834,
+          "metric_abs_error": 2.7755575615628914e-17,
+          "regenerated_sha256": "709981bf6d579fbca740bfd1ab765c5c5dce79154dfa79d6ce390a3287d99e2e",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "709981bf6d579fbca740bfd1ab765c5c5dce79154dfa79d6ce390a3287d99e2e",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "device": "cpu",
+      "schedule": "cosine",
+      "seed": 5002,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.98974609375,
+            "mode_counts": [
+              232,
+              260,
+              284,
+              253,
+              257,
+              250,
+              235,
+              256
+            ]
+          },
+          "independent_sw1": 0.06862971403627524,
+          "metric_abs_error": 1.3877787807814457e-17,
+          "regenerated_sha256": "6d581f338f4488702d9d1205fb5324c893011d9a9a54d5baae71e8dad448ac24",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "6d581f338f4488702d9d1205fb5324c893011d9a9a54d5baae71e8dad448ac24",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.99072265625,
+            "mode_counts": [
+              233,
+              259,
+              281,
+              255,
+              257,
+              252,
+              235,
+              257
+            ]
+          },
+          "independent_sw1": 0.06855588076119744,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "825754dbefa70b43eb937b3fabbd27eb5443d74b482104333847240c220c6e37",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "825754dbefa70b43eb937b3fabbd27eb5443d74b482104333847240c220c6e37",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.9892578125,
+            "mode_counts": [
+              232,
+              260,
+              284,
+              254,
+              255,
+              250,
+              235,
+              256
+            ]
+          },
+          "independent_sw1": 0.06922755719349813,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "fa1874d6b02ac9bd9309a9ea94711224449b837d22b33a4c62ac4f07130f806b",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "fa1874d6b02ac9bd9309a9ea94711224449b837d22b33a4c62ac4f07130f806b",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "device": "cpu",
+      "schedule": "constant",
+      "seed": 5003,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.98193359375,
+            "mode_counts": [
+              274,
+              270,
+              230,
+              293,
+              224,
+              224,
+              256,
+              240
+            ]
+          },
+          "independent_sw1": 0.08921073769537347,
+          "metric_abs_error": 2.7755575615628914e-17,
+          "regenerated_sha256": "217050a11261f0973cda604c585f82a20eb3b4515254ffce64df9153952f819e",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "217050a11261f0973cda604c585f82a20eb3b4515254ffce64df9153952f819e",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.97705078125,
+            "mode_counts": [
+              282,
+              265,
+              233,
+              272,
+              236,
+              219,
+              256,
+              238
+            ]
+          },
+          "independent_sw1": 0.0885603372785569,
+          "metric_abs_error": 1.3877787807814457e-17,
+          "regenerated_sha256": "f26e4c51cd8b820dc91735590c69cdf2f4cc7a95e6e6c76dc6957d98fb28a888",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "f26e4c51cd8b820dc91735590c69cdf2f4cc7a95e6e6c76dc6957d98fb28a888",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.978515625,
+            "mode_counts": [
+              230,
+              307,
+              244,
+              296,
+              230,
+              209,
+              268,
+              220
+            ]
+          },
+          "independent_sw1": 0.10469176719889584,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "01a8b37c846b4f551bd91346a52e1d426d98cacd8c8bc66428c49fe4575edb9e",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "01a8b37c846b4f551bd91346a52e1d426d98cacd8c8bc66428c49fe4575edb9e",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "device": "cpu",
+      "schedule": "cosine",
+      "seed": 5003,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.986328125,
+            "mode_counts": [
+              281,
+              264,
+              242,
+              273,
+              239,
+              206,
+              261,
+              254
+            ]
+          },
+          "independent_sw1": 0.09746780706550204,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "ffada01be531fa2351ce75f970f95baddb0e096a1ee085b212a014599319e664",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "ffada01be531fa2351ce75f970f95baddb0e096a1ee085b212a014599319e664",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.98291015625,
+            "mode_counts": [
+              280,
+              267,
+              242,
+              269,
+              244,
+              206,
+              260,
+              245
+            ]
+          },
+          "independent_sw1": 0.09207243688391828,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "f0515071670a8584cada2d25a71be33c218741668fab096c36e1ceea623f1887",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "f0515071670a8584cada2d25a71be33c218741668fab096c36e1ceea623f1887",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.9853515625,
+            "mode_counts": [
+              280,
+              264,
+              242,
+              273,
+              239,
+              206,
+              261,
+              253
+            ]
+          },
+          "independent_sw1": 0.09764407347033943,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "1663ad89a2d938e51ad3b7e53487a70a9b0b06deb9ce5ce81f3fd410f723604f",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "1663ad89a2d938e51ad3b7e53487a70a9b0b06deb9ce5ce81f3fd410f723604f",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "device": "cpu",
+      "schedule": "constant",
+      "seed": 5003,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.98974609375,
+            "mode_counts": [
+              276,
+              270,
+              249,
+              270,
+              253,
+              213,
+              251,
+              245
+            ]
+          },
+          "independent_sw1": 0.0858453940339832,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "2e9613c2185c8504271bbe73b2fb9188657f36203bdca924606d8b33d51464b7",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "2e9613c2185c8504271bbe73b2fb9188657f36203bdca924606d8b33d51464b7",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.98876953125,
+            "mode_counts": [
+              274,
+              273,
+              251,
+              270,
+              249,
+              205,
+              253,
+              250
+            ]
+          },
+          "independent_sw1": 0.09778603649561335,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "361889b80feee7ab2905f4eebc1f94f941c949ca2edc33bb8ad529d4b805d985",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "361889b80feee7ab2905f4eebc1f94f941c949ca2edc33bb8ad529d4b805d985",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.98876953125,
+            "mode_counts": [
+              278,
+              274,
+              255,
+              278,
+              235,
+              227,
+              245,
+              233
+            ]
+          },
+          "independent_sw1": 0.09957974093938744,
+          "metric_abs_error": 1.3877787807814457e-17,
+          "regenerated_sha256": "d09b40854c5e916d2204162af7fce9281148db589ffe89225d2f3ae46b2c82fc",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "d09b40854c5e916d2204162af7fce9281148db589ffe89225d2f3ae46b2c82fc",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "device": "cpu",
+      "schedule": "cosine",
+      "seed": 5003,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.9892578125,
+            "mode_counts": [
+              275,
+              266,
+              246,
+              271,
+              254,
+              208,
+              254,
+              252
+            ]
+          },
+          "independent_sw1": 0.08887329542045191,
+          "metric_abs_error": 1.3877787807814457e-17,
+          "regenerated_sha256": "ccab864765232fbc254cace1ab76bd721b9788f182b2dcfe69c4aab3d2931cb9",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "ccab864765232fbc254cace1ab76bd721b9788f182b2dcfe69c4aab3d2931cb9",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.98828125,
+            "mode_counts": [
+              276,
+              264,
+              252,
+              267,
+              254,
+              206,
+              256,
+              249
+            ]
+          },
+          "independent_sw1": 0.09120763378444258,
+          "metric_abs_error": 1.3877787807814457e-17,
+          "regenerated_sha256": "56d96b8b80dd621cee27fa11b86b387dcaff361eb9cbbac2bbf9dfdbbeebe075",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "56d96b8b80dd621cee27fa11b86b387dcaff361eb9cbbac2bbf9dfdbbeebe075",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.990234375,
+            "mode_counts": [
+              276,
+              266,
+              246,
+              271,
+              255,
+              208,
+              254,
+              252
+            ]
+          },
+          "independent_sw1": 0.08880344030462184,
+          "metric_abs_error": 1.3877787807814457e-17,
+          "regenerated_sha256": "b611c35e8b229ab1d69ff2fb53f23180f85f178dbb0db260b22b51e20662fc97",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "b611c35e8b229ab1d69ff2fb53f23180f85f178dbb0db260b22b51e20662fc97",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "device": "cpu",
+      "schedule": "constant",
+      "seed": 5004,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.98193359375,
+            "mode_counts": [
+              235,
+              246,
+              253,
+              254,
+              283,
+              271,
+              235,
+              234
+            ]
+          },
+          "independent_sw1": 0.038030494541827595,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "88ffeacc358f9ad10b5f7c65ffa0b3739f1785b8368b5efb8523e84764378752",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "88ffeacc358f9ad10b5f7c65ffa0b3739f1785b8368b5efb8523e84764378752",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.97900390625,
+            "mode_counts": [
+              229,
+              238,
+              249,
+              253,
+              277,
+              275,
+              245,
+              239
+            ]
+          },
+          "independent_sw1": 0.0353498107320603,
+          "metric_abs_error": 6.938893903907228e-18,
+          "regenerated_sha256": "95cd2ef715296d3a7c4376111cacb01bf28962b6b03aaf4c5aee2c4d79d5a892",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "95cd2ef715296d3a7c4376111cacb01bf28962b6b03aaf4c5aee2c4d79d5a892",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.978515625,
+            "mode_counts": [
+              244,
+              243,
+              252,
+              235,
+              316,
+              264,
+              235,
+              215
+            ]
+          },
+          "independent_sw1": 0.07952915847435216,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "d99f9a0e3fea0c8205460e6181b093e7fe9d1a7b06205377780f723e547a4b30",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "d99f9a0e3fea0c8205460e6181b093e7fe9d1a7b06205377780f723e547a4b30",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "device": "cpu",
+      "schedule": "cosine",
+      "seed": 5004,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.98193359375,
+            "mode_counts": [
+              235,
+              240,
+              258,
+              259,
+              262,
+              266,
+              246,
+              245
+            ]
+          },
+          "independent_sw1": 0.02428513374613687,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "a9d9d1b356bf0112a11f432fdd47e7213cb06fc5332422e23c787b41c2f7c88f",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "a9d9d1b356bf0112a11f432fdd47e7213cb06fc5332422e23c787b41c2f7c88f",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.97998046875,
+            "mode_counts": [
+              234,
+              240,
+              257,
+              260,
+              265,
+              266,
+              243,
+              242
+            ]
+          },
+          "independent_sw1": 0.02689557794091123,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "a6462cbceb55cada8c02175840c16fd1bb49ca0cf406b0f879ed1b3ea44f5d31",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "a6462cbceb55cada8c02175840c16fd1bb49ca0cf406b0f879ed1b3ea44f5d31",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.9833984375,
+            "mode_counts": [
+              236,
+              241,
+              258,
+              259,
+              263,
+              266,
+              246,
+              245
+            ]
+          },
+          "independent_sw1": 0.02410170428663643,
+          "metric_abs_error": 3.469446951953614e-18,
+          "regenerated_sha256": "35781561c9d34e8329ab7e7d27278dc4cac1b5197cf0342e718d01cb2efad89f",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "35781561c9d34e8329ab7e7d27278dc4cac1b5197cf0342e718d01cb2efad89f",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "device": "cpu",
+      "schedule": "constant",
+      "seed": 5004,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.986328125,
+            "mode_counts": [
+              243,
+              250,
+              247,
+              255,
+              272,
+              270,
+              245,
+              238
+            ]
+          },
+          "independent_sw1": 0.026967562397345404,
+          "metric_abs_error": 3.469446951953614e-18,
+          "regenerated_sha256": "d02d189c43d6cba2bcb2731b14aecadc93908b06406de14b08c20e0c45b86215",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "d02d189c43d6cba2bcb2731b14aecadc93908b06406de14b08c20e0c45b86215",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.98779296875,
+            "mode_counts": [
+              242,
+              241,
+              247,
+              261,
+              272,
+              273,
+              245,
+              242
+            ]
+          },
+          "independent_sw1": 0.028546773383894226,
+          "metric_abs_error": 3.469446951953614e-18,
+          "regenerated_sha256": "cb1d6806e6b28eb1b923289a3484ecfd16298cec5641f38a02d1323088cd8b36",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "cb1d6806e6b28eb1b923289a3484ecfd16298cec5641f38a02d1323088cd8b36",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.978515625,
+            "mode_counts": [
+              249,
+              265,
+              222,
+              272,
+              224,
+              264,
+              246,
+              262
+            ]
+          },
+          "independent_sw1": 0.04731219832452366,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "1348a4905a42e8d19d94b9256232db5b1a8cdca9b9989e80ec762f803f4c9dde",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "1348a4905a42e8d19d94b9256232db5b1a8cdca9b9989e80ec762f803f4c9dde",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "device": "cpu",
+      "schedule": "cosine",
+      "seed": 5004,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.98779296875,
+            "mode_counts": [
+              246,
+              241,
+              253,
+              257,
+              268,
+              269,
+              242,
+              247
+            ]
+          },
+          "independent_sw1": 0.02439816643123912,
+          "metric_abs_error": 3.469446951953614e-18,
+          "regenerated_sha256": "2d7e314dd754488c5a7313c60b84f1bd106b2fbcdcac7f9faa53b22ffc8f55e9",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "2d7e314dd754488c5a7313c60b84f1bd106b2fbcdcac7f9faa53b22ffc8f55e9",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.9892578125,
+            "mode_counts": [
+              244,
+              242,
+              253,
+              261,
+              271,
+              265,
+              246,
+              244
+            ]
+          },
+          "independent_sw1": 0.024183094342500606,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "2032a153c6f911f8dd86af900f41ac6e0e16e7145052c58f888868335a6766d7",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "2032a153c6f911f8dd86af900f41ac6e0e16e7145052c58f888868335a6766d7",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_coverage": {
+            "covered_modes": 8,
+            "inlier_fraction": 0.98876953125,
+            "mode_counts": [
+              247,
+              241,
+              253,
+              256,
+              268,
+              269,
+              243,
+              248
+            ]
+          },
+          "independent_sw1": 0.02444794034260138,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "748c35ed677ec8133607c3d86bba809447c581748a97947caacd80a00d9df5ec",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "748c35ed677ec8133607c3d86bba809447c581748a97947caacd80a00d9df5ec",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "moons",
+      "device": "cpu",
+      "schedule": "constant",
+      "seed": 4001,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.025642063437391244,
+          "metric_abs_error": 3.469446951953614e-18,
+          "regenerated_sha256": "63bf5037519fd5527d71d4f597f5bad464e9dec135e71b907ccbe7b06b18985c",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "63bf5037519fd5527d71d4f597f5bad464e9dec135e71b907ccbe7b06b18985c",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.030846709527595384,
+          "metric_abs_error": 3.469446951953614e-18,
+          "regenerated_sha256": "80cb2f939932f4ba153cefd087e1883710a602c815a3a2f63274ebad4cef4dc2",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "80cb2f939932f4ba153cefd087e1883710a602c815a3a2f63274ebad4cef4dc2",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.08975725244012761,
+          "metric_abs_error": 1.3877787807814457e-17,
+          "regenerated_sha256": "2076078c53e53304f7944368df34147d9257b47654000eb2d78fe64f9e732ce4",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "2076078c53e53304f7944368df34147d9257b47654000eb2d78fe64f9e732ce4",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "moons",
+      "device": "cpu",
+      "schedule": "cosine",
+      "seed": 4001,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.030582267944279106,
+          "metric_abs_error": 3.469446951953614e-18,
+          "regenerated_sha256": "8f96957204822f2f2fb624ff4a747196263bad56265a38e040948c42a055a01a",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "8f96957204822f2f2fb624ff4a747196263bad56265a38e040948c42a055a01a",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.030993955563507675,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "48db547985d9404c82627059f4cb98a3dd965a2fde7b771714826a98bc71a766",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "48db547985d9404c82627059f4cb98a3dd965a2fde7b771714826a98bc71a766",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.03040229857902517,
+          "metric_abs_error": 3.469446951953614e-18,
+          "regenerated_sha256": "7981202490eed5a5e8628af71d2a764c889e2ca4a3fc41da2d3fbf74da5fc84f",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "7981202490eed5a5e8628af71d2a764c889e2ca4a3fc41da2d3fbf74da5fc84f",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "moons",
+      "device": "cpu",
+      "schedule": "constant",
+      "seed": 4001,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.030459205011821353,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "b5de42b80f2e4b0152fce13dbafadd0a242665cfc0da3051908eea127f4de504",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "b5de42b80f2e4b0152fce13dbafadd0a242665cfc0da3051908eea127f4de504",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.02954543249287412,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "98c7c382687de29f9adbcb8ce053780fdd0356b1f3f4d952e7827fd37e808c1e",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "98c7c382687de29f9adbcb8ce053780fdd0356b1f3f4d952e7827fd37e808c1e",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.06247118653996821,
+          "metric_abs_error": 6.938893903907228e-18,
+          "regenerated_sha256": "bc9ee84af75e5a758162f78a3dbe79f72df22bc41a951da5d347f2e9058beaf1",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "bc9ee84af75e5a758162f78a3dbe79f72df22bc41a951da5d347f2e9058beaf1",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "moons",
+      "device": "cpu",
+      "schedule": "cosine",
+      "seed": 4001,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.03366479902334493,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "556ac4b6627a031d32f60f6ab287c0821c8b7f33b7c7c94aab4623340cc81daf",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "556ac4b6627a031d32f60f6ab287c0821c8b7f33b7c7c94aab4623340cc81daf",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.033693251816480106,
+          "metric_abs_error": 6.938893903907228e-18,
+          "regenerated_sha256": "c7e0f6ec1f6bd8740082183f2d266e9adf9fe058eaec807dbd1ff88d423f4d91",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "c7e0f6ec1f6bd8740082183f2d266e9adf9fe058eaec807dbd1ff88d423f4d91",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.03357380242714801,
+          "metric_abs_error": 6.938893903907228e-18,
+          "regenerated_sha256": "0a33cc53cbbd8cbe75e573646faebfc7baae7a280dfe16e64579c1b932bbffcb",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "0a33cc53cbbd8cbe75e573646faebfc7baae7a280dfe16e64579c1b932bbffcb",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "moons",
+      "device": "cpu",
+      "schedule": "constant",
+      "seed": 4002,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.04638613348512662,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "fd30564784f6e8e9eaff0b5f2faf85f7ca3998ca46a99c1e7143f3e293de6347",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "fd30564784f6e8e9eaff0b5f2faf85f7ca3998ca46a99c1e7143f3e293de6347",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.043121140510670584,
+          "metric_abs_error": 6.938893903907228e-18,
+          "regenerated_sha256": "1f10f69ce911319a3b3803d084eb7310b36ed147f28c79cb4b03a53847f97ae7",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "1f10f69ce911319a3b3803d084eb7310b36ed147f28c79cb4b03a53847f97ae7",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.12742328026214716,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "03522705cd02b0888e22a0297e1537cae41fcac8ad5c22b4c9db90f1f617b7a7",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "03522705cd02b0888e22a0297e1537cae41fcac8ad5c22b4c9db90f1f617b7a7",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "moons",
+      "device": "cpu",
+      "schedule": "cosine",
+      "seed": 4002,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.06283090466378974,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "3e6819109a4f539e220ac152b42b5d65a5738235353e1a8e43b1cccf65231d86",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "3e6819109a4f539e220ac152b42b5d65a5738235353e1a8e43b1cccf65231d86",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.0570370929063896,
+          "metric_abs_error": 6.938893903907228e-18,
+          "regenerated_sha256": "46a0f29d971098b9fac7f74a11249a9c92c3e1b7ab7b2a118069dd6b55e227fe",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "46a0f29d971098b9fac7f74a11249a9c92c3e1b7ab7b2a118069dd6b55e227fe",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.061398379274358365,
+          "metric_abs_error": 6.938893903907228e-18,
+          "regenerated_sha256": "e122b731f0b9cc047bd47791ff9a013cb0b3a92d77bac915d271b38dc201fa72",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "e122b731f0b9cc047bd47791ff9a013cb0b3a92d77bac915d271b38dc201fa72",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "moons",
+      "device": "cpu",
+      "schedule": "constant",
+      "seed": 4002,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.053705505265432316,
+          "metric_abs_error": 6.938893903907228e-18,
+          "regenerated_sha256": "c8b4ec4f265ca913e37659ac6f109bfda5ffcc850c81a64791312fd04738c0f7",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "c8b4ec4f265ca913e37659ac6f109bfda5ffcc850c81a64791312fd04738c0f7",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.055021663638012065,
+          "metric_abs_error": 6.938893903907228e-18,
+          "regenerated_sha256": "a3c1c4ee7c7e438413e274102b245d86bb69389d047778d66505f9702b3a26fb",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "a3c1c4ee7c7e438413e274102b245d86bb69389d047778d66505f9702b3a26fb",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.15088856848736054,
+          "metric_abs_error": 2.7755575615628914e-17,
+          "regenerated_sha256": "bd584a691ededc02ecd07603febac24bfbddb5e1f38185884604f8e76b9db0ba",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "bd584a691ededc02ecd07603febac24bfbddb5e1f38185884604f8e76b9db0ba",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "moons",
+      "device": "cpu",
+      "schedule": "cosine",
+      "seed": 4002,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.05331384732784386,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "e10cd6579a16f57796da492edd73c34d04b2c3b442a48325cfb460764dbcafc7",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "e10cd6579a16f57796da492edd73c34d04b2c3b442a48325cfb460764dbcafc7",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.05293891934276186,
+          "metric_abs_error": 1.3877787807814457e-17,
+          "regenerated_sha256": "08b26c4c3bd7ebe27f1ea39dfbda38fc91c0aede59fb7025b3bacbb9b93c3878",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "08b26c4c3bd7ebe27f1ea39dfbda38fc91c0aede59fb7025b3bacbb9b93c3878",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.0536362272798086,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "c6722112c8dce7a8bab066b99135148898587e0935d70f69b2dc298af1721bdd",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "c6722112c8dce7a8bab066b99135148898587e0935d70f69b2dc298af1721bdd",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "moons",
+      "device": "cpu",
+      "schedule": "constant",
+      "seed": 4003,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.03124214082513407,
+          "metric_abs_error": 3.469446951953614e-18,
+          "regenerated_sha256": "43ff61c4264f08c22c3a60b4a6329faed1709efad81fde5deb6b7c440b27b56d",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "43ff61c4264f08c22c3a60b4a6329faed1709efad81fde5deb6b7c440b27b56d",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.03398861780851464,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "7582c82dee3d05e9aa15b607cd50b8e75d5f6ade22b343f733778558cc2e4c3a",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "7582c82dee3d05e9aa15b607cd50b8e75d5f6ade22b343f733778558cc2e4c3a",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.07486146170086319,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "ff173d941d58d0160b09ba28b55b8ec60e399fafd3833cbc17ad6c37e912c708",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "ff173d941d58d0160b09ba28b55b8ec60e399fafd3833cbc17ad6c37e912c708",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "moons",
+      "device": "cpu",
+      "schedule": "cosine",
+      "seed": 4003,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.032290365793528196,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "aea5f710090d80b7124be99b869456696be0ce143bf5a0f9bebd73ca26805565",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "aea5f710090d80b7124be99b869456696be0ce143bf5a0f9bebd73ca26805565",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.03169784303069999,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "978e186f0e0351a9328f3a618457c4ae2ff73f5889d88b01f6fa613b8b85955c",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "978e186f0e0351a9328f3a618457c4ae2ff73f5889d88b01f6fa613b8b85955c",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.0322067448805662,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "f84b3092b3b0f45cfd0da4a86fb78d74e61830cf321e8ae2f47118b00a4dc312",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "f84b3092b3b0f45cfd0da4a86fb78d74e61830cf321e8ae2f47118b00a4dc312",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "moons",
+      "device": "cpu",
+      "schedule": "constant",
+      "seed": 4003,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.04152455448824123,
+          "metric_abs_error": 6.938893903907228e-18,
+          "regenerated_sha256": "be4e1e6b51cba69193e08e5158bebd2e3e9d01c49ac8ff55d1f0b99375193e13",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "be4e1e6b51cba69193e08e5158bebd2e3e9d01c49ac8ff55d1f0b99375193e13",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.030135406867296925,
+          "metric_abs_error": 3.469446951953614e-18,
+          "regenerated_sha256": "bfb4e066e42760f78e801960bcf51a8ec572ea7a8f77ab093448f2fbc98a2bf4",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "bfb4e066e42760f78e801960bcf51a8ec572ea7a8f77ab093448f2fbc98a2bf4",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.04166438246619169,
+          "metric_abs_error": 6.938893903907228e-18,
+          "regenerated_sha256": "e4d0bfb94a6fede6058243a788850795dd94d7586bc0954ffbeed52a47a4ea05",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "e4d0bfb94a6fede6058243a788850795dd94d7586bc0954ffbeed52a47a4ea05",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "moons",
+      "device": "cpu",
+      "schedule": "cosine",
+      "seed": 4003,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.02877600031846668,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "13fccf0ff8173384f828e006e7061b7873418283095cf0c3203b817549a84195",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "13fccf0ff8173384f828e006e7061b7873418283095cf0c3203b817549a84195",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.028709219820330624,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "944fe85865c71a38721a41998605afd2406083b466987e794d66061bb67b4c7a",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "944fe85865c71a38721a41998605afd2406083b466987e794d66061bb67b4c7a",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.028792310707599484,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "8d38f2ed5835a9596df46728b4083edc5e5fd4ee361a747ecb3092b51f4e03d5",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "8d38f2ed5835a9596df46728b4083edc5e5fd4ee361a747ecb3092b51f4e03d5",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "moons",
+      "device": "cpu",
+      "schedule": "constant",
+      "seed": 4004,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.031062248443482585,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "b3669a67bcc362c34ffdb4773b6321d6050e23db6762dd5a3518917f54f2245e",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "b3669a67bcc362c34ffdb4773b6321d6050e23db6762dd5a3518917f54f2245e",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.02817949034359439,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "5334c099c25c53c58124a79b50d70663b7732bb71cf507147f5507032f4a997f",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "5334c099c25c53c58124a79b50d70663b7732bb71cf507147f5507032f4a997f",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.08197574270816466,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "1638b9764ba4714146705a5352743f244899626fe5e79eecfedbfa96d42da06c",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "1638b9764ba4714146705a5352743f244899626fe5e79eecfedbfa96d42da06c",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "moons",
+      "device": "cpu",
+      "schedule": "cosine",
+      "seed": 4004,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.032558380836393716,
+          "metric_abs_error": 6.938893903907228e-18,
+          "regenerated_sha256": "3928b64b02ae6b8ea68faea6dd7b84ad067a024c5a08491a1a11ff52de02f24d",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "3928b64b02ae6b8ea68faea6dd7b84ad067a024c5a08491a1a11ff52de02f24d",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.026983990472191147,
+          "metric_abs_error": 6.938893903907228e-18,
+          "regenerated_sha256": "72cf786d4ad5de5e76b3997a52466594dce7afbe79b01d39455ff9f3f3a8022b",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "72cf786d4ad5de5e76b3997a52466594dce7afbe79b01d39455ff9f3f3a8022b",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.03257618622118942,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "1a9cd8cd219c64a6c1e16a947b723fd01a8a838eebe3ac3dafc13635cc8b07e5",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "1a9cd8cd219c64a6c1e16a947b723fd01a8a838eebe3ac3dafc13635cc8b07e5",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "moons",
+      "device": "cpu",
+      "schedule": "constant",
+      "seed": 4004,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.02918260246386622,
+          "metric_abs_error": 3.469446951953614e-18,
+          "regenerated_sha256": "427e17cc59a45b0fe20c16866731c9d997c29d65edcd2f1ae9f3d8434c61a989",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "427e17cc59a45b0fe20c16866731c9d997c29d65edcd2f1ae9f3d8434c61a989",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.027035798672352333,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "096d9984bd0643ebc5bea62417e31aa4f8ed41af9cf3bc6c3cd6c2bb7cf8d547",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "096d9984bd0643ebc5bea62417e31aa4f8ed41af9cf3bc6c3cd6c2bb7cf8d547",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.07446965815858339,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "76f38c8d9eadab96498feeb4cfc6137c1645fc7e46f3b979ba5ed805d2c6ef20",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "76f38c8d9eadab96498feeb4cfc6137c1645fc7e46f3b979ba5ed805d2c6ef20",
+          "state_keys": 12
+        }
+      }
+    },
+    {
+      "dataset": "moons",
+      "device": "cpu",
+      "schedule": "cosine",
+      "seed": 4004,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.02828460017815003,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "840b31a79121f40a50d4d28b770acb53052f342180936f13ebca2b6a3e505f2f",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "840b31a79121f40a50d4d28b770acb53052f342180936f13ebca2b6a3e505f2f",
+          "state_keys": 12
+        },
+        "ema0999": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.02774848048028663,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "bf9036034da1bbe8e14145f4207e57f3567b0ea7ddf8713f3996e0f8f06665dc",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "bf9036034da1bbe8e14145f4207e57f3567b0ea7ddf8713f3996e0f8f06665dc",
+          "state_keys": 12
+        },
+        "raw": {
+          "bitwise_equal": true,
+          "independent_sw1": 0.028309148592991964,
+          "metric_abs_error": 0.0,
+          "regenerated_sha256": "f3d59fa1497c67259ce8cb4d26aa52bc4ab16e22cb054075af5b5da015e0ffbb",
+          "regeneration_max_abs_error": 0.0,
+          "retained_sha256": "f3d59fa1497c67259ce8cb4d26aa52bc4ab16e22cb054075af5b5da015e0ffbb",
+          "state_keys": 12
+        }
+      }
+    }
+  ],
+  "complete_cells": 32,
+  "coverage": "Independent vectorized SW1 and coverage calculation, array/input hashes, matched prefixes, state schema including buffers, LR endpoints, every saved state resampled when requested. No full retraining in this check.",
+  "environment": {
+    "machine": "arm64",
+    "mps_available": true,
+    "numpy": "2.4.6",
+    "packages": {
+      "Jinja2": "3.1.6",
+      "MarkupSafe": "3.0.4",
+      "contourpy": "1.3.3",
+      "cycler": "0.12.1",
+      "filelock": "4.0.12",
+      "fonttools": "4.66.1",
+      "fsspec": "2026.9.0",
+      "kiwisolver": "1.5.1",
+      "matplotlib": "3.11.2",
+      "mpmath": "1.3.0",
+      "networkx": "3.6.1",
+      "numpy": "2.4.6",
+      "packaging": "26.3",
+      "pillow": "12.3.0",
+      "pip": "23.2.1",
+      "pyparsing": "3.3.3",
+      "python-dateutil": "2.9.0.post0",
+      "scipy": "1.17.1",
+      "setuptools": "84.0.0",
+      "six": "1.17.0",
+      "sympy": "1.14.0",
+      "torch": "2.14.1",
+      "typing_extensions": "4.16.0"
+    },
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.11.6 (v3.11.6:8b6ee5ba3b, Oct  2 2023, 11:18:21) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "torch": "2.14.1",
+    "torch_threads": 1
+  },
+  "expected_cells": 32,
+  "measurements": {
+    "media_type": "application/octet-stream",
+    "path": "analysis/measurements.json",
+    "retention": "retained",
+    "sha256": "9fde52d941ee32e69f4dfec586b47eb4dc86efedf8559a77386bfcbec8582eb0"
+  },
+  "missing_cells": [],
+  "regenerated_states": 96,
+  "source": {
+    "media_type": "application/octet-stream",
+    "path": "study/verify.py",
+    "retention": "retained",
+    "sha256": "dc9bec1e01309bf8ae72eb624bbd19ac8c9bcf49a78573163ec6adfa2d733fd1"
+  },
+  "status": "pass",
+  "wall_seconds": 45.52555716689676
+}

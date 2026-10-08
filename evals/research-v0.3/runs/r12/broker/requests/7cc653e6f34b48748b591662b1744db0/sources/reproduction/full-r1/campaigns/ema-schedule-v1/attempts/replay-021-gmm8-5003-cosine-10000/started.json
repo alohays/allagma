@@ -1,0 +1,52 @@
+{
+  "argv": [
+    "reproduction/full-r1/study/runner.py",
+    "train",
+    "--attempt",
+    "replay-021-gmm8-5003-cosine-10000",
+    "--dataset",
+    "gmm8",
+    "--seed",
+    "5003",
+    "--policy",
+    "cosine",
+    "--horizon",
+    "10000"
+  ],
+  "attempt_id": "replay-021-gmm8-5003-cosine-10000",
+  "input": {
+    "media_type": "application/octet-stream",
+    "path": "campaigns/ema-schedule-v1/attempts/replay-021-gmm8-5003-cosine-10000/input.json",
+    "retention": "retained",
+    "sha256": "606cc1479f8a77e1531a430a32ac888a68f68e82e8cb18c15b31d07e236648a8"
+  },
+  "lock": {
+    "media_type": "application/octet-stream",
+    "path": "campaigns/ema-schedule-v1/lock.yaml",
+    "retention": "retained",
+    "sha256": "6f211f947c838760db7926dc7420081f680724612d83c8a8a5dfd50a6d1d4bcb"
+  },
+  "protocol": {
+    "media_type": "application/octet-stream",
+    "path": "campaigns/ema-schedule-v1/protocol.json",
+    "retention": "retained",
+    "sha256": "dca3cbe24ecc9d7310c1bbd16a329043cfab040c48a287e76012e45aff77d90a"
+  },
+  "source_hashes": {
+    "study/analyze.py": "6d68129831145b23347a7788d3283c11c1957d038a973db7d4ead8c26d5edb6b",
+    "study/common.py": "c4f6d2456baaa09270a4622be007c45ef7a5080992e9508697feeca8012f0bc0",
+    "study/compare_replay.py": "25a1b84ede3f270b9bbb2c2e89fa0ae009c6a37ec861cb418b417d2b02c74536",
+    "study/dispatch.py": "e9757148134a6ee46f3be9b0fa316a030579706071c038b9e995a5a2d5aab0ed",
+    "study/freeze.py": "67d3300f528a24ee93d4e32c3aa0f126c824614601d00dfe200edd97ff72560d",
+    "study/prepare.py": "b1e43e1662becff618cbff688f6a1ab8dcc3859235513ada978c7c3797f7d527",
+    "study/records.py": "4f623653e356b4d47c2ff66c4349d53eaac622bb26d29f6082b429d8c8587027",
+    "study/reference.py": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1",
+    "study/replay_setup.py": "c5fade42d74f0d1212df6831bdcc44e37b82b96033c7ce2b13b6ec929ea4213b",
+    "study/reproduce.py": "3da81d5c8601cedfd41720f4e9bb1f17b7c08ac0216688bad5cd13ba8359dc71",
+    "study/runner.py": "cfa0bf5ae9c5f882db59d5a4a5a3b92958725138e886f0c6ba9facd443fdc084",
+    "study/verify.py": "dc9bec1e01309bf8ae72eb624bbd19ac8c9bcf49a78573163ec6adfa2d733fd1",
+    "study/write_report.py": "d3ae98003338262e766b1c2483a84d7a600d9e7346ab056e2687553250885b10"
+  },
+  "source_revision": "52a5d7e2bdc05bc9b227494606359d46f639693f6c5b14805eb5e7f04b10bf18",
+  "started_at": "2026-10-08T07:11:30.377871+00:00"
+}

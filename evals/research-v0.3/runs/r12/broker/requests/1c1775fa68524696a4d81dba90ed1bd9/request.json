@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "reproduction/full-r1/.venv/bin/python",
+    "reproduction/full-r1/study/runner.py",
+    "train",
+    "--attempt",
+    "replay-002-moons-4001-cosine-5000",
+    "--dataset",
+    "moons",
+    "--seed",
+    "4001",
+    "--policy",
+    "cosine",
+    "--horizon",
+    "5000"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "full-r1-replay-002-moons-4001-cosine-5000",
+  "request_id": "1c1775fa68524696a4d81dba90ed1bd9",
+  "timeout_seconds": 45.0
+}

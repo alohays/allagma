@@ -1,0 +1,158 @@
+{
+  "attempt_id": "confirm-006-moons-4002-cosine-10000",
+  "attempt_number": 1,
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "campaign_id": "ema-schedule-v1",
+  "command": [
+    ".venv/bin/python",
+    "study/runner.py",
+    "train",
+    "--attempt",
+    "confirm-006-moons-4002-cosine-10000",
+    "--dataset",
+    "moons",
+    "--seed",
+    "4002",
+    "--policy",
+    "cosine",
+    "--horizon",
+    "10000"
+  ],
+  "data_revision": "3bd3831671db1368297e04738927216958ad89e995792bc87845709d3a80e5f1",
+  "ended_at": "2026-10-08T06:58:34.667165+00:00",
+  "environment": {
+    "device": "cpu",
+    "dtype": "float32",
+    "numpy": "2.4.6",
+    "python": "3.11.6",
+    "torch": "2.14.1"
+  },
+  "error": null,
+  "exit_code": 0,
+  "experiment_id": "moons-4002-cosine-10000",
+  "inputs": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-006-moons-4002-cosine-10000/input.json",
+      "retention": "retained",
+      "sha256": "3bd3831671db1368297e04738927216958ad89e995792bc87845709d3a80e5f1"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/protocol.json",
+      "retention": "retained",
+      "sha256": "dca3cbe24ecc9d7310c1bbd16a329043cfab040c48a287e76012e45aff77d90a"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/lock.yaml",
+      "retention": "retained",
+      "sha256": "6f211f947c838760db7926dc7420081f680724612d83c8a8a5dfd50a6d1d4bcb"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": ".compute/requests/66e42e946ee946c9ae04d149bd7f3652.json",
+      "retention": "retained",
+      "sha256": "94d49370c3b77d4fb1abaf01c97173e6e67b55df60664db11ee5610d6ab8a7b2"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-006-moons-4002-cosine-10000/source/analyze.py",
+      "retention": "retained",
+      "sha256": "6d68129831145b23347a7788d3283c11c1957d038a973db7d4ead8c26d5edb6b"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-006-moons-4002-cosine-10000/source/common.py",
+      "retention": "retained",
+      "sha256": "c4f6d2456baaa09270a4622be007c45ef7a5080992e9508697feeca8012f0bc0"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-006-moons-4002-cosine-10000/source/dispatch.py",
+      "retention": "retained",
+      "sha256": "e9757148134a6ee46f3be9b0fa316a030579706071c038b9e995a5a2d5aab0ed"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-006-moons-4002-cosine-10000/source/freeze.py",
+      "retention": "retained",
+      "sha256": "67d3300f528a24ee93d4e32c3aa0f126c824614601d00dfe200edd97ff72560d"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-006-moons-4002-cosine-10000/source/prepare.py",
+      "retention": "retained",
+      "sha256": "b1e43e1662becff618cbff688f6a1ab8dcc3859235513ada978c7c3797f7d527"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-006-moons-4002-cosine-10000/source/reference.py",
+      "retention": "retained",
+      "sha256": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-006-moons-4002-cosine-10000/source/runner.py",
+      "retention": "retained",
+      "sha256": "cfa0bf5ae9c5f882db59d5a4a5a3b92958725138e886f0c6ba9facd443fdc084"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-006-moons-4002-cosine-10000/source/verify.py",
+      "retention": "retained",
+      "sha256": "dc9bec1e01309bf8ae72eb624bbd19ac8c9bcf49a78573163ec6adfa2d733fd1"
+    }
+  ],
+  "model_revision": "5656ff216411eba1262a90b796d51a57dc97e350e02b68d4a8cd0d7eac52bbdd",
+  "outputs": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-006-moons-4002-cosine-10000/finished.json",
+      "retention": "retained",
+      "sha256": "2f4e71a001f8103b409d7810d8e9f928da9ca5d5e76362c4da519f487efa5d48"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-006-moons-4002-cosine-10000/result.json",
+      "retention": "retained",
+      "sha256": "147ccf18ac24c53b2bba93029a08ae054a83970c8263c7c47799504222f69051"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-006-moons-4002-cosine-10000/step-10000/arrays.npz",
+      "retention": "retained",
+      "sha256": "7e6b58593697451cffcb2b05f5fa796efffe60f150c5f600764cb57ace354b76"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-006-moons-4002-cosine-10000/step-10000/weights.npz",
+      "retention": "retained",
+      "sha256": "13684215959aba26c305f7948b844d9693725c15abc6d85ace7d4b9330ce8d8d"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-006-moons-4002-cosine-10000/trace.jsonl",
+      "retention": "retained",
+      "sha256": "289bb061f888607e7128616f83980823a73df0976d5aa6ab92aa046e4aee18cd"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": ".compute/responses/66e42e946ee946c9ae04d149bd7f3652.json",
+      "retention": "retained",
+      "sha256": "6bf1db8300bc22c0482e8a62d8a831727abe686f078d49e954a0db6e33e01fff"
+    }
+  ],
+  "protocol_revision": "ema-schedule-v1",
+  "record_type": "RunRecord",
+  "run_id": "confirm-006-moons-4002-cosine-10000",
+  "schema_version": "0.2",
+  "split": "confirmation",
+  "started_at": "2026-10-08T06:58:18.020798+00:00",
+  "status": "succeeded",
+  "usage": {
+    "money_usd": 0,
+    "tokens": 0,
+    "wall_seconds": 16.68491691700183
+  }
+}

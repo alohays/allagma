@@ -1,0 +1,47 @@
+{
+  "argv": [
+    "study/runner.py",
+    "train",
+    "--attempt",
+    "confirm-006-moons-4002-cosine-10000",
+    "--dataset",
+    "moons",
+    "--seed",
+    "4002",
+    "--policy",
+    "cosine",
+    "--horizon",
+    "10000"
+  ],
+  "attempt_id": "confirm-006-moons-4002-cosine-10000",
+  "input": {
+    "media_type": "application/octet-stream",
+    "path": "campaigns/ema-schedule-v1/attempts/confirm-006-moons-4002-cosine-10000/input.json",
+    "retention": "retained",
+    "sha256": "3bd3831671db1368297e04738927216958ad89e995792bc87845709d3a80e5f1"
+  },
+  "lock": {
+    "media_type": "application/octet-stream",
+    "path": "campaigns/ema-schedule-v1/lock.yaml",
+    "retention": "retained",
+    "sha256": "6f211f947c838760db7926dc7420081f680724612d83c8a8a5dfd50a6d1d4bcb"
+  },
+  "protocol": {
+    "media_type": "application/octet-stream",
+    "path": "campaigns/ema-schedule-v1/protocol.json",
+    "retention": "retained",
+    "sha256": "dca3cbe24ecc9d7310c1bbd16a329043cfab040c48a287e76012e45aff77d90a"
+  },
+  "source_hashes": {
+    "study/analyze.py": "6d68129831145b23347a7788d3283c11c1957d038a973db7d4ead8c26d5edb6b",
+    "study/common.py": "c4f6d2456baaa09270a4622be007c45ef7a5080992e9508697feeca8012f0bc0",
+    "study/dispatch.py": "e9757148134a6ee46f3be9b0fa316a030579706071c038b9e995a5a2d5aab0ed",
+    "study/freeze.py": "67d3300f528a24ee93d4e32c3aa0f126c824614601d00dfe200edd97ff72560d",
+    "study/prepare.py": "b1e43e1662becff618cbff688f6a1ab8dcc3859235513ada978c7c3797f7d527",
+    "study/reference.py": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1",
+    "study/runner.py": "cfa0bf5ae9c5f882db59d5a4a5a3b92958725138e886f0c6ba9facd443fdc084",
+    "study/verify.py": "dc9bec1e01309bf8ae72eb624bbd19ac8c9bcf49a78573163ec6adfa2d733fd1"
+  },
+  "source_revision": "5656ff216411eba1262a90b796d51a57dc97e350e02b68d4a8cd0d7eac52bbdd",
+  "started_at": "2026-10-08T06:58:18.020798+00:00"
+}

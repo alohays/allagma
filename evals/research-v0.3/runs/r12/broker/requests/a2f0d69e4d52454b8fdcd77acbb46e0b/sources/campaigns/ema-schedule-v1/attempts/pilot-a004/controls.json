@@ -1,0 +1,33 @@
+{
+  "checks": {
+    "coverage_all_draws_threshold": true,
+    "coverage_radius": true,
+    "ema_initial_copy": true,
+    "ema_recurrence": true,
+    "float32_buffers": true,
+    "lr_horizons": true,
+    "parameter_count": true,
+    "sw1_identity": true,
+    "sw1_permutation": true,
+    "sw1_translation": true
+  },
+  "coverage_example": {
+    "counts": [
+      20,
+      21,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "covered": 1,
+    "inlier_fraction": 0.02001953125,
+    "total_variation": 0.489990234375
+  },
+  "numerical_tolerance": 1e-12,
+  "passed": true,
+  "permutation_error": 1.9942056500774453e-17,
+  "translation_expected": 0.7929559814598741
+}

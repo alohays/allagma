@@ -1,0 +1,46 @@
+{
+  "status": "pass",
+  "preconfirmation_snapshot": {
+    "path": "broker/requests/d5e699b50b9e440bb63e0a5fa319ff14/sources/campaigns/ema-schedule-v1/confirmation-freeze.json",
+    "sha256": "246ddd50051ca02c4bb847d6b9dacd54de769ea89318c6066d43b4e5e39d3258"
+  },
+  "reference_science_unchanged": true,
+  "supplied_reference": "inputs/materials/prior-study/science.py",
+  "frozen_sources_match_first_confirmation_and_final": true,
+  "training": "Reference 296450-parameter float32 denoiser, CPU AdamW with lr .0003/weight decay .01/default betas and epsilon, clipping .5, every-step EMA initialized from raw initial weights. Actual shared input streams and 24 trajectories/200000 updates independently checked.",
+  "cosine": "Reference-indexed denominator D: lr=.0003*(1+cos(pi*(step-1)/D))/2. Separate 5k and 10k cosine horizons; only constant trajectory reused. Last applied rate near zero, exact boundary after D.",
+  "reproduction": "Actual new environment and 24 new full trajectories/200000 updates. Controller independently matches all 1312 weight/sample arrays bitwise and verifies all traces. Replayed data are not new independent seeds. No optimizer-state checkpoint claim.",
+  "recovery": "Initial interruption during imports and three pilot failures retained. MPS low watermark set to .1 without increasing high .2; qualified pilot selected CPU by prespecified runtime rule.",
+  "evidence": [
+    {
+      "root": "candidate",
+      "path": "study/runner.py",
+      "sha256": "cfa0bf5ae9c5f882db59d5a4a5a3b92958725138e886f0c6ba9facd443fdc084"
+    },
+    {
+      "root": "candidate",
+      "path": "study/analyze.py",
+      "sha256": "6d68129831145b23347a7788d3283c11c1957d038a973db7d4ead8c26d5edb6b"
+    },
+    {
+      "root": "candidate",
+      "path": "study/reference.py",
+      "sha256": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1"
+    },
+    {
+      "root": "candidate",
+      "path": "study/reproduce.py",
+      "sha256": "3da81d5c8601cedfd41720f4e9bb1f17b7c08ac0216688bad5cd13ba8359dc71"
+    },
+    {
+      "root": "candidate",
+      "path": "study/replay_setup.py",
+      "sha256": "c5fade42d74f0d1212df6831bdcc44e37b82b96033c7ce2b13b6ec929ea4213b"
+    },
+    {
+      "root": "candidate",
+      "path": "campaigns/ema-schedule-v1/confirmation-freeze.json",
+      "sha256": "246ddd50051ca02c4bb847d6b9dacd54de769ea89318c6066d43b4e5e39d3258"
+    }
+  ]
+}

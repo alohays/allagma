@@ -1,0 +1,821 @@
+{
+  "exclusions": [
+    {
+      "attempt": "pilot-a001",
+      "reason": "Pilot, failed, or interrupted; not confirmation evidence"
+    },
+    {
+      "attempt": "pilot-a002",
+      "reason": "Pilot, failed, or interrupted; not confirmation evidence"
+    },
+    {
+      "attempt": "pilot-a003",
+      "reason": "Pilot, failed, or interrupted; not confirmation evidence"
+    },
+    {
+      "attempt": "pilot-a004",
+      "reason": "Pilot, failed, or interrupted; not confirmation evidence"
+    },
+    {
+      "attempt": "pilot-a005",
+      "reason": "Pilot, failed, or interrupted; not confirmation evidence"
+    }
+  ],
+  "files": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-001-moons-4001-constant-10000/result.json",
+      "retention": "retained",
+      "sha256": "b7bfd5402c96a30fb550553a7c70930a4ce0012e8899ee1e434539b9eb989c81"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-001-moons-4001-constant-10000/step-5000/arrays.npz",
+      "retention": "retained",
+      "sha256": "86c048521cd54d8bc696b2f491739055c9f2b0ff56641fcf6518bf79bed2e284"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-001-moons-4001-constant-10000/step-5000/weights.npz",
+      "retention": "retained",
+      "sha256": "644f1f43954d566750d32c1f96eeb631328c4b67cc7701cef23ea4e2a011eb33"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-001-moons-4001-constant-10000/trace.jsonl",
+      "retention": "retained",
+      "sha256": "43d23f19fc27591071a1e7230395e51652668c221633a064716f5022a86af65f"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/inputs/moons-4001/inputs.npz",
+      "retention": "retained",
+      "sha256": "3966cae78c435a474c1617ccf7b97e0a409324dcbe05b43c93af80b63574536b"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/inputs/moons-4001/initial.npz",
+      "retention": "retained",
+      "sha256": "c32f680cab4350354113d4ab8d545288af2cfb0e4101de779cc76d5ae33ca9d9"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-001-moons-4001-constant-10000/step-10000/arrays.npz",
+      "retention": "retained",
+      "sha256": "df704cfead1def0ff16000e29642cd16454baaaea65bc022027761933e865b41"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-001-moons-4001-constant-10000/step-10000/weights.npz",
+      "retention": "retained",
+      "sha256": "877e3410d9a16dbd1fc95966b6db4406aa2414d2143fa45e59930c7b6e86db5a"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-002-moons-4001-cosine-5000/result.json",
+      "retention": "retained",
+      "sha256": "ad50b521367999ce3170987e5171f291246ab2a9ec31293169b2f9297558189f"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-002-moons-4001-cosine-5000/step-5000/arrays.npz",
+      "retention": "retained",
+      "sha256": "8b9fe507be0c3587b747761e441bb6052329f754b63041730f5525f02e82eb9c"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-002-moons-4001-cosine-5000/step-5000/weights.npz",
+      "retention": "retained",
+      "sha256": "14082064b3fbd51d94a807c5ea8ae95425ba5d97bff5f7aec1d3c21b3eb0f4e1"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-002-moons-4001-cosine-5000/trace.jsonl",
+      "retention": "retained",
+      "sha256": "ab5d4f406751f7f04d52ab82c3a58ff4e7990e3174edae945b64b5e02245353e"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-003-moons-4001-cosine-10000/result.json",
+      "retention": "retained",
+      "sha256": "ff487f5bc904bc3682d84f8445515f10eb0327309ec73943b8276d0227615239"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-003-moons-4001-cosine-10000/step-10000/arrays.npz",
+      "retention": "retained",
+      "sha256": "1cbff72c733488fd720b8b565d1bc75899a9e98f7e148c293a30107931756c4f"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-003-moons-4001-cosine-10000/step-10000/weights.npz",
+      "retention": "retained",
+      "sha256": "a6f8800e25af2d66591794c500e95d63e8999e156f044a14d692a23c1f3ca340"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-003-moons-4001-cosine-10000/trace.jsonl",
+      "retention": "retained",
+      "sha256": "1e3652188d4b52370926e3b01e0075e02f8e128dfbd0a6f6a0ae42cca7a8d950"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-004-moons-4002-constant-10000/result.json",
+      "retention": "retained",
+      "sha256": "7583994e02e6a0a6bc7a60d8e1b590d0ba85d7bb388951513ff13fc46bd69802"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-004-moons-4002-constant-10000/step-5000/arrays.npz",
+      "retention": "retained",
+      "sha256": "72d33c250cf0db50f29accd8b229aeb6ce476f2125fe7ff1a64f469d5732f1f0"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-004-moons-4002-constant-10000/step-5000/weights.npz",
+      "retention": "retained",
+      "sha256": "bc379b712cefebe88e705cfa1a29ed7ddb59452f274a08f85bcddfe73af3e09d"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-004-moons-4002-constant-10000/trace.jsonl",
+      "retention": "retained",
+      "sha256": "045ae9c9e74c5a90c576ee970a0caaf68d10e39f126cccab406f30312d3e1004"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/inputs/moons-4002/inputs.npz",
+      "retention": "retained",
+      "sha256": "6183eac5b2e78c25a85d3723054d5e9875d6c89f045b740b29547bb6c5de3912"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/inputs/moons-4002/initial.npz",
+      "retention": "retained",
+      "sha256": "bd8a67f8f5e70dc5519547f33631724178bb9d50394b89291fe6633211699667"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-004-moons-4002-constant-10000/step-10000/arrays.npz",
+      "retention": "retained",
+      "sha256": "6a2f77b301e67a5c9e5822e420ec55d436d2fd46b0dedf1552b280113cc3877c"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-004-moons-4002-constant-10000/step-10000/weights.npz",
+      "retention": "retained",
+      "sha256": "d20d845502bcbe986ac6d07d5fdc756054e9e12efc28e5d5fd88c672e29ba2c2"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-005-moons-4002-cosine-5000/result.json",
+      "retention": "retained",
+      "sha256": "66656c8d8c64778ad9c3581e3965ab2806fbb3f54dd33611d918655aab898d69"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-005-moons-4002-cosine-5000/step-5000/arrays.npz",
+      "retention": "retained",
+      "sha256": "84f030e10e84b78212014664d0c9e9c7295e3958b1b5dcb249c1323b52d6368f"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-005-moons-4002-cosine-5000/step-5000/weights.npz",
+      "retention": "retained",
+      "sha256": "e6f5b8fc98de4373c7727016d076c631f59e5b30dd5f3cb8ab7cd0a4e526f46f"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-005-moons-4002-cosine-5000/trace.jsonl",
+      "retention": "retained",
+      "sha256": "7c33dc74ad616172bcf564e60f5f0d277ec48cbf28d573087558fd7edbd8db71"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-006-moons-4002-cosine-10000/result.json",
+      "retention": "retained",
+      "sha256": "147ccf18ac24c53b2bba93029a08ae054a83970c8263c7c47799504222f69051"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-006-moons-4002-cosine-10000/step-10000/arrays.npz",
+      "retention": "retained",
+      "sha256": "7e6b58593697451cffcb2b05f5fa796efffe60f150c5f600764cb57ace354b76"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-006-moons-4002-cosine-10000/step-10000/weights.npz",
+      "retention": "retained",
+      "sha256": "13684215959aba26c305f7948b844d9693725c15abc6d85ace7d4b9330ce8d8d"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-006-moons-4002-cosine-10000/trace.jsonl",
+      "retention": "retained",
+      "sha256": "289bb061f888607e7128616f83980823a73df0976d5aa6ab92aa046e4aee18cd"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-007-moons-4003-constant-10000/result.json",
+      "retention": "retained",
+      "sha256": "0f8b6b45c07c5bf689bd6d30c0fdba4e1771b1fbb73cb4ce2c3b9bb5ee16dc96"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-007-moons-4003-constant-10000/step-5000/arrays.npz",
+      "retention": "retained",
+      "sha256": "c341f00abe78b55fb6b31046dbcaa8c6fba3c6cd780f6ba72786f3413d3f5ddc"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-007-moons-4003-constant-10000/step-5000/weights.npz",
+      "retention": "retained",
+      "sha256": "5c678c05c28972ab1ca42143b065a4d3518463a0b06bde09a0030fdddb9f6d04"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-007-moons-4003-constant-10000/trace.jsonl",
+      "retention": "retained",
+      "sha256": "8eb95e5666eed5bd213b297c397e4907f170f474d7160f830c1ddd2390348823"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/inputs/moons-4003/inputs.npz",
+      "retention": "retained",
+      "sha256": "27ba93780694e3519f9fcfd641c36455ca57442a66b936cbac5ca36d3f5c9eb5"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/inputs/moons-4003/initial.npz",
+      "retention": "retained",
+      "sha256": "7002c7e9634fe82bdb0b21df720806b8fbb83ed2c2174a26ad35cf1a4f0bb6ab"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-007-moons-4003-constant-10000/step-10000/arrays.npz",
+      "retention": "retained",
+      "sha256": "d6a94aa7080cb0f73009e584057964c7baaf3697d997f9cf6e700abd9daf4bad"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-007-moons-4003-constant-10000/step-10000/weights.npz",
+      "retention": "retained",
+      "sha256": "37cc082977e6c1b259e0ac460b98963b8ce25e081ba3084b01382fcd258a0567"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-008-moons-4003-cosine-5000/result.json",
+      "retention": "retained",
+      "sha256": "0f5cbed99ce1a1278c1b62a02d2f196467cca8ae5dc56657e7bb4f883d89b17c"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-008-moons-4003-cosine-5000/step-5000/arrays.npz",
+      "retention": "retained",
+      "sha256": "a54c4b7767da6926109d326021a3e152b40289648e828c2c7f53b28f0d41ec34"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-008-moons-4003-cosine-5000/step-5000/weights.npz",
+      "retention": "retained",
+      "sha256": "03213ab7dbd205c6553861f5f62983ad333b2596d0d455204a3de9b7d6bbe6eb"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-008-moons-4003-cosine-5000/trace.jsonl",
+      "retention": "retained",
+      "sha256": "188c663ef2b569cdf4387cb75580eb94133be2201e480932e2e53bc79941f594"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-009-moons-4003-cosine-10000/result.json",
+      "retention": "retained",
+      "sha256": "0e9f9afb57cc0c12ecc2daa91a21875b3859b6673a2e97e6d7024563e513ff6f"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-009-moons-4003-cosine-10000/step-10000/arrays.npz",
+      "retention": "retained",
+      "sha256": "a8e41c11f173b1affa50f39afa1ac1048e35bfe26abf85efdbc8fd260780e48e"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-009-moons-4003-cosine-10000/step-10000/weights.npz",
+      "retention": "retained",
+      "sha256": "fdd065c5715b5b6d31a6837ea91337d60d391b7f3336981d0778b55d39cb1c59"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-009-moons-4003-cosine-10000/trace.jsonl",
+      "retention": "retained",
+      "sha256": "38098e3759c2823c1329d8941b34b116db770ba0e4fd3b1f4a9cb4fd21d1b02a"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-010-moons-4004-constant-10000/result.json",
+      "retention": "retained",
+      "sha256": "5b47a547eff623eb7debbf6ef72c636c28c9bb47e6fd8563d472c2edb4327c2b"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-010-moons-4004-constant-10000/step-5000/arrays.npz",
+      "retention": "retained",
+      "sha256": "baafe5add1d85249e17b42e985ffefaa5c1395cdd6393ff4953678e168af97ce"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-010-moons-4004-constant-10000/step-5000/weights.npz",
+      "retention": "retained",
+      "sha256": "54cc6e685c515505fbfd0c11693cff26232b2339e72f82bb0fe176666f697983"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-010-moons-4004-constant-10000/trace.jsonl",
+      "retention": "retained",
+      "sha256": "c3e032555a4d43bd576f998e9d9faf7cdbed5c694665a92768470dc1615d87b9"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/inputs/moons-4004/inputs.npz",
+      "retention": "retained",
+      "sha256": "104099066e2d8b61445185da4c2ce238135d154918e9eaf3ac830ea4987bcfa7"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/inputs/moons-4004/initial.npz",
+      "retention": "retained",
+      "sha256": "d3836c3f08dadc977521c304aec4f2c05af9d035dc4b451aa141b3172e78e1f3"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-010-moons-4004-constant-10000/step-10000/arrays.npz",
+      "retention": "retained",
+      "sha256": "51bbfac6c9079d66a9369b4df85d2304c695762b87640085ff658bb8e64718f0"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-010-moons-4004-constant-10000/step-10000/weights.npz",
+      "retention": "retained",
+      "sha256": "6aabf77d91de02e88430bc363550f85d9133edeeb1c73e63d68e22256e1d9655"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-011-moons-4004-cosine-5000/result.json",
+      "retention": "retained",
+      "sha256": "e147a2f0c3cdebec4ac6d3932c745a2ed7e3fed18dde618dc229b37a61547ed0"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-011-moons-4004-cosine-5000/step-5000/arrays.npz",
+      "retention": "retained",
+      "sha256": "8e464e50219f99fd4923e6b0ce643179e061e6f7998fd9864dc7f92d2dd6d5f3"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-011-moons-4004-cosine-5000/step-5000/weights.npz",
+      "retention": "retained",
+      "sha256": "914662f134a39a2945d308e64facbc1ceb071095511e40da2072755500c3035f"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-011-moons-4004-cosine-5000/trace.jsonl",
+      "retention": "retained",
+      "sha256": "8abeae1319b7db997abc2a01ddc4c33c712b50e684a60ea4e00cffbd0f5f80bd"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-012-moons-4004-cosine-10000/result.json",
+      "retention": "retained",
+      "sha256": "ea9aaff76feebabe88816f18bfb25af576208543237721638ad8e558477831c9"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-012-moons-4004-cosine-10000/step-10000/arrays.npz",
+      "retention": "retained",
+      "sha256": "214fe84199e71a71d8a07b2057382da42c29f0bd4ffea98bcd724454dfa6c3fe"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-012-moons-4004-cosine-10000/step-10000/weights.npz",
+      "retention": "retained",
+      "sha256": "2c62222f3981c766c071718aa7483d221ca74a7756cab377bf7f590eca3b1392"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-012-moons-4004-cosine-10000/trace.jsonl",
+      "retention": "retained",
+      "sha256": "a77e75ad21f835ca469034bf81a870ff560e76feaacebc2dfc398edb51e093c7"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-013-gmm8-5001-constant-10000/result.json",
+      "retention": "retained",
+      "sha256": "93b02d0a47cb75200b18ae26fa7dde80fd8c57b6859ea1f2bde4e27adca2191c"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-013-gmm8-5001-constant-10000/step-5000/arrays.npz",
+      "retention": "retained",
+      "sha256": "c641db93e2371f21d3b998df99c6ac8ab0d600a8dfb7ccce286293601abf99b2"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-013-gmm8-5001-constant-10000/step-5000/weights.npz",
+      "retention": "retained",
+      "sha256": "b2df82231260a493256a257a10ce367100298b23e9a99f5a349c12c87df5183f"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-013-gmm8-5001-constant-10000/trace.jsonl",
+      "retention": "retained",
+      "sha256": "69a5765a1b11c56ee97a78585a13ae7677604be8a55ca8ebc1c8776d9caeb648"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/inputs/gmm8-5001/inputs.npz",
+      "retention": "retained",
+      "sha256": "b295e5ea43ecd7fd0f8f3ec04b1a95d27b6d6b980d6c644ec29674921bde62a6"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/inputs/gmm8-5001/initial.npz",
+      "retention": "retained",
+      "sha256": "2002c5e9b0628d9430d01330911ed2db5ac0937b1a3a59135f9a1e2c992d2a31"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-013-gmm8-5001-constant-10000/step-10000/arrays.npz",
+      "retention": "retained",
+      "sha256": "f66281a4d9e7c127b4b632fd68b6a2164e2e4614e807fe2c1b790c16382fd7f3"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-013-gmm8-5001-constant-10000/step-10000/weights.npz",
+      "retention": "retained",
+      "sha256": "a8a7a8e5efa7bf78876ffdbe2f063c0d99d7d2825a0a5ad95f37a81f06e48466"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-014-gmm8-5001-cosine-5000/result.json",
+      "retention": "retained",
+      "sha256": "c5a2c613b51531448584d546683c24be6125b062e917c9318b264c3a1eb74203"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-014-gmm8-5001-cosine-5000/step-5000/arrays.npz",
+      "retention": "retained",
+      "sha256": "a3ae912d3737633208eea35fc6c1fc1fa0bc7af732651ddc9945c50849f0186e"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-014-gmm8-5001-cosine-5000/step-5000/weights.npz",
+      "retention": "retained",
+      "sha256": "04b1f0559c4b917d7fd5a6a43edd5b51c1911fc196e9f3b03dabfa1272870f60"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-014-gmm8-5001-cosine-5000/trace.jsonl",
+      "retention": "retained",
+      "sha256": "8d8b233a2752fd030e960d214e54bcec3a6c417563b89cc4689c5f71f0a59c68"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-015-gmm8-5001-cosine-10000/result.json",
+      "retention": "retained",
+      "sha256": "07def1326de9f0d541af7d933ab21c027b61b09b13e9f9509710f08f82a17df1"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-015-gmm8-5001-cosine-10000/step-10000/arrays.npz",
+      "retention": "retained",
+      "sha256": "d73c7589ced1e12e3a62727b668428aa60804150d42019aacba017311cdfba86"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-015-gmm8-5001-cosine-10000/step-10000/weights.npz",
+      "retention": "retained",
+      "sha256": "acca66017049f67722281ca45fce42e57a968fa5c37be11712fe34358ba14e8a"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-015-gmm8-5001-cosine-10000/trace.jsonl",
+      "retention": "retained",
+      "sha256": "df9ef3cb23caa30d2c38bcb6de21b704c653387af54ca9bce968a753d0f15f39"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-016-gmm8-5002-constant-10000/result.json",
+      "retention": "retained",
+      "sha256": "4bff3c054dab2caea444e466e02820087bef6110b7267651531e29c48a8e9d34"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-016-gmm8-5002-constant-10000/step-5000/arrays.npz",
+      "retention": "retained",
+      "sha256": "97facddd97d6c427e80a81db3e1b66daf7004b3d0a691b0b42df39d6c54baf2d"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-016-gmm8-5002-constant-10000/step-5000/weights.npz",
+      "retention": "retained",
+      "sha256": "ac096defb0a2cf29fb6aeef182dc10146f01e23e2be82703c11e9f8b92c7d4eb"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-016-gmm8-5002-constant-10000/trace.jsonl",
+      "retention": "retained",
+      "sha256": "8f082017f946ee5d117c9970559161c6f32e2be1e37762ed5c102ca99e34c2a2"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/inputs/gmm8-5002/inputs.npz",
+      "retention": "retained",
+      "sha256": "ade0396df8fb9e11a4e3089de8da58ccfff8cb693b444c7c5bfa2968e01082be"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/inputs/gmm8-5002/initial.npz",
+      "retention": "retained",
+      "sha256": "f251850e69a0e69cef2bae8b868dfef50423f387b3549d3d482dd0d846936e21"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-016-gmm8-5002-constant-10000/step-10000/arrays.npz",
+      "retention": "retained",
+      "sha256": "1b18cf59c966c2ef727d5d6f88f3db085fa5eda50ded6912e5b2823625e4a071"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-016-gmm8-5002-constant-10000/step-10000/weights.npz",
+      "retention": "retained",
+      "sha256": "49666e2a34dfe7474ab5d103cf6496fd70fca9956f206b464668975cd6038239"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-017-gmm8-5002-cosine-5000/result.json",
+      "retention": "retained",
+      "sha256": "5cf2ea4befe043c1249901f7bbfa5b47f5abc51c4c9c6b59b989b151a4fef60f"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-017-gmm8-5002-cosine-5000/step-5000/arrays.npz",
+      "retention": "retained",
+      "sha256": "9db4e377efc18cc6a26645a1d8a11827dd39795d2aaf5e5659e2d204a8b93344"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-017-gmm8-5002-cosine-5000/step-5000/weights.npz",
+      "retention": "retained",
+      "sha256": "b288632d3aafbd60eb9ff30f74d8647e62632387b2c12bf3988e72c84799bffe"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-017-gmm8-5002-cosine-5000/trace.jsonl",
+      "retention": "retained",
+      "sha256": "d33436860af1d8f72dd1c9f0c3245ffd93e7a280f2248edc80affa63ae575696"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-018-gmm8-5002-cosine-10000/result.json",
+      "retention": "retained",
+      "sha256": "417a00ffc12453f37508d1722877bda4a4a0a586ea20ae6f541376d52fa42ece"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-018-gmm8-5002-cosine-10000/step-10000/arrays.npz",
+      "retention": "retained",
+      "sha256": "1213884b402769aa1f15b402e756a20d58f8870e832e3bda1cd82af85c23d643"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-018-gmm8-5002-cosine-10000/step-10000/weights.npz",
+      "retention": "retained",
+      "sha256": "3fd3dd1e337da06e157cefbc022d6842d8b2f76d1ed541891655bc5a0ab2f4f5"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-018-gmm8-5002-cosine-10000/trace.jsonl",
+      "retention": "retained",
+      "sha256": "6893039326b20160b9108e7e0aa4e36726081d0ffe873915c172641eead18e3d"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-019-gmm8-5003-constant-10000/result.json",
+      "retention": "retained",
+      "sha256": "0ae000e96a9b88cf535522d023f90f0291617ff7a9c4484d0fcc7fba8d8b1041"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-019-gmm8-5003-constant-10000/step-5000/arrays.npz",
+      "retention": "retained",
+      "sha256": "f729c2af326ae255a44f98c89503438601313abc1924426527b8fd5c6948800d"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-019-gmm8-5003-constant-10000/step-5000/weights.npz",
+      "retention": "retained",
+      "sha256": "6ad6318b319288da7472efee2fbf0b9a5a2a3c0779e7df570ecae82e04e5b72b"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-019-gmm8-5003-constant-10000/trace.jsonl",
+      "retention": "retained",
+      "sha256": "09c93336acb8bbe3dbb486abcc05911f2630888b26bca617965c9e0a9285c13f"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/inputs/gmm8-5003/inputs.npz",
+      "retention": "retained",
+      "sha256": "72c2cd191cce064bf173e9154d019c78fb385bb6f09006671731c36e8f818341"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/inputs/gmm8-5003/initial.npz",
+      "retention": "retained",
+      "sha256": "194052f59f95e659bd167562b5d0168bc84f4839cf37e6b78dbbc5e4e5c8f468"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-019-gmm8-5003-constant-10000/step-10000/arrays.npz",
+      "retention": "retained",
+      "sha256": "88cabe892829cdfe5fe30f4c65c061bc421db5045db8a75aed34c9c11615b3f8"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-019-gmm8-5003-constant-10000/step-10000/weights.npz",
+      "retention": "retained",
+      "sha256": "cd0530cb23d66cf59d9992e596faf23c1a06ba780db19120fa315af703b0a41e"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-020-gmm8-5003-cosine-5000/result.json",
+      "retention": "retained",
+      "sha256": "735b440c2f843c8f2089124e202df807ac8312dffa4bc71d51d610042b641d0a"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-020-gmm8-5003-cosine-5000/step-5000/arrays.npz",
+      "retention": "retained",
+      "sha256": "3df4c0e582f7c213205a199707de3924f09dc818b2f8aa1fab3c98e8a2e5f492"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-020-gmm8-5003-cosine-5000/step-5000/weights.npz",
+      "retention": "retained",
+      "sha256": "8a7aa82129d4184be80bf302bbcfaefc5d337f1bb5381d33100b0a64d215de2b"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-020-gmm8-5003-cosine-5000/trace.jsonl",
+      "retention": "retained",
+      "sha256": "dc1c935e19e281e40972bf746ce9e60d28ff061d0f5e9146cddafae9f536663e"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-021-gmm8-5003-cosine-10000/result.json",
+      "retention": "retained",
+      "sha256": "d2a56efa8761380663dc4fe30f6b5ba52e28f03c1c39aff77b17e5917e50c9e7"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-021-gmm8-5003-cosine-10000/step-10000/arrays.npz",
+      "retention": "retained",
+      "sha256": "8e821349373b1283ad452583e66a61fa05ca8509884900218837a914a133e501"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-021-gmm8-5003-cosine-10000/step-10000/weights.npz",
+      "retention": "retained",
+      "sha256": "c41f01585ab064c26ccf79e8ab8ffbbcd69be4645862dbc9a37c9389fcad9051"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-021-gmm8-5003-cosine-10000/trace.jsonl",
+      "retention": "retained",
+      "sha256": "8d15836a3ad0c83681f1ca0156a2d9b7ad60252a5f52086a162511d7e79142f1"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/result.json",
+      "retention": "retained",
+      "sha256": "40f36ed11edf6956b3f59a0ca8c1b06ba342d2eea09e1890fa61a6245994bafe"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/step-5000/arrays.npz",
+      "retention": "retained",
+      "sha256": "4797057e6386aaa08f1f6f7bbd0abd5ebab830d6a296975ea85f1d8e89dd30c4"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/step-5000/weights.npz",
+      "retention": "retained",
+      "sha256": "0cb6c4e19050ed3241cfcd67b3af960604068554c38ddf6d282adb3a6ee8c2f9"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/trace.jsonl",
+      "retention": "retained",
+      "sha256": "24d43b906acaf540f3f32ff08fef6b82a8c8be90614bc5c532eac4f5a8f53cd3"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/inputs/gmm8-5004/inputs.npz",
+      "retention": "retained",
+      "sha256": "d2a56ac3ce7cc602d2279ace5721fc43ba15083bb04c5203d10dd153b62384af"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/inputs/gmm8-5004/initial.npz",
+      "retention": "retained",
+      "sha256": "1536fadf52e1947daadad35382e950cd8b5b5951482b5ebb06ca81e22f6b1f70"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/step-10000/arrays.npz",
+      "retention": "retained",
+      "sha256": "401e0c1f9edbc0e3373c961e20d04f707c71dd54a8f8205292e8e94124897726"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/step-10000/weights.npz",
+      "retention": "retained",
+      "sha256": "b59cf40fdd111b3a3ce9e7fa0b38305350fa8df22853574603aa81845123adf1"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-023-gmm8-5004-cosine-5000/result.json",
+      "retention": "retained",
+      "sha256": "cde372b185f5d5497024da67b35a61efc6155c276629e375046cb968dab19b45"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-023-gmm8-5004-cosine-5000/step-5000/arrays.npz",
+      "retention": "retained",
+      "sha256": "270143037dc19db10a8c4cfe3ec07cd59a6acefd8b421d8b6877a02038d6128d"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-023-gmm8-5004-cosine-5000/step-5000/weights.npz",
+      "retention": "retained",
+      "sha256": "44071020bc04f2affc6c56e3584ae516516f80d05c728de4a5f96e383a569611"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-023-gmm8-5004-cosine-5000/trace.jsonl",
+      "retention": "retained",
+      "sha256": "e3f3ac256d83c99465188e967d6310624ed62f00ab3253ba0bc4ec551e74d3f9"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-024-gmm8-5004-cosine-10000/result.json",
+      "retention": "retained",
+      "sha256": "beed0d8841b9c7cdd396989f7381750578f4cf80575bae7d70f24e2062ad44d7"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-024-gmm8-5004-cosine-10000/step-10000/arrays.npz",
+      "retention": "retained",
+      "sha256": "71dfb0f1c8223db78feb48ecd94db1248bf92611be778e9f638bb2b724de6faa"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-024-gmm8-5004-cosine-10000/step-10000/weights.npz",
+      "retention": "retained",
+      "sha256": "44fba812fd8234044d7cff19579be160efabb476fdb8562fec7636c0bf587b42"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-024-gmm8-5004-cosine-10000/trace.jsonl",
+      "retention": "retained",
+      "sha256": "0ed5b7d61044e46bac97f2c8b3f9ef0f045d64463c6111e6c64eb608571c6414"
+    }
+  ],
+  "format": "ema-raw-manifest-v1",
+  "results": [
+    "campaigns/ema-schedule-v1/attempts/confirm-001-moons-4001-constant-10000/result.json",
+    "campaigns/ema-schedule-v1/attempts/confirm-002-moons-4001-cosine-5000/result.json",
+    "campaigns/ema-schedule-v1/attempts/confirm-003-moons-4001-cosine-10000/result.json",
+    "campaigns/ema-schedule-v1/attempts/confirm-004-moons-4002-constant-10000/result.json",
+    "campaigns/ema-schedule-v1/attempts/confirm-005-moons-4002-cosine-5000/result.json",
+    "campaigns/ema-schedule-v1/attempts/confirm-006-moons-4002-cosine-10000/result.json",
+    "campaigns/ema-schedule-v1/attempts/confirm-007-moons-4003-constant-10000/result.json",
+    "campaigns/ema-schedule-v1/attempts/confirm-008-moons-4003-cosine-5000/result.json",
+    "campaigns/ema-schedule-v1/attempts/confirm-009-moons-4003-cosine-10000/result.json",
+    "campaigns/ema-schedule-v1/attempts/confirm-010-moons-4004-constant-10000/result.json",
+    "campaigns/ema-schedule-v1/attempts/confirm-011-moons-4004-cosine-5000/result.json",
+    "campaigns/ema-schedule-v1/attempts/confirm-012-moons-4004-cosine-10000/result.json",
+    "campaigns/ema-schedule-v1/attempts/confirm-013-gmm8-5001-constant-10000/result.json",
+    "campaigns/ema-schedule-v1/attempts/confirm-014-gmm8-5001-cosine-5000/result.json",
+    "campaigns/ema-schedule-v1/attempts/confirm-015-gmm8-5001-cosine-10000/result.json",
+    "campaigns/ema-schedule-v1/attempts/confirm-016-gmm8-5002-constant-10000/result.json",
+    "campaigns/ema-schedule-v1/attempts/confirm-017-gmm8-5002-cosine-5000/result.json",
+    "campaigns/ema-schedule-v1/attempts/confirm-018-gmm8-5002-cosine-10000/result.json",
+    "campaigns/ema-schedule-v1/attempts/confirm-019-gmm8-5003-constant-10000/result.json",
+    "campaigns/ema-schedule-v1/attempts/confirm-020-gmm8-5003-cosine-5000/result.json",
+    "campaigns/ema-schedule-v1/attempts/confirm-021-gmm8-5003-cosine-10000/result.json",
+    "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/result.json",
+    "campaigns/ema-schedule-v1/attempts/confirm-023-gmm8-5004-cosine-5000/result.json",
+    "campaigns/ema-schedule-v1/attempts/confirm-024-gmm8-5004-cosine-10000/result.json"
+  ]
+}

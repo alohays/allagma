@@ -1,0 +1,194 @@
+{
+  "attempt_id": "confirm-022-gmm8-5004-constant-10000",
+  "attempt_number": 1,
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "campaign_id": "ema-schedule-v1",
+  "command": [
+    ".venv/bin/python",
+    "study/runner.py",
+    "train",
+    "--attempt",
+    "confirm-022-gmm8-5004-constant-10000",
+    "--dataset",
+    "gmm8",
+    "--seed",
+    "5004",
+    "--policy",
+    "constant",
+    "--horizon",
+    "10000"
+  ],
+  "data_revision": "9b38c8bcb90d0ab348b0c39d51726b9bdf4e401902de2bca89418f9abfdfbff6",
+  "ended_at": "2026-10-08T07:02:43.472641+00:00",
+  "environment": {
+    "device": "cpu",
+    "dtype": "float32",
+    "numpy": "2.4.6",
+    "python": "3.11.6",
+    "torch": "2.14.1"
+  },
+  "error": null,
+  "exit_code": 0,
+  "experiment_id": "gmm8-5004-constant-10000",
+  "inputs": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/input.json",
+      "retention": "retained",
+      "sha256": "9b38c8bcb90d0ab348b0c39d51726b9bdf4e401902de2bca89418f9abfdfbff6"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/protocol.json",
+      "retention": "retained",
+      "sha256": "dca3cbe24ecc9d7310c1bbd16a329043cfab040c48a287e76012e45aff77d90a"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/lock.yaml",
+      "retention": "retained",
+      "sha256": "6f211f947c838760db7926dc7420081f680724612d83c8a8a5dfd50a6d1d4bcb"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": ".compute/requests/013ca54fced44dc0b513d3b86ac0dcc1.json",
+      "retention": "retained",
+      "sha256": "99afb7142aaf25724f8230ed2f48b270dd56c9d0353b3c950c2ab69ab22df96b"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/source/analyze.py",
+      "retention": "retained",
+      "sha256": "6d68129831145b23347a7788d3283c11c1957d038a973db7d4ead8c26d5edb6b"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/source/common.py",
+      "retention": "retained",
+      "sha256": "c4f6d2456baaa09270a4622be007c45ef7a5080992e9508697feeca8012f0bc0"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/source/compare_replay.py",
+      "retention": "retained",
+      "sha256": "25a1b84ede3f270b9bbb2c2e89fa0ae009c6a37ec861cb418b417d2b02c74536"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/source/dispatch.py",
+      "retention": "retained",
+      "sha256": "e9757148134a6ee46f3be9b0fa316a030579706071c038b9e995a5a2d5aab0ed"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/source/freeze.py",
+      "retention": "retained",
+      "sha256": "67d3300f528a24ee93d4e32c3aa0f126c824614601d00dfe200edd97ff72560d"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/source/prepare.py",
+      "retention": "retained",
+      "sha256": "b1e43e1662becff618cbff688f6a1ab8dcc3859235513ada978c7c3797f7d527"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/source/records.py",
+      "retention": "retained",
+      "sha256": "4f623653e356b4d47c2ff66c4349d53eaac622bb26d29f6082b429d8c8587027"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/source/reference.py",
+      "retention": "retained",
+      "sha256": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/source/replay_setup.py",
+      "retention": "retained",
+      "sha256": "c5fade42d74f0d1212df6831bdcc44e37b82b96033c7ce2b13b6ec929ea4213b"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/source/reproduce.py",
+      "retention": "retained",
+      "sha256": "322edb05d509fb37e5204ed4dadde1f4c9cd05c3950ec5730509574d9ff820a5"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/source/runner.py",
+      "retention": "retained",
+      "sha256": "cfa0bf5ae9c5f882db59d5a4a5a3b92958725138e886f0c6ba9facd443fdc084"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/source/verify.py",
+      "retention": "retained",
+      "sha256": "dc9bec1e01309bf8ae72eb624bbd19ac8c9bcf49a78573163ec6adfa2d733fd1"
+    }
+  ],
+  "model_revision": "47296c20595f7e4fdf188018699856c924a0af10f61a2eac42d5c4d1ed7e7b89",
+  "outputs": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/finished.json",
+      "retention": "retained",
+      "sha256": "9a9e036969f086e71c1c7af076cb83b1d6816036695b2291e8c5b7763069984d"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/result.json",
+      "retention": "retained",
+      "sha256": "40f36ed11edf6956b3f59a0ca8c1b06ba342d2eea09e1890fa61a6245994bafe"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/step-10000/arrays.npz",
+      "retention": "retained",
+      "sha256": "401e0c1f9edbc0e3373c961e20d04f707c71dd54a8f8205292e8e94124897726"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/step-10000/weights.npz",
+      "retention": "retained",
+      "sha256": "b59cf40fdd111b3a3ce9e7fa0b38305350fa8df22853574603aa81845123adf1"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/step-5000/arrays.npz",
+      "retention": "retained",
+      "sha256": "4797057e6386aaa08f1f6f7bbd0abd5ebab830d6a296975ea85f1d8e89dd30c4"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/step-5000/weights.npz",
+      "retention": "retained",
+      "sha256": "0cb6c4e19050ed3241cfcd67b3af960604068554c38ddf6d282adb3a6ee8c2f9"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/trace.jsonl",
+      "retention": "retained",
+      "sha256": "24d43b906acaf540f3f32ff08fef6b82a8c8be90614bc5c532eac4f5a8f53cd3"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": ".compute/responses/013ca54fced44dc0b513d3b86ac0dcc1.json",
+      "retention": "retained",
+      "sha256": "1a569751386eef5a76cfa3abf20a218b844556ac025cc4b0a5b2c5eaee2d344d"
+    }
+  ],
+  "protocol_revision": "ema-schedule-v1",
+  "record_type": "RunRecord",
+  "run_id": "confirm-022-gmm8-5004-constant-10000",
+  "schema_version": "0.2",
+  "split": "confirmation",
+  "started_at": "2026-10-08T07:02:26.196841+00:00",
+  "status": "succeeded",
+  "usage": {
+    "money_usd": 0,
+    "tokens": 0,
+    "wall_seconds": 17.313856500200927
+  }
+}

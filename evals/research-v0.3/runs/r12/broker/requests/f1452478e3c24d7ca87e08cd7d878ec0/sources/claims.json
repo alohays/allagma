@@ -1,0 +1,281 @@
+[
+  {
+    "claim_id": "C1-design-completion",
+    "contradicting": [],
+    "dependencies": [
+      {
+        "media_type": "application/octet-stream",
+        "path": "campaigns/ema-schedule-v1/protocol.json",
+        "retention": "retained",
+        "sha256": "dca3cbe24ecc9d7310c1bbd16a329043cfab040c48a287e76012e45aff77d90a"
+      },
+      {
+        "media_type": "application/octet-stream",
+        "path": "campaigns/ema-schedule-v1/confirmation-freeze.json",
+        "retention": "retained",
+        "sha256": "246ddd50051ca02c4bb847d6b9dacd54de769ea89318c6066d43b4e5e39d3258"
+      },
+      {
+        "media_type": "application/octet-stream",
+        "path": "analysis/raw-manifest.json",
+        "retention": "retained",
+        "sha256": "ad0e0fed17c90d2bad50c7437ac3f3580685c2ea7aab749a2dfdcc485cb22b3c"
+      }
+    ],
+    "limitations": [
+      "Unadjusted multiplicity",
+      "Four independent seeds per dataset",
+      "Finite heldout/generated samples and fixed projection directions",
+      "No mechanistic or universal benefit inference",
+      "Same-author critique; no independent peer review"
+    ],
+    "record_type": "ClaimRecord",
+    "schema_version": "0.2",
+    "scope": "This frozen two-dataset, four-seed, two-duration, two-policy follow-up only.",
+    "status": "supported",
+    "supersedes": null,
+    "supporting": [
+      {
+        "media_type": "application/octet-stream",
+        "path": "analysis/measurements.json",
+        "retention": "retained",
+        "sha256": "9fde52d941ee32e69f4dfec586b47eb4dc86efedf8559a77386bfcbec8582eb0"
+      },
+      {
+        "media_type": "application/octet-stream",
+        "path": "evidence/verification.json",
+        "retention": "retained",
+        "sha256": "1445a0cf6813c82a977e8862f1825aaf3bebdd8b13e5efa0bfff8a8dbbb1650f"
+      }
+    ],
+    "text": "All 32 crossed confirmation cells and 96 states completed with matched within-seed inputs."
+  },
+  {
+    "claim_id": "C2-paired-effects",
+    "contradicting": [],
+    "dependencies": [
+      {
+        "media_type": "application/octet-stream",
+        "path": "campaigns/ema-schedule-v1/protocol.json",
+        "retention": "retained",
+        "sha256": "dca3cbe24ecc9d7310c1bbd16a329043cfab040c48a287e76012e45aff77d90a"
+      },
+      {
+        "media_type": "application/octet-stream",
+        "path": "campaigns/ema-schedule-v1/confirmation-freeze.json",
+        "retention": "retained",
+        "sha256": "246ddd50051ca02c4bb847d6b9dacd54de769ea89318c6066d43b4e5e39d3258"
+      },
+      {
+        "media_type": "application/octet-stream",
+        "path": "analysis/raw-manifest.json",
+        "retention": "retained",
+        "sha256": "ad0e0fed17c90d2bad50c7437ac3f3580685c2ea7aab749a2dfdcc485cb22b3c"
+      }
+    ],
+    "limitations": [
+      "Unadjusted multiplicity",
+      "Four independent seeds per dataset",
+      "Finite heldout/generated samples and fixed projection directions",
+      "No mechanistic or universal benefit inference",
+      "Same-author critique; no independent peer review"
+    ],
+    "record_type": "ClaimRecord",
+    "schema_version": "0.2",
+    "scope": "This frozen two-dataset, four-seed, two-duration, two-policy follow-up only.",
+    "status": "supported",
+    "supersedes": null,
+    "supporting": [
+      {
+        "media_type": "application/octet-stream",
+        "path": "analysis/summary.json",
+        "retention": "retained",
+        "sha256": "e1aa18ec190a07ad9f179f39205782ff76d73479c74c332c58f66544ea8714f8"
+      }
+    ],
+    "text": "Negative observed mean EMA differences in 15 of 16 comparisons; all effects and seed uncertainty reported."
+  },
+  {
+    "claim_id": "C3-factorial-contrasts",
+    "contradicting": [],
+    "dependencies": [
+      {
+        "media_type": "application/octet-stream",
+        "path": "campaigns/ema-schedule-v1/protocol.json",
+        "retention": "retained",
+        "sha256": "dca3cbe24ecc9d7310c1bbd16a329043cfab040c48a287e76012e45aff77d90a"
+      },
+      {
+        "media_type": "application/octet-stream",
+        "path": "campaigns/ema-schedule-v1/confirmation-freeze.json",
+        "retention": "retained",
+        "sha256": "246ddd50051ca02c4bb847d6b9dacd54de769ea89318c6066d43b4e5e39d3258"
+      },
+      {
+        "media_type": "application/octet-stream",
+        "path": "analysis/raw-manifest.json",
+        "retention": "retained",
+        "sha256": "ad0e0fed17c90d2bad50c7437ac3f3580685c2ea7aab749a2dfdcc485cb22b3c"
+      }
+    ],
+    "limitations": [
+      "Unadjusted multiplicity",
+      "Four independent seeds per dataset",
+      "Finite heldout/generated samples and fixed projection directions",
+      "No mechanistic or universal benefit inference",
+      "Same-author critique; no independent peer review"
+    ],
+    "record_type": "ClaimRecord",
+    "schema_version": "0.2",
+    "scope": "This frozen two-dataset, four-seed, two-duration, two-policy follow-up only.",
+    "status": "supported",
+    "supersedes": null,
+    "supporting": [
+      {
+        "media_type": "application/octet-stream",
+        "path": "analysis/summary.json",
+        "retention": "retained",
+        "sha256": "e1aa18ec190a07ad9f179f39205782ff76d73479c74c332c58f66544ea8714f8"
+      },
+      {
+        "media_type": "application/octet-stream",
+        "path": "analysis/contrasts.json",
+        "retention": "retained",
+        "sha256": "86463a64f4ff84cc26bfee6fe7630980b0c31e17d4fbff2c30a95b1b9625d94c"
+      }
+    ],
+    "text": "The schedule, duration and interaction tables report within-seed contrasts of EMA-minus-raw SW1, with uncertainty and no endpoint-only mechanism inference."
+  },
+  {
+    "claim_id": "C4-coverage",
+    "contradicting": [],
+    "dependencies": [
+      {
+        "media_type": "application/octet-stream",
+        "path": "campaigns/ema-schedule-v1/protocol.json",
+        "retention": "retained",
+        "sha256": "dca3cbe24ecc9d7310c1bbd16a329043cfab040c48a287e76012e45aff77d90a"
+      },
+      {
+        "media_type": "application/octet-stream",
+        "path": "campaigns/ema-schedule-v1/confirmation-freeze.json",
+        "retention": "retained",
+        "sha256": "246ddd50051ca02c4bb847d6b9dacd54de769ea89318c6066d43b4e5e39d3258"
+      },
+      {
+        "media_type": "application/octet-stream",
+        "path": "analysis/raw-manifest.json",
+        "retention": "retained",
+        "sha256": "ad0e0fed17c90d2bad50c7437ac3f3580685c2ea7aab749a2dfdcc485cb22b3c"
+      }
+    ],
+    "limitations": [
+      "Unadjusted multiplicity",
+      "Four independent seeds per dataset",
+      "Finite heldout/generated samples and fixed projection directions",
+      "No mechanistic or universal benefit inference",
+      "Same-author critique; no independent peer review"
+    ],
+    "record_type": "ClaimRecord",
+    "schema_version": "0.2",
+    "scope": "This frozen two-dataset, four-seed, two-duration, two-policy follow-up only.",
+    "status": "supported",
+    "supersedes": null,
+    "supporting": [
+      {
+        "media_type": "application/octet-stream",
+        "path": "analysis/summary.json",
+        "retention": "retained",
+        "sha256": "e1aa18ec190a07ad9f179f39205782ff76d73479c74c332c58f66544ea8714f8"
+      },
+      {
+        "media_type": "application/octet-stream",
+        "path": "evidence/verification.json",
+        "retention": "retained",
+        "sha256": "1445a0cf6813c82a977e8862f1825aaf3bebdd8b13e5efa0bfff8a8dbbb1650f"
+      }
+    ],
+    "text": "GMM8 covered-mode counts range from 8 to 8 under the original threshold; counts do not establish density equivalence."
+  },
+  {
+    "claim_id": "C5-verification",
+    "contradicting": [],
+    "dependencies": [
+      {
+        "media_type": "application/octet-stream",
+        "path": "campaigns/ema-schedule-v1/protocol.json",
+        "retention": "retained",
+        "sha256": "dca3cbe24ecc9d7310c1bbd16a329043cfab040c48a287e76012e45aff77d90a"
+      },
+      {
+        "media_type": "application/octet-stream",
+        "path": "campaigns/ema-schedule-v1/confirmation-freeze.json",
+        "retention": "retained",
+        "sha256": "246ddd50051ca02c4bb847d6b9dacd54de769ea89318c6066d43b4e5e39d3258"
+      },
+      {
+        "media_type": "application/octet-stream",
+        "path": "analysis/raw-manifest.json",
+        "retention": "retained",
+        "sha256": "ad0e0fed17c90d2bad50c7437ac3f3580685c2ea7aab749a2dfdcc485cb22b3c"
+      }
+    ],
+    "limitations": [
+      "Unadjusted multiplicity",
+      "Four independent seeds per dataset",
+      "Finite heldout/generated samples and fixed projection directions",
+      "No mechanistic or universal benefit inference",
+      "Same-author critique; no independent peer review"
+    ],
+    "record_type": "ClaimRecord",
+    "schema_version": "0.2",
+    "scope": "This frozen two-dataset, four-seed, two-duration, two-policy follow-up only.",
+    "status": "supported",
+    "supersedes": null,
+    "supporting": [
+      {
+        "media_type": "application/octet-stream",
+        "path": "evidence/verification.json",
+        "retention": "retained",
+        "sha256": "1445a0cf6813c82a977e8862f1825aaf3bebdd8b13e5efa0bfff8a8dbbb1650f"
+      },
+      {
+        "media_type": "application/octet-stream",
+        "path": "recomputed-r1/comparison.json",
+        "retention": "retained",
+        "sha256": "31a02aab0ac4a83b48ea5a008e5f77b5f7adacd159df1752d788cb7d8a75d3ac"
+      }
+    ],
+    "text": "Retained-data recomputation agrees and all 96 saved states regenerate their sample arrays."
+  },
+  {
+    "claim_id": "C6-full-reproduction",
+    "contradicting": [],
+    "dependencies": [
+      {
+        "media_type": "application/octet-stream",
+        "path": "campaigns/ema-schedule-v1/confirmation-freeze.json",
+        "retention": "retained",
+        "sha256": "246ddd50051ca02c4bb847d6b9dacd54de769ea89318c6066d43b4e5e39d3258"
+      }
+    ],
+    "limitations": [
+      "Cross-platform equality not tested",
+      "Duplicate runs are verification only"
+    ],
+    "record_type": "ClaimRecord",
+    "schema_version": "0.2",
+    "scope": "Pinned local software and CPU backend on this Mac.",
+    "status": "supported",
+    "supersedes": null,
+    "supporting": [
+      {
+        "media_type": "application/octet-stream",
+        "path": "reproduction/full-r1/comparison.json",
+        "retention": "retained",
+        "sha256": "b74ec469eeff1291bade054f08078fe345bb54728d98347375a9f4a9e967dd38"
+      }
+    ],
+    "text": "A fresh environment reran all 24 training trajectories and matched all 32 cells without adding scientific replicates."
+  }
+]

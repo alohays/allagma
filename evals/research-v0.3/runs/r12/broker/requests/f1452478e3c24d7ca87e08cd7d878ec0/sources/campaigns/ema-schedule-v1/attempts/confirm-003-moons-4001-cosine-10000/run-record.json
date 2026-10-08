@@ -1,0 +1,152 @@
+{
+  "attempt_id": "confirm-003-moons-4001-cosine-10000",
+  "attempt_number": 1,
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "campaign_id": "ema-schedule-v1",
+  "command": [
+    ".venv/bin/python",
+    "study/runner.py",
+    "train",
+    "--attempt",
+    "confirm-003-moons-4001-cosine-10000",
+    "--dataset",
+    "moons",
+    "--seed",
+    "4001",
+    "--policy",
+    "cosine",
+    "--horizon",
+    "10000"
+  ],
+  "data_revision": "df155f57ef39836c9f1d1f1545a02d775f660e89219cd9fb475c6dfa94a9d805",
+  "ended_at": "2026-10-08T06:57:47.847177+00:00",
+  "environment": {
+    "device": "cpu",
+    "dtype": "float32",
+    "numpy": "2.4.6",
+    "python": "3.11.6",
+    "torch": "2.14.1"
+  },
+  "error": null,
+  "exit_code": 0,
+  "experiment_id": "moons-4001-cosine-10000",
+  "inputs": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-003-moons-4001-cosine-10000/input.json",
+      "retention": "retained",
+      "sha256": "df155f57ef39836c9f1d1f1545a02d775f660e89219cd9fb475c6dfa94a9d805"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/protocol.json",
+      "retention": "retained",
+      "sha256": "dca3cbe24ecc9d7310c1bbd16a329043cfab040c48a287e76012e45aff77d90a"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/lock.yaml",
+      "retention": "retained",
+      "sha256": "6f211f947c838760db7926dc7420081f680724612d83c8a8a5dfd50a6d1d4bcb"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": ".compute/requests/65b3e02ebc8d4691a42e124f35fa4999.json",
+      "retention": "retained",
+      "sha256": "c98bd012d121729794eb8b611b7efb19e334cb998596341d80abba2487459d02"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-003-moons-4001-cosine-10000/source/analyze.py",
+      "retention": "retained",
+      "sha256": "6d68129831145b23347a7788d3283c11c1957d038a973db7d4ead8c26d5edb6b"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-003-moons-4001-cosine-10000/source/common.py",
+      "retention": "retained",
+      "sha256": "c4f6d2456baaa09270a4622be007c45ef7a5080992e9508697feeca8012f0bc0"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-003-moons-4001-cosine-10000/source/dispatch.py",
+      "retention": "retained",
+      "sha256": "e9757148134a6ee46f3be9b0fa316a030579706071c038b9e995a5a2d5aab0ed"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-003-moons-4001-cosine-10000/source/freeze.py",
+      "retention": "retained",
+      "sha256": "67d3300f528a24ee93d4e32c3aa0f126c824614601d00dfe200edd97ff72560d"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-003-moons-4001-cosine-10000/source/prepare.py",
+      "retention": "retained",
+      "sha256": "b1e43e1662becff618cbff688f6a1ab8dcc3859235513ada978c7c3797f7d527"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-003-moons-4001-cosine-10000/source/reference.py",
+      "retention": "retained",
+      "sha256": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-003-moons-4001-cosine-10000/source/runner.py",
+      "retention": "retained",
+      "sha256": "cfa0bf5ae9c5f882db59d5a4a5a3b92958725138e886f0c6ba9facd443fdc084"
+    }
+  ],
+  "model_revision": "c3db720b132fea8b499dbfd86c2e81c7b43487b9432bdf98c96017b2ab3fc4d8",
+  "outputs": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-003-moons-4001-cosine-10000/finished.json",
+      "retention": "retained",
+      "sha256": "9e6e4d53747f3b6670ac3708e16ebaa7251d5bc02a2833a21c65e330dc21972b"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-003-moons-4001-cosine-10000/result.json",
+      "retention": "retained",
+      "sha256": "ff487f5bc904bc3682d84f8445515f10eb0327309ec73943b8276d0227615239"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-003-moons-4001-cosine-10000/step-10000/arrays.npz",
+      "retention": "retained",
+      "sha256": "1cbff72c733488fd720b8b565d1bc75899a9e98f7e148c293a30107931756c4f"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-003-moons-4001-cosine-10000/step-10000/weights.npz",
+      "retention": "retained",
+      "sha256": "a6f8800e25af2d66591794c500e95d63e8999e156f044a14d692a23c1f3ca340"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-003-moons-4001-cosine-10000/trace.jsonl",
+      "retention": "retained",
+      "sha256": "1e3652188d4b52370926e3b01e0075e02f8e128dfbd0a6f6a0ae42cca7a8d950"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": ".compute/responses/65b3e02ebc8d4691a42e124f35fa4999.json",
+      "retention": "retained",
+      "sha256": "11ba0aca45869f609b78243ca5167f3a7f7268e98bf1ef25c06668dc3791e262"
+    }
+  ],
+  "protocol_revision": "ema-schedule-v1",
+  "record_type": "RunRecord",
+  "run_id": "confirm-003-moons-4001-cosine-10000",
+  "schema_version": "0.2",
+  "split": "confirmation",
+  "started_at": "2026-10-08T06:57:32.547394+00:00",
+  "status": "succeeded",
+  "usage": {
+    "money_usd": 0,
+    "tokens": 0,
+    "wall_seconds": 15.337637916905805
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "study/runner.py",
+    "train",
+    "--attempt",
+    "confirm-009-moons-4003-cosine-10000",
+    "--dataset",
+    "moons",
+    "--seed",
+    "4003",
+    "--policy",
+    "cosine",
+    "--horizon",
+    "10000"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "confirm-009-moons-4003-cosine-10000",
+  "request_id": "559b572a4139475ea1a3814913c8e61d",
+  "timeout_seconds": 45.0
+}

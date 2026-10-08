@@ -1,0 +1,192 @@
+{
+  "created_at": "2026-10-08T06:56:52.212370+00:00",
+  "pilot": {
+    "path": "campaigns/ema-schedule-v1/attempts/pilot-a005/pilot.json",
+    "sha256": "b2acb9f5aeefd77188320caf0bb7c28dee3aec88dba9ae6e3380d22113fe513f",
+    "media_type": "application/octet-stream",
+    "retention": "retained"
+  },
+  "controls": {
+    "path": "campaigns/ema-schedule-v1/attempts/pilot-a005/controls.json",
+    "sha256": "e1cb068ae2a8bc6172b769c619b357e89cb09b788f2f92cac95e0fc83be1d234",
+    "media_type": "application/octet-stream",
+    "retention": "retained"
+  },
+  "candidate_forecasts": [
+    {
+      "device": "cpu",
+      "seconds_per_update": 0.0012977428319863975,
+      "seconds_per_state": 0.5090576390114924,
+      "forecast_seconds": 469.88081470374016
+    },
+    {
+      "device": "mps",
+      "seconds_per_update": 0.0036083530001342298,
+      "seconds_per_state": 0.1140046389773488,
+      "forecast_seconds": 957.707302173972
+    }
+  ],
+  "remaining_compute_seconds": 1778.53053637431,
+  "chosen": {
+    "device": "cpu",
+    "seconds_per_update": 0.0012977428319863975,
+    "seconds_per_state": 0.5090576390114924,
+    "forecast_seconds": 469.88081470374016
+  },
+  "feasible": true,
+  "usage_before_confirmation": {
+    "seconds": {
+      "compute": 21.46946362568997,
+      "setup": 15.07963279215619
+    },
+    "compute_requests": 5,
+    "receipts": [
+      {
+        "request": {
+          "path": ".compute/requests/4075c7ddc73e4ec5a7aa966816c7e47d.json",
+          "sha256": "900fa5a41772343bccb772139844086422771cf1f392c9771c531fb051814c79",
+          "media_type": "application/octet-stream",
+          "retention": "retained"
+        },
+        "receipt": {
+          "path": ".compute/responses/4075c7ddc73e4ec5a7aa966816c7e47d.json",
+          "sha256": "4e83f3a2cd49dd7fa729b0abf45b9e6eacf5b0af30e5d1d41556948b06a076c8",
+          "media_type": "application/octet-stream",
+          "retention": "retained"
+        },
+        "label": "fresh-environment",
+        "category": "setup",
+        "status": "completed",
+        "charged_seconds": 1.8120836669113487
+      },
+      {
+        "request": {
+          "path": ".compute/requests/808889e12ff547ef9b9a9b42cf439e91.json",
+          "sha256": "43f92c137d44360f677b18ba070273497760d89b9bea0a499f0489a1b10f28fb",
+          "media_type": "application/octet-stream",
+          "retention": "retained"
+        },
+        "receipt": {
+          "path": ".compute/responses/808889e12ff547ef9b9a9b42cf439e91.json",
+          "sha256": "158376b325e82b3bd4fe661a04b0cd690ed51565c9c321352d447537637990e0",
+          "media_type": "application/octet-stream",
+          "retention": "retained"
+        },
+        "label": "pilot-mps-watermark-compatibility",
+        "category": "compute",
+        "status": "completed",
+        "charged_seconds": 11.556486582849175
+      },
+      {
+        "request": {
+          "path": ".compute/requests/9c70527f00384050aae07e48a02b2384.json",
+          "sha256": "9e3a4b4480e8f2d89718cc3ffa18b31df29c8e4c2b1fc5b507df6f72a0044e43",
+          "media_type": "application/octet-stream",
+          "retention": "retained"
+        },
+        "receipt": {
+          "path": ".compute/responses/9c70527f00384050aae07e48a02b2384.json",
+          "sha256": "a9dedd72051eb48e62870d0143d25b05c280b9e69fbd56029ccd16bf37ede2b7",
+          "media_type": "application/octet-stream",
+          "retention": "retained"
+        },
+        "label": "pilot-recovery-calibration",
+        "category": "compute",
+        "status": "failed",
+        "charged_seconds": 6.24138025008142
+      },
+      {
+        "request": {
+          "path": ".compute/requests/b5a8b1d204694c5e8fd89f2c35d7bd7e.json",
+          "sha256": "a41d00933c0689f46143b00a97fd17ea9fe3aeb9c02612e219d53588217eb55d",
+          "media_type": "application/octet-stream",
+          "retention": "retained"
+        },
+        "receipt": {
+          "path": ".compute/responses/b5a8b1d204694c5e8fd89f2c35d7bd7e.json",
+          "sha256": "fd002222c2f8074134d63f2ad501ab6a45752275f5f76b9ffaa5198fad4ee8c9",
+          "media_type": "application/octet-stream",
+          "retention": "retained"
+        },
+        "label": "pilot-float64-control-tolerance",
+        "category": "compute",
+        "status": "failed",
+        "charged_seconds": 0.9802385838702321
+      },
+      {
+        "request": {
+          "path": ".compute/requests/b874e215288740f7bcb5d64e8f300fcd.json",
+          "sha256": "ba0fc358923c8981cde8668e0fb606076475c3507f47c03c1612bb5ed3623b50",
+          "media_type": "application/octet-stream",
+          "retention": "retained"
+        },
+        "receipt": {
+          "path": ".compute/responses/b874e215288740f7bcb5d64e8f300fcd.json",
+          "sha256": "f2d5999e8ae7cec371881e5b59d6ea84d99de2470025e71aa419501fb8aecb19",
+          "media_type": "application/octet-stream",
+          "retention": "retained"
+        },
+        "label": "pilot-serialization-fix",
+        "category": "compute",
+        "status": "failed",
+        "charged_seconds": 1.0618089998606592
+      },
+      {
+        "request": {
+          "path": ".compute/requests/d4eec13441ab4576a3be9e6585a81ccf.json",
+          "sha256": "99385ab5c81983d26865ba15838218ec2f28f30c6364108efe6f91088d75f19b",
+          "media_type": "application/octet-stream",
+          "retention": "retained"
+        },
+        "receipt": {
+          "path": ".compute/responses/d4eec13441ab4576a3be9e6585a81ccf.json",
+          "sha256": "64a3e560de37a9290df85d6dec53297bfb5cbf619c347ec15823553c49fc1444",
+          "media_type": "application/octet-stream",
+          "retention": "retained"
+        },
+        "label": "pinned-packages",
+        "category": "setup",
+        "status": "completed",
+        "charged_seconds": 12.942769042216241
+      },
+      {
+        "request": {
+          "path": ".compute/requests/dce58e0ddbc84eab83cefb5d8deea325.json",
+          "sha256": "cbc08bfb079dc0b1a55464a5050336a6133a1e3c6c64dabb92d81e52b8b409f7",
+          "media_type": "application/octet-stream",
+          "retention": "retained"
+        },
+        "receipt": {
+          "path": ".compute/responses/dce58e0ddbc84eab83cefb5d8deea325.json",
+          "sha256": "408a3480aafb30a0804e04eec1c745878f391f26cad019f431b1ab74207b8e19",
+          "media_type": "application/octet-stream",
+          "retention": "retained"
+        },
+        "label": "campaign-and-source-snapshot",
+        "category": "setup",
+        "status": "completed",
+        "charged_seconds": 0.3247800830285996
+      },
+      {
+        "request": {
+          "path": ".compute/requests/eb3a9a1af25f4b79a62b3ee43b86adb4.json",
+          "sha256": "758dd09e043536c6a1c355e7f06866da2c6c4664327d06bb7d1035a3502ad494",
+          "media_type": "application/octet-stream",
+          "retention": "retained"
+        },
+        "receipt": {
+          "path": ".compute/responses/eb3a9a1af25f4b79a62b3ee43b86adb4.json",
+          "sha256": "8e52a5d3ac625075ed8699095d1403488cfee6b8a2b4c84491e86914ee7087a5",
+          "media_type": "application/octet-stream",
+          "retention": "retained"
+        },
+        "label": "pilot-first-controlled-attempt",
+        "category": "compute",
+        "status": "timed_out",
+        "charged_seconds": 1.6295492090284824
+      }
+    ]
+  },
+  "formula": "1.15*(200000*worst_dataset_step_seconds + 96*worst_dataset_sample_seconds + 48 startup/input seconds)+60 verification seconds",
+  "confirmation_opened": false
+}

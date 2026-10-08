@@ -1,0 +1,17 @@
+{
+  "injected_interruption": false,
+  "isolation_sha256": "8e651245c613fc3ce9b53a26ed07d31927405e897ee69ed15ebfc759bd5f2afa",
+  "reconciled_after_controller_restart": false,
+  "request_id": "9c70527f00384050aae07e48a02b2384",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 6.24138025008142,
+    "ended_at": "2026-10-08T06:51:49.524537+00:00",
+    "exit_code": 1,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r12/resources/jobs/0005-pilot-recovery-calibration",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 208109568,
+    "peak_storage_bytes": 1095304618,
+    "status": "failed"
+  }
+}

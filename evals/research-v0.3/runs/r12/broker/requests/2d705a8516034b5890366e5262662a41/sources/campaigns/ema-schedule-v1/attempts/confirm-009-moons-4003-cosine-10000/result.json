@@ -1,0 +1,46 @@
+{
+  "environment": {
+    "device": "cpu",
+    "dtype": "float32",
+    "numpy": "2.4.6",
+    "python": "3.11.6",
+    "torch": "2.14.1"
+  },
+  "runs": [
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-009-moons-4003-cosine-10000/step-10000/arrays.npz",
+      "attempt_id": "confirm-009-moons-4003-cosine-10000",
+      "dataset": "moons",
+      "device": "cpu",
+      "generation_noise_sha256": "447201897ecf052dd30bcb7a9e6efc5e569d680de214cde84d10781e893a9ef8",
+      "heldout_sha256": "ea9f392029cf8b1c497ecd6d77472c3491857d20edde35d59f6520dc75b41333",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/moons-4003/initial.npz",
+      "initial_weights_sha256": "148bf5d43d00447d36c940a22b2c369e593d4fb283f2a4c801cf6d59f6dfe34c",
+      "inputs": "campaigns/ema-schedule-v1/inputs/moons-4003/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.02877600031846668
+        },
+        "ema0999": {
+          "sw1": 0.028709219820330624
+        },
+        "raw": {
+          "sw1": 0.028792310707599484
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "cosine",
+      "seed": 4003,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "b287d030341b6161285c946a9bb2dff1d2cd7beba6fc213e476b2106f3162fe0",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-009-moons-4003-cosine-10000/trace.jsonl",
+      "updates": 10000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-009-moons-4003-cosine-10000/step-10000/weights.npz"
+    }
+  ],
+  "timing": {
+    "sampling_and_save_seconds": 1.2756462499964982,
+    "training_seconds": 12.774108416866511,
+    "updates": 10000
+  }
+}

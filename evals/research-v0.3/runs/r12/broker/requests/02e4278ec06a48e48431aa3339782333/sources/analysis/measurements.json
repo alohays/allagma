@@ -1,0 +1,1591 @@
+{
+  "format": "research-measurements-v1",
+  "protocol": "campaigns/ema-schedule-v1/protocol.json",
+  "runs": [
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-013-gmm8-5001-constant-10000/step-5000/arrays.npz",
+      "attempt_id": "confirm-013-gmm8-5001-constant-10000",
+      "dataset": "gmm8",
+      "device": "cpu",
+      "generation_noise_sha256": "3e84425ce8de61f0c7dbba82060546dcc74799338c665eb454a00854466a21d2",
+      "heldout_sha256": "eeb78e4a2bc4ab4e9155586f2e2321252c06d5a5fbfb5636d086ebd59b4fb3c8",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/gmm8-5001/initial.npz",
+      "initial_weights_sha256": "06237d004ee4c1ae2f2cf89b419c2d39081009bb01911ae463a5c3b98fcd42f5",
+      "inputs": "campaigns/ema-schedule-v1/inputs/gmm8-5001/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2017,
+          "inlier_fraction": 0.98486328125,
+          "mode_counts": [
+            225,
+            237,
+            272,
+            267,
+            257,
+            271,
+            251,
+            237
+          ],
+          "sw1": 0.0807337660498342
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2020,
+          "inlier_fraction": 0.986328125,
+          "mode_counts": [
+            222,
+            239,
+            272,
+            256,
+            263,
+            275,
+            262,
+            231
+          ],
+          "sw1": 0.0870501646045283
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 1999,
+          "inlier_fraction": 0.97607421875,
+          "mode_counts": [
+            241,
+            236,
+            269,
+            245,
+            241,
+            257,
+            277,
+            233
+          ],
+          "sw1": 0.05725001362228775
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "constant",
+      "seed": 5001,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "a17f363aab7430c81280267041d1ff32929fa2e3aa3eb04faf1aa4f5d1a35153",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-013-gmm8-5001-constant-10000/trace.jsonl",
+      "updates": 5000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-013-gmm8-5001-constant-10000/step-5000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-014-gmm8-5001-cosine-5000/step-5000/arrays.npz",
+      "attempt_id": "confirm-014-gmm8-5001-cosine-5000",
+      "dataset": "gmm8",
+      "device": "cpu",
+      "generation_noise_sha256": "3e84425ce8de61f0c7dbba82060546dcc74799338c665eb454a00854466a21d2",
+      "heldout_sha256": "eeb78e4a2bc4ab4e9155586f2e2321252c06d5a5fbfb5636d086ebd59b4fb3c8",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/gmm8-5001/initial.npz",
+      "initial_weights_sha256": "06237d004ee4c1ae2f2cf89b419c2d39081009bb01911ae463a5c3b98fcd42f5",
+      "inputs": "campaigns/ema-schedule-v1/inputs/gmm8-5001/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2023,
+          "inlier_fraction": 0.98779296875,
+          "mode_counts": [
+            227,
+            242,
+            272,
+            262,
+            265,
+            266,
+            256,
+            233
+          ],
+          "sw1": 0.08323314883653612
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2019,
+          "inlier_fraction": 0.98583984375,
+          "mode_counts": [
+            223,
+            245,
+            272,
+            258,
+            264,
+            266,
+            261,
+            230
+          ],
+          "sw1": 0.08214048285119446
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2021,
+          "inlier_fraction": 0.98681640625,
+          "mode_counts": [
+            227,
+            243,
+            271,
+            263,
+            265,
+            264,
+            256,
+            232
+          ],
+          "sw1": 0.08383448046555932
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "cosine",
+      "seed": 5001,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "a17f363aab7430c81280267041d1ff32929fa2e3aa3eb04faf1aa4f5d1a35153",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-014-gmm8-5001-cosine-5000/trace.jsonl",
+      "updates": 5000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-014-gmm8-5001-cosine-5000/step-5000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-013-gmm8-5001-constant-10000/step-10000/arrays.npz",
+      "attempt_id": "confirm-013-gmm8-5001-constant-10000",
+      "dataset": "gmm8",
+      "device": "cpu",
+      "generation_noise_sha256": "3e84425ce8de61f0c7dbba82060546dcc74799338c665eb454a00854466a21d2",
+      "heldout_sha256": "eeb78e4a2bc4ab4e9155586f2e2321252c06d5a5fbfb5636d086ebd59b4fb3c8",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/gmm8-5001/initial.npz",
+      "initial_weights_sha256": "06237d004ee4c1ae2f2cf89b419c2d39081009bb01911ae463a5c3b98fcd42f5",
+      "inputs": "campaigns/ema-schedule-v1/inputs/gmm8-5001/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2027,
+          "inlier_fraction": 0.98974609375,
+          "mode_counts": [
+            214,
+            239,
+            287,
+            257,
+            267,
+            264,
+            273,
+            226
+          ],
+          "sw1": 0.09260619776289981
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2031,
+          "inlier_fraction": 0.99169921875,
+          "mode_counts": [
+            225,
+            239,
+            278,
+            261,
+            265,
+            269,
+            265,
+            229
+          ],
+          "sw1": 0.08663560061159174
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2014,
+          "inlier_fraction": 0.9833984375,
+          "mode_counts": [
+            218,
+            225,
+            288,
+            260,
+            269,
+            268,
+            267,
+            219
+          ],
+          "sw1": 0.10714579524135219
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "constant",
+      "seed": 5001,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "a17f363aab7430c81280267041d1ff32929fa2e3aa3eb04faf1aa4f5d1a35153",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-013-gmm8-5001-constant-10000/trace.jsonl",
+      "updates": 10000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-013-gmm8-5001-constant-10000/step-10000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-015-gmm8-5001-cosine-10000/step-10000/arrays.npz",
+      "attempt_id": "confirm-015-gmm8-5001-cosine-10000",
+      "dataset": "gmm8",
+      "device": "cpu",
+      "generation_noise_sha256": "3e84425ce8de61f0c7dbba82060546dcc74799338c665eb454a00854466a21d2",
+      "heldout_sha256": "eeb78e4a2bc4ab4e9155586f2e2321252c06d5a5fbfb5636d086ebd59b4fb3c8",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/gmm8-5001/initial.npz",
+      "initial_weights_sha256": "06237d004ee4c1ae2f2cf89b419c2d39081009bb01911ae463a5c3b98fcd42f5",
+      "inputs": "campaigns/ema-schedule-v1/inputs/gmm8-5001/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2034,
+          "inlier_fraction": 0.9931640625,
+          "mode_counts": [
+            229,
+            241,
+            276,
+            266,
+            266,
+            266,
+            266,
+            224
+          ],
+          "sw1": 0.08811546362822328
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2031,
+          "inlier_fraction": 0.99169921875,
+          "mode_counts": [
+            227,
+            240,
+            277,
+            262,
+            267,
+            263,
+            267,
+            228
+          ],
+          "sw1": 0.0852745617276448
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2036,
+          "inlier_fraction": 0.994140625,
+          "mode_counts": [
+            229,
+            241,
+            276,
+            266,
+            266,
+            266,
+            266,
+            226
+          ],
+          "sw1": 0.08828677839934268
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "cosine",
+      "seed": 5001,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "a17f363aab7430c81280267041d1ff32929fa2e3aa3eb04faf1aa4f5d1a35153",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-015-gmm8-5001-cosine-10000/trace.jsonl",
+      "updates": 10000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-015-gmm8-5001-cosine-10000/step-10000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-016-gmm8-5002-constant-10000/step-5000/arrays.npz",
+      "attempt_id": "confirm-016-gmm8-5002-constant-10000",
+      "dataset": "gmm8",
+      "device": "cpu",
+      "generation_noise_sha256": "b9a5974cea6b577eabc66f8bd4ea81a610ae5cdaff5d7c86888c6e4749507e79",
+      "heldout_sha256": "2d728e249f5917bba79ee9af4807f9192412d60a9243188b22b5f9fa29ff66b5",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/gmm8-5002/initial.npz",
+      "initial_weights_sha256": "8c78a706a2a29da7f89b91da28d6cef975f0c68d6dfdcd91c0d2d0a4dbb59541",
+      "inputs": "campaigns/ema-schedule-v1/inputs/gmm8-5002/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2016,
+          "inlier_fraction": 0.984375,
+          "mode_counts": [
+            245,
+            258,
+            271,
+            257,
+            275,
+            242,
+            233,
+            235
+          ],
+          "sw1": 0.08207563723310132
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2017,
+          "inlier_fraction": 0.98486328125,
+          "mode_counts": [
+            241,
+            265,
+            277,
+            248,
+            257,
+            250,
+            232,
+            247
+          ],
+          "sw1": 0.06893116097544667
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2018,
+          "inlier_fraction": 0.9853515625,
+          "mode_counts": [
+            250,
+            281,
+            277,
+            306,
+            317,
+            227,
+            172,
+            188
+          ],
+          "sw1": 0.22288134044894997
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "constant",
+      "seed": 5002,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "deea879af17a53c97cd1a294a3590ed861d513c662275ad49abffe67c05b5ba1",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-016-gmm8-5002-constant-10000/trace.jsonl",
+      "updates": 5000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-016-gmm8-5002-constant-10000/step-5000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-017-gmm8-5002-cosine-5000/step-5000/arrays.npz",
+      "attempt_id": "confirm-017-gmm8-5002-cosine-5000",
+      "dataset": "gmm8",
+      "device": "cpu",
+      "generation_noise_sha256": "b9a5974cea6b577eabc66f8bd4ea81a610ae5cdaff5d7c86888c6e4749507e79",
+      "heldout_sha256": "2d728e249f5917bba79ee9af4807f9192412d60a9243188b22b5f9fa29ff66b5",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/gmm8-5002/initial.npz",
+      "initial_weights_sha256": "8c78a706a2a29da7f89b91da28d6cef975f0c68d6dfdcd91c0d2d0a4dbb59541",
+      "inputs": "campaigns/ema-schedule-v1/inputs/gmm8-5002/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2017,
+          "inlier_fraction": 0.98486328125,
+          "mode_counts": [
+            241,
+            257,
+            287,
+            246,
+            259,
+            240,
+            242,
+            245
+          ],
+          "sw1": 0.07362056033223734
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2007,
+          "inlier_fraction": 0.97998046875,
+          "mode_counts": [
+            235,
+            262,
+            280,
+            246,
+            254,
+            247,
+            241,
+            242
+          ],
+          "sw1": 0.06836757134920086
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2017,
+          "inlier_fraction": 0.98486328125,
+          "mode_counts": [
+            240,
+            257,
+            286,
+            246,
+            261,
+            240,
+            242,
+            245
+          ],
+          "sw1": 0.07465001447018486
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "cosine",
+      "seed": 5002,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "deea879af17a53c97cd1a294a3590ed861d513c662275ad49abffe67c05b5ba1",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-017-gmm8-5002-cosine-5000/trace.jsonl",
+      "updates": 5000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-017-gmm8-5002-cosine-5000/step-5000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-016-gmm8-5002-constant-10000/step-10000/arrays.npz",
+      "attempt_id": "confirm-016-gmm8-5002-constant-10000",
+      "dataset": "gmm8",
+      "device": "cpu",
+      "generation_noise_sha256": "b9a5974cea6b577eabc66f8bd4ea81a610ae5cdaff5d7c86888c6e4749507e79",
+      "heldout_sha256": "2d728e249f5917bba79ee9af4807f9192412d60a9243188b22b5f9fa29ff66b5",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/gmm8-5002/initial.npz",
+      "initial_weights_sha256": "8c78a706a2a29da7f89b91da28d6cef975f0c68d6dfdcd91c0d2d0a4dbb59541",
+      "inputs": "campaigns/ema-schedule-v1/inputs/gmm8-5002/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2025,
+          "inlier_fraction": 0.98876953125,
+          "mode_counts": [
+            223,
+            256,
+            287,
+            270,
+            257,
+            242,
+            255,
+            235
+          ],
+          "sw1": 0.08593250128504154
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2022,
+          "inlier_fraction": 0.9873046875,
+          "mode_counts": [
+            227,
+            260,
+            278,
+            263,
+            253,
+            251,
+            241,
+            249
+          ],
+          "sw1": 0.07340860322482613
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2026,
+          "inlier_fraction": 0.9892578125,
+          "mode_counts": [
+            224,
+            258,
+            299,
+            282,
+            266,
+            246,
+            240,
+            211
+          ],
+          "sw1": 0.1341416766726183
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "constant",
+      "seed": 5002,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "deea879af17a53c97cd1a294a3590ed861d513c662275ad49abffe67c05b5ba1",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-016-gmm8-5002-constant-10000/trace.jsonl",
+      "updates": 10000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-016-gmm8-5002-constant-10000/step-10000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-018-gmm8-5002-cosine-10000/step-10000/arrays.npz",
+      "attempt_id": "confirm-018-gmm8-5002-cosine-10000",
+      "dataset": "gmm8",
+      "device": "cpu",
+      "generation_noise_sha256": "b9a5974cea6b577eabc66f8bd4ea81a610ae5cdaff5d7c86888c6e4749507e79",
+      "heldout_sha256": "2d728e249f5917bba79ee9af4807f9192412d60a9243188b22b5f9fa29ff66b5",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/gmm8-5002/initial.npz",
+      "initial_weights_sha256": "8c78a706a2a29da7f89b91da28d6cef975f0c68d6dfdcd91c0d2d0a4dbb59541",
+      "inputs": "campaigns/ema-schedule-v1/inputs/gmm8-5002/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2027,
+          "inlier_fraction": 0.98974609375,
+          "mode_counts": [
+            232,
+            260,
+            284,
+            253,
+            257,
+            250,
+            235,
+            256
+          ],
+          "sw1": 0.06862971403627526
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2029,
+          "inlier_fraction": 0.99072265625,
+          "mode_counts": [
+            233,
+            259,
+            281,
+            255,
+            257,
+            252,
+            235,
+            257
+          ],
+          "sw1": 0.06855588076119744
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2026,
+          "inlier_fraction": 0.9892578125,
+          "mode_counts": [
+            232,
+            260,
+            284,
+            254,
+            255,
+            250,
+            235,
+            256
+          ],
+          "sw1": 0.06922755719349813
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "cosine",
+      "seed": 5002,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "deea879af17a53c97cd1a294a3590ed861d513c662275ad49abffe67c05b5ba1",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-018-gmm8-5002-cosine-10000/trace.jsonl",
+      "updates": 10000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-018-gmm8-5002-cosine-10000/step-10000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-019-gmm8-5003-constant-10000/step-5000/arrays.npz",
+      "attempt_id": "confirm-019-gmm8-5003-constant-10000",
+      "dataset": "gmm8",
+      "device": "cpu",
+      "generation_noise_sha256": "d9be4794a0acbcb69da04c002651510988bfdf580df7c01fa4ada35443eadef2",
+      "heldout_sha256": "b62c1f70d47389e95a1a62bf3836096a396e92f50dabdf34ec070cc88dc975ba",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/gmm8-5003/initial.npz",
+      "initial_weights_sha256": "d97e2d122bab11660ffaf8d0c33745f4d27a593369c6512be91e8360cd1dbc3b",
+      "inputs": "campaigns/ema-schedule-v1/inputs/gmm8-5003/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2011,
+          "inlier_fraction": 0.98193359375,
+          "mode_counts": [
+            274,
+            270,
+            230,
+            293,
+            224,
+            224,
+            256,
+            240
+          ],
+          "sw1": 0.0892107376953735
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2001,
+          "inlier_fraction": 0.97705078125,
+          "mode_counts": [
+            282,
+            265,
+            233,
+            272,
+            236,
+            219,
+            256,
+            238
+          ],
+          "sw1": 0.08856033727855692
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2004,
+          "inlier_fraction": 0.978515625,
+          "mode_counts": [
+            230,
+            307,
+            244,
+            296,
+            230,
+            209,
+            268,
+            220
+          ],
+          "sw1": 0.10469176719889584
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "constant",
+      "seed": 5003,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "7e8e28a8c5f075a0418f91cf4dc6da1fa1331b91b9f9b66a18f6d65ad6740455",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-019-gmm8-5003-constant-10000/trace.jsonl",
+      "updates": 5000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-019-gmm8-5003-constant-10000/step-5000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-020-gmm8-5003-cosine-5000/step-5000/arrays.npz",
+      "attempt_id": "confirm-020-gmm8-5003-cosine-5000",
+      "dataset": "gmm8",
+      "device": "cpu",
+      "generation_noise_sha256": "d9be4794a0acbcb69da04c002651510988bfdf580df7c01fa4ada35443eadef2",
+      "heldout_sha256": "b62c1f70d47389e95a1a62bf3836096a396e92f50dabdf34ec070cc88dc975ba",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/gmm8-5003/initial.npz",
+      "initial_weights_sha256": "d97e2d122bab11660ffaf8d0c33745f4d27a593369c6512be91e8360cd1dbc3b",
+      "inputs": "campaigns/ema-schedule-v1/inputs/gmm8-5003/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2020,
+          "inlier_fraction": 0.986328125,
+          "mode_counts": [
+            281,
+            264,
+            242,
+            273,
+            239,
+            206,
+            261,
+            254
+          ],
+          "sw1": 0.09746780706550204
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2013,
+          "inlier_fraction": 0.98291015625,
+          "mode_counts": [
+            280,
+            267,
+            242,
+            269,
+            244,
+            206,
+            260,
+            245
+          ],
+          "sw1": 0.09207243688391828
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2018,
+          "inlier_fraction": 0.9853515625,
+          "mode_counts": [
+            280,
+            264,
+            242,
+            273,
+            239,
+            206,
+            261,
+            253
+          ],
+          "sw1": 0.09764407347033943
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "cosine",
+      "seed": 5003,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "7e8e28a8c5f075a0418f91cf4dc6da1fa1331b91b9f9b66a18f6d65ad6740455",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-020-gmm8-5003-cosine-5000/trace.jsonl",
+      "updates": 5000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-020-gmm8-5003-cosine-5000/step-5000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-019-gmm8-5003-constant-10000/step-10000/arrays.npz",
+      "attempt_id": "confirm-019-gmm8-5003-constant-10000",
+      "dataset": "gmm8",
+      "device": "cpu",
+      "generation_noise_sha256": "d9be4794a0acbcb69da04c002651510988bfdf580df7c01fa4ada35443eadef2",
+      "heldout_sha256": "b62c1f70d47389e95a1a62bf3836096a396e92f50dabdf34ec070cc88dc975ba",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/gmm8-5003/initial.npz",
+      "initial_weights_sha256": "d97e2d122bab11660ffaf8d0c33745f4d27a593369c6512be91e8360cd1dbc3b",
+      "inputs": "campaigns/ema-schedule-v1/inputs/gmm8-5003/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2027,
+          "inlier_fraction": 0.98974609375,
+          "mode_counts": [
+            276,
+            270,
+            249,
+            270,
+            253,
+            213,
+            251,
+            245
+          ],
+          "sw1": 0.0858453940339832
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2025,
+          "inlier_fraction": 0.98876953125,
+          "mode_counts": [
+            274,
+            273,
+            251,
+            270,
+            249,
+            205,
+            253,
+            250
+          ],
+          "sw1": 0.09778603649561335
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2025,
+          "inlier_fraction": 0.98876953125,
+          "mode_counts": [
+            278,
+            274,
+            255,
+            278,
+            235,
+            227,
+            245,
+            233
+          ],
+          "sw1": 0.09957974093938743
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "constant",
+      "seed": 5003,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "7e8e28a8c5f075a0418f91cf4dc6da1fa1331b91b9f9b66a18f6d65ad6740455",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-019-gmm8-5003-constant-10000/trace.jsonl",
+      "updates": 10000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-019-gmm8-5003-constant-10000/step-10000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-021-gmm8-5003-cosine-10000/step-10000/arrays.npz",
+      "attempt_id": "confirm-021-gmm8-5003-cosine-10000",
+      "dataset": "gmm8",
+      "device": "cpu",
+      "generation_noise_sha256": "d9be4794a0acbcb69da04c002651510988bfdf580df7c01fa4ada35443eadef2",
+      "heldout_sha256": "b62c1f70d47389e95a1a62bf3836096a396e92f50dabdf34ec070cc88dc975ba",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/gmm8-5003/initial.npz",
+      "initial_weights_sha256": "d97e2d122bab11660ffaf8d0c33745f4d27a593369c6512be91e8360cd1dbc3b",
+      "inputs": "campaigns/ema-schedule-v1/inputs/gmm8-5003/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2026,
+          "inlier_fraction": 0.9892578125,
+          "mode_counts": [
+            275,
+            266,
+            246,
+            271,
+            254,
+            208,
+            254,
+            252
+          ],
+          "sw1": 0.0888732954204519
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2024,
+          "inlier_fraction": 0.98828125,
+          "mode_counts": [
+            276,
+            264,
+            252,
+            267,
+            254,
+            206,
+            256,
+            249
+          ],
+          "sw1": 0.09120763378444256
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2028,
+          "inlier_fraction": 0.990234375,
+          "mode_counts": [
+            276,
+            266,
+            246,
+            271,
+            255,
+            208,
+            254,
+            252
+          ],
+          "sw1": 0.08880344030462183
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "cosine",
+      "seed": 5003,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "7e8e28a8c5f075a0418f91cf4dc6da1fa1331b91b9f9b66a18f6d65ad6740455",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-021-gmm8-5003-cosine-10000/trace.jsonl",
+      "updates": 10000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-021-gmm8-5003-cosine-10000/step-10000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/step-5000/arrays.npz",
+      "attempt_id": "confirm-022-gmm8-5004-constant-10000",
+      "dataset": "gmm8",
+      "device": "cpu",
+      "generation_noise_sha256": "6d7b0898897519e987c20ba750c3ed88454dc586a8be523c278b377133bc65a3",
+      "heldout_sha256": "b740ab3b19984bd95ef51d3b732e582d0886605388420b0fa6aeda9e2ccbad67",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/gmm8-5004/initial.npz",
+      "initial_weights_sha256": "d0f10eea8d98cab7bdc7fa9aecf5f75d20d1c2ff0ba934b102787e70ffcb87b2",
+      "inputs": "campaigns/ema-schedule-v1/inputs/gmm8-5004/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2011,
+          "inlier_fraction": 0.98193359375,
+          "mode_counts": [
+            235,
+            246,
+            253,
+            254,
+            283,
+            271,
+            235,
+            234
+          ],
+          "sw1": 0.038030494541827595
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2005,
+          "inlier_fraction": 0.97900390625,
+          "mode_counts": [
+            229,
+            238,
+            249,
+            253,
+            277,
+            275,
+            245,
+            239
+          ],
+          "sw1": 0.035349810732060304
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2004,
+          "inlier_fraction": 0.978515625,
+          "mode_counts": [
+            244,
+            243,
+            252,
+            235,
+            316,
+            264,
+            235,
+            215
+          ],
+          "sw1": 0.07952915847435216
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "constant",
+      "seed": 5004,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "368bd9efa194886b8b7843996055e74aaaa567920514b1852397ab58371133d7",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/trace.jsonl",
+      "updates": 5000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/step-5000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-023-gmm8-5004-cosine-5000/step-5000/arrays.npz",
+      "attempt_id": "confirm-023-gmm8-5004-cosine-5000",
+      "dataset": "gmm8",
+      "device": "cpu",
+      "generation_noise_sha256": "6d7b0898897519e987c20ba750c3ed88454dc586a8be523c278b377133bc65a3",
+      "heldout_sha256": "b740ab3b19984bd95ef51d3b732e582d0886605388420b0fa6aeda9e2ccbad67",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/gmm8-5004/initial.npz",
+      "initial_weights_sha256": "d0f10eea8d98cab7bdc7fa9aecf5f75d20d1c2ff0ba934b102787e70ffcb87b2",
+      "inputs": "campaigns/ema-schedule-v1/inputs/gmm8-5004/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2011,
+          "inlier_fraction": 0.98193359375,
+          "mode_counts": [
+            235,
+            240,
+            258,
+            259,
+            262,
+            266,
+            246,
+            245
+          ],
+          "sw1": 0.02428513374613687
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2007,
+          "inlier_fraction": 0.97998046875,
+          "mode_counts": [
+            234,
+            240,
+            257,
+            260,
+            265,
+            266,
+            243,
+            242
+          ],
+          "sw1": 0.02689557794091123
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2014,
+          "inlier_fraction": 0.9833984375,
+          "mode_counts": [
+            236,
+            241,
+            258,
+            259,
+            263,
+            266,
+            246,
+            245
+          ],
+          "sw1": 0.024101704286636428
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "cosine",
+      "seed": 5004,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "368bd9efa194886b8b7843996055e74aaaa567920514b1852397ab58371133d7",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-023-gmm8-5004-cosine-5000/trace.jsonl",
+      "updates": 5000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-023-gmm8-5004-cosine-5000/step-5000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/step-10000/arrays.npz",
+      "attempt_id": "confirm-022-gmm8-5004-constant-10000",
+      "dataset": "gmm8",
+      "device": "cpu",
+      "generation_noise_sha256": "6d7b0898897519e987c20ba750c3ed88454dc586a8be523c278b377133bc65a3",
+      "heldout_sha256": "b740ab3b19984bd95ef51d3b732e582d0886605388420b0fa6aeda9e2ccbad67",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/gmm8-5004/initial.npz",
+      "initial_weights_sha256": "d0f10eea8d98cab7bdc7fa9aecf5f75d20d1c2ff0ba934b102787e70ffcb87b2",
+      "inputs": "campaigns/ema-schedule-v1/inputs/gmm8-5004/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2020,
+          "inlier_fraction": 0.986328125,
+          "mode_counts": [
+            243,
+            250,
+            247,
+            255,
+            272,
+            270,
+            245,
+            238
+          ],
+          "sw1": 0.0269675623973454
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2023,
+          "inlier_fraction": 0.98779296875,
+          "mode_counts": [
+            242,
+            241,
+            247,
+            261,
+            272,
+            273,
+            245,
+            242
+          ],
+          "sw1": 0.02854677338389423
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2004,
+          "inlier_fraction": 0.978515625,
+          "mode_counts": [
+            249,
+            265,
+            222,
+            272,
+            224,
+            264,
+            246,
+            262
+          ],
+          "sw1": 0.04731219832452366
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "constant",
+      "seed": 5004,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "368bd9efa194886b8b7843996055e74aaaa567920514b1852397ab58371133d7",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/trace.jsonl",
+      "updates": 10000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-022-gmm8-5004-constant-10000/step-10000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-024-gmm8-5004-cosine-10000/step-10000/arrays.npz",
+      "attempt_id": "confirm-024-gmm8-5004-cosine-10000",
+      "dataset": "gmm8",
+      "device": "cpu",
+      "generation_noise_sha256": "6d7b0898897519e987c20ba750c3ed88454dc586a8be523c278b377133bc65a3",
+      "heldout_sha256": "b740ab3b19984bd95ef51d3b732e582d0886605388420b0fa6aeda9e2ccbad67",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/gmm8-5004/initial.npz",
+      "initial_weights_sha256": "d0f10eea8d98cab7bdc7fa9aecf5f75d20d1c2ff0ba934b102787e70ffcb87b2",
+      "inputs": "campaigns/ema-schedule-v1/inputs/gmm8-5004/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2023,
+          "inlier_fraction": 0.98779296875,
+          "mode_counts": [
+            246,
+            241,
+            253,
+            257,
+            268,
+            269,
+            242,
+            247
+          ],
+          "sw1": 0.024398166431239116
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2026,
+          "inlier_fraction": 0.9892578125,
+          "mode_counts": [
+            244,
+            242,
+            253,
+            261,
+            271,
+            265,
+            246,
+            244
+          ],
+          "sw1": 0.024183094342500606
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2025,
+          "inlier_fraction": 0.98876953125,
+          "mode_counts": [
+            247,
+            241,
+            253,
+            256,
+            268,
+            269,
+            243,
+            248
+          ],
+          "sw1": 0.02444794034260138
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "cosine",
+      "seed": 5004,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "368bd9efa194886b8b7843996055e74aaaa567920514b1852397ab58371133d7",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-024-gmm8-5004-cosine-10000/trace.jsonl",
+      "updates": 10000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-024-gmm8-5004-cosine-10000/step-10000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-001-moons-4001-constant-10000/step-5000/arrays.npz",
+      "attempt_id": "confirm-001-moons-4001-constant-10000",
+      "dataset": "moons",
+      "device": "cpu",
+      "generation_noise_sha256": "43fbba450dcafebd5d526033982832da94332ed75cba1c6ae3099a5f94feee52",
+      "heldout_sha256": "af014d6f09e70ef49262fff9d6a04ce2088908b4521a1d5ddcdf682b43ba84d2",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/moons-4001/initial.npz",
+      "initial_weights_sha256": "566524740e64b3138c12274977803aeb063725a5cf8de3b685862abdc720b1a1",
+      "inputs": "campaigns/ema-schedule-v1/inputs/moons-4001/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.025642063437391248
+        },
+        "ema0999": {
+          "sw1": 0.03084670952759538
+        },
+        "raw": {
+          "sw1": 0.0897572524401276
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "constant",
+      "seed": 4001,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "cbc3fb86fd00daea6a70f33d05434c7ffce8e0ec5076b4b56bbe6ac66b0556a0",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-001-moons-4001-constant-10000/trace.jsonl",
+      "updates": 5000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-001-moons-4001-constant-10000/step-5000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-002-moons-4001-cosine-5000/step-5000/arrays.npz",
+      "attempt_id": "confirm-002-moons-4001-cosine-5000",
+      "dataset": "moons",
+      "device": "cpu",
+      "generation_noise_sha256": "43fbba450dcafebd5d526033982832da94332ed75cba1c6ae3099a5f94feee52",
+      "heldout_sha256": "af014d6f09e70ef49262fff9d6a04ce2088908b4521a1d5ddcdf682b43ba84d2",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/moons-4001/initial.npz",
+      "initial_weights_sha256": "566524740e64b3138c12274977803aeb063725a5cf8de3b685862abdc720b1a1",
+      "inputs": "campaigns/ema-schedule-v1/inputs/moons-4001/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.03058226794427911
+        },
+        "ema0999": {
+          "sw1": 0.030993955563507675
+        },
+        "raw": {
+          "sw1": 0.030402298579025173
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "cosine",
+      "seed": 4001,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "cbc3fb86fd00daea6a70f33d05434c7ffce8e0ec5076b4b56bbe6ac66b0556a0",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-002-moons-4001-cosine-5000/trace.jsonl",
+      "updates": 5000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-002-moons-4001-cosine-5000/step-5000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-001-moons-4001-constant-10000/step-10000/arrays.npz",
+      "attempt_id": "confirm-001-moons-4001-constant-10000",
+      "dataset": "moons",
+      "device": "cpu",
+      "generation_noise_sha256": "43fbba450dcafebd5d526033982832da94332ed75cba1c6ae3099a5f94feee52",
+      "heldout_sha256": "af014d6f09e70ef49262fff9d6a04ce2088908b4521a1d5ddcdf682b43ba84d2",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/moons-4001/initial.npz",
+      "initial_weights_sha256": "566524740e64b3138c12274977803aeb063725a5cf8de3b685862abdc720b1a1",
+      "inputs": "campaigns/ema-schedule-v1/inputs/moons-4001/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.030459205011821353
+        },
+        "ema0999": {
+          "sw1": 0.02954543249287412
+        },
+        "raw": {
+          "sw1": 0.0624711865399682
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "constant",
+      "seed": 4001,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "cbc3fb86fd00daea6a70f33d05434c7ffce8e0ec5076b4b56bbe6ac66b0556a0",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-001-moons-4001-constant-10000/trace.jsonl",
+      "updates": 10000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-001-moons-4001-constant-10000/step-10000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-003-moons-4001-cosine-10000/step-10000/arrays.npz",
+      "attempt_id": "confirm-003-moons-4001-cosine-10000",
+      "dataset": "moons",
+      "device": "cpu",
+      "generation_noise_sha256": "43fbba450dcafebd5d526033982832da94332ed75cba1c6ae3099a5f94feee52",
+      "heldout_sha256": "af014d6f09e70ef49262fff9d6a04ce2088908b4521a1d5ddcdf682b43ba84d2",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/moons-4001/initial.npz",
+      "initial_weights_sha256": "566524740e64b3138c12274977803aeb063725a5cf8de3b685862abdc720b1a1",
+      "inputs": "campaigns/ema-schedule-v1/inputs/moons-4001/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.03366479902334493
+        },
+        "ema0999": {
+          "sw1": 0.03369325181648011
+        },
+        "raw": {
+          "sw1": 0.03357380242714802
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "cosine",
+      "seed": 4001,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "cbc3fb86fd00daea6a70f33d05434c7ffce8e0ec5076b4b56bbe6ac66b0556a0",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-003-moons-4001-cosine-10000/trace.jsonl",
+      "updates": 10000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-003-moons-4001-cosine-10000/step-10000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-004-moons-4002-constant-10000/step-5000/arrays.npz",
+      "attempt_id": "confirm-004-moons-4002-constant-10000",
+      "dataset": "moons",
+      "device": "cpu",
+      "generation_noise_sha256": "e713cc4f52e2e9f44d5e2c4beb0c6d1abf12d09c035592a529990862c373dfdd",
+      "heldout_sha256": "54967586df1e2cd86b5bb7fe6f9a31dc728f58e5b8ac2ce10a28075e5d60d76b",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/moons-4002/initial.npz",
+      "initial_weights_sha256": "5b7647dffe4e7fd8fea1b1e627717d01eef8e4ecb652775a48824afd2a16c70d",
+      "inputs": "campaigns/ema-schedule-v1/inputs/moons-4002/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.04638613348512662
+        },
+        "ema0999": {
+          "sw1": 0.04312114051067059
+        },
+        "raw": {
+          "sw1": 0.12742328026214716
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "constant",
+      "seed": 4002,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "c53a7bcf10a14761440e0bd694daee5ade24b913e121c7cf4893711396216c67",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-004-moons-4002-constant-10000/trace.jsonl",
+      "updates": 5000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-004-moons-4002-constant-10000/step-5000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-005-moons-4002-cosine-5000/step-5000/arrays.npz",
+      "attempt_id": "confirm-005-moons-4002-cosine-5000",
+      "dataset": "moons",
+      "device": "cpu",
+      "generation_noise_sha256": "e713cc4f52e2e9f44d5e2c4beb0c6d1abf12d09c035592a529990862c373dfdd",
+      "heldout_sha256": "54967586df1e2cd86b5bb7fe6f9a31dc728f58e5b8ac2ce10a28075e5d60d76b",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/moons-4002/initial.npz",
+      "initial_weights_sha256": "5b7647dffe4e7fd8fea1b1e627717d01eef8e4ecb652775a48824afd2a16c70d",
+      "inputs": "campaigns/ema-schedule-v1/inputs/moons-4002/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.06283090466378974
+        },
+        "ema0999": {
+          "sw1": 0.05703709290638959
+        },
+        "raw": {
+          "sw1": 0.06139837927435837
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "cosine",
+      "seed": 4002,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "c53a7bcf10a14761440e0bd694daee5ade24b913e121c7cf4893711396216c67",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-005-moons-4002-cosine-5000/trace.jsonl",
+      "updates": 5000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-005-moons-4002-cosine-5000/step-5000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-004-moons-4002-constant-10000/step-10000/arrays.npz",
+      "attempt_id": "confirm-004-moons-4002-constant-10000",
+      "dataset": "moons",
+      "device": "cpu",
+      "generation_noise_sha256": "e713cc4f52e2e9f44d5e2c4beb0c6d1abf12d09c035592a529990862c373dfdd",
+      "heldout_sha256": "54967586df1e2cd86b5bb7fe6f9a31dc728f58e5b8ac2ce10a28075e5d60d76b",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/moons-4002/initial.npz",
+      "initial_weights_sha256": "5b7647dffe4e7fd8fea1b1e627717d01eef8e4ecb652775a48824afd2a16c70d",
+      "inputs": "campaigns/ema-schedule-v1/inputs/moons-4002/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.05370550526543231
+        },
+        "ema0999": {
+          "sw1": 0.05502166363801206
+        },
+        "raw": {
+          "sw1": 0.15088856848736057
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "constant",
+      "seed": 4002,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "c53a7bcf10a14761440e0bd694daee5ade24b913e121c7cf4893711396216c67",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-004-moons-4002-constant-10000/trace.jsonl",
+      "updates": 10000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-004-moons-4002-constant-10000/step-10000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-006-moons-4002-cosine-10000/step-10000/arrays.npz",
+      "attempt_id": "confirm-006-moons-4002-cosine-10000",
+      "dataset": "moons",
+      "device": "cpu",
+      "generation_noise_sha256": "e713cc4f52e2e9f44d5e2c4beb0c6d1abf12d09c035592a529990862c373dfdd",
+      "heldout_sha256": "54967586df1e2cd86b5bb7fe6f9a31dc728f58e5b8ac2ce10a28075e5d60d76b",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/moons-4002/initial.npz",
+      "initial_weights_sha256": "5b7647dffe4e7fd8fea1b1e627717d01eef8e4ecb652775a48824afd2a16c70d",
+      "inputs": "campaigns/ema-schedule-v1/inputs/moons-4002/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.05331384732784386
+        },
+        "ema0999": {
+          "sw1": 0.052938919342761875
+        },
+        "raw": {
+          "sw1": 0.0536362272798086
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "cosine",
+      "seed": 4002,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "c53a7bcf10a14761440e0bd694daee5ade24b913e121c7cf4893711396216c67",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-006-moons-4002-cosine-10000/trace.jsonl",
+      "updates": 10000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-006-moons-4002-cosine-10000/step-10000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-007-moons-4003-constant-10000/step-5000/arrays.npz",
+      "attempt_id": "confirm-007-moons-4003-constant-10000",
+      "dataset": "moons",
+      "device": "cpu",
+      "generation_noise_sha256": "447201897ecf052dd30bcb7a9e6efc5e569d680de214cde84d10781e893a9ef8",
+      "heldout_sha256": "ea9f392029cf8b1c497ecd6d77472c3491857d20edde35d59f6520dc75b41333",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/moons-4003/initial.npz",
+      "initial_weights_sha256": "148bf5d43d00447d36c940a22b2c369e593d4fb283f2a4c801cf6d59f6dfe34c",
+      "inputs": "campaigns/ema-schedule-v1/inputs/moons-4003/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.031242140825134067
+        },
+        "ema0999": {
+          "sw1": 0.03398861780851464
+        },
+        "raw": {
+          "sw1": 0.07486146170086319
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "constant",
+      "seed": 4003,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "b287d030341b6161285c946a9bb2dff1d2cd7beba6fc213e476b2106f3162fe0",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-007-moons-4003-constant-10000/trace.jsonl",
+      "updates": 5000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-007-moons-4003-constant-10000/step-5000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-008-moons-4003-cosine-5000/step-5000/arrays.npz",
+      "attempt_id": "confirm-008-moons-4003-cosine-5000",
+      "dataset": "moons",
+      "device": "cpu",
+      "generation_noise_sha256": "447201897ecf052dd30bcb7a9e6efc5e569d680de214cde84d10781e893a9ef8",
+      "heldout_sha256": "ea9f392029cf8b1c497ecd6d77472c3491857d20edde35d59f6520dc75b41333",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/moons-4003/initial.npz",
+      "initial_weights_sha256": "148bf5d43d00447d36c940a22b2c369e593d4fb283f2a4c801cf6d59f6dfe34c",
+      "inputs": "campaigns/ema-schedule-v1/inputs/moons-4003/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.032290365793528196
+        },
+        "ema0999": {
+          "sw1": 0.03169784303069999
+        },
+        "raw": {
+          "sw1": 0.0322067448805662
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "cosine",
+      "seed": 4003,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "b287d030341b6161285c946a9bb2dff1d2cd7beba6fc213e476b2106f3162fe0",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-008-moons-4003-cosine-5000/trace.jsonl",
+      "updates": 5000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-008-moons-4003-cosine-5000/step-5000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-007-moons-4003-constant-10000/step-10000/arrays.npz",
+      "attempt_id": "confirm-007-moons-4003-constant-10000",
+      "dataset": "moons",
+      "device": "cpu",
+      "generation_noise_sha256": "447201897ecf052dd30bcb7a9e6efc5e569d680de214cde84d10781e893a9ef8",
+      "heldout_sha256": "ea9f392029cf8b1c497ecd6d77472c3491857d20edde35d59f6520dc75b41333",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/moons-4003/initial.npz",
+      "initial_weights_sha256": "148bf5d43d00447d36c940a22b2c369e593d4fb283f2a4c801cf6d59f6dfe34c",
+      "inputs": "campaigns/ema-schedule-v1/inputs/moons-4003/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.041524554488241223
+        },
+        "ema0999": {
+          "sw1": 0.03013540686729693
+        },
+        "raw": {
+          "sw1": 0.041664382466191696
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "constant",
+      "seed": 4003,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "b287d030341b6161285c946a9bb2dff1d2cd7beba6fc213e476b2106f3162fe0",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-007-moons-4003-constant-10000/trace.jsonl",
+      "updates": 10000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-007-moons-4003-constant-10000/step-10000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-009-moons-4003-cosine-10000/step-10000/arrays.npz",
+      "attempt_id": "confirm-009-moons-4003-cosine-10000",
+      "dataset": "moons",
+      "device": "cpu",
+      "generation_noise_sha256": "447201897ecf052dd30bcb7a9e6efc5e569d680de214cde84d10781e893a9ef8",
+      "heldout_sha256": "ea9f392029cf8b1c497ecd6d77472c3491857d20edde35d59f6520dc75b41333",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/moons-4003/initial.npz",
+      "initial_weights_sha256": "148bf5d43d00447d36c940a22b2c369e593d4fb283f2a4c801cf6d59f6dfe34c",
+      "inputs": "campaigns/ema-schedule-v1/inputs/moons-4003/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.02877600031846668
+        },
+        "ema0999": {
+          "sw1": 0.028709219820330624
+        },
+        "raw": {
+          "sw1": 0.028792310707599484
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "cosine",
+      "seed": 4003,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "b287d030341b6161285c946a9bb2dff1d2cd7beba6fc213e476b2106f3162fe0",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-009-moons-4003-cosine-10000/trace.jsonl",
+      "updates": 10000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-009-moons-4003-cosine-10000/step-10000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-010-moons-4004-constant-10000/step-5000/arrays.npz",
+      "attempt_id": "confirm-010-moons-4004-constant-10000",
+      "dataset": "moons",
+      "device": "cpu",
+      "generation_noise_sha256": "6a6ee5be59f210a27ff20723804f749b4095fbffa097c6f8efab174790d4b58c",
+      "heldout_sha256": "028ff6ca1973eb2d629dec90d409a3efcbdd258d9e02530897c350dff3d8507d",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/moons-4004/initial.npz",
+      "initial_weights_sha256": "4f874d5dcd0ca90a33922430cab35812bd5976a5d1dfa1cdf2c59e758d47c645",
+      "inputs": "campaigns/ema-schedule-v1/inputs/moons-4004/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.031062248443482585
+        },
+        "ema0999": {
+          "sw1": 0.02817949034359439
+        },
+        "raw": {
+          "sw1": 0.08197574270816466
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "constant",
+      "seed": 4004,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "2e67613e7a8a22c4f80cf30de4e79c2640f71872f56358a07c333fff91921fa5",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-010-moons-4004-constant-10000/trace.jsonl",
+      "updates": 5000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-010-moons-4004-constant-10000/step-5000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-011-moons-4004-cosine-5000/step-5000/arrays.npz",
+      "attempt_id": "confirm-011-moons-4004-cosine-5000",
+      "dataset": "moons",
+      "device": "cpu",
+      "generation_noise_sha256": "6a6ee5be59f210a27ff20723804f749b4095fbffa097c6f8efab174790d4b58c",
+      "heldout_sha256": "028ff6ca1973eb2d629dec90d409a3efcbdd258d9e02530897c350dff3d8507d",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/moons-4004/initial.npz",
+      "initial_weights_sha256": "4f874d5dcd0ca90a33922430cab35812bd5976a5d1dfa1cdf2c59e758d47c645",
+      "inputs": "campaigns/ema-schedule-v1/inputs/moons-4004/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.03255838083639372
+        },
+        "ema0999": {
+          "sw1": 0.026983990472191154
+        },
+        "raw": {
+          "sw1": 0.03257618622118942
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "cosine",
+      "seed": 4004,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "2e67613e7a8a22c4f80cf30de4e79c2640f71872f56358a07c333fff91921fa5",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-011-moons-4004-cosine-5000/trace.jsonl",
+      "updates": 5000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-011-moons-4004-cosine-5000/step-5000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-010-moons-4004-constant-10000/step-10000/arrays.npz",
+      "attempt_id": "confirm-010-moons-4004-constant-10000",
+      "dataset": "moons",
+      "device": "cpu",
+      "generation_noise_sha256": "6a6ee5be59f210a27ff20723804f749b4095fbffa097c6f8efab174790d4b58c",
+      "heldout_sha256": "028ff6ca1973eb2d629dec90d409a3efcbdd258d9e02530897c350dff3d8507d",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/moons-4004/initial.npz",
+      "initial_weights_sha256": "4f874d5dcd0ca90a33922430cab35812bd5976a5d1dfa1cdf2c59e758d47c645",
+      "inputs": "campaigns/ema-schedule-v1/inputs/moons-4004/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.029182602463866225
+        },
+        "ema0999": {
+          "sw1": 0.027035798672352333
+        },
+        "raw": {
+          "sw1": 0.07446965815858339
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "constant",
+      "seed": 4004,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "2e67613e7a8a22c4f80cf30de4e79c2640f71872f56358a07c333fff91921fa5",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-010-moons-4004-constant-10000/trace.jsonl",
+      "updates": 10000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-010-moons-4004-constant-10000/step-10000/weights.npz"
+    },
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/confirm-012-moons-4004-cosine-10000/step-10000/arrays.npz",
+      "attempt_id": "confirm-012-moons-4004-cosine-10000",
+      "dataset": "moons",
+      "device": "cpu",
+      "generation_noise_sha256": "6a6ee5be59f210a27ff20723804f749b4095fbffa097c6f8efab174790d4b58c",
+      "heldout_sha256": "028ff6ca1973eb2d629dec90d409a3efcbdd258d9e02530897c350dff3d8507d",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/moons-4004/initial.npz",
+      "initial_weights_sha256": "4f874d5dcd0ca90a33922430cab35812bd5976a5d1dfa1cdf2c59e758d47c645",
+      "inputs": "campaigns/ema-schedule-v1/inputs/moons-4004/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "sw1": 0.02828460017815003
+        },
+        "ema0999": {
+          "sw1": 0.02774848048028663
+        },
+        "raw": {
+          "sw1": 0.028309148592991964
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "cosine",
+      "seed": 4004,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "2e67613e7a8a22c4f80cf30de4e79c2640f71872f56358a07c333fff91921fa5",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/confirm-012-moons-4004-cosine-10000/trace.jsonl",
+      "updates": 10000,
+      "weights": "campaigns/ema-schedule-v1/attempts/confirm-012-moons-4004-cosine-10000/step-10000/weights.npz"
+    }
+  ],
+  "task_id": "ema-schedule"
+}

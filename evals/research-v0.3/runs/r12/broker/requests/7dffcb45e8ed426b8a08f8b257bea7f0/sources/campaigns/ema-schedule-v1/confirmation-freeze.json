@@ -1,0 +1,25 @@
+{
+  "authorized_to_confirm": true,
+  "created_at": "2026-10-08T06:56:52.213837+00:00",
+  "device": "cpu",
+  "forecast": {
+    "media_type": "application/octet-stream",
+    "path": "campaigns/ema-schedule-v1/forecast.json",
+    "retention": "retained",
+    "sha256": "c29c69ce7441f8a89311ed4736e46ab507af66ddaeca0107efe6d521a11e5956"
+  },
+  "protocol_sha256": "dca3cbe24ecc9d7310c1bbd16a329043cfab040c48a287e76012e45aff77d90a",
+  "qualification": {
+    "media_type": "application/octet-stream",
+    "path": "campaigns/ema-schedule-v1/attempts/pilot-a005/pilot.json",
+    "retention": "retained",
+    "sha256": "b2acb9f5aeefd77188320caf0bb7c28dee3aec88dba9ae6e3380d22113fe513f"
+  },
+  "runner_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+  "source_hashes": {
+    "study/analyze.py": "6d68129831145b23347a7788d3283c11c1957d038a973db7d4ead8c26d5edb6b",
+    "study/common.py": "c4f6d2456baaa09270a4622be007c45ef7a5080992e9508697feeca8012f0bc0",
+    "study/reference.py": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1",
+    "study/runner.py": "cfa0bf5ae9c5f882db59d5a4a5a3b92958725138e886f0c6ba9facd443fdc084"
+  }
+}

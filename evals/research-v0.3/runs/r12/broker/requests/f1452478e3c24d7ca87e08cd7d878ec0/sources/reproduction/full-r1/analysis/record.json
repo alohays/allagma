@@ -1,0 +1,76 @@
+{
+  "analysis_id": "analysis",
+  "analysis_revision": "6d68129831145b23347a7788d3283c11c1957d038a973db7d4ead8c26d5edb6b",
+  "code": {
+    "media_type": "application/octet-stream",
+    "path": "study/analyze.py",
+    "retention": "retained",
+    "sha256": "6d68129831145b23347a7788d3283c11c1957d038a973db7d4ead8c26d5edb6b"
+  },
+  "configuration": {
+    "independent_unit": "seed",
+    "protocol": "campaigns/ema-schedule-v1/protocol.json"
+  },
+  "dependencies": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/protocol.json",
+      "retention": "retained",
+      "sha256": "dca3cbe24ecc9d7310c1bbd16a329043cfab040c48a287e76012e45aff77d90a"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/reference.py",
+      "retention": "retained",
+      "sha256": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1"
+    }
+  ],
+  "exclusions": [],
+  "outputs": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "analysis/measurements.json",
+      "retention": "retained",
+      "sha256": "7d60eabc0a72f379a728b5340da65ce385e6913471b5a15f7f2cdb15b5f2b145"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "analysis/summary.json",
+      "retention": "retained",
+      "sha256": "e1aa18ec190a07ad9f179f39205782ff76d73479c74c332c58f66544ea8714f8"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "analysis/contrasts.json",
+      "retention": "retained",
+      "sha256": "86463a64f4ff84cc26bfee6fe7630980b0c31e17d4fbff2c30a95b1b9625d94c"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "analysis/seed-contrasts.csv",
+      "retention": "retained",
+      "sha256": "ead2cef6b8b32a83b96a820784ff1e1686c7fedb8f604da577c45ac93f3bd1b0"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "analysis/main-figure.png",
+      "retention": "retained",
+      "sha256": "4926546204e3017d2569d60102708ed08714193a085fa6a296374fbdc95a6f38"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "analysis/main-figure.pdf",
+      "retention": "retained",
+      "sha256": "a0456b3c0d73741ed12def1d9bfcc7d8e3f79e209f4b027c69a3fa00c2cc89b6"
+    }
+  ],
+  "raw_manifest": {
+    "media_type": "application/octet-stream",
+    "path": "analysis/raw-manifest.json",
+    "retention": "retained",
+    "sha256": "32520641335a5dcd349ae1618ceea9eb114a668b38279d2f67a182ff62766cb4"
+  },
+  "record_type": "AnalysisRecord",
+  "schema_version": "0.2",
+  "uncertainty": "Seed-level paired Student t 95% intervals, unadjusted; df=n-1; no interval n<2. Exact sign flips and leave-one-seed-out sensitivity."
+}

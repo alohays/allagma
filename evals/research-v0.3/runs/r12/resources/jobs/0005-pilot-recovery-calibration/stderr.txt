@@ -1,0 +1,32 @@
+OMP: Warning #179: Function Can't set size of /tmp file failed:
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r12/candidate/study/runner.py", line 199, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r12/candidate/study/runner.py", line 193, in main
+    (pilot if args.mode=='pilot' else train)(args,dest)
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r12/candidate/study/runner.py", line 130, in pilot
+    controls(dest)
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r12/candidate/study/runner.py", line 126, in controls
+    write(dest/'controls.json',{'checks':checks,'translation_expected':expected,'coverage_example':cm,'passed':all(checks.values())})
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r12/candidate/study/common.py", line 17, in write
+    data=json.dumps(value,indent=2,sort_keys=True,allow_nan=False)+'\n'
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bool is not JSON serializable

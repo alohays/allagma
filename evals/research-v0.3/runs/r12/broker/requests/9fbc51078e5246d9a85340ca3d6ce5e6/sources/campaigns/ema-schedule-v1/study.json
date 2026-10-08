@@ -1,0 +1,84 @@
+{
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "capabilities": [
+    "artifact.read",
+    "artifact.write",
+    "execution.local"
+  ],
+  "configuration_origins": {
+    "budget.max_attempts": "current request",
+    "budget.max_seconds": "current request",
+    "budget.money_usd": "current request",
+    "budget.per_attempt_seconds": "current request",
+    "capabilities": "host authorization",
+    "context_chars": "module:context/active-brief",
+    "language": "profile:public/default",
+    "max_revisions": "recipe:recipe/research"
+  },
+  "constraints": [
+    "All computation/setup through supplied broker",
+    "Offline",
+    "AI-generated adaptation disclosure and source license retained",
+    "No confirmation tuning",
+    "Float32 reference mechanism"
+  ],
+  "effective_configuration": {
+    "budget": {
+      "max_attempts": 64,
+      "max_seconds": 1800,
+      "money_usd": 0,
+      "per_attempt_seconds": 180
+    },
+    "capabilities": [
+      "artifact.read",
+      "artifact.write",
+      "execution.local"
+    ],
+    "context_chars": 12000,
+    "language": "English",
+    "max_revisions": 2
+  },
+  "lock": {
+    "media_type": "application/octet-stream",
+    "path": "campaigns/ema-schedule-v1/lock.yaml",
+    "retention": "retained",
+    "sha256": "6f211f947c838760db7926dc7420081f680724612d83c8a8a5dfd50a6d1d4bcb"
+  },
+  "motivation": "Prior duration comparison followed one cosine trajectory and confounded duration with schedule position.",
+  "output": "REPORT.md, review.json, REPRODUCE.md, artifact-manifest.json, submission.json and measurements",
+  "profile_provenance": [
+    {
+      "id": "public/default",
+      "sha256": "9f90c310cefb07153761645bd658f8ad6551578ccb6bf772074e44e8f8c17b9b"
+    }
+  ],
+  "protocol": {
+    "media_type": "application/octet-stream",
+    "path": "campaigns/ema-schedule-v1/protocol.json",
+    "retention": "retained",
+    "sha256": "dca3cbe24ecc9d7310c1bbd16a329043cfab040c48a287e76012e45aff77d90a"
+  },
+  "protocol_revision": "ema-schedule-v1",
+  "question": "How does full learning-rate policy change the apparent benefit of weight EMA at fixed duration, and how do duration effects differ across policies?",
+  "record_type": "StudySpec",
+  "release": "0.3.0rc1",
+  "resources": {
+    "max_attempts": 64,
+    "max_seconds": 1800,
+    "money_usd": 0,
+    "per_attempt_seconds": 180
+  },
+  "schema_version": "0.2",
+  "stop_rules": [
+    "Failed qualification: no confirmation",
+    "Forecast cannot fit remaining resource ceiling: partial report",
+    "Nonfinite loss/weights/samples: preserve failed attempt and diagnose without using confirmation quality to tune",
+    "Controlled first-attempt interruption: retain original outcome and retry with new attempt ID",
+    "Never exceed broker or native session ceilings"
+  ],
+  "study_id": "ema-schedule",
+  "success_criteria": [
+    "32 cells with loadable raw/EMA weights, heldout/noise/samples, provenance, traces, 4 seeds per dataset, paired contrasts and uncertainty, figure, raw-data recomputation, saved-weight regeneration check, named-revision critique, all requested deliverables",
+    "Negative and inconclusive findings count as scientific success when design and evidence are complete."
+  ]
+}

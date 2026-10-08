@@ -1,0 +1,17 @@
+{
+  "injected_interruption": false,
+  "isolation_sha256": "8e651245c613fc3ce9b53a26ed07d31927405e897ee69ed15ebfc759bd5f2afa",
+  "reconciled_after_controller_restart": false,
+  "request_id": "fbe68b549129411489f62065d7557538",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 0.34122416703030467,
+    "ended_at": "2026-10-08T06:56:52.509504+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r12/resources/jobs/0009-preconfirmation-forecast-and-freeze",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 4079616,
+    "peak_storage_bytes": 1311895561,
+    "status": "completed"
+  }
+}

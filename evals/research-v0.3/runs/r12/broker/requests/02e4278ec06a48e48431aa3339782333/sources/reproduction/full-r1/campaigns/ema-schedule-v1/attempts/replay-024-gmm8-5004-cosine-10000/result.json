@@ -1,0 +1,85 @@
+{
+  "environment": {
+    "device": "cpu",
+    "dtype": "float32",
+    "numpy": "2.4.6",
+    "python": "3.11.6",
+    "torch": "2.14.1"
+  },
+  "runs": [
+    {
+      "arrays": "campaigns/ema-schedule-v1/attempts/replay-024-gmm8-5004-cosine-10000/step-10000/arrays.npz",
+      "attempt_id": "replay-024-gmm8-5004-cosine-10000",
+      "dataset": "gmm8",
+      "device": "cpu",
+      "generation_noise_sha256": "6d7b0898897519e987c20ba750c3ed88454dc586a8be523c278b377133bc65a3",
+      "heldout_sha256": "b740ab3b19984bd95ef51d3b732e582d0886605388420b0fa6aeda9e2ccbad67",
+      "initial_weights": "campaigns/ema-schedule-v1/inputs/gmm8-5004/initial.npz",
+      "initial_weights_sha256": "d0f10eea8d98cab7bdc7fa9aecf5f75d20d1c2ff0ba934b102787e70ffcb87b2",
+      "inputs": "campaigns/ema-schedule-v1/inputs/gmm8-5004/inputs.npz",
+      "metrics": {
+        "ema099": {
+          "covered_modes": 8,
+          "inlier_count": 2023,
+          "inlier_fraction": 0.98779296875,
+          "mode_counts": [
+            246,
+            241,
+            253,
+            257,
+            268,
+            269,
+            242,
+            247
+          ],
+          "sw1": 0.024398166431239116
+        },
+        "ema0999": {
+          "covered_modes": 8,
+          "inlier_count": 2026,
+          "inlier_fraction": 0.9892578125,
+          "mode_counts": [
+            244,
+            242,
+            253,
+            261,
+            271,
+            265,
+            246,
+            244
+          ],
+          "sw1": 0.024183094342500606
+        },
+        "raw": {
+          "covered_modes": 8,
+          "inlier_count": 2025,
+          "inlier_fraction": 0.98876953125,
+          "mode_counts": [
+            247,
+            241,
+            253,
+            256,
+            268,
+            269,
+            243,
+            248
+          ],
+          "sw1": 0.02444794034260138
+        }
+      },
+      "phase": "confirmation",
+      "schedule": "cosine",
+      "seed": 5004,
+      "source_revision": "266d46e4ce5e5672ccc629b59bdf3ea0eb50f29ae207b630a7821a68019977a8",
+      "training_prefix_5000_sha256": "368bd9efa194886b8b7843996055e74aaaa567920514b1852397ab58371133d7",
+      "training_trace": "campaigns/ema-schedule-v1/attempts/replay-024-gmm8-5004-cosine-10000/trace.jsonl",
+      "updates": 10000,
+      "weights": "campaigns/ema-schedule-v1/attempts/replay-024-gmm8-5004-cosine-10000/step-10000/weights.npz"
+    }
+  ],
+  "timing": {
+    "sampling_and_save_seconds": 1.2708374168723822,
+    "training_seconds": 12.36149820825085,
+    "updates": 10000
+  }
+}

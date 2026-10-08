@@ -1,0 +1,25 @@
+{
+  "status": "pass",
+  "at": "2026-10-08T07:16:37.088927+00:00",
+  "material_revision": "material-r1",
+  "material": {
+    "path": "material-r1.json",
+    "sha256": "2c93fc7e24b1236ec951d59f091297c341116f67453997166ad0d19cbacd723e",
+    "media_type": "application/octet-stream",
+    "retention": "retained"
+  },
+  "manifest": {
+    "path": "artifact-manifest.json",
+    "sha256": "42f6add4bdfa606152d5f4f72665674545bdb99dcd90c68d68684281eeb11af1",
+    "media_type": "application/octet-stream",
+    "retention": "retained"
+  },
+  "verified_file_digests": 1675,
+  "validated_allagma_records": 63,
+  "verified_report_links": 32,
+  "complete_confirmation_cells": 32,
+  "successful_confirmation_trajectories": 24,
+  "retained_interrupted_attempts": 1,
+  "retained_failed_pilot_attempts": 3,
+  "coverage": "Primary-study transitive reference digests, reproduction file digests and full numerical comparison, locked bundle, Allagma record contracts, submission paths and commands, independent effect/contrast/interval/sign-flip calculation from independently recomputed metrics, every displayed table, narrative pattern counts and report links. Underlying sample/checkpoint numerical checks are separately retained."
+}

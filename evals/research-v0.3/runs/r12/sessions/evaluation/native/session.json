@@ -1,0 +1,123 @@
+{
+  "adapter_sha256": "490c37453da590302861f980f46ef16833ed038a9f11af064270d1c2618f1a7a",
+  "authentication": "Existing Codex auth file referenced locally; no credentials in evidence",
+  "cli_sha256": "cc0a05e34876414280a79726153d0fe8d55c93f704ef6c292ec409bfe36d5b06",
+  "cli_version": "codex-cli 0.160.1",
+  "command": [
+    "/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex",
+    "--strict-config",
+    "--no-daemon",
+    "-a",
+    "never",
+    "exec",
+    "--ignore-rules",
+    "--skip-git-repo-check",
+    "--json",
+    "-C",
+    "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r12/candidate",
+    "-o",
+    "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r12/sessions/evaluation/runtime/final.txt",
+    "-"
+  ],
+  "controlled_settings": {
+    "default_permissions": "allagma-eval",
+    "features": {
+      "multi_agent": false,
+      "multi_agent_v2": false
+    },
+    "model": "gpt-6-astra",
+    "model_auto_compact_token_limit": 900000,
+    "model_context_window": 1000000,
+    "model_reasoning_effort": "max",
+    "permissions": {
+      "allagma-eval": {
+        "extends": ":workspace",
+        "filesystem": {
+          "/Applications/ChatGPT.app": "read",
+          "/Library/Frameworks/Python.framework": "read",
+          "/Users/iyunseong/.agents": "deny",
+          "/Users/iyunseong/.codex": "deny",
+          "/Users/iyunseong/Documents/vault": "deny",
+          "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r12": "deny",
+          "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r12/sessions/evaluation/runtime": "deny",
+          "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r12/candidate": "write",
+          "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r12/candidate/.agents": "read",
+          "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r12/candidate/.allagma/bundles": "read",
+          "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r12/candidate/inputs": "read",
+          "/usr/local/bin": "read",
+          ":minimal": "read",
+          ":root": "deny",
+          ":slash_tmp": "deny",
+          ":tmpdir": "write"
+        },
+        "network": {
+          "enabled": false
+        }
+      }
+    },
+    "project_doc_max_bytes": 0,
+    "web_search": "disabled"
+  },
+  "disabled_skill_count": 29,
+  "ended_at": "2026-10-08T07:18:02.118108+00:00",
+  "events_sha256": "4c3f8e1cc9b533e4e1df081255adcc68f716ae7e1feee92600180760d4531aca",
+  "exit_code": 0,
+  "fresh_session": true,
+  "isolation": "Native allagma-eval permission profile; tool reads restricted, command network disabled",
+  "malformed_event_lines": 0,
+  "model_observations": [
+    {
+      "approval_policy": "never",
+      "cwd": "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r12/candidate",
+      "effort": "max",
+      "model": "gpt-6-astra",
+      "sandbox_policy": {
+        "exclude_slash_tmp": true,
+        "exclude_tmpdir_env_var": false,
+        "network_access": false,
+        "type": "workspace-write"
+      }
+    }
+  ],
+  "peak_rss_bytes": 342622208,
+  "peak_storage_bytes": 3687371643,
+  "pid": 54946,
+  "project_model_config_written": false,
+  "prompt_sha256": "296dcfb8fcd51f1cdba137b7f72561b3ca94711a1576ec8bb9e4ceb1e68fc0b1",
+  "resume": false,
+  "rss_limit_bytes": 8589934592,
+  "runtime": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r12/sessions/evaluation/runtime",
+  "runtime_config_after_sha256": "1f2dd8807d3a7e061926c5b14ee8a7c7de08215042a326494e2bbef24098ac99",
+  "runtime_config_sha256": "d6b9ad1c92fc51dd54fed6b110bb6aff516b0a1a3a05fc23752e7d7ebeafa1c0",
+  "runtime_project_trust_entries": {
+    "/Users/iyunseong/maangeek/allagma": {
+      "trust_level": "trusted"
+    }
+  },
+  "settings": {
+    "model": "gpt-6-astra",
+    "model_auto_compact_token_limit": 900000,
+    "model_context_window": 1000000,
+    "model_reasoning_effort": "max"
+  },
+  "settings_source": "/Users/iyunseong/.codex/config.toml",
+  "settings_unchanged": true,
+  "started_at": "2026-10-08T06:46:22.987201+00:00",
+  "status": "completed",
+  "storage_limit_bytes": 6442450944,
+  "thread_ids": [
+    "01a11a43-5718-7ac1-b46c-ac16ff7bae05"
+  ],
+  "timeout_seconds": 3600,
+  "usage": [
+    {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 4664704,
+      "input_tokens": 5067871,
+      "output_tokens": 55419,
+      "reasoning_output_tokens": 19061
+    }
+  ],
+  "wall_seconds": 1898.8777654999867,
+  "workspace": "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r12/candidate"
+}

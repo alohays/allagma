@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "artifact": {
+    "root": "candidate",
+    "path": "analysis/main-figure.png",
+    "sha256": "4926546204e3017d2569d60102708ed08714193a085fa6a296374fbdc95a6f38"
+  },
+  "observations": [
+    "Four dataset/EMA panels retain all four paired seed values, means and unadjusted t intervals.",
+    "Policies and durations are distinct; labels and uncertainty caption are legible without clipping.",
+    "Broad constant-policy variability and near-zero cosine differences are visible with a common zero reference."
+  ],
+  "scope": "Actual PNG visually inspected; numerical findings independently checked."
+}

@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://allagma.org/contracts/0.2/ContextRecord",
+  "title": "ContextRecord",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "0.2"
+    },
+    "record_type": {
+      "const": "ContextRecord"
+    },
+    "context_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "method_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "required": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "selected": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "omitted": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "content": {
+      "type": "object"
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "record_type",
+    "context_id",
+    "method_id",
+    "required",
+    "selected",
+    "omitted",
+    "content",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

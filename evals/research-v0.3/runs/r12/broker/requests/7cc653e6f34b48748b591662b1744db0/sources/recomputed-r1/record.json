@@ -1,0 +1,97 @@
+{
+  "analysis_id": "recomputed-r1",
+  "analysis_revision": "6d68129831145b23347a7788d3283c11c1957d038a973db7d4ead8c26d5edb6b",
+  "code": {
+    "media_type": "application/octet-stream",
+    "path": "study/analyze.py",
+    "retention": "retained",
+    "sha256": "6d68129831145b23347a7788d3283c11c1957d038a973db7d4ead8c26d5edb6b"
+  },
+  "configuration": {
+    "independent_unit": "seed",
+    "protocol": "campaigns/ema-schedule-v1/protocol.json"
+  },
+  "dependencies": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/protocol.json",
+      "retention": "retained",
+      "sha256": "dca3cbe24ecc9d7310c1bbd16a329043cfab040c48a287e76012e45aff77d90a"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/reference.py",
+      "retention": "retained",
+      "sha256": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1"
+    }
+  ],
+  "exclusions": [
+    {
+      "attempt": "pilot-a001",
+      "reason": "Pilot, failed, or interrupted; not confirmation evidence"
+    },
+    {
+      "attempt": "pilot-a002",
+      "reason": "Pilot, failed, or interrupted; not confirmation evidence"
+    },
+    {
+      "attempt": "pilot-a003",
+      "reason": "Pilot, failed, or interrupted; not confirmation evidence"
+    },
+    {
+      "attempt": "pilot-a004",
+      "reason": "Pilot, failed, or interrupted; not confirmation evidence"
+    },
+    {
+      "attempt": "pilot-a005",
+      "reason": "Pilot, failed, or interrupted; not confirmation evidence"
+    }
+  ],
+  "outputs": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "recomputed-r1/measurements.json",
+      "retention": "retained",
+      "sha256": "9fde52d941ee32e69f4dfec586b47eb4dc86efedf8559a77386bfcbec8582eb0"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "recomputed-r1/summary.json",
+      "retention": "retained",
+      "sha256": "e1aa18ec190a07ad9f179f39205782ff76d73479c74c332c58f66544ea8714f8"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "recomputed-r1/contrasts.json",
+      "retention": "retained",
+      "sha256": "86463a64f4ff84cc26bfee6fe7630980b0c31e17d4fbff2c30a95b1b9625d94c"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "recomputed-r1/seed-contrasts.csv",
+      "retention": "retained",
+      "sha256": "ead2cef6b8b32a83b96a820784ff1e1686c7fedb8f604da577c45ac93f3bd1b0"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "recomputed-r1/main-figure.png",
+      "retention": "retained",
+      "sha256": "4926546204e3017d2569d60102708ed08714193a085fa6a296374fbdc95a6f38"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "recomputed-r1/main-figure.pdf",
+      "retention": "retained",
+      "sha256": "bf699342c524688255e688343c4f0ae5bb1ecff3ebbca54920ee07755cc535f2"
+    }
+  ],
+  "raw_manifest": {
+    "media_type": "application/octet-stream",
+    "path": "recomputed-r1/raw-manifest.json",
+    "retention": "retained",
+    "sha256": "ad0e0fed17c90d2bad50c7437ac3f3580685c2ea7aab749a2dfdcc485cb22b3c"
+  },
+  "record_type": "AnalysisRecord",
+  "schema_version": "0.2",
+  "uncertainty": "Seed-level paired Student t 95% intervals, unadjusted; df=n-1; no interval n<2. Exact sign flips and leave-one-seed-out sensitivity."
+}

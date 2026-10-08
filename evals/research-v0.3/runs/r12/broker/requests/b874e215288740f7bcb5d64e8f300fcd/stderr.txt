@@ -1,0 +1,12 @@
+OMP: Warning #179: Function Can't set size of /tmp file failed:
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r12/candidate/study/runner.py", line 200, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r12/candidate/study/runner.py", line 194, in main
+    (pilot if args.mode=='pilot' else train)(args,dest)
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r12/candidate/study/runner.py", line 131, in pilot
+    controls(dest)
+  File "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r12/candidate/study/runner.py", line 128, in controls
+    assert all(checks.values()),checks
+AssertionError: {'sw1_identity': True, 'sw1_permutation': False, 'sw1_translation': True, 'coverage_all_draws_threshold': True, 'coverage_radius': True, 'lr_horizons': True, 'parameter_count': True, 'ema_initial_copy': True, 'ema_recurrence': True, 'float32_buffers': True}

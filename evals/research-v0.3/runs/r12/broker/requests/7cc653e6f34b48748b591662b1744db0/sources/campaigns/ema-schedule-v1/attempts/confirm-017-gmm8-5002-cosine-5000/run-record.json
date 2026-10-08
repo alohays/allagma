@@ -1,0 +1,182 @@
+{
+  "attempt_id": "confirm-017-gmm8-5002-cosine-5000",
+  "attempt_number": 1,
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "campaign_id": "ema-schedule-v1",
+  "command": [
+    ".venv/bin/python",
+    "study/runner.py",
+    "train",
+    "--attempt",
+    "confirm-017-gmm8-5002-cosine-5000",
+    "--dataset",
+    "gmm8",
+    "--seed",
+    "5002",
+    "--policy",
+    "cosine",
+    "--horizon",
+    "5000"
+  ],
+  "data_revision": "18352f1957e9801164ff8ef217d39b44b746a681264a7171048165d4d99b637c",
+  "ended_at": "2026-10-08T07:01:21.950490+00:00",
+  "environment": {
+    "device": "cpu",
+    "dtype": "float32",
+    "numpy": "2.4.6",
+    "python": "3.11.6",
+    "torch": "2.14.1"
+  },
+  "error": null,
+  "exit_code": 0,
+  "experiment_id": "gmm8-5002-cosine-5000",
+  "inputs": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-017-gmm8-5002-cosine-5000/input.json",
+      "retention": "retained",
+      "sha256": "18352f1957e9801164ff8ef217d39b44b746a681264a7171048165d4d99b637c"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/protocol.json",
+      "retention": "retained",
+      "sha256": "dca3cbe24ecc9d7310c1bbd16a329043cfab040c48a287e76012e45aff77d90a"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/lock.yaml",
+      "retention": "retained",
+      "sha256": "6f211f947c838760db7926dc7420081f680724612d83c8a8a5dfd50a6d1d4bcb"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": ".compute/requests/17595390862743a7ae954dbde87494bf.json",
+      "retention": "retained",
+      "sha256": "4d79c899b799ab9b623b77aec36a4bd4c82c72dfdebfd957dae8955bfa827fda"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-017-gmm8-5002-cosine-5000/source/analyze.py",
+      "retention": "retained",
+      "sha256": "6d68129831145b23347a7788d3283c11c1957d038a973db7d4ead8c26d5edb6b"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-017-gmm8-5002-cosine-5000/source/common.py",
+      "retention": "retained",
+      "sha256": "c4f6d2456baaa09270a4622be007c45ef7a5080992e9508697feeca8012f0bc0"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-017-gmm8-5002-cosine-5000/source/compare_replay.py",
+      "retention": "retained",
+      "sha256": "25a1b84ede3f270b9bbb2c2e89fa0ae009c6a37ec861cb418b417d2b02c74536"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-017-gmm8-5002-cosine-5000/source/dispatch.py",
+      "retention": "retained",
+      "sha256": "e9757148134a6ee46f3be9b0fa316a030579706071c038b9e995a5a2d5aab0ed"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-017-gmm8-5002-cosine-5000/source/freeze.py",
+      "retention": "retained",
+      "sha256": "67d3300f528a24ee93d4e32c3aa0f126c824614601d00dfe200edd97ff72560d"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-017-gmm8-5002-cosine-5000/source/prepare.py",
+      "retention": "retained",
+      "sha256": "b1e43e1662becff618cbff688f6a1ab8dcc3859235513ada978c7c3797f7d527"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-017-gmm8-5002-cosine-5000/source/records.py",
+      "retention": "retained",
+      "sha256": "4f623653e356b4d47c2ff66c4349d53eaac622bb26d29f6082b429d8c8587027"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-017-gmm8-5002-cosine-5000/source/reference.py",
+      "retention": "retained",
+      "sha256": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-017-gmm8-5002-cosine-5000/source/replay_setup.py",
+      "retention": "retained",
+      "sha256": "c5fade42d74f0d1212df6831bdcc44e37b82b96033c7ce2b13b6ec929ea4213b"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-017-gmm8-5002-cosine-5000/source/reproduce.py",
+      "retention": "retained",
+      "sha256": "322edb05d509fb37e5204ed4dadde1f4c9cd05c3950ec5730509574d9ff820a5"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-017-gmm8-5002-cosine-5000/source/runner.py",
+      "retention": "retained",
+      "sha256": "cfa0bf5ae9c5f882db59d5a4a5a3b92958725138e886f0c6ba9facd443fdc084"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-017-gmm8-5002-cosine-5000/source/verify.py",
+      "retention": "retained",
+      "sha256": "dc9bec1e01309bf8ae72eb624bbd19ac8c9bcf49a78573163ec6adfa2d733fd1"
+    }
+  ],
+  "model_revision": "47296c20595f7e4fdf188018699856c924a0af10f61a2eac42d5c4d1ed7e7b89",
+  "outputs": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-017-gmm8-5002-cosine-5000/finished.json",
+      "retention": "retained",
+      "sha256": "cba72b003ee16a6c46006fc2e862f372064f779aa2d65c4bc8bf5ff2b17e01d9"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-017-gmm8-5002-cosine-5000/result.json",
+      "retention": "retained",
+      "sha256": "5cf2ea4befe043c1249901f7bbfa5b47f5abc51c4c9c6b59b989b151a4fef60f"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-017-gmm8-5002-cosine-5000/step-5000/arrays.npz",
+      "retention": "retained",
+      "sha256": "9db4e377efc18cc6a26645a1d8a11827dd39795d2aaf5e5659e2d204a8b93344"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-017-gmm8-5002-cosine-5000/step-5000/weights.npz",
+      "retention": "retained",
+      "sha256": "b288632d3aafbd60eb9ff30f74d8647e62632387b2c12bf3988e72c84799bffe"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/attempts/confirm-017-gmm8-5002-cosine-5000/trace.jsonl",
+      "retention": "retained",
+      "sha256": "d33436860af1d8f72dd1c9f0c3245ffd93e7a280f2248edc80affa63ae575696"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": ".compute/responses/17595390862743a7ae954dbde87494bf.json",
+      "retention": "retained",
+      "sha256": "e39a8aaac952f8cac5ea63dd9fb95a063be955cdc0c696b767780ae7078f634f"
+    }
+  ],
+  "protocol_revision": "ema-schedule-v1",
+  "record_type": "RunRecord",
+  "run_id": "confirm-017-gmm8-5002-cosine-5000",
+  "schema_version": "0.2",
+  "split": "confirmation",
+  "started_at": "2026-10-08T07:01:12.542332+00:00",
+  "status": "succeeded",
+  "usage": {
+    "money_usd": 0,
+    "tokens": 0,
+    "wall_seconds": 9.448053875006735
+  }
+}

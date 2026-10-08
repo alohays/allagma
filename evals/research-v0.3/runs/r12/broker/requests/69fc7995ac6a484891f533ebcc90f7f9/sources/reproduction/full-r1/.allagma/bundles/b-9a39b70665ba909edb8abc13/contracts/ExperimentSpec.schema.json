@@ -1,0 +1,214 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://allagma.org/contracts/0.2/ExperimentSpec",
+  "title": "ExperimentSpec",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "0.2"
+    },
+    "record_type": {
+      "const": "ExperimentSpec"
+    },
+    "experiment_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "hypothesis": {
+      "type": "string",
+      "minLength": 1
+    },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "media_type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "retention": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "path",
+          "sha256",
+          "media_type",
+          "retention"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "runner": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "media_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "retention": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "path",
+        "sha256",
+        "media_type",
+        "retention"
+      ],
+      "additionalProperties": false
+    },
+    "evaluator": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "media_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "retention": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "path",
+        "sha256",
+        "media_type",
+        "retention"
+      ],
+      "additionalProperties": false
+    },
+    "seed_policy": {
+      "type": "object"
+    },
+    "budget": {
+      "type": "object",
+      "properties": {
+        "max_attempts": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1
+            },
+            {
+              "const": "unset"
+            }
+          ]
+        },
+        "max_seconds": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0.001
+            },
+            {
+              "const": "unset"
+            }
+          ]
+        },
+        "money_usd": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0
+            },
+            {
+              "const": "unset"
+            }
+          ]
+        },
+        "per_attempt_seconds": {
+          "type": "number",
+          "minimum": 0.01
+        }
+      },
+      "required": [
+        "max_attempts",
+        "max_seconds",
+        "money_usd",
+        "per_attempt_seconds"
+      ],
+      "additionalProperties": false
+    },
+    "expected_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "editable": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "fixed": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "protocol_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "split": {
+      "enum": [
+        "pilot",
+        "confirmation",
+        "discovery"
+      ]
+    },
+    "parameters": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema_version",
+    "record_type",
+    "experiment_id",
+    "hypothesis",
+    "inputs",
+    "runner",
+    "evaluator",
+    "seed_policy",
+    "budget",
+    "expected_artifacts",
+    "editable",
+    "fixed",
+    "protocol_revision",
+    "split",
+    "parameters"
+  ],
+  "additionalProperties": false
+}

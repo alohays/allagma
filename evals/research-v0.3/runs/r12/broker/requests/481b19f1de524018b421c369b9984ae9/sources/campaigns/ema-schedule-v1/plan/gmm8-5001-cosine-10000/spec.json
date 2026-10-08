@@ -1,0 +1,64 @@
+{
+  "budget": {
+    "max_attempts": 64,
+    "max_seconds": 1800,
+    "money_usd": 0,
+    "per_attempt_seconds": 180
+  },
+  "editable": [],
+  "evaluator": {
+    "media_type": "application/octet-stream",
+    "path": "study/reference.py",
+    "retention": "retained",
+    "sha256": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1"
+  },
+  "expected_artifacts": [
+    "result.json",
+    "trace.jsonl",
+    "weights.npz",
+    "arrays.npz"
+  ],
+  "experiment_id": "gmm8-5001-cosine-10000",
+  "fixed": [
+    "runner",
+    "evaluator",
+    "protocol",
+    "seed",
+    "float32",
+    "optimizer",
+    "sampling"
+  ],
+  "hypothesis": "EMA-minus-raw SW1 may depend on schedule policy and terminal duration; negative, null, and positive differences are valid.",
+  "inputs": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/ema-schedule-v1/plan/gmm8-5001-cosine-10000/input.json",
+      "retention": "retained",
+      "sha256": "3cb35e1a1492082137c46f47c681766d1d7c444d912de261973a36f314909670"
+    }
+  ],
+  "parameters": {
+    "dataset": "gmm8",
+    "device": "cpu",
+    "horizon": 10000,
+    "phase": "confirmation",
+    "policy": "cosine",
+    "seed": 5001
+  },
+  "protocol_revision": "ema-schedule-v1",
+  "record_type": "ExperimentSpec",
+  "runner": {
+    "media_type": "application/octet-stream",
+    "path": "study/runner.py",
+    "retention": "retained",
+    "sha256": "cfa0bf5ae9c5f882db59d5a4a5a3b92958725138e886f0c6ba9facd443fdc084"
+  },
+  "schema_version": "0.2",
+  "seed_policy": {
+    "disjoint_confirmation": true,
+    "paired_conditions": true,
+    "seed": 5001,
+    "split": "confirmation"
+  },
+  "split": "confirmation"
+}
