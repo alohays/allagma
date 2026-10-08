@@ -1,0 +1,68 @@
+{
+  "audit_status": "complete",
+  "public_launch_status": "blocked",
+  "blocker": "Historical Apple-voice renders remain in Git and PR history, unchanged by explicit owner decision.",
+  "verified_commit": "978d0f7515da6693b003e90ee8461a4f3ccc62ec",
+  "remote": "origin/main",
+  "repository_private": true,
+  "push": "normal fast-forward; successful",
+  "ci": {
+    "Conformance": {
+      "url": "https://github.com/alohays/allagma/actions/runs/37791938306",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "acceptance",
+          "conclusion": "success"
+        },
+        {
+          "name": "targeted",
+          "conclusion": "success"
+        }
+      ]
+    },
+    "Prepare release assets": {
+      "url": "https://github.com/alohays/allagma/actions/runs/37792023489",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "qualify",
+          "conclusion": "success"
+        }
+      ]
+    },
+    "Documentation": {
+      "url": "https://github.com/alohays/allagma/actions/runs/37791938294",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "build-and-test",
+          "conclusion": "success"
+        }
+      ]
+    },
+    "Public documentation deployment": {
+      "url": "https://github.com/alohays/allagma/actions/runs/37791938359",
+      "conclusion": "skipped",
+      "jobs": [
+        {
+          "name": "build",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "deploy",
+          "conclusion": "skipped"
+        }
+      ]
+    }
+  },
+  "hosted_archive": {
+    "sha256": "44a9a4da30ce2c01c81d6bf3101a3541e94e40f833472ec22dc90cbbbfd8f496",
+    "bytes": 137869,
+    "byte_identical_to_local_committed_source_archive": true,
+    "acceptance_status": "pass",
+    "conformance_tests": 113,
+    "core_source_revision": "sha256:a7a67e09548e40442f2ff72ba63898f66e02368046132a183588ebebdbc1a196"
+  },
+  "note": "A final documentation-only receipt commit follows this verified audit commit; its exact remote identity and push CI are observed separately."
+}

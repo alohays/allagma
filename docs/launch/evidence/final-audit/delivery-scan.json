@@ -39,10 +39,17 @@
     "docs/launch/evidence/final-audit/site-privacy.json": "00aacd3e76bb15999d13e78600c72e220db98793159db5c9e2c683954fa16381",
     "docs/launch/evidence/final-audit/source-distribution.json": "1ef0f028637527bc407670d7da4d7fa3ddc3cd84aa9e11c93f55cf759362d725",
     "docs/launch/evidence/final-audit/source-manifest.json": "ad7c8e91dee439d9d0f35e5d2752d7a5c07892cac9da0b1bcb8a6be511e3a4eb",
-    "docs/launch/final-audit.md": "5b8f759e1f7187731e8130199c0fc56e22b26a3d4fde96775125311884ff46c2",
+    "docs/launch/final-audit.md": "1ec881b6473ca47ee770941c7c4ce1de769a3f58ba648feacdd9069e39f4edd4",
     "docs/launch/owner-actions.md": "beee990956456bc6e575deb3652c5eb4ac58dde46698ca50943a6e4ac9716bbb",
     "docs/launch/publication-review.md": "48c626d97d4e6c983292a42343dbb1ceeaa6b52b7bc49c803864a2385cdb8326",
     "docs/launch/requirements.md": "3cdb26f20ce081b543b4b5523e4dc1c14e5fa197113d196f46f12c19cab9d400"
+  },
+  "final_receipt_review": {
+    "files": [
+      "docs/launch/final-audit.md",
+      "docs/launch/evidence/final-audit/completion.json"
+    ],
+    "scope": "Final changes add only inspected GitHub run URLs/statuses, archive size/digest, and the existing historical-audio blocker. No scientific or media artifact changed."
   },
   "match_counts": {
     "home_path": 883
