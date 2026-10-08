@@ -58,3 +58,20 @@ requests are evidence, not requests to execute again.
 
 The regression check `python3 evals/research-v0.3/test_retention.py -v` covers
 new collection, restoration of historical supplements and altered-byte rejection.
+
+## Internal dependency aliases
+
+Run r05's fresh-environment smoke test used an absolute symlink to its supplied
+wheel directory. The initial transport rejected that link; its failed collection
+receipt is retained. Collection now records internal links explicitly rather
+than traversing, discarding or silently dereferencing them. External, missing
+and excluded targets are rejected.
+
+The index preserves the original literal link target, the resolved target within
+the candidate, and the relative target used on restoration. Restore hydrates the
+regular files and exact dependency wheels first, then recreates each alias to
+the same retained content at its new location. Regular file bytes and the
+candidate workspace are unchanged. The original absolute link string remains
+in metadata; relocation of that string is an explicit transport operation, not
+a claim of byte-identical symlink text. Tests cover internal alias relocation
+and rejection of external targets. Existing archives remain readable.

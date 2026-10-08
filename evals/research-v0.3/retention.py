@@ -32,20 +32,35 @@ def paths(root):
     for directory,dirs,files in os.walk(root,followlinks=False):
         dirs[:]=[name for name in dirs if name not in ('.git','.tmp','__pycache__','.cache')
                  and not name.startswith('.venv') and not (Path(directory)/name/'pyvenv.cfg').exists()]
-        if any((Path(directory)/name).is_symlink() for name in dirs):
-            raise ValueError('Unexpected retained directory symlink: '+directory)
+        for name in dirs[:]:
+            path=Path(directory)/name
+            if path.is_symlink():
+                yield path
+                dirs.remove(name)
         for name in files:
             if name in ('.DS_Store','.mutex') or name.endswith(('.pyc','.pyo')):continue
             path=Path(directory)/name
-            if path.is_symlink():raise ValueError('Unexpected retained symlink: '+str(path))
-            if path.is_file():yield path
+            if path.is_symlink() or path.is_file():yield path
 
 
 def collect(source,destination):
     source,destination=Path(source).resolve(),Path(destination).resolve()
     if destination.exists():raise ValueError('Retention destination exists; do not overwrite a run package')
     destination.mkdir(parents=True)
-    entries={str(p.relative_to(source)):{'sha256':sha(p),'bytes':p.stat().st_size} for p in sorted(paths(source))}
+    entries={};links={}
+    for path in sorted(paths(source)):
+        name=str(path.relative_to(source))
+        if path.is_symlink():
+            target=path.resolve(strict=True)
+            if source not in target.parents:
+                raise ValueError('Retained symlink escapes candidate: '+name)
+            links[name]={'original_target':os.readlink(path),'target':str(target.relative_to(source)),
+                         'restored_target':os.path.relpath(target,path.parent),'directory':target.is_dir()}
+        else:entries[name]={'sha256':sha(path),'bytes':path.stat().st_size}
+    for name,entry in links.items():
+        target=entry['target']
+        if target not in entries and not any(path.startswith(target+'/') for path in entries):
+            raise ValueError('Retained symlink targets excluded material: '+name)
     wheels={name:entry for name,entry in entries.items() if name.endswith('.whl') and
             (name.startswith('inputs/materials/wheels/') or name.startswith('inputs/wheels/'))}
     included={name:entry for name,entry in entries.items() if name not in wheels}
@@ -63,6 +78,9 @@ def collect(source,destination):
         archive_sha=sha(archive)
     for name,entry in entries.items():
         if sha(source/name)!=entry['sha256']:raise ValueError('Candidate changed during collection: '+name)
+    for name,entry in links.items():
+        if os.readlink(source/name)!=entry['original_target']:
+            raise ValueError('Candidate link changed during collection: '+name)
     manifest_errors=[]
     supplied=source/'artifact-manifest.json'
     if supplied.exists():
@@ -76,11 +94,11 @@ def collect(source,destination):
         except (ValueError,KeyError,TypeError,AttributeError):manifest_errors.append('unsupported-or-invalid-manifest-format')
     else:manifest_errors.append('manifest-missing')
     result={'format':'allagma-retained-package-v1','source':str(source),'archive_sha256':archive_sha,'parts':parts,
-            'files':included,'external_wheels':wheels,'artifact_manifest_errors':manifest_errors,
-            'scope':'Verbatim artifacts/source; software wheels require exact-hash hydration. No claim of scientific completion.',
+            'files':included,'external_wheels':wheels,'symlinks':links,'artifact_manifest_errors':manifest_errors,
+            'scope':'Verbatim regular artifacts/source; exact-hash wheel hydration; confined links retain original target metadata and restore as relocatable aliases. No claim of scientific completion.',
             'excluded':'Virtual environments, caches and mutation locks. Terminal compute queues are retained as evidence.'}
     (destination/'package-index.json').write_text(json.dumps(result,indent=2,sort_keys=True)+'\n')
-    return {'retained_files':len(included),'wheel_files':len(wheels),'archive_parts':len(parts),'manifest_errors':manifest_errors}
+    return {'retained_files':len(included),'retained_links':len(links),'wheel_files':len(wheels),'archive_parts':len(parts),'manifest_errors':manifest_errors}
 
 
 def confined(root,name):
@@ -102,10 +120,14 @@ def supplement(source,package):
     for name,entry in {**index['files'],**index['external_wheels']}.items():
         if sha(confined(source,name))!=entry['sha256']:
             raise ValueError('Original candidate changed before queue retention: '+name)
+    for name,entry in index.get('symlinks',{}).items():
+        if os.readlink(source/name)!=entry['original_target']:
+            raise ValueError('Original candidate link changed before queue retention: '+name)
     entries={}
     queue=source/'.compute'
     if queue.is_symlink():raise ValueError('Unexpected queue symlink')
     for path in sorted(paths(queue)):
+        if path.is_symlink():raise ValueError('Queue link requires a new complete package')
         name=str(path.relative_to(source))
         if name in index['files']:continue
         target=confined(output.resolve(),name)
@@ -168,11 +190,22 @@ def restore(package,destination,*,wheel_cache=None,download_wheels=False):
             if not source.is_file() or sha(source)!=entry['sha256']:
                 raise ValueError('Terminal queue supplement changed: '+name)
             target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(source,target)
+    for name,entry in index.get('symlinks',{}).items():
+        target=confined(destination,entry['target'])
+        path=confined(destination,name)
+        if not target.exists() or path.exists() or path.is_symlink():
+            raise ValueError('Invalid restored link target or occupied alias: '+name)
+        relative=os.path.relpath(target,path.parent)
+        if relative!=entry['restored_target']:raise ValueError('Restored link metadata differs: '+name)
+        path.parent.mkdir(parents=True,exist_ok=True)
+        path.symlink_to(relative,target_is_directory=entry['directory'])
+        if path.resolve()!=target:raise ValueError('Restored link escapes its retained target: '+name)
     for name,entry in {**index['files'],**index['external_wheels'],**supplemental}.items():
         path=destination/name
         if not path.is_file() or sha(path)!=entry['sha256']:raise ValueError('Restored file differs: '+name)
     return {'status':'pass','restored_files':len(index['files'])+len(index['external_wheels'])+len(supplemental),
             'terminal_queue_supplement_files':len(supplemental),
+            'restored_links':len(index.get('symlinks',{})),
             'scope':'Exact file restoration and dependency hydration; execution/recomputation are separate checks'}
 
 

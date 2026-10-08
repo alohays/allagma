@@ -53,6 +53,38 @@ class RetentionTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'supplement changed'):
                 retention.restore(root / 'package', root / 'tampered-restore')
 
+    def test_internal_absolute_dependency_alias_is_explicit_and_relocatable(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            candidate = self.fixture(root)
+            materials = candidate / 'inputs/materials'
+            materials.mkdir(parents=True)
+            (materials / 'source.txt').write_text('retained scientific input\n')
+            copied = candidate / 'reproduction/inputs'
+            copied.mkdir(parents=True)
+            (copied / 'materials').symlink_to(materials, target_is_directory=True)
+            result = retention.collect(candidate, root / 'package')
+            self.assertEqual(result['retained_links'], 1)
+            index = json.loads((root / 'package/package-index.json').read_text())
+            link = index['symlinks']['reproduction/inputs/materials']
+            self.assertEqual(link['original_target'], str(materials))
+            restored = root / 'restored'
+            retention.restore(root / 'package', restored)
+            alias = restored / 'reproduction/inputs/materials'
+            self.assertTrue(alias.is_symlink())
+            self.assertEqual(alias.resolve(), (restored / 'inputs/materials').resolve())
+            self.assertEqual((alias / 'source.txt').read_text(), 'retained scientific input\n')
+
+    def test_external_dependency_alias_is_rejected(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            candidate = self.fixture(root)
+            outside = root / 'outside.txt'
+            outside.write_text('outside candidate')
+            (candidate / 'external.txt').symlink_to(outside)
+            with self.assertRaisesRegex(ValueError, 'escapes candidate'):
+                retention.collect(candidate, root / 'package')
+
 
 if __name__ == '__main__':
     unittest.main()
