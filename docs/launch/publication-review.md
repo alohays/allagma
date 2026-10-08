@@ -116,3 +116,8 @@ pull-request refs. Replacing the working-tree movie does not remove them.
 The owner chose **keep history unchanged and report historical audio clearance
 as a public-launch blocker**. No history rewrite, public activation or rights
 clearance is claimed by this audit.
+
+The [final audit report](final-audit.md) includes the fresh 73-commit history
+scan, current media verification, source-distribution repairs and exact owner
+decision. It replaces the earlier conclusion that publication preparation had
+no unresolved redistribution issue.

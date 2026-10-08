@@ -15,7 +15,7 @@ The earlier decision to retain personal metadata does not grant audio rights.
 
 ## Review the prepared package
 
-Read the [launch evidence ledger](requirements.md),
+Read the [final audit](final-audit.md), [launch evidence ledger](requirements.md),
 [publication review](publication-review.md), [third-party notices](../../THIRD_PARTY_NOTICES.md)
 and [release notes](../releases/0.3.0rc2.md). The owner has already chosen to retain
 the full history with author email, local paths and native session IDs disclosed.

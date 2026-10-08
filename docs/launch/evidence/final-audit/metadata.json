@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "citation_version": "0.3.0rc2",
+  "workflow_yaml_parsed": [
+    "links.yml",
+    "pages.yml",
+    "docs.yml",
+    "release-check.yml",
+    "conformance.yml"
+  ],
+  "default_permissions": "contents: read",
+  "pull_request_target": false,
+  "scope": "Metadata syntax and selected permission invariants; execution checked through hosted CI."
+}

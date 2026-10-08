@@ -1,0 +1,78 @@
+
+> build
+> npm run sync && astro build && node scripts/check-links.mjs
+
+
+> sync
+> node scripts/sync-content.mjs
+
+Included 344 packages with shipped notices in the site.
+Synced 33 canonical pages, command help, and selected media.
+23:12:57 [content] Syncing content
+23:12:57 [content] Synced content
+23:12:57 [types] Generated 274ms
+23:12:57 [build] output: "static"
+23:12:57 [build] mode: "static"
+23:12:57 [build] directory: /Users/iyunseong/maangeek/allagma/site/dist/
+23:12:57 [build] Collecting build info...
+23:12:57 [build] ✓ Completed in 389ms.
+23:12:57 [build] Building static entrypoints...
+23:12:58 [vite] ✓ built in 156ms
+23:12:58 [vite] ✓ built in 30ms
+23:12:58 [build] Rearranging server assets...
+
+ generating static routes 
+23:12:58 [WARN] [content] The collection "i18n" does not exist or is empty. Please check your content config file for errors.
+23:12:58   ├─ /404.html23:12:58 [WARN] [content] Entry docs → 404 was not found.
+ (+10ms) 
+23:12:58   ├─ /contributing/index.html (+3ms) 
+23:12:58   ├─ /contributing/modules/index.html (+2ms) 
+23:12:58   ├─ /contributing/starter-tasks/index.html (+2ms) 
+23:12:58   ├─ /demo/index.html (+3ms) 
+23:12:58   ├─ /demo/transcript/index.html (+3ms) 
+23:12:58   ├─ /evidence/acceptance/index.html (+2ms) 
+23:12:58   ├─ /evidence/comparison/index.html (+2ms) 
+23:12:58   ├─ /evidence/hosts/index.html (+2ms) 
+23:12:58   ├─ /evidence/implementation/index.html (+1ms) 
+23:12:58   ├─ /explore/index.html (+3ms) 
+23:12:58   ├─ /guides/artifacts/index.html (+1ms) 
+23:12:58   ├─ /guides/first-study/index.html (+1ms) 
+23:12:58   ├─ /guides/native-study/index.html (+1ms) 
+23:12:58   ├─ /guides/reproduce/index.html (+1ms) 
+23:12:58   ├─ /guides/resources/index.html (+2ms) 
+23:12:58   ├─ /guides/troubleshooting/index.html (+1ms) 
+23:12:58   ├─ /guides/versioning/index.html (+1ms) 
+23:12:58   ├─ /guides/workspaces/index.html (+1ms) 
+23:12:58   ├─ /index.html (+2ms) 
+23:12:58   ├─ /project/conduct/index.html (+1ms) 
+23:12:58   ├─ /project/governance/index.html (+1ms) 
+23:12:58   ├─ /project/licenses/index.html (+1ms) 
+23:12:58   ├─ /project/roadmap/index.html (+1ms) 
+23:12:58   ├─ /project/security/index.html (+1ms) 
+23:12:58   ├─ /project/support/index.html (+1ms) 
+23:12:58   ├─ /reference/architecture/index.html (+1ms) 
+23:12:58   ├─ /reference/cli/index.html (+2ms) 
+23:12:58   ├─ /reference/commands/index.html (+1ms) 
+23:12:58   ├─ /reference/concepts/index.html (+1ms) 
+23:12:58   ├─ /reference/contracts/index.html (+1ms) 
+23:12:58   ├─ /reference/study-programs/index.html (+1ms) 
+23:12:58   ├─ /releases/0.3.0rc2/index.html (+1ms) 
+23:12:58   ├─ /studies/index.html (+1ms) 
+23:12:58   ├─ /studies/core-culp/index.html (+1ms) 
+23:12:58   ├─ /studies/ema-schedule/index.html (+1ms) 
+23:12:58   ├─ /studies/modular-addition/index.html (+1ms) 
+23:12:58   ├─ /studies/toy/index.html (+1ms) 
+23:12:58 ✓ Completed in 83ms.
+
+23:12:58 [build] ✓ Completed in 285ms.
+23:12:58 [starlight:pagefind] Building search index with Pagefind...
+23:12:58 [starlight:pagefind] Found 38 HTML files.
+23:12:58 [starlight:pagefind] Finished building search index in 59ms.
+23:12:58 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+23:12:58 [build] 38 page(s) built in 748ms
+23:12:58 [build] Complete!
+{
+  "pages": 38,
+  "local_links": 2168,
+  "errors": []
+}

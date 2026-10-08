@@ -1,5 +1,18 @@
 # Changelog
 
+## Final publication audit — 8 October 2026
+
+- Package source releases from committed Git blobs only, excluding ignored,
+  untracked and modified local files. Add six release-boundary regressions.
+- Repair compact-archive links to omitted documents and images with exact-commit
+  URLs, while preserving core bundle bytes.
+- Replace the current film's narration with Kokoro's Apache-licensed `af_heart`
+  voice; retain source notices, synchronized captions and unchanged video frames.
+- Recheck I1–I5, the extracted distribution, browser behavior and full reachable
+  history. The [final audit](docs/launch/final-audit.md) records the evidence.
+- Keep the repository private: two historical Apple-voice renders remain a
+  **public-launch blocker**, retained unchanged by explicit owner decision.
+
 ## Public launch preparation — 8 October 2026
 
 - Rework the README around a verified first study and clear agent-workflow value.

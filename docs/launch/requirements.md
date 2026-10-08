@@ -10,6 +10,8 @@ The current movie uses Kokoro with recorded source licenses; it does not clear
 the older recordings. The [publication review](publication-review.md) and
 [owner actions](owner-actions.md) take precedence over the earlier preparation
 receipts below. Technical preparation can pass while publication remains blocked.
+The [final audit](final-audit.md) records fresh checks, repairs and the exact
+remaining blocker.
 
 | Gate | Required outcome | Status and evidence |
 | --- | --- | --- |

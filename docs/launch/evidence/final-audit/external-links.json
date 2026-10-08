@@ -1,0 +1,35 @@
+{
+  "checked_at": "2026-10-08T14:15:13.095831+00:00",
+  "counts": {
+    "pass": 4,
+    "repository-or-prelaunch-endpoint": 177
+  },
+  "checked_endpoints": [
+    {
+      "url": "https://agentskills.io/specification",
+      "status": "pass",
+      "http_status": 200,
+      "resolved": "https://agentskills.io/specification"
+    },
+    {
+      "url": "https://arxiv.org/abs/2201.02177",
+      "status": "pass",
+      "http_status": 200,
+      "resolved": "https://arxiv.org/abs/2201.02177"
+    },
+    {
+      "url": "https://code.claude.com/docs/en/skills",
+      "status": "pass",
+      "http_status": 200,
+      "resolved": "https://code.claude.com/docs/en/skills"
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/build-skills",
+      "status": "pass",
+      "http_status": 200,
+      "resolved": "https://learn.chatgpt.com/docs/build-skills"
+    }
+  ],
+  "full_report_sha256": "fa39a7da5b280817b6652dd92de09f064f66691b478fd61ab951c1640cf13220",
+  "limitations": "HTTP availability is not source validity. Blocked/rate-limited endpoints are explicitly unverified, not passing."
+}

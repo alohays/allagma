@@ -1,0 +1,323 @@
+{
+  "completed_at": "2026-10-08T14:15:23.970624+00:00",
+  "conformance": {
+    "log": {
+      "media_type": "application/octet-stream",
+      "path": "conformance.log",
+      "retention": "retain-with-study",
+      "sha256": "94150724fff0c20bc0cf49a9772b1a96066277cc41b3e3559dc6c0673ce82414"
+    },
+    "result": {
+      "media_type": "application/json",
+      "path": "conformance.json",
+      "retention": "retain-with-study",
+      "sha256": "2196b0cc041b92835a2e6527d0ebc78098b88eea18eef0008f1160c398124274"
+    },
+    "tests_run": 113
+  },
+  "conformance_inventory": {
+    "README.md": "39a5ca4c04646f01969a303e33ad3b296f9b4141edf1a5d474fec2dcc38aba66",
+    "__init__.py": "acc9cbdf6c69b0a06996b160e11d94325f77ac7fad2b60b3dfeafed53b961726",
+    "support.py": "748252b79133241a3767aa714161dd72652d385dd35dfcb4da62e69d87bbcbdb",
+    "test_analysis_policy.py": "73361f3bd0cb0048083173d516fd2917a72a3ab1da2faf2f1411ff81fe8c9b16",
+    "test_audit.py": "59955f4c805b27015726135bc8756088009087b9c94acd8dacbd5f6548280430",
+    "test_broker.py": "eb1fced7969ca38fd87b7290646c9a0a942aaf13c0db738536c19f793730b2b0",
+    "test_contracts.py": "e33b9cdf6a2077cfd7cc1cbff69ee3946cd4f230307fd70262c2b9363a31a26c",
+    "test_improvement.py": "1e39dbd2d23c15679c52ce158cf5dd1d6ca360780004d7a3e9fa6beba2b3fa53",
+    "test_modules.py": "f010aa60e9e16409100238ca664089cb68e729b541e20207788f050e80f790d3",
+    "test_native_capture.py": "27ea08a9e339867da02eeba77e834550e7057ca296a1b1b4463ce89921a87d85",
+    "test_research.py": "d8f083eefcc03654bdd9bff0ad135a092663c6286f5f0987cd890262780f9762",
+    "test_research_prepare.py": "0706c65c912c8bb46fee901e441155b2a0beade64c216a33000f9a81c603cede",
+    "test_resources.py": "979a42b8576f61d2242f944e31567c5049e6dea78d8121deb69700d415c79c89",
+    "test_versions.py": "1a7b369eb0bd6c0a123f111a3d6c8632decc7bdbb4145c94ed73246bd074c433",
+    "test_worker.py": "2e485b5ff726632a953fe6f8c7a50410db386938ce375a4601896eea98f69611"
+  },
+  "contributor_materials": {
+    ".github/CODEOWNERS": "f9085b6b9d097efa47e0c4e04c6e6b8e07046a4f7b129ea3c5356d22ecb84fd2",
+    ".github/ISSUE_TEMPLATE/bug_report.yml": "97dfa1e502ad99ba0197f9700e0d97a39204a43a0f522059d6269e170ecf0bae",
+    ".github/ISSUE_TEMPLATE/module_proposal.yml": "aba7bed025b8aa9080b7ba5e94f78bbf96b2066bddfb515fc584dd57f9ede623",
+    ".github/PULL_REQUEST_TEMPLATE.md": "c6fbba47f4959b60b1d79f4e01b07f6bcb2026b5fe134f8854df6ac72a1f8c14",
+    ".github/workflows/conformance.yml": "168dbe35f844e5a756e4b658a80bf9ac42f7f2911a73f863a96b14e21112f1a8",
+    "CHANGELOG.md": "c80c768a3782ecfa85062f29634d7a24e69e9c15b729ae5829f6475ea2a27d6a",
+    "CODE_OF_CONDUCT.md": "ab9fa89f33da26e23b8af7f92dab876e78d3eb88776fa8e2d0d8b33ee3961278",
+    "CONTRIBUTING.md": "b1470c69bc1b520a47183ac89dc1629bdf30f860154a4269cd0e4100f981a100",
+    "GOVERNANCE.md": "f77c222ec2271e711a2d02f16f1b0f82487382ebe72158eedd40a95fb923fe64",
+    "LICENSE": "50cdd713229d07fd7e2bbb9c22e239dd789ba7f767a43ff55158ee31a9aa70d9",
+    "THIRD_PARTY_NOTICES.md": "98aa772c9eec13433a4508b55c258f415d7b4e9ea0bbd7d6d7e4a3cf1528113b",
+    "docs/module-authoring.md": "eae3f6d3b2fc3f6fae29c494aa6d35a23dfff7e46253b57acb3f8290c29ef834"
+  },
+  "environment": {
+    "claude_version_probe": "2.1.217 (Claude Code)",
+    "codex_version_probe": "codex-cli 0.151.0",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.11.6",
+    "timezone_for_reporting": "Asia/Seoul"
+  },
+  "example_inventory": {
+    "first-research/BRIEF.md": "e455dfcbe2e327867fe33c519b35d4482f04adb82d406f826a5f63a97d231082",
+    "first-research/README.md": "f1eee42d74c3b78bfb507d4c9b18aa3218fb4d3608114fe4e516fc8ee2c455e9",
+    "first-research/materials/source-note.md": "5b66e736a322e60394b02f6b1c692e10bd26b6cb36d6fc308fd6bca2fb30d154",
+    "first-research/resources.json": "8815481cfbbc2a0d322d76af5446eb80933bd894ff81037fad5c439f829409be",
+    "toy-study/README.md": "2ef8fac8affbcd1767eeae6c333bad8eacd3f5c2195ce91fb126d86edd57e5f1",
+    "toy-study/brief.json": "ceccf8459eb656d7723618440056855f6100718feca43719c306db3635842a0f",
+    "toy-study/domain/analyze.py": "b0ca6d39c0b88af4f9695436e1bc432706aef61147b1db50cfa82d24e4c0ee5e",
+    "toy-study/domain/derivation.md": "1bbf2594d9e0c41ae0ae45c992cbcdbcb50b476074388f81676ebdf065b88e6c",
+    "toy-study/domain/evaluator.py": "6c4d08bf3f142eedb73c8106e80c8358da1bd94da28fe96d9e20b518577faf38",
+    "toy-study/domain/runner.py": "dc60e9c3921649867b981526918a7b7a0482f51d02d5a6f6672cfd4dd5ad5ca6",
+    "toy-study/domain/write.py": "0fd4290c08f5fdac1e32e770a7ca8c1992971cb5b81b6f7930019b2e4bfb9bca",
+    "toy-study/evidence-map.json": "9e5d4945094de31ec0960fc4f4578a5a1d3f02aef4b7ec163f4c4042aab2f958",
+    "toy-study/protocol.json": "05f41801909130419fd673bceee9c102e55f5a519088fcb498e758bb9dfe9b1d"
+  },
+  "limitations": [
+    "Native Codex and Claude Code activation/model quality are not claimed; tests cover packaging and shared contracts.",
+    "The toy is a synthetic known-answer study, not scientific novelty or an LLM capability improvement."
+  ],
+  "milestones": {
+    "I1": {
+      "evidence": [
+        "generic/walkthrough.json",
+        "codex/walkthrough.json",
+        "claude-code/walkthrough.json"
+      ],
+      "host_scope": "Real generic execution; native entrypoint registration/routing contract fixtures",
+      "native_hooks": false,
+      "native_subagents": false,
+      "same_numerical_output": true,
+      "shared_bundle": "b-ae8c0db0f53ece0b55079337",
+      "status": "pass"
+    },
+    "I2": {
+      "comparisons": [
+        "comparison/decision.json",
+        "comparison-rejected/decision.json",
+        "comparison-unevaluated/decision.json"
+      ],
+      "replacements": [
+        {
+          "case": "context-replacement",
+          "evidence": "context-replacement/walkthrough.json",
+          "unchanged_shared_modules": 14
+        },
+        {
+          "case": "reviewer-replacement",
+          "evidence": "reviewer-replacement/walkthrough.json",
+          "unchanged_shared_modules": 14
+        },
+        {
+          "case": "recipe-replacement",
+          "evidence": "recipe-replacement/walkthrough.json",
+          "unchanged_shared_modules": 14
+        }
+      ],
+      "status": "pass"
+    },
+    "I3": {
+      "checks": [
+        "one-module authoring and targeted check",
+        "capability/contract guards",
+        "offline contributor workflow"
+      ],
+      "evidence": [
+        "conformance.json",
+        "conformance.log"
+      ],
+      "status": "pass"
+    },
+    "I4": {
+      "checks": [
+        "central/profile isolation",
+        "explicit update stages",
+        "generated-file conflicts",
+        "contract mismatch",
+        "coexistence and retirement",
+        "old campaign resume",
+        "complete rollback",
+        "separate scaffold migration and inverse"
+      ],
+      "evidence": [
+        "versioning/scenario.json"
+      ],
+      "status": "pass"
+    },
+    "I5": {
+      "attempts": {
+        "failed": 1,
+        "interrupted": 1,
+        "succeeded": 26
+      },
+      "audit": {
+        "analysis_repetitions": 1,
+        "checked_references": 521,
+        "findings": [],
+        "limitations": [
+          "No independent scientific peer review or real-model quality evaluation."
+        ],
+        "review": {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/analyses/a001/reviews/review-001/record.json",
+          "retention": "retain-with-study",
+          "sha256": "7622c8ee6d6852ceeb69fdce40fd7f3addecedc0072fac3aed6a242e59fb4652"
+        },
+        "stale_claims": [],
+        "verdict": "pass"
+      },
+      "confirmation_replicates": 24,
+      "evidence": [
+        "generic/campaigns/toy-v1/analyses/a001/raw-manifest.json",
+        "generic/campaigns/toy-v1/analyses/a001/record.json",
+        "generic/campaigns/toy-v1/analyses/a001/paper/claims.json",
+        "generic/campaigns/toy-v1/analyses/a001/paper/manuscript.md",
+        "generic/campaigns/toy-v1/latest-audit.json",
+        "partial-study/campaigns/limited/latest-audit.json"
+      ],
+      "scientific_summary": {
+        "biased_mse": 0.08040364583333333,
+        "ci95_normal": [
+          0.039851041785294965,
+          0.09035729154803837
+        ],
+        "counterexample_seeds": [
+          104,
+          108,
+          118,
+          121
+        ],
+        "difference": 0.06510416666666667,
+        "leave_one_seed_out": {
+          "maximum_difference": 0.07269021739130435,
+          "minimum_difference": 0.06182065217391304,
+          "positive_count": 24,
+          "replicates": 24
+        },
+        "mean_mse": 0.015299479166666666,
+        "method": "paired differences across seeds; normal approximation, 1.96 standard errors",
+        "replicates": 24,
+        "samples_per_replicate": 64,
+        "standard_error": 0.012884247388454952
+      },
+      "status": "pass"
+    }
+  },
+  "release": "0.3.0rc2",
+  "schema_version": "0.2",
+  "source_inventory": {
+    "LICENSE": "50cdd713229d07fd7e2bbb9c22e239dd789ba7f767a43ff55158ee31a9aa70d9",
+    "adapters/claude-code/README.md": "3ba3c1e66ecde90d2ea7878045969b1de31d2dcc5266880c0728c1b3b7fdfbda",
+    "adapters/claude-code/example.json": "29834d61c4ea216cc274e353dc580d58837bc3e1d5e6e8707c995f787344fd0d",
+    "adapters/claude-code/host.json": "48210e9af02f1b72a4ec0c6dbd6edddcda17f1ff6f70b49984c5edb9eb3606dc",
+    "adapters/claude-code/module.yaml": "1402b102905fd91e50b46c02da2b8ffa4dcd52fd8efe72f77b4ee3fa62e0ca3a",
+    "adapters/codex/README.md": "b1fecb9c655b2585cb739006078cbc9b3c873a0ee5b55b1e46a63669d51f2d8c",
+    "adapters/codex/example.json": "4f655e2d7dfe0d891d0d433d7351ca6b447fbb3aac90b1cc4e4bd70ee7d0facf",
+    "adapters/codex/host.json": "a694ac00a39b573b50703c9ff457f03e9ec9ce6ab089aa12780a35e9aa4fa661",
+    "adapters/codex/module.yaml": "08b6b3d46a237d61fb03176589a9b8c92b2f1971ec25357f8c34d0a8e6a61728",
+    "adapters/codex/session.py": "d9223cbf83e67abd521ec876b92ae0f351c8d2d3dbdd3c818a076e1ea3e4d122",
+    "adapters/generic/README.md": "b5179c774c14295cdc3d01bfeee6f4a022d6d92de2e7346fff28a3c001da191d",
+    "adapters/generic/example.json": "06578c157758a08bbfb0fdf844a4b197b10ca697f91b0fd8cf282e280c88c5b8",
+    "adapters/generic/host.json": "dc0d265caef119535f043e1e88577c10ff7be80b6ca6d504e387a01f8faeef94",
+    "adapters/generic/module.yaml": "6e23571fc145da2edbf065c62ec164c359a20e893932688fe8b1506b5e77e302",
+    "adapters/local-process/COMPUTE.md": "ac8f4265812035ab9c856bfb6805bacf6e991fd4ea5e9a7d28f44956f9aabae7",
+    "adapters/local-process/README.md": "567e5abec13719ed1b840cab20a44b98ef8145669d23960bdb2d3d758d2a591f",
+    "adapters/local-process/broker.py": "8656e389092f2638c19a81a4387b1af9b97e4052b15b921f3ab14e68f3fa237d",
+    "adapters/local-process/compute_client.py": "837cd519f5dba2c7a72162fdacb4af769a879e8cb21a99796c86e60fe89d6045",
+    "adapters/local-process/example.json": "25f2399e184bf2b0658d401fd6cb116fc3aaaad3232342a3523cee2a0030e07f",
+    "adapters/local-process/module.yaml": "11efdb77a13f5d28585498998f288ea37d41738788e0d563c6c196d16d0a1190",
+    "adapters/reviewer-checklist/README.md": "9973791cf1694f3a57f927ec10d2a39b072c9915a752b15aa91d4c4b249742d2",
+    "adapters/reviewer-checklist/example.json": "e4d36c4593450ce78ae7a4243027a0f6ffdb4fd62708eb397041d93d6d9106f2",
+    "adapters/reviewer-checklist/module.yaml": "82d1e5b31248d99353cd7dcef7616e2b156cfd716e5c82a90a7fde108a92fd1e",
+    "adapters/reviewer-checklist/review.py": "fdf40beff8632370695f82228ab428d983600c1f83076ba975eb86fd26a83e6c",
+    "adapters/reviewer-trace/README.md": "0fb5cbaaf9c6472b7058c9a3f20eb6094569dde5bfcf94203517d1fca19a3b97",
+    "adapters/reviewer-trace/example.json": "6ae903a2f93a6313b96b81680eaac34aa1392569b997d87c6bf1d427e23f9af5",
+    "adapters/reviewer-trace/module.yaml": "8fe94ebd62a6efa22efb3fb156528b46a50d5f984946858ccbcfd8017f7d7705",
+    "adapters/reviewer-trace/review.py": "3dfe90810f4d2f984e9f41cfe495f2cebe2501fa708d89ac86073cbca082a459",
+    "allagma/__init__.py": "9a731c19cbdfe8478dbcc7771234d83bfa5ff307fca99a77c3b813198858457c",
+    "allagma/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "allagma/acceptance.py": "ef352e700cb42570bc70c524176d21b531319938c0868671eec8f13823471c15",
+    "allagma/bundles.py": "94aaf212c4e6c6439d041032a1421ce78df5b207a34dd0ba2c95f5ac375f0aae",
+    "allagma/campaigns.py": "c695c3ff8e9413c217fb6159bd94e984dfe574d7e866983a79032bfcd6b6c3ad",
+    "allagma/catalog.py": "710e62cf10e4f59fcde9f40d4b65a56ba120a02d63c8c36d18bddd3b7cc52c50",
+    "allagma/cli.py": "6c2094929e702d8361aa24da4760fa9c04d6fa10b9dd84f249abcc9f4aca59aa",
+    "allagma/composition.py": "3e0fd293ccf471ca2b43077e76245a783134b0f5370482274eaa0164444eeee8",
+    "allagma/configuration.py": "bb04c05f6244a14a853baaf2ce47b0a2fcb9acac9ebe1b38ea429633f2a75cdc",
+    "allagma/contracts.py": "ede363ff2a1def2e10509ffc9f0374c0c25e70b667d14d4da7263a1d5d7d125c",
+    "allagma/demo.py": "466016de41754e6ea997b1d5de807ae786ee6c9181c14ca8c7685a7ce1a6cdd6",
+    "allagma/files.py": "0632c47a10d7027ba3211c29fbb2cd4290b229f89be19e789dd23b5108cc7c88",
+    "allagma/migrations.py": "3a78c192ce97d574e8825d3262e1ea3e8a9aafdfbeee36e3249447e0b959df44",
+    "allagma/qualification.py": "3b406dc316acd985fb89e78018208b9a987506cbbe0bcdab53d7d736f1726613",
+    "allagma/research.py": "a347983d0217b3459532ddc362d2dca878c7f8e6c63696157b16c9271c62991c",
+    "allagma/resources.py": "a9b71502e0221fc04aac68f74139732bd4c71de11c5ae5760799a9986b8e297e",
+    "allagma/worker.py": "28fca99886bf39f81df4a7ca65545f151fb2d2356148d78c3776cc72a0eb3f9d",
+    "contracts/AnalysisRecord.schema.json": "92bfc45735f5b596416527516e46b3090534cfff3e0c38ff0f8a0031b1cbc661",
+    "contracts/ClaimRecord.schema.json": "0cbf04aea5a27f616200b84c215f0249e6baa0dda86ad952ce1166efd8a23819",
+    "contracts/ContextRecord.schema.json": "837da16a17cf76b981f1d6f211ff1e3c5a2bcf6e2adf4eeb632d88bb9f9ea8fa",
+    "contracts/ExperimentSpec.schema.json": "8f43c34b150897118643a7632ef16f5e8260c6bb5cceb77e10d9270ecaabe12c",
+    "contracts/ImprovementRecord.schema.json": "0c2d37c478b4694969c8c7cb80631e843f453c0f1271dd390bf8f8be4ab20f55",
+    "contracts/ReviewRecord.schema.json": "e33fe17311cfcc7132ca03623a8cdbc50afb8fde9e346faa123d03e5d50346c6",
+    "contracts/RunRecord.schema.json": "014c059acf6d5bff333101505d6d9cc6acaeba802519caa335e2513f6f4e5a52",
+    "contracts/StudySpec.schema.json": "5e7826267f43c811fb26b273162f8101bf1b391e6e2e99c65bb59c531c4098ba",
+    "contracts/compatibility.json": "26a0034e787df0cdc5e570a9171034584ac8a0d8341bcd23664a9e0437a57ca1",
+    "evals/context-retention/README.md": "0d455a6d58678419fd4ec9e0022ccd3e9069c5768ea9702420ea866080a9cbe3",
+    "evals/context-retention/cases.json": "1e96c49bf0441f283bef350b69cdc45f54249c89119233de4b7e4ecbc93debf0",
+    "evals/context-retention/example.json": "675b9f7d9d995fb9ae4ff042e10173e41f1c907e18b128fab8be94b166c1cea7",
+    "evals/context-retention/module.yaml": "3c13042529a0c173283f2ca54b393ab4739eb4cbe4a0c7b4847d103542a80a54",
+    "methods/allagma-analysis/SKILL.md": "577e8f8059856b3d38d72d419abc0cf1a38fb25a29d246dd20b61644154a9f7c",
+    "methods/allagma-analysis/example.json": "cb6651d604d8604b14df4939b9ffc9f2021b11bea5118917f98facf1b5fa18cd",
+    "methods/allagma-analysis/module.yaml": "629b717916809323abd3aeca92da63989af253ff3a626c66b8fe7849e54ab416",
+    "methods/allagma-audit/SKILL.md": "7f151e4dc792fa50e593613798c3e079f7c6dfa8112a78da0d0f43ccc1067e35",
+    "methods/allagma-audit/example.json": "32d28febc25101c8a4625fc39d25d6b0f4747b7d8ad4c696f70816f1d1ca784f",
+    "methods/allagma-audit/module.yaml": "7617a366705649741c34f72e34ff9b746154347aa28ee71c7c3f9c943ef86370",
+    "methods/allagma-context-active-brief/SKILL.md": "f228c1bcd94646b8b96d9694f43f5f480c1dca0284618260fc1a143e8960de23",
+    "methods/allagma-context-active-brief/example.json": "9d5975ee5ecc46870a2ba2d92647c4e96f4db3edc58f9228e1c6c18f25bea61d",
+    "methods/allagma-context-active-brief/module.yaml": "ac878db5f2d708934465536e1958842237f9536856ca55fff911b7127d44107b",
+    "methods/allagma-context-active-brief/select.py": "e5c32b1e32207a91efe16a1ac4575c765a24f0a75fbfbe80a19f6e526dd9f128",
+    "methods/allagma-context-full-record/SKILL.md": "aaad25086dafda3065a02385cc8886452a7f3422abb6f82679a3904109574b15",
+    "methods/allagma-context-full-record/example.json": "9d5975ee5ecc46870a2ba2d92647c4e96f4db3edc58f9228e1c6c18f25bea61d",
+    "methods/allagma-context-full-record/module.yaml": "c64bdbdc41a5c84a5d899b36ef5b19ac6ca072c56b409091a1bd34b0ada58fd5",
+    "methods/allagma-context-full-record/select.py": "cd3e3ab8f35412617625031fcb9a40aee58fa617451224cce6f2ed1d5eaa85bf",
+    "methods/allagma-experiment/SKILL.md": "81e6590ae9113a3f0a9508af58b3d70ad60ba970f86750d4ce5751e662e6b5c9",
+    "methods/allagma-experiment/example.json": "a83fd4ccfe6809237285e3fbc5d95bc37f0fb2d52336144fe4c18df9cf5c3226",
+    "methods/allagma-experiment/module.yaml": "b0dab32a91b98ffa449e9ecc116e7195dccbbf58925ef785ae24569081c9dd5c",
+    "methods/allagma-improve/SKILL.md": "2aef975d30f118f51cd05826f8364d233997306a0c6645cca033381be49cfc1d",
+    "methods/allagma-improve/example.json": "81a490c2c89aa92c060c7559e00ed5cf1e4ea8eb64486c47c583eb4da64c128a",
+    "methods/allagma-improve/module.yaml": "f144351417adbc34bd6d7aeaeb30bf7d669887d61ca47d8edb58d1ef3c96ef71",
+    "methods/allagma-protocol/SKILL.md": "a89b094556d76a0a370363ab54f943d4342f5322042ed7ff4424c90171b754ac",
+    "methods/allagma-protocol/example.json": "b664d33cb6272dca670a0726f4020e6efeec4fb6b5e5266513e72fc4b0980da3",
+    "methods/allagma-protocol/module.yaml": "ce030bc45bac1c8419d1fa88b31778d4bace4a9fc53064ac3145a3072403f577",
+    "methods/allagma-scope/SKILL.md": "54164304a1dcfd0dae3f962c69e723ac6d7db4df756d63fdfcb7b12648b9a0ea",
+    "methods/allagma-scope/example.json": "cc2be6ec24873ffb9a55a7d0a8893dd40a6bfe1ded90f7b9eb86c0e2adfaa935",
+    "methods/allagma-scope/module.yaml": "e955d2932dfa7ee66d694baf306b50d4e85187933189c96944f586c20f8b7388",
+    "methods/allagma-writing/SKILL.md": "1c6926bb5fdedcd3357e20d53914f6174d021d18f187045e59df5ac5305b3e11",
+    "methods/allagma-writing/example.json": "f398c1cceacf34080f6652a8f705bb5469ed3200e15be1f9b6003b4111daa8ae",
+    "methods/allagma-writing/module.yaml": "a9c61d35fda6867f1324859137758eae2880e192e0cc35a65ccdb53809e2ba98",
+    "policies/local/README.md": "84bb5a33ae21b1b0381d23593875e8ba10cffcbdef1cc7cb54f17c62ff49a2f0",
+    "policies/local/example.json": "d9f53cdb35bb54ddc2ce25015b8d3c30e280547daa394fe4b4727f91380adf78",
+    "policies/local/module.yaml": "a48ae425a2362356d26ee002b5b29207deee83c1ac0d759e653333e80a19f929",
+    "policies/local/policy.json": "69a7c9e4d6dbf819f6fffce15397b00555015cfefba73becb3fc89f65f8bd397",
+    "profiles/default/README.md": "ac6b57e99a90319ad01bb579a36ad668cbd929ced7831973d22882c072868d7a",
+    "profiles/default/example.json": "70b1cc63c5f5d4b61a23bdffa01efdfafb57d688999f6a8c5da520fa6cefe194",
+    "profiles/default/module.yaml": "6cf5c10315dc749f19cdceca19ebf2fbbdc0c889a923a115cb0db7859927b441",
+    "profiles/default/profile.json": "22bf8cfc5a958e42158debb76a82428041af623005e8300bf774431f4b6f338f",
+    "recipes/allagma-improve-allagma/SKILL.md": "5a21210c0ba5d92a099613174b81b3fc4b11f44b9cec2b44b679a1cb40aaf97d",
+    "recipes/allagma-improve-allagma/example.json": "68f39bec1c6a40bea3e155c86f528af0aa6d98218722fc64a46a9c45f475e2dd",
+    "recipes/allagma-improve-allagma/module.yaml": "f3b07a88ba641fe0b3776e8e6e10409576c2b28a19cb48bb70ebe5413f7f6196",
+    "recipes/allagma-improve-allagma/recipe.json": "c093e3b66dd44e1cac3136a41bf9ecce892ba8fda7b024d1a81385acf6a069ab",
+    "recipes/allagma-replication/SKILL.md": "30874927493ffb8315a118770a1df537e58e8ef039ac22532ffb5b56559a7ab4",
+    "recipes/allagma-replication/example.json": "aa64fff350e32279c5312718e5fa0239086dce49aca0ba3db9f2f0f012a1f165",
+    "recipes/allagma-replication/module.yaml": "dd671cfc608450ef1b82b4ea387ae7cb3183ebfd84ea3fb04f6dd3c024c754c5",
+    "recipes/allagma-replication/recipe.json": "673d23bcb67a77a3e01ae7334400d5b2eb0c6ec4890fa1c5c57aff301247cb1e",
+    "recipes/allagma-research/SKILL.md": "d31d0ac886623e1944ddf536717a5ddb9fe965775fdba8b764354bafc538b0e2",
+    "recipes/allagma-research/example.json": "7ecbcb431589f2ab8eeb3339d3fe7b46e949b703fbb6843a598199cb698640ce",
+    "recipes/allagma-research/module.yaml": "ed796463b8622c88933c5f1e6e2c5680824aaf2f2f8d472a17d661e7c46d38da",
+    "recipes/allagma-research/recipe.json": "d7fae4ac1257a25d3124ce95ef9e4b7c6178cd68ed2f08cabda03a7dc4feef35",
+    "registry.json": "ce19b0ef47c3ee930cc1b47873e4f58ecc89cae581f16013c06e440065f4a2b1",
+    "release.json": "46eed951dc767f491cfadb00a28b996ba7c7d0f450c08a3e806b5805deea2f39",
+    "templates/study/AGENTS.md": "8762667e0ab2d2bdbbbbf7e5a27ed51c156ac4d73296ce62f78ef34c2e90854d",
+    "templates/study/CLAUDE.md": "43ee0cb5bb101d2c170f46f9b271646d54d09a81f93d24d97a0946bf437c0470",
+    "templates/study/README.md": "d76b559196f05c38b0461d9fa3081656085984f9e0cdd7ea81ccd720201291be",
+    "templates/study/modules-local/README.md": "1caf523d0da08b0039d565c957d75119245766a60c88c7d431fe6fd7591fb646",
+    "templates/study/overrides/README.md": "dbb0d6d2caa8b95f0c53965f05a43df3663ccc08815e45527aa8a85981ee7425",
+    "tools/allagma.py": "baf064528308ded0d0357e24a386d027155b55ca3926cb78070a85beefdd4530"
+  },
+  "source_revision": "sha256:a7a67e09548e40442f2ff72ba63898f66e02368046132a183588ebebdbc1a196",
+  "started_at": "2026-10-08T14:14:07.638706+00:00",
+  "status": "pass"
+}

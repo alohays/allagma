@@ -1,0 +1,29 @@
+{
+  "category_counts": {
+    "email": 3980,
+    "home_path": 30382
+  },
+  "commits": 73,
+  "counts": {
+    "archive_members": 54889,
+    "binary_contents_pattern_scanned": 10074,
+    "blob_versions": 7736,
+    "commit_versions": 73,
+    "duplicate_contents": 31551,
+    "git_objects": 12630,
+    "gzip_members": 91,
+    "tar_archives": 19,
+    "unique_bytes": 8815946183,
+    "unique_contents": 31238,
+    "zip_archives": 934
+  },
+  "errors": [],
+  "head": "7606f87a21b3aceb077166a44a93143deb996374",
+  "limitations": "Pattern review cannot prove absence of secrets or certify legal rights. Binary files are pattern-scanned and ZIP/TAR members opened, but tensor/model/pickle contents are not executed. Review findings manually. Uncommitted files need a subsequent committed-tree scan.",
+  "multipart_archives": 12,
+  "scope": "All objects reachable from all local refs, including historical commit metadata; all distinct multipart TAR combinations in their commit trees. Pattern matches never export matched values.",
+  "seconds": 270.84898045798764,
+  "raw_receipt_sha256": "c7618aa113fd06a403210cbeee2e0116cfd7fb0f54dc6cf1189ce046cee5f336",
+  "credential_pattern_matches": 0,
+  "disposition": "Email and home-path matches include owner-approved metadata, dependency notices/fixtures, Playwright filenames and accidental matches in binary bytes. No credential-pattern matches. Historical Apple-voice files remain a separately documented licensing blocker."
+}

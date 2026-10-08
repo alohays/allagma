@@ -1,0 +1,53 @@
+{
+  "status": "pass",
+  "source_commit": "7606f87a21b3aceb077166a44a93143deb996374",
+  "archive": "allagma-0.3.0rc2-source.tar.gz",
+  "sha256": "a63c74df89ee1b5fb302669b191211504e3113b046c3491a9477203bc14112eb",
+  "bytes": 137542,
+  "files": 182,
+  "source_policy": "Committed HEAD blobs only; all local edits, ignored files and untracked files excluded.",
+  "documentation_rewrites": {
+    "CHANGELOG.md": {
+      "source_sha256": "0897518d73617065f05f4a481c9b4f9a3a2717e55954586a55a1d31fc0bc51f7",
+      "transformation": "Omitted relative documentation/media targets point to the exact Git commit."
+    },
+    "CONTRIBUTING.md": {
+      "source_sha256": "e115326f93420652a820fb2b4d7aa97aac55da891e2272b5f14848000d2f68d4",
+      "transformation": "Omitted relative documentation/media targets point to the exact Git commit."
+    },
+    "README.md": {
+      "source_sha256": "e23356b7e14c7f725158bace425259c32ce2ab524fd661789f0a6ae6a20b31a0",
+      "transformation": "Omitted relative documentation/media targets point to the exact Git commit."
+    },
+    "SECURITY.md": {
+      "source_sha256": "1198c9703a5960dd564367b0c557108ed82f17b10c49841616078d9c688ca05f",
+      "transformation": "Omitted relative documentation/media targets point to the exact Git commit."
+    },
+    "SUPPORT.md": {
+      "source_sha256": "187aa5956615241dfdaed80877fddb52284abbc3cf8564968e8ce8d02c6167b7",
+      "transformation": "Omitted relative documentation/media targets point to the exact Git commit."
+    },
+    "THIRD_PARTY_NOTICES.md": {
+      "source_sha256": "096a0d536c48b39323cab473b1a1aa10c08d35a0f4ab0567ce0d212486ca6c2d",
+      "transformation": "Omitted relative documentation/media targets point to the exact Git commit."
+    },
+    "examples/first-research/README.md": {
+      "source_sha256": "b4aebe8e6b457bd6500c6a400f03b0b29e056d3c782ab3405b56c830aff9abcc",
+      "transformation": "Omitted relative documentation/media targets point to the exact Git commit."
+    }
+  },
+  "extracted_acceptance_source_revision": "sha256:a7a67e09548e40442f2ff72ba63898f66e02368046132a183588ebebdbc1a196",
+  "extracted_acceptance_sha256": "0d3a499ad000dda4a86343b25c66749a45f0e8ca2f806879dbd0696fcbed674f",
+  "milestones": {
+    "I1": "pass",
+    "I2": "pass",
+    "I3": "pass",
+    "I4": "pass",
+    "I5": "pass"
+  },
+  "conformance_tests": 113,
+  "release_boundary_tests": 6,
+  "local_documentation_links": 12,
+  "local_documentation_link_errors": [],
+  "publication": "not-published"
+}

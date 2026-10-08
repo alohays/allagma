@@ -1,0 +1,25 @@
+{
+  "status": "public-launch-blocker",
+  "affected_path": "media/demo/allagma-workflow.mp4",
+  "restricted_historical_versions": [
+    {
+      "introduced_at": "c41d9b6afbbdc6d061b1873adb3d210c912cab24",
+      "blob_oid": "b86ba329149c7cc3c2ac4a206e549be8c553fca0",
+      "bytes": 2875316,
+      "sha256": "a8ebf24f5786407bb210944cd21c9ffa46f24690987f23869a3c9cfed8e08254"
+    },
+    {
+      "introduced_at": "4e673594ff6de6d0829906255525fc2b711671de",
+      "blob_oid": "116985254c7ddc0c71c5c3d046a1c88cb4ffec0d",
+      "bytes": 2895552,
+      "sha256": "1c69da3505a15cfe490d346c81f50b0e0339478865d6259416a20b44c6462a9e"
+    }
+  ],
+  "owner_decision": "Keep all history unchanged and finish the audit with historical audio clearance listed as a public-launch blocker.",
+  "current_movie": "Kokoro af_heart; licensed source notices retained separately",
+  "remote_pull_refs": [
+    "0e612e14c139a5883ddb6fff6595247e15837a12\trefs/pull/1/head",
+    "8c3aaa206d248f8696f915ce1270ad2eae4a6587\trefs/pull/1/merge"
+  ],
+  "history_rewritten": false
+}

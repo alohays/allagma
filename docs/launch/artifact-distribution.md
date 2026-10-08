@@ -23,9 +23,10 @@ download: that includes retained research evidence. A future artifact service
 may hold hash-addressed copies, but no external hosting account or storage bill
 is required by this launch package.
 
-The prepared source archive is about **134 KB compressed**. It passed full
+The final-audit source archive is about **138 KB compressed**. It passed full
 I1–I5 acceptance and all 113 conformance tests after extraction into a new
-directory. The [hosted source-distribution receipt](evidence/hosted-release-artifact.json)
+directory, plus six release-boundary regressions. The
+[final-audit source-distribution receipt](evidence/final-audit/source-distribution.json)
 records the exact source commit, bytes, digest and validation scope. Documentation
 links to omitted files are rewritten to the exact source commit, with original
 document hashes and transformations recorded in the manifest. Core bundle
