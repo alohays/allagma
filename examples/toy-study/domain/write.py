@@ -46,7 +46,7 @@ def write(study, analysis_path, output):
 ## Abstract
 
 We compared the sample mean with the sample mean plus 0.25 for a zero-mean
-synthetic distribution. {interpretation.lower()} across {values['replicates']}
+synthetic distribution. {interpretation} across {values['replicates']}
 confirmation seeds. This is a workflow demonstration with a known analytical
 expectation, not a claim of scientific novelty or agent quality.
 

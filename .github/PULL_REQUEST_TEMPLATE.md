@@ -1,14 +1,15 @@
-## Problem and resulting behavior
+## Change
 
-Describe the trigger, the change and its supported scope.
+What problem does this solve, and what happens now?
 
 ## Evidence
 
-List the targeted checks or comparison artifacts and their results. Distinguish
-contract fixtures, real-host smoke tests and scientific-quality evaluations.
+List the relevant commands/results or rendered views you checked. State what
+they establish and what they do not. No native account session is required for
+an ordinary contribution.
 
-## Compatibility and provenance
+## Compatibility and source lineage
 
-Identify affected contracts, defaults, user-owned files and any migration.
-For a module, include lifecycle/owner, source lineage and known limitations.
-Small fixes do not require a separate design proposal.
+Note contract/default changes, migration, adopted sources and applicable
+licenses. Keep scientific logic study-owned and historical records unchanged.
+Remove private data and credentials before submitting.

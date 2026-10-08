@@ -1,143 +1,118 @@
 # Allagma
 
-Allagma is a portable, file-based research harness: reusable methods, recipes
-that compose them, adapters that connect them to a host, and evidence records
-that link a scientific question to a manuscript. A study pins an exact local
-bundle. Central edits and later releases cannot change an existing campaign.
+**Research workflows for coding agents.** Pin the plan, retain every attempt,
+and connect claims to evidence you can inspect.
 
-**v0.3.0rc2 release candidate:** [research workspaces](docs/research-workspaces.md)
-prepare a brief, source materials and finite resource profile for a fresh native
-Codex session. The [twelve-session comparison](docs/v0.3/COMPARISON.md) verifies
-required scientific execution in every run and complete packages in ten.
-Three illustrative study packages, full clean-checkout CULP reproduction and
-all I1–I5 acceptance scenarios pass. See the [qualification ledger](docs/v0.3/requirements.md)
-and [release notes](docs/releases/0.3.0rc2.md) for exact evidence and limits.
+<picture>
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="media/workflow-dark-mobile.svg">
+  <source media="(max-width: 600px)" srcset="media/workflow-light-mobile.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="media/workflow-dark.svg">
+  <img src="media/workflow-light.svg" alt="Allagma follows one research question through a brief, pinned plan, retained attempts, and evidence-linked findings." width="1000">
+</picture>
 
-The v0.2 implementation includes an offline toy study, generic/Codex/Claude
-Code packaging, replaceable context and reviewer examples, update and rollback
-tools, and a contributor conformance kit. The core and offline toy study use **Python 3.11+ on POSIX**
-(macOS or Linux), with **no third-party runtime dependencies, paid APIs or GPU**.
-Distribution is a source checkout or a generated study-local bundle; a Python
-wheel, remote scheduler and autonomous model optimizer are outside this release.
+[First study](docs/guides/first-study.md) · [Native agent workflow](docs/guides/native-study.md) ·
+[Real studies](docs/showcase/index.md) · [Contribute](CONTRIBUTING.md)
 
-## Run the complete example
+A coding agent can write an experiment. Allagma gives it a reusable process for
+leaving a checkable research record: which question it asked, which methods it
+used, what failed, which measurements it included, and what the evidence supports.
+Your study owns its science. Allagma carries the methods, locks and records.
 
-From this checkout:
+**0.3.0rc2 is a source release candidate.** The offline core uses Python 3.11+
+and the standard library on macOS or Linux. Native model sessions are optional.
+[Release notes](docs/releases/0.3.0rc2.md) describe the exact qualified scope.
+
+## Run your first study
+
+No model account, paid API, GPU or Python package installation is needed. This
+small checkout leaves the historical scientific archives out of the first download:
 
 ```sh
+git clone --depth 1 --filter=blob:none --sparse https://github.com/alohays/allagma.git
+cd allagma
+git sparse-checkout set allagma adapters contracts methods recipes policies profiles \
+  templates tools conformance examples/toy-study examples/first-research evals/context-retention
 python3 -m allagma check
-python3 -m allagma toy --destination work/my-toy-study
-python3 -m allagma campaign audit --study work/my-toy-study --campaign toy-v1
+python3 -m allagma toy --destination work/my-first-study
 ```
 
-The destination must be empty; existing evidence is never erased. The example
-runs two known-answer pilots and 24 confirmation seeds, deliberately fails and
-interrupts two attempts, resumes them with new attempt IDs, computes paired
-uncertainty, writes supported and contradicted claims, and generates a short
-manuscript. The audit reruns analysis and writing and verifies transitive
-evidence digests. This demonstrates the workflow, not scientific novelty or
-improved language-model research quality.
+If you already have a checkout, start with `python3 -m allagma check`. Until the
+public launch, cloning requires repository access. Use a new destination for each
+study; existing evidence is never erased. The [full tutorial](docs/guides/first-study.md)
+explains every output and the example's finite limits.
 
-Open the study's
-`campaigns/toy-v1/analyses/a001/paper/manuscript.md`, `walkthrough.json`, and
-`campaigns/toy-v1/latest-audit.json`. See [the toy guide](examples/toy-study/README.md)
-for the study question and artifact layout.
+The example asks whether adding 0.25 to a sample mean increases squared error.
+It runs known-answer pilots and 24 new confirmation seeds, recovers from an actual
+failure and interruption, and produces a figure, report and claim ledger.
 
-## Check the implementation
-
-```sh
-python3 -m unittest discover -s conformance -v
-python3 -m allagma acceptance --output build/acceptance
-```
-
-The acceptance command creates fresh I1–I5 evidence, including independent
-context/reviewer/recipe substitutions, three host packaging walkthroughs,
-historical resume, a scaffold migration and rollback. It exits unsuccessfully
-if any criterion fails. Use a new output directory for a later run.
-See [acceptance evidence](docs/acceptance.md) and the generated report for
-the exact tested scope. Native-host packaging and contract tests are separate
-from real-host activation and model-quality qualification.
-
-The [post-delivery self-audit](docs/audit/README.md) records the defects found,
-their corrections, independent checks and a requirement-by-requirement map.
-
-The separate [weight EMA diffusion study](studies/ema-2d-diffusion/README.md)
-retains real native Codex sessions, MPS training, held-out comparisons and
-fresh-session recovery. Its PyTorch environment and scientific code belong to
-the study. See the [host qualification report](studies/ema-2d-diffusion/HOST-QUALIFICATION.md)
-for the exact tested scope and evidence.
-
-## Start your own study
-
-```sh
-python3 -m allagma init --study work/new-study --id new-study
-python3 -m allagma entry --study work/new-study
-```
-
-Read the generated `ALLAGMA.md` and catalog. Existing `AGENTS.md`, `CLAUDE.md`
-and user skills are preserved; naming conflicts are resolved inside the
-Allagma namespace. The native paths are `.agents/skills/allagma-*/SKILL.md`
-and `.claude/skills/allagma-*/SKILL.md`. They route to the same canonical sources
-through the selected campaign's lock. No hooks, subagents or model pins are
-installed. A generic agent can read or receive the same files as text.
-
-Develop the brief, evidence map and protocol with the shared methods. Supply
-study-owned runner, evaluator, analyzer and writer programs for computational
-work. The [runner contract](docs/study-adapters.md) describes their interfaces.
-Then start a campaign and run its bundled helper:
-
-```sh
-python3 -m allagma campaign start --study work/new-study --campaign pilot-1
-python3 -m allagma campaign run --study work/new-study --campaign pilot-1
-python3 -m allagma campaign analyze --study work/new-study --campaign pilot-1
-python3 -m allagma campaign audit --study work/new-study --campaign pilot-1
-```
-
-The CLI dispatches execution to the helper in the campaign's own bundle.
-Scientific inputs and code are frozen at campaign creation. A protocol
-amendment starts a new campaign and records its reason and affected earlier
-runs. Instruction-only research can use the portable methods without a helper
-runtime; it must state which experimental phases are inapplicable.
-
-## Change composition without rewriting methods
-
-```sh
-python3 -m allagma toy --destination work/alternative \
-  --context context/full-record --reviewer reviewer/trace \
-  --recipe recipe/replication
-python3 -m allagma compare --output work/context-comparison
-```
-
-The alternative context and replication recipe are explicit experimental
-selections. The comparison measures required-field retention and serialized
-character cost, with a candidate, fixed fixtures and an ImprovementRecord.
-It does not claim a model-quality improvement or change defaults automatically.
-
-For an existing study, edit its `allagma.yaml` and/or overrides, then follow
-[Check → Plan → Reconcile → Validate → Adopt](docs/versioning.md). Resume does
-not resolve new versions. Old bundles remain available after retirement and
-rollback.
-
-## Repository map
-
-| Location | Responsibility |
+| Generated finding | What the record says |
 | --- | --- |
-| `methods/` | Portable canonical `SKILL.md` and module metadata |
-| `recipes/` | Roles, handoffs, branches and stopping rules |
-| `adapters/` | Host registration, local execution and reviewer boundaries |
-| `contracts/` | Versioned evidence schemas and compatibility |
-| `allagma/`, `tools/` | Small validators, exporter, campaign and update helpers |
-| `profiles/`, `policies/` | Public examples; personal credentials stay outside |
-| `evals/`, `conformance/` | Framework evaluation and offline behavioral checks |
-| `examples/toy-study/` | Study-owned science and a complete reference workflow |
-| `studies/ema-2d-diffusion/` | Native Codex/MPS study, pinned science and retained results |
-| `templates/study/` | Initial scaffold, owned by the study after generation |
+| Mean increase in squared error: **0.06510417** | Supported; approximate 95% interval [0.03985104, 0.09035729] |
+| “Higher error on every seed” | Contradicted by four confirmation seeds |
+| Leave-one-seed-out mean differences | All 24 remain positive |
 
-Read [architecture](docs/architecture.md), [module authoring](docs/module-authoring.md),
-[host support](docs/host-support.md), [contributing](CONTRIBUTING.md),
-[governance](GOVERNANCE.md), and [release notes](docs/releases/0.3.0rc2.md).
-The [adopted specifications](docs/specification/README.md) and
-[design lineage](docs/design-lineage.md) explain the design's origins.
+Open `work/my-first-study/campaigns/toy-v1/analyses/a001/paper/manuscript.md`.
+Its claims link to numerical outputs, included attempts and frozen inputs.
+Then recompute and check the evidence:
 
-Allagma core is MIT licensed. Study-specific source reuse and licensing are
-documented in [third-party notices](THIRD_PARTY_NOTICES.md).
+```sh
+python3 -m allagma campaign audit --study work/my-first-study --campaign toy-v1
+```
+
+The default example passes **521 evidence-reference checks**. This is a
+known-answer workflow demonstration with approximate seed-level uncertainty,
+not scientific novelty or a language-model quality benchmark.
+
+## Use it for research you want to check later
+
+- **Reproduce a computational paper.** Preserve the original task, code changes,
+  failed attempts and exact answer checks. [CORE CULP](studies/core-culp/RESULTS.md)
+  reproduced six answers and disclosed an upstream predictor-label defect.
+- **Compare experimental choices.** Freeze the comparisons and independent units
+  before interpreting the results. [Modular addition](studies/modular-addition/RESULTS.md)
+  found an endpoint improvement without observing the prespecified grokking transition.
+- **Investigate a training effect.** Keep pairing, uncertainty and qualifications
+  beside the figure. The [EMA study](studies/ema-schedule/RESULTS.md) separates
+  descriptive schedule effects from inconclusive duration and interaction effects.
+
+For your own question, supply a brief, materials and finite resource profile.
+[Prepare a native study](docs/guides/native-study.md) to let the agent develop the
+scientific code and report through the pinned methods. Preparation is offline;
+explicit native execution consumes your existing account's model usage.
+
+## What has actually been tested
+
+| Path | Evidence and boundary |
+| --- | --- |
+| Offline Python core | I1–I5 and 113 conformance tests; complete toy execution, recovery and recomputation |
+| Native Codex | Actual CLI 0.160.1 sessions on the recorded macOS/M4 Pro environment; explicit method loading and locked routing |
+| Claude Code | Packaging and contracts tested; native qualification is not claimed |
+| Experimental composition | Optional context/reviewer/recipe replacements; not a claim of better model research quality |
+
+In the [twelve-session comparison](docs/v0.3/COMPARISON.md), **all twelve runs
+completed the required science**. Allagma produced six complete evidence packages
+out of six; plain Codex produced four out of six. The two gaps concern explicit
+review-revision binding. This small local experiment does not establish general
+research superiority or consistent time or token savings.
+
+A deterministic audit is not independent scientific peer review. See
+[host support](docs/host-support.md), [acceptance evidence](docs/acceptance.md)
+and [resource limits](docs/resource-supervision.md) before extending a claim.
+
+## Understand and extend it
+
+Start with [the concepts](docs/concepts.md). Methods are portable Agent Skills;
+recipes compose them; adapters connect them to a host. A campaign pins its exact
+bundle. Central changes cannot silently rewrite an existing study.
+[Architecture](docs/architecture.md), [contracts](docs/contracts.md),
+[study-owned programs](docs/study-adapters.md) and [versioning](docs/versioning.md)
+cover the implementation. No hooks, subagents or project model pins are installed.
+
+Small contributions need no provider account or GPU. See [contributing](CONTRIBUTING.md),
+[starter tasks](docs/contributing/starter-tasks.md), [roadmap](ROADMAP.md),
+[support](SUPPORT.md) and [security reporting](SECURITY.md).
+
+Allagma core is **MIT licensed**. Scientific adaptations and archived dependencies
+retain their own terms, including the AI Scientist license on EMA-derived code;
+see [third-party notices](THIRD_PARTY_NOTICES.md). Cite the exact software version
+using [CITATION.cff](CITATION.cff), and identify a study's bundle separately.

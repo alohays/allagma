@@ -1,0 +1,15 @@
+name: Usage question
+description: Ask about a workflow, example or documented support boundary.
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: What are you trying to do?
+      description: Link the guide you followed. Do not include credentials or private data.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Environment and what you tried
+      description: Include Allagma, Python, OS and optional host versions, plus sanitized commands.

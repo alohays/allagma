@@ -1,0 +1,23 @@
+{
+  "study_id": "toy-bias-study",
+  "question": "Does adding a fixed bias increase squared error when estimating a synthetic zero mean?",
+  "motivation": "Exercise a portable research lifecycle against a known analytical expectation.",
+  "success_criteria": [
+    "Known-answer controls pass",
+    "Twenty-four held-out confirmation seeds complete",
+    "Raw outputs recompute manuscript numbers",
+    "Failures and interruptions remain traceable"
+  ],
+  "constraints": [
+    "No external accounts, paid APIs, GPUs or model calls",
+    "Pilot and confirmation seeds must be disjoint",
+    "No novelty or real-agent quality claim"
+  ],
+  "output": "Short English manuscript and auditable evidence package",
+  "stop_rules": [
+    "28 total attempts",
+    "60 execution seconds",
+    "Two failed attempts for the same run",
+    "Missing execution capability"
+  ]
+}

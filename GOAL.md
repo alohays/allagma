@@ -99,7 +99,30 @@ inconclusive baseline comparison are valid outcomes; unfinished or unverified
 work is not completion. The [v0.3 requirement ledger](docs/v0.3/requirements.md)
 tracks evidence against this full scope.
 
-## Implementation acceptance
+## Public open-source launch preparation — 8 October 2026
+
+Make the completed Allagma v0.3 release ready for a world-class public open-source launch. A new researcher should understand its value at a glance, see a real study in action, reach a useful first result, and know how to contribute. Ground every claim in the final implementation and evaluation evidence. Write all public material in English.
+
+Create an exceptional README with precise positioning, a compelling opening visual, concrete use cases, representative outputs, and a verified quickstart. Explain the value Allagma adds to a coding agent in plain language. Keep architecture details progressively discoverable. Clearly distinguish the offline example, native agent workflow, supported hosts, experimental features, and measured limitations. Take editorial and demonstration quality cues from uv and marimo while developing an original Allagma identity.
+
+Deliver a cohesive visual system across the README and docs: a workflow illustration, real result and artifact previews, and a polished 60-120 second flagship video showing a research brief becoming an executed study, figures, an evidence-linked report, and reproducible outputs. Capture actual working software; label edits, accelerated time, and reused results accurately. Provide captions, a transcript, a GitHub-compatible preview linking to the full video, editable asset sources, and repeatable capture instructions. Make the key idea legible on mobile and in light and dark themes.
+
+Build a polished documentation site with Astro Starlight, keeping its toolchain separate from the Python runtime. Provide a distinctive landing page, search, a complete first-study tutorial, practical guides, CLI and concept references, a browsable real-study showcase, evidence and support boundaries, troubleshooting, and contributor documentation. Reuse canonical content without maintaining contradictory copies. Configure the actual GitHub Pages project path, automated builds and link checks, and a deployment workflow ready for later public launch.
+
+Complete the repository's public presentation and contribution experience: description, topics, social preview, citation metadata, roadmap, release notes, support and security reporting, contribution guidance, issue/PR forms, and a lightweight Discussions and starter-contribution plan. Improve existing files instead of duplicating them. Add useful, low-maintenance CI for docs, relevant examples, links, dependencies, and releases; ensure fork contributions work without privileged secrets. Prepare launch copy and concrete beginner-friendly tasks without inventing community activity or adoption.
+
+Review tracked content and Git history for private data, secrets, and redistribution restrictions. Keep downloads and media practical, preserve frozen evidence and attempts, and document a maintainable artifact distribution strategy. Preserve the offline standard-library core, study-owned science, and my GUI model selection. Keep builds and scientific demos feasible on this M4 Pro Mac with 48GB RAM; use existing Codex authentication and bounded workloads.
+
+Continue through implementation, rendering, actual demo capture, clean-checkout onboarding, browser inspection, and repairs until the complete launch package works. Verify desktop/mobile presentation, keyboard access, search, media playback, links, commands, and the production build under its Pages base path. Fix first-use friction within scope. Finish with runnable local previews, final assets, validation evidence, and exact remaining owner actions for publication. A storyboard, scaffold, or deployment configuration alone is not completion.
+
+Make routine editorial, design, and engineering decisions autonomously; use the user-input tool for consequential unresolved choices. Follow existing commit-and-push instructions. Prepare publication fully while retaining private repository visibility; activating public Pages, publishing releases, and posting announcements belong to the later launch.
+
+The [launch acceptance ledger](docs/launch/requirements.md) tracks the complete
+scope. Commit coherent increments as work proceeds; push to `origin` after the
+launch package is complete. Keep repository visibility private. Public Pages
+activation, release publication, and announcements remain later owner actions.
+
+## Prior implementation acceptance
 
 See [implementation status](docs/implementation-status.md) for the acceptance
 map. The final evidence must include portable delivery, independent module and

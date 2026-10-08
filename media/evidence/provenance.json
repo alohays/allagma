@@ -1,0 +1,31 @@
+{
+  "format": "allagma-public-preview-v1",
+  "scope": "Exact selected outputs of a fresh offline toy execution; no model session. Copied bytes, not a substitute for the complete study.",
+  "files": {
+    "toy-brief.json": {
+      "study_relative_source": "brief.json",
+      "sha256": "ceccf8459eb656d7723618440056855f6100718feca43719c306db3635842a0f"
+    },
+    "toy-summary.json": {
+      "study_relative_source": "campaigns/toy-v1/analyses/a001/outputs/summary.json",
+      "sha256": "5f2bfb7d6202de07ce13b7711a3e2e3b6e19a7b5d63736bb1d33caf05b04119f"
+    },
+    "toy-claims.json": {
+      "study_relative_source": "campaigns/toy-v1/analyses/a001/paper/claims.json",
+      "sha256": "6bad5c3bd480f9fb39c7854f8ee59388707386fef90d892b85921fcbd477ccb6"
+    },
+    "toy-manuscript.md": {
+      "study_relative_source": "campaigns/toy-v1/analyses/a001/paper/manuscript.md",
+      "sha256": "dd2318ccf2f246d310e086145dab1f397d9d004d51694935b056639133b4fbef"
+    },
+    "toy-paired-differences.svg": {
+      "study_relative_source": "campaigns/toy-v1/analyses/a001/outputs/paired-differences.svg",
+      "sha256": "800452621fa043c92e460149422b4291838ec5426930c60fa76a2d9094d78c10"
+    },
+    "ema-r07.png": {
+      "repository_source": "studies/ema-schedule/figures/r07-main-figure.png",
+      "sha256": "b357ed526ed43c94be32d413cb067532f99570e1723ea1a497963f47f25857bc",
+      "scope": "Retained r07 results, not a new training run. See the study license/disclosure."
+    }
+  }
+}
