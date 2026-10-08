@@ -161,3 +161,46 @@ adapter replacement, an offline contributor path, version/update/migration and
 rollback scenarios, and actual toy raw data, analysis, claims and manuscript.
 Do not mark the goal complete until implementation, passing evidence, technical
 documentation, commits and the authorized push are complete.
+
+## First contributor workflow — 9 October 2026
+
+Establish an actionable GitHub backlog for researchers and Python developers,
+with approximately six to eight distinct tasks and two to three substantive,
+validated draft PRs against `main` on separate `codex/` branches. Inspect current
+issues, PRs, roadmap, starter tasks, retained failures and first-use friction
+before selecting work. Distinguish reproduced defects, proposed enhancements
+and qualification work. Each issue needs its user problem, source/reproduction,
+bounded scope, starting files, acceptance criteria, validation and dependencies.
+
+Keep two to three approachable tasks available and unclaimed, with appropriate
+newcomer labels and local validation requiring no paid model or GPU. Reserve
+deeper changes for the draft PRs. Link each PR to its issue, explain before/after
+behavior, compatibility and owner decisions, verify its pushed head and fix
+relevant CI failures. Keep all PRs draft pending owner review; do not merge.
+Review the existing Dependabot PR separately and record a concise recommendation
+without duplicating its dependency updates.
+
+Use a small label set, a focused milestone and a pinned contributor overview.
+Connect actual GitHub objects from the roadmap, contribution guide, starter-task
+list and community plan. Distinguish available, in-progress, blocked and
+awaiting-owner-review work. Document lightweight claiming, triage, evidence,
+review and credit practices without response-time or release-date promises.
+Issues, labels, milestone, overview, task-relevant comments, PR descriptions and
+implementation-branch pushes are authorized; local drafts alone are insufficient.
+Describe maintainer-proposed and agent-assisted work accurately.
+
+Preserve the private-visibility instruction, full history, frozen evidence and
+historical-audio launch blocker. Public deployment, announcements and external
+outreach are outside this goal. Keep the offline standard-library core,
+study-owned science, GUI model choice and existing native model-usage limits.
+Make routine engineering decisions autonomously; ask through the user-input tool
+for consequential unresolved choices. Commit coherent increments and push the
+completed authorized work to `origin`.
+
+Finish only when the backlog is navigable, newcomer tasks remain available,
+draft PR improvements are validated, documentation matches their actual state,
+and issue/PR links, labels, relationships, branches and applicable CI are
+verified. Handoff must link every created/updated issue and PR, recommend a
+review order and identify exact unresolved owner decisions. The
+[contributor workflow ledger](docs/contributing/first-workflow.md) records current
+progress and evidence without replacing these requirements.
