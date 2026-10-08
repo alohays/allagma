@@ -55,3 +55,27 @@ authorized run continues within its existing CPU-compatible limits.
 No release completion claim is permitted while this reproduced defect remains
 unresolved. Any correction and its validation retain a new source revision;
 they must not overwrite or silently relabel the current frozen outcomes.
+
+## Storage sampling at process exit — reproduced, correction pending
+
+A supervised worker can finish after the last storage sample but before the
+exit-status check. The frozen supervisor then reports `completed` using the
+earlier footprint. A controlled sampling/exit interleaving with an actual
+subprocess reproduces this: the final workspace is 2,002 bytes against a
+1,000-byte cap, while the result says `completed` and its sampled peak is zero.
+The source hash, policy, real process receipts and probe are retained at
+`evals/research-v0.3/postprocess-checks/final-storage-before/`.
+
+This is a supervisor regression, not a mocked native-host qualification. The
+hook reads the actual pre-write size and waits for the actual worker's exit
+before returning that earlier sample. It makes a permissible scheduling race
+repeatable. It does not establish that a research candidate exceeded its cap.
+Separate final-size checks of r01–r10 pass in
+`postprocess-checks/final-workspace-sizes-r01-r10.json`; these are current final
+footprints, not continuous historical peak observations.
+
+After the cohort, remeasure persistent storage after process termination,
+retain that final measurement, and change a nominal successful result to
+`storage_exceeded` when appropriate. Preserve existing failure reasons and
+sampling limitations. The same actual-worker regression must then detect the
+violation, alongside the affected offline resource checks and final acceptance.

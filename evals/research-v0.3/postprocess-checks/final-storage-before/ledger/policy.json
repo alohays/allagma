@@ -1,0 +1,22 @@
+{
+  "created_at": "2026-10-08T06:36:35.999497+00:00",
+  "profile": {
+    "attempt_limit": 2,
+    "budgets_seconds": {
+      "compute": 30,
+      "setup": 30
+    },
+    "command_timeout_seconds": {
+      "compute": 5,
+      "setup": 5
+    },
+    "file_limit_bytes": 5000,
+    "format": "allagma-resource-profile-v1",
+    "poll_seconds": 0.03,
+    "rss_limit_bytes": 200000000,
+    "storage_limit_bytes": 1000,
+    "terminate_grace_seconds": 0.03
+  },
+  "profile_sha256": "c9dcd928efe74d8ad2985e48ce25de3a3c5eb785d1a13a46f6052e44ca95c4b4",
+  "workdir": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/postprocess-checks/final-storage-before/workspace"
+}

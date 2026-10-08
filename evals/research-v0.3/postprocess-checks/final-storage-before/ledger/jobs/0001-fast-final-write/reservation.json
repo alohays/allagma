@@ -1,0 +1,19 @@
+{
+  "attempt": true,
+  "category": "compute",
+  "command": [
+    "/usr/local/bin/python3",
+    "-c",
+    "from pathlib import Path; import time\nwhile not Path('go').exists(): time.sleep(.005)\nPath('payload').write_bytes(b'x'*2000)\n"
+  ],
+  "label": "fast-final-write",
+  "profile_sha256": "c9dcd928efe74d8ad2985e48ce25de3a3c5eb785d1a13a46f6052e44ca95c4b4",
+  "request_id": null,
+  "reserved_seconds": 8.06,
+  "started_at": "2026-10-08T06:36:36.000349+00:00",
+  "storage_root": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/postprocess-checks/final-storage-before/workspace",
+  "supervisor_pid": 48890,
+  "supervisor_sha256": "392f7975f4a4ae77a11e23a2e167cd4cee53d7f0d63a58a42f5782d244f3da8f",
+  "timeout_seconds": 4,
+  "workdir": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/postprocess-checks/final-storage-before/workspace"
+}
