@@ -1,0 +1,45 @@
+{
+  "confirmation_data_used": false,
+  "decisions": "Use reference MPS float32 path and original scientific definitions unchanged. No tuning on confirmation. No selection for favorable pilot EMA results.",
+  "device": "mps",
+  "dtype": "float32",
+  "forecast": {
+    "charged_before_freeze": {
+      "compute": 30.57352629257366,
+      "setup": 22.271725958911702
+    },
+    "formula": "200000 * slowest pilot sec/update * 2 + 24 * 8 startup/input seconds + 32 * worst 3-state evaluation seconds * 2 + 180 analysis/verification/recovery seconds",
+    "projected_total_compute_seconds": 1362.588033087086,
+    "remaining_attempts_planned_upper": 34,
+    "remaining_work_seconds_conservative": 1332.0145067945123,
+    "required_cells": 32,
+    "required_model_states": 96,
+    "required_trajectories": 24,
+    "required_updates": 200000,
+    "slowest_pilot_seconds_per_update": 0.002326633166987449,
+    "worst_pilot_three_variant_evaluation_seconds": 0.45876937499269843
+  },
+  "frozen_at": "2026-10-08T04:17:23.131560+00:00",
+  "matching_hashes": {
+    "generation_noise_sha256": "98e1cc8b325187e95c9253a943d365481dbb6d07252814b4bbd71503fa7aaedd",
+    "heldout_sha256": "b7323dd4adc077f6e61656b88bc349eac91100b7e21fe1cf8eeb47ad5f6066e6",
+    "initial_weights_sha256": "6349f27ed4ff858c1ada9219804c2f59d0b818cf25c01629c09a6ce68396b155",
+    "training_prefix_5000_sha256": "b85b68f53dfab27cb56ce8c1be4ed11ae69e65e5b49f1df13d0809b771355ea5"
+  },
+  "pilot_evidence": [
+    "evidence/pilot/moons71-attempt02",
+    "evidence/pilot/gmm81-cosine5000",
+    "evidence/pilot/moons71-cosine5000"
+  ],
+  "protocol": "protocols/protocol-v1.json",
+  "protocol_sha256": "47fb3669611568c9580c49bee73a74c4878498be54e936f10e95a8fd0aeaf02d",
+  "qualification": "all known answers passed, both datasets sampled, saved states regenerated, moons input and initial-state hashes match across schedules; actual full 5000-update cosine pilot traces end at 5000",
+  "revision": "confirmation-freeze-v1",
+  "source_hashes": {
+    "LICENSE": "9c82e554a54dfcf2550b452801475a36f9cb909ede00b03e492089e4836a7462",
+    "protocols/protocol-v1.json": "47fb3669611568c9580c49bee73a74c4878498be54e936f10e95a8fd0aeaf02d",
+    "study/run.py": "7b1cb1c7c0a4f40630132beeb8570cd1179017232ffea6bfd7f4b724d2218aec",
+    "study/science.py": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1"
+  },
+  "source_revision": "8227ae2568c1c219517b5966f4da33b83a391d9271b4641f6d33bec99ee90fe1"
+}

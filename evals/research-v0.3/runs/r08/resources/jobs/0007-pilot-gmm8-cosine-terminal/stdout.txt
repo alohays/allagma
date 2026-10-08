@@ -1,0 +1,7 @@
+{"step": 1, "noise_mse": 1.1405247449874878, "preclip_grad_norm": 3.581892490386963, "lr": 0.0003, "ema_updates": 1, "elapsed_seconds": 3.8813610000070184}
+{"step": 1000, "noise_mse": 0.42698556184768677, "preclip_grad_norm": 0.8424873352050781, "lr": 0.00027140792265347954, "ema_updates": 1000, "elapsed_seconds": 4.986312458058819}
+{"step": 2000, "noise_mse": 0.36655041575431824, "preclip_grad_norm": 0.5868614315986633, "lr": 0.00019644217496566044, "ema_updates": 2000, "elapsed_seconds": 6.081440082984045}
+{"step": 3000, "noise_mse": 0.41055235266685486, "preclip_grad_norm": 0.643818199634552, "lr": 0.00010373709495242857, "ema_updates": 3000, "elapsed_seconds": 7.167503416072577}
+{"step": 4000, "noise_mse": 0.39389699697494507, "preclip_grad_norm": 0.6153560876846313, "lr": 2.8702872249059843e-05, "ema_updates": 4000, "elapsed_seconds": 8.252069290960208}
+{"step": 5000, "noise_mse": 0.3613436222076416, "preclip_grad_norm": 0.5819529891014099, "lr": 2.9608812235348834e-11, "ema_updates": 5000, "elapsed_seconds": 9.346121832961217}
+{"output": "evidence/pilot/gmm81-cosine5000", "timing": {"total_seconds": 10.01677658292465, "training_seconds": 6.630079667083919, "evaluation_seconds": 0.45876937499269843, "milestones": [{"step": 5000, "cumulative_training_seconds": 6.630079667083919}], "updates": 5000, "seconds_per_update": 0.0013260159334167838}}

@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "review_artifact_revision_sha256": "b46ea46c79338f1820d67141677ed389b589143b76e6f1b23a6a92355521d747",
+  "reviewed_artifacts_verified": 227,
+  "protected_input_files_verified": 33,
+  "local_document_links_verified": 45,
+  "measurement_calls_verified": 12,
+  "checks": [
+    "exact six original question keys and answers",
+    "fresh and recomputed reports equal",
+    "frozen source fidelity",
+    "supplied input byte hashes",
+    "installed requirements",
+    "reviewed artifact revision matches current files",
+    "measurement arrays and metrics",
+    "local report/document links",
+    "Python script syntax"
+  ],
+  "scope": "Package consistency and traceability; scientific checks are separately retained in analysis/verification.json and analysis/diagnostics.json.",
+  "manifest": "Created and separately verified after this result and broker receipt are archived."
+}

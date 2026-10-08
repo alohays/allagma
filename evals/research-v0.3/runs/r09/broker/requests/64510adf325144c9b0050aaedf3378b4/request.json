@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r09/candidate/reproduction/fresh-check/.venv/bin/python",
+    "-m",
+    "pip",
+    "install",
+    "--no-cache-dir",
+    "--no-index",
+    "--find-links",
+    "inputs/materials/wheels",
+    "-r",
+    "requirements.lock"
+  ],
+  "attempt": false,
+  "category": "setup",
+  "cwd": ".",
+  "label": "fresh-offline-packages",
+  "request_id": "64510adf325144c9b0050aaedf3378b4",
+  "timeout_seconds": 90.0
+}

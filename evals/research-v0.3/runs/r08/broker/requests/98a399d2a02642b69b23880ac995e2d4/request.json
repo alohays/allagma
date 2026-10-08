@@ -1,0 +1,13 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "-c",
+    "import torch,numpy,scipy,matplotlib; print(torch.__version__, numpy.__version__); print(\"MPS\",torch.backends.mps.is_available()); print(torch.ones(1,device=\"mps\").cpu())"
+  ],
+  "attempt": false,
+  "category": "setup",
+  "cwd": ".",
+  "label": "import-and-device-check",
+  "request_id": "98a399d2a02642b69b23880ac995e2d4",
+  "timeout_seconds": 90.0
+}

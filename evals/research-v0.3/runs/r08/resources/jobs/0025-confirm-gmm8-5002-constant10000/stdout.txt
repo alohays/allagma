@@ -1,0 +1,12 @@
+{"step": 1, "noise_mse": 1.0358266830444336, "preclip_grad_norm": 1.216549038887024, "lr": 0.0003, "ema_updates": 1, "elapsed_seconds": 4.0360531660262495}
+{"step": 1000, "noise_mse": 0.37460362911224365, "preclip_grad_norm": 0.9803511500358582, "lr": 0.0003, "ema_updates": 1000, "elapsed_seconds": 5.156912624835968}
+{"step": 2000, "noise_mse": 0.41172313690185547, "preclip_grad_norm": 0.5545620322227478, "lr": 0.0003, "ema_updates": 2000, "elapsed_seconds": 6.270937500055879}
+{"step": 3000, "noise_mse": 0.33636605739593506, "preclip_grad_norm": 0.49283143877983093, "lr": 0.0003, "ema_updates": 3000, "elapsed_seconds": 7.372073916019872}
+{"step": 4000, "noise_mse": 0.5332067012786865, "preclip_grad_norm": 0.6613516211509705, "lr": 0.0003, "ema_updates": 4000, "elapsed_seconds": 8.461816124850884}
+{"step": 5000, "noise_mse": 0.36440587043762207, "preclip_grad_norm": 0.7030088901519775, "lr": 0.0003, "ema_updates": 5000, "elapsed_seconds": 9.564663332886994}
+{"step": 6000, "noise_mse": 0.4259757399559021, "preclip_grad_norm": 0.5556627511978149, "lr": 0.0003, "ema_updates": 6000, "elapsed_seconds": 11.174591707997024}
+{"step": 7000, "noise_mse": 0.3298858106136322, "preclip_grad_norm": 0.4994146525859833, "lr": 0.0003, "ema_updates": 7000, "elapsed_seconds": 12.30526154092513}
+{"step": 8000, "noise_mse": 0.40810415148735046, "preclip_grad_norm": 0.5277993679046631, "lr": 0.0003, "ema_updates": 8000, "elapsed_seconds": 13.417641832958907}
+{"step": 9000, "noise_mse": 0.41179656982421875, "preclip_grad_norm": 0.4071386158466339, "lr": 0.0003, "ema_updates": 9000, "elapsed_seconds": 14.537392957834527}
+{"step": 10000, "noise_mse": 0.3959196209907532, "preclip_grad_norm": 0.4748894274234772, "lr": 0.0003, "ema_updates": 10000, "elapsed_seconds": 15.671704040840268}
+{"output": "evidence/confirmation/gmm8-5002-constant10000", "timing": {"total_seconds": 16.038570082979277, "training_seconds": 12.413331415969878, "evaluation_seconds": 0.8270365840289742, "milestones": [{"step": 5000, "cumulative_training_seconds": 6.766634291037917}, {"step": 10000, "cumulative_training_seconds": 12.413331415969878}], "updates": 10000, "seconds_per_update": 0.0012413331415969879}}

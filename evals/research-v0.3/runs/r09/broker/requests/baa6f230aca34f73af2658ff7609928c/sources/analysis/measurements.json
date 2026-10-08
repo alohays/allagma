@@ -1,0 +1,260 @@
+{
+  "format": "research-measurements-v1",
+  "task_id": "core-culp",
+  "protocol": "PROTOCOL.md",
+  "schema_note": "CULP extension: supplied MEASUREMENTS.md defines no CULP-specific fields. Arrays contain raw_data, raw_labels, train, test, train_labels, test_labels, prediction, graph_edges; all are numeric and load with allow_pickle=False.",
+  "runs": [
+    {
+      "dataset": "iris",
+      "display_predictor": "CN",
+      "actual_predictor": "CS",
+      "phase": "reproduction",
+      "device": "cpu",
+      "seed": 42,
+      "test_size": 0.2,
+      "similarity": "manhattan",
+      "k": 11,
+      "arrays": "evidence/attempts/02-iris-recovery/call-01.npz",
+      "metrics": {
+        "correct": 30,
+        "n_test": 30,
+        "accuracy_percent": 100.0,
+        "accuracy_fraction": 1.0
+      },
+      "source_revision": "760ee67371596a5e087d62e159876600d54e76b92c4ca274dbfe8281146640bb",
+      "attempt_id": "a10aebe3d1e34c058a282eeb868f83bc",
+      "trace": "evidence/attempts/02-iris-recovery/events.jsonl"
+    },
+    {
+      "dataset": "iris",
+      "display_predictor": "AA",
+      "actual_predictor": "CS",
+      "phase": "reproduction",
+      "device": "cpu",
+      "seed": 42,
+      "test_size": 0.2,
+      "similarity": "manhattan",
+      "k": 11,
+      "arrays": "evidence/attempts/02-iris-recovery/call-02.npz",
+      "metrics": {
+        "correct": 30,
+        "n_test": 30,
+        "accuracy_percent": 100.0,
+        "accuracy_fraction": 1.0
+      },
+      "source_revision": "760ee67371596a5e087d62e159876600d54e76b92c4ca274dbfe8281146640bb",
+      "attempt_id": "a10aebe3d1e34c058a282eeb868f83bc",
+      "trace": "evidence/attempts/02-iris-recovery/events.jsonl"
+    },
+    {
+      "dataset": "iris",
+      "display_predictor": "RA",
+      "actual_predictor": "CS",
+      "phase": "reproduction",
+      "device": "cpu",
+      "seed": 42,
+      "test_size": 0.2,
+      "similarity": "manhattan",
+      "k": 11,
+      "arrays": "evidence/attempts/02-iris-recovery/call-03.npz",
+      "metrics": {
+        "correct": 30,
+        "n_test": 30,
+        "accuracy_percent": 100.0,
+        "accuracy_fraction": 1.0
+      },
+      "source_revision": "760ee67371596a5e087d62e159876600d54e76b92c4ca274dbfe8281146640bb",
+      "attempt_id": "a10aebe3d1e34c058a282eeb868f83bc",
+      "trace": "evidence/attempts/02-iris-recovery/events.jsonl"
+    },
+    {
+      "dataset": "iris",
+      "display_predictor": "CS",
+      "actual_predictor": "CS",
+      "phase": "reproduction",
+      "device": "cpu",
+      "seed": 42,
+      "test_size": 0.2,
+      "similarity": "manhattan",
+      "k": 11,
+      "arrays": "evidence/attempts/02-iris-recovery/call-04.npz",
+      "metrics": {
+        "correct": 30,
+        "n_test": 30,
+        "accuracy_percent": 100.0,
+        "accuracy_fraction": 1.0
+      },
+      "source_revision": "760ee67371596a5e087d62e159876600d54e76b92c4ca274dbfe8281146640bb",
+      "attempt_id": "a10aebe3d1e34c058a282eeb868f83bc",
+      "trace": "evidence/attempts/02-iris-recovery/events.jsonl"
+    },
+    {
+      "dataset": "zoo",
+      "display_predictor": "CN",
+      "actual_predictor": "CS",
+      "phase": "reproduction",
+      "device": "cpu",
+      "seed": 42,
+      "test_size": 0.2,
+      "similarity": "manhattan",
+      "k": 2,
+      "arrays": "evidence/attempts/03-zoo/call-01.npz",
+      "metrics": {
+        "correct": 21,
+        "n_test": 21,
+        "accuracy_percent": 100.0,
+        "accuracy_fraction": 1.0
+      },
+      "source_revision": "760ee67371596a5e087d62e159876600d54e76b92c4ca274dbfe8281146640bb",
+      "attempt_id": "166dd3489a7b43e1bdde7eb8fa2313ca",
+      "trace": "evidence/attempts/03-zoo/events.jsonl"
+    },
+    {
+      "dataset": "zoo",
+      "display_predictor": "AA",
+      "actual_predictor": "CS",
+      "phase": "reproduction",
+      "device": "cpu",
+      "seed": 42,
+      "test_size": 0.2,
+      "similarity": "manhattan",
+      "k": 2,
+      "arrays": "evidence/attempts/03-zoo/call-02.npz",
+      "metrics": {
+        "correct": 21,
+        "n_test": 21,
+        "accuracy_percent": 100.0,
+        "accuracy_fraction": 1.0
+      },
+      "source_revision": "760ee67371596a5e087d62e159876600d54e76b92c4ca274dbfe8281146640bb",
+      "attempt_id": "166dd3489a7b43e1bdde7eb8fa2313ca",
+      "trace": "evidence/attempts/03-zoo/events.jsonl"
+    },
+    {
+      "dataset": "zoo",
+      "display_predictor": "RA",
+      "actual_predictor": "CS",
+      "phase": "reproduction",
+      "device": "cpu",
+      "seed": 42,
+      "test_size": 0.2,
+      "similarity": "manhattan",
+      "k": 2,
+      "arrays": "evidence/attempts/03-zoo/call-03.npz",
+      "metrics": {
+        "correct": 21,
+        "n_test": 21,
+        "accuracy_percent": 100.0,
+        "accuracy_fraction": 1.0
+      },
+      "source_revision": "760ee67371596a5e087d62e159876600d54e76b92c4ca274dbfe8281146640bb",
+      "attempt_id": "166dd3489a7b43e1bdde7eb8fa2313ca",
+      "trace": "evidence/attempts/03-zoo/events.jsonl"
+    },
+    {
+      "dataset": "zoo",
+      "display_predictor": "CS",
+      "actual_predictor": "CS",
+      "phase": "reproduction",
+      "device": "cpu",
+      "seed": 42,
+      "test_size": 0.2,
+      "similarity": "manhattan",
+      "k": 2,
+      "arrays": "evidence/attempts/03-zoo/call-04.npz",
+      "metrics": {
+        "correct": 21,
+        "n_test": 21,
+        "accuracy_percent": 100.0,
+        "accuracy_fraction": 1.0
+      },
+      "source_revision": "760ee67371596a5e087d62e159876600d54e76b92c4ca274dbfe8281146640bb",
+      "attempt_id": "166dd3489a7b43e1bdde7eb8fa2313ca",
+      "trace": "evidence/attempts/03-zoo/events.jsonl"
+    },
+    {
+      "dataset": "wine",
+      "display_predictor": "CN",
+      "actual_predictor": "CN",
+      "phase": "reproduction",
+      "device": "cpu",
+      "seed": 42,
+      "test_size": 0.2,
+      "similarity": "manhattan",
+      "k": 12,
+      "arrays": "evidence/attempts/04-wine/call-01.npz",
+      "metrics": {
+        "correct": 35,
+        "n_test": 36,
+        "accuracy_percent": 97.22,
+        "accuracy_fraction": 0.9722222222222222
+      },
+      "source_revision": "760ee67371596a5e087d62e159876600d54e76b92c4ca274dbfe8281146640bb",
+      "attempt_id": "1718166a492e4b46847579de0f29ce70",
+      "trace": "evidence/attempts/04-wine/events.jsonl"
+    },
+    {
+      "dataset": "wine",
+      "display_predictor": "AA",
+      "actual_predictor": "AA",
+      "phase": "reproduction",
+      "device": "cpu",
+      "seed": 42,
+      "test_size": 0.2,
+      "similarity": "manhattan",
+      "k": 12,
+      "arrays": "evidence/attempts/04-wine/call-02.npz",
+      "metrics": {
+        "correct": 35,
+        "n_test": 36,
+        "accuracy_percent": 97.22,
+        "accuracy_fraction": 0.9722222222222222
+      },
+      "source_revision": "760ee67371596a5e087d62e159876600d54e76b92c4ca274dbfe8281146640bb",
+      "attempt_id": "1718166a492e4b46847579de0f29ce70",
+      "trace": "evidence/attempts/04-wine/events.jsonl"
+    },
+    {
+      "dataset": "wine",
+      "display_predictor": "RA",
+      "actual_predictor": "RA",
+      "phase": "reproduction",
+      "device": "cpu",
+      "seed": 42,
+      "test_size": 0.2,
+      "similarity": "manhattan",
+      "k": 12,
+      "arrays": "evidence/attempts/04-wine/call-03.npz",
+      "metrics": {
+        "correct": 35,
+        "n_test": 36,
+        "accuracy_percent": 97.22,
+        "accuracy_fraction": 0.9722222222222222
+      },
+      "source_revision": "760ee67371596a5e087d62e159876600d54e76b92c4ca274dbfe8281146640bb",
+      "attempt_id": "1718166a492e4b46847579de0f29ce70",
+      "trace": "evidence/attempts/04-wine/events.jsonl"
+    },
+    {
+      "dataset": "wine",
+      "display_predictor": "CS",
+      "actual_predictor": "CS",
+      "phase": "reproduction",
+      "device": "cpu",
+      "seed": 42,
+      "test_size": 0.2,
+      "similarity": "manhattan",
+      "k": 12,
+      "arrays": "evidence/attempts/04-wine/call-04.npz",
+      "metrics": {
+        "correct": 36,
+        "n_test": 36,
+        "accuracy_percent": 100.0,
+        "accuracy_fraction": 1.0
+      },
+      "source_revision": "760ee67371596a5e087d62e159876600d54e76b92c4ca274dbfe8281146640bb",
+      "attempt_id": "1718166a492e4b46847579de0f29ce70",
+      "trace": "evidence/attempts/04-wine/events.jsonl"
+    }
+  ]
+}

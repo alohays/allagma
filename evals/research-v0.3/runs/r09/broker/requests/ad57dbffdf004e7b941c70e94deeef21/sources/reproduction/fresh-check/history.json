@@ -1,0 +1,76 @@
+[
+  {
+    "command": [
+      "/usr/local/bin/python3",
+      "inputs/compute.py",
+      "--category",
+      "setup",
+      "--label",
+      "fresh-venv",
+      "--timeout",
+      "60",
+      "--",
+      "/usr/local/bin/python3",
+      "-m",
+      "venv",
+      "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r09/candidate/reproduction/fresh-check/.venv"
+    ],
+    "request_id": "a1aba12f08954fc79a02e270210b3282",
+    "label": "fresh-venv",
+    "category": "setup",
+    "client_exit_code": 0,
+    "receipt": "reproduction/fresh-check/broker/a1aba12f08954fc79a02e270210b3282/response.json",
+    "result": {
+      "charge_basis": "measured supervisor wall time",
+      "charged_seconds": 2.0420149590354413,
+      "ended_at": "2026-10-08T05:25:24.118603+00:00",
+      "exit_code": 0,
+      "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r09/resources/jobs/0010-fresh-venv",
+      "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+      "peak_rss_bytes": 178470912,
+      "peak_storage_bytes": 407309588,
+      "status": "completed"
+    },
+    "injected_interruption": false
+  },
+  {
+    "command": [
+      "/usr/local/bin/python3",
+      "inputs/compute.py",
+      "--category",
+      "setup",
+      "--label",
+      "fresh-offline-packages",
+      "--timeout",
+      "90",
+      "--",
+      "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r09/candidate/reproduction/fresh-check/.venv/bin/python",
+      "-m",
+      "pip",
+      "install",
+      "--no-cache-dir",
+      "--no-index",
+      "--find-links",
+      "inputs/materials/wheels",
+      "-r",
+      "requirements.lock"
+    ],
+    "request_id": "64510adf325144c9b0050aaedf3378b4",
+    "label": "fresh-offline-packages",
+    "category": "setup",
+    "client_exit_code": 0,
+    "receipt": "reproduction/fresh-check/broker/64510adf325144c9b0050aaedf3378b4/response.json",
+    "result": {
+      "charge_basis": "measured supervisor wall time",
+      "charged_seconds": 6.537929167039692,
+      "ended_at": "2026-10-08T05:25:31.240611+00:00",
+      "exit_code": 0,
+      "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r09/resources/jobs/0011-fresh-offline-packages",
+      "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+      "peak_rss_bytes": 208551936,
+      "peak_storage_bytes": 705537631,
+      "status": "completed"
+    },
+    "injected_interruption": false
+  }
+]

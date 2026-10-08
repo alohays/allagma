@@ -1,0 +1,10 @@
+{
+  "task_id": "ema-schedule",
+  "execution_status": "complete",
+  "manuscript": "REPORT.md",
+  "review": "review.json",
+  "artifact_manifest": "artifact-manifest.json",
+  "measurements": "measurements.json",
+  "reproduce": {"argv": ["sh", "study/reproduce.sh"], "cwd": "."},
+  "recompute": {"argv": ["sh", "study/recompute.sh"], "cwd": "."}
+}

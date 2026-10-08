@@ -1,0 +1,205 @@
+{
+  "all_passed": true,
+  "claims": [
+    {
+      "claim": "complete cells and states",
+      "evidence": [
+        "measurements.json",
+        "analysis/verification.json"
+      ],
+      "expected": [
+        32,
+        96
+      ],
+      "observed": [
+        32,
+        96
+      ],
+      "passed": true
+    },
+    {
+      "claim": "all schedule effect contrasts have positive observed means",
+      "evidence": [
+        "analysis/summary.json#/ema_effect_contrasts"
+      ],
+      "expected": [
+        8,
+        8
+      ],
+      "observed": [
+        8,
+        8
+      ],
+      "passed": true
+    },
+    {
+      "claim": "only two moons 5k schedule intervals exclude zero",
+      "evidence": [
+        "analysis/summary.json#/ema_effect_contrasts"
+      ],
+      "expected": [
+        [
+          "moons",
+          "ema099",
+          5000
+        ],
+        [
+          "moons",
+          "ema0999",
+          5000
+        ]
+      ],
+      "observed": [
+        [
+          "moons",
+          "ema099",
+          5000
+        ],
+        [
+          "moons",
+          "ema0999",
+          5000
+        ]
+      ],
+      "passed": true
+    },
+    {
+      "claim": "all duration contrast intervals include zero",
+      "evidence": [
+        "analysis/summary.json#/ema_effect_contrasts"
+      ],
+      "expected": [
+        8,
+        8
+      ],
+      "observed": [
+        8,
+        8
+      ],
+      "passed": true
+    },
+    {
+      "claim": "all interaction intervals include zero",
+      "evidence": [
+        "analysis/summary.json#/ema_effect_contrasts"
+      ],
+      "expected": [
+        4,
+        4
+      ],
+      "observed": [
+        4,
+        4
+      ],
+      "passed": true
+    },
+    {
+      "claim": "5k mean EMA effect range: constant",
+      "evidence": [
+        "analysis/summary.json#/paired_ema_minus_raw"
+      ],
+      "expected": [
+        -0.06273,
+        -0.0534
+      ],
+      "observed": [
+        -0.06273,
+        -0.0534
+      ],
+      "passed": true
+    },
+    {
+      "claim": "5k mean EMA effect range: cosine",
+      "evidence": [
+        "analysis/summary.json#/paired_ema_minus_raw"
+      ],
+      "expected": [
+        -0.004116,
+        0.000576
+      ],
+      "observed": [
+        -0.004116,
+        0.000576
+      ],
+      "passed": true
+    },
+    {
+      "claim": "GMM8 coverage ceiling",
+      "evidence": [
+        "measurements.json"
+      ],
+      "expected": [
+        48,
+        8,
+        8
+      ],
+      "observed": [
+        48,
+        8,
+        8
+      ],
+      "passed": true
+    },
+    {
+      "claim": "GMM8 mean inlier-fraction range",
+      "evidence": [
+        "analysis/summary.json#/gmm8_coverage"
+      ],
+      "expected": [
+        0.97644,
+        0.990356
+      ],
+      "observed": [
+        0.97644,
+        0.990356
+      ],
+      "passed": true
+    },
+    {
+      "claim": "saved-weight sample regeneration: moons",
+      "evidence": [
+        "analysis/regenerate-moons.json"
+      ],
+      "expected": [
+        48,
+        true,
+        0.0
+      ],
+      "observed": [
+        48,
+        true,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "claim": "saved-weight sample regeneration: gmm8",
+      "evidence": [
+        "analysis/regenerate-gmm8.json"
+      ],
+      "expected": [
+        48,
+        true,
+        0.0
+      ],
+      "observed": [
+        48,
+        true,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "claim": "minimum attainable two-sided sign-flip p with four pairs",
+      "evidence": [
+        "protocols/protocol-v1.json#/evaluation"
+      ],
+      "expected": 0.125,
+      "observed": 0.125,
+      "passed": true
+    }
+  ],
+  "report_sha256": "c32146dceab477349957c23a4ea5fb3c6b4e163ea9572718214a283869c61a77",
+  "script_sha256": "0a79cf574395d6911442995d26480a958f4a44a0ef6b304298d8f9a0135b90da",
+  "summary_sha256": "4a1a4dce784781eb0a9e7dfe6c90360ee398b1518aa9e522f6ec5de864612ff2"
+}

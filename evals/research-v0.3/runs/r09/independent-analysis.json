@@ -1,0 +1,96 @@
+{
+  "status": "pass",
+  "only_portability_edits": [
+    "code/wine_sample.py",
+    "code/zoo_sample.py"
+  ],
+  "observations": [
+    {
+      "dataset": "iris",
+      "printed": "CN",
+      "actual": "CS",
+      "accuracy_percent": 100.0,
+      "independent_predictions_match": true
+    },
+    {
+      "dataset": "iris",
+      "printed": "AA",
+      "actual": "CS",
+      "accuracy_percent": 100.0,
+      "independent_predictions_match": true
+    },
+    {
+      "dataset": "iris",
+      "printed": "RA",
+      "actual": "CS",
+      "accuracy_percent": 100.0,
+      "independent_predictions_match": true
+    },
+    {
+      "dataset": "iris",
+      "printed": "CS",
+      "actual": "CS",
+      "accuracy_percent": 100.0,
+      "independent_predictions_match": true
+    },
+    {
+      "dataset": "zoo",
+      "printed": "CN",
+      "actual": "CS",
+      "accuracy_percent": 100.0,
+      "independent_predictions_match": true
+    },
+    {
+      "dataset": "zoo",
+      "printed": "AA",
+      "actual": "CS",
+      "accuracy_percent": 100.0,
+      "independent_predictions_match": true
+    },
+    {
+      "dataset": "zoo",
+      "printed": "RA",
+      "actual": "CS",
+      "accuracy_percent": 100.0,
+      "independent_predictions_match": true
+    },
+    {
+      "dataset": "zoo",
+      "printed": "CS",
+      "actual": "CS",
+      "accuracy_percent": 100.0,
+      "independent_predictions_match": true
+    },
+    {
+      "dataset": "wine",
+      "printed": "CN",
+      "actual": "CN",
+      "accuracy_percent": 97.22,
+      "independent_predictions_match": true
+    },
+    {
+      "dataset": "wine",
+      "printed": "AA",
+      "actual": "AA",
+      "accuracy_percent": 97.22,
+      "independent_predictions_match": true
+    },
+    {
+      "dataset": "wine",
+      "printed": "RA",
+      "actual": "RA",
+      "accuracy_percent": 97.22,
+      "independent_predictions_match": true
+    },
+    {
+      "dataset": "wine",
+      "printed": "CS",
+      "actual": "CS",
+      "accuracy_percent": 100.0,
+      "independent_predictions_match": true
+    }
+  ],
+  "fresh_numeric_arrays_equal": 96,
+  "fresh_predictions_equal": 348,
+  "scope": "Exact source/data preservation except two documented paths/imports; independent fixed splits, Wine normalization, adjacency-set predictor equations including self-loop degrees and endpoint exclusions; fresh-run arrays. No population-performance or unique tied-neighbor graph reconstruction claim."
+}

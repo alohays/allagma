@@ -1,0 +1,81 @@
+{
+  "initial_attempt": "evidence/pilot/moons71-attempt01",
+  "interrupted_request_id": "6bfe9a521a5248a6a6bb85f575e55e54",
+  "method": "fresh deterministic pilot from same configuration/seed in a new directory; no partial outputs pooled; interruption happened before retained training trace",
+  "receipts_at_freeze": [
+    {
+      "category": "setup",
+      "charged_seconds": 12.382877041818574,
+      "injected_interruption": false,
+      "label": "packages",
+      "request_id": "3be709f0162d49ee8feddf2266db9ada",
+      "response": ".compute/responses/3be709f0162d49ee8feddf2266db9ada.json",
+      "status": "completed"
+    },
+    {
+      "category": "setup",
+      "charged_seconds": 6.51557279098779,
+      "injected_interruption": false,
+      "label": "import-and-device-check",
+      "request_id": "98a399d2a02642b69b23880ac995e2d4",
+      "response": ".compute/responses/98a399d2a02642b69b23880ac995e2d4.json",
+      "status": "failed"
+    },
+    {
+      "category": "compute",
+      "charged_seconds": 11.20198049978353,
+      "injected_interruption": false,
+      "label": "pilot-gmm8-cosine-terminal",
+      "request_id": "95b5911a538843a9a9657b05eceb74f8",
+      "response": ".compute/responses/95b5911a538843a9a9657b05eceb74f8.json",
+      "status": "completed"
+    },
+    {
+      "category": "compute",
+      "charged_seconds": 1.5162304998375475,
+      "injected_interruption": true,
+      "label": "pilot-moons-first-marked",
+      "request_id": "6bfe9a521a5248a6a6bb85f575e55e54",
+      "response": ".compute/responses/6bfe9a521a5248a6a6bb85f575e55e54.json",
+      "status": "timed_out"
+    },
+    {
+      "category": "compute",
+      "charged_seconds": 8.345011834055185,
+      "injected_interruption": false,
+      "label": "pilot-moons-recovery",
+      "request_id": "b9213bf45dad4403bd999e8e6807106b",
+      "response": ".compute/responses/b9213bf45dad4403bd999e8e6807106b.json",
+      "status": "completed"
+    },
+    {
+      "category": "compute",
+      "charged_seconds": 9.510303458897397,
+      "injected_interruption": false,
+      "label": "pilot-moons-cosine-terminal",
+      "request_id": "4042063bdd8b40298efca4bfba3771f3",
+      "response": ".compute/responses/4042063bdd8b40298efca4bfba3771f3.json",
+      "status": "completed"
+    },
+    {
+      "category": "setup",
+      "charged_seconds": 1.7807714170776308,
+      "injected_interruption": false,
+      "label": "environment",
+      "request_id": "7f6c8dc84fd34fc289cbbcca77a2dc10",
+      "response": ".compute/responses/7f6c8dc84fd34fc289cbbcca77a2dc10.json",
+      "status": "completed"
+    },
+    {
+      "category": "setup",
+      "charged_seconds": 1.5925047090277076,
+      "injected_interruption": false,
+      "label": "mps-low-watermark-recovery",
+      "request_id": "c6358728c65145068677b5329552294b",
+      "response": ".compute/responses/c6358728c65145068677b5329552294b.json",
+      "status": "completed"
+    }
+  ],
+  "recovery_attempt": "evidence/pilot/moons71-attempt02",
+  "setup_recovery": "MPS default low watermark 1.4 exceeded broker high .2; set low .1, preserve high .2"
+}

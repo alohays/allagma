@@ -1,0 +1,13 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "-c",
+    "import os; os.environ[\"PYTORCH_MPS_LOW_WATERMARK_RATIO\"]=\"0.1\"; import torch; print(torch.ones(1,device=\"mps\").cpu()); print(\"high\",os.environ.get(\"PYTORCH_MPS_HIGH_WATERMARK_RATIO\"),\"low\",os.environ[\"PYTORCH_MPS_LOW_WATERMARK_RATIO\"])"
+  ],
+  "attempt": false,
+  "category": "setup",
+  "cwd": ".",
+  "label": "mps-low-watermark-recovery",
+  "request_id": "c6358728c65145068677b5329552294b",
+  "timeout_seconds": 30.0
+}

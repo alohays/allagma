@@ -1,0 +1,17 @@
+{
+  "injected_interruption": false,
+  "isolation_sha256": "d6f578175c5dc3e8ec0eee7f53b9398e0abfd7163ce0dc221efa42d819f372bc",
+  "reconciled_after_controller_restart": false,
+  "request_id": "f0b81ab7d3be413f8b41b97fd6e5cc23",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 1.0022361250594258,
+    "ended_at": "2026-10-08T04:17:23.680048+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r08/resources/jobs/0009-qualify-forecast-and-freeze",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 4079616,
+    "peak_storage_bytes": 1177533970,
+    "status": "completed"
+  }
+}

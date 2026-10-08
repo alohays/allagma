@@ -1,0 +1,27 @@
+{
+  "attempt_id": "gmm8-5001-cosine10000",
+  "device": "mps",
+  "dtype": "float32",
+  "environment": {
+    "fallback": false,
+    "numpy": "2.4.6",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.11.6",
+    "torch": "2.14.1"
+  },
+  "generation_noise_sha256": "3e84425ce8de61f0c7dbba82060546dcc74799338c665eb454a00854466a21d2",
+  "hash_definition": "initial: sorted key+NUL+state bytes; prefix: clean+NUL+float32 train[indices[:5000]], noise+NUL+float32 noise[:5000], timesteps+NUL+int64 timesteps[:5000]; other arrays contiguous bytes",
+  "heldout_sha256": "eeb78e4a2bc4ab4e9155586f2e2321252c06d5a5fbfb5636d086ebd59b4fb3c8",
+  "initial_weights": "evidence/confirmation/gmm8-5001-cosine10000/initial-weights.npz",
+  "initial_weights_sha256": "aa886a0e79013b15b4fd3936fdf226773a6f8e83255eefb1db5a1e9cc89ef381",
+  "shared_inputs": "evidence/inputs/gmm8-5001.npz",
+  "source_hashes": {
+    "LICENSE": "9c82e554a54dfcf2550b452801475a36f9cb909ede00b03e492089e4836a7462",
+    "protocols/protocol-v1.json": "47fb3669611568c9580c49bee73a74c4878498be54e936f10e95a8fd0aeaf02d",
+    "study/run.py": "7b1cb1c7c0a4f40630132beeb8570cd1179017232ffea6bfd7f4b724d2218aec",
+    "study/science.py": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1"
+  },
+  "source_revision": "8227ae2568c1c219517b5966f4da33b83a391d9271b4641f6d33bec99ee90fe1",
+  "training_prefix_5000_sha256": "354a08cf4796999b6ce7e5a09d1f0bbcb5e01b0df13c089fc921d4e261a5c954",
+  "training_trace": "evidence/confirmation/gmm8-5001-cosine10000/trace.jsonl"
+}

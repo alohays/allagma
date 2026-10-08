@@ -1,199 +1,115 @@
 # v0.3 continuation state
 
-The full goal in [GOAL.md](../../GOAL.md) remains active and incomplete. Use the
-[acceptance ledger](requirements.md) for release requirements and
-`evals/research-v0.3/progress.json` for the current live handle. Historical
-receipts and frozen bundles remain unchanged.
+The full [goal](../../GOAL.md) is active and incomplete. The
+[requirement ledger](requirements.md) governs completion. The last turn made
+verified implementation/evaluation progress; this is not a blocked state.
 
-## Current comparison
+## Current assigned runs
 
-Eight of twelve native sessions are terminal. Seven reviews are complete; five
-original packages meet all
-required evidence items:
+| Run | Assignment | Numerical | Evidence /8 | Required execution | Package complete |
+| --- | --- | ---: | ---: | --- | --- |
+| r01 | CORE, Allagma, replicate 2 | 6/6 | 8 | verified | yes |
+| r02 | CORE, plain, replicate 2 | 6/6 | 8 | verified | yes |
+| r03 | Modular addition, plain, replicate 2 | 40/40 corrected loader | 7 | verified | no: review revision binding |
+| r04 | Modular addition, Allagma, replicate 2 | 40/40 | 8 | verified | yes |
+| r05 | Modular addition, Allagma, replicate 1 | 40/40 corrected loader | 8 | verified | yes |
+| r06 | Modular addition, plain, replicate 1 | 40/40 corrected loader | 7 | verified | no: review revision binding |
+| r07 | EMA schedule, Allagma, replicate 2 | 240/240 | 8 | verified | yes |
+| r08 | EMA schedule, plain, replicate 2 | 240/240 | 8 | verified | yes |
+| r09 | CORE, plain, replicate 1 | 6/6 | 8 | verified | yes |
+| r10 | CORE, Allagma, replicate 1 | 6/6 | pending | pending review | pending |
+| r11 | EMA schedule, plain, replicate 1 | pending | pending | active | pending |
+| r12 | EMA schedule, Allagma, replicate 1 | pending | pending | not started | pending |
 
-| Run | Assignment | Numerical checks | Evidence | Verified package |
-| --- | --- | ---: | ---: | --- |
-| r01 | CORE, Allagma, replicate 2 | 6/6 original | 8/8 | yes |
-| r02 | CORE, plain, replicate 2 | 6/6 original | 8/8 | yes |
-| r03 | Modular addition, plain, replicate 2 | 40/40 corrected parser | 7/8 | no: review lacks an explicit material revision |
-| r04 | Modular addition, Allagma, replicate 2 | 40/40 original and compatible | 8/8 | yes |
-| r05 | Modular addition, Allagma, replicate 1 | 40/40 corrected parser | 8/8 | yes |
-| r06 | Modular addition, plain, replicate 1 | 40/40 corrected parser | 7/8 | no: review lacks an explicit material revision |
-| r07 | EMA schedule, Allagma, replicate 2 | 240/240 original | 8/8 | yes |
-| r08 | EMA schedule, plain, replicate 2 | 240/240 original | pending | pending substantive review |
+**Active native run: r11; exec session 54217. Next: r12.** Poll that handle or
+its actual process, never restart from a running-state file or observation timeout.
+`evals/research-v0.3/progress.json` retains the current handle. The pre-r11 account
+checkpoint allows ordinary usage with 27% of the weekly window consumed.
 
-**Active: r09, CORE CULP, plain Codex, replicate 1. Exec session 21363.**
-The new native process has been launched under the frozen controls. Poll the known handle/process; do not restart based on an observation
-timeout or a running-state file. Next is r10, then r11 and r12.
-The pre-r09 account checkpoint permits ordinary use with 24% weekly usage.
-Check account limits again before starting the next session.
+All ten terminal sessions have unchanged common inputs and matching observed
+model/settings, with one fresh session each. No task-specific coordinator
+messages or candidate edits have occurred. Keep the source/criteria/model/CLI
+freeze unchanged until all twelve sessions are terminal. `evaluate.py verify`
+checks the current launch guard. Frozen source is `c369fe7`, freeze `de6abce`.
 
-Frozen source is `c369fe7`, with freeze commit `de6abce`. All twelve prepared
-input inventories match within task. `evaluate.py verify` still passes after
-postprocessing/documentation changes. Keep runs serial, candidate workspaces
-isolated, and all frozen criteria, code, inputs, model/settings and ceilings
-unchanged. No task-specific coordinator messages have been sent.
+## Verified task packages and release evidence
 
-The first fully verified Allagma packages, selected by the prespecified rule,
-are CORE r01 and modular addition r04. The latter completes all eight 100k
-trajectories: all memorized, none reached the sustained 95% held-out threshold.
-Mean paired held-out accuracy improvement is 67.46 percentage points, with
-four independent seeds and explicitly limited inference. Repeated sessions do
-not add scientific seeds. Detailed reports and reproduction instructions are in
-`studies/core-culp/RESULTS.md` and `studies/modular-addition/RESULTS.md`.
+The prespecified first verified Allagma examples are CORE r01, modular addition
+r04 and EMA schedule r07. Their study `RESULTS.md` files link exact packages and
+verification; the EMA summary includes its original figure. All three task
+families have complete original packages. This is not completion of the whole
+12-run comparison or a general workflow-superiority claim.
 
-## Passed and pending release gates
+A clean Git clone at `a5ac168` restored CORE r01, installed a fresh environment,
+reran its complete study and separately recomputed raw results. Both answer sets
+match. This passes the at-least-one full clean-checkout study gate for that
+recorded source/package; it is not an EMA/modular-addition retraining claim.
+Pre-freeze I1–I5 acceptance and 109 conformance checks passed. Current framework
+version remains 0.3.0rc1; exact-final-source release qualification is still needed.
 
-A clean Git clone at `a5ac168` restored the CORE r01 package and exact software
-wheels, built a fresh environment, reran the full study and separately
-recomputed the raw results. All six answers match. This passes the at-least-one
-full clean-checkout reproduction requirement, not a second training replay for
-modular addition or EMA.
+The independent controller validation profile is unchanged: 1800 compute seconds,
+600 setup seconds, 64 compute requests and finite per-command/memory/storage/file
+limits. Consult its actual ledger before new work. Development's 24 marked
+attempts are exhausted; do not reuse or expand that allocation. The default
+conformance kit and toy remain offline and standard-library-only.
 
-The pre-freeze source passed all I1–I5 acceptance and 109 conformance checks.
-Current version is 0.3.0rc1; no final v0.3 release qualification is claimed.
-The standard-library defaults and scientific study separation remain required.
+## Preserved defects and corrections
 
-The separate controller-validation ledger retains a finite 1800-second compute,
-600-second setup and 64-request allocation. Check its actual status before new
-work. Scientific scoring/replay costs and native account usage are distinct.
-Development's 24 marked-attempt ceiling has been reached; do not reuse that
-allocation for new marked training or silently expand any ceiling.
+- The frozen broker sets MPS HIGH=0.2 but omits LOW, whose default 1.4 is invalid.
+  r03–r06 used CPU. r07/r08 independently set LOW=.1 in their study runners while
+  preserving HIGH=.2, and completed actual MPS science. These are candidate
+  recoveries, not a repair of the shared broker. Fix the new release after the
+  cohort and run the prepared actual `validation/check_mps_broker.py` regression.
+  Only syntax/help have been checked for that regression so far.
+- Original inline-curve scorer errors are preserved. The separate compatible
+  scorer changes only list/path loading and is applied uniformly; numerical
+  criteria are unchanged. Original and corrected receipts remain separate.
+- Controller retention now preserves terminal queue evidence, explicitly
+  relocates confined internal dependency aliases, accepts `files`/`artifacts`
+  manifest containers, and streams large archives. Failed collection/restoration
+  attempts and old indexes remain. The actual 829 MB r07 restore passed under
+  the unchanged 512 MiB per-file ceiling; six transport regressions pass.
+- A suspected r05 reproduction-interpreter defect was disproved: its staging
+  helper uses copied interpreters on this host. Failed/corrected controller
+  probes are retained; do not count that investigation as a candidate defect.
 
-## Defects and preservation rules
+See `docs/v0.3/defects.md` and the per-run controller receipts. No locked bundle,
+original attempt, candidate source or outcome has been repaired in place.
 
-- The shared frozen broker sets MPS HIGH=0.2 but leaves LOW at its incompatible
-  default 1.4. CPU recoveries remain part of the frozen outcomes. The optional
-  question about restarting the cohort has received no new direction; continue
-  the authorized frozen comparison, disclose the defect, then repair separately.
-  Do not claim corrected GPU-path performance from this cohort.
-- The frozen curve parser disagrees with the inline-list measurement contract.
-  Preserve original scoring receipts. The separate compatibility scorer changes
-  only that loader, applies uniformly, and reproduces the original calculations
-  on equivalent path-based data.
-- The initial archive transport omitted terminal `.compute/` evidence. Its
-  correction retains exact queue bytes in supplements for r01–r04, preserves
-  original archives/indexes, and includes them directly in future collections.
-  Actual r04 restoration verifies all 548 manifest files and 87 direct reviewed
-  references. This is controller transport repair, not candidate assistance.
+## Latest verified outcomes
 
-`docs/v0.3/defects.md` retains the reproduced infrastructure defects. The actual
-full-broker MPS regression is prepared in `validation/check_mps_broker.py` and
-`mps_broker_canary.py`; syntax/help only have passed. Execute it after the
-post-cohort source repair and retain actual outcomes. Its test does not set the
-watermarks itself or claim native-agent qualification.
+r08: all 32 EMA cells, 24 trajectories and 200000 updates; original 240/240 score.
+Independent inputs/initializations and 66 paired summaries, eight absolute rows
+and twelve coverage rows pass. Review binds report-v1, explicitly responds with
+report-v2, and both retained revisions verify. Scientific artifacts are unchanged
+between revisions. All 356 manifest entries pass after restoration. Source and
+report scopes distinguish full learning-rate policy from endpoint rate and
+retain the small-n/multiplicity limits. Eight evidence items pass.
+
+r09: original CORE 6/6; only two source path edits/imports. Controller checks
+independently reproduce every predictor vector from saved graphs, fixed splits
+and Wine normalization, and compare all 96 arrays/348 predictions with the
+actually executed fresh-environment rerun. All 349 manifest entries and 227
+reviewed material hashes pass after restoration. Source-label defects and
+transductive/duplicate/tie limitations remain explicit. Eight evidence items pass.
+
+r10: native completed; original score 6/6 and package collection finished (594
+regular files plus 13 external wheels, one archive part, no manifest errors).
+Substantive source/execution/review, independent checks and restoration still
+need inspection. Candidate is `work/v03-evaluation/runs/r10/candidate`.
 
 ## Remaining work
 
-1. Finish r08 substantive review and complete/score r09–r12. Preserve failed outcomes and all original
-   packages. Apply the eight-item substantive rubric and independent science
-   checks without changing candidate artifacts.
-2. The three illustrative packages are now verified; finish any separately identified required repairs.
-   Do not rewrite unsuccessful original comparison outcomes.
-3. Generate the final comparison only when all twelve reviews are terminal.
-   `comparison.py` reports all assigned runs, six paired contrasts, within-task
-   ranges, failures, interventions and separate usage fields. The six-run
-   snapshot is explicitly partial; it supports no broad superiority inference.
-4. Correct the MPS environment in a new release revision, execute the real
-   broker regression, complete migration/release notes and exact-final-source
-   acceptance/conformance checks. Preserve historical bundle identities.
-5. Commit coherent milestones, then push to `origin` only when all full-goal
-   requirements pass. Mark the goal complete only after the authorized push.
-
-## Fifth-run verification and transport follow-up
-
-r05 completed all eight trajectories using an inspected C/Accelerate float32
-implementation. The 40 endpoint checks, independent gradients/individual AdamW
-updates, paired uncertainty, censoring and native optimizer states pass. Its
-mean paired accuracy improvement is 59.78 percentage points; no generalization
-threshold or grokking event occurred. The report preserves the preconfirmation
-pilot-gate revision and explicitly disclaims long-horizon bitwise PyTorch identity.
-Its first fully verified package does not replace r04 as the prespecified example.
-
-Native wall time was 2442.58 seconds; charged compute 1403.91 seconds and setup
-35.26 seconds, with 32 compute requests. Actual final receipt fields and failures
-are retained under r05. Zero coordinator messages or candidate edits occurred.
-
-The r05 transport initially rejected an absolute internal wheel-directory alias.
-A new indexed link representation preserves the original literal target and
-restores the same internal content through a relative alias. The candidate is
-unchanged; the failed collection remains retained. Restore now passes all 575
-active manifest files and 128 relative reviewed references. External or excluded
-link targets remain rejected.
-
-A controller hypothesis about reproduction-interpreter symlink resolution was
-**disproved**: the staging helper creates a copied executable on this host. Both
-actual interpreter probes use the correct fresh prefix and installed packages.
-The failed assertion, original probe source, corrected probe and resolution are
-retained; do not classify this controller investigation as a candidate defect.
-
-The new archive verifier checks historical frozen bytes after a later source
-repair, without altering the original launch guard. The latest partial archive
-check passes 127 frozen source files, all 12 prepared inputs/profiles, and all
-five retained packages. Final verification must require all twelve packages.
-
-## Sixth-run result and initial EMA recovery
-
-r06 completed all eight 100k CPU trajectories. It independently diagnosed five
-auxiliary float64 near-tie class changes, all between wrong held-out classes,
-and retained the failed exact-argmax check, source and numerical amendment.
-Controller checks confirm all 40 required endpoint checks, all optimizer states,
-paired statistics, 108 sensitivity rows and the propagated numerical bound.
-The report and substantive critique are detailed, but the review does not name
-its reviewed material revision. Apply the same E8 gap as r03: required execution
-verified, 7/8 evidence, original package completion false. Do not conflate this
-binding gap with missing experiments or absent scientific critique.
-
-r06 used 1320.09 compute seconds, 16.53 setup seconds and 2663.10 native seconds,
-with 23 compute requests. Its manifest uses an `artifacts` list, which the first
-collector did not recognize. The original index notice remains; a separate
-identical hash check now verifies all 456 entries before and after restoration.
-This is controller parser support, not candidate repair.
-
-r07 independently set `PYTORCH_MPS_LOW_WATERMARK_RATIO` to 0.1 in its study runner
-before importing torch, while the broker's high limit stays 0.2. Its corrected
-MPS pilot and qualification passed, and GPU confirmation subsequently completed. No coordinator
-hint was supplied. This candidate-local recovery does not repair the frozen
-shared broker. The later r07 verification establishes its study completion. The release still
-requires the separately versioned full-broker repair and prepared actual test.
-
-## Seventh package verified; eighth review pending
-
-r07 is the prespecified EMA example: 32 cells, 96 states and 200000 updates across
-24 trajectories. Original scoring passes 240/240; controller checks independently
-regenerate all paired inputs/initializations, verify optimizer counters and LR
-traces, and reproduce 114 summary rows. All eight evidence items pass, including
-explicit report-r1 review binding. The supplied science module is unchanged.
-The three illustrative study summaries now exist, including the EMA figure.
-
-Its 829100336-byte archive exposed an actual controller restore bug: combining
-parts into a temporary file exceeded the unchanged 512 MiB file cap. Streamed
-extraction now passes with all 901 declared manifest hashes and 272 reviewed
-references verified. Preserve the failed job/manifest check and v2 resolution;
-do not classify this transport defect as a candidate failure. The six transport
-regressions include a real POSIX small-file-limit test and altered-part rejection.
-
-r08 is terminal and its original EMA scorer also passes 240/240. Its package is
-collected (16 parts, 525 regular files plus 22 external wheels, no manifest
-errors), but source/statistical/visual/review and restoration checks remain.
-Do not mark its package complete until those are inspected. Candidate:
-`work/v03-evaluation/runs/r08/candidate`; controller: `evals/research-v0.3/runs/r08`.
-
-The current native run is r09, handle 21363. Source freeze verification still
-passes. No final release fix or push has occurred. Full remaining requirements,
-MPS repair/canary, final-source conformance/acceptance and origin push still apply.
-
-## Current postprocessing milestone
-
-r07 now passes all eight evidence items, including 901 restored manifest entries
-and 272 restored reviewed references. Its original failed restoration and failed
-manifest check remain retained alongside the successful streaming correction.
-The illustrative EMA summary and original figure are in `studies/ema-schedule/`.
-`after-r07-reviewed` is the latest interim comparison: eight sessions terminal,
-seven reviews complete, five packages fully verified. r08 review remains pending.
-
-r08's original numerical score is 240/240 and its package is already collected.
-No substantive completion claim has been made. Current active handle remains
-**r09 / 21363**. Next r10, r11, r12. Check actual handles/processes before actions;
-never restart from a stale state file or observation timeout. Keep the full goal
-active through release fixes, final checks, commits and the authorized push.
+1. Finish r10's substantive review; complete and score r11/r12 in frozen order.
+   Preserve all failed outcomes and record all eight evidence items honestly.
+2. Generate the complete comparison only after all twelve reviews. Keep required
+   execution distinct from package completion: r03/r06 ran correct science but
+   lack explicit review/material revision binding. Latest interim comparison is
+   `comparisons/after-r09-reviewed/`. Two sessions per condition support only
+   descriptive task-specific comparisons, not broad superiority.
+3. Repair the shared MPS prefix in a separately versioned release, execute the
+   real broker regression without a worker-side workaround, and retain all
+   before/after evidence. Complete release/migration notes, historical bundle
+   integrity and exact-final-source catalog/conformance/I1–I5 acceptance.
+4. Commit coherent milestones and push to origin only after all required work
+   passes. The goal cannot be marked complete before the authorized push.

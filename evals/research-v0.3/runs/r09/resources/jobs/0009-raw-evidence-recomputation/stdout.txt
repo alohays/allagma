@@ -1,0 +1,37 @@
+{
+  "report": {
+    "Report the CN prediction accuracy for the Iris dataset.": 100.0,
+    "Report the AA prediction acccuracy for the Iris dataset.": 100.0,
+    "Report the CN prediction acccuracy for the Zoo dataset.": 100.0,
+    "Report the AA prediction acccuracy for the Zoo dataset.": 100.0,
+    "Report the CN prediction acccuracy for the Wine dataset.": 97.22,
+    "Report the AA prediction acccuracy for the Wine dataset.": 97.22
+  },
+  "verification": {
+    "status": "passed",
+    "source_revision": "760ee67371596a5e087d62e159876600d54e76b92c4ca274dbfe8281146640bb",
+    "protocol_sha256": "58a244e32fbcd586608dcf426117c663a4c626e4b7a162f8a32e5ecb28ab3bc9",
+    "checked_calls": 12,
+    "verified_script_outputs": [
+      "iris",
+      "zoo",
+      "wine"
+    ],
+    "checks": {
+      "source_and_protocol_hashes": true,
+      "broker_completion": true,
+      "controlled_interruption_preserved": true,
+      "printed_values_match_raw_predictions": true,
+      "exact_question_keys": true,
+      "direct_stdout_equals_instrumented": true,
+      "fixed_split_and_preprocessing": true,
+      "graph_necessary_constraints": true,
+      "independent_predictor_maximizers": true
+    },
+    "limitations": [
+      "No source experiment is rerun here; these checks are conditional on retained evidence.",
+      "Graph audit allows boundary-distance ties; exact tied directed neighbor selection is not independently established.",
+      "The Iris/Zoo CN and AA labels refer to CS calls in the supplied scripts."
+    ]
+  }
+}

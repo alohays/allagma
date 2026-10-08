@@ -1,0 +1,7 @@
+{"step": 1, "noise_mse": 1.0629973411560059, "preclip_grad_norm": 1.5709539651870728, "lr": 0.0003, "ema_updates": 1, "elapsed_seconds": 2.058221874991432}
+{"step": 1000, "noise_mse": 0.44827961921691895, "preclip_grad_norm": 0.7953987717628479, "lr": 0.00027140792265347954, "ema_updates": 1000, "elapsed_seconds": 3.256324457935989}
+{"step": 2000, "noise_mse": 0.3693036139011383, "preclip_grad_norm": 0.6622377038002014, "lr": 0.00019644217496566044, "ema_updates": 2000, "elapsed_seconds": 4.451407707994804}
+{"step": 3000, "noise_mse": 0.3781079053878784, "preclip_grad_norm": 0.46511557698249817, "lr": 0.00010373709495242857, "ema_updates": 3000, "elapsed_seconds": 5.60475854203105}
+{"step": 4000, "noise_mse": 0.33991342782974243, "preclip_grad_norm": 0.5206331610679626, "lr": 2.8702872249059843e-05, "ema_updates": 4000, "elapsed_seconds": 6.731852208031341}
+{"step": 5000, "noise_mse": 0.44061508774757385, "preclip_grad_norm": 0.6335490942001343, "lr": 2.9608812235348834e-11, "ema_updates": 5000, "elapsed_seconds": 7.87191866687499}
+{"output": "evidence/confirmation/gmm8-5003-cosine5000", "timing": {"total_seconds": 8.331922749988735, "training_seconds": 7.049496124964207, "evaluation_seconds": 0.4598725838586688, "milestones": [{"step": 5000, "cumulative_training_seconds": 7.049496124964207}], "updates": 5000, "seconds_per_update": 0.0014098992249928415}}

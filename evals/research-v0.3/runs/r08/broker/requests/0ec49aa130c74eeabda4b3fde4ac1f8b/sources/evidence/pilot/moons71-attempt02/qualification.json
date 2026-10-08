@@ -1,0 +1,81 @@
+{
+  "all_passed": true,
+  "checks": [
+    {
+      "detail": null,
+      "name": "sw1 identity",
+      "passed": true
+    },
+    {
+      "detail": 2.3549351006277237,
+      "name": "sw1 translation all reference directions",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "sw1 sorting and known 1D distance",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "coverage all center modes",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "coverage threshold below 21 of all draws",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "coverage threshold 21 and outlier denominator",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "coverage includes radius boundary",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "coverage excludes outside radius",
+      "passed": true
+    },
+    {
+      "detail": 2.4285722793500615e-07,
+      "name": "DDPM finite and terminal near zero",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "LR terminal schedule distinction",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "constant LR unchanged",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "EMA initial copy and parameter count",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "EMA one-step recurrence",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "EMA buffers unchanged",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "precomputed noisy-input equivalence",
+      "passed": true
+    }
+  ],
+  "confirmation_used": false
+}

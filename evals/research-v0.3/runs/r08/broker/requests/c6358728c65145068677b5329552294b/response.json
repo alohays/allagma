@@ -1,0 +1,17 @@
+{
+  "injected_interruption": false,
+  "isolation_sha256": "d6f578175c5dc3e8ec0eee7f53b9398e0abfd7163ce0dc221efa42d819f372bc",
+  "reconciled_after_controller_restart": false,
+  "request_id": "c6358728c65145068677b5329552294b",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 1.5925047090277076,
+    "ended_at": "2026-10-08T04:13:43.874614+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r08/resources/jobs/0004-mps-low-watermark-recovery",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 336510976,
+    "peak_storage_bytes": 1094818225,
+    "status": "completed"
+  }
+}

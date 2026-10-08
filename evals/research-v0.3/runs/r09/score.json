@@ -1,0 +1,32 @@
+{
+  "task_id": "core-culp",
+  "claimed_execution_status": "complete",
+  "numerical": {
+    "name": "original CORE-Bench score",
+    "unchanged_upstream_function": true,
+    "scorer_sha256": "88a132c1196bfd9f1f8cf32d23e64cb6e0b26d98437ab5ff72f5e77ef56b53bb",
+    "correct": 6,
+    "total": 6,
+    "correct_written_answers": 6,
+    "correct_vision_answers": 0,
+    "total_written_questions": 6,
+    "total_vision_questions": 0
+  },
+  "artifacts": {
+    "manuscript": {
+      "path": "REPORT.md",
+      "sha256": "c26c92fe0ec82cf13bee3679466977e6cb95dbae684b8d75f96e71c50f0a6624"
+    },
+    "review": {
+      "path": "review.json",
+      "sha256": "ec182285099bd6321b41eae987a7f5c2511df5c555f3ec0acdedb42fa125a493"
+    },
+    "artifact_manifest": {
+      "path": "artifact-manifest.json",
+      "sha256": "3072cc7c47c1b84e85d774525e75bc2ca5669e9893a1349391838895a5be9af0"
+    }
+  },
+  "substantive_review": "pending",
+  "overall_completion": "unproven",
+  "scorer_sha256": "01a9248197d4fa3bdde09081c2861133783c41439f7025cf509ac42c9df41fda"
+}

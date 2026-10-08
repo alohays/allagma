@@ -1,0 +1,26 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "study/run.py",
+    "--dataset",
+    "moons",
+    "--seed",
+    "4003",
+    "--policy",
+    "cosine",
+    "--duration",
+    "5000",
+    "--phase",
+    "confirmation",
+    "--output",
+    "evidence/confirmation/moons-4003-cosine5000",
+    "--shared",
+    "evidence/inputs"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "confirm-moons-4003-cosine5000",
+  "request_id": "8b1f3dd028234722b7c78ac4b75593e4",
+  "timeout_seconds": 45.0
+}

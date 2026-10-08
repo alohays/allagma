@@ -1,0 +1,19 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "-m",
+    "pip",
+    "install",
+    "--no-index",
+    "--find-links",
+    "inputs/materials/wheels",
+    "-r",
+    "requirements.lock"
+  ],
+  "attempt": false,
+  "category": "setup",
+  "cwd": ".",
+  "label": "offline-packages",
+  "request_id": "d36f18b0a94746d99f62654efefedc11",
+  "timeout_seconds": 120.0
+}

@@ -1,0 +1,230 @@
+{
+  "run_id": "r09",
+  "criteria": "evals/research-v0.3/frozen/source/evals/research-v0.3/CRITERIA.md",
+  "scientific_execution_verified": true,
+  "completion_verified": true,
+  "evidence_score": 8,
+  "evidence_total": 8,
+  "evidence_items": [
+    {
+      "id": 1,
+      "score": 1,
+      "reason": "Original task strings, source/data identity and licenses are preserved. Independent inventory comparison matches every supplied source file, with only the two declared data-path edits and Path imports in the executable copy.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "PROTOCOL.md",
+          "sha256": "58a244e32fbcd586608dcf426117c663a4c626e4b7a162f8a32e5ecb28ab3bc9"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/source-revision.json",
+          "sha256": "5bcc00f80da3b1921316e1e26fdc3a3a7a9a57dcdf405e9e73d968523a17e513"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/compatibility.patch",
+          "sha256": "3b69f143b6b6858688b34e81fe392e17a4883e08512d0b174c9337bb8f0dedb4"
+        },
+        {
+          "root": "candidate",
+          "path": "inputs/materials/SOURCES.md",
+          "sha256": "07ea54a345de52c6f5f9416ad46e81ae5a45425cfb2b5ff4eef172d3727fec21"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "score": 1,
+      "reason": "The first protected scientific request contains the final source/protocol hash record. Fixed split seed, k, metric, source parameters and original printed-label behavior are preserved.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "PROTOCOL.md",
+          "sha256": "58a244e32fbcd586608dcf426117c663a4c626e4b7a162f8a32e5ecb28ab3bc9"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/source-revision.json",
+          "sha256": "5bcc00f80da3b1921316e1e26fdc3a3a7a9a57dcdf405e9e73d968523a17e513"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/attempts/01-iris-interrupted/run.json",
+          "sha256": "53474294c7298d88031ad98a6261b2c016113b795c5b5e1338261e4f774313f3"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "score": 1,
+      "reason": "All three original scripts executed after a retained interruption; original, direct unwrapped and fresh-environment runs have authoritative receipts, stdout and arrays. Return-preserving wrappers were inspected and a direct execution comparison removes reliance on their results alone.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "evidence/run-index.json",
+          "sha256": "2ada27e2a1a7a3190e5f2d3c969e5cc7dd88ff96578359d1984932ed8ada036b"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/broker/index.json",
+          "sha256": "13dbc6770cdee8bfeb65ccc083d7ad664e45b70b85cc857d019d4f164f8c4e5b"
+        },
+        {
+          "root": "candidate",
+          "path": "scripts/run_capture.py",
+          "sha256": "c4d0f297bb0cf0b535bd3c3c8696ac17a4d8d9e589b36351c9dfd5a74500c10c"
+        },
+        {
+          "root": "candidate",
+          "path": "reproduction/fresh-check/history.json",
+          "sha256": "d24c9ca45808f50e2e76e7a17062c2e021a20788667d1be00b422a3fb217f2c0"
+        },
+        {
+          "root": "candidate",
+          "path": "reproduction/fresh-check/completion.json",
+          "sha256": "0a00f98ea24ba5e987fbf6e94e482c81f9317a3fb7d1883b15a44a954a3cc96d"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "score": 1,
+      "reason": "Original CORE score passes 6/6. Controller checks independently reconstruct all twelve predictor vectors from adjacency sets, fixed splits and Wine normalization, and compare all 96 numeric arrays/348 predictions from the fresh rerun.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "analysis/verification.json",
+          "sha256": "6443881b0e257c06b3475a20c1b10492f5c7d5437f8a4756aa1df8b2c91fd47c"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/diagnostics.json",
+          "sha256": "24140bb0dd68eb287474b52c6497fb80fb14539b415f9ad0403a2a1db349cd8f"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/results.json",
+          "sha256": "59e785cdde3168e7ee6405a4f7a5c09c1c5142721792fdc6213b31f6c05be600"
+        },
+        {
+          "root": "candidate",
+          "path": "report.json",
+          "sha256": "0d64a7e520b4b8be0e4ef2615b78fb5ab838867cf8ad32b5db645c69d7d94af0"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "score": 1,
+      "reason": "Report explicitly restricts inference to the fixed transductive splits, preserves mislabeled Iris/Zoo CS execution, discloses duplicates/self-loops and Zoo class imbalance, and makes no unsupported population interval or superiority claim.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "REPORT.md",
+          "sha256": "c26c92fe0ec82cf13bee3679466977e6cb95dbae684b8d75f96e71c50f0a6624"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/diagnostics.json",
+          "sha256": "24140bb0dd68eb287474b52c6497fb80fb14539b415f9ad0403a2a1db349cd8f"
+        },
+        {
+          "root": "candidate",
+          "path": "review.json",
+          "sha256": "ec182285099bd6321b41eae987a7f5c2511df5c555f3ec0acdedb42fa125a493"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "score": 1,
+      "reason": "The English report traces all requested values and limitations to actual outputs; tables distinguish printed labels from actual predictors. A plot is not required for this fixed-output reproduction task.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "REPORT.md",
+          "sha256": "c26c92fe0ec82cf13bee3679466977e6cb95dbae684b8d75f96e71c50f0a6624"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/measurements.json",
+          "sha256": "ff28e08226cefbc73815be8f8bca6ea130e894587dcd952653a321755a9d6d7e"
+        },
+        {
+          "root": "candidate",
+          "path": "report.json",
+          "sha256": "0d64a7e520b4b8be0e4ef2615b78fb5ab838867cf8ad32b5db645c69d7d94af0"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "score": 1,
+      "reason": "Full reproduction entrypoint was actually executed in a second pinned environment, including direct scripts and answer recomputation. Raw-only entrypoint also ran. All 349 manifest entries pass after restoration; minimal-environment fallback is documented with its actual test scope.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "REPRODUCE.md",
+          "sha256": "7f60508fe1c17ccb0a83b24badb0cf5a192ed5ddcb479bc7b2e3b371af1b79e2"
+        },
+        {
+          "root": "candidate",
+          "path": "requirements.lock",
+          "sha256": "e52ecea9c430b00ddb0309f73291b89c55a35527f50e2ec9e31242e411ece5c7"
+        },
+        {
+          "root": "candidate",
+          "path": "scripts/reproduce.py",
+          "sha256": "aa41c30a8af309f2fdb397fa125f593e057befe0e0ba4fedff9f321a6bfbaec2"
+        },
+        {
+          "root": "candidate",
+          "path": "scripts/recompute_entry.py",
+          "sha256": "3d6d72a9f5264afb08b1fcd2dc0bf2913363217b0ebc311eaa79c5dfb8fe132e"
+        },
+        {
+          "root": "candidate",
+          "path": "reproduction/fresh-check/environment.json",
+          "sha256": "1af6ef5dd44709366cda6d609d15f7e4631b8542c52239f6f78d2842a695729d"
+        },
+        {
+          "root": "candidate",
+          "path": "reproduction/fresh-check/completion.json",
+          "sha256": "0a00f98ea24ba5e987fbf6e94e482c81f9317a3fb7d1883b15a44a954a3cc96d"
+        },
+        {
+          "root": "candidate",
+          "path": "artifact-manifest.json",
+          "sha256": "3072cc7c47c1b84e85d774525e75bc2ca5669e9893a1349391838895a5be9af0"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "score": 1,
+      "reason": "Substantive critique names findings, the retained tie-boundary diagnostic correction and remaining limits. Its explicit aggregate reviewed revision and all 227 reviewed-file hashes match after restoration, including the final report.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "review.json",
+          "sha256": "ec182285099bd6321b41eae987a7f5c2511df5c555f3ec0acdedb42fa125a493"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/review-history/initial-audit/results.json",
+          "sha256": "780a3eff1f8ecbda758d0f0a01b0128e5d09aff5ce882e8d281016992769e8bf"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/diagnostics.json",
+          "sha256": "24140bb0dd68eb287474b52c6497fb80fb14539b415f9ad0403a2a1db349cd8f"
+        }
+      ]
+    }
+  ],
+  "critical_scientific_findings_unresolved": [],
+  "coordinator_task_messages": 0,
+  "candidate_edits_by_controller": 0,
+  "scope": "Original candidate outcome. Exact local computational reproduction, source/graph checks and substantive provisional critique; no population generalization, historical-environment equivalence or independent peer review."
+}

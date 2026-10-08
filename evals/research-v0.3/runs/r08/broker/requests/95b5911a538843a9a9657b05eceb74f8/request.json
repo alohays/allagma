@@ -1,0 +1,27 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "study/run.py",
+    "--dataset",
+    "gmm8",
+    "--seed",
+    "81",
+    "--policy",
+    "cosine",
+    "--duration",
+    "5000",
+    "--phase",
+    "pilot",
+    "--steps",
+    "5000",
+    "--qualify",
+    "--output",
+    "evidence/pilot/gmm81-cosine5000"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "pilot-gmm8-cosine-terminal",
+  "request_id": "95b5911a538843a9a9657b05eceb74f8",
+  "timeout_seconds": 40.0
+}

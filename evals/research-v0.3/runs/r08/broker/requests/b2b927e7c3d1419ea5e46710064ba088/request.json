@@ -1,0 +1,26 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "study/run.py",
+    "--dataset",
+    "gmm8",
+    "--seed",
+    "5003",
+    "--policy",
+    "constant",
+    "--duration",
+    "10000",
+    "--phase",
+    "confirmation",
+    "--output",
+    "evidence/confirmation/gmm8-5003-constant10000",
+    "--shared",
+    "evidence/inputs"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "confirm-gmm8-5003-constant10000",
+  "request_id": "b2b927e7c3d1419ea5e46710064ba088",
+  "timeout_seconds": 45.0
+}

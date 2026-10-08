@@ -1,0 +1,27 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "study/run.py",
+    "--dataset",
+    "moons",
+    "--seed",
+    "71",
+    "--policy",
+    "constant",
+    "--duration",
+    "10000",
+    "--phase",
+    "pilot",
+    "--steps",
+    "1000",
+    "--qualify",
+    "--output",
+    "evidence/pilot/moons71-attempt02"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "pilot-moons-recovery",
+  "request_id": "b9213bf45dad4403bd999e8e6807106b",
+  "timeout_seconds": 60.0
+}

@@ -1,0 +1,16 @@
+{
+  "dataset": "iris",
+  "script": "source/adapted/code/iris_sample.py",
+  "script_sha256": "eef48c00cb56e8756ad877f84ed2f3d1a04bd3773b23148ebb2d4766fff561cb",
+  "source_revision": "760ee67371596a5e087d62e159876600d54e76b92c4ca274dbfe8281146640bb",
+  "protocol_sha256": "58a244e32fbcd586608dcf426117c663a4c626e4b7a162f8a32e5ecb28ab3bc9",
+  "argv": [
+    "scripts/run_capture.py",
+    "iris",
+    "--output",
+    "evidence/attempts/01-iris-interrupted"
+  ],
+  "execution": "runpy.run_path with return-preserving capture wrappers",
+  "status": "started",
+  "calls": []
+}

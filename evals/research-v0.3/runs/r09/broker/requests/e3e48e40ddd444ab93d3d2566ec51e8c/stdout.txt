@@ -1,0 +1,30 @@
+{
+  "original_tree_sha256": "4a65a83c1d990306a2dec8c7b3ead075650355d93e0ad66d9b85a85080f2cb07",
+  "adapted_tree_sha256": "760ee67371596a5e087d62e159876600d54e76b92c4ca274dbfe8281146640bb",
+  "protocol_sha256": "58a244e32fbcd586608dcf426117c663a4c626e4b7a162f8a32e5ecb28ab3bc9",
+  "changed_files": [
+    "code/wine_sample.py",
+    "code/zoo_sample.py"
+  ]
+}
+{
+  "status": "passed",
+  "review_artifact_revision_sha256": "b46ea46c79338f1820d67141677ed389b589143b76e6f1b23a6a92355521d747",
+  "reviewed_artifacts_verified": 227,
+  "protected_input_files_verified": 33,
+  "local_document_links_verified": 45,
+  "measurement_calls_verified": 12,
+  "checks": [
+    "exact six original question keys and answers",
+    "fresh and recomputed reports equal",
+    "frozen source fidelity",
+    "supplied input byte hashes",
+    "installed requirements",
+    "reviewed artifact revision matches current files",
+    "measurement arrays and metrics",
+    "local report/document links",
+    "Python script syntax"
+  ],
+  "scope": "Package consistency and traceability; scientific checks are separately retained in analysis/verification.json and analysis/diagnostics.json.",
+  "manifest": "Created and separately verified after this result and broker receipt are archived."
+}

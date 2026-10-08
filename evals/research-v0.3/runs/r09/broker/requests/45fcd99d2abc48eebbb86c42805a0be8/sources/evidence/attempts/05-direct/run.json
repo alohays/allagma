@@ -1,0 +1,20 @@
+{
+  "execution": "uninstrumented runpy.run_path",
+  "runs": [
+    {
+      "dataset": "iris",
+      "script_sha256": "eef48c00cb56e8756ad877f84ed2f3d1a04bd3773b23148ebb2d4766fff561cb",
+      "status": "completed"
+    },
+    {
+      "dataset": "zoo",
+      "script_sha256": "a4a52a3dcc4708ef67ae8ecf6672433df836549046e98c5b66db2d8604099715",
+      "status": "completed"
+    },
+    {
+      "dataset": "wine",
+      "script_sha256": "92efce2e73ad9a8c95ba8dfe8bc763a9a222eef773ddbadcb51852b332568562",
+      "status": "completed"
+    }
+  ]
+}

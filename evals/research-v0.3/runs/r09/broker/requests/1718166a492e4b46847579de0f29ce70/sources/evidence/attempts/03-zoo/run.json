@@ -1,0 +1,105 @@
+{
+  "dataset": "zoo",
+  "script": "source/adapted/code/zoo_sample.py",
+  "script_sha256": "a4a52a3dcc4708ef67ae8ecf6672433df836549046e98c5b66db2d8604099715",
+  "source_revision": "760ee67371596a5e087d62e159876600d54e76b92c4ca274dbfe8281146640bb",
+  "protocol_sha256": "58a244e32fbcd586608dcf426117c663a4c626e4b7a162f8a32e5ecb28ab3bc9",
+  "argv": [
+    "scripts/run_capture.py",
+    "zoo",
+    "--output",
+    "evidence/attempts/03-zoo"
+  ],
+  "execution": "runpy.run_path with return-preserving capture wrappers",
+  "status": "completed",
+  "calls": [
+    {
+      "call": 1,
+      "display_predictor": "CN",
+      "actual_predictor": "CS",
+      "similarity": "manhattan",
+      "k": 2,
+      "n_jobs": 1,
+      "arrays": "evidence/attempts/03-zoo/call-01.npz",
+      "arrays_sha256": "b0d482ad178033b70cf04cdaf761ffea1ec19cebcbdb48c0a30d898a05f5aadf",
+      "train_shape": [
+        80,
+        16
+      ],
+      "test_shape": [
+        21,
+        16
+      ],
+      "original_train_labels_dtype": "object",
+      "original_test_labels_dtype": "object",
+      "graph_nodes": 108,
+      "graph_edges": 253
+    },
+    {
+      "call": 2,
+      "display_predictor": "AA",
+      "actual_predictor": "CS",
+      "similarity": "manhattan",
+      "k": 2,
+      "n_jobs": 1,
+      "arrays": "evidence/attempts/03-zoo/call-02.npz",
+      "arrays_sha256": "b0d482ad178033b70cf04cdaf761ffea1ec19cebcbdb48c0a30d898a05f5aadf",
+      "train_shape": [
+        80,
+        16
+      ],
+      "test_shape": [
+        21,
+        16
+      ],
+      "original_train_labels_dtype": "object",
+      "original_test_labels_dtype": "object",
+      "graph_nodes": 108,
+      "graph_edges": 253
+    },
+    {
+      "call": 3,
+      "display_predictor": "RA",
+      "actual_predictor": "CS",
+      "similarity": "manhattan",
+      "k": 2,
+      "n_jobs": 1,
+      "arrays": "evidence/attempts/03-zoo/call-03.npz",
+      "arrays_sha256": "b0d482ad178033b70cf04cdaf761ffea1ec19cebcbdb48c0a30d898a05f5aadf",
+      "train_shape": [
+        80,
+        16
+      ],
+      "test_shape": [
+        21,
+        16
+      ],
+      "original_train_labels_dtype": "object",
+      "original_test_labels_dtype": "object",
+      "graph_nodes": 108,
+      "graph_edges": 253
+    },
+    {
+      "call": 4,
+      "display_predictor": "CS",
+      "actual_predictor": "CS",
+      "similarity": "manhattan",
+      "k": 2,
+      "n_jobs": 1,
+      "arrays": "evidence/attempts/03-zoo/call-04.npz",
+      "arrays_sha256": "b0d482ad178033b70cf04cdaf761ffea1ec19cebcbdb48c0a30d898a05f5aadf",
+      "train_shape": [
+        80,
+        16
+      ],
+      "test_shape": [
+        21,
+        16
+      ],
+      "original_train_labels_dtype": "object",
+      "original_test_labels_dtype": "object",
+      "graph_nodes": 108,
+      "graph_edges": 253
+    }
+  ]
+}

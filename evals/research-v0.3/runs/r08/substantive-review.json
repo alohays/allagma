@@ -1,0 +1,237 @@
+{
+  "run_id": "r08",
+  "criteria": "evals/research-v0.3/frozen/source/evals/research-v0.3/CRITERIA.md",
+  "scientific_execution_verified": true,
+  "completion_verified": true,
+  "evidence_score": 8,
+  "evidence_total": 8,
+  "evidence_items": [
+    {
+      "id": 1,
+      "score": 1,
+      "reason": "Exact brief/source identity and source license are retained with an explicit AI-generated/adapted disclosure. The scientific module is byte-identical to the supplied reference.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "protocols/protocol-v1.json",
+          "sha256": "47fb3669611568c9580c49bee73a74c4878498be54e936f10e95a8fd0aeaf02d"
+        },
+        {
+          "root": "candidate",
+          "path": "LICENSE",
+          "sha256": "9c82e554a54dfcf2550b452801475a36f9cb909ede00b03e492089e4836a7462"
+        },
+        {
+          "root": "candidate",
+          "path": "study/science.py",
+          "sha256": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1"
+        },
+        {
+          "root": "candidate",
+          "path": "inputs/materials/SOURCES.md",
+          "sha256": "77070b11bcd53025ef4f363cb5935885b9e42541c066b390efe9b811e4c8972b"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "score": 1,
+      "reason": "The protected first-confirmation request contains the same frozen protocol/source revision. Pilot seeds are excluded; distinct cosine horizons and shared constant endpoints follow the prespecified paired design.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "protocols/freeze.json",
+          "sha256": "09fc5468d35109f4e51d2257db2d7ab9e482deb412718dceb5d1a66195dbd2b3"
+        },
+        {
+          "root": "candidate",
+          "path": "protocols/protocol-v1.json",
+          "sha256": "47fb3669611568c9580c49bee73a74c4878498be54e936f10e95a8fd0aeaf02d"
+        },
+        {
+          "root": "candidate",
+          "path": "study/confirm.sh",
+          "sha256": "c050d9432a2349783f8b23a7dc58c24816173cce722a13e4019e0e66c8d241b8"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "score": 1,
+      "reason": "All 32 cells and 96 states are supported by 24 successful trajectory receipts, source/config snapshots and complete update/LR/EMA traces totaling 200000 updates. Interrupted and failed requests remain retained; no full optimizer-state replay is inferred.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "evidence/execution-ledger.json",
+          "sha256": "9b4bda5a6a0e95416ccca0d07619501fe09bf1feda70998448edca4e14164979"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/recovery.json",
+          "sha256": "a8967c430716a863b5b33ac0cc7ad45ce444b2a9c3a3ecf926543b81629e4479"
+        },
+        {
+          "root": "candidate",
+          "path": "measurements.json",
+          "sha256": "65dadc8bde28d625cd978291f05aa78723164bf9758e95e38e5eecc511cb7898"
+        },
+        {
+          "root": "candidate",
+          "path": "study/run.py",
+          "sha256": "7b1cb1c7c0a4f40630132beeb8570cd1179017232ffea6bfd7f4b724d2218aec"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "score": 1,
+      "reason": "Original frozen score passes 240/240, including all saved-state sample replays. Controller reconstruction independently verifies all eight paired input groups, initial weights, prefix hashes, 66 paired statistical rows, eight absolute-quality rows and twelve coverage rows.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "analysis/verification.json",
+          "sha256": "79184a4cfdbc6e0b1c976b207046b50ca21263827ed0ffc9d4700e704d9cb479"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/summary.json",
+          "sha256": "4a1a4dce784781eb0a9e7dfe6c90360ee398b1518aa9e522f6ec5de864612ff2"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/regenerate-moons.json",
+          "sha256": "dc477295465bb500040b1b5db2ad6ea18556e1f9eb7edcfc79453b287ab0220c"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/regenerate-gmm8.json",
+          "sha256": "ce29f89389526b367ca78818cbe1b79397d8381d7825bef6ffc03dba3f547b40"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/recompute-audit.json",
+          "sha256": "26db7365aa843417ee0a7426c3adecb42365f1c830750b51bf6f51b67f089d62"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "score": 1,
+      "reason": "Uses four paired seeds within each dataset with unadjusted t intervals, sign-flip assumptions/granularity and leave-one-out sensitivity. The report distinguishes full-policy and duration effects, combined seed variability, finite-sample SW1 and coverage saturation; inconclusive intervals are not equivalence claims.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "REPORT.md",
+          "sha256": "f40e736a20d3afbbbbc12b0b813fb0a813cfc6991408b1b8f558c03a33d5a94c"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/summary.json",
+          "sha256": "4a1a4dce784781eb0a9e7dfe6c90360ee398b1518aa9e522f6ec5de864612ff2"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/seed-contrasts.csv",
+          "sha256": "1a9d2a208cd5fa0a1b70fb3af534edb0dbb44bd696bd6ebcf0e64eb4a8d2e6f8"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "score": 1,
+      "reason": "English report and visually inspected figure consistently link the numerical claims to data. Reporting revisions clarify estimands, uncertainty and scope without changing analysis, verification or figures.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "REPORT.md",
+          "sha256": "f40e736a20d3afbbbbc12b0b813fb0a813cfc6991408b1b8f558c03a33d5a94c"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/main-figure.png",
+          "sha256": "038aade453f46f2a0ab31505c7c651339a21304c68ed4c14c011db6f7c93ba86"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/claims.json",
+          "sha256": "c3bfb473036f9e59166b30ecaacefe7bd326880429afa22ed71b0304551292cb"
+        },
+        {
+          "root": "candidate",
+          "path": "revisions/report-v1/REPORT.md",
+          "sha256": "66612e32b9e31930f4a39faab03ffa04a062b6a250359b1269e65c10cea51e7b"
+        },
+        {
+          "root": "candidate",
+          "path": "revisions/report-v2/REPORT.md",
+          "sha256": "f40e736a20d3afbbbbc12b0b813fb0a813cfc6991408b1b8f558c03a33d5a94c"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "score": 1,
+      "reason": "Pinned dependency lock and executable broker-only full/recompute/regeneration entrypoints are documented, including restoration of a missing environment. Advertised recomputation was executed and nine derived files matched. All 356 manifest entries pass after restoration; a second full training replay is explicitly unperformed.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "REPRODUCE.md",
+          "sha256": "f4aa91f3865586b7907e73d8d82ee1e0e247cad98f8b71085a3bfe6b0b473d38"
+        },
+        {
+          "root": "candidate",
+          "path": "requirements-lock.txt",
+          "sha256": "a82e393c84f868dfff0ae47ef39aeee834342059996d835b66bf0ef4bcc42d03"
+        },
+        {
+          "root": "candidate",
+          "path": "study/reproduce.sh",
+          "sha256": "ce960af58df4f89e58dbe8e644a51d04252799de94bf9a25cfb4993e68e26f8d"
+        },
+        {
+          "root": "candidate",
+          "path": "study/recompute.sh",
+          "sha256": "8c2612ed099cd2365d4a5ef69d75b17a89c92f325061715ed731b93e62472061"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/recompute-audit.json",
+          "sha256": "26db7365aa843417ee0a7426c3adecb42365f1c830750b51bf6f51b67f089d62"
+        },
+        {
+          "root": "candidate",
+          "path": "artifact-manifest.json",
+          "sha256": "d6254e1d6c6aa90f70a65acd7d47c2b45a7d7451f3074ba5c812f60e393febac"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "score": 1,
+      "reason": "Substantive critique is bound to report-v1 by exact hashes; the response names report-v2 and its retained revision record binds the final manuscript. All eight revision artifacts match after restoration and scientific artifacts are unchanged between revisions. Review independence is explicitly absent.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "review.json",
+          "sha256": "f9c4730464785713209b99bb4de55ddbcc489357ec0137ce089e9bd2c61f7f3f"
+        },
+        {
+          "root": "candidate",
+          "path": "revisions/report-v1/revision.json",
+          "sha256": "6fe26f046f995640306a1bd0f44eef2fabc277690b79e306a4be35e98c22c232"
+        },
+        {
+          "root": "candidate",
+          "path": "revisions/report-v2/revision.json",
+          "sha256": "da10b68a832ea3d24c8308d41857a4e644353189d7268b30bdcbbaa677054654"
+        }
+      ]
+    }
+  ],
+  "critical_scientific_findings_unresolved": [],
+  "coordinator_task_messages": 0,
+  "candidate_edits_by_controller": 0,
+  "environment_recovery": "The candidate independently lowered the MPS low watermark to .1 and retained the broker high cap .2. All confirmation states used MPS with fallback disabled.",
+  "review_binding": "Accepts the candidate-owned review format: exact reviewed v1 material plus an explicit v2 response and final revision snapshot. No Allagma-specific schema is required.",
+  "scope": "Original candidate outcome with source/trace, input, numerical and review checks. No independent peer review, universal EMA claim, optimizer-state replay, or second complete training execution."
+}

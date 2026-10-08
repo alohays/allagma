@@ -1,0 +1,11 @@
+Completed and verified the [research package](</Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r09/candidate/submission.json>).
+
+| Dataset | Printed CN | Printed AA |
+|---|---:|---:|
+| Iris | 100% | 100% |
+| Zoo | 100% | 100% |
+| Wine | 97.22% | 97.22% |
+
+Iris and Zoo actually execute **CS** under those labels; this upstream limitation is preserved and explained in the [report](</Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r09/candidate/REPORT.md>).
+
+The controlled interruption was preserved and recovered. Fresh-environment reproduction, evidence-only recomputation, and verification of the 349-file manifest passed within the resource ceilings.

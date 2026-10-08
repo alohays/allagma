@@ -1,0 +1,86 @@
+{
+  "arrays": "evidence/confirmation/gmm8-5004-cosine10000/step10000-arrays.npz",
+  "attempt_id": "gmm8-5004-cosine10000",
+  "config": "evidence/confirmation/gmm8-5004-cosine10000/config.json",
+  "dataset": "gmm8",
+  "device": "mps",
+  "dtype": "float32",
+  "environment": {
+    "fallback": false,
+    "numpy": "2.4.6",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.11.6",
+    "torch": "2.14.1"
+  },
+  "generation_noise_sha256": "6d7b0898897519e987c20ba750c3ed88454dc586a8be523c278b377133bc65a3",
+  "hash_definition": "initial: sorted key+NUL+state bytes; prefix: clean+NUL+float32 train[indices[:5000]], noise+NUL+float32 noise[:5000], timesteps+NUL+int64 timesteps[:5000]; other arrays contiguous bytes",
+  "heldout_sha256": "b740ab3b19984bd95ef51d3b732e582d0886605388420b0fa6aeda9e2ccbad67",
+  "initial_weights": "evidence/confirmation/gmm8-5004-cosine10000/initial-weights.npz",
+  "initial_weights_sha256": "ccd6c899937127569e2761547b25cdcd06f9c6da40101f4b99abcabc759b7a02",
+  "metrics": {
+    "ema099": {
+      "covered_modes": 8,
+      "inlier_count": 2024,
+      "inlier_fraction": 0.98828125,
+      "mode_counts": [
+        242,
+        243,
+        256,
+        260,
+        269,
+        266,
+        240,
+        248
+      ],
+      "sw1": 0.024012757578222674
+    },
+    "ema0999": {
+      "covered_modes": 8,
+      "inlier_count": 2028,
+      "inlier_fraction": 0.990234375,
+      "mode_counts": [
+        242,
+        243,
+        256,
+        260,
+        270,
+        270,
+        243,
+        244
+      ],
+      "sw1": 0.024290568237472297
+    },
+    "raw": {
+      "covered_modes": 8,
+      "inlier_count": 2024,
+      "inlier_fraction": 0.98828125,
+      "mode_counts": [
+        242,
+        243,
+        256,
+        260,
+        269,
+        266,
+        240,
+        248
+      ],
+      "sw1": 0.023965322585068113
+    }
+  },
+  "phase": "confirmation",
+  "schedule": "cosine",
+  "schedule_duration": 10000,
+  "seed": 5004,
+  "shared_inputs": "evidence/inputs/gmm8-5004.npz",
+  "source_hashes": {
+    "LICENSE": "9c82e554a54dfcf2550b452801475a36f9cb909ede00b03e492089e4836a7462",
+    "protocols/protocol-v1.json": "47fb3669611568c9580c49bee73a74c4878498be54e936f10e95a8fd0aeaf02d",
+    "study/run.py": "7b1cb1c7c0a4f40630132beeb8570cd1179017232ffea6bfd7f4b724d2218aec",
+    "study/science.py": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1"
+  },
+  "source_revision": "8227ae2568c1c219517b5966f4da33b83a391d9271b4641f6d33bec99ee90fe1",
+  "training_prefix_5000_sha256": "b3e715e3eea9de53ae53bf3ef91a741ee2e18b06b7332620e6deee9f7a47680a",
+  "training_trace": "evidence/confirmation/gmm8-5004-cosine10000/trace.jsonl",
+  "updates": 10000,
+  "weights": "evidence/confirmation/gmm8-5004-cosine10000/step10000-weights.npz"
+}

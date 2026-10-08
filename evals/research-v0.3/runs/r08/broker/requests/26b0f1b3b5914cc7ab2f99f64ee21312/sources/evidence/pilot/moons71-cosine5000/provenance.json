@@ -1,0 +1,27 @@
+{
+  "attempt_id": "moons71-cosine5000",
+  "device": "mps",
+  "dtype": "float32",
+  "environment": {
+    "fallback": false,
+    "numpy": "2.4.6",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.11.6",
+    "torch": "2.14.1"
+  },
+  "generation_noise_sha256": "98e1cc8b325187e95c9253a943d365481dbb6d07252814b4bbd71503fa7aaedd",
+  "hash_definition": "initial: sorted key+NUL+state bytes; prefix: clean+NUL+float32 train[indices[:5000]], noise+NUL+float32 noise[:5000], timesteps+NUL+int64 timesteps[:5000]; other arrays contiguous bytes",
+  "heldout_sha256": "b7323dd4adc077f6e61656b88bc349eac91100b7e21fe1cf8eeb47ad5f6066e6",
+  "initial_weights": "evidence/pilot/moons71-cosine5000/initial-weights.npz",
+  "initial_weights_sha256": "6349f27ed4ff858c1ada9219804c2f59d0b818cf25c01629c09a6ce68396b155",
+  "shared_inputs": "evidence/inputs/moons-71.npz",
+  "source_hashes": {
+    "LICENSE": "9c82e554a54dfcf2550b452801475a36f9cb909ede00b03e492089e4836a7462",
+    "protocols/protocol-v1.json": "47fb3669611568c9580c49bee73a74c4878498be54e936f10e95a8fd0aeaf02d",
+    "study/run.py": "7b1cb1c7c0a4f40630132beeb8570cd1179017232ffea6bfd7f4b724d2218aec",
+    "study/science.py": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1"
+  },
+  "source_revision": "8227ae2568c1c219517b5966f4da33b83a391d9271b4641f6d33bec99ee90fe1",
+  "training_prefix_5000_sha256": "b85b68f53dfab27cb56ce8c1be4ed11ae69e65e5b49f1df13d0809b771355ea5",
+  "training_trace": "evidence/pilot/moons71-cosine5000/trace.jsonl"
+}

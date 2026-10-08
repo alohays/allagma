@@ -1,0 +1,39 @@
+{
+  "status": "pass",
+  "preconfirmation_snapshot": {
+    "path": "broker/requests/3fafb59823f3429d855daab2bd35bf6c/sources/protocols/freeze.json",
+    "sha256": "09fc5468d35109f4e51d2257db2d7ab9e482deb412718dceb5d1a66195dbd2b3"
+  },
+  "reference_science_unchanged": true,
+  "training": "Reference 296450-parameter MPS float32 denoiser; fixed AdamW/clip/EMA recurrences, matched input streams, 24 trajectories and 200000 updates. Both cosine durations are independently executed. All final models are loadable and all sample replays pass.",
+  "execution_scope": "Complete source loops, authoritative request receipts and 100-update traces support the declared history. Optimizer states were not retained for independent replay; no such replay is claimed.",
+  "reproduction": "Fresh-environment and raw-only shell entrypoints use sequential broker requests; lexical venv interpreter paths and unused reproduction destinations are retained. Missing-environment setup is explicitly documented for recomputation.",
+  "review_response": "Only reporting/interpretation changed from v1 to v2. The analysis summary, verification and figure snapshots are byte-identical, and the final REPORT.md equals its v2 snapshot.",
+  "evidence": [
+    {
+      "root": "candidate",
+      "path": "study/run.py",
+      "sha256": "7b1cb1c7c0a4f40630132beeb8570cd1179017232ffea6bfd7f4b724d2218aec"
+    },
+    {
+      "root": "candidate",
+      "path": "study/analyze.py",
+      "sha256": "045ab5a9bcf565c25f120c5523cd6ca40989c0056eb474988eb55e81225a7292"
+    },
+    {
+      "root": "candidate",
+      "path": "study/reproduce.sh",
+      "sha256": "ce960af58df4f89e58dbe8e644a51d04252799de94bf9a25cfb4993e68e26f8d"
+    },
+    {
+      "root": "candidate",
+      "path": "study/recompute.sh",
+      "sha256": "8c2612ed099cd2365d4a5ef69d75b17a89c92f325061715ed731b93e62472061"
+    },
+    {
+      "root": "candidate",
+      "path": "protocols/protocol-v1.json",
+      "sha256": "47fb3669611568c9580c49bee73a74c4878498be54e936f10e95a8fd0aeaf02d"
+    }
+  ]
+}

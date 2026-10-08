@@ -1,0 +1,28 @@
+{
+  "format": "culp-resource-accounting-v1",
+  "snapshot_utc": "2026-10-08T05:37:23.841709+00:00",
+  "scope": "All receipts archived in evidence/broker/index.json through this snapshot; the final manifest-verification receipt is retained separately after inventory sealing.",
+  "categories": {
+    "setup": {
+      "requests": 6,
+      "charged_seconds": 17.100843085208908,
+      "ceiling_seconds": 300
+    },
+    "compute": {
+      "requests": 14,
+      "charged_seconds": 71.18357841460966,
+      "ceiling_seconds": 600
+    }
+  },
+  "compute_request_ceiling": 32,
+  "noncompleted_requests": [
+    "f2d4eca92e4d4bde9fbe1a6b7c46a517"
+  ],
+  "max_sampled_process_tree_rss_bytes": 223903744,
+  "max_sampled_storage_bytes": 706013789,
+  "rss_ceiling_bytes": 8589934592,
+  "storage_ceiling_bytes": 6442450944,
+  "native_session_ceiling_seconds": 3600,
+  "native_session_accounting": "Separate controller accounting, not measured by scientific broker; no native wall-time stop occurred.",
+  "all_archived_charges_within_ceilings": true
+}

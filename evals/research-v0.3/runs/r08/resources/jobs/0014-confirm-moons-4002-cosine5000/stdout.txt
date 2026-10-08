@@ -1,0 +1,7 @@
+{"step": 1, "noise_mse": 1.0313172340393066, "preclip_grad_norm": 1.6533443927764893, "lr": 0.0003, "ema_updates": 1, "elapsed_seconds": 2.003704084083438}
+{"step": 1000, "noise_mse": 0.46491724252700806, "preclip_grad_norm": 0.9089688062667847, "lr": 0.00027140792265347954, "ema_updates": 1000, "elapsed_seconds": 3.210013084113598}
+{"step": 2000, "noise_mse": 0.5162373781204224, "preclip_grad_norm": 0.6456406712532043, "lr": 0.00019644217496566044, "ema_updates": 2000, "elapsed_seconds": 4.329360458999872}
+{"step": 3000, "noise_mse": 0.527369499206543, "preclip_grad_norm": 0.845264196395874, "lr": 0.00010373709495242857, "ema_updates": 3000, "elapsed_seconds": 5.44450741703622}
+{"step": 4000, "noise_mse": 0.47270774841308594, "preclip_grad_norm": 0.5076109766960144, "lr": 2.8702872249059843e-05, "ema_updates": 4000, "elapsed_seconds": 6.576355000026524}
+{"step": 5000, "noise_mse": 0.46159565448760986, "preclip_grad_norm": 0.5286026000976562, "lr": 2.9608812235348834e-11, "ema_updates": 5000, "elapsed_seconds": 7.723275584168732}
+{"output": "evidence/confirmation/moons-4002-cosine5000", "timing": {"total_seconds": 8.188437125179917, "training_seconds": 6.9679646249860525, "evaluation_seconds": 0.4650898748077452, "milestones": [{"step": 5000, "cumulative_training_seconds": 6.9679646249860525}], "updates": 5000, "seconds_per_update": 0.0013935929249972105}}

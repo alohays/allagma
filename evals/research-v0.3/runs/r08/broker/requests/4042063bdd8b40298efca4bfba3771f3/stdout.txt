@@ -1,0 +1,7 @@
+{"step": 1, "noise_mse": 1.0200755596160889, "preclip_grad_norm": 1.4183000326156616, "lr": 0.0003, "ema_updates": 1, "elapsed_seconds": 2.05712474999018}
+{"step": 1000, "noise_mse": 0.4554700553417206, "preclip_grad_norm": 1.2407238483428955, "lr": 0.00027140792265347954, "ema_updates": 1000, "elapsed_seconds": 3.2415547920390964}
+{"step": 2000, "noise_mse": 0.3993653655052185, "preclip_grad_norm": 0.6688361167907715, "lr": 0.00019644217496566044, "ema_updates": 2000, "elapsed_seconds": 4.341354083037004}
+{"step": 3000, "noise_mse": 0.45778053998947144, "preclip_grad_norm": 0.603408932685852, "lr": 0.00010373709495242857, "ema_updates": 3000, "elapsed_seconds": 5.449976792093366}
+{"step": 4000, "noise_mse": 0.4333820939064026, "preclip_grad_norm": 0.5807248950004578, "lr": 2.8702872249059843e-05, "ema_updates": 4000, "elapsed_seconds": 6.542498999973759}
+{"step": 5000, "noise_mse": 0.4588356614112854, "preclip_grad_norm": 0.6430580615997314, "lr": 2.9608812235348834e-11, "ema_updates": 5000, "elapsed_seconds": 7.646441458025947}
+{"output": "evidence/pilot/moons71-cosine5000", "timing": {"total_seconds": 8.320970583008602, "training_seconds": 6.834984208922833, "evaluation_seconds": 0.4576872081961483, "milestones": [{"step": 5000, "cumulative_training_seconds": 6.834984208922833}], "updates": 5000, "seconds_per_update": 0.0013669968417845666}}

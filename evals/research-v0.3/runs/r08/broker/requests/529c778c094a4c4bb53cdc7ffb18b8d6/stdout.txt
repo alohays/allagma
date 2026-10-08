@@ -1,0 +1,26 @@
+{"claims_checked": 12, "all_passed": true}
+{
+  "verification": {
+    "all_passed": true,
+    "submission_schema": true,
+    "manifest_hashes": true,
+    "review_revision_hash": true,
+    "reported_tables_exactly_match_recomputed_data": true,
+    "numerical_and_regeneration_checks": true
+  },
+  "accounting": {
+    "as_of": "2026-10-08T04:33:01.242245+00:00",
+    "accounting": "completed receipts charged by measured supervisor wall time; current packaging request has no response until this process exits",
+    "charged_seconds_completed": {
+      "compute": 419.1966031691991,
+      "setup": 22.271725958911702
+    },
+    "conservative_upper_including_pending": {
+      "compute": 440.1966031691991,
+      "setup": 22.271725958911702
+    },
+    "compute_requests": 38,
+    "setup_requests": 4,
+    "pending_requests": 1
+  }
+}

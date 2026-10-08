@@ -1,0 +1,135 @@
+[
+  {
+    "request_id": "166dd3489a7b43e1bdde7eb8fa2313ca",
+    "label": "zoo-capture",
+    "category": "compute",
+    "marked_attempt": false,
+    "receipt": "evidence/broker/166dd3489a7b43e1bdde7eb8fa2313ca/response.json",
+    "result": {
+      "charge_basis": "measured supervisor wall time",
+      "charged_seconds": 1.0488342919852585,
+      "ended_at": "2026-10-08T05:19:37.090992+00:00",
+      "exit_code": 0,
+      "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r09/resources/jobs/0006-zoo-capture",
+      "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+      "peak_rss_bytes": 160284672,
+      "peak_storage_bytes": 384605599,
+      "status": "completed"
+    },
+    "injected_interruption": false
+  },
+  {
+    "request_id": "1718166a492e4b46847579de0f29ce70",
+    "label": "wine-capture",
+    "category": "compute",
+    "marked_attempt": false,
+    "receipt": "evidence/broker/1718166a492e4b46847579de0f29ce70/response.json",
+    "result": {
+      "charge_basis": "measured supervisor wall time",
+      "charged_seconds": 0.9863847908563912,
+      "ended_at": "2026-10-08T05:21:54.505797+00:00",
+      "exit_code": 0,
+      "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r09/resources/jobs/0007-wine-capture",
+      "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+      "peak_rss_bytes": 159940608,
+      "peak_storage_bytes": 384738178,
+      "status": "completed"
+    },
+    "injected_interruption": false
+  },
+  {
+    "request_id": "6928f8f3b780444fa49c48e48446f63a",
+    "label": "environment-record",
+    "category": "setup",
+    "marked_attempt": false,
+    "receipt": "evidence/broker/6928f8f3b780444fa49c48e48446f63a/response.json",
+    "result": {
+      "charge_basis": "measured supervisor wall time",
+      "charged_seconds": 0.1654015420936048,
+      "ended_at": "2026-10-08T05:18:01.471601+00:00",
+      "exit_code": 0,
+      "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r09/resources/jobs/0003-environment-record",
+      "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+      "peak_rss_bytes": 3981312,
+      "peak_storage_bytes": 384545656,
+      "status": "completed"
+    },
+    "injected_interruption": false
+  },
+  {
+    "request_id": "a10aebe3d1e34c058a282eeb868f83bc",
+    "label": "iris-recovery",
+    "category": "compute",
+    "marked_attempt": false,
+    "receipt": "evidence/broker/a10aebe3d1e34c058a282eeb868f83bc/response.json",
+    "result": {
+      "charge_basis": "measured supervisor wall time",
+      "charged_seconds": 31.230367083800957,
+      "ended_at": "2026-10-08T05:19:30.264310+00:00",
+      "exit_code": 0,
+      "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r09/resources/jobs/0005-iris-recovery",
+      "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+      "peak_rss_bytes": 165052416,
+      "peak_storage_bytes": 384603435,
+      "status": "completed"
+    },
+    "injected_interruption": false
+  },
+  {
+    "request_id": "d36f18b0a94746d99f62654efefedc11",
+    "label": "offline-packages",
+    "category": "setup",
+    "marked_attempt": false,
+    "receipt": "evidence/broker/d36f18b0a94746d99f62654efefedc11/response.json",
+    "result": {
+      "charge_basis": "measured supervisor wall time",
+      "charged_seconds": 6.257627083919942,
+      "ended_at": "2026-10-08T05:17:53.623812+00:00",
+      "exit_code": 0,
+      "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r09/resources/jobs/0002-offline-packages",
+      "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+      "peak_rss_bytes": 223903744,
+      "peak_storage_bytes": 384542596,
+      "status": "completed"
+    },
+    "injected_interruption": false
+  },
+  {
+    "request_id": "e315198ace3f4c608ffbf1e1ff752981",
+    "label": "isolated-venv",
+    "category": "setup",
+    "marked_attempt": false,
+    "receipt": "evidence/broker/e315198ace3f4c608ffbf1e1ff752981/response.json",
+    "result": {
+      "charge_basis": "measured supervisor wall time",
+      "charged_seconds": 1.7689390000887215,
+      "ended_at": "2026-10-08T05:15:22.039247+00:00",
+      "exit_code": 0,
+      "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r09/resources/jobs/0001-isolated-venv",
+      "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+      "peak_rss_bytes": 174915584,
+      "peak_storage_bytes": 89507938,
+      "status": "completed"
+    },
+    "injected_interruption": false
+  },
+  {
+    "request_id": "f2d4eca92e4d4bde9fbe1a6b7c46a517",
+    "label": "iris-marked-initial",
+    "category": "compute",
+    "marked_attempt": true,
+    "receipt": "evidence/broker/f2d4eca92e4d4bde9fbe1a6b7c46a517/response.json",
+    "result": {
+      "charge_basis": "measured supervisor wall time",
+      "charged_seconds": 1.1360937079880387,
+      "ended_at": "2026-10-08T05:18:07.013209+00:00",
+      "exit_code": -15,
+      "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r09/resources/jobs/0004-iris-marked-initial",
+      "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+      "peak_rss_bytes": 21348352,
+      "peak_storage_bytes": 384548997,
+      "status": "timed_out"
+    },
+    "injected_interruption": true
+  }
+]

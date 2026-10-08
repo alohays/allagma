@@ -1,0 +1,33 @@
+{
+  "format": "culp-run-index-v1",
+  "interrupted": {
+    "directory": "evidence/attempts/01-iris-interrupted",
+    "attempt_id": "f2d4eca92e4d4bde9fbe1a6b7c46a517",
+    "receipt": "evidence/broker/f2d4eca92e4d4bde9fbe1a6b7c46a517/response.json"
+  },
+  "runs": [
+    {
+      "dataset": "iris",
+      "directory": "evidence/attempts/02-iris-recovery",
+      "attempt_id": "a10aebe3d1e34c058a282eeb868f83bc",
+      "receipt": "evidence/broker/a10aebe3d1e34c058a282eeb868f83bc/response.json"
+    },
+    {
+      "dataset": "zoo",
+      "directory": "evidence/attempts/03-zoo",
+      "attempt_id": "166dd3489a7b43e1bdde7eb8fa2313ca",
+      "receipt": "evidence/broker/166dd3489a7b43e1bdde7eb8fa2313ca/response.json"
+    },
+    {
+      "dataset": "wine",
+      "directory": "evidence/attempts/04-wine",
+      "attempt_id": "1718166a492e4b46847579de0f29ce70",
+      "receipt": "evidence/broker/1718166a492e4b46847579de0f29ce70/response.json"
+    }
+  ],
+  "direct": {
+    "directory": "evidence/attempts/05-direct",
+    "attempt_id": "89503438817f4bea87fde558f5d3ff1d",
+    "receipt": "evidence/broker/89503438817f4bea87fde558f5d3ff1d/response.json"
+  }
+}

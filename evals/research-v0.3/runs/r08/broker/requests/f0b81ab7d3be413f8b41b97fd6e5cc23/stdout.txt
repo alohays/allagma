@@ -1,0 +1,16 @@
+{
+  "required_trajectories": 24,
+  "required_updates": 200000,
+  "required_cells": 32,
+  "required_model_states": 96,
+  "slowest_pilot_seconds_per_update": 0.002326633166987449,
+  "worst_pilot_three_variant_evaluation_seconds": 0.45876937499269843,
+  "remaining_work_seconds_conservative": 1332.0145067945123,
+  "formula": "200000 * slowest pilot sec/update * 2 + 24 * 8 startup/input seconds + 32 * worst 3-state evaluation seconds * 2 + 180 analysis/verification/recovery seconds",
+  "charged_before_freeze": {
+    "setup": 22.271725958911702,
+    "compute": 30.57352629257366
+  },
+  "projected_total_compute_seconds": 1362.588033087086,
+  "remaining_attempts_planned_upper": 34
+}

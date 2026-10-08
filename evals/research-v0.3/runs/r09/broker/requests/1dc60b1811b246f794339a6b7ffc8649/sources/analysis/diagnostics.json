@@ -1,0 +1,134 @@
+{
+  "status": "passed",
+  "fresh_run_comparison": {
+    "calls": 12,
+    "arrays_compared": 96,
+    "predictions_compared": 348,
+    "all_arrays_exactly_equal": true
+  },
+  "datasets": [
+    {
+      "dataset": "iris",
+      "train": 120,
+      "test": 30,
+      "self_loops": 1,
+      "duplicate_feature_rows": 2,
+      "test_rows_identical_to_at_least_one_training_row": 0,
+      "duplicate_test_positions": [],
+      "k_boundary_tie_nodes": 107,
+      "class_counts_train": [
+        40,
+        41,
+        39
+      ],
+      "class_counts_test": [
+        10,
+        9,
+        11
+      ],
+      "printed_predictor_accuracy_percent": {
+        "CN": 100.0,
+        "AA": 100.0,
+        "RA": 100.0,
+        "CS": 100.0
+      },
+      "actual_predictors": {
+        "CN": "CS",
+        "AA": "CS",
+        "RA": "CS",
+        "CS": "CS"
+      },
+      "all_independent_argmax_exact": true
+    },
+    {
+      "dataset": "zoo",
+      "train": 80,
+      "test": 21,
+      "self_loops": 28,
+      "duplicate_feature_rows": 61,
+      "test_rows_identical_to_at_least_one_training_row": 15,
+      "duplicate_test_positions": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        13,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "k_boundary_tie_nodes": 70,
+      "class_counts_train": [
+        29,
+        18,
+        4,
+        11,
+        4,
+        5,
+        9
+      ],
+      "class_counts_test": [
+        12,
+        2,
+        1,
+        2,
+        0,
+        3,
+        1
+      ],
+      "printed_predictor_accuracy_percent": {
+        "CN": 100.0,
+        "AA": 100.0,
+        "RA": 100.0,
+        "CS": 100.0
+      },
+      "actual_predictors": {
+        "CN": "CS",
+        "AA": "CS",
+        "RA": "CS",
+        "CS": "CS"
+      },
+      "all_independent_argmax_exact": true
+    },
+    {
+      "dataset": "wine",
+      "train": 142,
+      "test": 36,
+      "self_loops": 0,
+      "duplicate_feature_rows": 0,
+      "test_rows_identical_to_at_least_one_training_row": 0,
+      "duplicate_test_positions": [],
+      "k_boundary_tie_nodes": 0,
+      "class_counts_train": [
+        45,
+        57,
+        40
+      ],
+      "class_counts_test": [
+        14,
+        14,
+        8
+      ],
+      "printed_predictor_accuracy_percent": {
+        "CN": 97.22,
+        "AA": 97.22,
+        "RA": 97.22,
+        "CS": 100.0
+      },
+      "actual_predictors": {
+        "CN": "CN",
+        "AA": "AA",
+        "RA": "RA",
+        "CS": "CS"
+      },
+      "all_independent_argmax_exact": true
+    }
+  ]
+}

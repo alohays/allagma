@@ -1,0 +1,17 @@
+{
+  "injected_interruption": false,
+  "isolation_sha256": "d6f578175c5dc3e8ec0eee7f53b9398e0abfd7163ce0dc221efa42d819f372bc",
+  "reconciled_after_controller_restart": false,
+  "request_id": "98a399d2a02642b69b23880ac995e2d4",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 6.51557279098779,
+    "ended_at": "2026-10-08T04:11:47.040934+00:00",
+    "exit_code": 1,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r08/resources/jobs/0003-import-and-device-check",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 215646208,
+    "peak_storage_bytes": 1094802579,
+    "status": "failed"
+  }
+}

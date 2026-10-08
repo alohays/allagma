@@ -1,0 +1,85 @@
+{
+  "format": "research-review-v1",
+  "task_id": "ema-schedule",
+  "review_type": "substantive author self-critique; not independent peer review",
+  "reviewer": "OpenAI Codex, same AI author; no external or sub-agent reviewer",
+  "material_revision": {
+    "name": "report-v1",
+    "manuscript": "revisions/report-v1/REPORT.md",
+    "manuscript_sha256": "66612e32b9e31930f4a39faab03ffa04a062b6a250359b1269e65c10cea51e7b",
+    "revision_record": "revisions/report-v1/revision.json",
+    "analysis": "revisions/report-v1/summary.json",
+    "analysis_sha256": "4a1a4dce784781eb0a9e7dfe6c90360ee398b1518aa9e522f6ec5de864612ff2",
+    "figure": "revisions/report-v1/main-figure.png"
+  },
+  "overall_assessment": "The requested crossed design is complete with separate cosine horizons, matched inputs and retained weights. The descriptive schedule pattern is consistent, but evidence for population schedule effects is narrow and duration dependence remains inconclusive. Accept as a bounded follow-up after reporting revisions, not as a general mechanism or universal EMA recommendation.",
+  "strengths": [
+    "A true terminal 5k cosine condition removes the prior schedule-position/duration confound; constant trajectory reuse is valid.",
+    "Frozen protocol, source hashes, pilot-only qualification and runtime forecast precede untouched confirmation seeds.",
+    "Eight matched seed groups are respected; 24 trajectories and 96 states are not counted as independent replicates.",
+    "All 96 saved states regenerate samples exactly, and independent metric/contrast formulas agree.",
+    "Interrupted and failed attempts remain visible and are excluded from scientific replication counts."
+  ],
+  "findings": [
+    {
+      "id": "R1", "severity": "major",
+      "target": "report-v1 Abstract and Scientific methods uncertainty paragraph",
+      "critique": "Two t intervals excluding zero are highlighted, but the report omits that four pairs give a minimum two-sided sign-flip p of 0.125. The shape of a four-seed distribution is not assessable. Readers may mistake t intervals for robust or multiplicity-controlled confirmation.",
+      "evidence": ["analysis/summary.json#/ema_effect_contrasts", "analysis/seed-contrasts.csv"],
+      "requested_change": "State sign-flip granularity and its symmetry assumption, the fragile t approximation, and unadjusted multiplicity.",
+      "resolution": "Addressed in report-v2 uncertainty and limitations; no new analysis or selection.",
+      "remaining_limitation": "Four seeds and unadjusted comparisons cannot provide strong simultaneous evidence."
+    },
+    {
+      "id": "R2", "severity": "major",
+      "target": "report-v1 contrast definitions and interaction interpretation",
+      "critique": "Exact contrast sign conventions are delegated to protocol and machine tables. Interaction intervals spanning zero must not be read as proving duration irrelevant; sizable effects in both directions remain compatible with these data.",
+      "evidence": ["analysis/summary.json#/ema_effect_contrasts", "protocols/protocol-v1.json#/evaluation"],
+      "requested_change": "Write the three contrast equations and distinguish unresolved interaction from equivalence or absence of duration effects.",
+      "resolution": "Addressed in report-v2 with equations and explicit inconclusive interpretation.",
+      "remaining_limitation": "More seeds or durations are needed for precise interaction estimates."
+    },
+    {
+      "id": "R3", "severity": "medium",
+      "target": "report-v1 cosine LR methods",
+      "critique": "Reference update indexing is correct, but 'terminal cosine' may suggest the last update uses exactly zero. The last applied LR is positive; zero is the boundary after the selected duration.",
+      "evidence": ["study/run.py", "evidence/pilot/moons71-cosine5000/trace.jsonl", "evidence/confirmation/moons-4001-cosine10000/trace.jsonl"],
+      "requested_change": "Disclose last-step values and zero boundary; do not change training after confirmation.",
+      "resolution": "Addressed in report-v2: last applied LR approximately 2.96e-11 (5k) and 7.40e-12 (10k), mathematical boundary zero. Frozen training unchanged.",
+      "remaining_limitation": "The result describes declared reference indexing, not another endpoint-inclusive discretization."
+    },
+    {
+      "id": "R4", "severity": "medium",
+      "target": "report-v1 GMM8 coverage interpretation",
+      "critique": "The ceiling is acknowledged, but eight covered modes and high inlier fraction do not guarantee correct mixture mass. Both can hide excess concentration in a subset of modes.",
+      "evidence": ["measurements.json", "analysis/summary.json#/gmm8_coverage"],
+      "requested_change": "State that correct mode balance and equivalence are not established; direct readers to all eight counts and primary SW1.",
+      "resolution": "Addressed in report-v2 without changing the original radius/denominator rule.",
+      "remaining_limitation": "Coverage is saturated in all 48 GMM8 states and supplies no discrimination."
+    },
+    {
+      "id": "R5", "severity": "medium",
+      "target": "report-v1 uncertainty scope and finite-sample limitations",
+      "critique": "Each seed changes training, held-out data and generation noise together. Intervals summarize combined variability, not optimizer-only variance. Shared draws reduce comparison noise, but empirical SW1 remains positive even for perfect distribution matching; no independent measurement-floor experiment was specified.",
+      "evidence": ["protocols/protocol-v1.json#/matching", "measurements.json", "study/science.py"],
+      "requested_change": "Describe combined seed variability and avoid equating near-zero EMA-minus-raw differences with equal population distributions.",
+      "resolution": "Addressed in report-v2; no post-confirmation calibration or floor subtraction was added.",
+      "remaining_limitation": "Training/evaluation variance decomposition and generalization over sampling streams remain unmeasured."
+    },
+    {
+      "id": "R6", "severity": "medium",
+      "target": "report-v1 completion and reproduction assessment",
+      "critique": "Evidence supports a complete original campaign and exact checkpoint regeneration, but not a second end-to-end execution of the separate full reproduction script. Interruption occurred before a training trace, demonstrating restart rather than optimizer-state resume.",
+      "evidence": ["evidence/recovery.json", "analysis/regenerate-moons.json", "analysis/regenerate-gmm8.json", "study/reproduce.sh"],
+      "requested_change": "State precisely what executed; distinguish restart, retraining and resampling in the completion assessment.",
+      "resolution": "Addressed in report-v2. Original fresh setup, all 24 trajectories and all 96 sample regenerations ran; the separate full reproduction script is provided, not claimed as a second campaign.",
+      "remaining_limitation": "Same-host regeneration does not guarantee identical training on another backend/release."
+    }
+  ],
+  "revision_response": {
+    "final_material_revision": "report-v2", "final_manuscript": "REPORT.md",
+    "scientific_protocol_changed": false, "confirmation_retrained_or_reselected": false, "numerical_results_changed": false,
+    "changes": "Explicit contrasts; sign-flip granularity, t assumptions and multiplicity; LR boundary; coverage/mode balance; combined seed variance; precise completion assessment.",
+    "unresolved_scientific_limitations": ["n=4 per dataset", "multiple unadjusted comparisons", "unresolved interactions", "synthetic distributions and one backend", "coverage ceiling", "no isolated mechanism or variance decomposition"]
+  }
+}

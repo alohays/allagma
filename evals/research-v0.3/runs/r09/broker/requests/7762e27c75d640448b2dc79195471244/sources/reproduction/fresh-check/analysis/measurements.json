@@ -1,0 +1,212 @@
+{
+  "format": "research-measurements-v1",
+  "task_id": "core-culp",
+  "protocol": "PROTOCOL.md",
+  "schema_note": "CULP extension: supplied MEASUREMENTS.md defines no CULP-specific fields. Arrays contain raw_data, raw_labels, train, test, train_labels, test_labels, prediction, graph_edges; all are numeric and load with allow_pickle=False.",
+  "runs": [
+    {
+      "dataset": "iris",
+      "display_predictor": "CN",
+      "actual_predictor": "CS",
+      "phase": "reproduction",
+      "device": "cpu",
+      "arrays": "reproduction/fresh-check/iris-attempt-01/call-01.npz",
+      "metrics": {
+        "correct": 30,
+        "n_test": 30,
+        "accuracy_percent": 100.0,
+        "accuracy_fraction": 1.0
+      },
+      "source_revision": "760ee67371596a5e087d62e159876600d54e76b92c4ca274dbfe8281146640bb",
+      "attempt_id": "fa9b7d9ed5994a7599b99de0e945a546",
+      "trace": "reproduction/fresh-check/iris-attempt-01/events.jsonl"
+    },
+    {
+      "dataset": "iris",
+      "display_predictor": "AA",
+      "actual_predictor": "CS",
+      "phase": "reproduction",
+      "device": "cpu",
+      "arrays": "reproduction/fresh-check/iris-attempt-01/call-02.npz",
+      "metrics": {
+        "correct": 30,
+        "n_test": 30,
+        "accuracy_percent": 100.0,
+        "accuracy_fraction": 1.0
+      },
+      "source_revision": "760ee67371596a5e087d62e159876600d54e76b92c4ca274dbfe8281146640bb",
+      "attempt_id": "fa9b7d9ed5994a7599b99de0e945a546",
+      "trace": "reproduction/fresh-check/iris-attempt-01/events.jsonl"
+    },
+    {
+      "dataset": "iris",
+      "display_predictor": "RA",
+      "actual_predictor": "CS",
+      "phase": "reproduction",
+      "device": "cpu",
+      "arrays": "reproduction/fresh-check/iris-attempt-01/call-03.npz",
+      "metrics": {
+        "correct": 30,
+        "n_test": 30,
+        "accuracy_percent": 100.0,
+        "accuracy_fraction": 1.0
+      },
+      "source_revision": "760ee67371596a5e087d62e159876600d54e76b92c4ca274dbfe8281146640bb",
+      "attempt_id": "fa9b7d9ed5994a7599b99de0e945a546",
+      "trace": "reproduction/fresh-check/iris-attempt-01/events.jsonl"
+    },
+    {
+      "dataset": "iris",
+      "display_predictor": "CS",
+      "actual_predictor": "CS",
+      "phase": "reproduction",
+      "device": "cpu",
+      "arrays": "reproduction/fresh-check/iris-attempt-01/call-04.npz",
+      "metrics": {
+        "correct": 30,
+        "n_test": 30,
+        "accuracy_percent": 100.0,
+        "accuracy_fraction": 1.0
+      },
+      "source_revision": "760ee67371596a5e087d62e159876600d54e76b92c4ca274dbfe8281146640bb",
+      "attempt_id": "fa9b7d9ed5994a7599b99de0e945a546",
+      "trace": "reproduction/fresh-check/iris-attempt-01/events.jsonl"
+    },
+    {
+      "dataset": "zoo",
+      "display_predictor": "CN",
+      "actual_predictor": "CS",
+      "phase": "reproduction",
+      "device": "cpu",
+      "arrays": "reproduction/fresh-check/zoo-attempt-01/call-01.npz",
+      "metrics": {
+        "correct": 21,
+        "n_test": 21,
+        "accuracy_percent": 100.0,
+        "accuracy_fraction": 1.0
+      },
+      "source_revision": "760ee67371596a5e087d62e159876600d54e76b92c4ca274dbfe8281146640bb",
+      "attempt_id": "103d0c6544684b8480d10116bd40e0b2",
+      "trace": "reproduction/fresh-check/zoo-attempt-01/events.jsonl"
+    },
+    {
+      "dataset": "zoo",
+      "display_predictor": "AA",
+      "actual_predictor": "CS",
+      "phase": "reproduction",
+      "device": "cpu",
+      "arrays": "reproduction/fresh-check/zoo-attempt-01/call-02.npz",
+      "metrics": {
+        "correct": 21,
+        "n_test": 21,
+        "accuracy_percent": 100.0,
+        "accuracy_fraction": 1.0
+      },
+      "source_revision": "760ee67371596a5e087d62e159876600d54e76b92c4ca274dbfe8281146640bb",
+      "attempt_id": "103d0c6544684b8480d10116bd40e0b2",
+      "trace": "reproduction/fresh-check/zoo-attempt-01/events.jsonl"
+    },
+    {
+      "dataset": "zoo",
+      "display_predictor": "RA",
+      "actual_predictor": "CS",
+      "phase": "reproduction",
+      "device": "cpu",
+      "arrays": "reproduction/fresh-check/zoo-attempt-01/call-03.npz",
+      "metrics": {
+        "correct": 21,
+        "n_test": 21,
+        "accuracy_percent": 100.0,
+        "accuracy_fraction": 1.0
+      },
+      "source_revision": "760ee67371596a5e087d62e159876600d54e76b92c4ca274dbfe8281146640bb",
+      "attempt_id": "103d0c6544684b8480d10116bd40e0b2",
+      "trace": "reproduction/fresh-check/zoo-attempt-01/events.jsonl"
+    },
+    {
+      "dataset": "zoo",
+      "display_predictor": "CS",
+      "actual_predictor": "CS",
+      "phase": "reproduction",
+      "device": "cpu",
+      "arrays": "reproduction/fresh-check/zoo-attempt-01/call-04.npz",
+      "metrics": {
+        "correct": 21,
+        "n_test": 21,
+        "accuracy_percent": 100.0,
+        "accuracy_fraction": 1.0
+      },
+      "source_revision": "760ee67371596a5e087d62e159876600d54e76b92c4ca274dbfe8281146640bb",
+      "attempt_id": "103d0c6544684b8480d10116bd40e0b2",
+      "trace": "reproduction/fresh-check/zoo-attempt-01/events.jsonl"
+    },
+    {
+      "dataset": "wine",
+      "display_predictor": "CN",
+      "actual_predictor": "CN",
+      "phase": "reproduction",
+      "device": "cpu",
+      "arrays": "reproduction/fresh-check/wine-attempt-01/call-01.npz",
+      "metrics": {
+        "correct": 35,
+        "n_test": 36,
+        "accuracy_percent": 97.22,
+        "accuracy_fraction": 0.9722222222222222
+      },
+      "source_revision": "760ee67371596a5e087d62e159876600d54e76b92c4ca274dbfe8281146640bb",
+      "attempt_id": "da26a9193efe448fb1621dc576975764",
+      "trace": "reproduction/fresh-check/wine-attempt-01/events.jsonl"
+    },
+    {
+      "dataset": "wine",
+      "display_predictor": "AA",
+      "actual_predictor": "AA",
+      "phase": "reproduction",
+      "device": "cpu",
+      "arrays": "reproduction/fresh-check/wine-attempt-01/call-02.npz",
+      "metrics": {
+        "correct": 35,
+        "n_test": 36,
+        "accuracy_percent": 97.22,
+        "accuracy_fraction": 0.9722222222222222
+      },
+      "source_revision": "760ee67371596a5e087d62e159876600d54e76b92c4ca274dbfe8281146640bb",
+      "attempt_id": "da26a9193efe448fb1621dc576975764",
+      "trace": "reproduction/fresh-check/wine-attempt-01/events.jsonl"
+    },
+    {
+      "dataset": "wine",
+      "display_predictor": "RA",
+      "actual_predictor": "RA",
+      "phase": "reproduction",
+      "device": "cpu",
+      "arrays": "reproduction/fresh-check/wine-attempt-01/call-03.npz",
+      "metrics": {
+        "correct": 35,
+        "n_test": 36,
+        "accuracy_percent": 97.22,
+        "accuracy_fraction": 0.9722222222222222
+      },
+      "source_revision": "760ee67371596a5e087d62e159876600d54e76b92c4ca274dbfe8281146640bb",
+      "attempt_id": "da26a9193efe448fb1621dc576975764",
+      "trace": "reproduction/fresh-check/wine-attempt-01/events.jsonl"
+    },
+    {
+      "dataset": "wine",
+      "display_predictor": "CS",
+      "actual_predictor": "CS",
+      "phase": "reproduction",
+      "device": "cpu",
+      "arrays": "reproduction/fresh-check/wine-attempt-01/call-04.npz",
+      "metrics": {
+        "correct": 36,
+        "n_test": 36,
+        "accuracy_percent": 100.0,
+        "accuracy_fraction": 1.0
+      },
+      "source_revision": "760ee67371596a5e087d62e159876600d54e76b92c4ca274dbfe8281146640bb",
+      "attempt_id": "da26a9193efe448fb1621dc576975764",
+      "trace": "reproduction/fresh-check/wine-attempt-01/events.jsonl"
+    }
+  ]
+}

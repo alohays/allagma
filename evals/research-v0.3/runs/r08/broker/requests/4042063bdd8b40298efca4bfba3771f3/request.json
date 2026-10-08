@@ -1,0 +1,26 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "study/run.py",
+    "--dataset",
+    "moons",
+    "--seed",
+    "71",
+    "--policy",
+    "cosine",
+    "--duration",
+    "5000",
+    "--phase",
+    "pilot",
+    "--steps",
+    "5000",
+    "--output",
+    "evidence/pilot/moons71-cosine5000"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "pilot-moons-cosine-terminal",
+  "request_id": "4042063bdd8b40298efca4bfba3771f3",
+  "timeout_seconds": 35.0
+}

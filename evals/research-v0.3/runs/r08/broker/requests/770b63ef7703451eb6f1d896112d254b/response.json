@@ -1,0 +1,17 @@
+{
+  "injected_interruption": false,
+  "isolation_sha256": "d6f578175c5dc3e8ec0eee7f53b9398e0abfd7163ce0dc221efa42d819f372bc",
+  "reconciled_after_controller_restart": false,
+  "request_id": "770b63ef7703451eb6f1d896112d254b",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 8.30215529189445,
+    "ended_at": "2026-10-08T04:31:20.323968+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r08/resources/jobs/0041-audit-recomputation-and-report-claims",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 675430400,
+    "peak_storage_bytes": 1620524586,
+    "status": "completed"
+  }
+}
