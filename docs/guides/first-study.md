@@ -108,6 +108,11 @@ different things and are intentionally distinct. The state separates phase
 
 ## Continue from here
 
+To change the offline question without a model session, follow
+[prepare an adapted toy study](../../examples/toy-study/README.md#prepare-an-adapted-study-before-running-it).
+It stops before execution so you can inspect the changed bias, source lineage
+and finite plan, then start, run, analyze and audit the new campaign explicitly.
+
 Use [your own question](native-study.md) with a native agent, learn to
 [resume and reproduce](reproduce.md), or browse the
 [real study showcase](../showcase/index.md). If a command fails, use
