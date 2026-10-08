@@ -53,6 +53,13 @@ Choose a [small, concrete task](docs/contributing/starter-tasks.md). Improve the
 canonical Markdown document, not a generated site copy. `site/content-map.json`
 maps those documents into the Astro Starlight site. For a site change:
 
+If you started with the small quickstart checkout, first fetch the documentation
+and selected study materials (the full evaluation archives are still optional):
+
+```sh
+git sparse-checkout add site docs media studies/core-culp studies/modular-addition studies/ema-schedule
+```
+
 ```sh
 cd site
 npm ci

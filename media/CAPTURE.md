@@ -12,6 +12,13 @@ Chromium from Playwright, and FFmpeg/ffprobe. Narration rendering additionally
 uses macOS `say` with its Samantha voice. No API account, remote rendering,
 scientific dependency installation or GPU is used by the offline capture.
 
+If you began with the small quickstart checkout, expand it from the repository
+root before using the capture tools:
+
+```sh
+git sparse-checkout add site docs media studies/core-culp studies/modular-addition studies/ema-schedule
+```
+
 ```sh
 cd site
 npm ci

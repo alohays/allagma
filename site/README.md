@@ -3,6 +3,11 @@
 This separate Astro Starlight project needs Node 22.12+ and Python 3.11+.
 It is not a dependency of Allagma's Python runtime.
 
+From a quickstart sparse checkout, run `git sparse-checkout add site docs media
+studies/core-culp studies/modular-addition studies/ema-schedule` at the repository
+root first. The site needs canonical documents and the selected figures, but not
+the large evaluation packages.
+
 ```sh
 cd site
 npm ci
