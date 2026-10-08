@@ -24,6 +24,11 @@ def parser():
     check = sub.add_parser("check", help="Check all modules, or only one module's contract")
     check.add_argument("--source", type=Path, default=ROOT)
     check.add_argument("--module")
+    doctor = sub.add_parser("doctor", help="Inspect local prerequisites without executing hosts or changing a study")
+    doctor.add_argument("--source", type=Path, default=ROOT)
+    doctor.add_argument("--study", type=Path)
+    doctor.add_argument("--scope", choices=["offline", "native"], default="offline")
+    doctor.add_argument("--codex", type=Path, help="Native executable to inspect, never invoke (with --scope native)")
     init = sub.add_parser("init", help="Initialize a study while preserving user-owned files")
     init.add_argument("--source", type=Path, default=ROOT)
     init.add_argument("--study", type=Path, required=True)
@@ -125,6 +130,11 @@ def main(argv=None):
                 return subprocess.run([sys.executable, str(root / "tools/allagma.py"), *argv]).returncode
         if args.command == "check":
             result = {"checked": Catalog(args.source).check(args.module), "status": "pass"}
+        elif args.command == "doctor":
+            from .diagnostics import diagnose
+            if args.codex is not None and args.scope != "native":
+                raise AllagmaError("--codex requires --scope native")
+            result = diagnose(args.source, study=args.study, scope=args.scope, codex=args.codex)
         elif args.command == "init":
             result = bundles.initialize(args.source, args.study, study_id=args.id, intent=read_json(args.intent) if args.intent else None)
         elif args.command == "entry":
@@ -207,6 +217,8 @@ def main(argv=None):
             from .acceptance import run_acceptance
             result = run_acceptance(ROOT, args.output)
         print(canonical(result).decode(), end="")
+        if args.command == "doctor" and result["status"] != "pass":
+            return 1
         if args.command == "resource" and args.operation == "run" and result["status"] != "completed":
             return 1
         if args.command == "research" and args.operation == "run" and result["status"] != "completed":

@@ -8,6 +8,7 @@ be reused as if they were empty.
 | Command family | Purpose |
 | --- | --- |
 | `check` | Validate catalog metadata, files, contracts and composition |
+| `doctor` | Inspect offline or native prerequisites and optionally the current study lock; no execution |
 | `init`, `entry`, `verify` | Prepare a study, resolve exact method text, check its lock |
 | `toy` | Execute the full offline known-answer study |
 | `campaign start/run/analyze/audit/status` | Manage frozen campaigns and analysis revisions |
@@ -46,6 +47,20 @@ through that campaign's helper, even when the central checkout has changed.
 every scientific claim referenced by that record.
 
 ## Exit status and costs
+
+`python3 -m allagma doctor` checks Python/POSIX support, the source catalog and
+toy resources. Add `--study PATH` to inspect the current lock, intent freshness
+and generated-file ownership. Each failed check includes a remedy; independent
+checks still run. JSON has `diagnostic_version: 1`; exit 0 means all selected
+checks passed, 1 means a prerequisite failed, and 2 means invalid invocation.
+
+`doctor --scope native --codex /path/to/codex` additionally checks macOS,
+`sandbox-exec` presence and executable availability. It never invokes Codex,
+reads authentication or model configuration, contacts a service, installs
+software, acquires a study mutation lock or repairs files. It does not test
+account access, model support, scientific dependencies, resource capacity or
+native activation. A pass is a prerequisite report, not qualification. Use
+`python3 -B` if interpreter bytecode caches in the source checkout are unwanted.
 
 Nonzero exits indicate a command or validation failure. Inspect JSON receipts
 as well as the exit code: process completion, scientific correctness and assurance
