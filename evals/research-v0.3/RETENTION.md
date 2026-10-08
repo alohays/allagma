@@ -96,3 +96,18 @@ python3 evals/research-v0.3/retention.py verify-manifest \
 The receipt reports only the declared paths/hashes and count actually checked.
 Scientific correctness, manifest coverage and package completion need their
 separate substantive review.
+
+## Stream large archives during restoration
+
+The 829,100,336-byte r07 archive exposed a transport error: the original restorer
+combined its parts into a temporary file, exceeding the validation profile's
+536,870,912-byte per-file ceiling. The failed request and original source revision
+remain in r07's restoration evidence. The archive and candidate are unchanged.
+
+Restoration now checks each part, streams gzip/tar extraction with a 1 MiB
+buffer, verifies the combined archive digest, and checks every extracted file.
+It creates no combined archive file. The actual r07 restoration passed under
+the unchanged profile. A POSIX regression also restores an archive larger than
+an enforced file limit while each individual output remains below that limit;
+altered-part rejection is tested separately. This change does not raise any
+resource ceiling or alter scientific evidence.

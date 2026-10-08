@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import io
 import json
 import os
 from pathlib import Path
@@ -124,6 +125,45 @@ def confined(root,name):
     return path
 
 
+class ArchiveParts(io.RawIOBase):
+    """Bounded reader over verified parts; never materializes a combined file."""
+    def __init__(self,package,parts):
+        super().__init__()
+        paths=[]
+        for part in parts:
+            path=confined(package,part['path'])
+            if path.stat().st_size!=part['bytes'] or sha(path)!=part['sha256']:
+                raise ValueError('Archive part changed')
+            paths.append(path)
+        self.paths=iter(paths)
+        self.current=None
+        self.archive_hash=hashlib.sha256()
+
+    def readable(self):
+        return True
+
+    def readinto(self,buffer):
+        view=memoryview(buffer);written=0
+        while written<len(view):
+            if self.current is None:
+                path=next(self.paths,None)
+                if path is None:break
+                self.current=path.open('rb')
+            data=self.current.read(len(view)-written)
+            if not data:
+                self.current.close();self.current=None
+                continue
+            view[written:written+len(data)]=data
+            self.archive_hash.update(data)
+            written+=len(data)
+        return written
+
+    def close(self):
+        if getattr(self,'current',None) is not None:
+            self.current.close();self.current=None
+        super().close()
+
+
 def supplement(source,package):
     """Add omitted terminal-queue bytes without replacing historical archives."""
     source,package=Path(source).resolve(),Path(package).resolve()
@@ -162,33 +202,32 @@ def restore(package,destination,*,wheel_cache=None,download_wheels=False):
     if destination.exists():raise ValueError('Restore to a new directory')
     index=json.loads((package/'package-index.json').read_text())
     destination.mkdir(parents=True)
-    with tempfile.TemporaryDirectory(prefix='allagma-restore-') as temporary:
-        archive=Path(temporary)/'candidate.tar.gz'
-        with archive.open('wb') as out:
-            for part in index['parts']:
-                path=package/part['path']
-                if sha(path)!=part['sha256']:raise ValueError('Archive part changed')
-                with path.open('rb') as handle:shutil.copyfileobj(handle,out)
-        if sha(archive)!=index['archive_sha256']:raise ValueError('Reassembled archive changed')
-        with tarfile.open(archive) as handle:
-            for member in handle.getmembers():
-                if member.name not in index['files'] or not member.isfile() or Path(member.name).is_absolute() or '..' in Path(member.name).parts:
+    with ArchiveParts(package,index['parts']) as parts, io.BufferedReader(parts,buffer_size=1024*1024) as stream:
+        seen=set()
+        with tarfile.open(fileobj=stream,mode='r|gz') as handle:
+            for member in handle:
+                if member.name in seen or member.name not in index['files'] or not member.isfile() or Path(member.name).is_absolute() or '..' in Path(member.name).parts:
                     raise ValueError('Unexpected archive member')
-            handle.extractall(destination,filter='data')
-        for name,entry in index['external_wheels'].items():
-            path=destination/name;path.parent.mkdir(parents=True,exist_ok=True)
-            filename=path.name;found=[]
-            if wheel_cache:found=list(Path(wheel_cache).rglob(filename))
-            matching=next((p for p in found if sha(p)==entry['sha256']),None)
-            if matching:shutil.copyfile(matching,path)
-            elif download_wheels:
-                if not re.fullmatch(r'[A-Za-z0-9_.]+-[A-Za-z0-9_.+!]+-[A-Za-z0-9_.-]+\.whl',filename):
-                    raise ValueError('Invalid dependency wheel filename')
-                project,version=filename.split('-',2)[:2]
-                subprocess.run([sys.executable,'-m','pip','download','--no-deps','--only-binary=:all:',
-                                '--dest',str(path.parent),project+'=='+version],check=True)
-            else:raise ValueError('Exact wheel unavailable; supply a cache or explicitly enable download: '+filename)
-            if not path.exists() or sha(path)!=entry['sha256']:raise ValueError('Downloaded wheel identity differs: '+filename)
+                if member.size!=index['files'][member.name]['bytes']:raise ValueError('Archive member size differs')
+                seen.add(member.name)
+                handle.extract(member,destination,filter='data')
+        while stream.read(1024*1024):pass
+        if parts.archive_hash.hexdigest()!=index['archive_sha256']:raise ValueError('Combined archive digest changed')
+        if seen!=set(index['files']):raise ValueError('Archive is missing declared files')
+    for name,entry in index['external_wheels'].items():
+        path=confined(destination,name);path.parent.mkdir(parents=True,exist_ok=True)
+        filename=path.name;found=[]
+        if wheel_cache:found=list(Path(wheel_cache).rglob(filename))
+        matching=next((p for p in found if sha(p)==entry['sha256']),None)
+        if matching:shutil.copyfile(matching,path)
+        elif download_wheels:
+            if not re.fullmatch(r'[A-Za-z0-9_.]+-[A-Za-z0-9_.+!]+-[A-Za-z0-9_.-]+\.whl',filename):
+                raise ValueError('Invalid dependency wheel filename')
+            project,version=filename.split('-',2)[:2]
+            subprocess.run([sys.executable,'-m','pip','download','--no-deps','--only-binary=:all:',
+                            '--dest',str(path.parent),project+'=='+version],check=True)
+        else:raise ValueError('Exact wheel unavailable; supply a cache or explicitly enable download: '+filename)
+        if not path.exists() or sha(path)!=entry['sha256']:raise ValueError('Downloaded wheel identity differs: '+filename)
     supplemental={}
     receipt=package/'terminal-queue-index.json'
     if receipt.exists():

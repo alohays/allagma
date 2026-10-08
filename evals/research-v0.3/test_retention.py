@@ -1,7 +1,10 @@
 """Transport regressions: direct queue evidence must survive package hydration."""
 import importlib.util
 import json
+import os
 from pathlib import Path
+import subprocess
+import sys
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -95,6 +98,32 @@ class RetentionTests(unittest.TestCase):
             self.assertEqual(retention.verify_manifest(candidate)['status'], 'pass')
             (candidate / '.compute/responses/request-1.json').write_text('altered')
             self.assertEqual(retention.verify_manifest(candidate)['errors'], ['.compute/responses/request-1.json'])
+
+    @unittest.skipUnless(os.name == 'posix', 'Requires the actual POSIX file-size limit')
+    def test_multipart_restore_does_not_create_an_oversized_combined_file(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            candidate = self.fixture(root)
+            for name in ('data-a.bin', 'data-b.bin'):
+                (candidate / name).write_bytes(os.urandom(96 * 1024))
+            with patch.object(retention, 'PART_BYTES', 64 * 1024):
+                retention.collect(candidate, root / 'package')
+            index = json.loads((root / 'package/package-index.json').read_text())
+            self.assertGreater(sum(p['bytes'] for p in index['parts']), 128 * 1024)
+            script = ('import importlib.util,resource,sys; '
+                      'resource.setrlimit(resource.RLIMIT_FSIZE,(131072,131072)); '
+                      's=importlib.util.spec_from_file_location("retention_limited",sys.argv[1]); '
+                      'm=importlib.util.module_from_spec(s); s.loader.exec_module(m); '
+                      'm.restore(sys.argv[2],sys.argv[3])')
+            process = subprocess.run([sys.executable, '-c', script, str(Path(retention.__file__).resolve()),
+                                      str(root / 'package'), str(root / 'restored')], capture_output=True, text=True)
+            self.assertEqual(process.returncode, 0, process.stderr)
+            for name in ('data-a.bin', 'data-b.bin'):
+                self.assertEqual((candidate / name).read_bytes(), (root / 'restored' / name).read_bytes())
+            part = root / 'package' / index['parts'][-1]['path']
+            part.write_bytes(part.read_bytes() + b'changed')
+            with self.assertRaisesRegex(ValueError, 'Archive part changed'):
+                retention.restore(root / 'package', root / 'altered-restore')
 
 
 if __name__ == '__main__':
