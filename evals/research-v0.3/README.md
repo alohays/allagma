@@ -35,3 +35,22 @@ repair transport omissions; they do not change candidate outcomes. Package
 restoration, deterministic checks, substantive controller review and full
 scientific reproduction establish different kinds of evidence and remain
 separately labeled.
+
+## Generate the descriptive comparison
+
+```sh
+python3 evals/research-v0.3/summarize.py --output /path/to/new-summary.json
+python3 evals/research-v0.3/comparison.py \
+  --summary /path/to/new-summary.json --destination /path/to/new-comparison
+```
+
+The postprocessor requires all twelve terminal outcomes and evidence reviews.
+For an explicitly interim snapshot, `--allow-partial` labels the report partial,
+retains pending assignments and excludes their accrued costs from outcome
+contrasts. Missing measurements remain missing. It produces the six prespecified
+within-task/replicate contrasts, two-session descriptive ranges and separate raw
+usage fields; it does not add scientific seeds or infer broad superiority.
+The [four-run snapshot](comparisons/after-r04/REPORT.md) is an interim artifact.
+
+`python3 evals/research-v0.3/test_comparison.py -v` checks assignment completeness,
+contrast direction, pending/missing handling and separate usage accounting.
