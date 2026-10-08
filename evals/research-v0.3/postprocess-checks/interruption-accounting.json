@@ -1,0 +1,70 @@
+{
+  "status": "pass",
+  "runs": [
+    {
+      "run_id": "r01",
+      "planned_interruption": {
+        "at": "2026-10-07T20:19:58.286408+00:00",
+        "mechanism": "First attempt receives a 0.5-second timeout; preserve its actual outcome",
+        "request_id": "e550d4a662d646c0b49e2af31dbe570e",
+        "observed_status": "timed_out",
+        "actual_timeout_observed": true,
+        "charged_seconds": 1.1173052920494229
+      },
+      "observed_model_settings_match": true,
+      "inputs_unchanged": true,
+      "runtime_settings_unchanged": true,
+      "fresh_single_session": true,
+      "subsequent_coordinator_messages": 0
+    },
+    {
+      "run_id": "r02",
+      "planned_interruption": {
+        "at": "2026-10-07T20:44:40.178810+00:00",
+        "mechanism": "First attempt receives a 0.5-second timeout; preserve its actual outcome",
+        "request_id": "315e7642997b41399b4378fbf1a803e1",
+        "observed_status": "timed_out",
+        "actual_timeout_observed": true,
+        "charged_seconds": 1.130271750036627
+      },
+      "observed_model_settings_match": true,
+      "inputs_unchanged": true,
+      "runtime_settings_unchanged": true,
+      "fresh_single_session": true,
+      "subsequent_coordinator_messages": 0
+    },
+    {
+      "run_id": "r03",
+      "planned_interruption": {
+        "at": "2026-10-07T21:08:25.200174+00:00",
+        "mechanism": "First attempt receives a 0.5-second timeout; preserve its actual outcome",
+        "request_id": "d880d6f88a464b1e931723d2116e23d9",
+        "observed_status": "timed_out",
+        "actual_timeout_observed": true,
+        "charged_seconds": 1.470634917030111
+      },
+      "observed_model_settings_match": true,
+      "inputs_unchanged": true,
+      "runtime_settings_unchanged": true,
+      "fresh_single_session": true,
+      "subsequent_coordinator_messages": 0
+    },
+    {
+      "run_id": "r04",
+      "planned_interruption": {
+        "at": "2026-10-08T00:26:42.604690+00:00",
+        "mechanism": "First attempt receives a 0.5-second timeout; preserve its actual outcome",
+        "request_id": "6b2058d974e54811a0a9762e3b313160",
+        "observed_status": "timed_out",
+        "actual_timeout_observed": true,
+        "charged_seconds": 1.481256457976997
+      },
+      "observed_model_settings_match": true,
+      "inputs_unchanged": true,
+      "runtime_settings_unchanged": true,
+      "fresh_single_session": true,
+      "subsequent_coordinator_messages": 0
+    }
+  ],
+  "scope": "Authoritative interruption outcomes, session/settings/input checks and coordinator-message counts; scientific scoring unchanged."
+}

@@ -28,7 +28,9 @@ def compact(row):
         'claimed_execution_status', 'verified_completion', 'compute_seconds',
         'setup_seconds', 'compute_requests', 'job_outcomes', 'native_wall_seconds',
         'peak_native_rss_bytes', 'peak_worker_rss_bytes', 'peak_native_storage_bytes',
-        'observed_model_settings_match', 'inputs_unchanged', 'scoring_correction_applied')}
+        'observed_model_settings_match', 'inputs_unchanged', 'scoring_correction_applied',
+        'runtime_settings_unchanged', 'fresh_single_session',
+        'subsequent_coordinator_messages', 'planned_interruption')}
     value.update(numerical_correct=correct, numerical_total=total,
                  numerical_fraction=correct / total if total else None,
                  evidence_score=sum(item['score'] for item in evidence) if evidence is not None else None,
@@ -115,9 +117,13 @@ def render(result):
         text = '; '.join(gaps).rstrip('.') if gaps else 'all eight evidence items pass'
         jobs = ', '.join(f'{k}={v}' for k, v in sorted((r['job_outcomes'] or {}).items()))
         lines += [f"- {r['run_id']}: {text}. Process outcomes: {jobs}. Subsequent recorded interventions: {r['intervention_count']}."]
+        interruption = r['planned_interruption']
+        if interruption is not None:
+            lines += [f"  Planned interruption: observed status {interruption['observed_status']}; actual timeout observed={interruption['actual_timeout_observed']}. Recorded coordinator messages: {r['subsequent_coordinator_messages']}."]
         if r['original_scorer_error']:
             lines += [f"  Original scorer: {r['original_scorer_status']}; {r['original_scorer_error']}. Compatibility-corrected evidence is reported separately."]
     lines += ['', '## Resource use', '',
+              'The companion JSON retains observed model/settings/input/session matches for every run. Unknown observations remain null.', '',
               'Seconds are measured/charged by the retained supervisors. RSS and storage are sampled observations,',
               'not proofs of a strict instantaneous bound; RSS omits some GPU allocations.', '',
               '| Run | Compute s | Setup s | Compute requests | Native s | Input tokens | Cached input | Output tokens | Reasoning output |',

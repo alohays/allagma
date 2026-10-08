@@ -19,6 +19,14 @@ def run_row(assignment):
     root=BASE/'runs'/assignment['run_id']
     native=read(root/'sessions/evaluation/native/session.json')
     outcome=read(root/'outcome.json',{})
+    interruption=read(root/'broker/interruption.json')
+    planned=None
+    if interruption:
+        response=read(root/'broker/requests'/interruption['request_id']/'response.json',{})
+        result=response.get('result',{})
+        planned={**interruption,'observed_status':result.get('status'),
+                 'actual_timeout_observed':result.get('status')=='timed_out',
+                 'charged_seconds':result.get('charged_seconds')}
     resources=summary(root/'resources')
     jobs=resources['entries'];statuses={}
     for entry in jobs:
@@ -38,6 +46,10 @@ def run_row(assignment):
         'peak_native_storage_bytes':native.get('peak_storage_bytes') if native else None,
         'observed_model_settings_match':outcome.get('observed_model_settings_match'),
         'inputs_unchanged':outcome.get('common_inputs_unchanged'),
+        'runtime_settings_unchanged':outcome.get('runtime_settings_unchanged'),
+        'fresh_single_session':outcome.get('fresh_single_session'),
+        'subsequent_coordinator_messages':outcome.get('subsequent_coordinator_messages'),
+        'planned_interruption':planned,
         'scope':'Raw usage fields are reported separately; cached/reasoning counts are not added again to other token fields.'}
     score=read(root/'score.json')
     row['original_scorer_outcome']=score
