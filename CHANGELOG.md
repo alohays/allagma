@@ -1,5 +1,26 @@
 # Changelog
 
+## Public launch preparation — 8 October 2026
+
+- Rework the README around a verified first study and clear agent-workflow value.
+  Add an original visual system and a source-linked study explorer.
+- Add a separate Astro Starlight site with canonical document generation, search,
+  guides, references, study results and explicit evidence/host boundaries.
+- Capture a 100-second actual-software film with English captions, transcript,
+  editable sources, exact provenance and a repeatable local capture workflow.
+- Prepare a compact source archive, contributor forms, citation metadata,
+  support/security guidance, roadmap, starter tasks and owner launch actions.
+- Add fork-safe docs/example/link/dependency/release checks and a Pages deployment
+  workflow gated on public visibility and explicit owner activation.
+- Review reachable history and retained archives; document accepted metadata
+  exposure and study-specific licensing. Include upstream notices in built docs.
+
+This prepares the existing **0.3.0rc2** source candidate. Repository visibility,
+public Pages, formal release publication and announcements remain owner actions.
+An additional bounded native onboarding probe retained valid scientific output
+but timed out before its final package index; that limitation is documented
+separately from the completed frozen release evaluation.
+
 ## 0.3.0rc2 — reusable workflow release candidate, 8 October 2026
 
 - Add brief/material/resource preparation, isolated native Codex capture,

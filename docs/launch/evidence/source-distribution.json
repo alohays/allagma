@@ -1,0 +1,24 @@
+{
+  "format": "allagma-source-distribution-v1",
+  "release": "0.3.0rc2",
+  "git_head": "c41d9b6afbbdc6d061b1873adb3d210c912cab24",
+  "tracked_worktree_changes": false,
+  "archive": "allagma-0.3.0rc2-source.tar.gz",
+  "bytes": 132312,
+  "sha256": "f793dec700738c7c44df5b9c4afb825793199419fae606af1113c91b8229aa41",
+  "scope": "Core, all catalog modules, offline example, small native-study inputs, and conformance. No retained scientific archives, site toolchain, third-party study adaptations or wheels. Documentation links target the repository; use the site/full source for all guides.",
+  "publication": "prepared-locally-not-published",
+  "qualification": {
+    "status": "pass",
+    "tests": 113,
+    "milestones": {
+      "I1": "pass",
+      "I2": "pass",
+      "I3": "pass",
+      "I4": "pass",
+      "I5": "pass"
+    },
+    "acceptance_receipt_sha256": "05a63aa983df7b7357d8c837c67be64f18da9b52fda4c6c41e162c15d08b6a8e",
+    "scope": "Archive generated from the named clean commit, extracted into a new directory, then full acceptance executed from the extracted Python package. Not a network transfer measurement."
+  }
+}

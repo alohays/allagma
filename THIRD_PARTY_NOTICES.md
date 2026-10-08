@@ -69,7 +69,11 @@ original transformer experiments or training horizons were reproduced.
 
 The separate `site/` project uses Astro Starlight and its locked Node development
 dependencies. Those dependencies retain their upstream package licenses and do
-not enter the default Python runtime. The workflow graphics, mark and social
+not enter the default Python runtime. The site build includes their shipped
+copyright and license notices in `generated/third-party-licenses.txt`, linked
+from the page metadata. That appendix includes build-time dependencies as well
+as browser code; it does not relicense Allagma or the scientific archives.
+The workflow graphics, mark and social
 preview are original Allagma assets; uv and marimo supplied editorial inspiration,
 with no copied branding or graphics.
 

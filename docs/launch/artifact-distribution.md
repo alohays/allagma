@@ -20,6 +20,19 @@ download: that includes retained research evidence. A future artifact service
 may hold hash-addressed copies, but no external hosting account or storage bill
 is required by this launch package.
 
+The prepared source archive is about **132 KB compressed**. It passed full
+I1–I5 acceptance and all 113 conformance tests after extraction into a new
+directory. The [source-distribution receipt](evidence/source-distribution.json)
+records the exact source commit, bytes, digest and validation scope. Documentation
+links still refer to the full repository; this archive is the runnable core and
+conformance kit, not a copy of the complete evidence repository or site.
+
+The flagship H.264/AAC movie is about **2.9 MB** and **100 seconds**. Its captions,
+transcript, exact capture timeline, selected results and required study license
+are kept beside it. Raw footage and intermediate narration remain in the local
+capture directory; repeatable sources reproduce the demonstration without
+adding every intermediate binary to Git.
+
 ## Optional study archives
 
 | Illustrative package | Compressed archive bytes | Pinned wheel bytes | Scope |

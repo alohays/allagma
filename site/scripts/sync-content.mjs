@@ -3,6 +3,7 @@ import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
+import { writeVendorNotices } from './vendor-notices.mjs';
 
 const site = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const root = path.dirname(site);
@@ -64,4 +65,5 @@ await fs.cp(mediaRoot, path.join(assets, 'media'), {
   filter: file => path.relative(mediaRoot, file).split(path.sep)[0] !== 'source',
 });
 await fs.writeFile(path.join(assets, 'content-sources.json'), JSON.stringify(receipts, null, 2) + '\n');
+await writeVendorNotices(site,path.join(assets,'third-party-licenses.txt'));
 console.log(`Synced ${pages.length} canonical pages, command help, and selected media.`);

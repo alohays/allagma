@@ -49,6 +49,21 @@ budget, 30-second setup budget and 1 GiB study storage ceiling. The broker
 disables network access for computation. Include any required dependencies in
 materials before preparing a different study; the example needs none.
 
+**Budget is a stopping rule, not a completion promise.** In the launch-onboarding
+probe with the inherited model/settings, a 900-second session completed the
+science, a full replay and deterministic audits, but timed out before its final
+package index. A separate 300-second continuation also ended at its limit.
+The [recorded observation](../launch/evidence/native-onboarding-initial.json) and
+[controller arithmetic check](../launch/evidence/native-arithmetic.json) preserve
+both facts. This extra probe is separate from the twelve-session release
+evaluation and is not advertised as a completed native handoff.
+
+For a verified complete first result, use the [offline tutorial](first-study.md).
+For a native session, choose a finite model-work budget appropriate to your
+question and account; scientific execution may take seconds while planning,
+review and packaging take much longer. The published
+[native study packages](../showcase/index.md) retain their actual usage and limits.
+
 ## Ask for an inspectable result
 
 Write the research brief in terms of a scientific question, comparisons,

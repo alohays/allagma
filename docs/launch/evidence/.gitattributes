@@ -1,0 +1,4 @@
+# Preserve raw command output, including intentional spacing and line endings.
+*.log -whitespace -text
+*.stdout -whitespace -text
+*.stderr -whitespace -text

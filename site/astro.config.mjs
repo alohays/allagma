@@ -14,6 +14,7 @@ export default defineConfig({
     customCss: ['./src/styles/allagma.css'],
     components: { Hero: './src/components/LaunchHero.astro' },
     head: [
+      { tag: 'link', attrs: { rel: 'license', href: '/allagma/generated/third-party-licenses.txt' } },
       { tag: 'meta', attrs: { property: 'og:image', content: 'https://alohays.github.io/allagma/generated/media/social-preview.png' } },
       { tag: 'meta', attrs: { name: 'twitter:card', content: 'summary_large_image' } },
     ],

@@ -30,6 +30,11 @@ to resolve the inherited selector-complexity advisory. Remove the override when
 the upstream dependency updates, after a production build and browser checks.
 The lockfile and monthly dependency PRs keep updates explicit.
 
+The build also assembles shipped dependency notices at
+`generated/third-party-licenses.txt`. Pagefind's npm packages omit the root
+license, so their pinned upstream notices are retained in `licenses/` and checked
+against installed versions. Review that fallback when updating Pagefind.
+
 Public Pages deployment is gated and manually activated later by the owner.
 Building this project or pushing source does not change repository visibility,
 publish a release, or enable Pages. See the launch owner checklist when complete.

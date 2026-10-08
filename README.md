@@ -86,7 +86,7 @@ explicit native execution consumes your existing account's model usage.
 | Offline Python core | I1–I5 and 113 conformance tests; complete toy execution, recovery and recomputation |
 | Native Codex | Actual CLI 0.160.1 sessions on the recorded macOS/M4 Pro environment; explicit method loading and locked routing |
 | Claude Code | Packaging and contracts tested; native qualification is not claimed |
-| Experimental composition | Optional context/reviewer/recipe replacements; not a claim of better model research quality |
+| Experimental composition | Full-record context and the replication recipe are explicit experiments; no model-quality improvement is claimed |
 
 In the [twelve-session comparison](docs/v0.3/COMPARISON.md), **all twelve runs
 completed the required science**. Allagma produced six complete evidence packages
