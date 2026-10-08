@@ -130,6 +130,22 @@ another native continuation. Record the incomplete final handoff as a measured
 limitation, separately from its verified science and the completed frozen
 release qualification.
 
+## Final audit before open-source publication — 8 October 2026
+
+Audit the current worktree, complete reachable Git history and current GitHub
+state before public release. Recheck the I1–I5 acceptance criteria and complete
+toy workflow, clean-source onboarding, production documentation and media,
+dependency advisories, redistribution notices, retained evidence, privacy
+decisions and publication controls. Investigate confirmed defects, repair them
+without changing frozen scientific records, and record fresh evidence and any
+remaining owner actions in English. Commit coherent increments and push the
+completed audit to `origin`.
+
+This audit does not activate public visibility, Pages, releases or announcements.
+The existing decisions to retain historical metadata and cap the additional
+native onboarding probe remain in force. Do not run another native model
+continuation or add project model overrides.
+
 ## Prior implementation acceptance
 
 See [implementation status](docs/implementation-status.md) for the acceptance

@@ -9,7 +9,10 @@ Full research evidence is optional and remains immutable in Git for this release
 
 Run `python3 tools/package_source.py --output build/source-release` to create a
 deterministic source TAR.GZ, a file-by-file digest manifest and `SHA256SUMS`.
-The generator refuses to replace an existing asset. The archive includes core,
+The generator reads **committed HEAD blobs only**: commit the reviewed release
+changes before packaging. Local edits, ignored files and untracked files cannot
+enter the asset. It refuses to replace an existing asset or package symlinks.
+The archive includes core,
 methods/adapters, the offline example, small native-study inputs and conformance.
 It is a source distribution, not a wheel. The release workflow prepares this
 asset for inspection; it does not publish a GitHub release or package.
@@ -24,7 +27,9 @@ The prepared source archive is about **134 KB compressed**. It passed full
 I1–I5 acceptance and all 113 conformance tests after extraction into a new
 directory. The [hosted source-distribution receipt](evidence/hosted-release-artifact.json)
 records the exact source commit, bytes, digest and validation scope. Documentation
-links still refer to the full repository; this archive is the runnable core and
+links to omitted files are rewritten to the exact source commit, with original
+document hashes and transformations recorded in the manifest. Core bundle
+files stay byte-identical. This archive is the runnable core and
 conformance kit, not a copy of the complete evidence repository or site.
 
 The flagship H.264/AAC movie is about **2.9 MB** and **100 seconds**. Its captions,

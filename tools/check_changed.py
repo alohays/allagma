@@ -38,6 +38,10 @@ def main():
         print(result)
         return 1
     print(f"Changed-module checks: {modules}; suites: {sorted(suites)}; documentation links: {result['checked_links']}", flush=True)
+    if any(name.startswith(("tools/", ".github/")) for name in changed):
+        release_checks = subprocess.run([sys.executable, "-m", "unittest", "discover", "-s", "tools/tests", "-v"], cwd=ROOT)
+        if release_checks.returncode:
+            return release_checks.returncode
     if suites:
         return subprocess.run([sys.executable, "-m", "unittest", *sorted(suites), "-v"], cwd=ROOT).returncode
     return 0
