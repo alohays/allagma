@@ -1,0 +1,16 @@
+{
+  "created_at": "2026-10-08T03:35:15.033092+00:00",
+  "dataset": "gmm8",
+  "file_hashes": {
+    "evaluation.npz": "258912cb0552bfd57557a3b20a1901467c12081cf98e80446edb0cf00bd02a81",
+    "initial.npz": "f251850e69a0e69cef2bae8b868dfef50423f387b3549d3d482dd0d846936e21",
+    "training.npz": "5f8e4d43b811c6acad668b7389c4257e1519a1bd90828bc36ef3ec8b9640a4e8"
+  },
+  "generation_noise_sha256": "b9a5974cea6b577eabc66f8bd4ea81a610ae5cdaff5d7c86888c6e4749507e79",
+  "hash_convention": "array_hash=SHA256(C-order bytes); named_hash=sorted name,dtype,shape JSON newline then C-order bytes",
+  "heldout_sha256": "2d728e249f5917bba79ee9af4807f9192412d60a9243188b22b5f9fa29ff66b5",
+  "initial_weights_sha256": "dbd06de5ff3a01ee5045e93bc01e563d8bb81ea35d554c3a8b7ec06b7c30cf61",
+  "phase": "confirmation",
+  "seed": 5002,
+  "training_prefix_5000_sha256": "b031f55f9840b36383bfeb090fd15ff25f7b8a5c8a28718c4d837e5ad54767d4"
+}

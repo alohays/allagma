@@ -1,0 +1,289 @@
+{
+  "status": "pass",
+  "required_cells": 32,
+  "input_groups": [
+    {
+      "dataset": "moons",
+      "seed": 4001,
+      "cells": 4,
+      "regenerated_inputs_exact": true,
+      "initial_weights_sha256": "347d6c2122ea291efc5a0ecaaf2fb9991b5cfb03d0a115fcfb9ff3ff80a8f5d3",
+      "training_prefix_5000_sha256": "c4d852b63c16ead7d9afdcdc8ad8f7ae7fa3473c1a609e48b5debab63377fa3a",
+      "heldout_sha256": "af014d6f09e70ef49262fff9d6a04ce2088908b4521a1d5ddcdf682b43ba84d2",
+      "generation_noise_sha256": "43fbba450dcafebd5d526033982832da94332ed75cba1c6ae3099a5f94feee52"
+    },
+    {
+      "dataset": "moons",
+      "seed": 4002,
+      "cells": 4,
+      "regenerated_inputs_exact": true,
+      "initial_weights_sha256": "127c25b7931faf85982d012be5ce941f549bce83c0858bc69a67da916008a39b",
+      "training_prefix_5000_sha256": "82b3cbc297991898dfee8134a6cf6d83a71f366742dcb4b1f1870348c2493eca",
+      "heldout_sha256": "54967586df1e2cd86b5bb7fe6f9a31dc728f58e5b8ac2ce10a28075e5d60d76b",
+      "generation_noise_sha256": "e713cc4f52e2e9f44d5e2c4beb0c6d1abf12d09c035592a529990862c373dfdd"
+    },
+    {
+      "dataset": "moons",
+      "seed": 4003,
+      "cells": 4,
+      "regenerated_inputs_exact": true,
+      "initial_weights_sha256": "1593afff66a03d0475836e5fd09c70392883c9df495ca142ccb9b837d087d709",
+      "training_prefix_5000_sha256": "f83e4ce58ddf6e961cf09bfab31fe3bff595d2d46c867fa3a94c62b6a30ae706",
+      "heldout_sha256": "ea9f392029cf8b1c497ecd6d77472c3491857d20edde35d59f6520dc75b41333",
+      "generation_noise_sha256": "447201897ecf052dd30bcb7a9e6efc5e569d680de214cde84d10781e893a9ef8"
+    },
+    {
+      "dataset": "moons",
+      "seed": 4004,
+      "cells": 4,
+      "regenerated_inputs_exact": true,
+      "initial_weights_sha256": "f5a11fb9cec8b6cf4ea71f2bf2badc525c426c145cc7bbd5911a0b6a446d0a89",
+      "training_prefix_5000_sha256": "df26e3b9e882851831b791ecef36dd10fc5a54a0be0eea27cad56e23db2e9f92",
+      "heldout_sha256": "028ff6ca1973eb2d629dec90d409a3efcbdd258d9e02530897c350dff3d8507d",
+      "generation_noise_sha256": "6a6ee5be59f210a27ff20723804f749b4095fbffa097c6f8efab174790d4b58c"
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5001,
+      "cells": 4,
+      "regenerated_inputs_exact": true,
+      "initial_weights_sha256": "ce21fdf181df1fea75a1253f70edaff89a681c95ebe684a56a1b0de5baa1ba3e",
+      "training_prefix_5000_sha256": "890a6ed7d23ab46038ef35f31ac3f1d71983c9b8fd81f19031bb5f4ff0a1c419",
+      "heldout_sha256": "eeb78e4a2bc4ab4e9155586f2e2321252c06d5a5fbfb5636d086ebd59b4fb3c8",
+      "generation_noise_sha256": "3e84425ce8de61f0c7dbba82060546dcc74799338c665eb454a00854466a21d2"
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5002,
+      "cells": 4,
+      "regenerated_inputs_exact": true,
+      "initial_weights_sha256": "dbd06de5ff3a01ee5045e93bc01e563d8bb81ea35d554c3a8b7ec06b7c30cf61",
+      "training_prefix_5000_sha256": "b031f55f9840b36383bfeb090fd15ff25f7b8a5c8a28718c4d837e5ad54767d4",
+      "heldout_sha256": "2d728e249f5917bba79ee9af4807f9192412d60a9243188b22b5f9fa29ff66b5",
+      "generation_noise_sha256": "b9a5974cea6b577eabc66f8bd4ea81a610ae5cdaff5d7c86888c6e4749507e79"
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5003,
+      "cells": 4,
+      "regenerated_inputs_exact": true,
+      "initial_weights_sha256": "55f15f8b5f2bf2e9b7075cc663e3b17f53018a30a24f6a79323de3575b3fbc09",
+      "training_prefix_5000_sha256": "0bfc042329dbe48698eba445f85566e713768f96039e3ed049cbe403cb8443d0",
+      "heldout_sha256": "b62c1f70d47389e95a1a62bf3836096a396e92f50dabdf34ec070cc88dc975ba",
+      "generation_noise_sha256": "d9be4794a0acbcb69da04c002651510988bfdf580df7c01fa4ada35443eadef2"
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5004,
+      "cells": 4,
+      "regenerated_inputs_exact": true,
+      "initial_weights_sha256": "a6c8acee0e81230eae32e528a1f885b5b62b216bdd7390f53dc0e255df629cd6",
+      "training_prefix_5000_sha256": "cb3b5d66d5f3eee5925ed05a0563e29c6fb1f3055bc6330442acf5034cbe334d",
+      "heldout_sha256": "b740ab3b19984bd95ef51d3b732e582d0886605388420b0fa6aeda9e2ccbad67",
+      "generation_noise_sha256": "6d7b0898897519e987c20ba750c3ed88454dc586a8be523c278b377133bc65a3"
+    }
+  ],
+  "actual_trajectories": [
+    {
+      "dataset": "gmm8",
+      "seed": 5001,
+      "policy": "constant",
+      "updates": 10000,
+      "optimizer_states": 10,
+      "trace_points": 21
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5001,
+      "policy": "cosine",
+      "updates": 5000,
+      "optimizer_states": 10,
+      "trace_points": 11
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5001,
+      "policy": "cosine",
+      "updates": 10000,
+      "optimizer_states": 10,
+      "trace_points": 21
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5002,
+      "policy": "constant",
+      "updates": 10000,
+      "optimizer_states": 10,
+      "trace_points": 21
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5002,
+      "policy": "cosine",
+      "updates": 5000,
+      "optimizer_states": 10,
+      "trace_points": 11
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5002,
+      "policy": "cosine",
+      "updates": 10000,
+      "optimizer_states": 10,
+      "trace_points": 21
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5003,
+      "policy": "constant",
+      "updates": 10000,
+      "optimizer_states": 10,
+      "trace_points": 21
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5003,
+      "policy": "cosine",
+      "updates": 5000,
+      "optimizer_states": 10,
+      "trace_points": 11
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5003,
+      "policy": "cosine",
+      "updates": 10000,
+      "optimizer_states": 10,
+      "trace_points": 21
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5004,
+      "policy": "constant",
+      "updates": 10000,
+      "optimizer_states": 10,
+      "trace_points": 21
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5004,
+      "policy": "cosine",
+      "updates": 5000,
+      "optimizer_states": 10,
+      "trace_points": 11
+    },
+    {
+      "dataset": "gmm8",
+      "seed": 5004,
+      "policy": "cosine",
+      "updates": 10000,
+      "optimizer_states": 10,
+      "trace_points": 21
+    },
+    {
+      "dataset": "moons",
+      "seed": 4001,
+      "policy": "constant",
+      "updates": 10000,
+      "optimizer_states": 10,
+      "trace_points": 21
+    },
+    {
+      "dataset": "moons",
+      "seed": 4001,
+      "policy": "cosine",
+      "updates": 5000,
+      "optimizer_states": 10,
+      "trace_points": 11
+    },
+    {
+      "dataset": "moons",
+      "seed": 4001,
+      "policy": "cosine",
+      "updates": 10000,
+      "optimizer_states": 10,
+      "trace_points": 21
+    },
+    {
+      "dataset": "moons",
+      "seed": 4002,
+      "policy": "constant",
+      "updates": 10000,
+      "optimizer_states": 10,
+      "trace_points": 21
+    },
+    {
+      "dataset": "moons",
+      "seed": 4002,
+      "policy": "cosine",
+      "updates": 5000,
+      "optimizer_states": 10,
+      "trace_points": 11
+    },
+    {
+      "dataset": "moons",
+      "seed": 4002,
+      "policy": "cosine",
+      "updates": 10000,
+      "optimizer_states": 10,
+      "trace_points": 21
+    },
+    {
+      "dataset": "moons",
+      "seed": 4003,
+      "policy": "constant",
+      "updates": 10000,
+      "optimizer_states": 10,
+      "trace_points": 21
+    },
+    {
+      "dataset": "moons",
+      "seed": 4003,
+      "policy": "cosine",
+      "updates": 5000,
+      "optimizer_states": 10,
+      "trace_points": 11
+    },
+    {
+      "dataset": "moons",
+      "seed": 4003,
+      "policy": "cosine",
+      "updates": 10000,
+      "optimizer_states": 10,
+      "trace_points": 21
+    },
+    {
+      "dataset": "moons",
+      "seed": 4004,
+      "policy": "constant",
+      "updates": 10000,
+      "optimizer_states": 10,
+      "trace_points": 21
+    },
+    {
+      "dataset": "moons",
+      "seed": 4004,
+      "policy": "cosine",
+      "updates": 5000,
+      "optimizer_states": 10,
+      "trace_points": 11
+    },
+    {
+      "dataset": "moons",
+      "seed": 4004,
+      "policy": "cosine",
+      "updates": 10000,
+      "optimizer_states": 10,
+      "trace_points": 21
+    }
+  ],
+  "actual_training_updates": 200000,
+  "statistical_rows_checked": 114,
+  "findings": {
+    "negative_cell_mean_effects": 14,
+    "cell_intervals_below_zero": 2,
+    "positive_schedule_contrast_means": 8,
+    "interaction_intervals_include_zero": 4
+  },
+  "scope": "Exact reference-based input/initialization regeneration and paired prefix hashes; all 24 terminal optimizer counters and learning-rate traces; 114 cell/contrast summaries with paired t intervals, sign flips and leave-one-out means. The separate frozen scorer verifies all metrics and 96 saved-state samples. No second training replay."
+}

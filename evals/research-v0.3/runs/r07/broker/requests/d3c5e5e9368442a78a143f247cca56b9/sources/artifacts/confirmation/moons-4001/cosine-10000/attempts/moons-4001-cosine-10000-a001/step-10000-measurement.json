@@ -1,0 +1,30 @@
+{
+  "actual_schedule_duration": 10000,
+  "arrays": "artifacts/confirmation/moons-4001/cosine-10000/attempts/moons-4001-cosine-10000-a001/step-10000-arrays.npz",
+  "attempt_id": "moons-4001-cosine-10000-a001",
+  "dataset": "moons",
+  "device": "mps",
+  "generation_noise_sha256": "43fbba450dcafebd5d526033982832da94332ed75cba1c6ae3099a5f94feee52",
+  "heldout_sha256": "af014d6f09e70ef49262fff9d6a04ce2088908b4521a1d5ddcdf682b43ba84d2",
+  "initial_weights_sha256": "347d6c2122ea291efc5a0ecaaf2fb9991b5cfb03d0a115fcfb9ff3ff80a8f5d3",
+  "input_metadata": "artifacts/confirmation/moons-4001/inputs/metadata.json",
+  "metrics": {
+    "ema099": {
+      "sw1": 0.03149238376784081
+    },
+    "ema0999": {
+      "sw1": 0.032748348556132276
+    },
+    "raw": {
+      "sw1": 0.03143385172643389
+    }
+  },
+  "phase": "confirmation",
+  "schedule": "cosine",
+  "seed": 4001,
+  "source_revision": "5b043d9f52ba78f07c31dcb3a77b1ff08c594b1ce7dbbe950fc6de7325692fe5",
+  "training_prefix_5000_sha256": "c4d852b63c16ead7d9afdcdc8ad8f7ae7fa3473c1a609e48b5debab63377fa3a",
+  "training_trace": "artifacts/confirmation/moons-4001/cosine-10000/attempts/moons-4001-cosine-10000-a001/trace.jsonl",
+  "updates": 10000,
+  "weights": "artifacts/confirmation/moons-4001/cosine-10000/attempts/moons-4001-cosine-10000-a001/step-10000-weights.npz"
+}

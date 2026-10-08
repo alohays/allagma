@@ -1,0 +1,282 @@
+{
+  "claims": [
+    {
+      "claim_id": "design-completion",
+      "contradicting": [],
+      "dependencies": [
+        {
+          "media_type": "application/json",
+          "path": "analysis/record.json",
+          "retention": "retained",
+          "sha256": "4c2ce4a67d63920859102127b27ca041e5a66aa13bfaf3838bd2c6c73493a2a0"
+        },
+        {
+          "media_type": "application/json",
+          "path": "analysis/raw-manifest.json",
+          "retention": "retained",
+          "sha256": "c1a5ca01f2b6bb0b6d99bb301989a89e892f7d12f10606baf0664edbe1d394f0"
+        },
+        {
+          "media_type": "text/markdown",
+          "path": "PROTOCOL.md",
+          "retention": "retained",
+          "sha256": "3300b5e862a704f60ddef19ca785fb1b69fc67cb3ae04a8f85571b490284be61"
+        }
+      ],
+      "limitations": [
+        "Small n; unadjusted multiplicity; no endpoint mechanism attribution",
+        "Same-assistant critique and deterministic checks are not independent scientific peer review"
+      ],
+      "record_type": "ClaimRecord",
+      "schema_version": "0.2",
+      "scope": "Prespecified synthetic datasets, four matched seeds per dataset, two schedule policies and durations.",
+      "status": "supported",
+      "supersedes": null,
+      "supporting": [
+        {
+          "media_type": "application/json",
+          "path": "analysis/measurements.json",
+          "retention": "retained",
+          "sha256": "7f06ed04f7f8da9566c7af82e1c74704fd4dc5ad7823168b57377502e1de798c"
+        },
+        {
+          "media_type": "application/json",
+          "path": "verification/verification.json",
+          "retention": "retained",
+          "sha256": "82c1e697770beec7aa2dc2ff7c332db07c00f3591f1511eb475650625d08ae04"
+        }
+      ],
+      "text": "All 32 specified confirmation cells and 96 model states were executed with fixed matched-seed controls."
+    },
+    {
+      "claim_id": "paired-quality",
+      "contradicting": [],
+      "dependencies": [
+        {
+          "media_type": "application/json",
+          "path": "analysis/record.json",
+          "retention": "retained",
+          "sha256": "4c2ce4a67d63920859102127b27ca041e5a66aa13bfaf3838bd2c6c73493a2a0"
+        },
+        {
+          "media_type": "application/json",
+          "path": "analysis/raw-manifest.json",
+          "retention": "retained",
+          "sha256": "c1a5ca01f2b6bb0b6d99bb301989a89e892f7d12f10606baf0664edbe1d394f0"
+        },
+        {
+          "media_type": "text/markdown",
+          "path": "PROTOCOL.md",
+          "retention": "retained",
+          "sha256": "3300b5e862a704f60ddef19ca785fb1b69fc67cb3ae04a8f85571b490284be61"
+        }
+      ],
+      "limitations": [
+        "Small n; unadjusted multiplicity; no endpoint mechanism attribution",
+        "Same-assistant critique and deterministic checks are not independent scientific peer review"
+      ],
+      "record_type": "ClaimRecord",
+      "schema_version": "0.2",
+      "scope": "Prespecified synthetic datasets, four matched seeds per dataset, two schedule policies and durations.",
+      "status": "supported",
+      "supersedes": null,
+      "supporting": [
+        {
+          "media_type": "application/json",
+          "path": "analysis/summary.json",
+          "retention": "retained",
+          "sha256": "eadd1e78ec6a09d73426dd4ee4dafd19c093a7100552f92119d3df9b5e70abac"
+        }
+      ],
+      "text": "EMA-minus-raw mean SW1 is negative in 14/16 cells; 2/16 unadjusted intervals lie below zero."
+    },
+    {
+      "claim_id": "schedule-policy",
+      "contradicting": [],
+      "dependencies": [
+        {
+          "media_type": "application/json",
+          "path": "analysis/record.json",
+          "retention": "retained",
+          "sha256": "4c2ce4a67d63920859102127b27ca041e5a66aa13bfaf3838bd2c6c73493a2a0"
+        },
+        {
+          "media_type": "application/json",
+          "path": "analysis/raw-manifest.json",
+          "retention": "retained",
+          "sha256": "c1a5ca01f2b6bb0b6d99bb301989a89e892f7d12f10606baf0664edbe1d394f0"
+        },
+        {
+          "media_type": "text/markdown",
+          "path": "PROTOCOL.md",
+          "retention": "retained",
+          "sha256": "3300b5e862a704f60ddef19ca785fb1b69fc67cb3ae04a8f85571b490284be61"
+        }
+      ],
+      "limitations": [
+        "Small n; unadjusted multiplicity; no endpoint mechanism attribution",
+        "Same-assistant critique and deterministic checks are not independent scientific peer review"
+      ],
+      "record_type": "ClaimRecord",
+      "schema_version": "0.2",
+      "scope": "Prespecified synthetic datasets, four matched seeds per dataset, two schedule policies and durations.",
+      "status": "supported",
+      "supersedes": null,
+      "supporting": [
+        {
+          "media_type": "application/json",
+          "path": "analysis/contrasts.json",
+          "retention": "retained",
+          "sha256": "f80a1cd3a3b3d2de214d8c13b3c22522d37e2be1157438124425ddd108cdd9d2"
+        }
+      ],
+      "text": "Cosine-minus-constant contrasts in EMA-minus-raw SW1 are positive in 8/8 comparisons; Table 2 retains all estimates and uncertainty."
+    },
+    {
+      "claim_id": "interaction",
+      "contradicting": [],
+      "dependencies": [
+        {
+          "media_type": "application/json",
+          "path": "analysis/record.json",
+          "retention": "retained",
+          "sha256": "4c2ce4a67d63920859102127b27ca041e5a66aa13bfaf3838bd2c6c73493a2a0"
+        },
+        {
+          "media_type": "application/json",
+          "path": "analysis/raw-manifest.json",
+          "retention": "retained",
+          "sha256": "c1a5ca01f2b6bb0b6d99bb301989a89e892f7d12f10606baf0664edbe1d394f0"
+        },
+        {
+          "media_type": "text/markdown",
+          "path": "PROTOCOL.md",
+          "retention": "retained",
+          "sha256": "3300b5e862a704f60ddef19ca785fb1b69fc67cb3ae04a8f85571b490284be61"
+        }
+      ],
+      "limitations": [
+        "Small n; unadjusted multiplicity; no endpoint mechanism attribution",
+        "Same-assistant critique and deterministic checks are not independent scientific peer review"
+      ],
+      "record_type": "ClaimRecord",
+      "schema_version": "0.2",
+      "scope": "Prespecified synthetic datasets, four matched seeds per dataset, two schedule policies and durations.",
+      "status": "supported",
+      "supersedes": null,
+      "supporting": [
+        {
+          "media_type": "application/json",
+          "path": "analysis/contrasts.json",
+          "retention": "retained",
+          "sha256": "f80a1cd3a3b3d2de214d8c13b3c22522d37e2be1157438124425ddd108cdd9d2"
+        }
+      ],
+      "text": "4/4 unadjusted interaction intervals include zero; the dataset/decay-specific interactions are reported without a universal mechanism claim."
+    },
+    {
+      "claim_id": "gmm-coverage",
+      "contradicting": [],
+      "dependencies": [
+        {
+          "media_type": "application/json",
+          "path": "analysis/record.json",
+          "retention": "retained",
+          "sha256": "4c2ce4a67d63920859102127b27ca041e5a66aa13bfaf3838bd2c6c73493a2a0"
+        },
+        {
+          "media_type": "application/json",
+          "path": "analysis/raw-manifest.json",
+          "retention": "retained",
+          "sha256": "c1a5ca01f2b6bb0b6d99bb301989a89e892f7d12f10606baf0664edbe1d394f0"
+        },
+        {
+          "media_type": "text/markdown",
+          "path": "PROTOCOL.md",
+          "retention": "retained",
+          "sha256": "3300b5e862a704f60ddef19ca785fb1b69fc67cb3ae04a8f85571b490284be61"
+        }
+      ],
+      "limitations": [
+        "Small n; unadjusted multiplicity; no endpoint mechanism attribution",
+        "Same-assistant critique and deterministic checks are not independent scientific peer review"
+      ],
+      "record_type": "ClaimRecord",
+      "schema_version": "0.2",
+      "scope": "Prespecified synthetic datasets, four matched seeds per dataset, two schedule policies and durations.",
+      "status": "supported",
+      "supersedes": null,
+      "supporting": [
+        {
+          "media_type": "application/json",
+          "path": "analysis/measurements.json",
+          "retention": "retained",
+          "sha256": "7f06ed04f7f8da9566c7af82e1c74704fd4dc5ad7823168b57377502e1de798c"
+        },
+        {
+          "media_type": "application/json",
+          "path": "analysis/summary.json",
+          "retention": "retained",
+          "sha256": "eadd1e78ec6a09d73426dd4ee4dafd19c093a7100552f92119d3df9b5e70abac"
+        }
+      ],
+      "text": "GMM8 coverage spans 8\u20138 modes and inlier fractions span 0.973145\u20130.994141; saturated counts do not establish equivalence."
+    },
+    {
+      "claim_id": "verification",
+      "contradicting": [],
+      "dependencies": [
+        {
+          "media_type": "application/json",
+          "path": "analysis/record.json",
+          "retention": "retained",
+          "sha256": "4c2ce4a67d63920859102127b27ca041e5a66aa13bfaf3838bd2c6c73493a2a0"
+        },
+        {
+          "media_type": "application/json",
+          "path": "analysis/raw-manifest.json",
+          "retention": "retained",
+          "sha256": "c1a5ca01f2b6bb0b6d99bb301989a89e892f7d12f10606baf0664edbe1d394f0"
+        },
+        {
+          "media_type": "text/markdown",
+          "path": "PROTOCOL.md",
+          "retention": "retained",
+          "sha256": "3300b5e862a704f60ddef19ca785fb1b69fc67cb3ae04a8f85571b490284be61"
+        }
+      ],
+      "limitations": [
+        "Small n; unadjusted multiplicity; no endpoint mechanism attribution",
+        "Same-assistant critique and deterministic checks are not independent scientific peer review"
+      ],
+      "record_type": "ClaimRecord",
+      "schema_version": "0.2",
+      "scope": "Prespecified synthetic datasets, four matched seeds per dataset, two schedule policies and durations.",
+      "status": "supported",
+      "supersedes": null,
+      "supporting": [
+        {
+          "media_type": "application/json",
+          "path": "verification/verification.json",
+          "retention": "retained",
+          "sha256": "82c1e697770beec7aa2dc2ff7c332db07c00f3591f1511eb475650625d08ae04"
+        }
+      ],
+      "text": "All 96 model states regenerate retained samples and separate analysis reproduces numerical outputs and figures."
+    }
+  ],
+  "criteria": [
+    "Scientific validity within specified scope",
+    "Factorial and seed controls",
+    "Uncertainty and multiplicity",
+    "Evidence and numerical reproduction",
+    "Disclosure and limitations"
+  ],
+  "material": {
+    "media_type": "text/markdown",
+    "path": "REPORT.md",
+    "retention": "retained",
+    "sha256": "eef4230629c0e789727df16a990a48c098c26bbecdd9c927630696e5428c384a"
+  },
+  "study": "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate"
+}

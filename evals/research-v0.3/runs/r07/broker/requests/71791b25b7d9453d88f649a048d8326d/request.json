@@ -1,0 +1,28 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "study/runner.py",
+    "--dataset",
+    "moons",
+    "--seed",
+    "71",
+    "--phase",
+    "pilot",
+    "--policy",
+    "cosine",
+    "--duration",
+    "10000",
+    "--stop",
+    "1500",
+    "--device",
+    "mps",
+    "--attempt-id",
+    "pilot-moons-a003"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "pilot-moons-mps-threshold-repair",
+  "request_id": "71791b25b7d9453d88f649a048d8326d",
+  "timeout_seconds": 60.0
+}

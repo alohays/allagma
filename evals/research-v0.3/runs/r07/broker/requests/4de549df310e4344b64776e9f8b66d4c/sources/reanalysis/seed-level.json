@@ -1,0 +1,1394 @@
+[
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2000,
+    "inlier_fraction": 0.9765625,
+    "mode_counts": [
+      229,
+      233,
+      258,
+      251,
+      250,
+      266,
+      271,
+      242
+    ],
+    "schedule": "constant",
+    "seed": 5001,
+    "sw1": 0.07153591498668763,
+    "updates": 5000,
+    "variant": "raw"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2027,
+    "inlier_fraction": 0.98974609375,
+    "mode_counts": [
+      228,
+      240,
+      274,
+      266,
+      257,
+      275,
+      252,
+      235
+    ],
+    "schedule": "constant",
+    "seed": 5001,
+    "sw1": 0.0844828391721722,
+    "updates": 5000,
+    "variant": "ema099"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2016,
+    "inlier_fraction": 0.984375,
+    "mode_counts": [
+      224,
+      243,
+      276,
+      256,
+      257,
+      270,
+      258,
+      232
+    ],
+    "schedule": "constant",
+    "seed": 5001,
+    "sw1": 0.08260390130760391,
+    "updates": 5000,
+    "variant": "ema0999"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2021,
+    "inlier_fraction": 0.98681640625,
+    "mode_counts": [
+      227,
+      246,
+      270,
+      263,
+      264,
+      269,
+      252,
+      230
+    ],
+    "schedule": "cosine",
+    "seed": 5001,
+    "sw1": 0.08503705120879003,
+    "updates": 5000,
+    "variant": "raw"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2022,
+    "inlier_fraction": 0.9873046875,
+    "mode_counts": [
+      227,
+      247,
+      270,
+      262,
+      264,
+      270,
+      252,
+      230
+    ],
+    "schedule": "cosine",
+    "seed": 5001,
+    "sw1": 0.08448501320377656,
+    "updates": 5000,
+    "variant": "ema099"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2016,
+    "inlier_fraction": 0.984375,
+    "mode_counts": [
+      222,
+      247,
+      275,
+      256,
+      264,
+      267,
+      255,
+      230
+    ],
+    "schedule": "cosine",
+    "seed": 5001,
+    "sw1": 0.08286591959444219,
+    "updates": 5000,
+    "variant": "ema0999"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2010,
+    "inlier_fraction": 0.9814453125,
+    "mode_counts": [
+      217,
+      227,
+      281,
+      255,
+      268,
+      267,
+      274,
+      221
+    ],
+    "schedule": "constant",
+    "seed": 5001,
+    "sw1": 0.104420601713935,
+    "updates": 10000,
+    "variant": "raw"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2036,
+    "inlier_fraction": 0.994140625,
+    "mode_counts": [
+      218,
+      239,
+      292,
+      256,
+      265,
+      267,
+      270,
+      229
+    ],
+    "schedule": "constant",
+    "seed": 5001,
+    "sw1": 0.09147121143185241,
+    "updates": 10000,
+    "variant": "ema099"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2028,
+    "inlier_fraction": 0.990234375,
+    "mode_counts": [
+      222,
+      241,
+      277,
+      260,
+      265,
+      267,
+      264,
+      232
+    ],
+    "schedule": "constant",
+    "seed": 5001,
+    "sw1": 0.0851870726699071,
+    "updates": 10000,
+    "variant": "ema0999"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2029,
+    "inlier_fraction": 0.99072265625,
+    "mode_counts": [
+      229,
+      242,
+      275,
+      263,
+      265,
+      268,
+      261,
+      226
+    ],
+    "schedule": "cosine",
+    "seed": 5001,
+    "sw1": 0.08662796253628482,
+    "updates": 10000,
+    "variant": "raw"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2028,
+    "inlier_fraction": 0.990234375,
+    "mode_counts": [
+      229,
+      242,
+      275,
+      263,
+      265,
+      267,
+      260,
+      227
+    ],
+    "schedule": "cosine",
+    "seed": 5001,
+    "sw1": 0.08628753276224961,
+    "updates": 10000,
+    "variant": "ema099"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2030,
+    "inlier_fraction": 0.9912109375,
+    "mode_counts": [
+      228,
+      241,
+      274,
+      261,
+      265,
+      267,
+      264,
+      230
+    ],
+    "schedule": "cosine",
+    "seed": 5001,
+    "sw1": 0.08363070617475629,
+    "updates": 10000,
+    "variant": "ema0999"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2003,
+    "inlier_fraction": 0.97802734375,
+    "mode_counts": [
+      235,
+      282,
+      283,
+      310,
+      319,
+      226,
+      165,
+      183
+    ],
+    "schedule": "constant",
+    "seed": 5002,
+    "sw1": 0.24339072699771627,
+    "updates": 5000,
+    "variant": "raw"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2017,
+    "inlier_fraction": 0.98486328125,
+    "mode_counts": [
+      239,
+      264,
+      273,
+      259,
+      272,
+      243,
+      233,
+      234
+    ],
+    "schedule": "constant",
+    "seed": 5002,
+    "sw1": 0.08602145761323118,
+    "updates": 5000,
+    "variant": "ema099"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2007,
+    "inlier_fraction": 0.97998046875,
+    "mode_counts": [
+      239,
+      265,
+      271,
+      248,
+      263,
+      247,
+      231,
+      243
+    ],
+    "schedule": "constant",
+    "seed": 5002,
+    "sw1": 0.07157617790836907,
+    "updates": 5000,
+    "variant": "ema0999"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2020,
+    "inlier_fraction": 0.986328125,
+    "mode_counts": [
+      240,
+      261,
+      285,
+      246,
+      261,
+      241,
+      242,
+      244
+    ],
+    "schedule": "cosine",
+    "seed": 5002,
+    "sw1": 0.07437051130622493,
+    "updates": 5000,
+    "variant": "raw"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2019,
+    "inlier_fraction": 0.98583984375,
+    "mode_counts": [
+      240,
+      263,
+      286,
+      246,
+      259,
+      241,
+      240,
+      244
+    ],
+    "schedule": "cosine",
+    "seed": 5002,
+    "sw1": 0.07389949581632568,
+    "updates": 5000,
+    "variant": "ema099"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2013,
+    "inlier_fraction": 0.98291015625,
+    "mode_counts": [
+      240,
+      258,
+      281,
+      244,
+      258,
+      246,
+      241,
+      245
+    ],
+    "schedule": "cosine",
+    "seed": 5002,
+    "sw1": 0.06563833554440622,
+    "updates": 5000,
+    "variant": "ema0999"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2030,
+    "inlier_fraction": 0.9912109375,
+    "mode_counts": [
+      229,
+      255,
+      308,
+      288,
+      259,
+      242,
+      236,
+      213
+    ],
+    "schedule": "constant",
+    "seed": 5002,
+    "sw1": 0.14291134639925357,
+    "updates": 10000,
+    "variant": "raw"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2025,
+    "inlier_fraction": 0.98876953125,
+    "mode_counts": [
+      223,
+      256,
+      287,
+      270,
+      260,
+      238,
+      255,
+      236
+    ],
+    "schedule": "constant",
+    "seed": 5002,
+    "sw1": 0.0882198620033844,
+    "updates": 10000,
+    "variant": "ema099"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2027,
+    "inlier_fraction": 0.98974609375,
+    "mode_counts": [
+      229,
+      263,
+      283,
+      262,
+      255,
+      250,
+      236,
+      249
+    ],
+    "schedule": "constant",
+    "seed": 5002,
+    "sw1": 0.07848480827244936,
+    "updates": 10000,
+    "variant": "ema0999"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2025,
+    "inlier_fraction": 0.98876953125,
+    "mode_counts": [
+      234,
+      260,
+      281,
+      256,
+      253,
+      251,
+      238,
+      252
+    ],
+    "schedule": "cosine",
+    "seed": 5002,
+    "sw1": 0.06986671395279101,
+    "updates": 10000,
+    "variant": "raw"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2025,
+    "inlier_fraction": 0.98876953125,
+    "mode_counts": [
+      234,
+      259,
+      281,
+      256,
+      253,
+      251,
+      238,
+      253
+    ],
+    "schedule": "cosine",
+    "seed": 5002,
+    "sw1": 0.06949563740881477,
+    "updates": 10000,
+    "variant": "ema099"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2025,
+    "inlier_fraction": 0.98876953125,
+    "mode_counts": [
+      234,
+      259,
+      278,
+      259,
+      252,
+      252,
+      238,
+      253
+    ],
+    "schedule": "cosine",
+    "seed": 5002,
+    "sw1": 0.06875584761301051,
+    "updates": 10000,
+    "variant": "ema0999"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 1993,
+    "inlier_fraction": 0.97314453125,
+    "mode_counts": [
+      246,
+      304,
+      251,
+      289,
+      225,
+      203,
+      251,
+      224
+    ],
+    "schedule": "constant",
+    "seed": 5003,
+    "sw1": 0.11803721287410325,
+    "updates": 5000,
+    "variant": "raw"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2008,
+    "inlier_fraction": 0.98046875,
+    "mode_counts": [
+      270,
+      272,
+      229,
+      289,
+      227,
+      227,
+      254,
+      240
+    ],
+    "schedule": "constant",
+    "seed": 5003,
+    "sw1": 0.08718632738516649,
+    "updates": 5000,
+    "variant": "ema099"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2010,
+    "inlier_fraction": 0.9814453125,
+    "mode_counts": [
+      278,
+      265,
+      238,
+      279,
+      239,
+      213,
+      258,
+      240
+    ],
+    "schedule": "constant",
+    "seed": 5003,
+    "sw1": 0.08914856032654976,
+    "updates": 5000,
+    "variant": "ema0999"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2020,
+    "inlier_fraction": 0.986328125,
+    "mode_counts": [
+      280,
+      267,
+      244,
+      273,
+      238,
+      207,
+      263,
+      248
+    ],
+    "schedule": "cosine",
+    "seed": 5003,
+    "sw1": 0.09809055921465357,
+    "updates": 5000,
+    "variant": "raw"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2019,
+    "inlier_fraction": 0.98583984375,
+    "mode_counts": [
+      279,
+      267,
+      244,
+      273,
+      238,
+      207,
+      263,
+      248
+    ],
+    "schedule": "cosine",
+    "seed": 5003,
+    "sw1": 0.09799996815586898,
+    "updates": 5000,
+    "variant": "ema099"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2009,
+    "inlier_fraction": 0.98095703125,
+    "mode_counts": [
+      278,
+      265,
+      244,
+      269,
+      241,
+      208,
+      256,
+      248
+    ],
+    "schedule": "cosine",
+    "seed": 5003,
+    "sw1": 0.09095195820052661,
+    "updates": 5000,
+    "variant": "ema0999"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2024,
+    "inlier_fraction": 0.98828125,
+    "mode_counts": [
+      279,
+      278,
+      261,
+      278,
+      238,
+      215,
+      248,
+      227
+    ],
+    "schedule": "constant",
+    "seed": 5003,
+    "sw1": 0.1082761241309105,
+    "updates": 10000,
+    "variant": "raw"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2024,
+    "inlier_fraction": 0.98828125,
+    "mode_counts": [
+      276,
+      271,
+      243,
+      271,
+      255,
+      209,
+      260,
+      239
+    ],
+    "schedule": "constant",
+    "seed": 5003,
+    "sw1": 0.08500228958799066,
+    "updates": 10000,
+    "variant": "ema099"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2026,
+    "inlier_fraction": 0.9892578125,
+    "mode_counts": [
+      279,
+      271,
+      247,
+      269,
+      248,
+      210,
+      251,
+      251
+    ],
+    "schedule": "constant",
+    "seed": 5003,
+    "sw1": 0.0928378489051592,
+    "updates": 10000,
+    "variant": "ema0999"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2031,
+    "inlier_fraction": 0.99169921875,
+    "mode_counts": [
+      279,
+      266,
+      248,
+      264,
+      256,
+      204,
+      256,
+      258
+    ],
+    "schedule": "cosine",
+    "seed": 5003,
+    "sw1": 0.09219764964586001,
+    "updates": 10000,
+    "variant": "raw"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2031,
+    "inlier_fraction": 0.99169921875,
+    "mode_counts": [
+      279,
+      266,
+      248,
+      264,
+      256,
+      204,
+      256,
+      258
+    ],
+    "schedule": "cosine",
+    "seed": 5003,
+    "sw1": 0.09227358082817447,
+    "updates": 10000,
+    "variant": "ema099"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2030,
+    "inlier_fraction": 0.9912109375,
+    "mode_counts": [
+      281,
+      267,
+      250,
+      263,
+      253,
+      205,
+      256,
+      255
+    ],
+    "schedule": "cosine",
+    "seed": 5003,
+    "sw1": 0.09437620724761511,
+    "updates": 10000,
+    "variant": "ema0999"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2003,
+    "inlier_fraction": 0.97802734375,
+    "mode_counts": [
+      232,
+      256,
+      255,
+      239,
+      309,
+      267,
+      228,
+      217
+    ],
+    "schedule": "constant",
+    "seed": 5004,
+    "sw1": 0.07497515829806445,
+    "updates": 5000,
+    "variant": "raw"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2019,
+    "inlier_fraction": 0.98583984375,
+    "mode_counts": [
+      236,
+      243,
+      254,
+      256,
+      282,
+      272,
+      237,
+      239
+    ],
+    "schedule": "constant",
+    "seed": 5004,
+    "sw1": 0.03665016116241201,
+    "updates": 5000,
+    "variant": "ema099"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2016,
+    "inlier_fraction": 0.984375,
+    "mode_counts": [
+      229,
+      233,
+      256,
+      252,
+      280,
+      278,
+      247,
+      241
+    ],
+    "schedule": "constant",
+    "seed": 5004,
+    "sw1": 0.041535883442794595,
+    "updates": 5000,
+    "variant": "ema0999"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2012,
+    "inlier_fraction": 0.982421875,
+    "mode_counts": [
+      235,
+      242,
+      257,
+      261,
+      265,
+      266,
+      243,
+      243
+    ],
+    "schedule": "cosine",
+    "seed": 5004,
+    "sw1": 0.025551073996185517,
+    "updates": 5000,
+    "variant": "raw"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2010,
+    "inlier_fraction": 0.9814453125,
+    "mode_counts": [
+      235,
+      241,
+      257,
+      258,
+      265,
+      267,
+      244,
+      243
+    ],
+    "schedule": "cosine",
+    "seed": 5004,
+    "sw1": 0.02569672576365297,
+    "updates": 5000,
+    "variant": "ema099"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2010,
+    "inlier_fraction": 0.9814453125,
+    "mode_counts": [
+      235,
+      240,
+      260,
+      260,
+      267,
+      266,
+      243,
+      239
+    ],
+    "schedule": "cosine",
+    "seed": 5004,
+    "sw1": 0.02712707386652031,
+    "updates": 5000,
+    "variant": "ema0999"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2001,
+    "inlier_fraction": 0.97705078125,
+    "mode_counts": [
+      243,
+      276,
+      228,
+      277,
+      223,
+      257,
+      244,
+      253
+    ],
+    "schedule": "constant",
+    "seed": 5004,
+    "sw1": 0.04710466859787974,
+    "updates": 10000,
+    "variant": "raw"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2021,
+    "inlier_fraction": 0.98681640625,
+    "mode_counts": [
+      242,
+      248,
+      244,
+      258,
+      273,
+      267,
+      249,
+      240
+    ],
+    "schedule": "constant",
+    "seed": 5004,
+    "sw1": 0.025414555843830518,
+    "updates": 10000,
+    "variant": "ema099"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2027,
+    "inlier_fraction": 0.98974609375,
+    "mode_counts": [
+      244,
+      240,
+      248,
+      261,
+      275,
+      271,
+      241,
+      247
+    ],
+    "schedule": "constant",
+    "seed": 5004,
+    "sw1": 0.029079087290837455,
+    "updates": 10000,
+    "variant": "ema0999"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2024,
+    "inlier_fraction": 0.98828125,
+    "mode_counts": [
+      242,
+      243,
+      256,
+      260,
+      269,
+      266,
+      240,
+      248
+    ],
+    "schedule": "cosine",
+    "seed": 5004,
+    "sw1": 0.023965322585068113,
+    "updates": 10000,
+    "variant": "raw"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2024,
+    "inlier_fraction": 0.98828125,
+    "mode_counts": [
+      242,
+      243,
+      256,
+      260,
+      269,
+      266,
+      240,
+      248
+    ],
+    "schedule": "cosine",
+    "seed": 5004,
+    "sw1": 0.024012757578222674,
+    "updates": 10000,
+    "variant": "ema099"
+  },
+  {
+    "covered_modes": 8,
+    "dataset": "gmm8",
+    "inlier_count": 2028,
+    "inlier_fraction": 0.990234375,
+    "mode_counts": [
+      242,
+      243,
+      256,
+      260,
+      270,
+      270,
+      243,
+      244
+    ],
+    "schedule": "cosine",
+    "seed": 5004,
+    "sw1": 0.024290568237472297,
+    "updates": 10000,
+    "variant": "ema0999"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "constant",
+    "seed": 4001,
+    "sw1": 0.1198590702099009,
+    "updates": 5000,
+    "variant": "raw"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "constant",
+    "seed": 4001,
+    "sw1": 0.026507339453742604,
+    "updates": 5000,
+    "variant": "ema099"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "constant",
+    "seed": 4001,
+    "sw1": 0.03339092093706764,
+    "updates": 5000,
+    "variant": "ema0999"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "cosine",
+    "seed": 4001,
+    "sw1": 0.0305323995544251,
+    "updates": 5000,
+    "variant": "raw"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "cosine",
+    "seed": 4001,
+    "sw1": 0.0307805772800944,
+    "updates": 5000,
+    "variant": "ema099"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "cosine",
+    "seed": 4001,
+    "sw1": 0.029856546652454307,
+    "updates": 5000,
+    "variant": "ema0999"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "constant",
+    "seed": 4001,
+    "sw1": 0.05314394961946556,
+    "updates": 10000,
+    "variant": "raw"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "constant",
+    "seed": 4001,
+    "sw1": 0.03000720933833003,
+    "updates": 10000,
+    "variant": "ema099"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "constant",
+    "seed": 4001,
+    "sw1": 0.029497553819956696,
+    "updates": 10000,
+    "variant": "ema0999"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "cosine",
+    "seed": 4001,
+    "sw1": 0.03143385172643389,
+    "updates": 10000,
+    "variant": "raw"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "cosine",
+    "seed": 4001,
+    "sw1": 0.03149238376784081,
+    "updates": 10000,
+    "variant": "ema099"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "cosine",
+    "seed": 4001,
+    "sw1": 0.032748348556132276,
+    "updates": 10000,
+    "variant": "ema0999"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "constant",
+    "seed": 4002,
+    "sw1": 0.11671273029863717,
+    "updates": 5000,
+    "variant": "raw"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "constant",
+    "seed": 4002,
+    "sw1": 0.04537222488971815,
+    "updates": 5000,
+    "variant": "ema099"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "constant",
+    "seed": 4002,
+    "sw1": 0.05063066908571082,
+    "updates": 5000,
+    "variant": "ema0999"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "cosine",
+    "seed": 4002,
+    "sw1": 0.06311985027102243,
+    "updates": 5000,
+    "variant": "raw"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "cosine",
+    "seed": 4002,
+    "sw1": 0.06503563533555647,
+    "updates": 5000,
+    "variant": "ema099"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "cosine",
+    "seed": 4002,
+    "sw1": 0.055506756296863434,
+    "updates": 5000,
+    "variant": "ema0999"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "constant",
+    "seed": 4002,
+    "sw1": 0.13891661481867115,
+    "updates": 10000,
+    "variant": "raw"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "constant",
+    "seed": 4002,
+    "sw1": 0.05137571812226262,
+    "updates": 10000,
+    "variant": "ema099"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "constant",
+    "seed": 4002,
+    "sw1": 0.05446969779880102,
+    "updates": 10000,
+    "variant": "ema0999"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "cosine",
+    "seed": 4002,
+    "sw1": 0.05321553463636024,
+    "updates": 10000,
+    "variant": "raw"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "cosine",
+    "seed": 4002,
+    "sw1": 0.05300075306051873,
+    "updates": 10000,
+    "variant": "ema099"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "cosine",
+    "seed": 4002,
+    "sw1": 0.05263703526733343,
+    "updates": 10000,
+    "variant": "ema0999"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "constant",
+    "seed": 4003,
+    "sw1": 0.0696207309894579,
+    "updates": 5000,
+    "variant": "raw"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "constant",
+    "seed": 4003,
+    "sw1": 0.028442049622561867,
+    "updates": 5000,
+    "variant": "ema099"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "constant",
+    "seed": 4003,
+    "sw1": 0.03567374135955122,
+    "updates": 5000,
+    "variant": "ema0999"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "cosine",
+    "seed": 4003,
+    "sw1": 0.032647851357805444,
+    "updates": 5000,
+    "variant": "raw"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "cosine",
+    "seed": 4003,
+    "sw1": 0.03273096836030499,
+    "updates": 5000,
+    "variant": "ema099"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "cosine",
+    "seed": 4003,
+    "sw1": 0.03194160522250892,
+    "updates": 5000,
+    "variant": "ema0999"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "constant",
+    "seed": 4003,
+    "sw1": 0.04467605273291608,
+    "updates": 10000,
+    "variant": "raw"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "constant",
+    "seed": 4003,
+    "sw1": 0.038909625372717804,
+    "updates": 10000,
+    "variant": "ema099"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "constant",
+    "seed": 4003,
+    "sw1": 0.03185198097219277,
+    "updates": 10000,
+    "variant": "ema0999"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "cosine",
+    "seed": 4003,
+    "sw1": 0.029646753347884663,
+    "updates": 10000,
+    "variant": "raw"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "cosine",
+    "seed": 4003,
+    "sw1": 0.029630554192360166,
+    "updates": 10000,
+    "variant": "ema099"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "cosine",
+    "seed": 4003,
+    "sw1": 0.029295363256685275,
+    "updates": 10000,
+    "variant": "ema0999"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "constant",
+    "seed": 4004,
+    "sw1": 0.07967483512944204,
+    "updates": 5000,
+    "variant": "raw"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "constant",
+    "seed": 4004,
+    "sw1": 0.034624418923782034,
+    "updates": 5000,
+    "variant": "ema099"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "constant",
+    "seed": 4004,
+    "sw1": 0.029203302141963018,
+    "updates": 5000,
+    "variant": "ema0999"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "cosine",
+    "seed": 4004,
+    "sw1": 0.03297058921439331,
+    "updates": 5000,
+    "variant": "raw"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "cosine",
+    "seed": 4004,
+    "sw1": 0.03302771660514539,
+    "updates": 5000,
+    "variant": "ema099"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "cosine",
+    "seed": 4004,
+    "sw1": 0.027662998719691967,
+    "updates": 5000,
+    "variant": "ema0999"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "constant",
+    "seed": 4004,
+    "sw1": 0.07103913086008667,
+    "updates": 10000,
+    "variant": "raw"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "constant",
+    "seed": 4004,
+    "sw1": 0.029179088726919867,
+    "updates": 10000,
+    "variant": "ema099"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "constant",
+    "seed": 4004,
+    "sw1": 0.024831578497631075,
+    "updates": 10000,
+    "variant": "ema0999"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "cosine",
+    "seed": 4004,
+    "sw1": 0.02853088925880678,
+    "updates": 10000,
+    "variant": "raw"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "cosine",
+    "seed": 4004,
+    "sw1": 0.028540596024117525,
+    "updates": 10000,
+    "variant": "ema099"
+  },
+  {
+    "dataset": "moons",
+    "schedule": "cosine",
+    "seed": 4004,
+    "sw1": 0.028768494253728474,
+    "updates": 10000,
+    "variant": "ema0999"
+  }
+]

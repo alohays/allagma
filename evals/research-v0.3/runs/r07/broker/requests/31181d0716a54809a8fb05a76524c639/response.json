@@ -1,0 +1,17 @@
+{
+  "injected_interruption": false,
+  "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+  "reconciled_after_controller_restart": false,
+  "request_id": "31181d0716a54809a8fb05a76524c639",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 1.5657792498823255,
+    "ended_at": "2026-10-08T03:26:31.948706+00:00",
+    "exit_code": 1,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0005-pilot-moons-recovery",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 340393984,
+    "peak_storage_bytes": 1095290422,
+    "status": "failed"
+  }
+}

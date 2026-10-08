@@ -1,0 +1,2020 @@
+{
+  "charged_seconds": {
+    "compute": 357.49229495693,
+    "setup": 20.42604258377105
+  },
+  "compute_requests": 33,
+  "note": "Convenience receipt copies; authoritative receipts remain controller-owned. The currently executing request is absent until its response exists.",
+  "receipts": [
+    {
+      "request": {
+        "argv": [
+          ".venv/bin/python",
+          "study/workflow.py",
+          "freeze"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "freeze-confirmation-protocol",
+        "request_id": "216fa9580ba84c738b25671a2b0c9bfa",
+        "timeout_seconds": 15.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/216fa9580ba84c738b25671a2b0c9bfa.json",
+        "retention": "retained",
+        "sha256": "30d8ece41b20e7dc70fadf6d6bbcc965fe65bdcda3856024a0a54963f28fdbce"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "216fa9580ba84c738b25671a2b0c9bfa",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 0.309171374887228,
+          "ended_at": "2026-10-08T03:31:46.713170+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0009-freeze-confirmation-protocol",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 4079616,
+          "peak_storage_bytes": 1245059040,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/216fa9580ba84c738b25671a2b0c9bfa.json",
+        "retention": "retained",
+        "sha256": "06c41bd21fe6539f61c69758dffb902eb8f52b6ee38d445871faaf5423785717"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+          "study/runner.py",
+          "--dataset",
+          "moons",
+          "--seed",
+          "4003",
+          "--phase",
+          "confirmation",
+          "--policy",
+          "cosine",
+          "--duration",
+          "5000",
+          "--device",
+          "mps",
+          "--attempt-id",
+          "moons-4003-cosine-5000-a001",
+          "--base",
+          "artifacts"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "moons-4003-cosine-5000-a001",
+        "request_id": "2636d1515f13464a9b8ada0fec84b503",
+        "timeout_seconds": 30.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/2636d1515f13464a9b8ada0fec84b503.json",
+        "retention": "retained",
+        "sha256": "0d9e636d7901ef903f9bab19097b406eba65c948085df2fad44229bbc6902aa4"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "2636d1515f13464a9b8ada0fec84b503",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 8.57561745797284,
+          "ended_at": "2026-10-08T03:33:36.667551+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0017-moons-4003-cosine-5000-a001",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 524091392,
+          "peak_storage_bytes": 1525985099,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/2636d1515f13464a9b8ada0fec84b503.json",
+        "retention": "retained",
+        "sha256": "5b23139cde6d355326d6626efbdbe248b562bcca3b81d9738696beb600178e4d"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+          "study/runner.py",
+          "--dataset",
+          "gmm8",
+          "--seed",
+          "5003",
+          "--phase",
+          "confirmation",
+          "--policy",
+          "cosine",
+          "--duration",
+          "10000",
+          "--device",
+          "mps",
+          "--attempt-id",
+          "gmm8-5003-cosine-10000-a001",
+          "--base",
+          "artifacts"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "gmm8-5003-cosine-10000-a001",
+        "request_id": "2823359f7e5342c39dc616eee44b7dde",
+        "timeout_seconds": 45.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/2823359f7e5342c39dc616eee44b7dde.json",
+        "retention": "retained",
+        "sha256": "274c33339330cb9ccdaed3a04c94502e80fc65ceb2e43ae9725a6ab624823aab"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "2823359f7e5342c39dc616eee44b7dde",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 13.80303075001575,
+          "ended_at": "2026-10-08T03:36:34.816244+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0030-gmm8-5003-cosine-10000-a001",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 531480576,
+          "peak_storage_bytes": 1934009395,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/2823359f7e5342c39dc616eee44b7dde.json",
+        "retention": "retained",
+        "sha256": "ebcd823d312b544940bd6540eb4ffb80949861dc63692cb6734521ec5a1f958e"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+          "study/runner.py",
+          "--dataset",
+          "moons",
+          "--seed",
+          "4001",
+          "--phase",
+          "confirmation",
+          "--policy",
+          "cosine",
+          "--duration",
+          "5000",
+          "--device",
+          "mps",
+          "--attempt-id",
+          "moons-4001-cosine-5000-a001",
+          "--base",
+          "artifacts"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "moons-4001-cosine-5000-a001",
+        "request_id": "2893eb3633684adeae712d9a7b3cd70b",
+        "timeout_seconds": 30.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/2893eb3633684adeae712d9a7b3cd70b.json",
+        "retention": "retained",
+        "sha256": "50e3dd082630cbafe53545b17d644781dab2d4bc99a7bb9fedd03e3dfaddce14"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "2893eb3633684adeae712d9a7b3cd70b",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 8.540707874810323,
+          "ended_at": "2026-10-08T03:32:16.306863+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0011-moons-4001-cosine-5000-a001",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 516718592,
+          "peak_storage_bytes": 1332927801,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/2893eb3633684adeae712d9a7b3cd70b.json",
+        "retention": "retained",
+        "sha256": "747894bb9ab1d8cf353304e42a025741df5fec9b7ccdcb972aefcf0b57229940"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          ".venv/bin/python",
+          "study/runner.py",
+          "--dataset",
+          "moons",
+          "--seed",
+          "71",
+          "--phase",
+          "pilot",
+          "--policy",
+          "cosine",
+          "--duration",
+          "10000",
+          "--stop",
+          "1500",
+          "--device",
+          "mps",
+          "--attempt-id",
+          "pilot-moons-a002"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "pilot-moons-recovery",
+        "request_id": "31181d0716a54809a8fb05a76524c639",
+        "timeout_seconds": 60.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/31181d0716a54809a8fb05a76524c639.json",
+        "retention": "retained",
+        "sha256": "427e234c8160a1d55f27998294cba3b2db53b860c1697c38a8350c41a2476b95"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "31181d0716a54809a8fb05a76524c639",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 1.5657792498823255,
+          "ended_at": "2026-10-08T03:26:31.948706+00:00",
+          "exit_code": 1,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0005-pilot-moons-recovery",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 340393984,
+          "peak_storage_bytes": 1095290422,
+          "status": "failed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/31181d0716a54809a8fb05a76524c639.json",
+        "retention": "retained",
+        "sha256": "34946536ba660b32b5d2aca1ea84a4ce99588b0195a39b2ff46e403f911384b4"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+          "study/runner.py",
+          "--dataset",
+          "gmm8",
+          "--seed",
+          "5002",
+          "--phase",
+          "confirmation",
+          "--policy",
+          "cosine",
+          "--duration",
+          "5000",
+          "--device",
+          "mps",
+          "--attempt-id",
+          "gmm8-5002-cosine-5000-a001",
+          "--base",
+          "artifacts"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "gmm8-5002-cosine-5000-a001",
+        "request_id": "31b61c04994a4825ad86940e1cd1b2a1",
+        "timeout_seconds": 30.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/31b61c04994a4825ad86940e1cd1b2a1.json",
+        "retention": "retained",
+        "sha256": "0f552727765b26d4ef28bbb625b7e1ea800038c4e02927e8e2d1c0093e32e06e"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "31b61c04994a4825ad86940e1cd1b2a1",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 9.151040083030239,
+          "ended_at": "2026-10-08T03:35:39.225639+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0026-gmm8-5002-cosine-5000-a001",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 517718016,
+          "peak_storage_bytes": 1828800623,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/31b61c04994a4825ad86940e1cd1b2a1.json",
+        "retention": "retained",
+        "sha256": "02caefea982832d8b572babf1442ffc139349f4b8b0cb6ee6772270332c2a864"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+          "study/runner.py",
+          "--dataset",
+          "gmm8",
+          "--seed",
+          "5004",
+          "--phase",
+          "confirmation",
+          "--policy",
+          "cosine",
+          "--duration",
+          "5000",
+          "--device",
+          "mps",
+          "--attempt-id",
+          "gmm8-5004-cosine-5000-a001",
+          "--base",
+          "artifacts"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "gmm8-5004-cosine-5000-a001",
+        "request_id": "3ca81e9a631549e5a3aa297d89a62741",
+        "timeout_seconds": 30.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/3ca81e9a631549e5a3aa297d89a62741.json",
+        "retention": "retained",
+        "sha256": "9bf68286267ce58e489e80e0a917d82d351c24bac4a2fa425441e4f2230e64ea"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "3ca81e9a631549e5a3aa297d89a62741",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 9.338117416016757,
+          "ended_at": "2026-10-08T03:37:01.312376+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0032-gmm8-5004-cosine-5000-a001",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 529350656,
+          "peak_storage_bytes": 2027158249,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/3ca81e9a631549e5a3aa297d89a62741.json",
+        "retention": "retained",
+        "sha256": "3da4ed85895a41b33032d00b65f3f17b8a706a3b8cc7d791b7161133a902d707"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          ".venv/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--no-index",
+          "--find-links",
+          "inputs/materials/wheels",
+          "-r",
+          "inputs/materials/requirements-reference.lock"
+        ],
+        "attempt": false,
+        "category": "setup",
+        "cwd": ".",
+        "label": "install-locked-dependencies",
+        "request_id": "489edb7d71724d53ba0bffacdac62288",
+        "timeout_seconds": 120.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/489edb7d71724d53ba0bffacdac62288.json",
+        "retention": "retained",
+        "sha256": "bd631b0ffa58b53fbf6510a1d19a6204637804838135a3359d5cbfbc2a1da3ab"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "489edb7d71724d53ba0bffacdac62288",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 12.427024750038981,
+          "ended_at": "2026-10-08T03:20:43.477324+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0002-install-locked-dependencies",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 291405824,
+          "peak_storage_bytes": 1095156844,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/489edb7d71724d53ba0bffacdac62288.json",
+        "retention": "retained",
+        "sha256": "99f3cf82f34001a4d2080dfdc53372a10edebd2d2420ccc7229b6d7ed4aa48f6"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          ".venv/bin/python",
+          "study/verify.py"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "verify-all-saved-model-states",
+        "request_id": "4de549df310e4344b64776e9f8b66d4c",
+        "timeout_seconds": 60.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/4de549df310e4344b64776e9f8b66d4c.json",
+        "retention": "retained",
+        "sha256": "410f838e410e608f1b6e3bc041520d008b22984480748ae0d6a91d462f5930fd"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "4de549df310e4344b64776e9f8b66d4c",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 8.943403708050027,
+          "ended_at": "2026-10-08T03:40:11.407889+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0036-verify-all-saved-model-states",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 430358528,
+          "peak_storage_bytes": 2041521701,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/4de549df310e4344b64776e9f8b66d4c.json",
+        "retention": "retained",
+        "sha256": "8e29e83ac618b776afa327398a9a5d96f389981bc0dc83e1bb201b5763603276"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+          "study/runner.py",
+          "--dataset",
+          "moons",
+          "--seed",
+          "4003",
+          "--phase",
+          "confirmation",
+          "--policy",
+          "cosine",
+          "--duration",
+          "10000",
+          "--device",
+          "mps",
+          "--attempt-id",
+          "moons-4003-cosine-10000-a001",
+          "--base",
+          "artifacts"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "moons-4003-cosine-10000-a001",
+        "request_id": "4e454a0034ca44f4a56742244ced70c1",
+        "timeout_seconds": 45.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/4e454a0034ca44f4a56742244ced70c1.json",
+        "retention": "retained",
+        "sha256": "5d922a047feca85670acb7c640e4b463e856b920e164db9cb795c0ceae6ab2bb"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "4e454a0034ca44f4a56742244ced70c1",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 14.340573791181669,
+          "ended_at": "2026-10-08T03:33:52.017408+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0018-moons-4003-cosine-10000-a001",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 536182784,
+          "peak_storage_bytes": 1542573402,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/4e454a0034ca44f4a56742244ced70c1.json",
+        "retention": "retained",
+        "sha256": "c9ebe5e36ee318444d6e074819df4f72756a9170b375fa0a19256702a6aa3223"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+          "study/runner.py",
+          "--dataset",
+          "gmm8",
+          "--seed",
+          "5001",
+          "--phase",
+          "confirmation",
+          "--policy",
+          "constant",
+          "--duration",
+          "10000",
+          "--device",
+          "mps",
+          "--attempt-id",
+          "gmm8-5001-constant-10000-a001",
+          "--base",
+          "artifacts"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "gmm8-5001-constant-10000-a001",
+        "request_id": "53ce9967ee8a4bdb8a6d9b0e473bfe62",
+        "timeout_seconds": 45.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/53ce9967ee8a4bdb8a6d9b0e473bfe62.json",
+        "retention": "retained",
+        "sha256": "793f3901040bb3b60305834d594944c0c53cfc2775f08f524e52705b60a15fc6"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "53ce9967ee8a4bdb8a6d9b0e473bfe62",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 14.787869459018111,
+          "ended_at": "2026-10-08T03:34:48.698403+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0022-gmm8-5001-constant-10000-a001",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 661766144,
+          "peak_storage_bytes": 1718310661,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/53ce9967ee8a4bdb8a6d9b0e473bfe62.json",
+        "retention": "retained",
+        "sha256": "f0b1fc4b2ed9794740b8c5f04c9e1be8f182ff21a98ba80e087feff8246d736e"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+          "study/runner.py",
+          "--dataset",
+          "moons",
+          "--seed",
+          "4004",
+          "--phase",
+          "confirmation",
+          "--policy",
+          "cosine",
+          "--duration",
+          "10000",
+          "--device",
+          "mps",
+          "--attempt-id",
+          "moons-4004-cosine-10000-a001",
+          "--base",
+          "artifacts"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "moons-4004-cosine-10000-a001",
+        "request_id": "67cd1bf7bb9b46089b7316211cbe8b29",
+        "timeout_seconds": 45.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/67cd1bf7bb9b46089b7316211cbe8b29.json",
+        "retention": "retained",
+        "sha256": "6d3c5094fa8fb5c7c5aebc561f595d229dc7b713886a6608e1697a4e2e54ba58"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "67cd1bf7bb9b46089b7316211cbe8b29",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 14.442418500082567,
+          "ended_at": "2026-10-08T03:34:32.895724+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0021-moons-4004-cosine-10000-a001",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 535576576,
+          "peak_storage_bytes": 1641753907,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/67cd1bf7bb9b46089b7316211cbe8b29.json",
+        "retention": "retained",
+        "sha256": "af0e29d5b1e03666a8b1a64217425f5371dc9d7ebb28d2b5b72d76037334e5ba"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+          "study/runner.py",
+          "--dataset",
+          "gmm8",
+          "--seed",
+          "5004",
+          "--phase",
+          "confirmation",
+          "--policy",
+          "cosine",
+          "--duration",
+          "10000",
+          "--device",
+          "mps",
+          "--attempt-id",
+          "gmm8-5004-cosine-10000-a001",
+          "--base",
+          "artifacts"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "gmm8-5004-cosine-10000-a001",
+        "request_id": "6816818d5627458cbbafd11ead5339a0",
+        "timeout_seconds": 45.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/6816818d5627458cbbafd11ead5339a0.json",
+        "retention": "retained",
+        "sha256": "231a37b8751ab476eba07964fb63226cb755a8dc3312136637acc2beb39afedb"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "6816818d5627458cbbafd11ead5339a0",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 14.251398833934218,
+          "ended_at": "2026-10-08T03:37:16.481363+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0033-gmm8-5004-cosine-10000-a001",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 534462464,
+          "peak_storage_bytes": 2038468397,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/6816818d5627458cbbafd11ead5339a0.json",
+        "retention": "retained",
+        "sha256": "ea98590f6b96b922deacb84cf6bfaa7ba92b065512ca20970ed48f39ba1f8a45"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+          "study/runner.py",
+          "--dataset",
+          "moons",
+          "--seed",
+          "4003",
+          "--phase",
+          "confirmation",
+          "--policy",
+          "constant",
+          "--duration",
+          "10000",
+          "--device",
+          "mps",
+          "--attempt-id",
+          "moons-4003-constant-10000-a001",
+          "--base",
+          "artifacts"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "moons-4003-constant-10000-a001",
+        "request_id": "6864e47a68b246a590bbaaabc4e4e51d",
+        "timeout_seconds": 45.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/6864e47a68b246a590bbaaabc4e4e51d.json",
+        "retention": "retained",
+        "sha256": "4bd1e92790f9e3c6cb59d35fda056f576ff0c997a821a79413dc4daf9ea67787"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "6864e47a68b246a590bbaaabc4e4e51d",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 14.345244291005656,
+          "ended_at": "2026-10-08T03:33:27.109961+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0016-moons-4003-constant-10000-a001",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 669646848,
+          "peak_storage_bytes": 1519954768,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/6864e47a68b246a590bbaaabc4e4e51d.json",
+        "retention": "retained",
+        "sha256": "7d100b5f365f52f6b7c6a88be43f5adb78be11da8f324dea75c56723b4bc6115"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+          "study/runner.py",
+          "--dataset",
+          "gmm8",
+          "--seed",
+          "5001",
+          "--phase",
+          "confirmation",
+          "--policy",
+          "cosine",
+          "--duration",
+          "10000",
+          "--device",
+          "mps",
+          "--attempt-id",
+          "gmm8-5001-cosine-10000-a001",
+          "--base",
+          "artifacts"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "gmm8-5001-cosine-10000-a001",
+        "request_id": "6a503cbbf0074c36b1f8c6b0af74baf7",
+        "timeout_seconds": 45.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/6a503cbbf0074c36b1f8c6b0af74baf7.json",
+        "retention": "retained",
+        "sha256": "78e96c635d75a5b8f5bf06ee2561d75e47804930ebc3b729371b7f0188afcf6c"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "6a503cbbf0074c36b1f8c6b0af74baf7",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 14.337815167149529,
+          "ended_at": "2026-10-08T03:35:13.451961+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0024-gmm8-5001-cosine-10000-a001",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 525697024,
+          "peak_storage_bytes": 1741599971,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/6a503cbbf0074c36b1f8c6b0af74baf7.json",
+        "retention": "retained",
+        "sha256": "b7504d99093a649bd887566cae5722ff817fdd3e05776e9243ad082174f0b861"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          ".venv/bin/python",
+          "study/setup_study.py"
+        ],
+        "attempt": false,
+        "category": "setup",
+        "cwd": ".",
+        "label": "resolve-campaign-and-warm-imports",
+        "request_id": "6bffde97731647da97b75890540feeb2",
+        "timeout_seconds": 120.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/6bffde97731647da97b75890540feeb2.json",
+        "retention": "retained",
+        "sha256": "25dd1a47b6d0f68aa654f2870671a125b9029035a4b5be387e52d1a2e708b4d8"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "6bffde97731647da97b75890540feeb2",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 6.474120958941057,
+          "ended_at": "2026-10-08T03:22:27.874399+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0003-resolve-campaign-and-warm-imports",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 213073920,
+          "peak_storage_bytes": 1095201811,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/6bffde97731647da97b75890540feeb2.json",
+        "retention": "retained",
+        "sha256": "cb004c015ffad082accf13d13d5e91105dea6213b67b5ff66c692e9e117eb802"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          ".venv/bin/python",
+          "study/runner.py",
+          "--dataset",
+          "moons",
+          "--seed",
+          "71",
+          "--phase",
+          "pilot",
+          "--policy",
+          "cosine",
+          "--duration",
+          "10000",
+          "--stop",
+          "1500",
+          "--device",
+          "mps",
+          "--attempt-id",
+          "pilot-moons-a003"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "pilot-moons-mps-threshold-repair",
+        "request_id": "71791b25b7d9453d88f649a048d8326d",
+        "timeout_seconds": 60.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/71791b25b7d9453d88f649a048d8326d.json",
+        "retention": "retained",
+        "sha256": "f7d11ea1d535fb16e7035af9a13a6138314bf256e96bd7185eb4c94a057f47a3"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "71791b25b7d9453d88f649a048d8326d",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 5.618415457895026,
+          "ended_at": "2026-10-08T03:27:14.777953+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0006-pilot-moons-mps-threshold-repair",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 510918656,
+          "peak_storage_bytes": 1166518120,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/71791b25b7d9453d88f649a048d8326d.json",
+        "retention": "retained",
+        "sha256": "4ce60dda9d82aec69b97cfff5094548d59086ecc131fa01e566311255d296372"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+          "study/runner.py",
+          "--dataset",
+          "moons",
+          "--seed",
+          "4001",
+          "--phase",
+          "confirmation",
+          "--policy",
+          "constant",
+          "--duration",
+          "10000",
+          "--device",
+          "mps",
+          "--attempt-id",
+          "moons-4001-constant-10000-a001",
+          "--base",
+          "artifacts"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "moons-4001-constant-10000-a001",
+        "request_id": "72a3ee0ed0514f4786a99a0d2f35bb47",
+        "timeout_seconds": 45.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/72a3ee0ed0514f4786a99a0d2f35bb47.json",
+        "retention": "retained",
+        "sha256": "fefc98cf404e60fc7cefbdfa55d64ee8550db370af607c49f3b4fdd78dea2d11"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "72a3ee0ed0514f4786a99a0d2f35bb47",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 14.21197612490505,
+          "ended_at": "2026-10-08T03:32:06.805903+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0010-moons-4001-constant-10000-a001",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 673284096,
+          "peak_storage_bytes": 1321623714,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/72a3ee0ed0514f4786a99a0d2f35bb47.json",
+        "retention": "retained",
+        "sha256": "200505f0ccaaf7410ee4b946efbb5d496f4f9796277bbd95c7ae56e8fef9c1aa"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          ".venv/bin/python",
+          "study/runner.py",
+          "--dataset",
+          "gmm8",
+          "--seed",
+          "81",
+          "--phase",
+          "pilot",
+          "--policy",
+          "constant",
+          "--duration",
+          "10000",
+          "--stop",
+          "1500",
+          "--device",
+          "mps",
+          "--attempt-id",
+          "pilot-gmm8-a001"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "pilot-gmm8-cost",
+        "request_id": "790c4ea72ffe4dc4bb72a433e72d8329",
+        "timeout_seconds": 45.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/790c4ea72ffe4dc4bb72a433e72d8329.json",
+        "retention": "retained",
+        "sha256": "675fa06ccb1fe701f6e02515b1b3bf0dce9bb51b12a007f1912b5a8003cf53e1"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "790c4ea72ffe4dc4bb72a433e72d8329",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 4.92583170812577,
+          "ended_at": "2026-10-08T03:29:32.314008+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0008-pilot-gmm8-cost",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 665698304,
+          "peak_storage_bytes": 1244952174,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/790c4ea72ffe4dc4bb72a433e72d8329.json",
+        "retention": "retained",
+        "sha256": "b77d085b00433258325922cd46bcbae9e76775bb9f1e789f01614df14235c0dd"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+          "study/runner.py",
+          "--dataset",
+          "gmm8",
+          "--seed",
+          "5001",
+          "--phase",
+          "confirmation",
+          "--policy",
+          "cosine",
+          "--duration",
+          "5000",
+          "--device",
+          "mps",
+          "--attempt-id",
+          "gmm8-5001-cosine-5000-a001",
+          "--base",
+          "artifacts"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "gmm8-5001-cosine-5000-a001",
+        "request_id": "7c8397d37e084605900a5311106a21c7",
+        "timeout_seconds": 30.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/7c8397d37e084605900a5311106a21c7.json",
+        "retention": "retained",
+        "sha256": "c2f9ddcb1775f99b700f3dee95a7daa95f8de191073c422e91a00deaa78cbcab"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "7c8397d37e084605900a5311106a21c7",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 8.501516832970083,
+          "ended_at": "2026-10-08T03:34:58.108650+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0023-gmm8-5001-cosine-5000-a001",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 514916352,
+          "peak_storage_bytes": 1724340974,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/7c8397d37e084605900a5311106a21c7.json",
+        "retention": "retained",
+        "sha256": "6579dcd4d4ff2a02a958ec0c7e631c5f001d22854cc5b1620fb42f030fe278fe"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+          "study/runner.py",
+          "--dataset",
+          "moons",
+          "--seed",
+          "4001",
+          "--phase",
+          "confirmation",
+          "--policy",
+          "cosine",
+          "--duration",
+          "10000",
+          "--device",
+          "mps",
+          "--attempt-id",
+          "moons-4001-cosine-10000-a001",
+          "--base",
+          "artifacts"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "moons-4001-cosine-10000-a001",
+        "request_id": "813baee22af34e81830cc115c780601a",
+        "timeout_seconds": 45.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/813baee22af34e81830cc115c780601a.json",
+        "retention": "retained",
+        "sha256": "28fadc6bbe84f7064364ed6cf39c7b300c198176da15ea6a91be651bb7ee0f9a"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "813baee22af34e81830cc115c780601a",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 14.306570457993075,
+          "ended_at": "2026-10-08T03:32:31.603093+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0012-moons-4001-cosine-10000-a001",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 532627456,
+          "peak_storage_bytes": 1344230900,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/813baee22af34e81830cc115c780601a.json",
+        "retention": "retained",
+        "sha256": "bdeac590feadb3e15770f96588e382ce568a47034d49d2349717e2d73edffaef"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+          "study/analyze.py",
+          "--base",
+          "artifacts",
+          "--out",
+          "analysis"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "reproduce-analysis",
+        "request_id": "90a0e79abef94fbf83d518d13f9aa460",
+        "timeout_seconds": 60.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/90a0e79abef94fbf83d518d13f9aa460.json",
+        "retention": "retained",
+        "sha256": "795dd277c0e73f70965179b2e97e966a102d1a4990b3e63724a841ba6b7849f6"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "90a0e79abef94fbf83d518d13f9aa460",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 26.13519745809026,
+          "ended_at": "2026-10-08T03:37:43.672965+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0034-reproduce-analysis",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 548208640,
+          "peak_storage_bytes": 2039309212,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/90a0e79abef94fbf83d518d13f9aa460.json",
+        "retention": "retained",
+        "sha256": "891a96ac2e0d06bb05454524bd6c8d8226ab6841fbabd85529c3b34eb072017a"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+          "study/runner.py",
+          "--dataset",
+          "moons",
+          "--seed",
+          "4002",
+          "--phase",
+          "confirmation",
+          "--policy",
+          "cosine",
+          "--duration",
+          "5000",
+          "--device",
+          "mps",
+          "--attempt-id",
+          "moons-4002-cosine-5000-a001",
+          "--base",
+          "artifacts"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "moons-4002-cosine-5000-a001",
+        "request_id": "b6a9958987c6415197400001a99481ab",
+        "timeout_seconds": 30.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/b6a9958987c6415197400001a99481ab.json",
+        "retention": "retained",
+        "sha256": "bd2081ab2d093ac8cca4df5f897346fe84d551e5e56a1aebf29462c9edb51e2c"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "b6a9958987c6415197400001a99481ab",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 8.44633045908995,
+          "ended_at": "2026-10-08T03:32:56.520964+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0014-moons-4002-cosine-5000-a001",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 524386304,
+          "peak_storage_bytes": 1426805308,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/b6a9958987c6415197400001a99481ab.json",
+        "retention": "retained",
+        "sha256": "2c78534290a50dc4214450dd3495e5b8306b12c08800482503dbb3d25d530481"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          ".venv/bin/python",
+          "study/qualify.py"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "qualify-metrics-and-recovery",
+        "request_id": "b87e7a244aab4a2895d22577c8571bb9",
+        "timeout_seconds": 60.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/b87e7a244aab4a2895d22577c8571bb9.json",
+        "retention": "retained",
+        "sha256": "88bdd95c869c444eb5c81431ad1238d86fa50b7477b71fe7bfc375ec0cdfce41"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "b87e7a244aab4a2895d22577c8571bb9",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 3.2536788750439882,
+          "ended_at": "2026-10-08T03:29:01.973209+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0007-qualify-metrics-and-recovery",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 537673728,
+          "peak_storage_bytes": 1173705954,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/b87e7a244aab4a2895d22577c8571bb9.json",
+        "retention": "retained",
+        "sha256": "a41e7f77ffd0cd2269a1e302487cdb2f8a27b5ead933d47a38e677da611d7314"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+          "study/runner.py",
+          "--dataset",
+          "moons",
+          "--seed",
+          "4004",
+          "--phase",
+          "confirmation",
+          "--policy",
+          "cosine",
+          "--duration",
+          "5000",
+          "--device",
+          "mps",
+          "--attempt-id",
+          "moons-4004-cosine-5000-a001",
+          "--base",
+          "artifacts"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "moons-4004-cosine-5000-a001",
+        "request_id": "c6d4e1844bbd47bf8e68d9ec7704abda",
+        "timeout_seconds": 30.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/c6d4e1844bbd47bf8e68d9ec7704abda.json",
+        "retention": "retained",
+        "sha256": "c7ce2906f0a486759491b2b8698a0e04aaff83842c8730e98ab1263be324118a"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "c6d4e1844bbd47bf8e68d9ec7704abda",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 8.574139584088698,
+          "ended_at": "2026-10-08T03:34:17.385074+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0020-moons-4004-cosine-5000-a001",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 520355840,
+          "peak_storage_bytes": 1630445109,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/c6d4e1844bbd47bf8e68d9ec7704abda.json",
+        "retention": "retained",
+        "sha256": "3188b6b1149a68070d1e1462c46bdcf52403205679fce6ad5f181496db80d24f"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+          "study/runner.py",
+          "--dataset",
+          "gmm8",
+          "--seed",
+          "5002",
+          "--phase",
+          "confirmation",
+          "--policy",
+          "cosine",
+          "--duration",
+          "10000",
+          "--device",
+          "mps",
+          "--attempt-id",
+          "gmm8-5002-cosine-10000-a001",
+          "--base",
+          "artifacts"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "gmm8-5002-cosine-10000-a001",
+        "request_id": "c7fc31efa9b44edd9231455d922471a7",
+        "timeout_seconds": 45.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/c7fc31efa9b44edd9231455d922471a7.json",
+        "retention": "retained",
+        "sha256": "d26c27f8ea27e08c0b2b35d035f47f8b8da206aa72b4fec74674648605596aff"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "c7fc31efa9b44edd9231455d922471a7",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 14.533074625069275,
+          "ended_at": "2026-10-08T03:35:54.838854+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0027-gmm8-5002-cosine-10000-a001",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 534626304,
+          "peak_storage_bytes": 1840110767,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/c7fc31efa9b44edd9231455d922471a7.json",
+        "retention": "retained",
+        "sha256": "daad84b631c37014b1fe4bc97005fc60f01b07a4a5e3a6ce75d4cfa2db0cc6af"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+          "study/runner.py",
+          "--dataset",
+          "moons",
+          "--seed",
+          "4002",
+          "--phase",
+          "confirmation",
+          "--policy",
+          "cosine",
+          "--duration",
+          "10000",
+          "--device",
+          "mps",
+          "--attempt-id",
+          "moons-4002-cosine-10000-a001",
+          "--base",
+          "artifacts"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "moons-4002-cosine-10000-a001",
+        "request_id": "d1c4b6f5c9ec4baba542d6210742ebd1",
+        "timeout_seconds": 45.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/d1c4b6f5c9ec4baba542d6210742ebd1.json",
+        "retention": "retained",
+        "sha256": "03cebf60ec2175995e10243820cdeaca69ed5cec2e5d84e8da40cc9356a481ed"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "d1c4b6f5c9ec4baba542d6210742ebd1",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 14.261768500087783,
+          "ended_at": "2026-10-08T03:33:11.764746+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0015-moons-4002-cosine-10000-a001",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 530563072,
+          "peak_storage_bytes": 1443399288,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/d1c4b6f5c9ec4baba542d6210742ebd1.json",
+        "retention": "retained",
+        "sha256": "ecc9c8af6de0905a94862156749d3c5c9b0f6415fc3bf961882b344d0814799e"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+          "study/runner.py",
+          "--dataset",
+          "gmm8",
+          "--seed",
+          "5003",
+          "--phase",
+          "confirmation",
+          "--policy",
+          "cosine",
+          "--duration",
+          "5000",
+          "--device",
+          "mps",
+          "--attempt-id",
+          "gmm8-5003-cosine-5000-a001",
+          "--base",
+          "artifacts"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "gmm8-5003-cosine-5000-a001",
+        "request_id": "d3c5e5e9368442a78a143f247cca56b9",
+        "timeout_seconds": 30.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/d3c5e5e9368442a78a143f247cca56b9.json",
+        "retention": "retained",
+        "sha256": "a3d5ea61ebd7141ef01bed4dbd5685b05b3c72ff21442eedccd8c6fd3504e6d4"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "d3c5e5e9368442a78a143f247cca56b9",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 8.613183208042756,
+          "ended_at": "2026-10-08T03:36:19.941317+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0029-gmm8-5003-cosine-5000-a001",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 521863168,
+          "peak_storage_bytes": 1927979412,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/d3c5e5e9368442a78a143f247cca56b9.json",
+        "retention": "retained",
+        "sha256": "8fc0eec63a675f0b4a16cf2884e8996e4397eee5786142151ea8bb56bdfb04e5"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          "python3",
+          "-m",
+          "venv",
+          ".venv"
+        ],
+        "attempt": false,
+        "category": "setup",
+        "cwd": ".",
+        "label": "isolated-environment",
+        "request_id": "d57c3cf6bed44adfb4e44fa6227383b9",
+        "timeout_seconds": 60.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/d57c3cf6bed44adfb4e44fa6227383b9.json",
+        "retention": "retained",
+        "sha256": "94cf2bb1b7db2be00fab5e88b1fd54f510a6d1436cb61e5659d4681a86b084e1"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "d57c3cf6bed44adfb4e44fa6227383b9",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 1.5248968747910112,
+          "ended_at": "2026-10-08T03:20:13.770409+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0001-isolated-environment",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 158466048,
+          "peak_storage_bytes": 204645194,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/d57c3cf6bed44adfb4e44fa6227383b9.json",
+        "retention": "retained",
+        "sha256": "6ae44c0357bd7f4eb6a3f8ed93098221656e76d4eabbd616b656987db8e11046"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          ".venv/bin/python",
+          "study/reanalyze.py"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "separate-retained-data-reanalysis",
+        "request_id": "d671abe9ae714130bee31ff406547ff5",
+        "timeout_seconds": 60.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/d671abe9ae714130bee31ff406547ff5.json",
+        "retention": "retained",
+        "sha256": "b2cd80d9ead861b4e70bba6bb677b08e2b00ed76332a2a636c74e6d096de6ef8"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "d671abe9ae714130bee31ff406547ff5",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 4.008532291976735,
+          "ended_at": "2026-10-08T03:39:28.417279+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0035-separate-retained-data-reanalysis",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 447938560,
+          "peak_storage_bytes": 2039836430,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/d671abe9ae714130bee31ff406547ff5.json",
+        "retention": "retained",
+        "sha256": "c697ee3c5e7e17ff01a61bdf499944e7fb3ec615075ebb2a761ce5a0b64ca1bc"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+          "study/runner.py",
+          "--dataset",
+          "gmm8",
+          "--seed",
+          "5002",
+          "--phase",
+          "confirmation",
+          "--policy",
+          "constant",
+          "--duration",
+          "10000",
+          "--device",
+          "mps",
+          "--attempt-id",
+          "gmm8-5002-constant-10000-a001",
+          "--base",
+          "artifacts"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "gmm8-5002-constant-10000-a001",
+        "request_id": "d91ee13645b14d98b7fda494f82c2735",
+        "timeout_seconds": 45.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/d91ee13645b14d98b7fda494f82c2735.json",
+        "retention": "retained",
+        "sha256": "5e9396142d03f2df7fb0d70ad43d17da2afcb247c6ed79598439de7c6e3ce194"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "d91ee13645b14d98b7fda494f82c2735",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 14.82393924985081,
+          "ended_at": "2026-10-08T03:35:29.150394+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0025-gmm8-5002-constant-10000-a001",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 678215680,
+          "peak_storage_bytes": 1817489459,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/d91ee13645b14d98b7fda494f82c2735.json",
+        "retention": "retained",
+        "sha256": "ba63cbb9fa5baaa5d89e79242c215f140c646d7b1010c3489a8b7aa2d6251d5b"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+          "study/runner.py",
+          "--dataset",
+          "gmm8",
+          "--seed",
+          "5003",
+          "--phase",
+          "confirmation",
+          "--policy",
+          "constant",
+          "--duration",
+          "10000",
+          "--device",
+          "mps",
+          "--attempt-id",
+          "gmm8-5003-constant-10000-a001",
+          "--base",
+          "artifacts"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "gmm8-5003-constant-10000-a001",
+        "request_id": "db1f8f38436448a782c5d3e518a538fa",
+        "timeout_seconds": 45.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/db1f8f38436448a782c5d3e518a538fa.json",
+        "retention": "retained",
+        "sha256": "94eb83a21188b16cfcc228f96a2af12687e22085c91a9ad5243a5a6660d28fff"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "db1f8f38436448a782c5d3e518a538fa",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 14.452245083870366,
+          "ended_at": "2026-10-08T03:36:10.293172+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0028-gmm8-5003-constant-10000-a001",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 686342144,
+          "peak_storage_bytes": 1911387001,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/db1f8f38436448a782c5d3e518a538fa.json",
+        "retention": "retained",
+        "sha256": "ad37a7ff9c32d8526869b1e96a05a275aa39f2c2530f2d7a773104cd212edbc7"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+          "study/runner.py",
+          "--dataset",
+          "moons",
+          "--seed",
+          "4002",
+          "--phase",
+          "confirmation",
+          "--policy",
+          "constant",
+          "--duration",
+          "10000",
+          "--device",
+          "mps",
+          "--attempt-id",
+          "moons-4002-constant-10000-a001",
+          "--base",
+          "artifacts"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "moons-4002-constant-10000-a001",
+        "request_id": "db843a43b47541b49f5fc6445964e4e3",
+        "timeout_seconds": 45.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/db843a43b47541b49f5fc6445964e4e3.json",
+        "retention": "retained",
+        "sha256": "9fe050d22229bf0ff30754df9644b1edd7796e0534c360f6b0bfbe69d93d8596"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "db843a43b47541b49f5fc6445964e4e3",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 14.745690165786073,
+          "ended_at": "2026-10-08T03:32:47.212428+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0013-moons-4002-constant-10000-a001",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 673382400,
+          "peak_storage_bytes": 1420780676,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/db843a43b47541b49f5fc6445964e4e3.json",
+        "retention": "retained",
+        "sha256": "69fd2e6d49ed8e0cb2602ca014693642874653e1c783bd19e589a49edae23b76"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+          "study/runner.py",
+          "--dataset",
+          "gmm8",
+          "--seed",
+          "5004",
+          "--phase",
+          "confirmation",
+          "--policy",
+          "constant",
+          "--duration",
+          "10000",
+          "--device",
+          "mps",
+          "--attempt-id",
+          "gmm8-5004-constant-10000-a001",
+          "--base",
+          "artifacts"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "gmm8-5004-constant-10000-a001",
+        "request_id": "f29420c93754498297cebb5cc5623828",
+        "timeout_seconds": 45.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/f29420c93754498297cebb5cc5623828.json",
+        "retention": "retained",
+        "sha256": "ed0e7c61f100a3986d925ac6098302d9ba7a2abf44fa0c207045158768646fa6"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "f29420c93754498297cebb5cc5623828",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 15.033218499971554,
+          "ended_at": "2026-10-08T03:36:50.882510+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0031-gmm8-5004-constant-10000-a001",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 660979712,
+          "peak_storage_bytes": 2015847084,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/f29420c93754498297cebb5cc5623828.json",
+        "retention": "retained",
+        "sha256": "74a57c7b4cac29d62661833cc55123812bb38eb873175652646080eea28b3b58"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+          "study/runner.py",
+          "--dataset",
+          "moons",
+          "--seed",
+          "4004",
+          "--phase",
+          "confirmation",
+          "--policy",
+          "constant",
+          "--duration",
+          "10000",
+          "--device",
+          "mps",
+          "--attempt-id",
+          "moons-4004-constant-10000-a001",
+          "--base",
+          "artifacts"
+        ],
+        "attempt": false,
+        "category": "compute",
+        "cwd": ".",
+        "label": "moons-4004-constant-10000-a001",
+        "request_id": "f77a6d80107844e49f0e1e8b84678026",
+        "timeout_seconds": 45.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/f77a6d80107844e49f0e1e8b84678026.json",
+        "retention": "retained",
+        "sha256": "1bdb24deadb3b85002b41d226f48a3b20d9fb72a92f43f79562dab5186d3ac99"
+      },
+      "response": {
+        "injected_interruption": false,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "f77a6d80107844e49f0e1e8b84678026",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 14.784279125044122,
+          "ended_at": "2026-10-08T03:34:07.815387+00:00",
+          "exit_code": 0,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0019-moons-4004-constant-10000-a001",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 658178048,
+          "peak_storage_bytes": 1619128877,
+          "status": "completed"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/f77a6d80107844e49f0e1e8b84678026.json",
+        "retention": "retained",
+        "sha256": "003c2e7f5e126d0842230244f11968911f2fb9074721cce356b2aece1acc2825"
+      }
+    },
+    {
+      "request": {
+        "argv": [
+          ".venv/bin/python",
+          "study/runner.py",
+          "--dataset",
+          "moons",
+          "--seed",
+          "71",
+          "--phase",
+          "pilot",
+          "--policy",
+          "cosine",
+          "--duration",
+          "10000",
+          "--stop",
+          "1500",
+          "--device",
+          "mps",
+          "--attempt-id",
+          "pilot-moons-a001"
+        ],
+        "attempt": true,
+        "category": "compute",
+        "cwd": ".",
+        "label": "pilot-moons-first-marked",
+        "request_id": "ff35db4da89a4fe4b4aa89d99e42778c",
+        "timeout_seconds": 60.0
+      },
+      "request_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/requests/ff35db4da89a4fe4b4aa89d99e42778c.json",
+        "retention": "retained",
+        "sha256": "dba1ebe683fbc0751eef6996836152dbea9103d2dfad2a57bbd9b0a48bd14cc8"
+      },
+      "response": {
+        "injected_interruption": true,
+        "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+        "reconciled_after_controller_restart": false,
+        "request_id": "ff35db4da89a4fe4b4aa89d99e42778c",
+        "result": {
+          "charge_basis": "measured supervisor wall time",
+          "charged_seconds": 1.530519291991368,
+          "ended_at": "2026-10-08T03:25:22.118952+00:00",
+          "exit_code": -15,
+          "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0004-pilot-moons-first-marked",
+          "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+          "peak_rss_bytes": 216580096,
+          "peak_storage_bytes": 1095256207,
+          "status": "timed_out"
+        }
+      },
+      "response_artifact": {
+        "media_type": "application/json",
+        "path": ".compute/responses/ff35db4da89a4fe4b4aa89d99e42778c.json",
+        "retention": "retained",
+        "sha256": "254f13fb0724f7c9f24930bab550d957e088331ebd50ab6f83d95090349e7202"
+      }
+    }
+  ]
+}

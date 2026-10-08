@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/retention.py", line 238, in <module>
+    else:result=restore(args.source,args.destination,wheel_cache=args.wheel_cache,download_wheels=args.download_wheels)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/retention.py", line 171, in restore
+    with path.open('rb') as handle:shutil.copyfileobj(handle,out)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/shutil.py", line 200, in copyfileobj
+    fdst_write(buf)
+OSError: [Errno 27] File too large

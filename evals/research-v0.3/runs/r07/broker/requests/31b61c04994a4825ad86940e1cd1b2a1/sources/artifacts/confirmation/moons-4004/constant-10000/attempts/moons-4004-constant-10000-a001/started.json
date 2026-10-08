@@ -1,0 +1,49 @@
+{
+  "attempt_id": "moons-4004-constant-10000-a001",
+  "command": [
+    "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+    "study/runner.py",
+    "--dataset",
+    "moons",
+    "--seed",
+    "4004",
+    "--phase",
+    "confirmation",
+    "--policy",
+    "constant",
+    "--duration",
+    "10000",
+    "--device",
+    "mps",
+    "--attempt-id",
+    "moons-4004-constant-10000-a001",
+    "--base",
+    "artifacts"
+  ],
+  "inputs": {
+    "attempt_id": "moons-4004-constant-10000-a001",
+    "base": "artifacts",
+    "dataset": "moons",
+    "device": "mps",
+    "duration": 10000,
+    "phase": "confirmation",
+    "policy": "constant",
+    "resume": null,
+    "seed": 4004,
+    "stop": null
+  },
+  "protocol": {
+    "media_type": "text/markdown",
+    "path": "PROTOCOL.md",
+    "retention": "retained",
+    "sha256": "3300b5e862a704f60ddef19ca785fb1b69fc67cb3ae04a8f85571b490284be61"
+  },
+  "source_hashes": {
+    "study/common.py": "1ac628af6d76930a5e5b9ccf9c5b964becc409e9d46f933982985bd1726c0c84",
+    "study/runner.py": "beeb0e2d19862cff9dac9848e070d515e687856490d73a51e1864041c6358b5f",
+    "study/science.py": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1"
+  },
+  "source_revision": "5b043d9f52ba78f07c31dcb3a77b1ff08c594b1ce7dbbe950fc6de7325692fe5",
+  "started_at": "2026-10-08T03:33:53.070174+00:00",
+  "status": "running"
+}

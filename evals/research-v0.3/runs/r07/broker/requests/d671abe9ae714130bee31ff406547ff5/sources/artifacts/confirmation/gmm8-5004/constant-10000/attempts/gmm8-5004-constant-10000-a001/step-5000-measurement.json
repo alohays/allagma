@@ -1,0 +1,69 @@
+{
+  "actual_schedule_duration": 10000,
+  "arrays": "artifacts/confirmation/gmm8-5004/constant-10000/attempts/gmm8-5004-constant-10000-a001/step-5000-arrays.npz",
+  "attempt_id": "gmm8-5004-constant-10000-a001",
+  "dataset": "gmm8",
+  "device": "mps",
+  "generation_noise_sha256": "6d7b0898897519e987c20ba750c3ed88454dc586a8be523c278b377133bc65a3",
+  "heldout_sha256": "b740ab3b19984bd95ef51d3b732e582d0886605388420b0fa6aeda9e2ccbad67",
+  "initial_weights_sha256": "a6c8acee0e81230eae32e528a1f885b5b62b216bdd7390f53dc0e255df629cd6",
+  "input_metadata": "artifacts/confirmation/gmm8-5004/inputs/metadata.json",
+  "metrics": {
+    "ema099": {
+      "covered_modes": 8,
+      "inlier_count": 2019,
+      "inlier_fraction": 0.98583984375,
+      "mode_counts": [
+        236,
+        243,
+        254,
+        256,
+        282,
+        272,
+        237,
+        239
+      ],
+      "sw1": 0.03665016116241201
+    },
+    "ema0999": {
+      "covered_modes": 8,
+      "inlier_count": 2016,
+      "inlier_fraction": 0.984375,
+      "mode_counts": [
+        229,
+        233,
+        256,
+        252,
+        280,
+        278,
+        247,
+        241
+      ],
+      "sw1": 0.041535883442794595
+    },
+    "raw": {
+      "covered_modes": 8,
+      "inlier_count": 2003,
+      "inlier_fraction": 0.97802734375,
+      "mode_counts": [
+        232,
+        256,
+        255,
+        239,
+        309,
+        267,
+        228,
+        217
+      ],
+      "sw1": 0.07497515829806445
+    }
+  },
+  "phase": "confirmation",
+  "schedule": "constant",
+  "seed": 5004,
+  "source_revision": "5b043d9f52ba78f07c31dcb3a77b1ff08c594b1ce7dbbe950fc6de7325692fe5",
+  "training_prefix_5000_sha256": "cb3b5d66d5f3eee5925ed05a0563e29c6fb1f3055bc6330442acf5034cbe334d",
+  "training_trace": "artifacts/confirmation/gmm8-5004/constant-10000/attempts/gmm8-5004-constant-10000-a001/trace.jsonl",
+  "updates": 5000,
+  "weights": "artifacts/confirmation/gmm8-5004/constant-10000/attempts/gmm8-5004-constant-10000-a001/step-5000-weights.npz"
+}

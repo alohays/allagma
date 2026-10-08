@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "artifact": {
+    "root": "candidate",
+    "path": "analysis/main-figure.png",
+    "sha256": "b357ed526ed43c94be32d413cb067532f99570e1723ea1a497963f47f25857bc"
+  },
+  "observations": [
+    "Four dataset/decay panels show individual paired seed effects and mean/t-interval summaries.",
+    "Axes, condition/duration labels and uncertainty caption are legible without clipping.",
+    "Separate panel scales are disclosed in the report; the zero reference and effect direction are clear.",
+    "The large seed variability and cosine effects close to zero remain visible rather than being hidden by aggregate bars."
+  ],
+  "scope": "Actual 1800 by 1260 PNG inspected; numerical summaries are checked independently."
+}

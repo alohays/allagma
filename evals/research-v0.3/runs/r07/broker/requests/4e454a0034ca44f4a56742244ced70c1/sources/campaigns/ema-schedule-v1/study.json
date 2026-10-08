@@ -1,0 +1,85 @@
+{
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "capabilities": [
+    "artifact.read",
+    "artifact.write",
+    "execution.local"
+  ],
+  "configuration_origins": {
+    "budget.max_attempts": "current request",
+    "budget.max_seconds": "current request",
+    "budget.money_usd": "current request",
+    "budget.per_attempt_seconds": "current request",
+    "capabilities": "host authorization",
+    "context_chars": "module:context/active-brief",
+    "language": "profile:public/default",
+    "max_revisions": "recipe:recipe/research"
+  },
+  "constraints": [
+    "Float32 reference model and specified datasets/metrics",
+    "Pilot/confirmation separation",
+    "All computation through local broker; no network",
+    "Native session 3600 seconds; setup 300 seconds; compute 1800 seconds",
+    "No outcome-based exclusions or required EMA benefit"
+  ],
+  "effective_configuration": {
+    "budget": {
+      "max_attempts": 64,
+      "max_seconds": 1800,
+      "money_usd": 0,
+      "per_attempt_seconds": 180
+    },
+    "capabilities": [
+      "artifact.read",
+      "artifact.write",
+      "execution.local"
+    ],
+    "context_chars": 12000,
+    "language": "English",
+    "max_revisions": 2
+  },
+  "lock": {
+    "media_type": "application/octet-stream",
+    "path": "campaigns/ema-schedule-v1/lock.yaml",
+    "retention": "retained",
+    "sha256": "a910fbf9f7a7e9f863a913be7fd371b023ff6c2804dcb5db0c4ee1aca6383260"
+  },
+  "motivation": "The supplied prior study confounded checkpoint age and schedule position.",
+  "output": "REPORT.md, review.json, REPRODUCE.md, artifact-manifest.json, submission.json and measurements",
+  "profile_provenance": [
+    {
+      "id": "public/default",
+      "sha256": "9f90c310cefb07153761645bd658f8ad6551578ccb6bf772074e44e8f8c17b9b"
+    }
+  ],
+  "protocol": {
+    "media_type": "text/markdown",
+    "path": "campaigns/ema-schedule-v1/protocol.md",
+    "retention": "retained",
+    "sha256": "3300b5e862a704f60ddef19ca785fb1b69fc67cb3ae04a8f85571b490284be61"
+  },
+  "protocol_revision": "v1",
+  "question": "How does full learning-rate policy change apparent weight-EMA benefit independently of terminal duration?",
+  "record_type": "StudySpec",
+  "release": "0.3.0rc1",
+  "resources": {
+    "max_attempts": 64,
+    "max_seconds": 1800,
+    "money_usd": 0,
+    "per_attempt_seconds": 180
+  },
+  "schema_version": "0.2",
+  "stop_rules": [
+    "Completion",
+    "Resource insufficiency",
+    "Failed qualification",
+    "Repeated uncorrectable failure"
+  ],
+  "study_id": "ema-schedule",
+  "success_criteria": [
+    "32 paired confirmation cells with honest uncertainty",
+    "Retained raw data and loadable states",
+    "Regenerated samples and retained-data recomputation",
+    "Revision-bound critical review"
+  ]
+}

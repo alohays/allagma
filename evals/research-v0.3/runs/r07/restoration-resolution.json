@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "initial_failure": "restoration-attempt-1.json",
+  "original_failed_manifest_check": "restored-manifest-verification.json",
+  "successful_job": "evals/research-v0.3/validation/resources/jobs/0037-r07-streamed-package-restore",
+  "archive_bytes": 829100336,
+  "per_file_limit_bytes": 536870912,
+  "limit_changed": false,
+  "correction": "Verify and stream archive parts directly; do not create a combined temporary archive.",
+  "manifest_verification": "restored-manifest-verification-v2.json",
+  "reference_verification": "restored-reference-verification-v2.json",
+  "scope": "Controller transport correction only; no archive/index/candidate/scientific change."
+}

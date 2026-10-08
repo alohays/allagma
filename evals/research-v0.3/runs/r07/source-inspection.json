@@ -1,0 +1,39 @@
+{
+  "status": "pass",
+  "preconfirmation_snapshot": {
+    "path": "broker/requests/72a3ee0ed0514f4786a99a0d2f35bb47/sources/campaigns/ema-schedule-v1/confirmation-freeze.json",
+    "sha256": "5bab8e0a6f654337dbc97b0a014fff7cd42d1caacd23017e437bd032406bd908"
+  },
+  "reference_science_unchanged": true,
+  "design": "Two datasets, four paired seeds each, duration 5000/10000 crossed with constant/cosine full policy; 24 actual trajectories supply 32 cells. Cosine endpoints are separate trainings; constant checkpoint reuse is explicit.",
+  "model_and_optimizer": "Unchanged 296450-parameter float32 reference Denoiser; AdamW lr .0003 and weight decay .01; gradient clip .5; EMA .99/.999 initialized from the raw initial state and updated after every optimizer step.",
+  "input_regeneration": "Controller independently regenerated initial states, all 10000-step training inputs, held-out draws, generation noise and first-5000 prefix hashes from the frozen reference and declared RNG plan.",
+  "training_mode_note": "The reference contains no dropout or batch-normalization behavior, so evaluating the constant trajectory at 5000 does not change its subsequent training computation.",
+  "evidence": [
+    {
+      "root": "candidate",
+      "path": "study/runner.py",
+      "sha256": "beeb0e2d19862cff9dac9848e070d515e687856490d73a51e1864041c6358b5f"
+    },
+    {
+      "root": "candidate",
+      "path": "study/science.py",
+      "sha256": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1"
+    },
+    {
+      "root": "candidate",
+      "path": "study/analyze.py",
+      "sha256": "6c703b61478f6749929d5e6e8f5677f039e852e6f84630a33e97cceb43faecb4"
+    },
+    {
+      "root": "candidate",
+      "path": "study/dispatch.py",
+      "sha256": "cf3d2d9096caa9967541252db2f9580013f8d4b59d802e24f04586e787a86594"
+    },
+    {
+      "root": "candidate",
+      "path": "PROTOCOL.md",
+      "sha256": "3300b5e862a704f60ddef19ca785fb1b69fc67cb3ae04a8f85571b490284be61"
+    }
+  ]
+}

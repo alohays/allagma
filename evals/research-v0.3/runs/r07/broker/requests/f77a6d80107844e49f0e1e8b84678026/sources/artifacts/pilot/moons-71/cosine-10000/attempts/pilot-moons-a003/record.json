@@ -1,0 +1,131 @@
+{
+  "attempt_id": "pilot-moons-a003",
+  "attempt_number": 3,
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "campaign_id": "ema-schedule-v1",
+  "command": [
+    ".venv/bin/python",
+    "study/runner.py",
+    "--dataset",
+    "moons",
+    "--seed",
+    "71",
+    "--phase",
+    "pilot",
+    "--policy",
+    "cosine",
+    "--duration",
+    "10000",
+    "--stop",
+    "1500",
+    "--device",
+    "mps",
+    "--attempt-id",
+    "pilot-moons-a003"
+  ],
+  "data_revision": "d10ea0fd17b7797d7e524df77fa97c7c9ae9554ab52e16466c9494fb23609e18",
+  "ended_at": "2026-10-08T03:27:14.777953+00:00",
+  "environment": {
+    "broker": "common local-process",
+    "device_requested": "mps",
+    "dtype": "float32"
+  },
+  "error": null,
+  "exit_code": 0,
+  "experiment_id": "moons-71-cosine-10000",
+  "inputs": [
+    {
+      "media_type": "application/json",
+      "path": "artifacts/pilot/moons-71/cosine-10000/attempts/pilot-moons-a003/input.json",
+      "retention": "retained",
+      "sha256": "d10ea0fd17b7797d7e524df77fa97c7c9ae9554ab52e16466c9494fb23609e18"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/pilot/moons-71/cosine-10000/attempts/pilot-moons-a003/started.json",
+      "retention": "retained",
+      "sha256": "e092a2f3e25aa5f2243da1fdaeb2a77defe2b80a4807a4c69e120ad799875b96"
+    },
+    {
+      "media_type": "application/json",
+      "path": ".compute/requests/71791b25b7d9453d88f649a048d8326d.json",
+      "retention": "retained",
+      "sha256": "f7d11ea1d535fb16e7035af9a13a6138314bf256e96bd7185eb4c94a057f47a3"
+    }
+  ],
+  "model_revision": "5b043d9f52ba78f07c31dcb3a77b1ff08c594b1ce7dbbe950fc6de7325692fe5",
+  "outputs": [
+    {
+      "media_type": "application/json",
+      "path": "artifacts/pilot/moons-71/cosine-10000/attempts/pilot-moons-a003/input.json",
+      "retention": "retained",
+      "sha256": "d10ea0fd17b7797d7e524df77fa97c7c9ae9554ab52e16466c9494fb23609e18"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/pilot/moons-71/cosine-10000/attempts/pilot-moons-a003/recovery.json",
+      "retention": "retained",
+      "sha256": "092d20e3a241a9d882266a29ae930c950ca4ad507ec37346b650c12754539d2c"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/pilot/moons-71/cosine-10000/attempts/pilot-moons-a003/recovery.npz",
+      "retention": "retained",
+      "sha256": "f415ba52f882726306b35e2b9486d0997ae3a0108cfdc1f2999ae6d0a3169e99"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/pilot/moons-71/cosine-10000/attempts/pilot-moons-a003/result.json",
+      "retention": "retained",
+      "sha256": "fa1743ee2f695eb89b58ae1b8cdf2da58e3b0d662a8a1d207ba79deeb0db881f"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/pilot/moons-71/cosine-10000/attempts/pilot-moons-a003/started.json",
+      "retention": "retained",
+      "sha256": "e092a2f3e25aa5f2243da1fdaeb2a77defe2b80a4807a4c69e120ad799875b96"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/pilot/moons-71/cosine-10000/attempts/pilot-moons-a003/step-1500-arrays.npz",
+      "retention": "retained",
+      "sha256": "b21adcc0c68cc419bda6ceb6dd59e56f6c7c34328ab46ee4206c7365b6e6bac3"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/pilot/moons-71/cosine-10000/attempts/pilot-moons-a003/step-1500-measurement.json",
+      "retention": "retained",
+      "sha256": "ea79786804284b2f869caabd266dc48c00d2d6d4117dc535e4a65729b42bcbc7"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/pilot/moons-71/cosine-10000/attempts/pilot-moons-a003/step-1500-weights.npz",
+      "retention": "retained",
+      "sha256": "d59b5baf604d7bf6fd02daa9f1df619cc90f3aeb0be9324401535f1ec379ee66"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "artifacts/pilot/moons-71/cosine-10000/attempts/pilot-moons-a003/trace.jsonl",
+      "retention": "retained",
+      "sha256": "d1dd7d107c72a9a70868ca165b2eff339348507c7743e446c9415617ca26e465"
+    },
+    {
+      "media_type": "application/json",
+      "path": ".compute/responses/71791b25b7d9453d88f649a048d8326d.json",
+      "retention": "retained",
+      "sha256": "4ce60dda9d82aec69b97cfff5094548d59086ecc131fa01e566311255d296372"
+    }
+  ],
+  "protocol_revision": "v1",
+  "record_type": "RunRecord",
+  "run_id": "cosine-10000-pilot",
+  "schema_version": "0.2",
+  "split": "pilot",
+  "started_at": "2026-10-08T03:27:09.194195+00:00",
+  "status": "succeeded",
+  "usage": {
+    "money_usd": 0,
+    "tokens": 0,
+    "wall_seconds": 5.618415457895026
+  }
+}

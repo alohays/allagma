@@ -1,0 +1,131 @@
+{
+  "attempt_id": "gmm8-5004-cosine-5000-a001",
+  "attempt_number": 1,
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "campaign_id": "ema-schedule-v1",
+  "command": [
+    "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+    "study/runner.py",
+    "--dataset",
+    "gmm8",
+    "--seed",
+    "5004",
+    "--phase",
+    "confirmation",
+    "--policy",
+    "cosine",
+    "--duration",
+    "5000",
+    "--device",
+    "mps",
+    "--attempt-id",
+    "gmm8-5004-cosine-5000-a001",
+    "--base",
+    "artifacts"
+  ],
+  "data_revision": "3e8ae3f2fdbca0c374057d1724c5b89d00092dfa87045496e9b4e0d6d930a7de",
+  "ended_at": "2026-10-08T03:37:01.312376+00:00",
+  "environment": {
+    "broker": "common local-process",
+    "device_requested": "mps",
+    "dtype": "float32"
+  },
+  "error": null,
+  "exit_code": 0,
+  "experiment_id": "gmm8-5004-cosine-5000",
+  "inputs": [
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5004/cosine-5000/attempts/gmm8-5004-cosine-5000-a001/input.json",
+      "retention": "retained",
+      "sha256": "3e8ae3f2fdbca0c374057d1724c5b89d00092dfa87045496e9b4e0d6d930a7de"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5004/cosine-5000/attempts/gmm8-5004-cosine-5000-a001/started.json",
+      "retention": "retained",
+      "sha256": "e033ef8ad216982060599c836be669d21acad766449e2a7c51fecfebd7b51cb4"
+    },
+    {
+      "media_type": "application/json",
+      "path": ".compute/requests/3ca81e9a631549e5a3aa297d89a62741.json",
+      "retention": "retained",
+      "sha256": "9bf68286267ce58e489e80e0a917d82d351c24bac4a2fa425441e4f2230e64ea"
+    }
+  ],
+  "model_revision": "5b043d9f52ba78f07c31dcb3a77b1ff08c594b1ce7dbbe950fc6de7325692fe5",
+  "outputs": [
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5004/cosine-5000/attempts/gmm8-5004-cosine-5000-a001/input.json",
+      "retention": "retained",
+      "sha256": "3e8ae3f2fdbca0c374057d1724c5b89d00092dfa87045496e9b4e0d6d930a7de"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5004/cosine-5000/attempts/gmm8-5004-cosine-5000-a001/recovery.json",
+      "retention": "retained",
+      "sha256": "440a2b4b90981472e24586fb3b0619d75b3699b306e8668a6f11e016a3fc65bf"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/confirmation/gmm8-5004/cosine-5000/attempts/gmm8-5004-cosine-5000-a001/recovery.npz",
+      "retention": "retained",
+      "sha256": "c9fbd4d7e4fcabc0876b3f2bb11687bc85e69758f18ee720211c255536a30300"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5004/cosine-5000/attempts/gmm8-5004-cosine-5000-a001/result.json",
+      "retention": "retained",
+      "sha256": "c58901f6556704b2932a05096cf11fae025e50c56042a8d40fa03b5ea7ccab7d"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5004/cosine-5000/attempts/gmm8-5004-cosine-5000-a001/started.json",
+      "retention": "retained",
+      "sha256": "e033ef8ad216982060599c836be669d21acad766449e2a7c51fecfebd7b51cb4"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/confirmation/gmm8-5004/cosine-5000/attempts/gmm8-5004-cosine-5000-a001/step-5000-arrays.npz",
+      "retention": "retained",
+      "sha256": "3b5847353b3fee51891a8e0c1bdb50f916f9349332d648368f92549560786ad9"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5004/cosine-5000/attempts/gmm8-5004-cosine-5000-a001/step-5000-measurement.json",
+      "retention": "retained",
+      "sha256": "cc844932385290ebbcb7b37496a4f03c5c7c13f2877b0586f0b60c0c1f7977ed"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/confirmation/gmm8-5004/cosine-5000/attempts/gmm8-5004-cosine-5000-a001/step-5000-weights.npz",
+      "retention": "retained",
+      "sha256": "280375bad33faea39419fce66aebf7f7f368d8cb68d1a86e09ca7f39bff53828"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "artifacts/confirmation/gmm8-5004/cosine-5000/attempts/gmm8-5004-cosine-5000-a001/trace.jsonl",
+      "retention": "retained",
+      "sha256": "1aea31145d2e0e9db0b24bacd48015d51a68e5c9f18a9236cd9bf08b78a821bb"
+    },
+    {
+      "media_type": "application/json",
+      "path": ".compute/responses/3ca81e9a631549e5a3aa297d89a62741.json",
+      "retention": "retained",
+      "sha256": "3da4ed85895a41b33032d00b65f3f17b8a706a3b8cc7d791b7161133a902d707"
+    }
+  ],
+  "protocol_revision": "v1",
+  "record_type": "RunRecord",
+  "run_id": "cosine-5000-confirmation",
+  "schema_version": "0.2",
+  "split": "confirmation",
+  "started_at": "2026-10-08T03:36:52.015299+00:00",
+  "status": "succeeded",
+  "usage": {
+    "money_usd": 0,
+    "tokens": 0,
+    "wall_seconds": 9.338117416016757
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "actual_schedule_duration": 10000,
+  "arrays": "artifacts/confirmation/gmm8-5002/constant-10000/attempts/gmm8-5002-constant-10000-a001/step-10000-arrays.npz",
+  "attempt_id": "gmm8-5002-constant-10000-a001",
+  "dataset": "gmm8",
+  "device": "mps",
+  "generation_noise_sha256": "b9a5974cea6b577eabc66f8bd4ea81a610ae5cdaff5d7c86888c6e4749507e79",
+  "heldout_sha256": "2d728e249f5917bba79ee9af4807f9192412d60a9243188b22b5f9fa29ff66b5",
+  "initial_weights_sha256": "dbd06de5ff3a01ee5045e93bc01e563d8bb81ea35d554c3a8b7ec06b7c30cf61",
+  "input_metadata": "artifacts/confirmation/gmm8-5002/inputs/metadata.json",
+  "metrics": {
+    "ema099": {
+      "covered_modes": 8,
+      "inlier_count": 2025,
+      "inlier_fraction": 0.98876953125,
+      "mode_counts": [
+        223,
+        256,
+        287,
+        270,
+        260,
+        238,
+        255,
+        236
+      ],
+      "sw1": 0.0882198620033844
+    },
+    "ema0999": {
+      "covered_modes": 8,
+      "inlier_count": 2027,
+      "inlier_fraction": 0.98974609375,
+      "mode_counts": [
+        229,
+        263,
+        283,
+        262,
+        255,
+        250,
+        236,
+        249
+      ],
+      "sw1": 0.07848480827244936
+    },
+    "raw": {
+      "covered_modes": 8,
+      "inlier_count": 2030,
+      "inlier_fraction": 0.9912109375,
+      "mode_counts": [
+        229,
+        255,
+        308,
+        288,
+        259,
+        242,
+        236,
+        213
+      ],
+      "sw1": 0.14291134639925357
+    }
+  },
+  "phase": "confirmation",
+  "schedule": "constant",
+  "seed": 5002,
+  "source_revision": "5b043d9f52ba78f07c31dcb3a77b1ff08c594b1ce7dbbe950fc6de7325692fe5",
+  "training_prefix_5000_sha256": "b031f55f9840b36383bfeb090fd15ff25f7b8a5c8a28718c4d837e5ad54767d4",
+  "training_trace": "artifacts/confirmation/gmm8-5002/constant-10000/attempts/gmm8-5002-constant-10000-a001/trace.jsonl",
+  "updates": 10000,
+  "weights": "artifacts/confirmation/gmm8-5002/constant-10000/attempts/gmm8-5002-constant-10000-a001/step-10000-weights.npz"
+}

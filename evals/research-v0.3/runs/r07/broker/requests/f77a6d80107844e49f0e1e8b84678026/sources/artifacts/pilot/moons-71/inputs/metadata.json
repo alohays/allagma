@@ -1,0 +1,16 @@
+{
+  "created_at": "2026-10-08T03:26:31.700014+00:00",
+  "dataset": "moons",
+  "file_hashes": {
+    "evaluation.npz": "b416780f4b5f3493cbaa591a831039d031619ba1cf11243c2439dbb6767590e4",
+    "initial.npz": "155d8e6ce73824e58033da36ea27aa72661438cc9a0a3fd2b42ca5cd7d1fe3f7",
+    "training.npz": "91e21dae5024264ea4a6dab0ff9587fc790eb25ce6d8bdf3a9925e7b81cb19c9"
+  },
+  "generation_noise_sha256": "98e1cc8b325187e95c9253a943d365481dbb6d07252814b4bbd71503fa7aaedd",
+  "hash_convention": "array_hash=SHA256(C-order bytes); named_hash=sorted name,dtype,shape JSON newline then C-order bytes",
+  "heldout_sha256": "b7323dd4adc077f6e61656b88bc349eac91100b7e21fe1cf8eeb47ad5f6066e6",
+  "initial_weights_sha256": "632827a2f16f785473040c2d742bf48767c894794a089fdc88640a1c8b5ff896",
+  "phase": "pilot",
+  "seed": 71,
+  "training_prefix_5000_sha256": "a5719c560d9b30dcc95b2a044392daeda501cfb2403e87f510e56acc876b87eb"
+}

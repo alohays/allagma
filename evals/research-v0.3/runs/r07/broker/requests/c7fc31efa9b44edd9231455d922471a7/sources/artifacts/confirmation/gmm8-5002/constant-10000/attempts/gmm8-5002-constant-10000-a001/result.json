@@ -1,0 +1,131 @@
+{
+  "attempt_id": "gmm8-5002-constant-10000-a001",
+  "command": [
+    "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+    "study/runner.py",
+    "--dataset",
+    "gmm8",
+    "--seed",
+    "5002",
+    "--phase",
+    "confirmation",
+    "--policy",
+    "constant",
+    "--duration",
+    "10000",
+    "--device",
+    "mps",
+    "--attempt-id",
+    "gmm8-5002-constant-10000-a001",
+    "--base",
+    "artifacts"
+  ],
+  "completed_updates": 10000,
+  "ended_at": "2026-10-08T03:35:28.310179+00:00",
+  "environment": {
+    "device": "mps",
+    "dtype": "float32",
+    "numpy": "2.4.6",
+    "python": "3.11.6",
+    "threads": 1,
+    "torch": "2.14.1"
+  },
+  "inputs": {
+    "attempt_id": "gmm8-5002-constant-10000-a001",
+    "base": "artifacts",
+    "dataset": "gmm8",
+    "device": "mps",
+    "duration": 10000,
+    "phase": "confirmation",
+    "policy": "constant",
+    "resume": null,
+    "seed": 5002,
+    "stop": null
+  },
+  "measurements": [
+    "artifacts/confirmation/gmm8-5002/constant-10000/attempts/gmm8-5002-constant-10000-a001/step-5000-measurement.json",
+    "artifacts/confirmation/gmm8-5002/constant-10000/attempts/gmm8-5002-constant-10000-a001/step-10000-measurement.json"
+  ],
+  "outputs": [
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5002/constant-10000/attempts/gmm8-5002-constant-10000-a001/input.json",
+      "retention": "retained",
+      "sha256": "859aa62d08710b8047aa1aa7795e230d5810f364c1d99517f2ee57b0041feb74"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5002/constant-10000/attempts/gmm8-5002-constant-10000-a001/recovery.json",
+      "retention": "retained",
+      "sha256": "c18b910f0931742f003dd560deb4ed99e9f29aefac465b9c0b30208cf5c0b25b"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/confirmation/gmm8-5002/constant-10000/attempts/gmm8-5002-constant-10000-a001/recovery.npz",
+      "retention": "retained",
+      "sha256": "ef0f62e6bb4fb581718a762a591d848b02e0a0f7ec43d6d12f14e176ec9adb8b"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/confirmation/gmm8-5002/constant-10000/attempts/gmm8-5002-constant-10000-a001/step-10000-arrays.npz",
+      "retention": "retained",
+      "sha256": "eb596325343ca33b461fab67e4b7daddb8300561db6221230d029b2b1d603e6f"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5002/constant-10000/attempts/gmm8-5002-constant-10000-a001/step-10000-measurement.json",
+      "retention": "retained",
+      "sha256": "ea3a2b22ff33ae7e4c5eb7def73283947027ed064f084bc0683d51a201050365"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/confirmation/gmm8-5002/constant-10000/attempts/gmm8-5002-constant-10000-a001/step-10000-weights.npz",
+      "retention": "retained",
+      "sha256": "86acf8b07dc952e5235e44ec781489454c5207f22bb1159c18de66515ea352fc"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/confirmation/gmm8-5002/constant-10000/attempts/gmm8-5002-constant-10000-a001/step-5000-arrays.npz",
+      "retention": "retained",
+      "sha256": "c364e6f28c19c20c6b436a63a420573ed6747dec330beaf5cfc46c08d2e837ec"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5002/constant-10000/attempts/gmm8-5002-constant-10000-a001/step-5000-measurement.json",
+      "retention": "retained",
+      "sha256": "6e97e6f98d1545439ee2c05c5ebbd39350d1deb54680dfec23a326fe540a1f2b"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/confirmation/gmm8-5002/constant-10000/attempts/gmm8-5002-constant-10000-a001/step-5000-weights.npz",
+      "retention": "retained",
+      "sha256": "dd372f5457d8a48c759cbb6ba17daffe85b3bc1f084e6549788fac73cd832e8e"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "artifacts/confirmation/gmm8-5002/constant-10000/attempts/gmm8-5002-constant-10000-a001/trace.jsonl",
+      "retention": "retained",
+      "sha256": "43133e3f1ded295cc6c96e400275c335efed0e1b77013f663e3e08a1df2b6eab"
+    }
+  ],
+  "protocol": {
+    "media_type": "text/markdown",
+    "path": "PROTOCOL.md",
+    "retention": "retained",
+    "sha256": "3300b5e862a704f60ddef19ca785fb1b69fc67cb3ae04a8f85571b490284be61"
+  },
+  "resumed_from_step": 0,
+  "source_hashes": {
+    "study/common.py": "1ac628af6d76930a5e5b9ccf9c5b964becc409e9d46f933982985bd1726c0c84",
+    "study/runner.py": "beeb0e2d19862cff9dac9848e070d515e687856490d73a51e1864041c6358b5f",
+    "study/science.py": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1"
+  },
+  "source_revision": "5b043d9f52ba78f07c31dcb3a77b1ff08c594b1ce7dbbe950fc6de7325692fe5",
+  "started_at": "2026-10-08T03:35:14.362543+00:00",
+  "status": "succeeded",
+  "timing": {
+    "evaluation_seconds": 0.5823040409013629,
+    "total_seconds": 13.949374499963596,
+    "training_seconds": 12.140555834164843
+  }
+}

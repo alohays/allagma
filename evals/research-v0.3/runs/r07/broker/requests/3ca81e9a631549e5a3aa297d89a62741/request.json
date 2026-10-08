@@ -1,0 +1,28 @@
+{
+  "argv": [
+    "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+    "study/runner.py",
+    "--dataset",
+    "gmm8",
+    "--seed",
+    "5004",
+    "--phase",
+    "confirmation",
+    "--policy",
+    "cosine",
+    "--duration",
+    "5000",
+    "--device",
+    "mps",
+    "--attempt-id",
+    "gmm8-5004-cosine-5000-a001",
+    "--base",
+    "artifacts"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "gmm8-5004-cosine-5000-a001",
+  "request_id": "3ca81e9a631549e5a3aa297d89a62741",
+  "timeout_seconds": 30.0
+}

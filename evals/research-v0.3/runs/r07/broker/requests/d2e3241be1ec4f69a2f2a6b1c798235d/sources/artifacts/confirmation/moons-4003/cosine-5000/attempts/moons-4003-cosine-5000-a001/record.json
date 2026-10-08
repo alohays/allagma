@@ -1,0 +1,131 @@
+{
+  "attempt_id": "moons-4003-cosine-5000-a001",
+  "attempt_number": 1,
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "campaign_id": "ema-schedule-v1",
+  "command": [
+    "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+    "study/runner.py",
+    "--dataset",
+    "moons",
+    "--seed",
+    "4003",
+    "--phase",
+    "confirmation",
+    "--policy",
+    "cosine",
+    "--duration",
+    "5000",
+    "--device",
+    "mps",
+    "--attempt-id",
+    "moons-4003-cosine-5000-a001",
+    "--base",
+    "artifacts"
+  ],
+  "data_revision": "37602f614a0dceb36d62cce6944b4f540d89e05c2b53421ad501bdd243a43096",
+  "ended_at": "2026-10-08T03:33:36.667551+00:00",
+  "environment": {
+    "broker": "common local-process",
+    "device_requested": "mps",
+    "dtype": "float32"
+  },
+  "error": null,
+  "exit_code": 0,
+  "experiment_id": "moons-4003-cosine-5000",
+  "inputs": [
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4003/cosine-5000/attempts/moons-4003-cosine-5000-a001/input.json",
+      "retention": "retained",
+      "sha256": "37602f614a0dceb36d62cce6944b4f540d89e05c2b53421ad501bdd243a43096"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4003/cosine-5000/attempts/moons-4003-cosine-5000-a001/started.json",
+      "retention": "retained",
+      "sha256": "0a126bc1802b08152fc45748dd115f760a396a1ce927a520d74436712b80a510"
+    },
+    {
+      "media_type": "application/json",
+      "path": ".compute/requests/2636d1515f13464a9b8ada0fec84b503.json",
+      "retention": "retained",
+      "sha256": "0d9e636d7901ef903f9bab19097b406eba65c948085df2fad44229bbc6902aa4"
+    }
+  ],
+  "model_revision": "5b043d9f52ba78f07c31dcb3a77b1ff08c594b1ce7dbbe950fc6de7325692fe5",
+  "outputs": [
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4003/cosine-5000/attempts/moons-4003-cosine-5000-a001/input.json",
+      "retention": "retained",
+      "sha256": "37602f614a0dceb36d62cce6944b4f540d89e05c2b53421ad501bdd243a43096"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4003/cosine-5000/attempts/moons-4003-cosine-5000-a001/recovery.json",
+      "retention": "retained",
+      "sha256": "8b466c207dd85b18a8fdc9419dce29fe75d8b158dcf4330e78a8b8fcd0788cd0"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/confirmation/moons-4003/cosine-5000/attempts/moons-4003-cosine-5000-a001/recovery.npz",
+      "retention": "retained",
+      "sha256": "e0bdda07090b0a500e6236414828a8ddb7e23fe4da5eddcd7b5633a4fd9f89a1"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4003/cosine-5000/attempts/moons-4003-cosine-5000-a001/result.json",
+      "retention": "retained",
+      "sha256": "d623b28ae9ab29487dd27501209de3e7bff8ba502ac17c0e424304ca2edcd329"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4003/cosine-5000/attempts/moons-4003-cosine-5000-a001/started.json",
+      "retention": "retained",
+      "sha256": "0a126bc1802b08152fc45748dd115f760a396a1ce927a520d74436712b80a510"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/confirmation/moons-4003/cosine-5000/attempts/moons-4003-cosine-5000-a001/step-5000-arrays.npz",
+      "retention": "retained",
+      "sha256": "8714f54d7a329d85b4c0f28175909df27f21179a36195344d87524253c847c06"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4003/cosine-5000/attempts/moons-4003-cosine-5000-a001/step-5000-measurement.json",
+      "retention": "retained",
+      "sha256": "42a9e8dd544fa605e4da4e27b3de388015bc5403c406ae4e4682291ee35ed612"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/confirmation/moons-4003/cosine-5000/attempts/moons-4003-cosine-5000-a001/step-5000-weights.npz",
+      "retention": "retained",
+      "sha256": "02aaaed31d40c75634797111b5aca338fbf61e7cc4bca371e46d6ce96093cf0f"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "artifacts/confirmation/moons-4003/cosine-5000/attempts/moons-4003-cosine-5000-a001/trace.jsonl",
+      "retention": "retained",
+      "sha256": "f14953a724ef19be0a7ffcc7780087be97e08d42d9a1e7c08809a184ac89fc66"
+    },
+    {
+      "media_type": "application/json",
+      "path": ".compute/responses/2636d1515f13464a9b8ada0fec84b503.json",
+      "retention": "retained",
+      "sha256": "5b23139cde6d355326d6626efbdbe248b562bcca3b81d9738696beb600178e4d"
+    }
+  ],
+  "protocol_revision": "v1",
+  "record_type": "RunRecord",
+  "run_id": "cosine-5000-confirmation",
+  "schema_version": "0.2",
+  "split": "confirmation",
+  "started_at": "2026-10-08T03:33:28.130240+00:00",
+  "status": "succeeded",
+  "usage": {
+    "money_usd": 0,
+    "tokens": 0,
+    "wall_seconds": 8.57561745797284
+  }
+}

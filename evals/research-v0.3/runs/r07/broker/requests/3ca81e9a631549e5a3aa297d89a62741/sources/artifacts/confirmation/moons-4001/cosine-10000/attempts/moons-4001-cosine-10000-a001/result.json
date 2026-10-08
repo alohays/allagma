@@ -1,0 +1,112 @@
+{
+  "attempt_id": "moons-4001-cosine-10000-a001",
+  "command": [
+    "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+    "study/runner.py",
+    "--dataset",
+    "moons",
+    "--seed",
+    "4001",
+    "--phase",
+    "confirmation",
+    "--policy",
+    "cosine",
+    "--duration",
+    "10000",
+    "--device",
+    "mps",
+    "--attempt-id",
+    "moons-4001-cosine-10000-a001",
+    "--base",
+    "artifacts"
+  ],
+  "completed_updates": 10000,
+  "ended_at": "2026-10-08T03:32:30.818964+00:00",
+  "environment": {
+    "device": "mps",
+    "dtype": "float32",
+    "numpy": "2.4.6",
+    "python": "3.11.6",
+    "threads": 1,
+    "torch": "2.14.1"
+  },
+  "inputs": {
+    "attempt_id": "moons-4001-cosine-10000-a001",
+    "base": "artifacts",
+    "dataset": "moons",
+    "device": "mps",
+    "duration": 10000,
+    "phase": "confirmation",
+    "policy": "cosine",
+    "resume": null,
+    "seed": 4001,
+    "stop": null
+  },
+  "measurements": [
+    "artifacts/confirmation/moons-4001/cosine-10000/attempts/moons-4001-cosine-10000-a001/step-10000-measurement.json"
+  ],
+  "outputs": [
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4001/cosine-10000/attempts/moons-4001-cosine-10000-a001/input.json",
+      "retention": "retained",
+      "sha256": "14825c8d6f76d2739cc637d68d23b4ce4c1d96cc0f9712236be024c6f4becbba"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4001/cosine-10000/attempts/moons-4001-cosine-10000-a001/recovery.json",
+      "retention": "retained",
+      "sha256": "ec488b247e73fa9b455db376e0fbcee05eda86e8147320015cf65a84686f293e"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/confirmation/moons-4001/cosine-10000/attempts/moons-4001-cosine-10000-a001/recovery.npz",
+      "retention": "retained",
+      "sha256": "6f70fc9d27282b804df07e14b6905f3db7a4ae4c705622d842ad5e3c915d8d6a"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/confirmation/moons-4001/cosine-10000/attempts/moons-4001-cosine-10000-a001/step-10000-arrays.npz",
+      "retention": "retained",
+      "sha256": "ef1022ab4a8b0768c92e1e7315c6bf94dda335f49d4193b441948c54b1e9ca06"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4001/cosine-10000/attempts/moons-4001-cosine-10000-a001/step-10000-measurement.json",
+      "retention": "retained",
+      "sha256": "73d5b2d1d7a312f75d908c6c9f30a3385360810b25085f51f785c5b3605ab81d"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/confirmation/moons-4001/cosine-10000/attempts/moons-4001-cosine-10000-a001/step-10000-weights.npz",
+      "retention": "retained",
+      "sha256": "93c6532d589fa852adc022ff2b3a337056ae9db58d2cff4f447799be0660ba11"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "artifacts/confirmation/moons-4001/cosine-10000/attempts/moons-4001-cosine-10000-a001/trace.jsonl",
+      "retention": "retained",
+      "sha256": "e9232ab56ec90c93cca17d95180352423f0bb77b021d472f8bc6a40917bd974a"
+    }
+  ],
+  "protocol": {
+    "media_type": "text/markdown",
+    "path": "PROTOCOL.md",
+    "retention": "retained",
+    "sha256": "3300b5e862a704f60ddef19ca785fb1b69fc67cb3ae04a8f85571b490284be61"
+  },
+  "resumed_from_step": 0,
+  "source_hashes": {
+    "study/common.py": "1ac628af6d76930a5e5b9ccf9c5b964becc409e9d46f933982985bd1726c0c84",
+    "study/runner.py": "beeb0e2d19862cff9dac9848e070d515e687856490d73a51e1864041c6358b5f",
+    "study/science.py": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1"
+  },
+  "source_revision": "5b043d9f52ba78f07c31dcb3a77b1ff08c594b1ce7dbbe950fc6de7325692fe5",
+  "started_at": "2026-10-08T03:32:17.333759+00:00",
+  "status": "succeeded",
+  "timing": {
+    "evaluation_seconds": 0.33922016713768244,
+    "total_seconds": 13.48672041692771,
+    "training_seconds": 12.023196874884889
+  }
+}

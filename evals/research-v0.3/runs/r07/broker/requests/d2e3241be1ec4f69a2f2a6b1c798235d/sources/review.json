@@ -1,0 +1,74 @@
+{
+  "assurance": "provisional",
+  "backend": "Codex scientific self-critique and deterministic local Python adapter",
+  "backend_version": "3.11.6",
+  "coverage": "Schema, material and direct evidence digests. No independent assessment of scientific validity. Also 322 transitive evidence references, raw-data reanalysis, all-state sample regeneration and same-assistant methodological critique. No independent scientific peer review.",
+  "criteria": [
+    "Scientific validity within specified scope",
+    "Factorial and seed controls",
+    "Uncertainty and multiplicity",
+    "Evidence and numerical reproduction",
+    "Disclosure and limitations"
+  ],
+  "findings": [
+    "The factorial design addresses the original duration/schedule confounding: cosine-5k is trained independently to its endpoint, and constant-5k is a valid checkpoint of the same constant policy. Matched input hashes support paired comparisons.",
+    "Uncertainty remains weak at four seeds. Student t intervals rely on a seed-level approximation, and exact two-sided sign-flip p-values cannot be below 0.125. The report labels intervals descriptive and avoids declaring universal statistical significance.",
+    "Multiplicity is substantial: 16 primary effects and 20 policy/duration/interaction contrasts are examined without simultaneous correction. The report discloses this; selecting a best decay would require new seeds.",
+    "The treatment is an entire optimizer policy. Endpoint rates, cumulative step size, optimization noise and effective averaging lag change together. A terminal-learning-rate mechanism is not identified by this design, and the report does not claim one.",
+    "GMM8 coverage ranges 8\u20138. If saturated, this statistic cannot establish equal sample quality; the retained mode counts and inlier fractions are necessary diagnostics. SW1 and mass allocation remain scientifically distinct.",
+    "Saved-weight regeneration and byte-identical reanalysis establish internal reproducibility on this environment. They do not independently validate the scientific assumptions or demonstrate cross-platform identical training. The second full retraining command is provided but not conflated with the performed sample-regeneration check.",
+    "The first interrupted attempt and MPS initialization failure were excluded with receipts retained, not erased. The memory repair lowered a watermark and did not relax the broker cap. No confirmation seed was used for implementation decisions.",
+    "The final cosine update applies a rate infinitesimally above zero under the supplied indexing rule. This is frozen and disclosed; readers should distinguish it from a protocol using exactly zero during the last optimizer step.",
+    "The source map is offline and some historical upstream provenance files are absent from supplied materials. The report limits attribution to the supplied adaptation and does not imply independent upstream verification.",
+    "Reviewer independence is absent: this is a same-assistant substantive critique plus a deterministic locked checklist. Assurance is provisional for scientific judgment, not independent peer review."
+  ],
+  "material": {
+    "media_type": "text/markdown",
+    "path": "REPORT.md",
+    "retention": "retained",
+    "sha256": "eef4230629c0e789727df16a990a48c098c26bbecdd9c927630696e5428c384a"
+  },
+  "record_type": "ReviewRecord",
+  "review_id": "report-r1-review",
+  "reviewer": "Same Codex assistant plus reviewer/checklist from campaign lock",
+  "schema_version": "0.2",
+  "trace": [
+    {
+      "media_type": "text/markdown",
+      "path": "CRITIQUE.md",
+      "retention": "retained",
+      "sha256": "b76a59a1791f1cf07b96072a5c38bd22e0df8cbaae45d15cf6c620b10b1b2441"
+    },
+    {
+      "media_type": "application/json",
+      "path": "verification/verification.json",
+      "retention": "retained",
+      "sha256": "82c1e697770beec7aa2dc2ff7c332db07c00f3591f1511eb475650625d08ae04"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/review-r1/adapter-result.json",
+      "retention": "retained",
+      "sha256": "9c40d222178102c0e002a95cd63d53b1af3187c4a847bc233e5c181b568f38cd"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/review-r1/execution.json",
+      "retention": "retained",
+      "sha256": "0e053c41c3810753537b088af1cc8b8e07bc4e1a6d05e65b2aa840c4b6f9e08c"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/review-r1/input.json",
+      "retention": "retained",
+      "sha256": "75cfc6dfc1cb67475cc7b519014f54974d1646143c8f498bee43723db30fa75e"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/review-r1/transitive-audit.json",
+      "retention": "retained",
+      "sha256": "6a5222f3840000279330f71cafe278e5bb6bd1cc6e95a9099d832b68f231b981"
+    }
+  ],
+  "verdict": "pass"
+}

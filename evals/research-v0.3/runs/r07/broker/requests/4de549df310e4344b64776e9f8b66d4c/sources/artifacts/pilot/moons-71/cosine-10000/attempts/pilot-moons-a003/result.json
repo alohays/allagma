@@ -1,0 +1,112 @@
+{
+  "attempt_id": "pilot-moons-a003",
+  "command": [
+    "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+    "study/runner.py",
+    "--dataset",
+    "moons",
+    "--seed",
+    "71",
+    "--phase",
+    "pilot",
+    "--policy",
+    "cosine",
+    "--duration",
+    "10000",
+    "--stop",
+    "1500",
+    "--device",
+    "mps",
+    "--attempt-id",
+    "pilot-moons-a003"
+  ],
+  "completed_updates": 1500,
+  "ended_at": "2026-10-08T03:27:14.452228+00:00",
+  "environment": {
+    "device": "mps",
+    "dtype": "float32",
+    "numpy": "2.4.6",
+    "python": "3.11.6",
+    "threads": 1,
+    "torch": "2.14.1"
+  },
+  "inputs": {
+    "attempt_id": "pilot-moons-a003",
+    "base": "artifacts",
+    "dataset": "moons",
+    "device": "mps",
+    "duration": 10000,
+    "phase": "pilot",
+    "policy": "cosine",
+    "resume": null,
+    "seed": 71,
+    "stop": 1500
+  },
+  "measurements": [
+    "artifacts/pilot/moons-71/cosine-10000/attempts/pilot-moons-a003/step-1500-measurement.json"
+  ],
+  "outputs": [
+    {
+      "media_type": "application/json",
+      "path": "artifacts/pilot/moons-71/cosine-10000/attempts/pilot-moons-a003/input.json",
+      "retention": "retained",
+      "sha256": "d10ea0fd17b7797d7e524df77fa97c7c9ae9554ab52e16466c9494fb23609e18"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/pilot/moons-71/cosine-10000/attempts/pilot-moons-a003/recovery.json",
+      "retention": "retained",
+      "sha256": "092d20e3a241a9d882266a29ae930c950ca4ad507ec37346b650c12754539d2c"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/pilot/moons-71/cosine-10000/attempts/pilot-moons-a003/recovery.npz",
+      "retention": "retained",
+      "sha256": "f415ba52f882726306b35e2b9486d0997ae3a0108cfdc1f2999ae6d0a3169e99"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/pilot/moons-71/cosine-10000/attempts/pilot-moons-a003/step-1500-arrays.npz",
+      "retention": "retained",
+      "sha256": "b21adcc0c68cc419bda6ceb6dd59e56f6c7c34328ab46ee4206c7365b6e6bac3"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/pilot/moons-71/cosine-10000/attempts/pilot-moons-a003/step-1500-measurement.json",
+      "retention": "retained",
+      "sha256": "ea79786804284b2f869caabd266dc48c00d2d6d4117dc535e4a65729b42bcbc7"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/pilot/moons-71/cosine-10000/attempts/pilot-moons-a003/step-1500-weights.npz",
+      "retention": "retained",
+      "sha256": "d59b5baf604d7bf6fd02daa9f1df619cc90f3aeb0be9324401535f1ec379ee66"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "artifacts/pilot/moons-71/cosine-10000/attempts/pilot-moons-a003/trace.jsonl",
+      "retention": "retained",
+      "sha256": "d1dd7d107c72a9a70868ca165b2eff339348507c7743e446c9415617ca26e465"
+    }
+  ],
+  "protocol": {
+    "media_type": "text/markdown",
+    "path": "PROTOCOL.md",
+    "retention": "retained",
+    "sha256": "3300b5e862a704f60ddef19ca785fb1b69fc67cb3ae04a8f85571b490284be61"
+  },
+  "resumed_from_step": 0,
+  "source_hashes": {
+    "study/common.py": "1ac628af6d76930a5e5b9ccf9c5b964becc409e9d46f933982985bd1726c0c84",
+    "study/runner.py": "beeb0e2d19862cff9dac9848e070d515e687856490d73a51e1864041c6358b5f",
+    "study/science.py": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1"
+  },
+  "source_revision": "5b043d9f52ba78f07c31dcb3a77b1ff08c594b1ce7dbbe950fc6de7325692fe5",
+  "started_at": "2026-10-08T03:27:09.194195+00:00",
+  "status": "succeeded",
+  "timing": {
+    "evaluation_seconds": 0.33888137503527105,
+    "total_seconds": 5.259159958921373,
+    "training_seconds": 2.901218250161037
+  }
+}

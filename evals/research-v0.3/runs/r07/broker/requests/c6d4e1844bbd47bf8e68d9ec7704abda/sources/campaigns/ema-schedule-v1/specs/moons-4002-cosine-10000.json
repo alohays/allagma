@@ -1,0 +1,63 @@
+{
+  "budget": {
+    "max_attempts": 64,
+    "max_seconds": 1800,
+    "money_usd": 0,
+    "per_attempt_seconds": 180
+  },
+  "editable": [
+    "Reporting code only; scientific changes require amendment"
+  ],
+  "evaluator": {
+    "media_type": "text/x-python",
+    "path": "study/science.py",
+    "retention": "retained",
+    "sha256": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1"
+  },
+  "expected_artifacts": [
+    "initial/training/evaluation NPZ",
+    "trace",
+    "raw/EMA weights and samples",
+    "measurement JSON",
+    "attempt source/input/receipt"
+  ],
+  "experiment_id": "moons-4002-cosine-10000",
+  "fixed": [
+    "Architecture, optimizer, data, RNG streams, seed list, evaluation and EMA rule"
+  ],
+  "hypothesis": "EMA-minus-raw quality may depend on full schedule policy and duration; negative and inconclusive results are valid.",
+  "inputs": [
+    {
+      "media_type": "text/markdown",
+      "path": "campaigns/ema-schedule-v1/protocol.md",
+      "retention": "retained",
+      "sha256": "3300b5e862a704f60ddef19ca785fb1b69fc67cb3ae04a8f85571b490284be61"
+    }
+  ],
+  "parameters": {
+    "dataset": "moons",
+    "device": "mps",
+    "duration": 10000,
+    "phase": "confirmation",
+    "policy": "cosine",
+    "seed": 4002
+  },
+  "protocol_revision": "v1",
+  "record_type": "ExperimentSpec",
+  "runner": {
+    "media_type": "text/x-python",
+    "path": "study/runner.py",
+    "retention": "retained",
+    "sha256": "beeb0e2d19862cff9dac9848e070d515e687856490d73a51e1864041c6358b5f"
+  },
+  "schema_version": "0.2",
+  "seed_policy": {
+    "condition_id": "cosine-10000",
+    "paired_seeds": true,
+    "pilot": {
+      "gmm8": 81,
+      "moons": 71
+    }
+  },
+  "split": "confirmation"
+}

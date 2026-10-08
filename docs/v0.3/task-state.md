@@ -7,7 +7,8 @@ receipts and frozen bundles remain unchanged.
 
 ## Current comparison
 
-Six of twelve native sessions are terminal. Four original packages meet all
+Eight of twelve native sessions are terminal. Seven reviews are complete; five
+original packages meet all
 required evidence items:
 
 | Run | Assignment | Numerical checks | Evidence | Verified package |
@@ -18,12 +19,13 @@ required evidence items:
 | r04 | Modular addition, Allagma, replicate 2 | 40/40 original and compatible | 8/8 | yes |
 | r05 | Modular addition, Allagma, replicate 1 | 40/40 corrected parser | 8/8 | yes |
 | r06 | Modular addition, plain, replicate 1 | 40/40 corrected parser | 7/8 | no: review lacks an explicit material revision |
+| r07 | EMA schedule, Allagma, replicate 2 | 240/240 original | 8/8 | yes |
+| r08 | EMA schedule, plain, replicate 2 | 240/240 original | pending | pending substantive review |
 
-**Active: r07, EMA schedule follow-up, Allagma, replicate 2. Exec session 51420.**
-The actual process remains live and has started confirmation after pilot
-qualification. Poll the known handle/process; do not restart based on an observation
-timeout or a running-state file. Next is r08, then the remaining frozen order.
-The pre-r07 account checkpoint permits ordinary use with 21% weekly usage.
+**Active: r09, CORE CULP, plain Codex, replicate 1. Exec session 21363.**
+The new native process has been launched under the frozen controls. Poll the known handle/process; do not restart based on an observation
+timeout or a running-state file. Next is r10, then r11 and r12.
+The pre-r09 account checkpoint permits ordinary use with 24% weekly usage.
 Check account limits again before starting the next session.
 
 Frozen source is `c369fe7`, with freeze commit `de6abce`. All twelve prepared
@@ -83,10 +85,10 @@ watermarks itself or claim native-agent qualification.
 
 ## Remaining work
 
-1. Complete and honestly score r07–r12. Preserve failed outcomes and all original
+1. Finish r08 substantive review and complete/score r09–r12. Preserve failed outcomes and all original
    packages. Apply the eight-item substantive rubric and independent science
    checks without changing candidate artifacts.
-2. Finish the EMA task package and any separately identified package repairs.
+2. The three illustrative packages are now verified; finish any separately identified required repairs.
    Do not rewrite unsuccessful original comparison outcomes.
 3. Generate the final comparison only when all twelve reviews are terminal.
    `comparison.py` reports all assigned runs, six paired contrasts, within-task
@@ -130,7 +132,7 @@ repair, without altering the original launch guard. The latest partial archive
 check passes 127 frozen source files, all 12 prepared inputs/profiles, and all
 five retained packages. Final verification must require all twelve packages.
 
-## Sixth-run result and current EMA recovery
+## Sixth-run result and initial EMA recovery
 
 r06 completed all eight 100k CPU trajectories. It independently diagnosed five
 auxiliary float64 near-tie class changes, all between wrong held-out classes,
@@ -150,7 +152,48 @@ This is controller parser support, not candidate repair.
 
 r07 independently set `PYTORCH_MPS_LOW_WATERMARK_RATIO` to 0.1 in its study runner
 before importing torch, while the broker's high limit stays 0.2. Its corrected
-MPS pilot and qualification passed, and GPU confirmation is active. No coordinator
+MPS pilot and qualification passed, and GPU confirmation subsequently completed. No coordinator
 hint was supplied. This candidate-local recovery does not repair the frozen
-shared broker or establish completion of the EMA task yet. The release still
+shared broker. The later r07 verification establishes its study completion. The release still
 requires the separately versioned full-broker repair and prepared actual test.
+
+## Seventh package verified; eighth review pending
+
+r07 is the prespecified EMA example: 32 cells, 96 states and 200000 updates across
+24 trajectories. Original scoring passes 240/240; controller checks independently
+regenerate all paired inputs/initializations, verify optimizer counters and LR
+traces, and reproduce 114 summary rows. All eight evidence items pass, including
+explicit report-r1 review binding. The supplied science module is unchanged.
+The three illustrative study summaries now exist, including the EMA figure.
+
+Its 829100336-byte archive exposed an actual controller restore bug: combining
+parts into a temporary file exceeded the unchanged 512 MiB file cap. Streamed
+extraction now passes with all 901 declared manifest hashes and 272 reviewed
+references verified. Preserve the failed job/manifest check and v2 resolution;
+do not classify this transport defect as a candidate failure. The six transport
+regressions include a real POSIX small-file-limit test and altered-part rejection.
+
+r08 is terminal and its original EMA scorer also passes 240/240. Its package is
+collected (16 parts, 525 regular files plus 22 external wheels, no manifest
+errors), but source/statistical/visual/review and restoration checks remain.
+Do not mark its package complete until those are inspected. Candidate:
+`work/v03-evaluation/runs/r08/candidate`; controller: `evals/research-v0.3/runs/r08`.
+
+The current native run is r09, handle 21363. Source freeze verification still
+passes. No final release fix or push has occurred. Full remaining requirements,
+MPS repair/canary, final-source conformance/acceptance and origin push still apply.
+
+## Current postprocessing milestone
+
+r07 now passes all eight evidence items, including 901 restored manifest entries
+and 272 restored reviewed references. Its original failed restoration and failed
+manifest check remain retained alongside the successful streaming correction.
+The illustrative EMA summary and original figure are in `studies/ema-schedule/`.
+`after-r07-reviewed` is the latest interim comparison: eight sessions terminal,
+seven reviews complete, five packages fully verified. r08 review remains pending.
+
+r08's original numerical score is 240/240 and its package is already collected.
+No substantive completion claim has been made. Current active handle remains
+**r09 / 21363**. Next r10, r11, r12. Check actual handles/processes before actions;
+never restart from a stale state file or observation timeout. Keep the full goal
+active through release fixes, final checks, commits and the authorized push.

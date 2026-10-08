@@ -1,0 +1,30 @@
+{
+  "actual_schedule_duration": 10000,
+  "arrays": "artifacts/pilot/moons-71/cosine-10000/attempts/pilot-moons-a003/step-1500-arrays.npz",
+  "attempt_id": "pilot-moons-a003",
+  "dataset": "moons",
+  "device": "mps",
+  "generation_noise_sha256": "98e1cc8b325187e95c9253a943d365481dbb6d07252814b4bbd71503fa7aaedd",
+  "heldout_sha256": "b7323dd4adc077f6e61656b88bc349eac91100b7e21fe1cf8eeb47ad5f6066e6",
+  "initial_weights_sha256": "632827a2f16f785473040c2d742bf48767c894794a089fdc88640a1c8b5ff896",
+  "input_metadata": "artifacts/pilot/moons-71/inputs/metadata.json",
+  "metrics": {
+    "ema099": {
+      "sw1": 0.06355734957721189
+    },
+    "ema0999": {
+      "sw1": 0.2335557558530831
+    },
+    "raw": {
+      "sw1": 0.15026115694932052
+    }
+  },
+  "phase": "pilot",
+  "schedule": "cosine",
+  "seed": 71,
+  "source_revision": "5b043d9f52ba78f07c31dcb3a77b1ff08c594b1ce7dbbe950fc6de7325692fe5",
+  "training_prefix_5000_sha256": "a5719c560d9b30dcc95b2a044392daeda501cfb2403e87f510e56acc876b87eb",
+  "training_trace": "artifacts/pilot/moons-71/cosine-10000/attempts/pilot-moons-a003/trace.jsonl",
+  "updates": 1500,
+  "weights": "artifacts/pilot/moons-71/cosine-10000/attempts/pilot-moons-a003/step-1500-weights.npz"
+}

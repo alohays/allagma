@@ -1,0 +1,26 @@
+{
+  "composition": {
+    "recipe": "recipe/research",
+    "roles": {
+      "context": "context/active-brief",
+      "reviewer": "reviewer/checklist",
+      "runner": "runner/local-process"
+    }
+  },
+  "modules": {
+    "context/active-brief": "methods/allagma-context-active-brief",
+    "host/codex": "adapters/codex",
+    "policy/local": "policies/local",
+    "profile/default": "profiles/default",
+    "recipe/research": "recipes/allagma-research",
+    "research/analysis": "methods/allagma-analysis",
+    "research/audit": "methods/allagma-audit",
+    "research/experiment": "methods/allagma-experiment",
+    "research/protocol": "methods/allagma-protocol",
+    "research/scope": "methods/allagma-scope",
+    "research/writing": "methods/allagma-writing",
+    "reviewer/checklist": "adapters/reviewer-checklist",
+    "runner/local-process": "adapters/local-process"
+  },
+  "schema_version": "0.2"
+}

@@ -1,0 +1,28 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "study/runner.py",
+    "--dataset",
+    "moons",
+    "--seed",
+    "71",
+    "--phase",
+    "pilot",
+    "--policy",
+    "cosine",
+    "--duration",
+    "10000",
+    "--stop",
+    "1500",
+    "--device",
+    "mps",
+    "--attempt-id",
+    "pilot-moons-a001"
+  ],
+  "attempt": true,
+  "category": "compute",
+  "cwd": ".",
+  "label": "pilot-moons-first-marked",
+  "request_id": "ff35db4da89a4fe4b4aa89d99e42778c",
+  "timeout_seconds": 60.0
+}

@@ -1,0 +1,122 @@
+{
+  "checks": [
+    {
+      "detail": 0,
+      "name": "SW1 identity",
+      "passed": true
+    },
+    {
+      "detail": {
+        "expected": 3.2212375877715234,
+        "observed": 3.221237587771524
+      },
+      "name": "SW1 analytic translation",
+      "passed": true
+    },
+    {
+      "detail": {
+        "expected": 0.6666666666666666,
+        "observed": 0.6666666666666666
+      },
+      "name": "SW1 custom-axis order statistic",
+      "passed": true
+    },
+    {
+      "detail": {
+        "counts": [
+          20,
+          21,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "covered": 1,
+        "inlier_fraction": 0.02001953125,
+        "total_variation": 0.489990234375
+      },
+      "name": "Coverage all-draw denominator and threshold",
+      "passed": true
+    },
+    {
+      "detail": {
+        "counts": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "covered": 1,
+        "inlier_fraction": 0.5,
+        "total_variation": 0.625
+      },
+      "name": "Coverage radius criterion",
+      "passed": true
+    },
+    {
+      "detail": [
+        1.0199999809265137,
+        -1.9600000381469727
+      ],
+      "name": "EMA post-update interpolation",
+      "passed": true
+    },
+    {
+      "detail": 296450,
+      "name": "Reference architecture",
+      "passed": true
+    },
+    {
+      "detail": 2.4285722793500615e-07,
+      "name": "DDPM schedule terminal/noise",
+      "passed": true
+    },
+    {
+      "detail": {
+        "10000": 0.0001500471238890287,
+        "5000": 2.9608812235348834e-11
+      },
+      "name": "Distinct cosine policies",
+      "passed": true
+    },
+    {
+      "detail": "a5719c560d9b30dcc95b2a044392daeda501cfb2403e87f510e56acc876b87eb",
+      "name": "Retained actual input prefix",
+      "passed": true
+    },
+    {
+      "detail": {
+        "max_abs_difference": 0.0,
+        "restored_step": 10
+      },
+      "name": "AdamW and EMA full-state resume",
+      "passed": true
+    },
+    {
+      "detail": {
+        "draws": 128,
+        "max_abs_difference": 0.0
+      },
+      "name": "Saved state reference sample regeneration",
+      "passed": true
+    }
+  ],
+  "created_at": "2026-10-08T03:29:01.269317+00:00",
+  "device": "mps",
+  "elapsed_seconds": 2.5180095420219004,
+  "passed": true,
+  "phase": "pilot",
+  "pilot_seed": 71,
+  "scientific_sources": {
+    "study/common.py": "1ac628af6d76930a5e5b9ccf9c5b964becc409e9d46f933982985bd1726c0c84",
+    "study/qualify.py": "64cb00e0290c14be776366c064800c45dbe8d95858e1d70d5cb5a411617f7c16",
+    "study/runner.py": "beeb0e2d19862cff9dac9848e070d515e687856490d73a51e1864041c6358b5f",
+    "study/science.py": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1"
+  }
+}

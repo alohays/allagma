@@ -1,0 +1,131 @@
+{
+  "attempt_id": "moons-4002-constant-10000-a001",
+  "command": [
+    "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+    "study/runner.py",
+    "--dataset",
+    "moons",
+    "--seed",
+    "4002",
+    "--phase",
+    "confirmation",
+    "--policy",
+    "constant",
+    "--duration",
+    "10000",
+    "--device",
+    "mps",
+    "--attempt-id",
+    "moons-4002-constant-10000-a001",
+    "--base",
+    "artifacts"
+  ],
+  "completed_updates": 10000,
+  "ended_at": "2026-10-08T03:32:46.410909+00:00",
+  "environment": {
+    "device": "mps",
+    "dtype": "float32",
+    "numpy": "2.4.6",
+    "python": "3.11.6",
+    "threads": 1,
+    "torch": "2.14.1"
+  },
+  "inputs": {
+    "attempt_id": "moons-4002-constant-10000-a001",
+    "base": "artifacts",
+    "dataset": "moons",
+    "device": "mps",
+    "duration": 10000,
+    "phase": "confirmation",
+    "policy": "constant",
+    "resume": null,
+    "seed": 4002,
+    "stop": null
+  },
+  "measurements": [
+    "artifacts/confirmation/moons-4002/constant-10000/attempts/moons-4002-constant-10000-a001/step-5000-measurement.json",
+    "artifacts/confirmation/moons-4002/constant-10000/attempts/moons-4002-constant-10000-a001/step-10000-measurement.json"
+  ],
+  "outputs": [
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4002/constant-10000/attempts/moons-4002-constant-10000-a001/input.json",
+      "retention": "retained",
+      "sha256": "66bcaa22d99223b4e6f77325180333a8d1ad50ab278fb032420e4d746caeff49"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4002/constant-10000/attempts/moons-4002-constant-10000-a001/recovery.json",
+      "retention": "retained",
+      "sha256": "23c9b9f766d562e007d34f0fad0d5eaac165783756683aeeb1ea0fd87de44b89"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/confirmation/moons-4002/constant-10000/attempts/moons-4002-constant-10000-a001/recovery.npz",
+      "retention": "retained",
+      "sha256": "ef3c56f0ef20db12b42e19e9e86906d1b5fd3024bf492f11ffbb4e3ca8e9b6ce"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/confirmation/moons-4002/constant-10000/attempts/moons-4002-constant-10000-a001/step-10000-arrays.npz",
+      "retention": "retained",
+      "sha256": "c25a23dd37425104a263ca6cc00445d34342450cc2c8880a6755146a5855e91b"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4002/constant-10000/attempts/moons-4002-constant-10000-a001/step-10000-measurement.json",
+      "retention": "retained",
+      "sha256": "8a05528897be57fca9c0d276c94822896d7f8c76889b93f6c4eb9fc9d5141bd8"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/confirmation/moons-4002/constant-10000/attempts/moons-4002-constant-10000-a001/step-10000-weights.npz",
+      "retention": "retained",
+      "sha256": "545a3f35cd410e9e091959f5f7406d6c4656e775caff7deb19bd639df7928e4d"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/confirmation/moons-4002/constant-10000/attempts/moons-4002-constant-10000-a001/step-5000-arrays.npz",
+      "retention": "retained",
+      "sha256": "70bf645da58f61e07fe48e5e62b137a2773c79c315bc7d95d0fdd135635558b1"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4002/constant-10000/attempts/moons-4002-constant-10000-a001/step-5000-measurement.json",
+      "retention": "retained",
+      "sha256": "11d0d56de03fb88db8751690e0b939eacbcd4c0a155c565040d0d7d3adc31c9f"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/confirmation/moons-4002/constant-10000/attempts/moons-4002-constant-10000-a001/step-5000-weights.npz",
+      "retention": "retained",
+      "sha256": "210980884f2cc69ffa23c67edb9cf645bd7b9341a5f50330ecf334b39c3d8426"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "artifacts/confirmation/moons-4002/constant-10000/attempts/moons-4002-constant-10000-a001/trace.jsonl",
+      "retention": "retained",
+      "sha256": "e872bf3106765cfc9abb5ae9f5f106da374cabfd54550ba6c35ad7a1d5ae3ef1"
+    }
+  ],
+  "protocol": {
+    "media_type": "text/markdown",
+    "path": "PROTOCOL.md",
+    "retention": "retained",
+    "sha256": "3300b5e862a704f60ddef19ca785fb1b69fc67cb3ae04a8f85571b490284be61"
+  },
+  "resumed_from_step": 0,
+  "source_hashes": {
+    "study/common.py": "1ac628af6d76930a5e5b9ccf9c5b964becc409e9d46f933982985bd1726c0c84",
+    "study/runner.py": "beeb0e2d19862cff9dac9848e070d515e687856490d73a51e1864041c6358b5f",
+    "study/science.py": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1"
+  },
+  "source_revision": "5b043d9f52ba78f07c31dcb3a77b1ff08c594b1ce7dbbe950fc6de7325692fe5",
+  "started_at": "2026-10-08T03:32:32.501602+00:00",
+  "status": "succeeded",
+  "timing": {
+    "evaluation_seconds": 0.5703242081217468,
+    "total_seconds": 13.910866165999323,
+    "training_seconds": 12.10526966699399
+  }
+}

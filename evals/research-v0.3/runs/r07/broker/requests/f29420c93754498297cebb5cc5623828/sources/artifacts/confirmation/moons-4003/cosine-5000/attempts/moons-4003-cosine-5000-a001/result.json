@@ -1,0 +1,112 @@
+{
+  "attempt_id": "moons-4003-cosine-5000-a001",
+  "command": [
+    "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+    "study/runner.py",
+    "--dataset",
+    "moons",
+    "--seed",
+    "4003",
+    "--phase",
+    "confirmation",
+    "--policy",
+    "cosine",
+    "--duration",
+    "5000",
+    "--device",
+    "mps",
+    "--attempt-id",
+    "moons-4003-cosine-5000-a001",
+    "--base",
+    "artifacts"
+  ],
+  "completed_updates": 5000,
+  "ended_at": "2026-10-08T03:33:36.366463+00:00",
+  "environment": {
+    "device": "mps",
+    "dtype": "float32",
+    "numpy": "2.4.6",
+    "python": "3.11.6",
+    "threads": 1,
+    "torch": "2.14.1"
+  },
+  "inputs": {
+    "attempt_id": "moons-4003-cosine-5000-a001",
+    "base": "artifacts",
+    "dataset": "moons",
+    "device": "mps",
+    "duration": 5000,
+    "phase": "confirmation",
+    "policy": "cosine",
+    "resume": null,
+    "seed": 4003,
+    "stop": null
+  },
+  "measurements": [
+    "artifacts/confirmation/moons-4003/cosine-5000/attempts/moons-4003-cosine-5000-a001/step-5000-measurement.json"
+  ],
+  "outputs": [
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4003/cosine-5000/attempts/moons-4003-cosine-5000-a001/input.json",
+      "retention": "retained",
+      "sha256": "37602f614a0dceb36d62cce6944b4f540d89e05c2b53421ad501bdd243a43096"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4003/cosine-5000/attempts/moons-4003-cosine-5000-a001/recovery.json",
+      "retention": "retained",
+      "sha256": "8b466c207dd85b18a8fdc9419dce29fe75d8b158dcf4330e78a8b8fcd0788cd0"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/confirmation/moons-4003/cosine-5000/attempts/moons-4003-cosine-5000-a001/recovery.npz",
+      "retention": "retained",
+      "sha256": "e0bdda07090b0a500e6236414828a8ddb7e23fe4da5eddcd7b5633a4fd9f89a1"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/confirmation/moons-4003/cosine-5000/attempts/moons-4003-cosine-5000-a001/step-5000-arrays.npz",
+      "retention": "retained",
+      "sha256": "8714f54d7a329d85b4c0f28175909df27f21179a36195344d87524253c847c06"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4003/cosine-5000/attempts/moons-4003-cosine-5000-a001/step-5000-measurement.json",
+      "retention": "retained",
+      "sha256": "42a9e8dd544fa605e4da4e27b3de388015bc5403c406ae4e4682291ee35ed612"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/confirmation/moons-4003/cosine-5000/attempts/moons-4003-cosine-5000-a001/step-5000-weights.npz",
+      "retention": "retained",
+      "sha256": "02aaaed31d40c75634797111b5aca338fbf61e7cc4bca371e46d6ce96093cf0f"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "artifacts/confirmation/moons-4003/cosine-5000/attempts/moons-4003-cosine-5000-a001/trace.jsonl",
+      "retention": "retained",
+      "sha256": "f14953a724ef19be0a7ffcc7780087be97e08d42d9a1e7c08809a184ac89fc66"
+    }
+  ],
+  "protocol": {
+    "media_type": "text/markdown",
+    "path": "PROTOCOL.md",
+    "retention": "retained",
+    "sha256": "3300b5e862a704f60ddef19ca785fb1b69fc67cb3ae04a8f85571b490284be61"
+  },
+  "resumed_from_step": 0,
+  "source_hashes": {
+    "study/common.py": "1ac628af6d76930a5e5b9ccf9c5b964becc409e9d46f933982985bd1726c0c84",
+    "study/runner.py": "beeb0e2d19862cff9dac9848e070d515e687856490d73a51e1864041c6358b5f",
+    "study/science.py": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1"
+  },
+  "source_revision": "5b043d9f52ba78f07c31dcb3a77b1ff08c594b1ce7dbbe950fc6de7325692fe5",
+  "started_at": "2026-10-08T03:33:28.130240+00:00",
+  "status": "succeeded",
+  "timing": {
+    "evaluation_seconds": 0.3398971250280738,
+    "total_seconds": 8.238055124878883,
+    "training_seconds": 6.752900541992858
+  }
+}

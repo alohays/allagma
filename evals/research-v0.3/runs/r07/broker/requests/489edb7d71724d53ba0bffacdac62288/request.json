@@ -1,0 +1,19 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "-m",
+    "pip",
+    "install",
+    "--no-index",
+    "--find-links",
+    "inputs/materials/wheels",
+    "-r",
+    "inputs/materials/requirements-reference.lock"
+  ],
+  "attempt": false,
+  "category": "setup",
+  "cwd": ".",
+  "label": "install-locked-dependencies",
+  "request_id": "489edb7d71724d53ba0bffacdac62288",
+  "timeout_seconds": 120.0
+}

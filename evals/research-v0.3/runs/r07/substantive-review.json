@@ -1,0 +1,237 @@
+{
+  "run_id": "r07",
+  "criteria": "evals/research-v0.3/frozen/source/evals/research-v0.3/CRITERIA.md",
+  "scientific_execution_verified": true,
+  "completion_verified": true,
+  "evidence_score": 8,
+  "evidence_total": 8,
+  "evidence_items": [
+    {
+      "id": 1,
+      "score": 1,
+      "reason": "Question, source identity, AI-generated/adapted disclosure and source license are preserved. The scientific module is byte-identical to the supplied reference; the new confirmation data are distinct from historical results.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "PROTOCOL.md",
+          "sha256": "3300b5e862a704f60ddef19ca785fb1b69fc67cb3ae04a8f85571b490284be61"
+        },
+        {
+          "root": "candidate",
+          "path": "LICENSE-AI-SCIENTIST",
+          "sha256": "9c82e554a54dfcf2550b452801475a36f9cb909ede00b03e492089e4836a7462"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/literature-map.json",
+          "sha256": "2bfb076180d7e479114d5de8c3d06584abe0fe7d3035053652634b0220c5edc0"
+        },
+        {
+          "root": "candidate",
+          "path": "study/science.py",
+          "sha256": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "score": 1,
+      "reason": "Protocol, qualification, forecast and scientific source hashes precede confirmation. Both completed cosine durations are independently trained; one constant trajectory supplies its two valid endpoints. Eight seed groups have exact paired initial states, inputs and evaluation noise.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "campaigns/ema-schedule-v1/confirmation-freeze.json",
+          "sha256": "5bab8e0a6f654337dbc97b0a014fff7cd42d1caacd23017e437bd032406bd908"
+        },
+        {
+          "root": "candidate",
+          "path": "campaigns/ema-schedule-v1/run-plan.json",
+          "sha256": "44adfff83cf9e565800e584785f405d1dff0a08233a85382f50ec8fe9e85834e"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/qualification.json",
+          "sha256": "5b5ee7f933df5bdb69f3bcdac4bc8c2347a413ad841c25626c23537b39664e49"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/forecast.json",
+          "sha256": "bfbf9bc1524514b612d1bfabc3886fdca82890db353c13f3346980a5aadb8f6d"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "score": 1,
+      "reason": "All 32 cells arise from 24 completed trajectories and 200000 actual updates. Source/receipt history, final optimizer counters and learning-rate traces agree; interruption and MPS failure remain retained. The candidate repaired only the low watermark, leaving the high cap unchanged.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "analysis/raw-manifest.json",
+          "sha256": "c1a5ca01f2b6bb0b6d99bb301989a89e892f7d12f10606baf0664edbe1d394f0"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/measurements.json",
+          "sha256": "7f06ed04f7f8da9566c7af82e1c74704fd4dc5ad7823168b57377502e1de798c"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/resource-ledger.json",
+          "sha256": "345e3e3ca1a19bc4f0ebaca2e5ad1611e9fb9ebef94f0224a9850c37f035898d"
+        },
+        {
+          "root": "candidate",
+          "path": "study/runner.py",
+          "sha256": "beeb0e2d19862cff9dac9848e070d515e687856490d73a51e1864041c6358b5f"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "score": 1,
+      "reason": "The unchanged frozen scorer passes all 240 checks, including all 96 saved-state sample replays. Independent controller reconstruction verifies all input streams/prefix hashes, optimizer counts, schedule traces and 114 statistical summaries.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "analysis/measurements.json",
+          "sha256": "7f06ed04f7f8da9566c7af82e1c74704fd4dc5ad7823168b57377502e1de798c"
+        },
+        {
+          "root": "candidate",
+          "path": "verification/verification.json",
+          "sha256": "82c1e697770beec7aa2dc2ff7c332db07c00f3591f1511eb475650625d08ae04"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/summary.json",
+          "sha256": "eadd1e78ec6a09d73426dd4ee4dafd19c093a7100552f92119d3df9b5e70abac"
+        },
+        {
+          "root": "candidate",
+          "path": "reanalysis/summary.json",
+          "sha256": "eadd1e78ec6a09d73426dd4ee4dafd19c093a7100552f92119d3df9b5e70abac"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "score": 1,
+      "reason": "Uses four paired seeds per dataset, retains individual effects and leave-one-out means, and reports descriptive unadjusted t intervals plus coarse exact sign flips. Full-policy, finite-sample, multiplicity and saturated-coverage limits are explicit; zero-containing intervals are not described as equivalence.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "REPORT.md",
+          "sha256": "eef4230629c0e789727df16a990a48c098c26bbecdd9c927630696e5428c384a"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/contrasts.json",
+          "sha256": "f80a1cd3a3b3d2de214d8c13b3c22522d37e2be1157438124425ddd108cdd9d2"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/paired-differences.csv",
+          "sha256": "6f2acce7105a7d2c2b0f26d230f4fb0046f1e2d38851a64fd46628953b9c49c2"
+        },
+        {
+          "root": "candidate",
+          "path": "CRITIQUE.md",
+          "sha256": "b76a59a1791f1cf07b96072a5c38bd22e0df8cbaae45d15cf6c620b10b1b2441"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "score": 1,
+      "reason": "English report, full tables, claim ledger and visually inspected figure agree with the numerical findings. Relative EMA benefit is distinguished from absolute model quality; no terminal-rate mechanism, universal effect or novelty claim is made.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "REPORT.md",
+          "sha256": "eef4230629c0e789727df16a990a48c098c26bbecdd9c927630696e5428c384a"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/main-figure.png",
+          "sha256": "b357ed526ed43c94be32d413cb067532f99570e1723ea1a497963f47f25857bc"
+        },
+        {
+          "root": "candidate",
+          "path": "claims.json",
+          "sha256": "89b5b3aacfe294d69bc4df13fda8555fee02314bb6db5aee5fb2dac70b4d91a6"
+        },
+        {
+          "root": "candidate",
+          "path": "INTERPRETATION.md",
+          "sha256": "22d22235c1eed96a0ca1586eef18754214afa5960a5564c6cea1be046e91a884"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "score": 1,
+      "reason": "Pinned dependencies, full fresh-environment dispatcher and executed retained-data reanalysis are retained and documented. Streamed package restoration passes all 901 declared manifest entries and 272 reviewed ArtifactRefs under the original file limit. No second full training replay is claimed.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "REPRODUCE.md",
+          "sha256": "738f0f51e142b02d7d17b355b7914b6cf3b5919f8fe3d3074123f113e5239592"
+        },
+        {
+          "root": "candidate",
+          "path": "study/dispatch.py",
+          "sha256": "cf3d2d9096caa9967541252db2f9580013f8d4b59d802e24f04586e787a86594"
+        },
+        {
+          "root": "candidate",
+          "path": "inputs/materials/requirements-reference.lock",
+          "sha256": "7decf0446de48124cc46ed9c1d69669a62b9daacfb00c070c10f44ed7a5b039d"
+        },
+        {
+          "root": "candidate",
+          "path": "artifact-manifest.json",
+          "sha256": "b06ee52ffe751fa260113912006d916f01a523e432826ef9ad149312e2810fdc"
+        },
+        {
+          "root": "candidate",
+          "path": "verification/verification.json",
+          "sha256": "82c1e697770beec7aa2dc2ff7c332db07c00f3591f1511eb475650625d08ae04"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "score": 1,
+      "reason": "Substantive critique is bound to report-r1 and its exact SHA-256, names actual methodological/recovery findings and remaining limits, and labels author/checklist assurance provisional rather than independent scientific peer review.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "review.json",
+          "sha256": "681bb7e5335f9a39850874e7cff2eeb57b519031fc7e87ede589e410451e4f47"
+        },
+        {
+          "root": "candidate",
+          "path": "CRITIQUE.md",
+          "sha256": "b76a59a1791f1cf07b96072a5c38bd22e0df8cbaae45d15cf6c620b10b1b2441"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/review-r1/input.json",
+          "sha256": "75cfc6dfc1cb67475cc7b519014f54974d1646143c8f498bee43723db30fa75e"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/review-r1/transitive-audit.json",
+          "sha256": "6a5222f3840000279330f71cafe278e5bb6bd1cc6e95a9099d832b68f231b981"
+        }
+      ]
+    }
+  ],
+  "critical_scientific_findings_unresolved": [],
+  "coordinator_task_messages": 0,
+  "candidate_edits_by_controller": 0,
+  "environment_recovery": "Study runner set LOW=0.1 before torch import; broker HIGH=0.2 remained unchanged. Actual MPS training and checkpoint sampling were used. This candidate recovery does not repair the shared frozen broker.",
+  "transport_correction": "Initial restoration failed because concatenation would exceed the 512 MiB per-file cap. Streamed extraction passed under the unchanged profile, preserving the original archive, index and failure.",
+  "scope": "Original candidate outcome with controller source/statistical checks. Scientific interpretation remains provisional; no independent peer review, universal EMA claim, or second full retraining."
+}

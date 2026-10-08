@@ -1,0 +1,1508 @@
+{
+  "cells_verified": 32,
+  "checks": [
+    {
+      "dataset": "gmm8",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/gmm8-5001-constant-5000.npz",
+        "retention": "retained",
+        "sha256": "06fd60d4898fd637c4d00310408d31b684a0af6278b1ffc50494dba53bc0ecc3"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5001/constant-10000/attempts/gmm8-5001-constant-10000-a001/step-5000-arrays.npz",
+        "retention": "retained",
+        "sha256": "47e232124c8952b4f011b91f2f41ea9187edda79513b9037db1038cf8520dcda"
+      },
+      "schedule": "constant",
+      "seed": 5001,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.08448283917217218,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 1.3877787807814457e-17
+        },
+        "ema0999": {
+          "independent_sw1": 0.08260390130760391,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "raw": {
+          "independent_sw1": 0.07153591498668763,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5001/constant-10000/attempts/gmm8-5001-constant-10000-a001/step-5000-weights.npz",
+        "retention": "retained",
+        "sha256": "d4348e7f57f750912d7bcf151b12cc0ff0ebdb9a4449a8211cecd8be38bea3b9"
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/gmm8-5001-cosine-5000.npz",
+        "retention": "retained",
+        "sha256": "17a0ea290be110ceb0e2290ad6d7903cde6cca98d71beda95f4b667c8c78e47e"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5001/cosine-5000/attempts/gmm8-5001-cosine-5000-a001/step-5000-arrays.npz",
+        "retention": "retained",
+        "sha256": "404f1c7ea6a07192e961c226e58dc7731a162e0198743d4a061a5d084c6e246b"
+      },
+      "schedule": "cosine",
+      "seed": 5001,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.08448501320377656,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "ema0999": {
+          "independent_sw1": 0.08286591959444219,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "raw": {
+          "independent_sw1": 0.08503705120879004,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 1.3877787807814457e-17
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5001/cosine-5000/attempts/gmm8-5001-cosine-5000-a001/step-5000-weights.npz",
+        "retention": "retained",
+        "sha256": "f8cdb07f8f49aefa1117860f970bbd0a36c14b495d0a16f06e2823afac678c9c"
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/gmm8-5001-constant-10000.npz",
+        "retention": "retained",
+        "sha256": "6600e53c3dbc3cf710cb1fe4e910ca0e25b2a8b483884a67592e3f292a5cd10c"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5001/constant-10000/attempts/gmm8-5001-constant-10000-a001/step-10000-arrays.npz",
+        "retention": "retained",
+        "sha256": "9ca52b5b0fed0391b16a47d215c8a71cce0b77f97a96e66bfda227901399bcd0"
+      },
+      "schedule": "constant",
+      "seed": 5001,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.09147121143185241,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "ema0999": {
+          "independent_sw1": 0.08518707266990712,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 1.3877787807814457e-17
+        },
+        "raw": {
+          "independent_sw1": 0.10442060171393498,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 1.3877787807814457e-17
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5001/constant-10000/attempts/gmm8-5001-constant-10000-a001/step-10000-weights.npz",
+        "retention": "retained",
+        "sha256": "073d03a8938e031c817c2f8fbf7a540c6310a35af21197c93b64cbdc2e60fcd8"
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/gmm8-5001-cosine-10000.npz",
+        "retention": "retained",
+        "sha256": "dffd050117f44cefc0fa8dd1aa94bbfc8feae750de0be5dd85045baf15c681b3"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5001/cosine-10000/attempts/gmm8-5001-cosine-10000-a001/step-10000-arrays.npz",
+        "retention": "retained",
+        "sha256": "993bbc6f0b12076b0bfe27919ad736999a807f4cab7197836d6ad6e4048af572"
+      },
+      "schedule": "cosine",
+      "seed": 5001,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.0862875327622496,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 1.3877787807814457e-17
+        },
+        "ema0999": {
+          "independent_sw1": 0.08363070617475629,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "raw": {
+          "independent_sw1": 0.08662796253628482,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5001/cosine-10000/attempts/gmm8-5001-cosine-10000-a001/step-10000-weights.npz",
+        "retention": "retained",
+        "sha256": "a6d3bf3d6517ab26522eb686393585489ba230a875181b66b7e5355286c3e151"
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/gmm8-5002-constant-5000.npz",
+        "retention": "retained",
+        "sha256": "8637546d523a5d46e80bee43870c1b5aefb2468d814b67a48252e3e30f8c76b6"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5002/constant-10000/attempts/gmm8-5002-constant-10000-a001/step-5000-arrays.npz",
+        "retention": "retained",
+        "sha256": "c364e6f28c19c20c6b436a63a420573ed6747dec330beaf5cfc46c08d2e837ec"
+      },
+      "schedule": "constant",
+      "seed": 5002,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.08602145761323117,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 1.3877787807814457e-17
+        },
+        "ema0999": {
+          "independent_sw1": 0.07157617790836907,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "raw": {
+          "independent_sw1": 0.24339072699771624,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 2.7755575615628914e-17
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5002/constant-10000/attempts/gmm8-5002-constant-10000-a001/step-5000-weights.npz",
+        "retention": "retained",
+        "sha256": "dd372f5457d8a48c759cbb6ba17daffe85b3bc1f084e6549788fac73cd832e8e"
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/gmm8-5002-cosine-5000.npz",
+        "retention": "retained",
+        "sha256": "7b0d04ce24995b5f684486744dab83fc161cb2d6bc4b5979e2c0cc57b75237e0"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5002/cosine-5000/attempts/gmm8-5002-cosine-5000-a001/step-5000-arrays.npz",
+        "retention": "retained",
+        "sha256": "d4dea411d4ee6b79c24b07e0bee1b94350d6d97738875f7d9673fb1a19c63f82"
+      },
+      "schedule": "cosine",
+      "seed": 5002,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.0738994958163257,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 1.3877787807814457e-17
+        },
+        "ema0999": {
+          "independent_sw1": 0.06563833554440622,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "raw": {
+          "independent_sw1": 0.07437051130622493,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5002/cosine-5000/attempts/gmm8-5002-cosine-5000-a001/step-5000-weights.npz",
+        "retention": "retained",
+        "sha256": "b7cddc163d6a7d471dbc5f21533bbd0577a19a5920c33c967abf2d11f3051698"
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/gmm8-5002-constant-10000.npz",
+        "retention": "retained",
+        "sha256": "0e2cecfe3e8f7456bffd493dbaff35c245a5974f16fb2c85729d465fd79e88d7"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5002/constant-10000/attempts/gmm8-5002-constant-10000-a001/step-10000-arrays.npz",
+        "retention": "retained",
+        "sha256": "eb596325343ca33b461fab67e4b7daddb8300561db6221230d029b2b1d603e6f"
+      },
+      "schedule": "constant",
+      "seed": 5002,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.08821986200338439,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 1.3877787807814457e-17
+        },
+        "ema0999": {
+          "independent_sw1": 0.07848480827244936,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "raw": {
+          "independent_sw1": 0.14291134639925357,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5002/constant-10000/attempts/gmm8-5002-constant-10000-a001/step-10000-weights.npz",
+        "retention": "retained",
+        "sha256": "86acf8b07dc952e5235e44ec781489454c5207f22bb1159c18de66515ea352fc"
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/gmm8-5002-cosine-10000.npz",
+        "retention": "retained",
+        "sha256": "97507c077201f58d4429c818a89ae423ef71c68bba47d0a8704631e0439ae62a"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5002/cosine-10000/attempts/gmm8-5002-cosine-10000-a001/step-10000-arrays.npz",
+        "retention": "retained",
+        "sha256": "47aa10ca3a0badf7e03de1f8878f14edf23b482ea1aecbcfd712b7ecd78954d2"
+      },
+      "schedule": "cosine",
+      "seed": 5002,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.06949563740881477,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "ema0999": {
+          "independent_sw1": 0.06875584761301051,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "raw": {
+          "independent_sw1": 0.06986671395279101,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5002/cosine-10000/attempts/gmm8-5002-cosine-10000-a001/step-10000-weights.npz",
+        "retention": "retained",
+        "sha256": "cb0dc50dc017ee76b97cbe166722f61f840483d99ff955b99b7df9f4f69d3187"
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/gmm8-5003-constant-5000.npz",
+        "retention": "retained",
+        "sha256": "2d0917fe3d3d172b27b071fcf504097ae06572fd04d82e861369b125d00fe8ff"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5003/constant-10000/attempts/gmm8-5003-constant-10000-a001/step-5000-arrays.npz",
+        "retention": "retained",
+        "sha256": "7d3a1d6d7991e410fff25e299ca7ccfae2aa8cda6e49ec20ab88688902103604"
+      },
+      "schedule": "constant",
+      "seed": 5003,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.08718632738516649,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "ema0999": {
+          "independent_sw1": 0.08914856032654975,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 1.3877787807814457e-17
+        },
+        "raw": {
+          "independent_sw1": 0.11803721287410326,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 1.3877787807814457e-17
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5003/constant-10000/attempts/gmm8-5003-constant-10000-a001/step-5000-weights.npz",
+        "retention": "retained",
+        "sha256": "1b0d17c5820fa94b6fb68924165421549ef5cb58d5b8051af292abc74a6b0e1d"
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/gmm8-5003-cosine-5000.npz",
+        "retention": "retained",
+        "sha256": "2e6144aa279a2f6367f208d553e90d12687bf4ad2fbc9d8bcd8cf88f90dada5a"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5003/cosine-5000/attempts/gmm8-5003-cosine-5000-a001/step-5000-arrays.npz",
+        "retention": "retained",
+        "sha256": "fb4f4174096a5ec84acde3a17992f98b10bc4c912af4339204f181d0bc26998a"
+      },
+      "schedule": "cosine",
+      "seed": 5003,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.09799996815586899,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 1.3877787807814457e-17
+        },
+        "ema0999": {
+          "independent_sw1": 0.0909519582005266,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 1.3877787807814457e-17
+        },
+        "raw": {
+          "independent_sw1": 0.09809055921465355,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 1.3877787807814457e-17
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5003/cosine-5000/attempts/gmm8-5003-cosine-5000-a001/step-5000-weights.npz",
+        "retention": "retained",
+        "sha256": "9cb907b1874dfe8869326687d022e7adb1796cf3fb57a10219e1c2199f8461e7"
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/gmm8-5003-constant-10000.npz",
+        "retention": "retained",
+        "sha256": "5ec3ab2a0f6540222ad9207ccd48918e778700089bfdfcdf31e3e8e149c3ef99"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5003/constant-10000/attempts/gmm8-5003-constant-10000-a001/step-10000-arrays.npz",
+        "retention": "retained",
+        "sha256": "d615c36b92c1508da19a163a06f9b3736c75940d3a79679b319c902d1fea7455"
+      },
+      "schedule": "constant",
+      "seed": 5003,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.08500228958799066,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "ema0999": {
+          "independent_sw1": 0.0928378489051592,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "raw": {
+          "independent_sw1": 0.10827612413091052,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 1.3877787807814457e-17
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5003/constant-10000/attempts/gmm8-5003-constant-10000-a001/step-10000-weights.npz",
+        "retention": "retained",
+        "sha256": "b31fd1aec1dfda3066ce98624b524fcbf825bcc60b4130a682de995bcb924969"
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/gmm8-5003-cosine-10000.npz",
+        "retention": "retained",
+        "sha256": "82483713f2350b7b0f24d8265cf177b20cde6b6e65def69916bbda9ce264fe84"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5003/cosine-10000/attempts/gmm8-5003-cosine-10000-a001/step-10000-arrays.npz",
+        "retention": "retained",
+        "sha256": "60bf2cf728f6abc6f1ee299a8cd32849481dcd863d45a8d9168703bd788757d3"
+      },
+      "schedule": "cosine",
+      "seed": 5003,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.09227358082817448,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 1.3877787807814457e-17
+        },
+        "ema0999": {
+          "independent_sw1": 0.09437620724761511,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "raw": {
+          "independent_sw1": 0.09219764964586,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 1.3877787807814457e-17
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5003/cosine-10000/attempts/gmm8-5003-cosine-10000-a001/step-10000-weights.npz",
+        "retention": "retained",
+        "sha256": "6ca3f156fb27e096ee6c62311b087acc3f82af683c57e2ab7d583eaffc9ebd87"
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/gmm8-5004-constant-5000.npz",
+        "retention": "retained",
+        "sha256": "3f56ba4d573fe2207dad2b47fba5048bd604dfa30744e1eb11da6ebfe63dd21b"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5004/constant-10000/attempts/gmm8-5004-constant-10000-a001/step-5000-arrays.npz",
+        "retention": "retained",
+        "sha256": "2f6823ddfb1b86998687ee195ed05d3c2fc3c928918256f4f0d6d66a8ebf1232"
+      },
+      "schedule": "constant",
+      "seed": 5004,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.036650161162412015,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 6.938893903907228e-18
+        },
+        "ema0999": {
+          "independent_sw1": 0.041535883442794595,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "raw": {
+          "independent_sw1": 0.07497515829806445,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5004/constant-10000/attempts/gmm8-5004-constant-10000-a001/step-5000-weights.npz",
+        "retention": "retained",
+        "sha256": "a60c54e0be82c592727ab1323cc9cc4d540dd14da3773c872eb8ca612435b454"
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/gmm8-5004-cosine-5000.npz",
+        "retention": "retained",
+        "sha256": "0755b5c3fe21d1d05d11cfd545460daafc8e0a92798c1ff3e6ab55d5970044e6"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5004/cosine-5000/attempts/gmm8-5004-cosine-5000-a001/step-5000-arrays.npz",
+        "retention": "retained",
+        "sha256": "3b5847353b3fee51891a8e0c1bdb50f916f9349332d648368f92549560786ad9"
+      },
+      "schedule": "cosine",
+      "seed": 5004,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.02569672576365297,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "ema0999": {
+          "independent_sw1": 0.02712707386652031,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "raw": {
+          "independent_sw1": 0.025551073996185517,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5004/cosine-5000/attempts/gmm8-5004-cosine-5000-a001/step-5000-weights.npz",
+        "retention": "retained",
+        "sha256": "280375bad33faea39419fce66aebf7f7f368d8cb68d1a86e09ca7f39bff53828"
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/gmm8-5004-constant-10000.npz",
+        "retention": "retained",
+        "sha256": "1ec213edebe08cf4e67deed0b01d95cd506cff7c7d553cc08ea8af46f32777bd"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5004/constant-10000/attempts/gmm8-5004-constant-10000-a001/step-10000-arrays.npz",
+        "retention": "retained",
+        "sha256": "64c24c521a95202a1611dadf1af16ccd4e7ca847cce609d89a5392996c8a8fb2"
+      },
+      "schedule": "constant",
+      "seed": 5004,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.025414555843830518,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "ema0999": {
+          "independent_sw1": 0.029079087290837455,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "raw": {
+          "independent_sw1": 0.04710466859787975,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 6.938893903907228e-18
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5004/constant-10000/attempts/gmm8-5004-constant-10000-a001/step-10000-weights.npz",
+        "retention": "retained",
+        "sha256": "2d5082576fa4cafae3f4e321a4e08dd2aa2c3486545c9ad6f6ed0a3c8433846f"
+      }
+    },
+    {
+      "dataset": "gmm8",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/gmm8-5004-cosine-10000.npz",
+        "retention": "retained",
+        "sha256": "21ae2e698201e77415cb871fe670c26650d65018d1f04f6e29e79aa6b15a8fc0"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5004/cosine-10000/attempts/gmm8-5004-cosine-10000-a001/step-10000-arrays.npz",
+        "retention": "retained",
+        "sha256": "64d00719d1310f95caab1fed9ae35edab64049303eb5a35643c7ba1e5d948c75"
+      },
+      "schedule": "cosine",
+      "seed": 5004,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.024012757578222674,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "ema0999": {
+          "independent_sw1": 0.024290568237472297,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "raw": {
+          "independent_sw1": 0.02396532258506811,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 3.469446951953614e-18
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/gmm8-5004/cosine-10000/attempts/gmm8-5004-cosine-10000-a001/step-10000-weights.npz",
+        "retention": "retained",
+        "sha256": "2466d2f2dcd939e0af47d96d8cf6b5201bcbf96c1434e8038cb200863765c02c"
+      }
+    },
+    {
+      "dataset": "moons",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/moons-4001-constant-5000.npz",
+        "retention": "retained",
+        "sha256": "28b652f17f5201f2260cf6fb571b487181ede9ad8a4e9616c69e7587f8064454"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4001/constant-10000/attempts/moons-4001-constant-10000-a001/step-5000-arrays.npz",
+        "retention": "retained",
+        "sha256": "499cad2bd1eb12853d14dc502915db6959124358c45792e18f5142120cc0e98a"
+      },
+      "schedule": "constant",
+      "seed": 4001,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.026507339453742604,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "ema0999": {
+          "independent_sw1": 0.03339092093706764,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "raw": {
+          "independent_sw1": 0.1198590702099009,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4001/constant-10000/attempts/moons-4001-constant-10000-a001/step-5000-weights.npz",
+        "retention": "retained",
+        "sha256": "833f76e98e5d826266a6f9d79e2a029ef53355adf5710af0ab9a12aea5d5c7d3"
+      }
+    },
+    {
+      "dataset": "moons",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/moons-4001-cosine-5000.npz",
+        "retention": "retained",
+        "sha256": "6cb7a6bff6935d155a6599a5593a746f5bbf5cc63cb4b81e867067c3f531aaa2"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4001/cosine-5000/attempts/moons-4001-cosine-5000-a001/step-5000-arrays.npz",
+        "retention": "retained",
+        "sha256": "36b16e12331e3b81ee662f069ce2de975c4cf65efc707507e21740df8b816771"
+      },
+      "schedule": "cosine",
+      "seed": 4001,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.030780577280094402,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 3.469446951953614e-18
+        },
+        "ema0999": {
+          "independent_sw1": 0.029856546652454307,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "raw": {
+          "independent_sw1": 0.030532399554425098,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 3.469446951953614e-18
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4001/cosine-5000/attempts/moons-4001-cosine-5000-a001/step-5000-weights.npz",
+        "retention": "retained",
+        "sha256": "3f7e9007bb47428e52c51610a6df8a278d4abd14f6b03380ef6f5a366dcc8bca"
+      }
+    },
+    {
+      "dataset": "moons",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/moons-4001-constant-10000.npz",
+        "retention": "retained",
+        "sha256": "8ed57f7fb9cc85c25427574a87a6bb328e4b2a2e24ac7d5347c01e614f863f25"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4001/constant-10000/attempts/moons-4001-constant-10000-a001/step-10000-arrays.npz",
+        "retention": "retained",
+        "sha256": "4d6d78496de326272a22e235f2b4134378c0b17cba35fa311cf4179d1b5b6329"
+      },
+      "schedule": "constant",
+      "seed": 4001,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.03000720933833003,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "ema0999": {
+          "independent_sw1": 0.02949755381995669,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 6.938893903907228e-18
+        },
+        "raw": {
+          "independent_sw1": 0.05314394961946555,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 6.938893903907228e-18
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4001/constant-10000/attempts/moons-4001-constant-10000-a001/step-10000-weights.npz",
+        "retention": "retained",
+        "sha256": "fe2d1c3642fabbbb492d0d295767937579182d82d7378b514909a311ec8f37b3"
+      }
+    },
+    {
+      "dataset": "moons",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/moons-4001-cosine-10000.npz",
+        "retention": "retained",
+        "sha256": "d0f600add71adc8b495efc62ecb71f394b9a59a35db091204224e89ab048c53b"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4001/cosine-10000/attempts/moons-4001-cosine-10000-a001/step-10000-arrays.npz",
+        "retention": "retained",
+        "sha256": "ef1022ab4a8b0768c92e1e7315c6bf94dda335f49d4193b441948c54b1e9ca06"
+      },
+      "schedule": "cosine",
+      "seed": 4001,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.031492383767840804,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 6.938893903907228e-18
+        },
+        "ema0999": {
+          "independent_sw1": 0.03274834855613227,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 6.938893903907228e-18
+        },
+        "raw": {
+          "independent_sw1": 0.031433851726433884,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 6.938893903907228e-18
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4001/cosine-10000/attempts/moons-4001-cosine-10000-a001/step-10000-weights.npz",
+        "retention": "retained",
+        "sha256": "93c6532d589fa852adc022ff2b3a337056ae9db58d2cff4f447799be0660ba11"
+      }
+    },
+    {
+      "dataset": "moons",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/moons-4002-constant-5000.npz",
+        "retention": "retained",
+        "sha256": "2ac8582379a9908628460896f743e22ab8bb7822f869b2fcd109194a515f8bb8"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4002/constant-10000/attempts/moons-4002-constant-10000-a001/step-5000-arrays.npz",
+        "retention": "retained",
+        "sha256": "70bf645da58f61e07fe48e5e62b137a2773c79c315bc7d95d0fdd135635558b1"
+      },
+      "schedule": "constant",
+      "seed": 4002,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.04537222488971815,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "ema0999": {
+          "independent_sw1": 0.050630669085710824,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 6.938893903907228e-18
+        },
+        "raw": {
+          "independent_sw1": 0.11671273029863717,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4002/constant-10000/attempts/moons-4002-constant-10000-a001/step-5000-weights.npz",
+        "retention": "retained",
+        "sha256": "210980884f2cc69ffa23c67edb9cf645bd7b9341a5f50330ecf334b39c3d8426"
+      }
+    },
+    {
+      "dataset": "moons",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/moons-4002-cosine-5000.npz",
+        "retention": "retained",
+        "sha256": "6aaadfa5adb1c1ddcbcc1dfc1528282e6220e97d230c118ccf5898da75bf7d5b"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4002/cosine-5000/attempts/moons-4002-cosine-5000-a001/step-5000-arrays.npz",
+        "retention": "retained",
+        "sha256": "0eb0cf24f6782c548a21b4776af112ca199d5211bccbe5cdaa19b47cce1192c0"
+      },
+      "schedule": "cosine",
+      "seed": 4002,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.06503563533555645,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 1.3877787807814457e-17
+        },
+        "ema0999": {
+          "independent_sw1": 0.05550675629686344,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 6.938893903907228e-18
+        },
+        "raw": {
+          "independent_sw1": 0.06311985027102243,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4002/cosine-5000/attempts/moons-4002-cosine-5000-a001/step-5000-weights.npz",
+        "retention": "retained",
+        "sha256": "967791426da7dfbe1871644dc3be5f34257a8b0699b857cae2a415348a0e7856"
+      }
+    },
+    {
+      "dataset": "moons",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/moons-4002-constant-10000.npz",
+        "retention": "retained",
+        "sha256": "70173f5da42a0921fcad0d8997a17180a93898c65b5a03f878dcafb4cb49b0bb"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4002/constant-10000/attempts/moons-4002-constant-10000-a001/step-10000-arrays.npz",
+        "retention": "retained",
+        "sha256": "c25a23dd37425104a263ca6cc00445d34342450cc2c8880a6755146a5855e91b"
+      },
+      "schedule": "constant",
+      "seed": 4002,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.05137571812226262,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "ema0999": {
+          "independent_sw1": 0.05446969779880102,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "raw": {
+          "independent_sw1": 0.13891661481867115,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4002/constant-10000/attempts/moons-4002-constant-10000-a001/step-10000-weights.npz",
+        "retention": "retained",
+        "sha256": "545a3f35cd410e9e091959f5f7406d6c4656e775caff7deb19bd639df7928e4d"
+      }
+    },
+    {
+      "dataset": "moons",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/moons-4002-cosine-10000.npz",
+        "retention": "retained",
+        "sha256": "4975a23e6e6907852e502284d47a804c981b9ba55cfa7d6561460557c530e6af"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4002/cosine-10000/attempts/moons-4002-cosine-10000-a001/step-10000-arrays.npz",
+        "retention": "retained",
+        "sha256": "517f863313b5053c2583c7f6c6c2a33cb502603745624ac35b7fcda8f55753c4"
+      },
+      "schedule": "cosine",
+      "seed": 4002,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.05300075306051873,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "ema0999": {
+          "independent_sw1": 0.05263703526733343,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "raw": {
+          "independent_sw1": 0.053215534636360244,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 6.938893903907228e-18
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4002/cosine-10000/attempts/moons-4002-cosine-10000-a001/step-10000-weights.npz",
+        "retention": "retained",
+        "sha256": "0605a5dbba1ad4e444e1ec23fb94c5c8ba754d09c2945b7545ef25629560dea9"
+      }
+    },
+    {
+      "dataset": "moons",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/moons-4003-constant-5000.npz",
+        "retention": "retained",
+        "sha256": "8ae429c6c1c4df6be09699f18b1ec6ba84fdc20c120862f18e9cb5b1a0634959"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4003/constant-10000/attempts/moons-4003-constant-10000-a001/step-5000-arrays.npz",
+        "retention": "retained",
+        "sha256": "a71c0f8f7e76862929b574e668a3b984aa064e8fa25503c6e05dbddaa4f9f3a6"
+      },
+      "schedule": "constant",
+      "seed": 4003,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.028442049622561867,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "ema0999": {
+          "independent_sw1": 0.03567374135955122,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "raw": {
+          "independent_sw1": 0.06962073098945788,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 1.3877787807814457e-17
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4003/constant-10000/attempts/moons-4003-constant-10000-a001/step-5000-weights.npz",
+        "retention": "retained",
+        "sha256": "c27d9da183d5e26edf42ef9f0a0ba604eb5430bea8925c9447d41c6be5e1dc05"
+      }
+    },
+    {
+      "dataset": "moons",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/moons-4003-cosine-5000.npz",
+        "retention": "retained",
+        "sha256": "8f75fbaab65d78581d80306b5528b51dc1b40ade79f16a498e9b782080a9ae27"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4003/cosine-5000/attempts/moons-4003-cosine-5000-a001/step-5000-arrays.npz",
+        "retention": "retained",
+        "sha256": "8714f54d7a329d85b4c0f28175909df27f21179a36195344d87524253c847c06"
+      },
+      "schedule": "cosine",
+      "seed": 4003,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.032730968360304986,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 6.938893903907228e-18
+        },
+        "ema0999": {
+          "independent_sw1": 0.03194160522250892,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "raw": {
+          "independent_sw1": 0.03264785135780545,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 6.938893903907228e-18
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4003/cosine-5000/attempts/moons-4003-cosine-5000-a001/step-5000-weights.npz",
+        "retention": "retained",
+        "sha256": "02aaaed31d40c75634797111b5aca338fbf61e7cc4bca371e46d6ce96093cf0f"
+      }
+    },
+    {
+      "dataset": "moons",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/moons-4003-constant-10000.npz",
+        "retention": "retained",
+        "sha256": "50a4cecf1e5afb071784f8bb8dfe8f9fe917a602cc9bd8b4b108e3f171030e4f"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4003/constant-10000/attempts/moons-4003-constant-10000-a001/step-10000-arrays.npz",
+        "retention": "retained",
+        "sha256": "7adfb2469caf35eb26e9ce096e7ea73c71ec90c96ea0617256e0d0c47513ff48"
+      },
+      "schedule": "constant",
+      "seed": 4003,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.03890962537271781,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 6.938893903907228e-18
+        },
+        "ema0999": {
+          "independent_sw1": 0.03185198097219277,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "raw": {
+          "independent_sw1": 0.04467605273291608,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4003/constant-10000/attempts/moons-4003-constant-10000-a001/step-10000-weights.npz",
+        "retention": "retained",
+        "sha256": "6807a3bb31ae844a235db8c207710b970a970fe22ae3bfef468ea5702597854e"
+      }
+    },
+    {
+      "dataset": "moons",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/moons-4003-cosine-10000.npz",
+        "retention": "retained",
+        "sha256": "c7f137ac55253c06f489852d3d2370aca8a93e6f356ce3b722d68a19d5fa1bd1"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4003/cosine-10000/attempts/moons-4003-cosine-10000-a001/step-10000-arrays.npz",
+        "retention": "retained",
+        "sha256": "6921df17243306460a66492dfe0e93587aaa7ac8a634546635430c76fc9108cf"
+      },
+      "schedule": "cosine",
+      "seed": 4003,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.029630554192360166,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "ema0999": {
+          "independent_sw1": 0.02929536325668527,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 3.469446951953614e-18
+        },
+        "raw": {
+          "independent_sw1": 0.02964675334788466,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 3.469446951953614e-18
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4003/cosine-10000/attempts/moons-4003-cosine-10000-a001/step-10000-weights.npz",
+        "retention": "retained",
+        "sha256": "9e284ba2356371bcd5ad0a87bc42195bdce964a0210e76356018d91f957ab757"
+      }
+    },
+    {
+      "dataset": "moons",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/moons-4004-constant-5000.npz",
+        "retention": "retained",
+        "sha256": "fd5b2a5e74cbae41398ab91c888dd1afd47c185b92f6b8240613f8b6f798466b"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4004/constant-10000/attempts/moons-4004-constant-10000-a001/step-5000-arrays.npz",
+        "retention": "retained",
+        "sha256": "8024a9438abcd470a735a81c712f3cb50de9d77dd3dfda95b1e0207e8aff881e"
+      },
+      "schedule": "constant",
+      "seed": 4004,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.034624418923782034,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "ema0999": {
+          "independent_sw1": 0.029203302141963018,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "raw": {
+          "independent_sw1": 0.07967483512944204,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4004/constant-10000/attempts/moons-4004-constant-10000-a001/step-5000-weights.npz",
+        "retention": "retained",
+        "sha256": "9ff7c332b584a14bf553d9f2271f7d4829eb4db29bce24f8d198df332975fe9e"
+      }
+    },
+    {
+      "dataset": "moons",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/moons-4004-cosine-5000.npz",
+        "retention": "retained",
+        "sha256": "7e5853f10f085b21028adc25e3c095f979cf309be7a80df422662866024e818a"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4004/cosine-5000/attempts/moons-4004-cosine-5000-a001/step-5000-arrays.npz",
+        "retention": "retained",
+        "sha256": "a776bbf87e0eb448c5537e1234558b27c69c358c035f5998e88eaadee9a0f75e"
+      },
+      "schedule": "cosine",
+      "seed": 4004,
+      "updates": 5000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.03302771660514539,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "ema0999": {
+          "independent_sw1": 0.027662998719691967,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "raw": {
+          "independent_sw1": 0.03297058921439331,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4004/cosine-5000/attempts/moons-4004-cosine-5000-a001/step-5000-weights.npz",
+        "retention": "retained",
+        "sha256": "679925c9fe38a0da18097b39a4d1d7c850cd0797403538dc7ba876897caa9b39"
+      }
+    },
+    {
+      "dataset": "moons",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/moons-4004-constant-10000.npz",
+        "retention": "retained",
+        "sha256": "499231add3028817dbfc4270dc2fbf1b97b2e7f5aefa355f597616837ba457e8"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4004/constant-10000/attempts/moons-4004-constant-10000-a001/step-10000-arrays.npz",
+        "retention": "retained",
+        "sha256": "1efd19df8f39c2359bab50b8e80f1802bdb0d1c64dabeb231ada4921c7d0c52d"
+      },
+      "schedule": "constant",
+      "seed": 4004,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.029179088726919863,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 3.469446951953614e-18
+        },
+        "ema0999": {
+          "independent_sw1": 0.024831578497631075,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "raw": {
+          "independent_sw1": 0.07103913086008667,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4004/constant-10000/attempts/moons-4004-constant-10000-a001/step-10000-weights.npz",
+        "retention": "retained",
+        "sha256": "bff2eb04bfb5cea498caab95cf08c21876437687e4305f5670a8720273335daa"
+      }
+    },
+    {
+      "dataset": "moons",
+      "regenerated": {
+        "media_type": "application/x-npz",
+        "path": "verification/moons-4004-cosine-10000.npz",
+        "retention": "retained",
+        "sha256": "2d2ef9063d6dee1adcabe501461aa22b88f267e1eb3099f1d1a0890ad41183a8"
+      },
+      "retained_samples": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4004/cosine-10000/attempts/moons-4004-cosine-10000-a001/step-10000-arrays.npz",
+        "retention": "retained",
+        "sha256": "806042402e122ac550a3fef0105d06b29ec46c69fd37c2ea9698cfe38fe4f9a3"
+      },
+      "schedule": "cosine",
+      "seed": 4004,
+      "updates": 10000,
+      "variants": {
+        "ema099": {
+          "independent_sw1": 0.028540596024117525,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "ema0999": {
+          "independent_sw1": 0.028768494253728474,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        },
+        "raw": {
+          "independent_sw1": 0.02853088925880678,
+          "regenerated_sample_max_abs_error": 0.0,
+          "sw1_abs_error": 0.0
+        }
+      },
+      "weights": {
+        "media_type": "application/x-npz",
+        "path": "artifacts/confirmation/moons-4004/cosine-10000/attempts/moons-4004-cosine-10000-a001/step-10000-weights.npz",
+        "retention": "retained",
+        "sha256": "779c1740e0965022a77d003855335116cbcc71d626e917a84fd88c1699158e69"
+      }
+    }
+  ],
+  "independent_metric_tolerance": 1e-12,
+  "max_metric_abs_error": 2.7755575615628914e-17,
+  "max_sample_abs_error": 0.0,
+  "passed": true,
+  "regeneration_tolerance": 1e-06,
+  "scope": "All retained confirmation cells; independent metric arithmetic, seed-level intervals, byte-identical separate analysis, actual reference sampling from saved weights. No retraining in this check.",
+  "separate_reanalysis": {
+    "contrasts.json": {
+      "equal": true,
+      "original_sha256": "f80a1cd3a3b3d2de214d8c13b3c22522d37e2be1157438124425ddd108cdd9d2",
+      "reanalysis_sha256": "f80a1cd3a3b3d2de214d8c13b3c22522d37e2be1157438124425ddd108cdd9d2"
+    },
+    "main-figure.pdf": {
+      "equal": true,
+      "original_sha256": "f07832b231d0bf6321f1160754d31a4bf397ca6e53e785be02fe0526d99f10a6",
+      "reanalysis_sha256": "f07832b231d0bf6321f1160754d31a4bf397ca6e53e785be02fe0526d99f10a6"
+    },
+    "main-figure.png": {
+      "equal": true,
+      "original_sha256": "b357ed526ed43c94be32d413cb067532f99570e1723ea1a497963f47f25857bc",
+      "reanalysis_sha256": "b357ed526ed43c94be32d413cb067532f99570e1723ea1a497963f47f25857bc"
+    },
+    "measurements.json": {
+      "equal": true,
+      "original_sha256": "7f06ed04f7f8da9566c7af82e1c74704fd4dc5ad7823168b57377502e1de798c",
+      "reanalysis_sha256": "7f06ed04f7f8da9566c7af82e1c74704fd4dc5ad7823168b57377502e1de798c"
+    },
+    "paired-differences.csv": {
+      "equal": true,
+      "original_sha256": "6f2acce7105a7d2c2b0f26d230f4fb0046f1e2d38851a64fd46628953b9c49c2",
+      "reanalysis_sha256": "6f2acce7105a7d2c2b0f26d230f4fb0046f1e2d38851a64fd46628953b9c49c2"
+    },
+    "seed-level.json": {
+      "equal": true,
+      "original_sha256": "42b088d17d9988d49e2d38a6da3502fc2b3f981e25181751a14fdbabcd55d9d9",
+      "reanalysis_sha256": "42b088d17d9988d49e2d38a6da3502fc2b3f981e25181751a14fdbabcd55d9d9"
+    },
+    "summary.json": {
+      "equal": true,
+      "original_sha256": "eadd1e78ec6a09d73426dd4ee4dafd19c093a7100552f92119d3df9b5e70abac",
+      "reanalysis_sha256": "eadd1e78ec6a09d73426dd4ee4dafd19c093a7100552f92119d3df9b5e70abac"
+    }
+  },
+  "source_and_freeze_checks": [
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5001/constant-10000/attempts/gmm8-5001-constant-10000-a001/started.json",
+      "retention": "retained",
+      "sha256": "3e282c3fe21894e8394c6ebcb3fbe2bf63656c3a3b0751ad55e84d32dda40057"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5001/cosine-5000/attempts/gmm8-5001-cosine-5000-a001/started.json",
+      "retention": "retained",
+      "sha256": "38c4dd19975f0da88eada9032e4fb4b1c6a736c3546373a78cc5ff1070bb6cd0"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5001/cosine-10000/attempts/gmm8-5001-cosine-10000-a001/started.json",
+      "retention": "retained",
+      "sha256": "6cd1d9dbbec0cbc1240bb97bfbfe418dfa8b2c6e24712a7d4f7abeacb8076f59"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4001/constant-10000/attempts/moons-4001-constant-10000-a001/started.json",
+      "retention": "retained",
+      "sha256": "7e4b38dae4b839aa579af0b36cb39934abd134bd7ecce44ea4022406145ae388"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4001/cosine-5000/attempts/moons-4001-cosine-5000-a001/started.json",
+      "retention": "retained",
+      "sha256": "e896e9e42dbbf209f4f7389acfefdefb6628c98ef58ec478e45decf0d7bd24fc"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4001/cosine-10000/attempts/moons-4001-cosine-10000-a001/started.json",
+      "retention": "retained",
+      "sha256": "0185098877b09bdea46388cc87056a29faf40d6ba7f16dba1df8d236565af730"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5003/constant-10000/attempts/gmm8-5003-constant-10000-a001/started.json",
+      "retention": "retained",
+      "sha256": "e49499183afdb5b566b8bb99f95f11185aeaa4a5c901da7e320aa6eb7af601cd"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5003/cosine-5000/attempts/gmm8-5003-cosine-5000-a001/started.json",
+      "retention": "retained",
+      "sha256": "a3c7768d22468e807b0b1ed150e21d3c13fc7221f053d34dc88f829b057586b4"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5003/cosine-10000/attempts/gmm8-5003-cosine-10000-a001/started.json",
+      "retention": "retained",
+      "sha256": "c84c8e98a7c2945c4471670bb6a2f5156cd1be1b0c5a5cb9483a251e9d9c583b"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5004/constant-10000/attempts/gmm8-5004-constant-10000-a001/started.json",
+      "retention": "retained",
+      "sha256": "19d97f4d27fdcd62246aa6175f509dd5d1981f05d0857ed7468acf9e9d6c84b8"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5004/cosine-5000/attempts/gmm8-5004-cosine-5000-a001/started.json",
+      "retention": "retained",
+      "sha256": "e033ef8ad216982060599c836be669d21acad766449e2a7c51fecfebd7b51cb4"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5004/cosine-10000/attempts/gmm8-5004-cosine-10000-a001/started.json",
+      "retention": "retained",
+      "sha256": "4cdff3c24f460f3926d5b889721b1d0061f2ceb89834c902603a3a94f6683f38"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5002/constant-10000/attempts/gmm8-5002-constant-10000-a001/started.json",
+      "retention": "retained",
+      "sha256": "1bf5751a9da66fce8901bb2602e7db0b144f197462072fcbecc0d1530dbec01d"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5002/cosine-5000/attempts/gmm8-5002-cosine-5000-a001/started.json",
+      "retention": "retained",
+      "sha256": "59b5cc7c7f3b63fffaa8c398ee7ccb78f09f0a5724dad2ffaff68fe47de9b1d3"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5002/cosine-10000/attempts/gmm8-5002-cosine-10000-a001/started.json",
+      "retention": "retained",
+      "sha256": "b4b09c4d8c2a895e552edc09577efef83598df673b4cd60f312ee2711cf655c0"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4002/constant-10000/attempts/moons-4002-constant-10000-a001/started.json",
+      "retention": "retained",
+      "sha256": "5593cfb98d9068e57774835e69168dcb1e87f84994516485ba0c2f22bd4f6fbd"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4002/cosine-5000/attempts/moons-4002-cosine-5000-a001/started.json",
+      "retention": "retained",
+      "sha256": "12e6605528d045729333111b768c6706156ffb3a73432aa61099317efdfde988"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4002/cosine-10000/attempts/moons-4002-cosine-10000-a001/started.json",
+      "retention": "retained",
+      "sha256": "02f649f1d41caf91b9bf89333a275d0d06a14ed0b2f65c5d4d205fec32709eee"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4003/constant-10000/attempts/moons-4003-constant-10000-a001/started.json",
+      "retention": "retained",
+      "sha256": "3354c16818d153fce91031c1ca192440ea135b690bed6854bc7eeab388384380"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4003/cosine-5000/attempts/moons-4003-cosine-5000-a001/started.json",
+      "retention": "retained",
+      "sha256": "0a126bc1802b08152fc45748dd115f760a396a1ce927a520d74436712b80a510"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4003/cosine-10000/attempts/moons-4003-cosine-10000-a001/started.json",
+      "retention": "retained",
+      "sha256": "5f6e7d0366d1a6d2a99d128362be735002b3ecadf490ad35c1ecb587499d2e7e"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4004/constant-10000/attempts/moons-4004-constant-10000-a001/started.json",
+      "retention": "retained",
+      "sha256": "dbbc9a742586bbc2842ac5681cc2efe4d6dc1c0382e264cc72b9cec7cf1ae3d3"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4004/cosine-5000/attempts/moons-4004-cosine-5000-a001/started.json",
+      "retention": "retained",
+      "sha256": "1ce4e0b79cdf628d8820e7710cf0ea8be6a5e268b08cfb5488f57f0d00f05037"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4004/cosine-10000/attempts/moons-4004-cosine-10000-a001/started.json",
+      "retention": "retained",
+      "sha256": "e9755205d276b0f63026fc62bffb7f117f1ff55f1a088338d4629ecc90368d22"
+    }
+  ],
+  "states_regenerated": 96,
+  "unchanged_reference_science_sha256": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1"
+}

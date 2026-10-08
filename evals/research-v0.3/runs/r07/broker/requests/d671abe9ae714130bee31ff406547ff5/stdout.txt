@@ -1,0 +1,1437 @@
+{"cells": 32, "complete": true, "output": "reanalysis"}
+{
+  "effects": [
+    {
+      "dataset": "moons",
+      "variant": "ema099",
+      "contrast": "cell",
+      "schedule": "constant",
+      "updates": 5000,
+      "mean": -0.06273033343440834,
+      "ci95": [
+        -0.101586363078365,
+        -0.02387430379045169
+      ],
+      "sign_flip_p": 0.125
+    },
+    {
+      "dataset": "moons",
+      "variant": "ema099",
+      "contrast": "cell",
+      "schedule": "cosine",
+      "updates": 5000,
+      "mean": 0.0005760517958637405,
+      "ci95": [
+        -0.0008515198252693175,
+        0.0020036234169967986
+      ],
+      "sign_flip_p": 0.125
+    },
+    {
+      "dataset": "moons",
+      "variant": "ema099",
+      "contrast": "cell",
+      "schedule": "constant",
+      "updates": 10000,
+      "mean": -0.039576026617727286,
+      "ci95": [
+        -0.0956026347357546,
+        0.01645058150030003
+      ],
+      "sign_flip_p": 0.125
+    },
+    {
+      "dataset": "moons",
+      "variant": "ema099",
+      "contrast": "cell",
+      "schedule": "cosine",
+      "updates": 10000,
+      "mean": -4.0685481162085375e-05,
+      "ci95": [
+        -0.0002318366346899197,
+        0.00015046567236574895
+      ],
+      "sign_flip_p": 0.75
+    },
+    {
+      "dataset": "moons",
+      "variant": "ema099",
+      "contrast": "schedule_cosine_minus_constant",
+      "updates": 5000,
+      "mean": 0.06330638523027207,
+      "ci95": [
+        0.023964648435355868,
+        0.10264812202518828
+      ],
+      "sign_flip_p": 0.125
+    },
+    {
+      "dataset": "moons",
+      "variant": "ema099",
+      "contrast": "schedule_cosine_minus_constant",
+      "updates": 10000,
+      "mean": 0.0395353411365652,
+      "ci95": [
+        -0.01633025987795464,
+        0.09540094215108504
+      ],
+      "sign_flip_p": 0.125
+    },
+    {
+      "dataset": "moons",
+      "variant": "ema099",
+      "contrast": "duration_10000_minus_5000",
+      "schedule": "constant",
+      "mean": 0.023154306816681056,
+      "ci95": [
+        -0.03717464159932174,
+        0.08348325523268385
+      ],
+      "sign_flip_p": 0.375
+    },
+    {
+      "dataset": "moons",
+      "variant": "ema099",
+      "contrast": "duration_10000_minus_5000",
+      "schedule": "cosine",
+      "mean": -0.0006167372770258259,
+      "ci95": [
+        -0.002225350987512068,
+        0.000991876433460416
+      ],
+      "sign_flip_p": 0.125
+    },
+    {
+      "dataset": "moons",
+      "variant": "ema099",
+      "contrast": "interaction",
+      "mean": -0.023771044093706877,
+      "ci95": [
+        -0.08306823722761073,
+        0.035526149040196964
+      ],
+      "sign_flip_p": 0.375
+    },
+    {
+      "dataset": "moons",
+      "variant": "ema0999",
+      "contrast": "cell",
+      "schedule": "constant",
+      "updates": 5000,
+      "mean": -0.05924218327578633,
+      "ci95": [
+        -0.09487999658055393,
+        -0.023604369971018724
+      ],
+      "sign_flip_p": 0.125
+    },
+    {
+      "dataset": "moons",
+      "variant": "ema0999",
+      "contrast": "cell",
+      "schedule": "cosine",
+      "updates": 5000,
+      "mean": -0.003575695876531915,
+      "ci95": [
+        -0.009083479353469655,
+        0.0019320876004058239
+      ],
+      "sign_flip_p": 0.125
+    },
+    {
+      "dataset": "moons",
+      "variant": "ema0999",
+      "contrast": "cell",
+      "schedule": "constant",
+      "updates": 10000,
+      "mean": -0.041781234235639474,
+      "ci95": [
+        -0.09216166782016995,
+        0.008599199348891001
+      ],
+      "sign_flip_p": 0.125
+    },
+    {
+      "dataset": "moons",
+      "variant": "ema0999",
+      "contrast": "cell",
+      "schedule": "cosine",
+      "updates": 10000,
+      "mean": 0.00015555309109847176,
+      "ci95": [
+        -0.0011901700553611993,
+        0.0015012762375581428
+      ],
+      "sign_flip_p": 0.875
+    },
+    {
+      "dataset": "moons",
+      "variant": "ema0999",
+      "contrast": "schedule_cosine_minus_constant",
+      "updates": 5000,
+      "mean": 0.05566648739925441,
+      "ci95": [
+        0.01974763433221629,
+        0.09158534046629252
+      ],
+      "sign_flip_p": 0.125
+    },
+    {
+      "dataset": "moons",
+      "variant": "ema0999",
+      "contrast": "schedule_cosine_minus_constant",
+      "updates": 10000,
+      "mean": 0.041936787326737945,
+      "ci95": [
+        -0.007833165637723016,
+        0.09170674029119891
+      ],
+      "sign_flip_p": 0.125
+    },
+    {
+      "dataset": "moons",
+      "variant": "ema0999",
+      "contrast": "duration_10000_minus_5000",
+      "schedule": "constant",
+      "mean": 0.01746094904014685,
+      "ci95": [
+        -0.037111748576459325,
+        0.07203364665675303
+      ],
+      "sign_flip_p": 0.375
+    },
+    {
+      "dataset": "moons",
+      "variant": "ema0999",
+      "contrast": "duration_10000_minus_5000",
+      "schedule": "cosine",
+      "mean": 0.003731248967630387,
+      "ci95": [
+        -0.0011846824182388388,
+        0.008647180353499612
+      ],
+      "sign_flip_p": 0.125
+    },
+    {
+      "dataset": "moons",
+      "variant": "ema0999",
+      "contrast": "interaction",
+      "mean": -0.013729700072516466,
+      "ci95": [
+        -0.0720108195325222,
+        0.04455141938748926
+      ],
+      "sign_flip_p": 0.75
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema099",
+      "contrast": "cell",
+      "schedule": "constant",
+      "updates": 5000,
+      "mean": -0.053399556955897425,
+      "ci95": [
+        -0.16941431772116797,
+        0.06261520380937313
+      ],
+      "sign_flip_p": 0.25
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema099",
+      "contrast": "cell",
+      "schedule": "cosine",
+      "updates": 5000,
+      "mean": -0.00024199819655746323,
+      "ci95": [
+        -0.0007631249689849529,
+        0.0002791285758700265
+      ],
+      "sign_flip_p": 0.375
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema099",
+      "contrast": "cell",
+      "schedule": "constant",
+      "updates": 10000,
+      "mean": -0.028151205493730205,
+      "ci95": [
+        -0.0572175879546003,
+        0.0009151769671398892
+      ],
+      "sign_flip_p": 0.125
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema099",
+      "contrast": "cell",
+      "schedule": "cosine",
+      "updates": 10000,
+      "mean": -0.0001470350356356084,
+      "ci95": [
+        -0.0005314931754214366,
+        0.0002374231041502197
+      ],
+      "sign_flip_p": 0.5
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema099",
+      "contrast": "schedule_cosine_minus_constant",
+      "updates": 5000,
+      "mean": 0.05315755875933997,
+      "ci95": [
+        -0.06276741225336821,
+        0.16908252977204816
+      ],
+      "sign_flip_p": 0.25
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema099",
+      "contrast": "schedule_cosine_minus_constant",
+      "updates": 10000,
+      "mean": 0.028004170458094595,
+      "ci95": [
+        -0.0009089991086259734,
+        0.05691734002481516
+      ],
+      "sign_flip_p": 0.125
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema099",
+      "contrast": "duration_10000_minus_5000",
+      "schedule": "constant",
+      "mean": 0.025248351462167223,
+      "ci95": [
+        -0.06189471830190861,
+        0.11239142122624306
+      ],
+      "sign_flip_p": 0.625
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema099",
+      "contrast": "duration_10000_minus_5000",
+      "schedule": "cosine",
+      "mean": 9.496316092185483e-05,
+      "ci95": [
+        -0.00012257518295633952,
+        0.00031250150480004917
+      ],
+      "sign_flip_p": 0.25
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema099",
+      "contrast": "interaction",
+      "mean": -0.02515338830124537,
+      "ci95": [
+        -0.11234689486403156,
+        0.06204011826154081
+      ],
+      "sign_flip_p": 0.625
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema0999",
+      "contrast": "cell",
+      "schedule": "constant",
+      "updates": 5000,
+      "mean": -0.05576862254281356,
+      "ci95": [
+        -0.18291695088808896,
+        0.07137970580246183
+      ],
+      "sign_flip_p": 0.25
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema0999",
+      "contrast": "cell",
+      "schedule": "cosine",
+      "updates": 5000,
+      "mean": -0.004116477129989681,
+      "ci95": [
+        -0.011615318912031353,
+        0.00338236465205199
+      ],
+      "sign_flip_p": 0.25
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema0999",
+      "contrast": "cell",
+      "schedule": "constant",
+      "updates": 10000,
+      "mean": -0.029280980925906426,
+      "ci95": [
+        -0.06664894058743254,
+        0.008086978735619678
+      ],
+      "sign_flip_p": 0.125
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema0999",
+      "contrast": "cell",
+      "schedule": "cosine",
+      "updates": 10000,
+      "mean": -0.00040107986178743605,
+      "ci95": [
+        -0.003890421862913577,
+        0.003088262139338705
+      ],
+      "sign_flip_p": 0.75
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema0999",
+      "contrast": "schedule_cosine_minus_constant",
+      "updates": 5000,
+      "mean": 0.05165214541282389,
+      "ci95": [
+        -0.07091161326783715,
+        0.17421590409348495
+      ],
+      "sign_flip_p": 0.25
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema0999",
+      "contrast": "schedule_cosine_minus_constant",
+      "updates": 10000,
+      "mean": 0.028879901064118987,
+      "ci95": [
+        -0.00767671792918756,
+        0.06543652005742553
+      ],
+      "sign_flip_p": 0.125
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema0999",
+      "contrast": "duration_10000_minus_5000",
+      "schedule": "constant",
+      "mean": 0.026487641616907143,
+      "ci95": [
+        -0.0656682259578201,
+        0.11864350919163438
+      ],
+      "sign_flip_p": 0.625
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema0999",
+      "contrast": "duration_10000_minus_5000",
+      "schedule": "cosine",
+      "mean": 0.0037153972682022448,
+      "ci95": [
+        -0.005092755348068845,
+        0.012523549884473333
+      ],
+      "sign_flip_p": 0.5
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema0999",
+      "contrast": "interaction",
+      "mean": -0.0227722443487049,
+      "ci95": [
+        -0.11013353653495996,
+        0.06458904783755016
+      ],
+      "sign_flip_p": 0.625
+    }
+  ],
+  "absolute_cells": [
+    {
+      "dataset": "moons",
+      "variant": "raw",
+      "schedule": "constant",
+      "updates": 5000,
+      "mean": 0.09646684165685951
+    },
+    {
+      "dataset": "moons",
+      "variant": "raw",
+      "schedule": "cosine",
+      "updates": 5000,
+      "mean": 0.03981767259941157
+    },
+    {
+      "dataset": "moons",
+      "variant": "raw",
+      "schedule": "constant",
+      "updates": 10000,
+      "mean": 0.07694393700778487
+    },
+    {
+      "dataset": "moons",
+      "variant": "raw",
+      "schedule": "cosine",
+      "updates": 10000,
+      "mean": 0.03570675724237139
+    },
+    {
+      "dataset": "moons",
+      "variant": "ema099",
+      "schedule": "constant",
+      "updates": 5000,
+      "mean": 0.03373650822245117
+    },
+    {
+      "dataset": "moons",
+      "variant": "ema099",
+      "schedule": "cosine",
+      "updates": 5000,
+      "mean": 0.04039372439527531
+    },
+    {
+      "dataset": "moons",
+      "variant": "ema099",
+      "schedule": "constant",
+      "updates": 10000,
+      "mean": 0.03736791039005758
+    },
+    {
+      "dataset": "moons",
+      "variant": "ema099",
+      "schedule": "cosine",
+      "updates": 10000,
+      "mean": 0.035666071761209305
+    },
+    {
+      "dataset": "moons",
+      "variant": "ema0999",
+      "schedule": "constant",
+      "updates": 5000,
+      "mean": 0.037224658381073174
+    },
+    {
+      "dataset": "moons",
+      "variant": "ema0999",
+      "schedule": "cosine",
+      "updates": 5000,
+      "mean": 0.036241976722879654
+    },
+    {
+      "dataset": "moons",
+      "variant": "ema0999",
+      "schedule": "constant",
+      "updates": 10000,
+      "mean": 0.03516270277214539
+    },
+    {
+      "dataset": "moons",
+      "variant": "ema0999",
+      "schedule": "cosine",
+      "updates": 10000,
+      "mean": 0.035862310333469864
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "raw",
+      "schedule": "constant",
+      "updates": 5000,
+      "mean": 0.12698475328914288
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "raw",
+      "schedule": "cosine",
+      "updates": 5000,
+      "mean": 0.07076229893146352
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "raw",
+      "schedule": "constant",
+      "updates": 10000,
+      "mean": 0.10067818521049471
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "raw",
+      "schedule": "cosine",
+      "updates": 10000,
+      "mean": 0.068164412180001
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema099",
+      "schedule": "constant",
+      "updates": 5000,
+      "mean": 0.07358519633324546
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema099",
+      "schedule": "cosine",
+      "updates": 5000,
+      "mean": 0.07052030073490605
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema099",
+      "schedule": "constant",
+      "updates": 10000,
+      "mean": 0.0725269797167645
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema099",
+      "schedule": "cosine",
+      "updates": 10000,
+      "mean": 0.06801737714436538
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema0999",
+      "schedule": "constant",
+      "updates": 5000,
+      "mean": 0.07121613074632933
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema0999",
+      "schedule": "cosine",
+      "updates": 5000,
+      "mean": 0.06664582180147383
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema0999",
+      "schedule": "constant",
+      "updates": 10000,
+      "mean": 0.07139720428458828
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema0999",
+      "schedule": "cosine",
+      "updates": 10000,
+      "mean": 0.06776333231821355
+    }
+  ],
+  "coverage": [
+    {
+      "dataset": "gmm8",
+      "variant": "raw",
+      "schedule": "constant",
+      "updates": 5000,
+      "metric": "covered_modes",
+      "n": 4,
+      "seeds": [
+        5001,
+        5002,
+        5003,
+        5004
+      ],
+      "values": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "mean": 8.0,
+      "sd": 0.0,
+      "se": 0.0,
+      "ci95": [
+        8.0,
+        8.0
+      ],
+      "sign_flip_p": 0.125,
+      "leave_one_out_means": [
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ]
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "raw",
+      "schedule": "constant",
+      "updates": 5000,
+      "metric": "inlier_fraction",
+      "n": 4,
+      "seeds": [
+        5001,
+        5002,
+        5003,
+        5004
+      ],
+      "values": [
+        0.9765625,
+        0.97802734375,
+        0.97314453125,
+        0.97802734375
+      ],
+      "mean": 0.9764404296875,
+      "sd": 0.0023032180498185066,
+      "se": 0.0011516090249092533,
+      "ci95": [
+        0.9727754958010462,
+        0.9801053635739538
+      ],
+      "sign_flip_p": 0.125,
+      "leave_one_out_means": [
+        0.9763997395833334,
+        0.9759114583333334,
+        0.9775390625,
+        0.9759114583333334
+      ]
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema099",
+      "schedule": "constant",
+      "updates": 5000,
+      "metric": "covered_modes",
+      "n": 4,
+      "seeds": [
+        5001,
+        5002,
+        5003,
+        5004
+      ],
+      "values": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "mean": 8.0,
+      "sd": 0.0,
+      "se": 0.0,
+      "ci95": [
+        8.0,
+        8.0
+      ],
+      "sign_flip_p": 0.125,
+      "leave_one_out_means": [
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ]
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema099",
+      "schedule": "constant",
+      "updates": 5000,
+      "metric": "inlier_fraction",
+      "n": 4,
+      "seeds": [
+        5001,
+        5002,
+        5003,
+        5004
+      ],
+      "values": [
+        0.98974609375,
+        0.98486328125,
+        0.98046875,
+        0.98583984375
+      ],
+      "mean": 0.9852294921875,
+      "sd": 0.0038109926673073227,
+      "se": 0.0019054963336536614,
+      "ci95": [
+        0.9791653524207322,
+        0.9912936319542678
+      ],
+      "sign_flip_p": 0.125,
+      "leave_one_out_means": [
+        0.9837239583333334,
+        0.9853515625,
+        0.98681640625,
+        0.9850260416666666
+      ]
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema0999",
+      "schedule": "constant",
+      "updates": 5000,
+      "metric": "covered_modes",
+      "n": 4,
+      "seeds": [
+        5001,
+        5002,
+        5003,
+        5004
+      ],
+      "values": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "mean": 8.0,
+      "sd": 0.0,
+      "se": 0.0,
+      "ci95": [
+        8.0,
+        8.0
+      ],
+      "sign_flip_p": 0.125,
+      "leave_one_out_means": [
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ]
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema0999",
+      "schedule": "constant",
+      "updates": 5000,
+      "metric": "inlier_fraction",
+      "n": 4,
+      "seeds": [
+        5001,
+        5002,
+        5003,
+        5004
+      ],
+      "values": [
+        0.984375,
+        0.97998046875,
+        0.9814453125,
+        0.984375
+      ],
+      "mean": 0.9825439453125,
+      "sd": 0.002197265625,
+      "se": 0.0010986328125,
+      "ci95": [
+        0.9790476053774959,
+        0.9860402852475041
+      ],
+      "sign_flip_p": 0.125,
+      "leave_one_out_means": [
+        0.98193359375,
+        0.9833984375,
+        0.98291015625,
+        0.98193359375
+      ]
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "raw",
+      "schedule": "cosine",
+      "updates": 5000,
+      "metric": "covered_modes",
+      "n": 4,
+      "seeds": [
+        5001,
+        5002,
+        5003,
+        5004
+      ],
+      "values": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "mean": 8.0,
+      "sd": 0.0,
+      "se": 0.0,
+      "ci95": [
+        8.0,
+        8.0
+      ],
+      "sign_flip_p": 0.125,
+      "leave_one_out_means": [
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ]
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "raw",
+      "schedule": "cosine",
+      "updates": 5000,
+      "metric": "inlier_fraction",
+      "n": 4,
+      "seeds": [
+        5001,
+        5002,
+        5003,
+        5004
+      ],
+      "values": [
+        0.98681640625,
+        0.986328125,
+        0.986328125,
+        0.982421875
+      ],
+      "mean": 0.9854736328125,
+      "sd": 0.002047484639552266,
+      "se": 0.001023742319776133,
+      "ci95": [
+        0.9822156278493659,
+        0.9887316377756341
+      ],
+      "sign_flip_p": 0.125,
+      "leave_one_out_means": [
+        0.9850260416666666,
+        0.9851888020833334,
+        0.9851888020833334,
+        0.9864908854166666
+      ]
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema099",
+      "schedule": "cosine",
+      "updates": 5000,
+      "metric": "covered_modes",
+      "n": 4,
+      "seeds": [
+        5001,
+        5002,
+        5003,
+        5004
+      ],
+      "values": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "mean": 8.0,
+      "sd": 0.0,
+      "se": 0.0,
+      "ci95": [
+        8.0,
+        8.0
+      ],
+      "sign_flip_p": 0.125,
+      "leave_one_out_means": [
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ]
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema099",
+      "schedule": "cosine",
+      "updates": 5000,
+      "metric": "inlier_fraction",
+      "n": 4,
+      "seeds": [
+        5001,
+        5002,
+        5003,
+        5004
+      ],
+      "values": [
+        0.9873046875,
+        0.98583984375,
+        0.98583984375,
+        0.9814453125
+      ],
+      "mean": 0.985107421875,
+      "sd": 0.0025371838001497227,
+      "se": 0.0012685919000748613,
+      "ci95": [
+        0.9810701962696939,
+        0.9891446474803061
+      ],
+      "sign_flip_p": 0.125,
+      "leave_one_out_means": [
+        0.984375,
+        0.98486328125,
+        0.98486328125,
+        0.986328125
+      ]
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema0999",
+      "schedule": "cosine",
+      "updates": 5000,
+      "metric": "covered_modes",
+      "n": 4,
+      "seeds": [
+        5001,
+        5002,
+        5003,
+        5004
+      ],
+      "values": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "mean": 8.0,
+      "sd": 0.0,
+      "se": 0.0,
+      "ci95": [
+        8.0,
+        8.0
+      ],
+      "sign_flip_p": 0.125,
+      "leave_one_out_means": [
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ]
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema0999",
+      "schedule": "cosine",
+      "updates": 5000,
+      "metric": "inlier_fraction",
+      "n": 4,
+      "seeds": [
+        5001,
+        5002,
+        5003,
+        5004
+      ],
+      "values": [
+        0.984375,
+        0.98291015625,
+        0.98095703125,
+        0.9814453125
+      ],
+      "mean": 0.982421875,
+      "sd": 0.0015440808887540916,
+      "se": 0.0007720404443770458,
+      "ci95": [
+        0.9799648977402626,
+        0.9848788522597374
+      ],
+      "sign_flip_p": 0.125,
+      "leave_one_out_means": [
+        0.9817708333333334,
+        0.9822591145833334,
+        0.98291015625,
+        0.9827473958333334
+      ]
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "raw",
+      "schedule": "constant",
+      "updates": 10000,
+      "metric": "covered_modes",
+      "n": 4,
+      "seeds": [
+        5001,
+        5002,
+        5003,
+        5004
+      ],
+      "values": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "mean": 8.0,
+      "sd": 0.0,
+      "se": 0.0,
+      "ci95": [
+        8.0,
+        8.0
+      ],
+      "sign_flip_p": 0.125,
+      "leave_one_out_means": [
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ]
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "raw",
+      "schedule": "constant",
+      "updates": 10000,
+      "metric": "inlier_fraction",
+      "n": 4,
+      "seeds": [
+        5001,
+        5002,
+        5003,
+        5004
+      ],
+      "values": [
+        0.9814453125,
+        0.9912109375,
+        0.98828125,
+        0.97705078125
+      ],
+      "mean": 0.9844970703125,
+      "sd": 0.006433155655589737,
+      "se": 0.0032165778277948687,
+      "ci95": [
+        0.9742604840887767,
+        0.9947336565362233
+      ],
+      "sign_flip_p": 0.125,
+      "leave_one_out_means": [
+        0.9855143229166666,
+        0.9822591145833334,
+        0.9832356770833334,
+        0.9869791666666666
+      ]
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema099",
+      "schedule": "constant",
+      "updates": 10000,
+      "metric": "covered_modes",
+      "n": 4,
+      "seeds": [
+        5001,
+        5002,
+        5003,
+        5004
+      ],
+      "values": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "mean": 8.0,
+      "sd": 0.0,
+      "se": 0.0,
+      "ci95": [
+        8.0,
+        8.0
+      ],
+      "sign_flip_p": 0.125,
+      "leave_one_out_means": [
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ]
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema099",
+      "schedule": "constant",
+      "updates": 10000,
+      "metric": "inlier_fraction",
+      "n": 4,
+      "seeds": [
+        5001,
+        5002,
+        5003,
+        5004
+      ],
+      "values": [
+        0.994140625,
+        0.98876953125,
+        0.98828125,
+        0.98681640625
+      ],
+      "mean": 0.989501953125,
+      "sd": 0.003201874279444336,
+      "se": 0.001600937139722168,
+      "ci95": [
+        0.9844070566396997,
+        0.9945968496103003
+      ],
+      "sign_flip_p": 0.125,
+      "leave_one_out_means": [
+        0.9879557291666666,
+        0.98974609375,
+        0.9899088541666666,
+        0.9903971354166666
+      ]
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema0999",
+      "schedule": "constant",
+      "updates": 10000,
+      "metric": "covered_modes",
+      "n": 4,
+      "seeds": [
+        5001,
+        5002,
+        5003,
+        5004
+      ],
+      "values": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "mean": 8.0,
+      "sd": 0.0,
+      "se": 0.0,
+      "ci95": [
+        8.0,
+        8.0
+      ],
+      "sign_flip_p": 0.125,
+      "leave_one_out_means": [
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ]
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema0999",
+      "schedule": "constant",
+      "updates": 10000,
+      "metric": "inlier_fraction",
+      "n": 4,
+      "seeds": [
+        5001,
+        5002,
+        5003,
+        5004
+      ],
+      "values": [
+        0.990234375,
+        0.98974609375,
+        0.9892578125,
+        0.98974609375
+      ],
+      "mean": 0.98974609375,
+      "sd": 0.00039867997115611623,
+      "se": 0.00019933998557805811,
+      "ci95": [
+        0.9891117049494018,
+        0.9903804825505982
+      ],
+      "sign_flip_p": 0.125,
+      "leave_one_out_means": [
+        0.9895833333333334,
+        0.98974609375,
+        0.9899088541666666,
+        0.98974609375
+      ]
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "raw",
+      "schedule": "cosine",
+      "updates": 10000,
+      "metric": "covered_modes",
+      "n": 4,
+      "seeds": [
+        5001,
+        5002,
+        5003,
+        5004
+      ],
+      "values": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "mean": 8.0,
+      "sd": 0.0,
+      "se": 0.0,
+      "ci95": [
+        8.0,
+        8.0
+      ],
+      "sign_flip_p": 0.125,
+      "leave_one_out_means": [
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ]
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "raw",
+      "schedule": "cosine",
+      "updates": 10000,
+      "metric": "inlier_fraction",
+      "n": 4,
+      "seeds": [
+        5001,
+        5002,
+        5003,
+        5004
+      ],
+      "values": [
+        0.99072265625,
+        0.98876953125,
+        0.99169921875,
+        0.98828125
+      ],
+      "mean": 0.9898681640625,
+      "sd": 0.0016132997722655444,
+      "se": 0.0008066498861327722,
+      "ci95": [
+        0.9873010441127192,
+        0.9924352840122808
+      ],
+      "sign_flip_p": 0.125,
+      "leave_one_out_means": [
+        0.9895833333333334,
+        0.990234375,
+        0.9892578125,
+        0.9903971354166666
+      ]
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema099",
+      "schedule": "cosine",
+      "updates": 10000,
+      "metric": "covered_modes",
+      "n": 4,
+      "seeds": [
+        5001,
+        5002,
+        5003,
+        5004
+      ],
+      "values": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "mean": 8.0,
+      "sd": 0.0,
+      "se": 0.0,
+      "ci95": [
+        8.0,
+        8.0
+      ],
+      "sign_flip_p": 0.125,
+      "leave_one_out_means": [
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ]
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema099",
+      "schedule": "cosine",
+      "updates": 10000,
+      "metric": "inlier_fraction",
+      "n": 4,
+      "seeds": [
+        5001,
+        5002,
+        5003,
+        5004
+      ],
+      "values": [
+        0.990234375,
+        0.98876953125,
+        0.99169921875,
+        0.98828125
+      ],
+      "mean": 0.98974609375,
+      "sd": 0.0015440808887540916,
+      "se": 0.0007720404443770458,
+      "ci95": [
+        0.9872891164902626,
+        0.9922030710097374
+      ],
+      "sign_flip_p": 0.125,
+      "leave_one_out_means": [
+        0.9895833333333334,
+        0.9900716145833334,
+        0.9890950520833334,
+        0.990234375
+      ]
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema0999",
+      "schedule": "cosine",
+      "updates": 10000,
+      "metric": "covered_modes",
+      "n": 4,
+      "seeds": [
+        5001,
+        5002,
+        5003,
+        5004
+      ],
+      "values": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "mean": 8.0,
+      "sd": 0.0,
+      "se": 0.0,
+      "ci95": [
+        8.0,
+        8.0
+      ],
+      "sign_flip_p": 0.125,
+      "leave_one_out_means": [
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ]
+    },
+    {
+      "dataset": "gmm8",
+      "variant": "ema0999",
+      "schedule": "cosine",
+      "updates": 10000,
+      "metric": "inlier_fraction",
+      "n": 4,
+      "seeds": [
+        5001,
+        5002,
+        5003,
+        5004
+      ],
+      "values": [
+        0.9912109375,
+        0.98876953125,
+        0.9912109375,
+        0.990234375
+      ],
+      "mean": 0.9903564453125,
+      "sd": 0.001153763580628078,
+      "se": 0.000576881790314039,
+      "ci95": [
+        0.9885205499903297,
+        0.9921923406346703
+      ],
+      "sign_flip_p": 0.125,
+      "leave_one_out_means": [
+        0.9900716145833334,
+        0.9908854166666666,
+        0.9900716145833334,
+        0.9903971354166666
+      ]
+    }
+  ]
+}

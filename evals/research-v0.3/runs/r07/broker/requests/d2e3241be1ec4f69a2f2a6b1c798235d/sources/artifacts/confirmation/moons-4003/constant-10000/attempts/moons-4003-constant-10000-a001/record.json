@@ -1,0 +1,149 @@
+{
+  "attempt_id": "moons-4003-constant-10000-a001",
+  "attempt_number": 1,
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "campaign_id": "ema-schedule-v1",
+  "command": [
+    "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+    "study/runner.py",
+    "--dataset",
+    "moons",
+    "--seed",
+    "4003",
+    "--phase",
+    "confirmation",
+    "--policy",
+    "constant",
+    "--duration",
+    "10000",
+    "--device",
+    "mps",
+    "--attempt-id",
+    "moons-4003-constant-10000-a001",
+    "--base",
+    "artifacts"
+  ],
+  "data_revision": "174180767d6b88981f3dbf4a72fcbef8c57db857de9ca87f2d945728b04b9397",
+  "ended_at": "2026-10-08T03:33:27.109961+00:00",
+  "environment": {
+    "broker": "common local-process",
+    "device_requested": "mps",
+    "dtype": "float32"
+  },
+  "error": null,
+  "exit_code": 0,
+  "experiment_id": "moons-4003-constant-10000",
+  "inputs": [
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4003/constant-10000/attempts/moons-4003-constant-10000-a001/input.json",
+      "retention": "retained",
+      "sha256": "174180767d6b88981f3dbf4a72fcbef8c57db857de9ca87f2d945728b04b9397"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4003/constant-10000/attempts/moons-4003-constant-10000-a001/started.json",
+      "retention": "retained",
+      "sha256": "3354c16818d153fce91031c1ca192440ea135b690bed6854bc7eeab388384380"
+    },
+    {
+      "media_type": "application/json",
+      "path": ".compute/requests/6864e47a68b246a590bbaaabc4e4e51d.json",
+      "retention": "retained",
+      "sha256": "4bd1e92790f9e3c6cb59d35fda056f576ff0c997a821a79413dc4daf9ea67787"
+    }
+  ],
+  "model_revision": "5b043d9f52ba78f07c31dcb3a77b1ff08c594b1ce7dbbe950fc6de7325692fe5",
+  "outputs": [
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4003/constant-10000/attempts/moons-4003-constant-10000-a001/input.json",
+      "retention": "retained",
+      "sha256": "174180767d6b88981f3dbf4a72fcbef8c57db857de9ca87f2d945728b04b9397"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4003/constant-10000/attempts/moons-4003-constant-10000-a001/recovery.json",
+      "retention": "retained",
+      "sha256": "f4db803826aca52c43076ad39e4deb2c17b24ce3c7c08ff09a7b8ccca3409e5b"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/confirmation/moons-4003/constant-10000/attempts/moons-4003-constant-10000-a001/recovery.npz",
+      "retention": "retained",
+      "sha256": "f170590f67b7c135bb4e30a33c64a6c669de818cf4d89229dd6cb5ca1e1093f5"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4003/constant-10000/attempts/moons-4003-constant-10000-a001/result.json",
+      "retention": "retained",
+      "sha256": "77cfa02f94543c2764c4b68ecf8304c70a37f88eb155dcce98b1d7159ca0c456"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4003/constant-10000/attempts/moons-4003-constant-10000-a001/started.json",
+      "retention": "retained",
+      "sha256": "3354c16818d153fce91031c1ca192440ea135b690bed6854bc7eeab388384380"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/confirmation/moons-4003/constant-10000/attempts/moons-4003-constant-10000-a001/step-10000-arrays.npz",
+      "retention": "retained",
+      "sha256": "7adfb2469caf35eb26e9ce096e7ea73c71ec90c96ea0617256e0d0c47513ff48"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4003/constant-10000/attempts/moons-4003-constant-10000-a001/step-10000-measurement.json",
+      "retention": "retained",
+      "sha256": "4c871d1cfeb893cfce5b00db811c718d18ae4d75cdece220ef933c866f68cead"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/confirmation/moons-4003/constant-10000/attempts/moons-4003-constant-10000-a001/step-10000-weights.npz",
+      "retention": "retained",
+      "sha256": "6807a3bb31ae844a235db8c207710b970a970fe22ae3bfef468ea5702597854e"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/confirmation/moons-4003/constant-10000/attempts/moons-4003-constant-10000-a001/step-5000-arrays.npz",
+      "retention": "retained",
+      "sha256": "a71c0f8f7e76862929b574e668a3b984aa064e8fa25503c6e05dbddaa4f9f3a6"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4003/constant-10000/attempts/moons-4003-constant-10000-a001/step-5000-measurement.json",
+      "retention": "retained",
+      "sha256": "7458432be9a4958d36361f56c95d658ed3aa96205e76283f944dfee5e4600afc"
+    },
+    {
+      "media_type": "application/x-npz",
+      "path": "artifacts/confirmation/moons-4003/constant-10000/attempts/moons-4003-constant-10000-a001/step-5000-weights.npz",
+      "retention": "retained",
+      "sha256": "c27d9da183d5e26edf42ef9f0a0ba604eb5430bea8925c9447d41c6be5e1dc05"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "artifacts/confirmation/moons-4003/constant-10000/attempts/moons-4003-constant-10000-a001/trace.jsonl",
+      "retention": "retained",
+      "sha256": "bc63b629271eca765c640759d2cb7ee8d48bd0e1529480c32b1f2a0acabde3f7"
+    },
+    {
+      "media_type": "application/json",
+      "path": ".compute/responses/6864e47a68b246a590bbaaabc4e4e51d.json",
+      "retention": "retained",
+      "sha256": "7d100b5f365f52f6b7c6a88be43f5adb78be11da8f324dea75c56723b4bc6115"
+    }
+  ],
+  "protocol_revision": "v1",
+  "record_type": "RunRecord",
+  "run_id": "constant-10000-confirmation",
+  "schema_version": "0.2",
+  "split": "confirmation",
+  "started_at": "2026-10-08T03:33:12.802694+00:00",
+  "status": "succeeded",
+  "usage": {
+    "money_usd": 0,
+    "tokens": 0,
+    "wall_seconds": 14.345244291005656
+  }
+}

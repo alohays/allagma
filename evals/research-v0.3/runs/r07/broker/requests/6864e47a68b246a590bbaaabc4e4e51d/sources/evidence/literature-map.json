@@ -1,0 +1,30 @@
+{
+  "network_access": false,
+  "novelty_claim": false,
+  "sources": [
+    {
+      "metadata": {"title": "When Does Weight EMA Help Tiny 2D Diffusion?", "revision": "Allagma prior study at 6d2daf0"},
+      "location": "inputs/materials/prior-study/prior-report.md",
+      "support_assessment": "The supplied report explicitly acknowledges confounding between duration and position in a single cosine trajectory; this motivates a factorial follow-up.",
+      "uncertainties": "Historical evidence links are not supplied current confirmation evidence. Historical results were not independently recomputed here."
+    },
+    {
+      "metadata": {"title": "SakanaAI AI-Scientist 2d_diffusion template", "revision": "1de1dbc1f4ee2c5f61e9c94348d55eb51d7fa2eb"},
+      "location": "inputs/materials/prior-study/REFERENCE.md; inputs/materials/prior-study/science.py; inputs/materials/prior-study/runner.py",
+      "support_assessment": "Local supplied adaptations define architecture, DDPM equations, optimizer and EMA mechanism. Local science.py is copied without modification.",
+      "uncertainties": "Upstream bytes and provenance.json mentioned by the historical REFERENCE.md are not present in the supplied materials; no network retrieval performed."
+    },
+    {
+      "metadata": {"title": "Denoising Diffusion Probabilistic Models", "authors": "Ho, Jain and Abbeel", "year": 2020, "identifier": "arXiv:2006.11239"},
+      "location": "Cited in supplied REFERENCE.md",
+      "support_assessment": "Background for DDPM noise-prediction modeling only; does not establish EMA effects in this follow-up.",
+      "uncertainties": "Bibliographic metadata inherited from supplied materials, not independently retrieved or checked."
+    },
+    {
+      "metadata": {"title": "Improved Denoising Diffusion Probabilistic Models", "authors": "Nichol and Dhariwal", "year": 2021, "identifier": "arXiv:2102.09672"},
+      "location": "Cited in supplied REFERENCE.md",
+      "support_assessment": "Context for the supplied cosine DDPM noise schedule, distinct from the optimizer learning-rate policies under study.",
+      "uncertainties": "Paper not retrieved. This study preserves the supplied formula and tests its numerical endpoints."
+    }
+  ]
+}

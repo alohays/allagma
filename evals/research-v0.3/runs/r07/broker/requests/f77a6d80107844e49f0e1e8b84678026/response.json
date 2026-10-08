@@ -1,0 +1,17 @@
+{
+  "injected_interruption": false,
+  "isolation_sha256": "c1dc6aa7f4c08aaae3ca66beba7a63683c2a4849a3e625c6326ce1c20164565f",
+  "reconciled_after_controller_restart": false,
+  "request_id": "f77a6d80107844e49f0e1e8b84678026",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 14.784279125044122,
+    "ended_at": "2026-10-08T03:34:07.815387+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r07/resources/jobs/0019-moons-4004-constant-10000-a001",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 658178048,
+    "peak_storage_bytes": 1619128877,
+    "status": "completed"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "argv": [
+    "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+    "study/runner.py",
+    "--dataset",
+    "moons",
+    "--seed",
+    "4004",
+    "--phase",
+    "confirmation",
+    "--policy",
+    "cosine",
+    "--duration",
+    "10000",
+    "--device",
+    "mps",
+    "--attempt-id",
+    "moons-4004-cosine-10000-a001",
+    "--base",
+    "artifacts"
+  ],
+  "attempt": false,
+  "category": "compute",
+  "cwd": ".",
+  "label": "moons-4004-cosine-10000-a001",
+  "request_id": "67cd1bf7bb9b46089b7316211cbe8b29",
+  "timeout_seconds": 45.0
+}

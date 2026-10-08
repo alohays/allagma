@@ -1,0 +1,46 @@
+{
+  "campaign_protocol": {
+    "media_type": "text/markdown",
+    "path": "campaigns/ema-schedule-v1/protocol.md",
+    "retention": "retained",
+    "sha256": "3300b5e862a704f60ddef19ca785fb1b69fc67cb3ae04a8f85571b490284be61"
+  },
+  "confirmation_inputs_preexisting": false,
+  "created_at": "2026-10-08T03:31:46.463147+00:00",
+  "device": "mps",
+  "forecast": {
+    "media_type": "application/json",
+    "path": "evidence/forecast.json",
+    "retention": "retained",
+    "sha256": "bfbf9bc1524514b612d1bfabc3886fdca82890db353c13f3346980a5aadb8f6d"
+  },
+  "lock": {
+    "media_type": "application/octet-stream",
+    "path": "campaigns/ema-schedule-v1/lock.yaml",
+    "retention": "retained",
+    "sha256": "a910fbf9f7a7e9f863a913be7fd371b023ff6c2804dcb5db0c4ee1aca6383260"
+  },
+  "plan": {
+    "media_type": "application/json",
+    "path": "campaigns/ema-schedule-v1/run-plan.json",
+    "retention": "retained",
+    "sha256": "44adfff83cf9e565800e584785f405d1dff0a08233a85382f50ec8fe9e85834e"
+  },
+  "protocol": {
+    "media_type": "text/markdown",
+    "path": "PROTOCOL.md",
+    "retention": "retained",
+    "sha256": "3300b5e862a704f60ddef19ca785fb1b69fc67cb3ae04a8f85571b490284be61"
+  },
+  "qualification": {
+    "media_type": "application/json",
+    "path": "evidence/qualification.json",
+    "retention": "retained",
+    "sha256": "5b5ee7f933df5bdb69f3bcdac4bc8c2347a413ad841c25626c23537b39664e49"
+  },
+  "scientific_sources": {
+    "study/common.py": "1ac628af6d76930a5e5b9ccf9c5b964becc409e9d46f933982985bd1726c0c84",
+    "study/runner.py": "beeb0e2d19862cff9dac9848e070d515e687856490d73a51e1864041c6358b5f",
+    "study/science.py": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1"
+  }
+}

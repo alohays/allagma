@@ -1,0 +1,247 @@
+{
+  "analysis_id": "reanalysis",
+  "analysis_revision": "6c703b61478f6749929d5e6e8f5677f039e852e6f84630a33e97cceb43faecb4",
+  "code": {
+    "media_type": "text/x-python",
+    "path": "study/analyze.py",
+    "retention": "retained",
+    "sha256": "6c703b61478f6749929d5e6e8f5677f039e852e6f84630a33e97cceb43faecb4"
+  },
+  "configuration": {
+    "complete": true,
+    "independent_unit": "seed within dataset"
+  },
+  "dependencies": [
+    {
+      "media_type": "text/markdown",
+      "path": "PROTOCOL.md",
+      "retention": "retained",
+      "sha256": "3300b5e862a704f60ddef19ca785fb1b69fc67cb3ae04a8f85571b490284be61"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/ema-schedule-v1/confirmation-freeze.json",
+      "retention": "retained",
+      "sha256": "5bab8e0a6f654337dbc97b0a014fff7cd42d1caacd23017e437bd032406bd908"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5001/constant-10000/attempts/gmm8-5001-constant-10000-a001/result.json",
+      "retention": "retained",
+      "sha256": "70fede3a48b3f43a3438ef08b3de66954917c5ca85578f529c527b470086071b"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5001/cosine-10000/attempts/gmm8-5001-cosine-10000-a001/result.json",
+      "retention": "retained",
+      "sha256": "280885288abae8006c5d0893e5160807725870b26e5da0fbbcfd944b5aaac4fa"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5001/cosine-5000/attempts/gmm8-5001-cosine-5000-a001/result.json",
+      "retention": "retained",
+      "sha256": "1286b485dca922d10ccdeadc5007263fddbe2f5026970675822268c79fdbefb5"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5002/constant-10000/attempts/gmm8-5002-constant-10000-a001/result.json",
+      "retention": "retained",
+      "sha256": "3587aa91e13b852d4bd20edad3c96ede3978120209efe66405d0acf826f36f56"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5002/cosine-10000/attempts/gmm8-5002-cosine-10000-a001/result.json",
+      "retention": "retained",
+      "sha256": "5ea7e27cc0284f59de7ea4ca8109ee7577265ed73e084ddca92db4d2e6361328"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5002/cosine-5000/attempts/gmm8-5002-cosine-5000-a001/result.json",
+      "retention": "retained",
+      "sha256": "5e2a48607571eb2575804e042aec343f8c6dea6e38b28bf02a2869f28020cf69"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5003/constant-10000/attempts/gmm8-5003-constant-10000-a001/result.json",
+      "retention": "retained",
+      "sha256": "8d7186aa1cd09a6f3b856812c8a8bb343e8face11a937f0b60001600856c0ab6"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5003/cosine-10000/attempts/gmm8-5003-cosine-10000-a001/result.json",
+      "retention": "retained",
+      "sha256": "23e95a4d51615082392f3ee232f59781e0adecc85f213a8e8f32abbef196c4ca"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5003/cosine-5000/attempts/gmm8-5003-cosine-5000-a001/result.json",
+      "retention": "retained",
+      "sha256": "f148c210100d0349c7951334771bf563c32ee71edc1ca95c70e37303ae947836"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5004/constant-10000/attempts/gmm8-5004-constant-10000-a001/result.json",
+      "retention": "retained",
+      "sha256": "9246ade07a2e7fea1ecb79323182eb3f4a7c85a93bef78c0383e2c68c33f8704"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5004/cosine-10000/attempts/gmm8-5004-cosine-10000-a001/result.json",
+      "retention": "retained",
+      "sha256": "442bded80e5ef33731d94566e22022cf3d2b68208be6fdccb21422862db418dd"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/gmm8-5004/cosine-5000/attempts/gmm8-5004-cosine-5000-a001/result.json",
+      "retention": "retained",
+      "sha256": "c58901f6556704b2932a05096cf11fae025e50c56042a8d40fa03b5ea7ccab7d"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4001/constant-10000/attempts/moons-4001-constant-10000-a001/result.json",
+      "retention": "retained",
+      "sha256": "4159c1b0d5f297ccc2d233d51bdbd3d21e22bcd8e0634a7d10c0736623c3cf80"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4001/cosine-10000/attempts/moons-4001-cosine-10000-a001/result.json",
+      "retention": "retained",
+      "sha256": "452bb1886861af332fe2ff7c4ac66bdd069c960b8eb8bca8a88433c2e035a725"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4001/cosine-5000/attempts/moons-4001-cosine-5000-a001/result.json",
+      "retention": "retained",
+      "sha256": "92e9e9aaf578f13d7d4dd69f50119b4b12d27483d443ffede2df3134cc49eaf1"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4002/constant-10000/attempts/moons-4002-constant-10000-a001/result.json",
+      "retention": "retained",
+      "sha256": "5d81f9899ec08934637c675359957bfe4cd4bdadfaca5f997759ffcfe842f839"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4002/cosine-10000/attempts/moons-4002-cosine-10000-a001/result.json",
+      "retention": "retained",
+      "sha256": "2da0c1e4d5a90ce18668175bd7e525a6b3d108fd2e8f8ae8b4f30edd53be5996"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4002/cosine-5000/attempts/moons-4002-cosine-5000-a001/result.json",
+      "retention": "retained",
+      "sha256": "12e7f82f1e8d158fb5da3a1f7865f05163a658dd43c95acea5a5e2081d319fb2"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4003/constant-10000/attempts/moons-4003-constant-10000-a001/result.json",
+      "retention": "retained",
+      "sha256": "77cfa02f94543c2764c4b68ecf8304c70a37f88eb155dcce98b1d7159ca0c456"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4003/cosine-10000/attempts/moons-4003-cosine-10000-a001/result.json",
+      "retention": "retained",
+      "sha256": "eb106fe359da71a4cfbdb4c8fa59c5b52f64a9cdb38aea43ebd35df6390edf08"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4003/cosine-5000/attempts/moons-4003-cosine-5000-a001/result.json",
+      "retention": "retained",
+      "sha256": "d623b28ae9ab29487dd27501209de3e7bff8ba502ac17c0e424304ca2edcd329"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4004/constant-10000/attempts/moons-4004-constant-10000-a001/result.json",
+      "retention": "retained",
+      "sha256": "1dae69ad9d496bba959d8295f1f993c68dffe9509e5430a6b3a279b32f357676"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4004/cosine-10000/attempts/moons-4004-cosine-10000-a001/result.json",
+      "retention": "retained",
+      "sha256": "8844f692ea13a3a98f4c99be1e783c7f93be171f7759b5b55f605c5c65b6aaee"
+    },
+    {
+      "media_type": "application/json",
+      "path": "artifacts/confirmation/moons-4004/cosine-5000/attempts/moons-4004-cosine-5000-a001/result.json",
+      "retention": "retained",
+      "sha256": "9db9699e57ec32c3f7e8b640dffc77e3407edcb581a1971e054836c62b5402f1"
+    }
+  ],
+  "exclusions": [
+    {
+      "attempt_id": "pilot-gmm8-a001",
+      "evidence": "artifacts/pilot/gmm8-81/constant-10000/attempts/pilot-gmm8-a001/started.json",
+      "reason": "pilot excluded from confirmation"
+    },
+    {
+      "attempt_id": "pilot-moons-a001",
+      "evidence": "artifacts/pilot/moons-71/cosine-10000/attempts/pilot-moons-a001/started.json",
+      "reason": "pilot excluded from confirmation"
+    },
+    {
+      "attempt_id": "pilot-moons-a002",
+      "evidence": "artifacts/pilot/moons-71/cosine-10000/attempts/pilot-moons-a002/started.json",
+      "reason": "pilot excluded from confirmation"
+    },
+    {
+      "attempt_id": "pilot-moons-a003",
+      "evidence": "artifacts/pilot/moons-71/cosine-10000/attempts/pilot-moons-a003/started.json",
+      "reason": "pilot excluded from confirmation"
+    }
+  ],
+  "outputs": [
+    {
+      "media_type": "application/json",
+      "path": "reanalysis/contrasts.json",
+      "retention": "retained",
+      "sha256": "f80a1cd3a3b3d2de214d8c13b3c22522d37e2be1157438124425ddd108cdd9d2"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "reanalysis/main-figure.pdf",
+      "retention": "retained",
+      "sha256": "f07832b231d0bf6321f1160754d31a4bf397ca6e53e785be02fe0526d99f10a6"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "reanalysis/main-figure.png",
+      "retention": "retained",
+      "sha256": "b357ed526ed43c94be32d413cb067532f99570e1723ea1a497963f47f25857bc"
+    },
+    {
+      "media_type": "application/json",
+      "path": "reanalysis/measurements.json",
+      "retention": "retained",
+      "sha256": "7f06ed04f7f8da9566c7af82e1c74704fd4dc5ad7823168b57377502e1de798c"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "reanalysis/paired-differences.csv",
+      "retention": "retained",
+      "sha256": "6f2acce7105a7d2c2b0f26d230f4fb0046f1e2d38851a64fd46628953b9c49c2"
+    },
+    {
+      "media_type": "application/json",
+      "path": "reanalysis/seed-level.json",
+      "retention": "retained",
+      "sha256": "42b088d17d9988d49e2d38a6da3502fc2b3f981e25181751a14fdbabcd55d9d9"
+    },
+    {
+      "media_type": "application/json",
+      "path": "reanalysis/summary.json",
+      "retention": "retained",
+      "sha256": "eadd1e78ec6a09d73426dd4ee4dafd19c093a7100552f92119d3df9b5e70abac"
+    }
+  ],
+  "raw_manifest": {
+    "media_type": "application/json",
+    "path": "reanalysis/raw-manifest.json",
+    "retention": "retained",
+    "sha256": "c1a5ca01f2b6bb0b6d99bb301989a89e892f7d12f10606baf0664edbe1d394f0"
+  },
+  "record_type": "AnalysisRecord",
+  "schema_version": "0.2",
+  "uncertainty": "Unadjusted descriptive two-sided 95% Student t intervals over paired seeds; exact two-sided sign flips; no sample/projection pseudoreplication"
+}

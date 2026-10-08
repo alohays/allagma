@@ -1,0 +1,103 @@
+{
+  "content": {
+    "artifacts": [
+      {
+        "media_type": "text/markdown",
+        "path": "inputs/BRIEF.md",
+        "retention": "retained",
+        "sha256": "dfc5171438321eb123955b5eaa49a5550bacf0c2802695d48a78972654b5f74a"
+      },
+      {
+        "media_type": "text/markdown",
+        "path": "inputs/COMPUTE.md",
+        "retention": "retained",
+        "sha256": "ac8f4265812035ab9c856bfb6805bacf6e991fd4ea5e9a7d28f44956f9aabae7"
+      },
+      {
+        "media_type": "application/json",
+        "path": "inputs/RESOURCES.json",
+        "retention": "retained",
+        "sha256": "95fb05b516f64bfe234280b8f8d02d1d54781f38435421eb906fee61a7850e35"
+      },
+      {
+        "media_type": "text/markdown",
+        "path": "inputs/materials/MEASUREMENTS.md",
+        "retention": "retained",
+        "sha256": "0bb27a48d6c352b0691589326c78585c2b9acd761b0d402f1a6a0ecbed396aaf"
+      },
+      {
+        "media_type": "text/markdown",
+        "path": "inputs/materials/SOURCES.md",
+        "retention": "retained",
+        "sha256": "77070b11bcd53025ef4f363cb5935885b9e42541c066b390efe9b811e4c8972b"
+      },
+      {
+        "media_type": "text/markdown",
+        "path": "PROTOCOL.md",
+        "retention": "retained",
+        "sha256": "3300b5e862a704f60ddef19ca785fb1b69fc67cb3ae04a8f85571b490284be61"
+      },
+      {
+        "media_type": "application/json",
+        "path": "evidence/qualification.json",
+        "retention": "retained",
+        "sha256": "5b5ee7f933df5bdb69f3bcdac4bc8c2347a413ad841c25626c23537b39664e49"
+      },
+      {
+        "media_type": "application/json",
+        "path": "evidence/forecast.json",
+        "retention": "retained",
+        "sha256": "bfbf9bc1524514b612d1bfabc3886fdca82890db353c13f3346980a5aadb8f6d"
+      }
+    ],
+    "constraints": [
+      "Float32 reference model and specified datasets/metrics",
+      "Pilot/confirmation separation",
+      "All computation through local broker; no network",
+      "Native session 3600 seconds; setup 300 seconds; compute 1800 seconds",
+      "No outcome-based exclusions or required EMA benefit"
+    ],
+    "protocol_revision": "v1",
+    "question": "How does full learning-rate policy change apparent weight-EMA benefit independently of terminal duration?",
+    "stop_rules": [
+      "Completion",
+      "Resource insufficiency",
+      "Failed qualification",
+      "Repeated uncorrectable failure"
+    ],
+    "unresolved_findings": []
+  },
+  "context_id": "confirmation-v1",
+  "limitations": [
+    "Offline source map; no literature search or independent bibliographic verification",
+    "Sequential artifact handoffs; no independent reviewer model"
+  ],
+  "method_id": "context/active-brief",
+  "omitted": [
+    "Historical upstream evidence paths unavailable in supplied package; prior numerical results are contextual only"
+  ],
+  "record_type": "ContextRecord",
+  "required": [
+    "inputs/BRIEF.md",
+    "inputs/COMPUTE.md",
+    "inputs/RESOURCES.json",
+    "inputs/materials/MEASUREMENTS.md",
+    "inputs/materials/SOURCES.md",
+    "PROTOCOL.md",
+    "evidence/qualification.json",
+    "evidence/forecast.json"
+  ],
+  "schema_version": "0.2",
+  "selected": [
+    "inputs/BRIEF.md",
+    "inputs/COMPUTE.md",
+    "inputs/RESOURCES.json",
+    "inputs/materials/MEASUREMENTS.md",
+    "inputs/materials/SOURCES.md",
+    "PROTOCOL.md",
+    "evidence/qualification.json",
+    "evidence/forecast.json",
+    "inputs/materials/prior-study/science.py",
+    "inputs/materials/prior-study/REFERENCE.md"
+  ]
+}

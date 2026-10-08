@@ -1,0 +1,62 @@
+{
+  "artifact_manifest": "artifact-manifest.json",
+  "completion_assessment": "All 32 cells, raw evidence, checkpoints, paired uncertainty, figure, retained-data reanalysis and all-state sample regeneration completed. Scientific critique is provisional and self-authored; no independent peer review or universal mechanism claim.",
+  "execution_status": "complete",
+  "manuscript": "REPORT.md",
+  "measurements": "analysis/measurements.json",
+  "recompute": {
+    "argv": [
+      "python3",
+      "inputs/compute.py",
+      "--category",
+      "compute",
+      "--label",
+      "recompute-retained",
+      "--timeout",
+      "60",
+      "--",
+      ".venv/bin/python",
+      "study/analyze.py",
+      "--base",
+      "artifacts",
+      "--out",
+      "recomputed-analysis"
+    ],
+    "cwd": "."
+  },
+  "report_revision": "report-r1",
+  "reproduce": {
+    "argv": [
+      "python3",
+      "study/dispatch.py",
+      "--fresh",
+      "--environment",
+      ".venv-reproduce",
+      "--base",
+      "reproduction/artifacts",
+      "--analyze-out",
+      "reproduction/analysis"
+    ],
+    "cwd": "."
+  },
+  "review": "review.json",
+  "sample_regeneration": {
+    "argv": [
+      "python3",
+      "inputs/compute.py",
+      "--category",
+      "compute",
+      "--label",
+      "verify-saved-weights",
+      "--timeout",
+      "60",
+      "--",
+      ".venv/bin/python",
+      "study/verify.py",
+      "--out",
+      "regenerated-check"
+    ],
+    "cwd": "."
+  },
+  "task_id": "ema-schedule"
+}

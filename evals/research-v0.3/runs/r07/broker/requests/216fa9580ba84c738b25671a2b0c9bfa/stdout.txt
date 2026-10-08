@@ -1,0 +1,25 @@
+{
+  "pilot_attempts": [
+    "pilot-gmm8-a001",
+    "pilot-moons-a003"
+  ],
+  "seconds_per_update_conservative": 0.0019341455001073578,
+  "seconds_per_state_sampling": 0.11296045834509034,
+  "components_seconds": {
+    "training_200000_updates": 386.82910002147156,
+    "sampling_96_states": 10.844204001128674,
+    "process_start_data_io_24_jobs": 96.0,
+    "analysis_plot_recompute_regeneration_audit_reserve": 100.0
+  },
+  "safety_factor": 1.35,
+  "forecast_remaining_compute_seconds": 801.4589604305103,
+  "already_charged_compute_seconds": 16.894224582938477,
+  "projected_total_compute_seconds": 818.3531850134488,
+  "ceiling_compute_seconds": 1800,
+  "projected_requests_total": 37,
+  "storage_forecast_bytes": 2400000000,
+  "storage_ceiling_bytes": 6442450944,
+  "peak_observed_pilot_rss_bytes": 665698304,
+  "device": "mps",
+  "feasible": true
+}

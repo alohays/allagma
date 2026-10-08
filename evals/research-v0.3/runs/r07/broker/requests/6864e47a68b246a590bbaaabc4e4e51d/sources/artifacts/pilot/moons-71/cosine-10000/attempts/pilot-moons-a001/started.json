@@ -1,0 +1,50 @@
+{
+  "attempt_id": "pilot-moons-a001",
+  "command": [
+    "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r07/candidate/.venv/bin/python",
+    "study/runner.py",
+    "--dataset",
+    "moons",
+    "--seed",
+    "71",
+    "--phase",
+    "pilot",
+    "--policy",
+    "cosine",
+    "--duration",
+    "10000",
+    "--stop",
+    "1500",
+    "--device",
+    "mps",
+    "--attempt-id",
+    "pilot-moons-a001"
+  ],
+  "inputs": {
+    "attempt_id": "pilot-moons-a001",
+    "base": "artifacts",
+    "dataset": "moons",
+    "device": "mps",
+    "duration": 10000,
+    "phase": "pilot",
+    "policy": "cosine",
+    "resume": null,
+    "seed": 71,
+    "stop": 1500
+  },
+  "protocol": {
+    "media_type": "text/markdown",
+    "path": "PROTOCOL.md",
+    "retention": "retained",
+    "sha256": "3300b5e862a704f60ddef19ca785fb1b69fc67cb3ae04a8f85571b490284be61"
+  },
+  "source_hashes": {
+    "study/common.py": "a4b70b103034668dc623a87b8af1056fd6501b840ae582d27aaf20c8fb32a9ac",
+    "study/runner.py": "e16eace3c7a5f973c772c6b0ce2d6f406887dd9f085144d30829d4dedbf0bf14",
+    "study/science.py": "5dbe6abe2756a6d60fe2d818b38b432ec6a9136da6987d7e34a777ce38899ab1",
+    "study/setup_study.py": "adb31cf47ba1b17de69811ed5212f49191be6b6e7a6a084c50100d69f067fe4e"
+  },
+  "source_revision": "f1e0d6bbbb67448b651afa7a78566c9be1814a0b30fbe822885d1881efd273a7",
+  "started_at": "2026-10-08T03:25:20.623356+00:00",
+  "status": "running"
+}
