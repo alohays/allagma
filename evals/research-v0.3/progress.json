@@ -3,17 +3,17 @@
   "freeze_commit": "de6abce",
   "frozen_source_commit": "c369fe7aabb5bd5575f967b3e3704cf463a97eb0",
   "prepared_runs": 12,
-  "completed_runs": 10,
+  "completed_runs": 11,
   "active_run": {
-    "run_id": "r11",
+    "run_id": "r12",
     "task": "ema-schedule",
-    "condition": "plain",
+    "condition": "allagma",
     "replicate": 1,
-    "control": "evals/research-v0.3/runs/r11",
-    "runtime": "evals/research-v0.3/runs/r11/sessions/evaluation/runtime",
-    "exec_session_id": 54217
+    "control": "evals/research-v0.3/runs/r12",
+    "runtime": "evals/research-v0.3/runs/r12/sessions/evaluation/runtime",
+    "exec_session_id": 84378
   },
-  "next_run": "r12",
+  "next_run": null,
   "instructions": "Observe the live handle/process. Do not restart from a running-state file or timeout. Do not edit any path covered by frozen/freeze.json. Complete and score all 12 frozen runs, then finish task packages, clean-checkout reproduction, comparison and release audit; push only at full completion.",
   "verified_complete_packages": 8,
   "release_gates": {
@@ -22,6 +22,7 @@
   },
   "known_frozen_defects": [
     "MPS allocator high/low mismatch; CPU remains available; release repair pending",
-    "Inline curve parser mismatch; original error preserved and transparent contract-compatible correction applied uniformly"
+    "Inline curve parser mismatch; original error preserved and transparent contract-compatible correction applied uniformly",
+    "Final-storage sampling/exit race reproduced with a controlled actual worker; final r01-r10 footprints are within caps; post-cohort repair required."
   ]
 }

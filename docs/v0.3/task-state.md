@@ -18,15 +18,15 @@ verified implementation/evaluation progress; this is not a blocked state.
 | r08 | EMA schedule, plain, replicate 2 | 240/240 | 8 | verified | yes |
 | r09 | CORE, plain, replicate 1 | 6/6 | 8 | verified | yes |
 | r10 | CORE, Allagma, replicate 1 | 6/6 | 8 | verified | yes |
-| r11 | EMA schedule, plain, replicate 1 | pending | pending | active | pending |
-| r12 | EMA schedule, Allagma, replicate 1 | pending | pending | not started | pending |
+| r11 | EMA schedule, plain, replicate 1 | 240/240 | pending | pending review | pending |
+| r12 | EMA schedule, Allagma, replicate 1 | pending | pending | active | pending |
 
-**Active native run: r11; exec session 54217. Next: r12.** Poll that handle or
+**Active native run: r12; exec session 84378. This is the final assigned session.** Poll that handle or
 its actual process, never restart from a running-state file or observation timeout.
-`evals/research-v0.3/progress.json` retains the current handle. The pre-r11 account
-checkpoint allows ordinary usage with 27% of the weekly window consumed.
+`evals/research-v0.3/progress.json` retains the current handle. The pre-r12 account
+checkpoint allows ordinary usage with 29% of the weekly window consumed.
 
-All ten terminal sessions have unchanged common inputs and matching observed
+All eleven terminal sessions have unchanged common inputs and matching observed
 model/settings, with one fresh session each. No task-specific coordinator
 messages or candidate edits have occurred. Keep the source/criteria/model/CLI
 freeze unchanged until all twelve sessions are terminal. `evaluate.py verify`
@@ -101,7 +101,7 @@ critique is not peer review.
 
 ## Remaining work
 
-1. Complete and score r11/r12 in frozen order.
+1. Finish r11 substantive review and complete/score r12.
    Preserve all failed outcomes and record all eight evidence items honestly.
 2. Generate the complete comparison only after all twelve reviews. Keep required
    execution distinct from package completion: r03/r06 ran correct science but
@@ -121,4 +121,28 @@ Full evidence is retained in ordinary Git archive parts. GitHub's verified
 2 GiB per-push cap may require several ascending fast-forward transfers at the
 final publication step. See `publication-plan.md`. All implementation/evaluation
 and release checks must pass before any of those pushes; no history rewrite or
-force push is needed. The active native handle remains r11 / 54217.
+force push is needed. The active native handle is now r12 / 84378.
+
+## Latest terminal run and required supervisor repair
+
+r11 is terminal and its unchanged original EMA scorer passes 240/240. Collection
+retains 542 regular files, 22 external wheels and 27 archive parts with no manifest
+errors. Its source/statistical/visual/review and restoration checks are pending;
+do not infer package completion from the numerical score alone. Candidate:
+`work/v03-evaluation/runs/r11/candidate`; control: `evals/research-v0.3/runs/r11`.
+
+A further storage-at-exit defect was reproduced without changing controlled
+source: a real worker can finish after a storage sample and leave 2002 bytes
+against a 1000-byte cap while the frozen supervisor reports completed/peak zero.
+The controlled interleaving probe is in `validation/probe_final_storage.py`, with
+full before evidence at `postprocess-checks/final-storage-before/`. It is an
+engineering fixture, not native-host qualification. Final r01–r10 workspace
+sizes were independently checked and are below their actual 6 GiB caps.
+
+After the cohort, add a final persistent-storage measurement/status check to
+`allagma/resources.py`, preserve before/after receipts, and run the same probe
+plus affected conformance. Inspect the native adapter's analogous exit sampling
+path too; its source has no final storage check, but a separate native-adapter
+fixture must establish that scope before claiming it tested. This work joins
+the already-required MPS prefix correction and actual full-broker GPU canary.
+Do not edit the controlled source while r12 remains active.

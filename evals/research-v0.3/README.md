@@ -10,10 +10,10 @@ condition. Development decisions and evidence are in `development/`. The
 `frozen/freeze.json` manifest enumerates exact inputs, scorers, workflow source,
 resource ceilings, model/settings observations and run order. Current progress
 is in `progress.json`; terminal outcomes and complete traces are in `runs/`.
-Ten sessions are terminal and reviewed; eight original packages are fully
-verified. Both incomplete deliveries have verified science but lack explicit
-review/material revision binding. The final two EMA sessions and release audit
-remain pending.
+Eleven sessions are terminal; ten are reviewed and eight original packages are
+fully verified. r11 passes 240/240 numerical checks and awaits substantive review.
+Run r12 is active. Both incomplete reviewed deliveries have verified science but
+lack explicit review/material revision binding. Release repairs/audit remain pending.
 Native sessions use the existing Codex account; scientific processes run only
 on the local Mac. Final evaluation results are preserved even if later repaired
 packages are needed for release.
