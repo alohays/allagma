@@ -54,3 +54,20 @@ The [four-run snapshot](comparisons/after-r04/REPORT.md) is an interim artifact.
 
 `python3 evals/research-v0.3/test_comparison.py -v` checks assignment completeness,
 contrast direction, pending/missing handling and separate usage accounting.
+
+## Verify the retained historical cohort
+
+`evaluate.py verify` is the original launch guard: it requires the current source,
+CLI and selected settings to match the freeze. A later corrected release is
+expected to differ. Verify the stored historical source and retained packages
+without changing that original guard:
+
+```sh
+python3 evals/research-v0.3/verify_archive.py --output /path/to/new-archive-check.json
+```
+
+This checks all frozen source hashes, all twelve prepared input sets against
+the frozen materials/common interface, identical task profiles, retained input
+identities, archive parts and queue supplements. It requires every package by
+default. `--allow-missing-packages` produces an explicitly partial check during
+evaluation. Neither mode reruns experiments or establishes scientific completion.
