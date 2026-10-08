@@ -26,10 +26,10 @@ def build(output: Path):
     if target.exists() or receipt.exists():
         raise SystemExit("Use a new output directory; existing release assets are retained")
     paths = set(source_inventory(ROOT))
-    for directory in ("examples/toy-study", "examples/first-research", "conformance", "tools"):
+    for directory in ("examples/toy-study", "examples/first-research", "conformance", "tools", ".github"):
         paths.update(str(p.relative_to(ROOT)) for p in (ROOT / directory).rglob("*")
                      if p.is_file() and "__pycache__" not in p.parts and p.suffix != ".pyc")
-    for filename in ("README.md", "LICENSE", "THIRD_PARTY_NOTICES.md", "CONTRIBUTING.md",
+    for filename in ("README.md", "LICENSE", "THIRD_PARTY_NOTICES.md", "CONTRIBUTING.md", "CHANGELOG.md", "docs/module-authoring.md",
                      "CODE_OF_CONDUCT.md", "GOVERNANCE.md", "SECURITY.md", "SUPPORT.md", "CITATION.cff", "pyproject.toml"):
         if (ROOT / filename).is_file():
             paths.add(filename)

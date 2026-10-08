@@ -3,6 +3,7 @@
 from pathlib import Path
 import re
 import sys
+import subprocess
 from urllib.parse import unquote, urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -10,6 +11,11 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def check_docs():
     errors, checked = [], 0
+    # Sparse source checkouts keep large evidence blobs out of first-use/CI
+    # downloads. A tracked target still exists in the repository even when its
+    # blob is not materialized in this checkout.
+    listing = subprocess.run(["git", "ls-files", "-z"], cwd=ROOT, capture_output=True, text=True)
+    tracked = set(listing.stdout.split("\0")) if listing.returncode == 0 else set()
     directories = [ROOT / "docs", ROOT / "examples/toy-study", ROOT / "conformance"]
     files = set(ROOT.glob("*.md"))
     for directory in directories:
@@ -24,7 +30,12 @@ def check_docs():
             if not target or urlparse(target).scheme:
                 continue
             checked += 1
-            if not (path.parent / unquote(target)).exists():
+            destination = (path.parent / unquote(target)).resolve()
+            try:
+                repository_path = str(destination.relative_to(ROOT))
+            except ValueError:
+                repository_path = ""
+            if not destination.exists() and repository_path not in tracked:
                 errors.append(f"{relative}: missing {target}")
     return {"checked_links": checked, "errors": errors}
 

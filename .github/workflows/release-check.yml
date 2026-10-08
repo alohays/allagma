@@ -1,0 +1,41 @@
+name: Prepare release assets
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  qualify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          sparse-checkout: |
+            allagma
+            adapters
+            contracts
+            methods
+            recipes
+            policies
+            profiles
+            templates
+            tools
+            conformance
+            examples
+            evals/context-retention
+            docs
+            media
+            .github
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python3 -m allagma acceptance --output build/acceptance
+      - run: python3 tools/package_source.py --output build/source-release
+      - uses: actions/upload-artifact@v7
+        with:
+          name: reviewed-source-release
+          path: |
+            build/source-release/
+            build/acceptance/acceptance.json
+          retention-days: 30
+      # Publication is intentionally separate. No release/tag/token write here.

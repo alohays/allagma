@@ -36,9 +36,15 @@ launch review**. Preserve the original evidence; do not rewrite it to remove
 these accepted metadata exposures. Selected website previews omit operational
 details and provide source/digest links.
 
-The first completed pattern pass covered 61 reachable commits, 7,516 blob
-versions and 12 multipart archives. It found email and local-path patterns,
-with no matches for the credential/key patterns used. It also revealed 91
-gzip-compressed dependency test-data files needing a separate decompression
-path; the initial pass is therefore incomplete. The corrected final scan and
-manual disposition remain required. No scan alone certifies publication safety.
+The [corrected initial scan](evidence/history-review-initial.json) covered 62
+reachable commits, 7,560 blob versions, 12 multipart archives and 48,945 archive
+members. It also opened 934 ZIP archives and 91 gzip-compressed data files.
+It found email and local-path patterns, with **no matches for the credential/key
+patterns used and no unhandled archive errors**. The earlier pass's gzip coverage
+gap was corrected, with its original log retained locally.
+
+The matched categories cover accepted owner metadata and upstream dependency
+author/test-fixture metadata. Binary content was pattern-scanned; scientific
+arrays were not executed as code. A final scan after the launch commits and
+manual redistribution inventory remain required. No scan alone certifies
+publication safety.

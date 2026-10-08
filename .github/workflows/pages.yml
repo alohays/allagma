@@ -1,0 +1,59 @@
+name: Public documentation deployment
+on:
+  workflow_dispatch:
+    inputs:
+      deploy:
+        description: Deploy the reviewed public documentation
+        type: boolean
+        default: false
+        required: true
+  push:
+    branches: [main]
+    paths: ['site/**', 'docs/**', 'media/**', '*.md', '.github/workflows/pages.yml']
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    if: github.event.repository.private == false && vars.ALLAGMA_PUBLIC_LAUNCH == 'true' && (github.event_name == 'push' || inputs.deploy)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*
+            !/evals/
+            !/studies/
+            /evals/context-retention/
+            /studies/*/RESULTS.md
+            /studies/ema-schedule/figures/
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: npm ci && npm run build
+        working-directory: site
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: site/dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy reviewed static site
+        id: deployment
+        uses: actions/deploy-pages@v5

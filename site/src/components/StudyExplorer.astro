@@ -1,0 +1,91 @@
+---
+import summary from '../../public/generated/media/evidence/toy-summary.json';
+import brief from '../../public/generated/media/evidence/toy-brief.json';
+import claims from '../../public/generated/media/evidence/toy-claims.json';
+const base = '/allagma/generated/media/evidence/';
+const tabs = ['Brief', 'Results', 'Claims', 'Report'];
+---
+<div class="study-explorer">
+  <div class="explorer-label"><span>OFFLINE STUDY / ACTUAL RETAINED OUTPUTS</span><span>toy-v1 · a001</span></div>
+  <div class="explorer-tabs" role="tablist" aria-label="Study artifacts">
+    {tabs.map((label, i) => <button type="button" role="tab" id={`tab-${label.toLowerCase()}`} aria-controls={`panel-${label.toLowerCase()}`} aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1}>{label}</button>)}
+  </div>
+  <section role="tabpanel" id="panel-brief" aria-labelledby="tab-brief" tabindex="0">
+    <p class="artifact-type">brief.json</p>
+    <h2>{brief.question}</h2>
+    <p>{brief.motivation}</p>
+    <h3>A useful finish line</h3>
+    <ul>{brief.success_criteria.map(x => <li>{x}</li>)}</ul>
+    <p class="explorer-boundary">No model, GPU or paid API. A known-answer workflow demonstration.</p>
+    <a class="artifact-source" href={`${base}toy-brief.json`}>Read the exact brief JSON ↗</a>
+  </section>
+  <section role="tabpanel" id="panel-results" aria-labelledby="tab-results" tabindex="0" hidden>
+    <p class="artifact-type">outputs/summary.json + paired-differences.svg</p>
+    <h2>An average effect, with individual counterexamples.</h2>
+    <div class="result-stats"><div><strong>+{summary.difference.toFixed(5)}</strong><span>mean paired MSE difference</span></div><div><strong>{summary.replicates}</strong><span>independent confirmation seeds</span></div></div>
+    <img src={`${base}toy-paired-differences.svg`} alt="Each dot is one confirmation seed's squared-error difference. The mean is positive, while four seeds lie below zero." width="760" height="380" loading="lazy" />
+    <p>Approximate 95% interval: [{summary.ci95_normal.map(x => x.toFixed(5)).join(', ')}]. Mean ±1.96 standard errors across seeds; not an exact small-sample guarantee.</p>
+    <a class="artifact-source" href={`${base}toy-summary.json`}>Read the exact summary JSON ↗</a>
+  </section>
+  <section role="tabpanel" id="panel-claims" aria-labelledby="tab-claims" tabindex="0" hidden>
+    <p class="artifact-type">paper/claims.json</p>
+    <h2>Keep the claim as narrow as the evidence.</h2>
+    {claims.map(claim => <article class="explorer-claim"><div><span class="artifact-type">{claim.claim_id}</span><span class:list={['claim-state', claim.status]}>{claim.status}</span></div><p>{claim.text}</p><details><summary>Evidence scope and references</summary><p>{claim.scope}</p><ul>{claim.limitations.map(x => <li>{x}</li>)}</ul><pre tabindex="0" aria-label="Evidence reference JSON">{JSON.stringify({ supporting: claim.supporting, contradicting: claim.contradicting }, null, 2)}</pre></details></article>)}
+    <a class="artifact-source" href={`${base}toy-claims.json`}>Read the exact claim ledger ↗</a>
+  </section>
+  <section role="tabpanel" id="panel-report" aria-labelledby="tab-report" tabindex="0" hidden>
+    <p class="artifact-type">paper/manuscript.md</p>
+    <h2>A reproducible toy comparison of two mean estimators</h2>
+    <p>This is a selected preview. The full generated manuscript includes the question, mathematical reference, frozen methods, results, claims, limitations and reproduction instructions.</p>
+    <table><thead><tr><th>Recomputed quantity</th><th>Value</th></tr></thead><tbody><tr><td>Sample-mean MSE</td><td>{summary.mean_mse.toFixed(8)}</td></tr><tr><td>Biased-estimator MSE</td><td>{summary.biased_mse.toFixed(8)}</td></tr><tr><td>Paired difference</td><td>{summary.difference.toFixed(8)}</td></tr></tbody></table>
+    <p>Read a claim, follow its content-addressed reference, then recompute. A deterministic pass verifies the recorded workflow; scientific judgment still matters.</p>
+    <pre tabindex="0" aria-label="Audit command"><code>python3 -m allagma campaign audit \
+  --study work/my-first-study --campaign toy-v1</code></pre>
+    <a class="artifact-source" href={`${base}toy-manuscript.md`}>Read the complete generated manuscript ↗</a>
+  </section>
+  <div class="explorer-footer"><span>Selected artifacts; no live computation in this browser.</span><a href={`${base}provenance.json`}>Source digests ↗</a></div>
+</div>
+<script>
+  document.querySelectorAll<HTMLElement>('.study-explorer').forEach(explorer => {
+    const tabs = Array.from(explorer.querySelectorAll<HTMLButtonElement>('[role="tab"]'));
+    function select(tab: HTMLButtonElement) {
+      for (const candidate of tabs) {
+        const selected = candidate === tab;
+        candidate.setAttribute('aria-selected', String(selected));
+        candidate.tabIndex = selected ? 0 : -1;
+        const panel = document.getElementById(candidate.getAttribute('aria-controls')!);
+        if (panel) panel.hidden = !selected;
+      }
+    }
+    for (const tab of tabs) {
+      tab.addEventListener('click', () => select(tab));
+      tab.addEventListener('keydown', event => {
+        const index = tabs.indexOf(tab);
+        let next;
+        if (event.key === 'ArrowRight') next = tabs[(index + 1) % tabs.length];
+        if (event.key === 'ArrowLeft') next = tabs[(index - 1 + tabs.length) % tabs.length];
+        if (event.key === 'Home') next = tabs[0];
+        if (event.key === 'End') next = tabs[tabs.length - 1];
+        if (next) { event.preventDefault(); select(next); next.focus(); }
+      });
+    }
+  });
+</script>
+<style>
+  .study-explorer { border: 1px solid var(--line); border-radius: 8px; background: var(--panel); overflow: hidden; }
+  .explorer-label, .explorer-footer { display: flex; justify-content: space-between; gap: 1rem; padding: 1rem 1.5rem; font-family: var(--sl-font-mono); font-size: .6rem; color: var(--muted); border-bottom: 1px solid var(--line); }
+  .explorer-tabs { display: flex; gap: .5rem; padding: .5rem 1.2rem 0; border-bottom: 1px solid var(--line); }
+  .explorer-tabs button { background: transparent; border: 0; border-bottom: 3px solid transparent; color: var(--muted); cursor: pointer; padding: .75rem .6rem; font: inherit; font-size: .85rem; }
+  .explorer-tabs button[aria-selected='true'] { color: var(--teal); border-bottom-color: var(--teal); font-weight: 650; }
+  [role='tabpanel'] { padding: 1.5rem; margin: 0; }[hidden] { display: none !important; }
+  .artifact-type { font: .65rem var(--sl-font-mono); color: var(--muted); margin: 0 0 .8rem; overflow-wrap: anywhere; }
+  h2 { font-size: 1.8rem; line-height: 1.25; margin: .5rem 0 1.1rem; }h3 { margin-top: 1.5rem; font-size: 1.1rem; }
+  p, li { font-size: .9rem; line-height: 1.65; }.explorer-boundary { color: var(--muted); }
+  .artifact-source { display: inline-block; font-size: .8rem; margin-top: 1rem; color: var(--teal); }
+  .result-stats { display: flex; gap: 2.5rem; flex-wrap: wrap; margin: 1.7rem 0; }.result-stats strong { display: block; font: 2.1rem var(--sl-font-mono); color: var(--teal); }.result-stats span { font-size: .75rem; color: var(--muted); }
+  img { display: block; width: 100%; height: auto; background: #fff; margin: 1rem 0; }
+  .explorer-claim { padding: 1rem 0; border-bottom: 1px solid var(--line); }.explorer-claim > div { display: flex; align-items: center; gap: 1rem; }.explorer-claim .artifact-type { margin: 0; }.explorer-claim p { margin: .8rem 0; }
+  details { font-size: .78rem; }summary { cursor: pointer; color: var(--teal); }pre { overflow: auto; max-height: 20rem; padding: 1rem; background: var(--paper); font-size: .68rem; }
+  .explorer-footer { border: 0; border-top: 1px solid var(--line); flex-wrap: wrap; }.explorer-footer a { color: var(--teal); }
+  @media (max-width: 500px) { .explorer-label { flex-wrap: wrap; gap: .3rem; }[role='tabpanel'] { padding: 1rem; }h2 { font-size: 1.5rem; }.explorer-tabs { padding-inline: .5rem; }.explorer-tabs button { font-size: .8rem; } }
+</style>

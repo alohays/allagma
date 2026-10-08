@@ -9,10 +9,26 @@ jobs:
   targeted:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
-      - uses: actions/setup-python@v5
+          sparse-checkout: |
+            allagma
+            adapters
+            contracts
+            methods
+            recipes
+            policies
+            profiles
+            templates
+            tools
+            conformance
+            examples
+            evals/context-retention
+            docs
+            media
+            .github
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.11'
       - name: Check affected modules and interfaces
@@ -23,12 +39,29 @@ jobs:
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+        with:
+          sparse-checkout: |
+            allagma
+            adapters
+            contracts
+            methods
+            recipes
+            policies
+            profiles
+            templates
+            tools
+            conformance
+            examples
+            evals/context-retention
+            docs
+            media
+            .github
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
       - run: python3 -m allagma acceptance --output build/acceptance
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always()
         with:
           name: allagma-acceptance

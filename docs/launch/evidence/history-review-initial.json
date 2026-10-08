@@ -1,0 +1,28 @@
+{
+  "category_counts": {
+    "email": 3949,
+    "home_path": 26014
+  },
+  "commits": 62,
+  "counts": {
+    "archive_members": 48945,
+    "binary_contents_pattern_scanned": 10063,
+    "blob_versions": 7560,
+    "commit_versions": 62,
+    "duplicate_contents": 27129,
+    "git_objects": 12354,
+    "gzip_members": 91,
+    "tar_archives": 18,
+    "unique_bytes": 8795819434,
+    "unique_contents": 29529,
+    "zip_archives": 934
+  },
+  "errors": [],
+  "head": "0b09633a35d857ae31ba9c1b34858860342212e4",
+  "limitations": "Pattern review cannot prove absence of secrets or certify legal rights. Binary files are pattern-scanned and ZIP/TAR members opened, but tensor/model/pickle contents are not executed. Review findings manually. Uncommitted files need a subsequent committed-tree scan.",
+  "multipart_archives": 12,
+  "scope": "All objects reachable from all local refs, including historical commit metadata; all distinct multipart TAR combinations in their commit trees. Pattern matches never export matched values.",
+  "seconds": 274.419953542063,
+  "owner_decision": "Keep full history; explicitly accepted author email, local home-directory paths, and native session IDs for later launch review.",
+  "manual_disposition": "Only email and home-path categories matched. Original author metadata and upstream dependency author/test-fixture metadata are retained; no credential-pattern matches were observed. This pattern audit does not prove absence of all secrets."
+}
