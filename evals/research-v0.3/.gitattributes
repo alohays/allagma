@@ -1,3 +1,10 @@
 # Frozen control/source copies are verbatim scientific evaluation evidence.
 frozen/source/studies/core-culp/reference/** -text -whitespace
 runs/*/broker/requests/*/sources/** -text -whitespace conflict-marker-size=128
+# Process streams are original evidence, including their exact trailing lines.
+runs/*/broker/requests/*/stdout.txt -text -whitespace
+runs/*/broker/requests/*/stderr.txt -text -whitespace
+runs/*/resources/jobs/*/stdout.txt -text -whitespace
+runs/*/resources/jobs/*/stderr.txt -text -whitespace
+runs/*/package/terminal-queue/.compute/responses/*-stdout.txt -text -whitespace
+runs/*/package/terminal-queue/.compute/responses/*-stderr.txt -text -whitespace
