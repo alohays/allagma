@@ -67,6 +67,10 @@ passed these checks; exit 1 means findings or a limit stopped verification; exit
 2 means invalid invocation. The computed entry hash identifies the inspected
 bytes but is not a trusted signature. Unreferenced files, undeclared hash maps,
 campaign completeness and lock freshness are outside this command's coverage.
+Only objects declaring `path`, `sha256`, `media_type` and `retention` are treated
+as artifact references. An untyped transport manifest's path/hash metadata is
+not followed; incomplete references inside typed record fields still fail their
+record contract.
 
 Inspect a quiescent copy: there is no atomic snapshot or mutation lock. The
 command does not import study code, execute helpers, contact a service, append

@@ -57,6 +57,19 @@ class EvidenceVerification(WorkspaceTest):
         self.assertEqual(result["checked_references"], 0)
         self.assertEqual([item["location"] for item in result["findings"]], [f"$.supporting[{i}]" for i in range(4)])
 
+    def test_untyped_transport_metadata_is_not_a_declared_reference(self):
+        # Transport hash maps are deliberately outside graph coverage, even
+        # when they resemble part of an ArtifactRef. Do not read that path.
+        write_json(self.work / "manifest.json", {
+            "files": [{"path": "not-materialized.bin", "sha256": "0" * 64, "size_bytes": 4}]})
+        write_json(self.work / "claim.json", claim([reference(self.work, self.work / "manifest.json")]))
+        result = verify_evidence(self.work, "claim.json")
+        self.assertEqual(result["status"], "pass", result["findings"])
+        self.assertEqual(result["checked_references"], 1)
+        # The same incomplete value in a typed reference field is invalid.
+        write_json(self.work / "claim.json", claim([{"path": "raw.json", "sha256": "0" * 64}]))
+        self.assertEqual(verify_evidence(self.work, "claim.json")["status"], "fail")
+
     def test_invalid_json_records_and_empty_roots_fail_closed(self):
         for index, text in enumerate(("[]", "{}", '{"record_type":"Unknown"}', '{"x":1,"x":2}', '{"x":NaN}', '{"x":1e999}')):
             path = self.work / f"bad-{index}.json"

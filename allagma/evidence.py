@@ -75,7 +75,11 @@ def verify_evidence(study, record, *, max_files=10000, max_bytes=256 * 1024 * 10
                         counts["validated_records"] += 1
                     except (AllagmaError, ValueError, TypeError, KeyError) as exc:
                         finding("invalid-record", origin, location, exc)
-                if {"path", "sha256"} <= value.keys():
+                # Generic transport manifests can contain path/hash metadata
+                # without declaring an ArtifactRef. Record schemas catch
+                # incomplete references in typed fields; untyped hash maps
+                # remain outside this inspector's declared graph coverage.
+                if {"path", "sha256", "media_type", "retention"} <= value.keys():
                     try:
                         validate(value, ref_schema)
                         identity = (value["path"], value["sha256"], value["media_type"])
