@@ -20,9 +20,9 @@ download: that includes retained research evidence. A future artifact service
 may hold hash-addressed copies, but no external hosting account or storage bill
 is required by this launch package.
 
-The prepared source archive is about **132 KB compressed**. It passed full
+The prepared source archive is about **134 KB compressed**. It passed full
 I1–I5 acceptance and all 113 conformance tests after extraction into a new
-directory. The [source-distribution receipt](evidence/source-distribution.json)
+directory. The [hosted source-distribution receipt](evidence/hosted-release-artifact.json)
 records the exact source commit, bytes, digest and validation scope. Documentation
 links still refer to the full repository; this archive is the runnable core and
 conformance kit, not a copy of the complete evidence repository or site.

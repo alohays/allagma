@@ -24,6 +24,6 @@ attempt has been changed.
   scientific output. The missing final package index remains an explicit incomplete
   handoff, not a successful native qualification or an altered comparison outcome.
 
-Final publication/CI receipts will identify the pushed commit and confirm that
-repository visibility remains private. Public Pages, releases and announcements
+The publication and hosted CI receipts identify the verified implementation
+commit and confirm that repository visibility remains private. Public Pages, releases and announcements
 are separate later owner actions.

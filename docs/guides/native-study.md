@@ -57,6 +57,8 @@ The [recorded observation](../launch/evidence/native-onboarding-initial.json) an
 [controller arithmetic check](../launch/evidence/native-arithmetic.json) preserve
 both facts. This extra probe is separate from the twelve-session release
 evaluation and is not advertised as a completed native handoff.
+The owner [chose to keep the current model-usage limit](../launch/evidence/native-budget-decision.json)
+and retain that incomplete handoff as a measured limitation.
 
 For a verified complete first result, use the [offline tutorial](first-study.md).
 For a native session, choose a finite model-work budget appropriate to your

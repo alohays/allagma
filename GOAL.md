@@ -122,6 +122,14 @@ scope. Commit coherent increments as work proceeds; push to `origin` after the
 launch package is complete. Keep repository visibility private. Public Pages
 activation, release publication, and announcements remain later owner actions.
 
+Owner decisions for public-launch preparation on 8 October 2026: preserve the
+full Git history, with author email, local home-directory paths and native
+session IDs documented for launch review. Keep the additional native onboarding
+probe at its existing 15-minute plus 5-minute model-session limits; do not run
+another native continuation. Record the incomplete final handoff as a measured
+limitation, separately from its verified science and the completed frozen
+release qualification.
+
 ## Prior implementation acceptance
 
 See [implementation status](docs/implementation-status.md) for the acceptance
