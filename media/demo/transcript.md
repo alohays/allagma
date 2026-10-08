@@ -2,7 +2,7 @@
 
 Continuous capture of the real offline CLI through the supplied recording workbench. Final chapter shows explicitly labeled retained native EMA results. No accelerated computation or simulated model reasoning.
 
-Narration is synthesized locally with the macOS Samantha system voice. The recording workbench is a shipped demo utility, not the native agent UI. Displayed command paths are abbreviated. No computation is accelerated; scene navigation is automated. The final EMA figure is machine-generated using AI Scientist-adapted code, with its separate license and source disclosure retained.
+Narration uses Kokoro's af_heart voice, synthesized locally with Apache-2.0 model weights and the MIT-licensed kokoro-onnx engine. See [narration notices](NARRATION-NOTICES.md). The recording workbench is a shipped demo utility, not the native agent UI. Displayed command paths are abbreviated. No computation is accelerated; scene navigation is automated. The final EMA figure is machine-generated using AI Scientist-adapted code, with its separate license and source disclosure retained.
 
 ## 00:00:00.072 — Brief
 

@@ -146,6 +146,13 @@ The existing decisions to retain historical metadata and cap the additional
 native onboarding probe remain in force. Do not run another native model
 continuation or add project model overrides.
 
+Final-audit owner decisions on 8 October 2026: replace the demo narration with
+a voice that permits redistribution. The current movie now uses Kokoro's
+Apache-2.0 model and MIT-licensed ONNX engine. **Keep all historical commits
+unchanged and finish the audit with clearance of the older Apple-voice videos
+listed as a public-launch blocker.** Do not rewrite history or change repository
+visibility to resolve that blocker without a later owner instruction.
+
 ## Prior implementation acceptance
 
 See [implementation status](docs/implementation-status.md) for the acceptance

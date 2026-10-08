@@ -1,0 +1,17 @@
+{
+  "engine": "kokoro-onnx",
+  "engine_version": "0.6.1",
+  "engine_license": "MIT",
+  "engine_source": "https://github.com/thewh1teagle/kokoro-onnx",
+  "model": "Kokoro-82M v1.0",
+  "model_license": "Apache-2.0",
+  "model_card": "https://huggingface.co/hexgrad/Kokoro-82M/blob/f3ff3571791e39611d31c381e3a41a3af07b4987/README.md",
+  "model_url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.1/kokoro-v1.0.onnx",
+  "model_sha256": "beb0d1848dee9a49da392cc3df26958d46cfa35d321edf434f52949153f0df3a",
+  "voices_url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.1/voices-v1.0.bin",
+  "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+  "voice": "af_heart",
+  "language": "en-us",
+  "speed": 1.1,
+  "execution": "Local CPU, two intra-operation threads and one inter-operation thread. No paid service, voice cloning or macOS system voice."
+}

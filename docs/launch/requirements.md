@@ -4,6 +4,13 @@ The authoritative scope is the public-launch goal in [GOAL.md](../../GOAL.md).
 The baseline is release source `608f34e276aefc00c39ffb6f28c9c63bd420af95`.
 No source qualification is inferred for later edits. The repository remains private.
 
+**Final-audit correction:** public release is blocked by the two historical
+Apple-voice video versions. The owner chose to retain that history unchanged.
+The current movie uses Kokoro with recorded source licenses; it does not clear
+the older recordings. The [publication review](publication-review.md) and
+[owner actions](owner-actions.md) take precedence over the earlier preparation
+receipts below. Technical preparation can pass while publication remains blocked.
+
 | Gate | Required outcome | Status and evidence |
 | --- | --- | --- |
 | L1 Positioning | Precise README, opening visual, use cases, outputs, verified first result, progressive architecture and honest support boundaries | Pass: README and visuals; clean local onboarding and the [actual remote quickstart](evidence/remote-onboarding.json) pass |
@@ -12,7 +19,7 @@ No source qualification is inferred for later edits. The repository remains priv
 | L4 Documentation | Astro Starlight, landing, search, full first study, guides, CLI/concepts, three real studies, limitations, troubleshooting, contributing; canonical content reused | Pass: 38 built pages, canonical map and generated CLI help; production search, every canonical route and mobile checks pass |
 | L5 Deployment | Actual `/allagma/` Pages base, automated build/link checks, fork-safe CI, deployment prepared without activation, runnable local preview | Pass: exact sparse checkout, production base and all hosted docs/conformance/link/release-preparation jobs; [publication receipt](evidence/publication.json) |
 | L6 Community | Description/topics/social preview, citation, roadmap, release/support/security/contribution docs, issue/PR forms, Discussions plan, concrete starter tasks and launch copy | Pass for preparation: metadata configured, social/citation/community assets ready, [owner activation actions](owner-actions.md) explicit; no public activation |
-| L7 Publication review | Tracked content and full reachable history reviewed for secrets/private material and redistribution; frozen records preserved, practical artifacts/distribution | Pass within documented scope: [full history](evidence/history-review-final-source.json), [later delta](evidence/history-review-delta.json), accepted metadata exposure and [license inventory](evidence/license-inventory.json); frozen science/core unchanged |
+| L7 Publication review | Tracked content and full reachable history reviewed for secrets/private material and redistribution; frozen records preserved, practical artifacts/distribution | Audit complete, publication blocked: retained historical Apple-voice recordings lack clearance. Current narration replaced; source packaging now excludes all uncommitted files. See [publication review](publication-review.md). Earlier secret scans and accepted metadata policy remain valid within their scope |
 | L8 Validation | Clean-checkout onboarding, desktop/mobile/browser/keyboard/search/media/link/command/production verification; actual repairs and retained evidence | Pass: I1–I5 and 113 tests, [extracted source qualification](evidence/source-distribution-final.json), [14 browser checks](evidence/browser-final.json), independent captured-toy math. The extra native probe remains explicitly incomplete at its model-wall-time limits |
 | L9 Handoff | Coherent commits and final push, private visibility confirmed, exact owner actions, full requirement-by-requirement completion audit | Pass: coherent commits and private push, four successful hosted workflows, remote onboarding, runnable preview and explicit owner actions; final bookkeeping commit is checked separately |
 

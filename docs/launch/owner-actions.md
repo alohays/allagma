@@ -4,6 +4,15 @@ Preparation does not authorize activation. Keep the repository private until
 the owner chooses to launch. Source commits, preview artifacts and local release
 assets do not change visibility or create a public release.
 
+**Public launch is blocked by historical audio clearance.** The final audit
+replaced the current demo's Apple system-voice narration with Kokoro, but two
+earlier narrated video versions remain reachable in Git, including the existing
+pull-request history. On 8 October 2026 the owner explicitly chose to preserve
+that history unchanged and finish the audit with this blocker. Do not make this
+repository public until those historical recordings are cleared for sharing or
+a separately authorized publication/history strategy resolves their exposure.
+The earlier decision to retain personal metadata does not grant audio rights.
+
 ## Review the prepared package
 
 Read the [launch evidence ledger](requirements.md),
@@ -20,7 +29,8 @@ Open `http://127.0.0.1:4321/allagma/`. The Python core does not need Node. Read
 
 1. **Change repository visibility** to public only when the owner is ready.
    The working repository is `alohays/allagma`; no mirror or history replacement
-   is required by the selected metadata policy.
+   is required by the selected metadata policy. The historical audio blocker
+   above must be resolved separately before changing visibility.
 2. **Enable GitHub Pages with GitHub Actions as its source.** The configuration
    uses `https://alohays.github.io/allagma/`. Set the repository Actions variable
    `ALLAGMA_PUBLIC_LAUNCH` to the exact string `true`. In the `github-pages`

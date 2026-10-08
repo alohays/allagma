@@ -1,5 +1,11 @@
 # Publication review
 
+**Final audit: historical audio clearance blocks public launch.** The current
+demo has been replaced with Kokoro narration, but the owner has explicitly
+chosen to keep the two older Apple-voice video versions in private Git history
+unchanged. Do not make the repository public until that separate issue is
+resolved. This supersedes the earlier L7 publication-readiness assessment.
+
 The repository remains private while the public-launch package is prepared.
 This review covers the tracked tree, reachable Git history and retained archives;
 it must be completed before the later visibility change. The scan is not a
@@ -9,8 +15,8 @@ guarantee that no secret or redistribution issue exists.
 opens ZIP/TAR members, and reassembles distinct multipart archives from historical
 trees. It records match categories, object identities and line numbers without
 copying potentially sensitive values into its report. Binary contents receive
-pattern scanning; they are not executed. A final receipt and manual disposition
-will be recorded in the launch evidence directory.
+pattern scanning; they are not executed. Receipts and manual dispositions
+are recorded in the launch evidence directory.
 
 ## Redistribution boundaries already identified
 
@@ -45,9 +51,9 @@ gap was corrected, with its original log retained locally.
 
 The matched categories cover accepted owner metadata and upstream dependency
 author/test-fixture metadata. Binary content was pattern-scanned; scientific
-arrays were not executed as code. A final scan after the launch commits and
-manual redistribution inventory remain required. No scan alone certifies
-publication safety.
+arrays were not executed as code. This was an initial checkpoint; the later
+historical review and manual redistribution inventory follow below. No scan
+alone certifies publication safety.
 
 ## Manual redistribution inventory
 
@@ -87,3 +93,26 @@ prefix, with no matches. Curated capture-state previews omit that operational
 field and record the transformation; raw capture evidence and the full Git
 history remain retained. The authoritative limitations of pattern scanning and
 the accepted historical metadata exposures still apply.
+
+## Final audit correction: narration rights
+
+The earlier review incorrectly treated not redistributing a voice model as
+sufficient for sharing its synthesized output. Apple's
+[macOS Tahoe license, section 2F](https://www.apple.com/legal/sla/docs/macOSTahoe.pdf)
+restricts system-voice use to personal, noncommercial projects and expressly
+limits public sharing. The recording host uses macOS 26.6.2. This audit therefore
+does not clear the old Samantha-narrated MP4 files for public redistribution.
+
+The current film uses the Apache-2.0 **Kokoro-82M v1.0 / af_heart** model with
+the MIT-licensed **kokoro-onnx 0.6.1** engine. Its
+[source notices](../../media/demo/NARRATION-NOTICES.md), model/voice hashes,
+full Apache license and updated captions accompany the film. The H.264 video
+stream is byte-identical to the previous corrected film; only narration,
+caption timing and related metadata changed.
+
+The superseded MP4 versions were introduced at `c41d9b6` and `4e67359`.
+They remain reachable through current branches and the existing GitHub
+pull-request refs. Replacing the working-tree movie does not remove them.
+The owner chose **keep history unchanged and report historical audio clearance
+as a public-launch blocker**. No history rewrite, public activation or rights
+clearance is claimed by this audit.

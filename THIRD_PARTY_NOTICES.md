@@ -77,9 +77,14 @@ The workflow graphics, mark and social
 preview are original Allagma assets; uv and marimo supplied editorial inspiration,
 with no copied branding or graphics.
 
-The flagship film captures actual local software. Narration is synthesized using
-the installed macOS Samantha voice; no voice model or operating-system asset is
-redistributed. The film's final chapter and `media/evidence/ema-r07.png` reuse the
+The flagship film captures actual local software. Narration is synthesized
+locally with Kokoro-82M v1.0's `af_heart` voice (Apache-2.0 model) and
+`kokoro-onnx` (MIT engine). The model and rendering dependencies are not
+redistributed in the film or core. The [narration notices](media/demo/NARRATION-NOTICES.md)
+retain pinned source links, attributions and a full Apache license copy.
+Earlier private Git history retains superseded Apple-voice renders; the
+publication review records that separate history issue.
+The film's final chapter and `media/evidence/ema-r07.png` reuse the
 machine-generated EMA figure produced with AI Scientist-adapted code. The full
 study license accompanies that figure and the [video distribution](media/demo/EMA-LICENSE.txt),
 and the video, transcript and site disclose the reuse and machine generation.
