@@ -1,0 +1,128 @@
+{
+  "attempt_id": "iris-a001",
+  "attempt_number": 1,
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "campaign_id": "culp-v1",
+  "command": [
+    ".venv/bin/python",
+    "study/runner.py",
+    "--dataset",
+    "iris",
+    "--output",
+    "raw/iris-a001"
+  ],
+  "data_revision": "df12459eae6e3ae115b0b115c2cd38102c3a21c2232962a5dbf68ebed64d520f",
+  "ended_at": "2026-10-08T05:55:28.235974+00:00",
+  "environment": {
+    "broker": "inputs/compute.py",
+    "broker_response": {
+      "media_type": "application/json",
+      "path": "evidence/broker/iris-a001/response.json",
+      "retention": "retained",
+      "sha256": "246082fb0873962b6a52907d3607235b52fe1f48cbe95ed7cf7bbb51fc80fbf9"
+    },
+    "device": "cpu",
+    "metadata": {
+      "media_type": "application/json",
+      "path": "provenance/environment.json",
+      "retention": "retained",
+      "sha256": "0c40740ca89594b63393aafd2f21ff0a6a52f3c04214d86628d321b537e2fcf3"
+    },
+    "request_id": "8420c97991f94b088b29f236a151a623"
+  },
+  "error": {
+    "kind": "controlled_interruption",
+    "message": "See authoritative broker response; this attempt remains permanent history."
+  },
+  "exit_code": -15,
+  "experiment_id": "iris",
+  "inputs": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/runs/iris/spec.json",
+      "retention": "retained",
+      "sha256": "966b554158a61d275bc1936ccbb373f75b864ec239714b3a257292abf1523390"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/protocol.json",
+      "retention": "retained",
+      "sha256": "8a8625c767725603567d8164d1df52cb2c75e3c870e49ecd1023dd5e8119e4c2"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/code-manifest.json",
+      "retention": "retained",
+      "sha256": "d9aaeca8758db0be6ec5cb1d8b221421713991e92bbdc52108f52cec984a4888"
+    },
+    {
+      "media_type": "application/json",
+      "path": "provenance/source-manifest.json",
+      "retention": "retained",
+      "sha256": "df12459eae6e3ae115b0b115c2cd38102c3a21c2232962a5dbf68ebed64d520f"
+    }
+  ],
+  "model_revision": null,
+  "outputs": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/broker/iris-a001/client.stderr.txt",
+      "retention": "retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/broker/iris-a001/client.stdout.txt",
+      "retention": "retained",
+      "sha256": "246082fb0873962b6a52907d3607235b52fe1f48cbe95ed7cf7bbb51fc80fbf9"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/broker/iris-a001/launch.json",
+      "retention": "retained",
+      "sha256": "0f2d32ba2cd2a6f21424d7d47133db86519ff21f060628532edce7fa7f931ae7"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/broker/iris-a001/request.json",
+      "retention": "retained",
+      "sha256": "9f79aafa847e9cb0af81c44a380c539e3421e9070ce16398fd5fbccb4f496f99"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/broker/iris-a001/response.json",
+      "retention": "retained",
+      "sha256": "246082fb0873962b6a52907d3607235b52fe1f48cbe95ed7cf7bbb51fc80fbf9"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/broker/iris-a001/stderr.txt",
+      "retention": "retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/broker/iris-a001/stdout.txt",
+      "retention": "retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/json",
+      "path": "raw/iris-a001/started.json",
+      "retention": "retained",
+      "sha256": "160d25fe31f77ae2d4991ea782f079ce1664de2a462ffcf348b3fd8512651788"
+    }
+  ],
+  "protocol_revision": "culp-protocol-v1",
+  "record_type": "RunRecord",
+  "run_id": "iris",
+  "schema_version": "0.2",
+  "split": "confirmation",
+  "started_at": "2026-10-08T05:55:26.900588+00:00",
+  "status": "interrupted",
+  "usage": {
+    "money_usd": 0,
+    "tokens": 0,
+    "wall_seconds": 1.1408324579242617
+  }
+}

@@ -1,0 +1,325 @@
+{
+  "excludes": "Final submission/manifest bookkeeping and future broker receipts; none alter scientific content",
+  "files": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "REPORT.md",
+      "retention": "retained",
+      "sha256": "2a1f91bd92533d5493c9cf5b5f2522f3e06b62de51e1ceae7021faaf599619bd"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "REPRODUCE.md",
+      "retention": "retained",
+      "sha256": "0023f88f6b9b5085f8d8d18594e55c7b98a718c78282865e48c1aab7078e7858"
+    },
+    {
+      "media_type": "application/json",
+      "path": "analysis/main/report.json",
+      "retention": "retained",
+      "sha256": "e5d07d5a6b2983fdd14a6cd9364fc9c88210d12d73da7df0a958fec3275d42c5"
+    },
+    {
+      "media_type": "application/json",
+      "path": "analysis/main/results.json",
+      "retention": "retained",
+      "sha256": "1abebb11906fb12cf5ab93cb9fad8478e8624a66147ac88610796c496729ae4c"
+    },
+    {
+      "media_type": "application/json",
+      "path": "analysis/recomputed/comparison.json",
+      "retention": "retained",
+      "sha256": "009e3b621c664cc158d151d5c79fe57c45551b43893d38cc01cfb6bc7800f218"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/analysis-record.json",
+      "retention": "retained",
+      "sha256": "ad915b8dbb6d1232144c2ee883931fd3683860a94ff692c84ee1949c94f08391"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/claims/fresh-reproduction.json",
+      "retention": "retained",
+      "sha256": "3f2cdd7b3ffa5c9424c6359dd2fec1ffc0c8bc83f5ef2867bf8287dc4eee03a1"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/claims/graph-loops.json",
+      "retention": "retained",
+      "sha256": "cc016b91382beac56fa53985af77bace24edfad4b969fb74f64ed69e26eaad9e"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/claims/interruption-recovery.json",
+      "retention": "retained",
+      "sha256": "6d98db8390ac1d57ef889dcaa55f2a8c338cc811d3c0ac41a58c3ce9cc92b1fb"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/claims/iris-aa.json",
+      "retention": "retained",
+      "sha256": "7e1c3a9449478a2d45137c0ba576b8000e4e22fc12eb4cd913cb7f12090ea867"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/claims/iris-cn.json",
+      "retention": "retained",
+      "sha256": "f593404715408baa21e5f37f4fb77316eaa6d4342ab029fcdad88a3ebbea7c4a"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/claims/upstream-labels.json",
+      "retention": "retained",
+      "sha256": "06562df15623a8ba16c03ae67d8b3a5d0e01fcd004c277639158c58cf8613695"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/claims/wine-aa.json",
+      "retention": "retained",
+      "sha256": "5699ce058d20e5ee01916d27b4981fc037a08849b8397b712d62fdb03f89ba26"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/claims/wine-cn.json",
+      "retention": "retained",
+      "sha256": "94396618abfc6aac60118bda0324bd672582be0d8a27a860a3d1b42afeb42fcb"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/claims/zoo-aa.json",
+      "retention": "retained",
+      "sha256": "91418f10d3d4f7067e650da627d53ddcf7228eadcd4c1481cdaa76a8397a39bf"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/claims/zoo-cn.json",
+      "retention": "retained",
+      "sha256": "ed7e06a1a13ca192cfbddf602bd5f54b7bce47e00e8d6cad3d718fbef52834af"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/code-manifest.json",
+      "retention": "retained",
+      "sha256": "d9aaeca8758db0be6ec5cb1d8b221421713991e92bbdc52108f52cec984a4888"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "campaigns/culp-v1/lock.yaml",
+      "retention": "retained",
+      "sha256": "1a9c2031eaf965f1a41a264dbe7cb8a5cd1aade39764b84c087a18a4ca0c994f"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/protocol.json",
+      "retention": "retained",
+      "sha256": "8a8625c767725603567d8164d1df52cb2c75e3c870e49ecd1023dd5e8119e4c2"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/critique.json",
+      "retention": "retained",
+      "sha256": "a1d0b0279a552a64f55b80d1b3a3509e2fa4cd87e0df85539973e07bebf32d69"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/literature-map.json",
+      "retention": "retained",
+      "sha256": "24dc87453c95ae94705b9cf536e11850aea6a744b8057ff4e663e051ce9a52d0"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/pilot/qualification.json",
+      "retention": "retained",
+      "sha256": "9be5d921e60a048fca3e1e0debf3f789fee52eeba7b06b8d0d6189ba62caf207"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/raw-manifest.json",
+      "retention": "retained",
+      "sha256": "3b369075dbf5b908844e4b816ce6ee8f05ea0c25f717c110aae27ac9a537f7d5"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/recovery.json",
+      "retention": "retained",
+      "sha256": "789507b2b3464941d88119b86b3e61c96861b9e391129c937ceb55d4a2485ce5"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/verification.json",
+      "retention": "retained",
+      "sha256": "afb3ff87d3a8b125ceaad7e9c6118c5896fbbc7b2a0222e496a7a4fe3f7d37c1"
+    },
+    {
+      "media_type": "application/json",
+      "path": "measurements.json",
+      "retention": "retained",
+      "sha256": "5cd653153131a5df563184abe308689b23a50c20406ca245e507d175c81aca62"
+    },
+    {
+      "media_type": "application/json",
+      "path": "provenance/environment.json",
+      "retention": "retained",
+      "sha256": "0c40740ca89594b63393aafd2f21ff0a6a52f3c04214d86628d321b537e2fcf3"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "provenance/platform.patch",
+      "retention": "retained",
+      "sha256": "12d3f50e426b9052024700af67b7b8b15d630c85809df6fa6c9653b5fed6bec0"
+    },
+    {
+      "media_type": "application/json",
+      "path": "provenance/source-manifest.json",
+      "retention": "retained",
+      "sha256": "df12459eae6e3ae115b0b115c2cd38102c3a21c2232962a5dbf68ebed64d520f"
+    },
+    {
+      "media_type": "application/json",
+      "path": "recomputations/verification/comparison.json",
+      "retention": "retained",
+      "sha256": "009e3b621c664cc158d151d5c79fe57c45551b43893d38cc01cfb6bc7800f218"
+    },
+    {
+      "media_type": "application/json",
+      "path": "report.json",
+      "retention": "retained",
+      "sha256": "e5d07d5a6b2983fdd14a6cd9364fc9c88210d12d73da7df0a958fec3275d42c5"
+    },
+    {
+      "media_type": "application/json",
+      "path": "reproductions/verification/comparison.json",
+      "retention": "retained",
+      "sha256": "4510dc735d69022f3be290aac98d1fcb155db06a2b403e3e2933ee154114e40a"
+    },
+    {
+      "media_type": "application/json",
+      "path": "reproductions/verification/complete.json",
+      "retention": "retained",
+      "sha256": "99f95cb09c3fb322fe66392016d99b97e90fb61b136dda9245c7124f287929a0"
+    },
+    {
+      "media_type": "application/json",
+      "path": "reproductions/verification/vanilla/verification.json",
+      "retention": "retained",
+      "sha256": "3696f4d4d09054d2176a65f6e9d6e4e959446255de653a76b555a8dbf74bbe1e"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "requirements-lock.txt",
+      "retention": "retained",
+      "sha256": "8a4f478a2a1ce095462c30f32d304cd8d3f1575c04878cd24b457ba61491d17e"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/analyze.py",
+      "retention": "retained",
+      "sha256": "cf0515d0676116818e2bd96b47f979ec35259ef0938513455fca9530833d190c"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/broker_run.py",
+      "retention": "retained",
+      "sha256": "e43d79533fb8f69cc8b80c956a97bb7cfa287f944560481c903c097047d470d6"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/collect.py",
+      "retention": "retained",
+      "sha256": "f8e4df4f9fa2455203b181b31b51ff4db53b9c09d178f332226c9d49d65e4d24"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/common.py",
+      "retention": "retained",
+      "sha256": "f2f75cde8bb6979186809d5d68450371a57947b2ee8114cbffaef6924711ce1c"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/compare_reproduction.py",
+      "retention": "retained",
+      "sha256": "458027f31f8447b22412f2c3921a3c3b8aef459335a9ef6e2b76a461c05177af"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/environment.py",
+      "retention": "retained",
+      "sha256": "62af87f3d365efd1a419bd06bb75ba882e132c8a7ee82323178a03acfbe19732"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/final_check.py",
+      "retention": "retained",
+      "sha256": "66234e47a9961eb1c14d450fba22506219818d144def40d07ac95a5dcaea8fdc"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/finalize.py",
+      "retention": "retained",
+      "sha256": "6a528a3ab979f9f19d7cc295527d112c4a7e973da7b470cbe477f623324f3c4e"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/pilot.py",
+      "retention": "retained",
+      "sha256": "f6afb8d90b1cb7d2e806b92eaec4f1e8a0047c19adbc2e779a85511ddea950f1"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/prepare_campaign.py",
+      "retention": "retained",
+      "sha256": "2d4cc1091f07c045305a84658d2c8d1b80192b647ac43eec18cc3451acfbb1ef"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/prepare_sources.py",
+      "retention": "retained",
+      "sha256": "8f60312584729c73d1235d192a9bdb6478ba2122dfb45313f1d09962b9d0b1e5"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/recompute.py",
+      "retention": "retained",
+      "sha256": "23f700eee0b1a2e512f4d2832b3aae18fd899e868c1c2b68383c7dc9b66a693c"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/records.py",
+      "retention": "retained",
+      "sha256": "db6a6617d0d4dff75cb2c53e400d76f26da0e4658a850fe546f3ff1eb62f2e6a"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/reproduce.py",
+      "retention": "retained",
+      "sha256": "cc52c1aea178e8493cf5d16ca6e6853d4b4d4eb7a3735825d2cb77bd0df348b5"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/runner.py",
+      "retention": "retained",
+      "sha256": "d5aa19d302c366c579d1ecebad7a5c3a2ee7a2c7b8b178a494dfe4923372c966"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/vanilla.py",
+      "retention": "retained",
+      "sha256": "084ed4d0547cb0dd0dcce17b3cd2951ddc99e446327ac7b085c466e4a85f2000"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/verify.py",
+      "retention": "retained",
+      "sha256": "f9696423e99d1d1992e1bce5d5942d468a378f8abde8257444cd78ef8ea1d2fd"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/write_report.py",
+      "retention": "retained",
+      "sha256": "3f3b7f84a3f82bb40a7479a3d607d598a3676bd5ca4f2afc861b97c951d39dd5"
+    }
+  ],
+  "format": "culp-review-material-v1",
+  "scope": "Scientific source, outputs, methods, manuscript, reproduction entrypoints and ten scoped claims at these exact digests"
+}

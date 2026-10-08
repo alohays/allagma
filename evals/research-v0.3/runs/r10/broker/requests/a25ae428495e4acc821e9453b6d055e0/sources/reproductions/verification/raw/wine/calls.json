@@ -1,0 +1,86 @@
+[
+  {
+    "arrays": {
+      "media_type": "application/octet-stream",
+      "path": "reproductions/verification/raw/wine/call-00.npz",
+      "retention": "retained",
+      "sha256": "606d19a735c5ce5805ea61bc2f23674809562592c010b4cb17c4d7052ff09709"
+    },
+    "call_index": 0,
+    "dataset": "wine",
+    "executed_predictor": "CN",
+    "k": 12,
+    "n_jobs": 1,
+    "printed_label": "CN",
+    "similarity": "manhattan",
+    "source": {
+      "media_type": "application/octet-stream",
+      "path": "work/capsule/code/wine_sample.py",
+      "retention": "retained",
+      "sha256": "8ed53177b4ba126387d9471469498735434a3fd2dfebd539bd80f58999ac9b81"
+    }
+  },
+  {
+    "arrays": {
+      "media_type": "application/octet-stream",
+      "path": "reproductions/verification/raw/wine/call-01.npz",
+      "retention": "retained",
+      "sha256": "606d19a735c5ce5805ea61bc2f23674809562592c010b4cb17c4d7052ff09709"
+    },
+    "call_index": 1,
+    "dataset": "wine",
+    "executed_predictor": "AA",
+    "k": 12,
+    "n_jobs": 1,
+    "printed_label": "AA",
+    "similarity": "manhattan",
+    "source": {
+      "media_type": "application/octet-stream",
+      "path": "work/capsule/code/wine_sample.py",
+      "retention": "retained",
+      "sha256": "8ed53177b4ba126387d9471469498735434a3fd2dfebd539bd80f58999ac9b81"
+    }
+  },
+  {
+    "arrays": {
+      "media_type": "application/octet-stream",
+      "path": "reproductions/verification/raw/wine/call-02.npz",
+      "retention": "retained",
+      "sha256": "606d19a735c5ce5805ea61bc2f23674809562592c010b4cb17c4d7052ff09709"
+    },
+    "call_index": 2,
+    "dataset": "wine",
+    "executed_predictor": "RA",
+    "k": 12,
+    "n_jobs": 1,
+    "printed_label": "RA",
+    "similarity": "manhattan",
+    "source": {
+      "media_type": "application/octet-stream",
+      "path": "work/capsule/code/wine_sample.py",
+      "retention": "retained",
+      "sha256": "8ed53177b4ba126387d9471469498735434a3fd2dfebd539bd80f58999ac9b81"
+    }
+  },
+  {
+    "arrays": {
+      "media_type": "application/octet-stream",
+      "path": "reproductions/verification/raw/wine/call-03.npz",
+      "retention": "retained",
+      "sha256": "af3f4b6a201c6c97efa5c1b5b6a6daaf13c064aa56934e76f0adaa869f322938"
+    },
+    "call_index": 3,
+    "dataset": "wine",
+    "executed_predictor": "CS",
+    "k": 12,
+    "n_jobs": 1,
+    "printed_label": "CS",
+    "similarity": "manhattan",
+    "source": {
+      "media_type": "application/octet-stream",
+      "path": "work/capsule/code/wine_sample.py",
+      "retention": "retained",
+      "sha256": "8ed53177b4ba126387d9471469498735434a3fd2dfebd539bd80f58999ac9b81"
+    }
+  }
+]

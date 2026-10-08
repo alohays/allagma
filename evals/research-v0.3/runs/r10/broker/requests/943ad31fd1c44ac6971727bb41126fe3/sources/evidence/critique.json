@@ -1,0 +1,72 @@
+{
+  "review_type": "author scientific and reproducibility critique, with deterministic verification",
+  "independent_peer_review": false,
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "major interpretation limitation",
+      "finding": "Iris and Zoo print CN/AA labels but actually call CS on all loop iterations.",
+      "evidence": ["work/capsule/code/iris_sample.py", "work/capsule/code/zoo_sample.py", "raw/iris-a002/calls.json", "raw/zoo-a001/calls.json"],
+      "resolution": "Preserved original scoring and labels; exact requested values are reported as printed outputs with explicit actual-predictor columns and caveats. No algorithm-corrected answers substituted.",
+      "status": "disclosed; upstream limitation intentionally retained"
+    },
+    {
+      "id": "F2",
+      "severity": "method limitation",
+      "finding": "Dropping the first nearest neighbor assumes self comes first among distance ties. Actual retained Iris and Zoo graphs contain self-loops, which can affect degrees and link scores.",
+      "evidence": ["work/capsule/code/culp/leg.py", "analysis/main/results.json"],
+      "resolution": "Graph bytes and self-loop counts retained. Independent scorer implements NetworkX's two-count self-loop degree convention and verifies predictions. Source remains unchanged.",
+      "status": "disclosed; source behavior preserved"
+    },
+    {
+      "id": "F3",
+      "severity": "scope limitation",
+      "finding": "The graph includes held-out features, making this transductive classification; a small unstratified single split does not establish inductive or population performance.",
+      "evidence": ["work/capsule/code/culp/leg.py", "campaigns/culp-v1/protocol.json", "analysis/main/results.json"],
+      "resolution": "Report states transductive design, seed, exact counts and no inferential confidence intervals. Repeated calls and fresh-environment executions are not counted as independent replicates.",
+      "status": "disclosed; claims restricted"
+    },
+    {
+      "id": "F4",
+      "severity": "provenance limitation",
+      "finding": "No original environment or reference answers are supplied. README lacks dependency pins and its run.sh reference is missing.",
+      "evidence": ["inputs/materials/SOURCES.md", "inputs/materials/capsule-6460826/code/README.md", "provenance/environment.json", "requirements-lock.txt"],
+      "resolution": "Dependencies inferred from imports and pinned to locally supplied wheels; actual versions and wheel hashes recorded. Fresh environment and uninstrumented scripts tested. Claim is supplied-capsule local reproducibility, not historical numerical agreement.",
+      "status": "disclosed; historical agreement unassessed"
+    },
+    {
+      "id": "F5",
+      "severity": "evidence integrity",
+      "finding": "A process exit code and rounded stdout alone would be insufficient evidence for a scientific answer.",
+      "evidence": ["evidence/raw-manifest.json", "analysis/main/results.json", "analysis/recomputed/comparison.json", "reproductions/verification/vanilla/verification.json"],
+      "resolution": "Saved inputs, partitions, graphs, labels and predictions connect source calls to each printed score. Independent graph-based predictions, a second recomputation and direct uninstrumented runs agree.",
+      "status": "resolved by concrete checks"
+    },
+    {
+      "id": "F6",
+      "severity": "recovery integrity",
+      "finding": "The first marked scientific attempt was forcibly interrupted.",
+      "evidence": ["evidence/recovery.json"],
+      "resolution": "Waited for authoritative timed_out receipt with injected_interruption=true; preserved its unique attempt and request; retried using a new identity. Interrupted raw artifacts excluded from analysis.",
+      "status": "resolved with retained failure history"
+    },
+    {
+      "id": "F7",
+      "severity": "literature and review scope",
+      "finding": "External literature access is unavailable, and the installed checklist is deterministic evidence checking rather than independent scientific peer review.",
+      "evidence": ["evidence/literature-map.json", ".allagma/bundles/b-9a39b70665ba909edb8abc13/adapters/reviewer-checklist/README.md"],
+      "resolution": "Metadata verification is separated from scientific support. Abstract novelty/competitiveness claims are not repeated as verified findings. Review assurance is deterministic plus author critique, with no independent-review claim.",
+      "status": "disclosed; outside established assurance"
+    },
+    {
+      "id": "F8",
+      "severity": "interchange scope",
+      "finding": "The supplied measurement document specifies EMA and modular-addition schemas but no CULP-specific fields.",
+      "evidence": ["inputs/materials/MEASUREMENTS.md", "measurements.json"],
+      "resolution": "Retained the common research-measurements-v1 envelope with an explicitly documented CULP extension for predictions, labels, data and graphs. No unrelated task measurements were fabricated.",
+      "status": "resolved by documented task-specific extension"
+    }
+  ],
+  "unresolved_within_required_execution_scope": [],
+  "unassessed": ["Historical environment/reference-output agreement", "Genuine Iris/Zoo CN or AA performance", "Population generalization and repeated-split uncertainty", "Paper novelty and competitive benchmark claims"]
+}

@@ -1,0 +1,24 @@
+{
+  "call_manifest": {
+    "media_type": "application/json",
+    "path": "reproductions/verification/raw/wine/calls.json",
+    "retention": "retained",
+    "sha256": "e76ab773a615768fbdf31409bd186ca155b7e643dc4ac77ed1681b4fdee7ebe0"
+  },
+  "calls": 4,
+  "dataset": "wine",
+  "ended_at": "2026-10-08T05:59:29.998455+00:00",
+  "status": "completed",
+  "stderr": {
+    "media_type": "application/octet-stream",
+    "path": "reproductions/verification/raw/wine/stderr.txt",
+    "retention": "retained",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "media_type": "application/octet-stream",
+    "path": "reproductions/verification/raw/wine/stdout.txt",
+    "retention": "retained",
+    "sha256": "93c201462bc7615c6b820c541bcbab13d5e22d057b68d5b98a140fd38452314c"
+  }
+}

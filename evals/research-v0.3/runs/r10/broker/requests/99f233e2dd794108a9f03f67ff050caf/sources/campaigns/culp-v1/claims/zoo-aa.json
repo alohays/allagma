@@ -1,0 +1,61 @@
+{
+  "claim_id": "zoo-aa",
+  "contradicting": [],
+  "dependencies": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/analysis-record.json",
+      "retention": "retained",
+      "sha256": "ad915b8dbb6d1232144c2ee883931fd3683860a94ff692c84ee1949c94f08391"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/raw-manifest.json",
+      "retention": "retained",
+      "sha256": "3b369075dbf5b908844e4b816ce6ee8f05ea0c25f717c110aae27ac9a537f7d5"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/analyze.py",
+      "retention": "retained",
+      "sha256": "cf0515d0676116818e2bd96b47f979ec35259ef0938513455fca9530833d190c"
+    }
+  ],
+  "limitations": [
+    "One fixed split; no population accuracy or replicate uncertainty",
+    "Original environment/reference outputs unavailable",
+    "The CN/AA label does not identify the executed algorithm; the upstream script uses CS"
+  ],
+  "record_type": "ClaimRecord",
+  "schema_version": "0.2",
+  "scope": "Only the supplied script's printed task output at fixed random_state=42 with documented source/library versions",
+  "status": "supported",
+  "supersedes": null,
+  "supporting": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "raw/zoo-a001/call-01.npz",
+      "retention": "retained",
+      "sha256": "7a02937dd5589d7eef798c1436578c76d61c2e95062d5b7ea7edb8b635531f77"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "raw/zoo-a001/stdout.txt",
+      "retention": "retained",
+      "sha256": "b6be453bfb2b9e7cd1faf9389875ecff5b2d2764badd5be84b5689f2ee1bba0d"
+    },
+    {
+      "media_type": "application/json",
+      "path": "raw/zoo-a001/calls.json",
+      "retention": "retained",
+      "sha256": "3f6871b1fa0eee86bc637e78268fc0b2d06071f67b61dda8698cc8ad4aa4af1c"
+    },
+    {
+      "media_type": "application/json",
+      "path": "analysis/main/results.json",
+      "retention": "retained",
+      "sha256": "1abebb11906fb12cf5ab93cb9fad8478e8624a66147ac88610796c496729ae4c"
+    }
+  ],
+  "text": "The supplied Zoo script prints 100.00% under AA; saved predictions have 21 correct among 21. The actual executed predictor is CS."
+}

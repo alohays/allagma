@@ -1,0 +1,47 @@
+{
+  "claim_id": "interruption-recovery",
+  "contradicting": [],
+  "dependencies": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/analysis-record.json",
+      "retention": "retained",
+      "sha256": "ad915b8dbb6d1232144c2ee883931fd3683860a94ff692c84ee1949c94f08391"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/raw-manifest.json",
+      "retention": "retained",
+      "sha256": "3b369075dbf5b908844e4b816ce6ee8f05ea0c25f717c110aae27ac9a537f7d5"
+    }
+  ],
+  "limitations": [
+    "Does not establish recovery from every failure mode"
+  ],
+  "record_type": "ClaimRecord",
+  "schema_version": "0.2",
+  "scope": "One configured controlled interruption",
+  "status": "supported",
+  "supersedes": null,
+  "supporting": [
+    {
+      "media_type": "application/json",
+      "path": "evidence/recovery.json",
+      "retention": "retained",
+      "sha256": "789507b2b3464941d88119b86b3e61c96861b9e391129c937ceb55d4a2485ce5"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/runs/iris/attempts/iris-a001/record.json",
+      "retention": "retained",
+      "sha256": "0de21eb145c0264332794045c098f3e328f310eee96443c544a145dc8037f3c3"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/runs/iris/attempts/iris-a002/record.json",
+      "retention": "retained",
+      "sha256": "7dfd20d67f96f5c0e99efb048a4d7368a6872f4e4212b0310a1d2d548dc0c5cc"
+    }
+  ],
+  "text": "The marked Iris attempt was interrupted by the controller, retained and excluded; the distinct successor completed successfully."
+}

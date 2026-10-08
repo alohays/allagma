@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r10/candidate/.venv-reproduction-verification/bin/python",
+    "-m",
+    "pip",
+    "install",
+    "--no-cache-dir",
+    "--no-index",
+    "--find-links",
+    "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r10/candidate/inputs/materials/wheels",
+    "-r",
+    "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r10/candidate/requirements-lock.txt"
+  ],
+  "attempt": false,
+  "category": "setup",
+  "cwd": ".",
+  "label": "reproduction-verification-packages",
+  "request_id": "68ec44226cc843b58ca6cd0060714807",
+  "timeout_seconds": 90.0
+}

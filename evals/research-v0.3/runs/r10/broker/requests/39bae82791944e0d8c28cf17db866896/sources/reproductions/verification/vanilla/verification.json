@@ -1,0 +1,72 @@
+{
+  "coverage": "Direct, uninstrumented execution of all three source scripts prints exactly the same four accuracy lines as canonical instrumented execution.",
+  "runs": [
+    {
+      "argv": [
+        "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r10/candidate/.venv-reproduction-verification/bin/python",
+        "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r10/candidate/work/capsule/code/iris_sample.py"
+      ],
+      "cwd": "work/capsule/code",
+      "dataset": "iris",
+      "exact_stdout_agreement": true,
+      "exit_code": 0,
+      "stderr": {
+        "media_type": "application/octet-stream",
+        "path": "reproductions/verification/vanilla/iris.stderr.txt",
+        "retention": "retained",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "media_type": "application/octet-stream",
+        "path": "reproductions/verification/vanilla/iris.stdout.txt",
+        "retention": "retained",
+        "sha256": "9b6bbee09c56848cc00f8079b454b17e4b4a6d56b3426347b750348f01a76a70"
+      }
+    },
+    {
+      "argv": [
+        "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r10/candidate/.venv-reproduction-verification/bin/python",
+        "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r10/candidate/work/capsule/code/zoo_sample.py"
+      ],
+      "cwd": "work/capsule/code",
+      "dataset": "zoo",
+      "exact_stdout_agreement": true,
+      "exit_code": 0,
+      "stderr": {
+        "media_type": "application/octet-stream",
+        "path": "reproductions/verification/vanilla/zoo.stderr.txt",
+        "retention": "retained",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "media_type": "application/octet-stream",
+        "path": "reproductions/verification/vanilla/zoo.stdout.txt",
+        "retention": "retained",
+        "sha256": "b6be453bfb2b9e7cd1faf9389875ecff5b2d2764badd5be84b5689f2ee1bba0d"
+      }
+    },
+    {
+      "argv": [
+        "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r10/candidate/.venv-reproduction-verification/bin/python",
+        "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r10/candidate/work/capsule/code/wine_sample.py"
+      ],
+      "cwd": "work/capsule/code",
+      "dataset": "wine",
+      "exact_stdout_agreement": true,
+      "exit_code": 0,
+      "stderr": {
+        "media_type": "application/octet-stream",
+        "path": "reproductions/verification/vanilla/wine.stderr.txt",
+        "retention": "retained",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "media_type": "application/octet-stream",
+        "path": "reproductions/verification/vanilla/wine.stdout.txt",
+        "retention": "retained",
+        "sha256": "93c201462bc7615c6b820c541bcbab13d5e22d057b68d5b98a140fd38452314c"
+      }
+    }
+  ],
+  "status": "pass"
+}

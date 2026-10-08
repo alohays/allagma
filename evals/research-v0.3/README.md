@@ -10,9 +10,10 @@ condition. Development decisions and evidence are in `development/`. The
 `frozen/freeze.json` manifest enumerates exact inputs, scorers, workflow source,
 resource ceilings, model/settings observations and run order. Current progress
 is in `progress.json`; terminal outcomes and complete traces are in `runs/`.
-Ten sessions are terminal; nine reviews are complete and seven original
-packages are fully verified. r10 passes its original 6/6 score and awaits
-substantive review. The final two EMA sessions and release audit remain pending.
+Ten sessions are terminal and reviewed; eight original packages are fully
+verified. Both incomplete deliveries have verified science but lack explicit
+review/material revision binding. The final two EMA sessions and release audit
+remain pending.
 Native sessions use the existing Codex account; scientific processes run only
 on the local Mac. Final evaluation results are preserved even if later repaired
 packages are needed for release.
@@ -51,7 +52,7 @@ retains pending assignments and excludes their accrued costs from outcome
 contrasts. Missing measurements remain missing. It produces the six prespecified
 within-task/replicate contrasts, two-session descriptive ranges and separate raw
 usage fields; it does not add scientific seeds or infer broad superiority.
-The [latest reviewed snapshot](comparisons/after-r09-reviewed/REPORT.md) is an interim artifact. Required scientific execution and package completeness are reported separately.
+The [latest reviewed snapshot](comparisons/after-r10-reviewed/REPORT.md) is an interim artifact. Required scientific execution and package completeness are reported separately.
 
 `python3 evals/research-v0.3/test_comparison.py -v` checks assignment completeness,
 contrast direction, pending/missing handling and separate usage accounting.

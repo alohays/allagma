@@ -1,0 +1,31 @@
+{
+  "artifact_manifest": "artifact-manifest.json",
+  "completion_assessment": "All three required scripts executed; six original printed scores independently recomputed; controlled interruption retained/recovered; fresh isolated setup and uninstrumented runs verified; locked review passed. Complete for supplied executable task, with disclosed scientific limitations.",
+  "execution_status": "complete",
+  "limitations": [
+    "Iris/Zoo print CN/AA labels while executing CS",
+    "Original environment and original outputs unavailable",
+    "Single prescribed split; no population uncertainty or algorithm ranking",
+    "Deterministic checks and author critique, not independent peer review"
+  ],
+  "manuscript": "REPORT.md",
+  "measurements": "measurements.json",
+  "recompute": {
+    "argv": [
+      "python3",
+      "study/recompute.py"
+    ],
+    "cwd": "."
+  },
+  "report": "report.json",
+  "reproduce": {
+    "argv": [
+      "python3",
+      "study/reproduce.py"
+    ],
+    "cwd": "."
+  },
+  "review": "review.json",
+  "task_id": "core-culp",
+  "unmet_required_deliverables": []
+}

@@ -1,0 +1,23 @@
+{
+  "comparison": {
+    "media_type": "application/json",
+    "path": "reproductions/verification/comparison.json",
+    "retention": "retained",
+    "sha256": "4510dc735d69022f3be290aac98d1fcb155db06a2b403e3e2933ee154114e40a"
+  },
+  "coverage": "Fresh setup, all three required source scripts, retained-data analysis and comparison against the delivered original answers",
+  "direct_execution": {
+    "media_type": "application/json",
+    "path": "reproductions/verification/vanilla/verification.json",
+    "retention": "retained",
+    "sha256": "3696f4d4d09054d2176a65f6e9d6e4e959446255de653a76b555a8dbf74bbe1e"
+  },
+  "environment": ".venv-reproduction-verification",
+  "raw_manifest": {
+    "media_type": "application/json",
+    "path": "reproductions/verification/raw-manifest.json",
+    "retention": "retained",
+    "sha256": "ef77a064d380400817ae18ea2ba2e2326fe8ac92d708662182ea1ebaab407af0"
+  },
+  "status": "complete"
+}

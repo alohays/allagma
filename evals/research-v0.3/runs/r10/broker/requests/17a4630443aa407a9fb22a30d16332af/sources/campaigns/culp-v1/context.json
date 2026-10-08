@@ -1,0 +1,49 @@
+{
+  "content": {
+    "constraints": [
+      "All setup and scientific computation through inputs/compute.py",
+      "Offline wheelhouse and isolated environment",
+      "No scientific source parameter or algorithm changes",
+      "600 compute seconds, 300 setup seconds, 32 compute attempts, 180 seconds per request; 3600 second native session",
+      "Only one scientific worker at a time"
+    ],
+    "protocol": {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/protocol.json",
+      "retention": "retained",
+      "sha256": "8a8625c767725603567d8164d1df52cb2c75e3c870e49ecd1023dd5e8119e4c2"
+    },
+    "question": "What accuracies do the supplied Iris, Zoo and Wine scripts print under CN and AA, and what do those measurements actually establish?",
+    "stop_rules": [
+      "Declared completeness with concrete verification",
+      "Resource ceiling -> partial",
+      "Pilot qualification failure -> stop confirmation",
+      "Irrecoverable repeated failure or required missing input -> honest partial/blocked"
+    ],
+    "unresolved": [
+      "Iris/Zoo label bug preserved",
+      "Original environment and reference outputs absent",
+      "No external literature access"
+    ]
+  },
+  "context_id": "culp-v1-active",
+  "limitations": [],
+  "method_id": "context/active-brief",
+  "omitted": [],
+  "record_type": "ContextRecord",
+  "required": [
+    "question",
+    "constraints",
+    "stop_rules",
+    "protocol",
+    "unresolved"
+  ],
+  "schema_version": "0.2",
+  "selected": [
+    "question",
+    "constraints",
+    "stop_rules",
+    "protocol",
+    "unresolved"
+  ]
+}

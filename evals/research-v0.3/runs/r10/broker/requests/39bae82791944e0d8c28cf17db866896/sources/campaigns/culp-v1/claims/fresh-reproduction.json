@@ -1,0 +1,47 @@
+{
+  "claim_id": "fresh-reproduction",
+  "contradicting": [],
+  "dependencies": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/analysis-record.json",
+      "retention": "retained",
+      "sha256": "ad915b8dbb6d1232144c2ee883931fd3683860a94ff692c84ee1949c94f08391"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/raw-manifest.json",
+      "retention": "retained",
+      "sha256": "3b369075dbf5b908844e4b816ce6ee8f05ea0c25f717c110aae27ac9a537f7d5"
+    }
+  ],
+  "limitations": [
+    "Not an independent-host or historical-environment replication"
+  ],
+  "record_type": "ClaimRecord",
+  "schema_version": "0.2",
+  "scope": "Same supplied Mac and pinned offline packages",
+  "status": "supported",
+  "supersedes": null,
+  "supporting": [
+    {
+      "media_type": "application/json",
+      "path": "reproductions/verification/comparison.json",
+      "retention": "retained",
+      "sha256": "4510dc735d69022f3be290aac98d1fcb155db06a2b403e3e2933ee154114e40a"
+    },
+    {
+      "media_type": "application/json",
+      "path": "reproductions/verification/vanilla/verification.json",
+      "retention": "retained",
+      "sha256": "3696f4d4d09054d2176a65f6e9d6e4e959446255de653a76b555a8dbf74bbe1e"
+    },
+    {
+      "media_type": "application/json",
+      "path": "reproductions/verification/complete.json",
+      "retention": "retained",
+      "sha256": "99f95cb09c3fb322fe66392016d99b97e90fb61b136dda9245c7124f287929a0"
+    }
+  ],
+  "text": "A fresh isolated environment reproduces all six answers and all 12 call measurements; direct uninstrumented source stdout exactly matches the observed execution."
+}

@@ -1,0 +1,661 @@
+{
+  "authority": "Copied common-broker responses; controller retains separate authoritative receipts",
+  "compute_requests": 17,
+  "receipts": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "venv",
+        ".venv"
+      ],
+      "category": "setup",
+      "charged_seconds": 1.8002113341353834,
+      "ended_at": "2026-10-08T05:45:38.089109+00:00",
+      "injected_interruption": false,
+      "label": "culp-environment",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/culp-environment/request.json",
+        "retention": "retained",
+        "sha256": "6cd75e1dd0e8fdea6db0d48b4e3f508332c2dfa2aec8419c1296858f9f0e6ed5"
+      },
+      "request_id": "ff5743da4be74735b002c7c33b616574",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/culp-environment/response.json",
+        "retention": "retained",
+        "sha256": "cdd6e066eab343f159cde4741697a74e913742e57bfbf8f2d5fde1980d2f2489"
+      },
+      "status": "completed"
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "--no-index",
+        "--find-links",
+        "inputs/materials/wheels",
+        "numpy==1.26.4",
+        "scipy==1.14.1",
+        "scikit-learn==1.5.2",
+        "pandas==2.2.3",
+        "networkx==2.8.8"
+      ],
+      "category": "setup",
+      "charged_seconds": 6.924490083009005,
+      "ended_at": "2026-10-08T05:46:16.320728+00:00",
+      "injected_interruption": false,
+      "label": "culp-dependencies",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/culp-dependencies/request.json",
+        "retention": "retained",
+        "sha256": "f41338bb4bfc390f7921a1a1215fcf0cfc08e23fea88ac814c2e9165d98537f7"
+      },
+      "request_id": "5298a69f43784f23b270d52975829a58",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/culp-dependencies/response.json",
+        "retention": "retained",
+        "sha256": "e71926ccd0429e58e09d1bff9c9fa41a4239c096310bcd0435bcc79bdc0e4042"
+      },
+      "status": "completed"
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "study/environment.py"
+      ],
+      "category": "setup",
+      "charged_seconds": 0.17600862495601177,
+      "ended_at": "2026-10-08T05:51:38.846370+00:00",
+      "injected_interruption": false,
+      "label": "culp-environment-inventory",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/culp-environment-inventory/request.json",
+        "retention": "retained",
+        "sha256": "186f89e76b3b5dd61f69b16bb9cbe00146ad0270c32fcb48ba5a202124a49800"
+      },
+      "request_id": "3ceb644926984eb194eeecaf6bb1f5f9",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/culp-environment-inventory/response.json",
+        "retention": "retained",
+        "sha256": "3aa78f3c924ae41daccb13b21a61de124696a5a70c6dcd67bc1618390106de70"
+      },
+      "status": "completed"
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "study/pilot.py"
+      ],
+      "category": "compute",
+      "charged_seconds": 43.11710854200646,
+      "ended_at": "2026-10-08T05:53:30.110477+00:00",
+      "injected_interruption": false,
+      "label": "pilot-a001",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/pilot-a001/request.json",
+        "retention": "retained",
+        "sha256": "d01cca1d42fbdb1dc44ad4b49f332622a5e4127e1170a556e635bf5331d3c961"
+      },
+      "request_id": "95cab3632b364cf7ba3485d9fcfbc1ef",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/pilot-a001/response.json",
+        "retention": "retained",
+        "sha256": "203bd87241444d3afe017b0847dd091bdc4378af25ffafd32201a1587ab8c374"
+      },
+      "status": "completed"
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "study/runner.py",
+        "--dataset",
+        "iris",
+        "--output",
+        "raw/iris-a001"
+      ],
+      "category": "compute",
+      "charged_seconds": 1.1408324579242617,
+      "ended_at": "2026-10-08T05:55:28.235974+00:00",
+      "injected_interruption": true,
+      "label": "iris-a001",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/iris-a001/request.json",
+        "retention": "retained",
+        "sha256": "9f79aafa847e9cb0af81c44a380c539e3421e9070ce16398fd5fbccb4f496f99"
+      },
+      "request_id": "8420c97991f94b088b29f236a151a623",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/iris-a001/response.json",
+        "retention": "retained",
+        "sha256": "246082fb0873962b6a52907d3607235b52fe1f48cbe95ed7cf7bbb51fc80fbf9"
+      },
+      "status": "timed_out"
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "study/runner.py",
+        "--dataset",
+        "iris",
+        "--output",
+        "raw/iris-a002"
+      ],
+      "category": "compute",
+      "charged_seconds": 2.79128879099153,
+      "ended_at": "2026-10-08T05:56:40.029569+00:00",
+      "injected_interruption": false,
+      "label": "iris-a002",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/iris-a002/request.json",
+        "retention": "retained",
+        "sha256": "81cd6ce98eb9b9f120373bb2af394fed661290f07a0a0a27b2fb42a76a8349bd"
+      },
+      "request_id": "7c49657277fe4af389f39c5ac79c8768",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/iris-a002/response.json",
+        "retention": "retained",
+        "sha256": "3ec1a48b4dd870acd3d3986caf4f72ddcee98701bbf988e4976276fa004db704"
+      },
+      "status": "completed"
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "study/runner.py",
+        "--dataset",
+        "zoo",
+        "--output",
+        "raw/zoo-a001"
+      ],
+      "category": "compute",
+      "charged_seconds": 1.0052476248238236,
+      "ended_at": "2026-10-08T05:56:47.337437+00:00",
+      "injected_interruption": false,
+      "label": "zoo-a001",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/zoo-a001/request.json",
+        "retention": "retained",
+        "sha256": "83259d989c7483810055ed49b54bf30473b560ee4a67af6b61f01a47f7003016"
+      },
+      "request_id": "17a4630443aa407a9fb22a30d16332af",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/zoo-a001/response.json",
+        "retention": "retained",
+        "sha256": "745b709e5829b68e30aecdc0467e8fa950fcb0a1176833c18cdeea5d68243e64"
+      },
+      "status": "completed"
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "study/runner.py",
+        "--dataset",
+        "wine",
+        "--output",
+        "raw/wine-a001"
+      ],
+      "category": "compute",
+      "charged_seconds": 1.0942864581011236,
+      "ended_at": "2026-10-08T05:57:03.350390+00:00",
+      "injected_interruption": false,
+      "label": "wine-a001",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/wine-a001/request.json",
+        "retention": "retained",
+        "sha256": "6fc00e6dc2bcbd6bac4828ceb69e9df61f2616059969fe47b3f1a1dacb490bf9"
+      },
+      "request_id": "045048de28fc4103affc33708234c79e",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/wine-a001/response.json",
+        "retention": "retained",
+        "sha256": "8e9e5dd82478f1704f8710ebfce50e57ede3f455917bbdf8229b6a5c458b17a5"
+      },
+      "status": "completed"
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "study/analyze.py",
+        "--output",
+        "analysis/main"
+      ],
+      "category": "compute",
+      "charged_seconds": 0.21319120796397328,
+      "ended_at": "2026-10-08T05:57:46.072602+00:00",
+      "injected_interruption": false,
+      "label": "analysis-a001",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/analysis-a001/request.json",
+        "retention": "retained",
+        "sha256": "d0fc6dede6415ba6b1e100af9bd09ba2e982aed325433f0768f85b2e0b18e88a"
+      },
+      "request_id": "ff84652b7ca446e5b3d236b61c230958",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/analysis-a001/response.json",
+        "retention": "retained",
+        "sha256": "e36590e0c3035d4a8e21d4801be4a91dd614ef6f3cc036833649eda0a63499ed"
+      },
+      "status": "completed"
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "study/analyze.py",
+        "--output",
+        "analysis/recomputed",
+        "--compare",
+        "analysis/main"
+      ],
+      "category": "compute",
+      "charged_seconds": 0.18474337505176663,
+      "ended_at": "2026-10-08T05:58:20.862759+00:00",
+      "injected_interruption": false,
+      "label": "analysis-a002",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/analysis-a002/request.json",
+        "retention": "retained",
+        "sha256": "d98324a0686ea1dbbf4411f953d0a307fe4fd01ea9c4d7aea8b2fb198bbf280a"
+      },
+      "request_id": "2b49571cfd494a9aa0bdd79cdec804fc",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/analysis-a002/response.json",
+        "retention": "retained",
+        "sha256": "340c4a555b4b2d15a2761116e9762cc5d7f5b3d11b1801396932a56497d05c21"
+      },
+      "status": "completed"
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "study/write_report.py"
+      ],
+      "category": "compute",
+      "charged_seconds": 0.18683225009590387,
+      "ended_at": "2026-10-08T05:58:21.465469+00:00",
+      "injected_interruption": false,
+      "label": "manuscript-a001",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/manuscript-a001/request.json",
+        "retention": "retained",
+        "sha256": "fa9311a76948d7b1cc6034ba7ece0f785c3526f30135c1d5c472a30253f4cb2c"
+      },
+      "request_id": "0f718bd005de47e389dac874f7dc14d7",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/manuscript-a001/response.json",
+        "retention": "retained",
+        "sha256": "8997c40aea58be7b132bf942e47c7317b4a6ccba262736dc13de460664979f05"
+      },
+      "status": "completed"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-m",
+        "venv",
+        "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r10/candidate/.venv-reproduction-verification"
+      ],
+      "category": "setup",
+      "charged_seconds": 2.0595907089300454,
+      "ended_at": "2026-10-08T05:58:24.135757+00:00",
+      "injected_interruption": false,
+      "label": "reproduction-verification-environment",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/reproduction-verification-environment/request.json",
+        "retention": "retained",
+        "sha256": "af30c601014db0cf4bb4f52a9a7143077b15ba0d308e5bcef0448446b2781086"
+      },
+      "request_id": "ceae5980408b4b31be8f18ff729f9285",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/reproduction-verification-environment/response.json",
+        "retention": "retained",
+        "sha256": "dd1c8a27a4393eb37e9553fe42c9deca0073b73a31dec030307ed933304e20dc"
+      },
+      "status": "completed"
+    },
+    {
+      "argv": [
+        "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r10/candidate/.venv-reproduction-verification/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "--no-cache-dir",
+        "--no-index",
+        "--find-links",
+        "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r10/candidate/inputs/materials/wheels",
+        "-r",
+        "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r10/candidate/requirements-lock.txt"
+      ],
+      "category": "setup",
+      "charged_seconds": 6.6559281658846885,
+      "ended_at": "2026-10-08T05:58:31.393506+00:00",
+      "injected_interruption": false,
+      "label": "reproduction-verification-packages",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/reproduction-verification-packages/request.json",
+        "retention": "retained",
+        "sha256": "79e2217632fff3aa27fc07f5054c80e6dbdf96308414f5cd08caba96c76cccf3"
+      },
+      "request_id": "68ec44226cc843b58ca6cd0060714807",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/reproduction-verification-packages/response.json",
+        "retention": "retained",
+        "sha256": "a342261277d7636b3990c8c8305daa2246ae2ce849b8628e724a3c4d07cad905"
+      },
+      "status": "completed"
+    },
+    {
+      "argv": [
+        "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r10/candidate/.venv-reproduction-verification/bin/python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "category": "setup",
+      "charged_seconds": 0.33820999995805323,
+      "ended_at": "2026-10-08T05:58:32.674829+00:00",
+      "injected_interruption": false,
+      "label": "reproduction-verification-dependency-check",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/reproduction-verification-dependency-check/request.json",
+        "retention": "retained",
+        "sha256": "5c407b892d0b8557be0b51acebaf61d4edc5ecdfc4e2d1b021bb7c229edfbf95"
+      },
+      "request_id": "3a7104821b484e848d87e45b726d32da",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/reproduction-verification-dependency-check/response.json",
+        "retention": "retained",
+        "sha256": "a9b7effc93d789cdc4a93d1775498a3c6ec564f49266bfe7d9aa9afd7aeed3c0"
+      },
+      "status": "completed"
+    },
+    {
+      "argv": [
+        "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r10/candidate/.venv-reproduction-verification/bin/python",
+        "study/runner.py",
+        "--dataset",
+        "iris",
+        "--output",
+        "reproductions/verification/raw/iris"
+      ],
+      "category": "compute",
+      "charged_seconds": 52.131120540900156,
+      "ended_at": "2026-10-08T05:59:25.768736+00:00",
+      "injected_interruption": false,
+      "label": "reproduction-verification-iris",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/reproduction-verification-iris/request.json",
+        "retention": "retained",
+        "sha256": "0eae3be06cc665cd3ec65a21f2e4e1b8511dd834e8fdaaf0f3595b356ed695c6"
+      },
+      "request_id": "85d0d8795eab429896b316c32d75f5ac",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/reproduction-verification-iris/response.json",
+        "retention": "retained",
+        "sha256": "942e6bb3b236f4a9ed203e9933b5757e05e862939c7a3e4e1f74bb93e28e5a25"
+      },
+      "status": "completed"
+    },
+    {
+      "argv": [
+        "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r10/candidate/.venv-reproduction-verification/bin/python",
+        "study/runner.py",
+        "--dataset",
+        "zoo",
+        "--output",
+        "reproductions/verification/raw/zoo"
+      ],
+      "category": "compute",
+      "charged_seconds": 1.548575625056401,
+      "ended_at": "2026-10-08T05:59:28.175031+00:00",
+      "injected_interruption": false,
+      "label": "reproduction-verification-zoo",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/reproduction-verification-zoo/request.json",
+        "retention": "retained",
+        "sha256": "2382f86d986bc573fcca22d5a45ea9774abb24faa3e38f74551ba6f8511047bf"
+      },
+      "request_id": "160a1bc4a7dc405fa3aaa5fbab22fdd5",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/reproduction-verification-zoo/response.json",
+        "retention": "retained",
+        "sha256": "da7382fe6cb2c978ce435c84c8deb5d90eb6634bc14bbc17bb30b614f97453b1"
+      },
+      "status": "completed"
+    },
+    {
+      "argv": [
+        "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r10/candidate/.venv-reproduction-verification/bin/python",
+        "study/runner.py",
+        "--dataset",
+        "wine",
+        "--output",
+        "reproductions/verification/raw/wine"
+      ],
+      "category": "compute",
+      "charged_seconds": 1.0653516249731183,
+      "ended_at": "2026-10-08T05:59:30.271311+00:00",
+      "injected_interruption": false,
+      "label": "reproduction-verification-wine",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/reproduction-verification-wine/request.json",
+        "retention": "retained",
+        "sha256": "2470d9d0a668e8d1c77e7668d6514729d27967ef85591dcccfcc3ec31542ea85"
+      },
+      "request_id": "87cad5b28f6740f48b4725e37261b76f",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/reproduction-verification-wine/response.json",
+        "retention": "retained",
+        "sha256": "820673a2e113a61c7f175a50dd72f4c63d61623ef3629cc2ae21f3dcca84dcbe"
+      },
+      "status": "completed"
+    },
+    {
+      "argv": [
+        "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r10/candidate/.venv-reproduction-verification/bin/python",
+        "study/analyze.py",
+        "--manifest",
+        "reproductions/verification/raw-manifest.json",
+        "--output",
+        "reproductions/verification/analysis"
+      ],
+      "category": "compute",
+      "charged_seconds": 0.468140791868791,
+      "ended_at": "2026-10-08T05:59:31.589952+00:00",
+      "injected_interruption": false,
+      "label": "reproduction-verification-analysis",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/reproduction-verification-analysis/request.json",
+        "retention": "retained",
+        "sha256": "e022c7d7305895c499d6911538b258b7d14329ecb4ff1e5de8470d6e14942a98"
+      },
+      "request_id": "115fd2e363c14d0794c424cd023b66a8",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/reproduction-verification-analysis/response.json",
+        "retention": "retained",
+        "sha256": "72b55fcfc444875bcca741f33db7ccfd732405e43ebdd000ebf931faec0ce70b"
+      },
+      "status": "completed"
+    },
+    {
+      "argv": [
+        "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r10/candidate/.venv-reproduction-verification/bin/python",
+        "study/compare_reproduction.py",
+        "--analysis",
+        "reproductions/verification/analysis",
+        "--output",
+        "reproductions/verification/comparison.json"
+      ],
+      "category": "compute",
+      "charged_seconds": 0.3409308751579374,
+      "ended_at": "2026-10-08T05:59:32.907449+00:00",
+      "injected_interruption": false,
+      "label": "reproduction-verification-comparison",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/reproduction-verification-comparison/request.json",
+        "retention": "retained",
+        "sha256": "69410131d614cfaf265d7e56e6cc97e973699e2f9e77eddf53e66f4b1cdc62d3"
+      },
+      "request_id": "d89c92fa8baa40ecad0d73881422272e",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/reproduction-verification-comparison/response.json",
+        "retention": "retained",
+        "sha256": "b9f0131bfb27bdea11126b748390d454600e22b8d5eb11d5fd23bade55599c78"
+      },
+      "status": "completed"
+    },
+    {
+      "argv": [
+        "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r10/candidate/.venv-reproduction-verification/bin/python",
+        "study/vanilla.py",
+        "--output",
+        "reproductions/verification/vanilla"
+      ],
+      "category": "compute",
+      "charged_seconds": 2.741313082864508,
+      "ended_at": "2026-10-08T05:59:36.628288+00:00",
+      "injected_interruption": false,
+      "label": "reproduction-verification-direct-scripts",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/reproduction-verification-direct-scripts/request.json",
+        "retention": "retained",
+        "sha256": "08c51cb159d0e3d068d26136f738df91d2f0716b5dd8eddfe0b6adc5c3ae5651"
+      },
+      "request_id": "3c28604349454b8fbf6cf6c3700b382c",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/reproduction-verification-direct-scripts/response.json",
+        "retention": "retained",
+        "sha256": "7490b7af23404b903ec8f7470cfe46d40b42c2e58f0223c68fd7d9771454b6b8"
+      },
+      "status": "completed"
+    },
+    {
+      "argv": [
+        "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r10/candidate/.venv/bin/python",
+        "study/analyze.py",
+        "--manifest",
+        "evidence/raw-manifest.json",
+        "--output",
+        "recomputations/verification",
+        "--compare",
+        "analysis/main"
+      ],
+      "category": "compute",
+      "charged_seconds": 0.3088809170294553,
+      "ended_at": "2026-10-08T06:01:18.689573+00:00",
+      "injected_interruption": false,
+      "label": "recompute-verification",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/recompute-verification/request.json",
+        "retention": "retained",
+        "sha256": "db3d20bbf50be274a85cb2c1dac378cad650a3232ef2f6cd9a94a6438c383c04"
+      },
+      "request_id": "a25ae428495e4acc821e9453b6d055e0",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/recompute-verification/response.json",
+        "retention": "retained",
+        "sha256": "ef9d3ee0aa22c2b17a49fa75f4e04f2faf4f8d1900d9f5c2c8bb9e8cc5fa7e32"
+      },
+      "status": "completed"
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "study/verify.py"
+      ],
+      "category": "compute",
+      "charged_seconds": 0.311296165920794,
+      "ended_at": "2026-10-08T06:02:03.379738+00:00",
+      "injected_interruption": false,
+      "label": "technical-audit-a001",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/technical-audit-a001/request.json",
+        "retention": "retained",
+        "sha256": "7ae5178a1d3de13ac633f67caa614dd87b5a0bfa5776d174f900cdd8fb9e1540"
+      },
+      "request_id": "943ad31fd1c44ac6971727bb41126fe3",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/technical-audit-a001/response.json",
+        "retention": "retained",
+        "sha256": "c3857bea75b256f55072b67114beaf1767d1ff19e5b45ad677f55391decdb65b"
+      },
+      "status": "completed"
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        ".allagma/bundles/b-9a39b70665ba909edb8abc13/adapters/reviewer-checklist/review.py",
+        "evidence/review-input.json",
+        "evidence/checklist-output.json"
+      ],
+      "category": "compute",
+      "charged_seconds": 0.30611066590063274,
+      "ended_at": "2026-10-08T06:04:40.134558+00:00",
+      "injected_interruption": false,
+      "label": "checklist-review-a001",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/checklist-review-a001/request.json",
+        "retention": "retained",
+        "sha256": "78a6c60fc509f9a45d0ce5a8db398b24b898622b93d4cb39042e37b3c6d39b30"
+      },
+      "request_id": "39bae82791944e0d8c28cf17db866896",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/checklist-review-a001/response.json",
+        "retention": "retained",
+        "sha256": "fe78c64e044ef210acaba6ed5074c30904df61995fdc3fda6ef00c07c63f5d10"
+      },
+      "status": "completed"
+    }
+  ],
+  "totals": {
+    "compute": 108.95525099663064,
+    "setup": 17.954438916873187
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "call_manifest": {
+    "media_type": "application/json",
+    "path": "reproductions/verification/raw/zoo/calls.json",
+    "retention": "retained",
+    "sha256": "d21670eb1cd9a011ea2b76aa4b2bcb3fd6770aa3be7228bdc28d9b9a38de0276"
+  },
+  "calls": 4,
+  "dataset": "zoo",
+  "ended_at": "2026-10-08T05:59:27.517928+00:00",
+  "status": "completed",
+  "stderr": {
+    "media_type": "application/octet-stream",
+    "path": "reproductions/verification/raw/zoo/stderr.txt",
+    "retention": "retained",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "media_type": "application/octet-stream",
+    "path": "reproductions/verification/raw/zoo/stdout.txt",
+    "retention": "retained",
+    "sha256": "b6be453bfb2b9e7cd1faf9389875ecff5b2d2764badd5be84b5689f2ee1bba0d"
+  }
+}

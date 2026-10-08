@@ -1,0 +1,25 @@
+{
+  "argv": [
+    "study/runner.py",
+    "--dataset",
+    "iris",
+    "--output",
+    "raw/iris-a002"
+  ],
+  "dataset": "iris",
+  "protocol": {
+    "media_type": "application/json",
+    "path": "campaigns/culp-v1/protocol.json",
+    "retention": "retained",
+    "sha256": "8a8625c767725603567d8164d1df52cb2c75e3c870e49ecd1023dd5e8119e4c2"
+  },
+  "source": {
+    "media_type": "application/octet-stream",
+    "path": "work/capsule/code/iris_sample.py",
+    "retention": "retained",
+    "sha256": "eef48c00cb56e8756ad877f84ed2f3d1a04bd3773b23148ebb2d4766fff561cb"
+  },
+  "source_revision": "df12459eae6e3ae115b0b115c2cd38102c3a21c2232962a5dbf68ebed64d520f",
+  "started_at": "2026-10-08T05:56:37.275557+00:00",
+  "status": "running"
+}

@@ -1,0 +1,17 @@
+{
+  "injected_interruption": false,
+  "isolation_sha256": "8afb73a0df2adf17d1f61a53ecc0da2664daf2def3a27f9d9aeb5c16a5ec76a6",
+  "reconciled_after_controller_restart": false,
+  "request_id": "5298a69f43784f23b270d52975829a58",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 6.924490083009005,
+    "ended_at": "2026-10-08T05:46:16.320728+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r10/resources/jobs/0002-culp-dependencies",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 220626944,
+    "peak_storage_bytes": 384826746,
+    "status": "completed"
+  }
+}

@@ -17,7 +17,7 @@ verified implementation/evaluation progress; this is not a blocked state.
 | r07 | EMA schedule, Allagma, replicate 2 | 240/240 | 8 | verified | yes |
 | r08 | EMA schedule, plain, replicate 2 | 240/240 | 8 | verified | yes |
 | r09 | CORE, plain, replicate 1 | 6/6 | 8 | verified | yes |
-| r10 | CORE, Allagma, replicate 1 | 6/6 | pending | pending review | pending |
+| r10 | CORE, Allagma, replicate 1 | 6/6 | 8 | verified | yes |
 | r11 | EMA schedule, plain, replicate 1 | pending | pending | active | pending |
 | r12 | EMA schedule, Allagma, replicate 1 | pending | pending | not started | pending |
 
@@ -93,19 +93,20 @@ actually executed fresh-environment rerun. All 349 manifest entries and 227
 reviewed material hashes pass after restoration. Source-label defects and
 transductive/duplicate/tie limitations remain explicit. Eight evidence items pass.
 
-r10: native completed; original score 6/6 and package collection finished (594
-regular files plus 13 external wheels, one archive part, no manifest errors).
-Substantive source/execution/review, independent checks and restoration still
-need inspection. Candidate is `work/v03-evaluation/runs/r10/candidate`.
+r10: fully verified, original score 6/6 and evidence 8/8. Independent source,
+split, graph predictions and 108 fresh-array comparisons pass. All 509 manifest
+entries and 128 reviewed ArtifactRefs match after restoration. Deterministic
+review assurance is explicitly restricted to technical checks; author scientific
+critique is not peer review.
 
 ## Remaining work
 
-1. Finish r10's substantive review; complete and score r11/r12 in frozen order.
+1. Complete and score r11/r12 in frozen order.
    Preserve all failed outcomes and record all eight evidence items honestly.
 2. Generate the complete comparison only after all twelve reviews. Keep required
    execution distinct from package completion: r03/r06 ran correct science but
    lack explicit review/material revision binding. Latest interim comparison is
-   `comparisons/after-r09-reviewed/`. Two sessions per condition support only
+   `comparisons/after-r10-reviewed/`. Two sessions per condition support only
    descriptive task-specific comparisons, not broad superiority.
 3. Repair the shared MPS prefix in a separately versioned release, execute the
    real broker regression without a worker-side workaround, and retain all
@@ -113,3 +114,11 @@ need inspection. Candidate is `work/v03-evaluation/runs/r10/candidate`.
    integrity and exact-final-source catalog/conformance/I1–I5 acceptance.
 4. Commit coherent milestones and push to origin only after all required work
    passes. The goal cannot be marked complete before the authorized push.
+
+## Publication handling
+
+Full evidence is retained in ordinary Git archive parts. GitHub's verified
+2 GiB per-push cap may require several ascending fast-forward transfers at the
+final publication step. See `publication-plan.md`. All implementation/evaluation
+and release checks must pass before any of those pushes; no history rewrite or
+force push is needed. The active native handle remains r11 / 54217.

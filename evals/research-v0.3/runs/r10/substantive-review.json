@@ -1,0 +1,246 @@
+{
+  "run_id": "r10",
+  "criteria": "evals/research-v0.3/frozen/source/evals/research-v0.3/CRITERIA.md",
+  "scientific_execution_verified": true,
+  "completion_verified": true,
+  "evidence_score": 8,
+  "evidence_total": 8,
+  "evidence_items": [
+    {
+      "id": 1,
+      "score": 1,
+      "reason": "Original task, source, input rows and relevant provenance are preserved. Independent inventory checks confirm only the two permitted Wine/Zoo paths and Path imports differ.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "protocol.json",
+          "sha256": "8a8625c767725603567d8164d1df52cb2c75e3c870e49ecd1023dd5e8119e4c2"
+        },
+        {
+          "root": "candidate",
+          "path": "provenance/source-manifest.json",
+          "sha256": "df12459eae6e3ae115b0b115c2cd38102c3a21c2232962a5dbf68ebed64d520f"
+        },
+        {
+          "root": "candidate",
+          "path": "provenance/platform.patch",
+          "sha256": "12d3f50e426b9052024700af67b7b8b15d630c85809df6fa6c9653b5fed6bec0"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/literature-map.json",
+          "sha256": "24dc87453c95ae94705b9cf536e11850aea6a744b8057ff4e663e051ce9a52d0"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "score": 1,
+      "reason": "Campaign protocol and scientific source are frozen before confirmation. The pilot uses synthetic graphs, and source split seed, k, Manhattan metric, normalization and printed-label behavior are unchanged.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "campaigns/culp-v1/protocol.json",
+          "sha256": "8a8625c767725603567d8164d1df52cb2c75e3c870e49ecd1023dd5e8119e4c2"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/pilot/qualification.json",
+          "sha256": "9be5d921e60a048fca3e1e0debf3f789fee52eeba7b06b8d0d6189ba62caf207"
+        },
+        {
+          "root": "candidate",
+          "path": "provenance/source-manifest.json",
+          "sha256": "df12459eae6e3ae115b0b115c2cd38102c3a21c2232962a5dbf68ebed64d520f"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "score": 1,
+      "reason": "All three required scripts, retained interruption/recovery, successful raw outputs and separately executed fresh/direct runs have source/configuration and authoritative broker evidence.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "evidence/raw-manifest.json",
+          "sha256": "3b369075dbf5b908844e4b816ce6ee8f05ea0c25f717c110aae27ac9a537f7d5"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/broker-history.json",
+          "sha256": "f6c07aed29eac534087133750eb4f649ce876cebb94066df0e1a8f8fc021817d"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/recovery.json",
+          "sha256": "789507b2b3464941d88119b86b3e61c96861b9e391129c937ceb55d4a2485ce5"
+        },
+        {
+          "root": "candidate",
+          "path": "reproductions/verification/complete.json",
+          "sha256": "99f95cb09c3fb322fe66392016d99b97e90fb61b136dda9245c7124f287929a0"
+        },
+        {
+          "root": "candidate",
+          "path": "study/runner.py",
+          "sha256": "d5aa19d302c366c579d1ecebad7a5c3a2ee7a2c7b8b178a494dfe4923372c966"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "score": 1,
+      "reason": "Original score is 6/6. Independent controller arithmetic checks every predictor vector, fixed split and Wine normalization, and confirms exact equality of 108 arrays and 348 predictions in the fresh run.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "measurements.json",
+          "sha256": "5cd653153131a5df563184abe308689b23a50c20406ca245e507d175c81aca62"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/main/results.json",
+          "sha256": "1abebb11906fb12cf5ab93cb9fad8478e8624a66147ac88610796c496729ae4c"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/verification.json",
+          "sha256": "afb3ff87d3a8b125ceaad7e9c6118c5896fbbc7b2a0222e496a7a4fe3f7d37c1"
+        },
+        {
+          "root": "candidate",
+          "path": "reproductions/verification/comparison.json",
+          "sha256": "4510dc735d69022f3be290aac98d1fcb155db06a2b403e3e2933ee154114e40a"
+        },
+        {
+          "root": "candidate",
+          "path": "report.json",
+          "sha256": "e5d07d5a6b2983fdd14a6cd9364fc9c88210d12d73da7df0a958fec3275d42c5"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "score": 1,
+      "reason": "The report preserves actual CS execution behind Iris/Zoo printed labels, transductive graph use, self-loops/ties and one-split limitations. It makes no unsupported population confidence interval or algorithm-ranking claim.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "REPORT.md",
+          "sha256": "2a1f91bd92533d5493c9cf5b5f2522f3e06b62de51e1ceae7021faaf599619bd"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/critique.json",
+          "sha256": "a1d0b0279a552a64f55b80d1b3a3509e2fa4cd87e0df85539973e07bebf32d69"
+        },
+        {
+          "root": "candidate",
+          "path": "review.json",
+          "sha256": "136b58c608ce50d48c3143cc567e833652acbf68936a1e40222963713732ce2c"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "score": 1,
+      "reason": "English report tables distinguish actual predictors and printed task answers, trace numerical claims to data and avoid claiming replication of unavailable broader paper experiments. No figure is required for this task.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "REPORT.md",
+          "sha256": "2a1f91bd92533d5493c9cf5b5f2522f3e06b62de51e1ceae7021faaf599619bd"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/main/results.json",
+          "sha256": "1abebb11906fb12cf5ab93cb9fad8478e8624a66147ac88610796c496729ae4c"
+        },
+        {
+          "root": "candidate",
+          "path": "report.json",
+          "sha256": "e5d07d5a6b2983fdd14a6cd9364fc9c88210d12d73da7df0a958fec3275d42c5"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "score": 1,
+      "reason": "The public fresh-environment reproduction and retained-data recomputation were actually executed. Original, fresh and direct results agree, and all 509 manifest entries pass after restoration. Cold environment restoration is explicitly documented.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "REPRODUCE.md",
+          "sha256": "0023f88f6b9b5085f8d8d18594e55c7b98a718c78282865e48c1aab7078e7858"
+        },
+        {
+          "root": "candidate",
+          "path": "requirements-lock.txt",
+          "sha256": "8a4f478a2a1ce095462c30f32d304cd8d3f1575c04878cd24b457ba61491d17e"
+        },
+        {
+          "root": "candidate",
+          "path": "study/reproduce.py",
+          "sha256": "cc52c1aea178e8493cf5d16ca6e6853d4b4d4eb7a3735825d2cb77bd0df348b5"
+        },
+        {
+          "root": "candidate",
+          "path": "study/recompute.py",
+          "sha256": "23f700eee0b1a2e512f4d2832b3aae18fd899e868c1c2b68383c7dc9b66a693c"
+        },
+        {
+          "root": "candidate",
+          "path": "reproductions/verification/complete.json",
+          "sha256": "99f95cb09c3fb322fe66392016d99b97e90fb61b136dda9245c7124f287929a0"
+        },
+        {
+          "root": "candidate",
+          "path": "reproductions/verification/vanilla/verification.json",
+          "sha256": "3696f4d4d09054d2176a65f6e9d6e4e959446255de653a76b555a8dbf74bbe1e"
+        },
+        {
+          "root": "candidate",
+          "path": "analysis/recomputed/comparison.json",
+          "sha256": "009e3b621c664cc158d151d5c79fe57c45551b43893d38cc01cfb6bc7800f218"
+        },
+        {
+          "root": "candidate",
+          "path": "artifact-manifest.json",
+          "sha256": "2252eaa1b9544479b94cd2362e66ad64ceb472ec9325f1c9365ab35d9e5bee66"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "score": 1,
+      "reason": "Review names actual limitations and is bound to an exact material manifest including the final report. All 128 reviewed ArtifactRefs match after restoration. Its deterministic assurance is explicitly limited to schema/digests and technical checks; scientific author critique is not represented as independent peer review.",
+      "evidence": [
+        {
+          "root": "candidate",
+          "path": "review.json",
+          "sha256": "136b58c608ce50d48c3143cc567e833652acbf68936a1e40222963713732ce2c"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/review-material.json",
+          "sha256": "2965a9d77e8444063c7cf10452bcf6759da1c86bc66b82c5a71888e8695c4974"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/review-input.json",
+          "sha256": "1ba39d409bd8ce7c56f90aa9d337b57ef1a37352dcb86f406cff2c79d3928bc0"
+        },
+        {
+          "root": "candidate",
+          "path": "evidence/critique.json",
+          "sha256": "a1d0b0279a552a64f55b80d1b3a3509e2fa4cd87e0df85539973e07bebf32d69"
+        }
+      ]
+    }
+  ],
+  "critical_scientific_findings_unresolved": [],
+  "coordinator_task_messages": 0,
+  "candidate_edits_by_controller": 0,
+  "assurance_interpretation": "The candidate ReviewRecord labels deterministic technical checking and explicitly disclaims independent scientific validity assessment. Author/controller scientific critique remains provisional.",
+  "scope": "Original local script-reproduction outcome, not a claim about population performance, unknown historical dependencies or independent scientific peer review."
+}

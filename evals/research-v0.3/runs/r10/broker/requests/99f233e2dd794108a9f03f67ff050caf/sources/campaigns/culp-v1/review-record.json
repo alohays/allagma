@@ -1,0 +1,87 @@
+{
+  "assurance": "deterministic",
+  "backend": "reviewer/checklist + study/verify.py",
+  "backend_version": "sha256:6798471f8addbf3cd35dbb1bc3514caf9c46f2043d9229a04714b631b74308d4",
+  "coverage": "Schema, material and direct evidence digests. No independent assessment of scientific validity. Technical audit additionally verifies all 12 saved predictions from graph edges, six scores from stdout/counts, original input rows and partitions, preprocessing, fixed source and parameters, dependency hashes, recovery and manuscript table. Fresh isolated and direct executions agree. Critique is by the author, not independent peer review. Pass means the supplied script-reproduction package is supported at the material digest; original reference-answer agreement and broader scientific validity remain unassessed.",
+  "criteria": [
+    "Exact original task strings and original percentage scoring",
+    "Only documented platform source edits",
+    "Evidence connects printed values, actual predictors, saved labels and graph predictions",
+    "Frozen protocol and input partitions respected",
+    "Interruption retained and recovered with a new identity",
+    "Fresh setup, all three scripts and retained-data recomputation actually tested",
+    "Claims restricted to fixed-split script output; upstream limitations and review scope disclosed",
+    "Current source/artifact hashes and evidence links resolve"
+  ],
+  "findings": [
+    "F1 (disclosed; upstream limitation intentionally retained): Iris and Zoo print CN/AA labels but actually call CS on all loop iterations. Resolution: Preserved original scoring and labels; exact requested values are reported as printed outputs with explicit actual-predictor columns and caveats. No algorithm-corrected answers substituted.",
+    "F2 (disclosed; source behavior preserved): Dropping the first nearest neighbor assumes self comes first among distance ties. Actual retained Iris and Zoo graphs contain self-loops, which can affect degrees and link scores. Resolution: Graph bytes and self-loop counts retained. Independent scorer implements NetworkX's two-count self-loop degree convention and verifies predictions. Source remains unchanged.",
+    "F3 (disclosed; claims restricted): The graph includes held-out features, making this transductive classification; a small unstratified single split does not establish inductive or population performance. Resolution: Report states transductive design, seed, exact counts and no inferential confidence intervals. Repeated calls and fresh-environment executions are not counted as independent replicates.",
+    "F4 (disclosed; historical agreement unassessed): No original environment or reference answers are supplied. README lacks dependency pins and its run.sh reference is missing. Resolution: Dependencies inferred from imports and pinned to locally supplied wheels; actual versions and wheel hashes recorded. Fresh environment and uninstrumented scripts tested. Claim is supplied-capsule local reproducibility, not historical numerical agreement.",
+    "F5 (resolved by concrete checks): A process exit code and rounded stdout alone would be insufficient evidence for a scientific answer. Resolution: Saved inputs, partitions, graphs, labels and predictions connect source calls to each printed score. Independent graph-based predictions, a second recomputation and direct uninstrumented runs agree.",
+    "F6 (resolved with retained failure history): The first marked scientific attempt was forcibly interrupted. Resolution: Waited for authoritative timed_out receipt with injected_interruption=true; preserved its unique attempt and request; retried using a new identity. Interrupted raw artifacts excluded from analysis.",
+    "F7 (disclosed; outside established assurance): External literature access is unavailable, and the installed checklist is deterministic evidence checking rather than independent scientific peer review. Resolution: Metadata verification is separated from scientific support. Abstract novelty/competitiveness claims are not repeated as verified findings. Review assurance is deterministic plus author critique, with no independent-review claim.",
+    "F8 (resolved by documented task-specific extension): The supplied measurement document specifies EMA and modular-addition schemas but no CULP-specific fields. Resolution: Retained the common research-measurements-v1 envelope with an explicitly documented CULP extension for predictions, labels, data and graphs. No unrelated task measurements were fabricated."
+  ],
+  "material": {
+    "media_type": "application/json",
+    "path": "evidence/review-material.json",
+    "retention": "retained",
+    "sha256": "2965a9d77e8444063c7cf10452bcf6759da1c86bc66b82c5a71888e8695c4974"
+  },
+  "record_type": "ReviewRecord",
+  "review_id": "culp-review-v1",
+  "reviewer": "Locked Allagma deterministic checklist plus study-owned technical checks and author critique",
+  "schema_version": "0.2",
+  "trace": [
+    {
+      "media_type": "application/json",
+      "path": "evidence/review-input.json",
+      "retention": "retained",
+      "sha256": "1ba39d409bd8ce7c56f90aa9d337b57ef1a37352dcb86f406cff2c79d3928bc0"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/checklist-output.json",
+      "retention": "retained",
+      "sha256": "9c40d222178102c0e002a95cd63d53b1af3187c4a847bc233e5c181b568f38cd"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/verification.json",
+      "retention": "retained",
+      "sha256": "afb3ff87d3a8b125ceaad7e9c6118c5896fbbc7b2a0222e496a7a4fe3f7d37c1"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/critique.json",
+      "retention": "retained",
+      "sha256": "a1d0b0279a552a64f55b80d1b3a3509e2fa4cd87e0df85539973e07bebf32d69"
+    },
+    {
+      "media_type": "application/json",
+      "path": "analysis/recomputed/comparison.json",
+      "retention": "retained",
+      "sha256": "009e3b621c664cc158d151d5c79fe57c45551b43893d38cc01cfb6bc7800f218"
+    },
+    {
+      "media_type": "application/json",
+      "path": "recomputations/verification/comparison.json",
+      "retention": "retained",
+      "sha256": "009e3b621c664cc158d151d5c79fe57c45551b43893d38cc01cfb6bc7800f218"
+    },
+    {
+      "media_type": "application/json",
+      "path": "reproductions/verification/comparison.json",
+      "retention": "retained",
+      "sha256": "4510dc735d69022f3be290aac98d1fcb155db06a2b403e3e2933ee154114e40a"
+    },
+    {
+      "media_type": "application/json",
+      "path": "reproductions/verification/vanilla/verification.json",
+      "retention": "retained",
+      "sha256": "3696f4d4d09054d2176a65f6e9d6e4e959446255de653a76b555a8dbf74bbe1e"
+    }
+  ],
+  "verdict": "pass"
+}

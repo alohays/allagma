@@ -1,0 +1,127 @@
+{
+  "analyzer": "study/analyze.py",
+  "baselines": "Analytical synthetic graph controls; no scientific external baseline supplied",
+  "broker_handoff": "Campaign helper freezes records only. Study-owned orchestration uses the mandated inputs/compute.py broker and creates RunRecords; the built-in direct execution campaign helper is not used.",
+  "budget": {
+    "attempt_limit": 32,
+    "budgets_seconds": {
+      "compute": 600,
+      "setup": 300
+    },
+    "command_timeout_seconds": {
+      "compute": 180,
+      "setup": 180
+    },
+    "file_limit_bytes": 536870912,
+    "format": "allagma-resource-profile-v1",
+    "poll_seconds": 0.25,
+    "rss_limit_bytes": 8589934592,
+    "storage_limit_bytes": 6442450944,
+    "terminate_grace_seconds": 0.5
+  },
+  "code": [
+    "study/common.py",
+    "study/runner.py",
+    "study/analyze.py",
+    "study/pilot.py",
+    "study/write_report.py",
+    "work/capsule/code/LICENSE",
+    "work/capsule/code/README.md",
+    "work/capsule/code/culp/__init__.py",
+    "work/capsule/code/culp/classifier.py",
+    "work/capsule/code/culp/leg.py",
+    "work/capsule/code/culp/link_predictors.py",
+    "work/capsule/code/iris_sample.py",
+    "work/capsule/code/wine_sample.py",
+    "work/capsule/code/zoo_sample.py",
+    "work/capsule/data/LICENSE",
+    "work/capsule/data/wine.txt",
+    "work/capsule/data/zoo.txt",
+    "work/capsule/metadata/metadata.yml"
+  ],
+  "completion": "Three successful source script runs, six verified answers, retained failure history, passing documented audit, reproducible commands and hash manifest",
+  "editable": [
+    "Only absolute data paths for local portability",
+    "Observation wrapper and evidence storage without changing algorithm inputs/outputs"
+  ],
+  "evaluator": "study/analyze.py",
+  "exclusions": "Interrupted/failed attempts and synthetic pilot excluded from reported confirmation; retain all history",
+  "failure_criteria": [
+    "Mismatch between score, prediction, source or stdout",
+    "Unexpected algorithm/parameter edits",
+    "Pilot failure",
+    "Missing required script output"
+  ],
+  "fixed": [
+    "Original 80/20 random_state=42 unstratified partitions",
+    "k values, metric, label conversion and Wine train-only normalization",
+    "CN/AA/RA/CS print loop and Iris/Zoo CS literal",
+    "Original mean accuracy rounded to 2 decimals",
+    "CPU, n_jobs=1"
+  ],
+  "hypothesis": "The supplied scripts are locally executable with path-only compatibility edits and their displayed scores are exactly reconstructible from retained predictions.",
+  "independent_variables": "Dataset and source loop label; actual predictor recorded separately; no optimization or tuning",
+  "interruption": "Mark first substantive source-script attempt with --attempt; retain authoritative receipt and any partial files, then recover with new attempt id only after terminal status",
+  "measurement_interchange": "Generic research-measurements-v1 envelope with CULP extension; supplied MEASUREMENTS.md has no CULP-specific field contract.",
+  "metrics": "Number correct, test denominator, accuracy percent and original printed values; save confusion matrices and graph diagnostics",
+  "minimum_confirmation_runs": 3,
+  "paired_seeds": true,
+  "qualification": "All four link predictors and independent graph formulas checked on known-answer synthetic graphs; full synthetic CULP call and scoring parser; pilot must pass before confirmation",
+  "revision": "culp-protocol-v1",
+  "runner": "study/runner.py",
+  "runs": [
+    {
+      "id": "synthetic-pilot",
+      "input": {
+        "seed": 314159,
+        "synthetic": true
+      },
+      "split": "pilot"
+    },
+    {
+      "condition_id": "iris",
+      "id": "iris",
+      "input": {
+        "dataset": "iris",
+        "k": 11,
+        "seed": 42,
+        "similarity": "manhattan",
+        "test_size": 0.2
+      },
+      "split": "confirmation"
+    },
+    {
+      "condition_id": "zoo",
+      "id": "zoo",
+      "input": {
+        "dataset": "zoo",
+        "k": 2,
+        "seed": 42,
+        "similarity": "manhattan",
+        "test_size": 0.2
+      },
+      "split": "confirmation"
+    },
+    {
+      "condition_id": "wine",
+      "id": "wine",
+      "input": {
+        "dataset": "wine",
+        "k": 12,
+        "seed": 42,
+        "similarity": "manhattan",
+        "test_size": 0.2
+      },
+      "split": "confirmation"
+    }
+  ],
+  "seed_interpretation": "Shared prescribed seed across distinct dataset conditions, not replicate seeds; synthetic pilot has no random data and a separate identity seed.",
+  "uncertainty": "One deterministic prescribed split per dataset. Exact descriptive counts; no inferential CI or extra pseudo-replicates.",
+  "verification": [
+    "Retained prediction/label counts equal original stdout",
+    "Independent graph-based link scores yield saved predictions",
+    "Recompute same raw inputs into separate output directory",
+    "Audit fixed partitions, preprocessing, all exact answer keys, source diff and transitive hashes"
+  ],
+  "writer": "study/write_report.py"
+}

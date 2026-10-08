@@ -1,0 +1,17 @@
+{
+  "injected_interruption": false,
+  "isolation_sha256": "8afb73a0df2adf17d1f61a53ecc0da2664daf2def3a27f9d9aeb5c16a5ec76a6",
+  "reconciled_after_controller_restart": false,
+  "request_id": "87cad5b28f6740f48b4725e37261b76f",
+  "result": {
+    "charge_basis": "measured supervisor wall time",
+    "charged_seconds": 1.0653516249731183,
+    "ended_at": "2026-10-08T05:59:30.271311+00:00",
+    "exit_code": 0,
+    "job": "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r10/resources/jobs/0017-reproduction-verification-wine",
+    "monitor_scope": "Polled process-tree RSS and workdir logical file bytes; RSS excludes some GPU allocations; not adversarial containment",
+    "peak_rss_bytes": 141524992,
+    "peak_storage_bytes": 706232907,
+    "status": "completed"
+  }
+}

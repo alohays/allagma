@@ -1,0 +1,84 @@
+{
+  "status": "pass",
+  "only_portability_edits": [
+    "code/wine_sample.py",
+    "code/zoo_sample.py"
+  ],
+  "observations": [
+    {
+      "dataset": "iris",
+      "printed": "CN",
+      "actual": "CS",
+      "accuracy_percent": 100.0
+    },
+    {
+      "dataset": "iris",
+      "printed": "AA",
+      "actual": "CS",
+      "accuracy_percent": 100.0
+    },
+    {
+      "dataset": "iris",
+      "printed": "RA",
+      "actual": "CS",
+      "accuracy_percent": 100.0
+    },
+    {
+      "dataset": "iris",
+      "printed": "CS",
+      "actual": "CS",
+      "accuracy_percent": 100.0
+    },
+    {
+      "dataset": "zoo",
+      "printed": "CN",
+      "actual": "CS",
+      "accuracy_percent": 100.0
+    },
+    {
+      "dataset": "zoo",
+      "printed": "AA",
+      "actual": "CS",
+      "accuracy_percent": 100.0
+    },
+    {
+      "dataset": "zoo",
+      "printed": "RA",
+      "actual": "CS",
+      "accuracy_percent": 100.0
+    },
+    {
+      "dataset": "zoo",
+      "printed": "CS",
+      "actual": "CS",
+      "accuracy_percent": 100.0
+    },
+    {
+      "dataset": "wine",
+      "printed": "CN",
+      "actual": "CN",
+      "accuracy_percent": 97.22
+    },
+    {
+      "dataset": "wine",
+      "printed": "AA",
+      "actual": "AA",
+      "accuracy_percent": 97.22
+    },
+    {
+      "dataset": "wine",
+      "printed": "RA",
+      "actual": "RA",
+      "accuracy_percent": 97.22
+    },
+    {
+      "dataset": "wine",
+      "printed": "CS",
+      "actual": "CS",
+      "accuracy_percent": 100.0
+    }
+  ],
+  "fresh_arrays_exactly_equal": 108,
+  "fresh_predictions_exactly_equal": 348,
+  "scope": "Exact input/source preservation except the two documented path edits/imports; independent splits, normalization and adjacency-set predictors; equality of all saved original/fresh arrays. No population-performance or unique tied-neighbor reconstruction claim."
+}

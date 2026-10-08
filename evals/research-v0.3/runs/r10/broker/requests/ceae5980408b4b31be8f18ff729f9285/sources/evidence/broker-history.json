@@ -1,0 +1,238 @@
+{
+  "authority": "Copied common-broker responses; controller retains separate authoritative receipts",
+  "compute_requests": 5,
+  "receipts": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "venv",
+        ".venv"
+      ],
+      "category": "setup",
+      "charged_seconds": 1.8002113341353834,
+      "ended_at": "2026-10-08T05:45:38.089109+00:00",
+      "injected_interruption": false,
+      "label": "culp-environment",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/culp-environment/request.json",
+        "retention": "retained",
+        "sha256": "6cd75e1dd0e8fdea6db0d48b4e3f508332c2dfa2aec8419c1296858f9f0e6ed5"
+      },
+      "request_id": "ff5743da4be74735b002c7c33b616574",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/culp-environment/response.json",
+        "retention": "retained",
+        "sha256": "cdd6e066eab343f159cde4741697a74e913742e57bfbf8f2d5fde1980d2f2489"
+      },
+      "status": "completed"
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "--no-index",
+        "--find-links",
+        "inputs/materials/wheels",
+        "numpy==1.26.4",
+        "scipy==1.14.1",
+        "scikit-learn==1.5.2",
+        "pandas==2.2.3",
+        "networkx==2.8.8"
+      ],
+      "category": "setup",
+      "charged_seconds": 6.924490083009005,
+      "ended_at": "2026-10-08T05:46:16.320728+00:00",
+      "injected_interruption": false,
+      "label": "culp-dependencies",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/culp-dependencies/request.json",
+        "retention": "retained",
+        "sha256": "f41338bb4bfc390f7921a1a1215fcf0cfc08e23fea88ac814c2e9165d98537f7"
+      },
+      "request_id": "5298a69f43784f23b270d52975829a58",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/culp-dependencies/response.json",
+        "retention": "retained",
+        "sha256": "e71926ccd0429e58e09d1bff9c9fa41a4239c096310bcd0435bcc79bdc0e4042"
+      },
+      "status": "completed"
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "study/environment.py"
+      ],
+      "category": "setup",
+      "charged_seconds": 0.17600862495601177,
+      "ended_at": "2026-10-08T05:51:38.846370+00:00",
+      "injected_interruption": false,
+      "label": "culp-environment-inventory",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/culp-environment-inventory/request.json",
+        "retention": "retained",
+        "sha256": "186f89e76b3b5dd61f69b16bb9cbe00146ad0270c32fcb48ba5a202124a49800"
+      },
+      "request_id": "3ceb644926984eb194eeecaf6bb1f5f9",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/culp-environment-inventory/response.json",
+        "retention": "retained",
+        "sha256": "3aa78f3c924ae41daccb13b21a61de124696a5a70c6dcd67bc1618390106de70"
+      },
+      "status": "completed"
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "study/pilot.py"
+      ],
+      "category": "compute",
+      "charged_seconds": 43.11710854200646,
+      "ended_at": "2026-10-08T05:53:30.110477+00:00",
+      "injected_interruption": false,
+      "label": "pilot-a001",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/pilot-a001/request.json",
+        "retention": "retained",
+        "sha256": "d01cca1d42fbdb1dc44ad4b49f332622a5e4127e1170a556e635bf5331d3c961"
+      },
+      "request_id": "95cab3632b364cf7ba3485d9fcfbc1ef",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/pilot-a001/response.json",
+        "retention": "retained",
+        "sha256": "203bd87241444d3afe017b0847dd091bdc4378af25ffafd32201a1587ab8c374"
+      },
+      "status": "completed"
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "study/runner.py",
+        "--dataset",
+        "iris",
+        "--output",
+        "raw/iris-a001"
+      ],
+      "category": "compute",
+      "charged_seconds": 1.1408324579242617,
+      "ended_at": "2026-10-08T05:55:28.235974+00:00",
+      "injected_interruption": true,
+      "label": "iris-a001",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/iris-a001/request.json",
+        "retention": "retained",
+        "sha256": "9f79aafa847e9cb0af81c44a380c539e3421e9070ce16398fd5fbccb4f496f99"
+      },
+      "request_id": "8420c97991f94b088b29f236a151a623",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/iris-a001/response.json",
+        "retention": "retained",
+        "sha256": "246082fb0873962b6a52907d3607235b52fe1f48cbe95ed7cf7bbb51fc80fbf9"
+      },
+      "status": "timed_out"
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "study/runner.py",
+        "--dataset",
+        "iris",
+        "--output",
+        "raw/iris-a002"
+      ],
+      "category": "compute",
+      "charged_seconds": 2.79128879099153,
+      "ended_at": "2026-10-08T05:56:40.029569+00:00",
+      "injected_interruption": false,
+      "label": "iris-a002",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/iris-a002/request.json",
+        "retention": "retained",
+        "sha256": "81cd6ce98eb9b9f120373bb2af394fed661290f07a0a0a27b2fb42a76a8349bd"
+      },
+      "request_id": "7c49657277fe4af389f39c5ac79c8768",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/iris-a002/response.json",
+        "retention": "retained",
+        "sha256": "3ec1a48b4dd870acd3d3986caf4f72ddcee98701bbf988e4976276fa004db704"
+      },
+      "status": "completed"
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "study/runner.py",
+        "--dataset",
+        "zoo",
+        "--output",
+        "raw/zoo-a001"
+      ],
+      "category": "compute",
+      "charged_seconds": 1.0052476248238236,
+      "ended_at": "2026-10-08T05:56:47.337437+00:00",
+      "injected_interruption": false,
+      "label": "zoo-a001",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/zoo-a001/request.json",
+        "retention": "retained",
+        "sha256": "83259d989c7483810055ed49b54bf30473b560ee4a67af6b61f01a47f7003016"
+      },
+      "request_id": "17a4630443aa407a9fb22a30d16332af",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/zoo-a001/response.json",
+        "retention": "retained",
+        "sha256": "745b709e5829b68e30aecdc0467e8fa950fcb0a1176833c18cdeea5d68243e64"
+      },
+      "status": "completed"
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "study/runner.py",
+        "--dataset",
+        "wine",
+        "--output",
+        "raw/wine-a001"
+      ],
+      "category": "compute",
+      "charged_seconds": 1.0942864581011236,
+      "ended_at": "2026-10-08T05:57:03.350390+00:00",
+      "injected_interruption": false,
+      "label": "wine-a001",
+      "request": {
+        "media_type": "application/json",
+        "path": "evidence/broker/wine-a001/request.json",
+        "retention": "retained",
+        "sha256": "6fc00e6dc2bcbd6bac4828ceb69e9df61f2616059969fe47b3f1a1dacb490bf9"
+      },
+      "request_id": "045048de28fc4103affc33708234c79e",
+      "response": {
+        "media_type": "application/json",
+        "path": "evidence/broker/wine-a001/response.json",
+        "retention": "retained",
+        "sha256": "8e9e5dd82478f1704f8710ebfce50e57ede3f455917bbdf8229b6a5c458b17a5"
+      },
+      "status": "completed"
+    }
+  ],
+  "totals": {
+    "compute": 49.1487638738472,
+    "setup": 8.9007100421004
+  }
+}

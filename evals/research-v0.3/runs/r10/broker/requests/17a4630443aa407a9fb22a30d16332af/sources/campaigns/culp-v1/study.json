@@ -1,0 +1,85 @@
+{
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "capabilities": [
+    "artifact.read",
+    "artifact.write",
+    "execution.local"
+  ],
+  "configuration_origins": {
+    "budget.max_attempts": "current request",
+    "budget.max_seconds": "current request",
+    "budget.money_usd": "current request",
+    "budget.per_attempt_seconds": "current request",
+    "capabilities": "host authorization",
+    "context_chars": "module:context/active-brief",
+    "language": "profile:public/default",
+    "max_revisions": "recipe:recipe/research"
+  },
+  "constraints": [
+    "All setup and scientific computation through inputs/compute.py",
+    "Offline wheelhouse and isolated environment",
+    "No scientific source parameter or algorithm changes",
+    "600 compute seconds, 300 setup seconds, 32 compute attempts, 180 seconds per request; 3600 second native session",
+    "Only one scientific worker at a time"
+  ],
+  "effective_configuration": {
+    "budget": {
+      "max_attempts": 32,
+      "max_seconds": 600,
+      "money_usd": 0,
+      "per_attempt_seconds": 180
+    },
+    "capabilities": [
+      "artifact.read",
+      "artifact.write",
+      "execution.local"
+    ],
+    "context_chars": 12000,
+    "language": "English",
+    "max_revisions": 2
+  },
+  "lock": {
+    "media_type": "application/json",
+    "path": "campaigns/culp-v1/lock.yaml",
+    "retention": "retain-with-study",
+    "sha256": "1a9c2031eaf965f1a41a264dbe7cb8a5cd1aade39764b84c087a18a4ca0c994f"
+  },
+  "motivation": "Faithful offline computational reproduction of the supplied CULP capsule, preserving upstream scoring and limitations.",
+  "output": "submission.json; report.json; REPORT.md; review.json; REPRODUCE.md; artifact-manifest.json; measurements.json",
+  "profile_provenance": [
+    {
+      "id": "public/default",
+      "sha256": "9f90c310cefb07153761645bd658f8ad6551578ccb6bf772074e44e8f8c17b9b"
+    }
+  ],
+  "protocol": {
+    "media_type": "application/json",
+    "path": "campaigns/culp-v1/protocol.json",
+    "retention": "retain-with-study",
+    "sha256": "8a8625c767725603567d8164d1df52cb2c75e3c870e49ecd1023dd5e8119e4c2"
+  },
+  "protocol_revision": "culp-protocol-v1",
+  "question": "What accuracies do the supplied Iris, Zoo and Wine scripts print under CN and AA, and what do those measurements actually establish?",
+  "record_type": "StudySpec",
+  "release": "0.3.0rc1",
+  "resources": {
+    "max_attempts": 32,
+    "max_seconds": 600,
+    "money_usd": 0,
+    "per_attempt_seconds": 180
+  },
+  "schema_version": "0.2",
+  "stop_rules": [
+    "Declared completeness with concrete verification",
+    "Resource ceiling -> partial",
+    "Pilot qualification failure -> stop confirmation",
+    "Irrecoverable repeated failure or required missing input -> honest partial/blocked"
+  ],
+  "study_id": "r10",
+  "success_criteria": [
+    "All three exact scripts executed after path-only compatibility adaptation",
+    "Six exact task keys answered from original stdout and saved predictions",
+    "Interruption preserved and recovered with a new attempt",
+    "Recomputed evidence agrees and reviewed artifact revisions are retained"
+  ]
+}

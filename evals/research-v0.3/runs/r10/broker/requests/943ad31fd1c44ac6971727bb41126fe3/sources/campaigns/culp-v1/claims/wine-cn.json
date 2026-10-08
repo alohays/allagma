@@ -1,0 +1,60 @@
+{
+  "claim_id": "wine-cn",
+  "contradicting": [],
+  "dependencies": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/analysis-record.json",
+      "retention": "retained",
+      "sha256": "ad915b8dbb6d1232144c2ee883931fd3683860a94ff692c84ee1949c94f08391"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/raw-manifest.json",
+      "retention": "retained",
+      "sha256": "3b369075dbf5b908844e4b816ce6ee8f05ea0c25f717c110aae27ac9a537f7d5"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/analyze.py",
+      "retention": "retained",
+      "sha256": "cf0515d0676116818e2bd96b47f979ec35259ef0938513455fca9530833d190c"
+    }
+  ],
+  "limitations": [
+    "One fixed split; no population accuracy or replicate uncertainty",
+    "Original environment/reference outputs unavailable"
+  ],
+  "record_type": "ClaimRecord",
+  "schema_version": "0.2",
+  "scope": "Only the supplied script's printed task output at fixed random_state=42 with documented source/library versions",
+  "status": "supported",
+  "supersedes": null,
+  "supporting": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "raw/wine-a001/call-00.npz",
+      "retention": "retained",
+      "sha256": "606d19a735c5ce5805ea61bc2f23674809562592c010b4cb17c4d7052ff09709"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "raw/wine-a001/stdout.txt",
+      "retention": "retained",
+      "sha256": "93c201462bc7615c6b820c541bcbab13d5e22d057b68d5b98a140fd38452314c"
+    },
+    {
+      "media_type": "application/json",
+      "path": "raw/wine-a001/calls.json",
+      "retention": "retained",
+      "sha256": "e2138dc7bd60b446ae0da954bd1ba3fc57bb9f49d67b51dcb61d77cf7fcd01b3"
+    },
+    {
+      "media_type": "application/json",
+      "path": "analysis/main/results.json",
+      "retention": "retained",
+      "sha256": "1abebb11906fb12cf5ab93cb9fad8478e8624a66147ac88610796c496729ae4c"
+    }
+  ],
+  "text": "The supplied Wine script prints 97.22% under CN; saved predictions have 35 correct among 36. The actual executed predictor is CN."
+}

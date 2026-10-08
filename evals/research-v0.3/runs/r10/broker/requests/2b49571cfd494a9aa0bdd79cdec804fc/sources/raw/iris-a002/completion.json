@@ -1,0 +1,24 @@
+{
+  "call_manifest": {
+    "media_type": "application/json",
+    "path": "raw/iris-a002/calls.json",
+    "retention": "retained",
+    "sha256": "43785f0dad1cd2d1fb240c9d9dd2a58d2fb647cd906631b5ba12b43a32badaf9"
+  },
+  "calls": 4,
+  "dataset": "iris",
+  "ended_at": "2026-10-08T05:56:39.738229+00:00",
+  "status": "completed",
+  "stderr": {
+    "media_type": "application/octet-stream",
+    "path": "raw/iris-a002/stderr.txt",
+    "retention": "retained",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "media_type": "application/octet-stream",
+    "path": "raw/iris-a002/stdout.txt",
+    "retention": "retained",
+    "sha256": "9b6bbee09c56848cc00f8079b454b17e4b4a6d56b3426347b750348f01a76a70"
+  }
+}

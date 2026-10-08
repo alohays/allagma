@@ -1,0 +1,69 @@
+{
+  "attempt_id": "iris-a002",
+  "attempt_number": 2,
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "campaign_id": "culp-v1",
+  "command": [
+    ".venv/bin/python",
+    "study/runner.py",
+    "--dataset",
+    "iris",
+    "--output",
+    "raw/iris-a002"
+  ],
+  "data_revision": "df12459eae6e3ae115b0b115c2cd38102c3a21c2232962a5dbf68ebed64d520f",
+  "ended_at": null,
+  "environment": {
+    "broker": "inputs/compute.py",
+    "device": "cpu",
+    "metadata": {
+      "media_type": "application/json",
+      "path": "provenance/environment.json",
+      "retention": "retained",
+      "sha256": "0c40740ca89594b63393aafd2f21ff0a6a52f3c04214d86628d321b537e2fcf3"
+    }
+  },
+  "error": null,
+  "exit_code": null,
+  "experiment_id": "iris",
+  "inputs": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/runs/iris/spec.json",
+      "retention": "retained",
+      "sha256": "966b554158a61d275bc1936ccbb373f75b864ec239714b3a257292abf1523390"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/protocol.json",
+      "retention": "retained",
+      "sha256": "8a8625c767725603567d8164d1df52cb2c75e3c870e49ecd1023dd5e8119e4c2"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/code-manifest.json",
+      "retention": "retained",
+      "sha256": "d9aaeca8758db0be6ec5cb1d8b221421713991e92bbdc52108f52cec984a4888"
+    },
+    {
+      "media_type": "application/json",
+      "path": "provenance/source-manifest.json",
+      "retention": "retained",
+      "sha256": "df12459eae6e3ae115b0b115c2cd38102c3a21c2232962a5dbf68ebed64d520f"
+    }
+  ],
+  "model_revision": null,
+  "outputs": [],
+  "protocol_revision": "culp-protocol-v1",
+  "record_type": "RunRecord",
+  "run_id": "iris",
+  "schema_version": "0.2",
+  "split": "confirmation",
+  "started_at": "2026-10-08T05:56:36.882863+00:00",
+  "status": "running",
+  "usage": {
+    "money_usd": 0,
+    "tokens": 0,
+    "wall_seconds": 0
+  }
+}

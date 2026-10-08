@@ -1,0 +1,26 @@
+{
+  "iris": {
+    "media_type": "application/json",
+    "path": "campaigns/culp-v1/runs/iris/spec.json",
+    "retention": "retain-with-study",
+    "sha256": "966b554158a61d275bc1936ccbb373f75b864ec239714b3a257292abf1523390"
+  },
+  "synthetic-pilot": {
+    "media_type": "application/json",
+    "path": "campaigns/culp-v1/runs/synthetic-pilot/spec.json",
+    "retention": "retain-with-study",
+    "sha256": "a3c48ce5f676ad6ce4bc87015c1b6de48cd2dba9701165fd28a355ff67764599"
+  },
+  "wine": {
+    "media_type": "application/json",
+    "path": "campaigns/culp-v1/runs/wine/spec.json",
+    "retention": "retain-with-study",
+    "sha256": "1e6dbe090d90b4098f0a7ad8fcd83dfd66ec66d642db5611163dd32a311bb00e"
+  },
+  "zoo": {
+    "media_type": "application/json",
+    "path": "campaigns/culp-v1/runs/zoo/spec.json",
+    "retention": "retain-with-study",
+    "sha256": "7da4b39f731def2afa7e6c381a207917a960d8b9772e8d2e90ca9ab7bc62635e"
+  }
+}

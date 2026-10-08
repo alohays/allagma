@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "preconfirmation_protocol": {
+    "path": "broker/requests/8420c97991f94b088b29f236a151a623/sources/campaigns/culp-v1/protocol.json",
+    "sha256": "8a8625c767725603567d8164d1df52cb2c75e3c870e49ecd1023dd5e8119e4c2"
+  },
+  "source_edits": "Exactly two absolute data-path substitutions with Path imports; all CULP algorithm, Iris source, metadata and data bytes preserved.",
+  "capture": "Return-preserving CULP/graph wrappers inspected. Actual function defaults are preserved; independently executed unwrapped scripts also agree.",
+  "independent_checks": "Adjacency-set CN/AA/RA/CS predictions including self-loop degree and common-neighbor endpoint exclusions; prescribed split and training-only Wine scaling; all original/fresh numeric arrays.",
+  "evidence": [
+    {
+      "root": "candidate",
+      "path": "study/runner.py",
+      "sha256": "d5aa19d302c366c579d1ecebad7a5c3a2ee7a2c7b8b178a494dfe4923372c966"
+    },
+    {
+      "root": "candidate",
+      "path": "provenance/platform.patch",
+      "sha256": "12d3f50e426b9052024700af67b7b8b15d630c85809df6fa6c9653b5fed6bec0"
+    },
+    {
+      "root": "candidate",
+      "path": "reproductions/verification/comparison.json",
+      "sha256": "4510dc735d69022f3be290aac98d1fcb155db06a2b403e3e2933ee154114e40a"
+    },
+    {
+      "root": "candidate",
+      "path": "reproductions/verification/vanilla/verification.json",
+      "sha256": "3696f4d4d09054d2176a65f6e9d6e4e959446255de653a76b555a8dbf74bbe1e"
+    }
+  ]
+}

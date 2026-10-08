@@ -1,0 +1,95 @@
+{
+  "analysis_id": "culp-analysis-v1",
+  "analysis_revision": "cf0515d0676116818e2bd96b47f979ec35259ef0938513455fca9530833d190c",
+  "code": {
+    "media_type": "application/octet-stream",
+    "path": "study/analyze.py",
+    "retention": "retained",
+    "sha256": "cf0515d0676116818e2bd96b47f979ec35259ef0938513455fca9530833d190c"
+  },
+  "configuration": {
+    "datasets": [
+      "iris",
+      "zoo",
+      "wine"
+    ],
+    "independent_predictor_check": "Retained graph edges; no capsule imports or kNN reconstruction",
+    "minimum_confirmation_runs": 3,
+    "scoring": "Exact original numpy mean accuracy and Python round(..., 2)"
+  },
+  "dependencies": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/protocol.json",
+      "retention": "retained",
+      "sha256": "8a8625c767725603567d8164d1df52cb2c75e3c870e49ecd1023dd5e8119e4c2"
+    },
+    {
+      "media_type": "application/json",
+      "path": "provenance/source-manifest.json",
+      "retention": "retained",
+      "sha256": "df12459eae6e3ae115b0b115c2cd38102c3a21c2232962a5dbf68ebed64d520f"
+    },
+    {
+      "media_type": "application/json",
+      "path": "provenance/environment.json",
+      "retention": "retained",
+      "sha256": "0c40740ca89594b63393aafd2f21ff0a6a52f3c04214d86628d321b537e2fcf3"
+    }
+  ],
+  "exclusions": [
+    {
+      "reason": "interrupted",
+      "record": {
+        "media_type": "application/json",
+        "path": "campaigns/culp-v1/runs/iris/attempts/iris-a001/record.json",
+        "retention": "retained",
+        "sha256": "0de21eb145c0264332794045c098f3e328f310eee96443c544a145dc8037f3c3"
+      }
+    },
+    {
+      "reason": "pilot qualification",
+      "record": {
+        "media_type": "application/json",
+        "path": "campaigns/culp-v1/runs/synthetic-pilot/attempts/pilot-a001/record.json",
+        "retention": "retained",
+        "sha256": "42a0292618828ff478d5016fe09429346bd1acab80dad294fa7bacafa61c287e"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "media_type": "application/json",
+      "path": "analysis/main/report.json",
+      "retention": "retained",
+      "sha256": "e5d07d5a6b2983fdd14a6cd9364fc9c88210d12d73da7df0a958fec3275d42c5"
+    },
+    {
+      "media_type": "application/json",
+      "path": "analysis/main/results.json",
+      "retention": "retained",
+      "sha256": "1abebb11906fb12cf5ab93cb9fad8478e8624a66147ac88610796c496729ae4c"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "analysis/main/results-table.md",
+      "retention": "retained",
+      "sha256": "73f7de3df98b491957214166181caade12bc2abfc99a2c672029e778c2c1d624"
+    },
+    {
+      "media_type": "application/json",
+      "path": "analysis/recomputed/comparison.json",
+      "retention": "retained",
+      "sha256": "009e3b621c664cc158d151d5c79fe57c45551b43893d38cc01cfb6bc7800f218"
+    }
+  ],
+  "raw_manifest": {
+    "media_type": "application/json",
+    "path": "evidence/raw-manifest.json",
+    "retention": "retained",
+    "sha256": "3b369075dbf5b908844e4b816ce6ee8f05ea0c25f717c110aae27ac9a537f7d5"
+  },
+  "record_type": "AnalysisRecord",
+  "schema_version": "0.2",
+  "uncertainty": "Repeated loop labels, deterministic reruns and different datasets are not independent replicates. No population accuracy, random-split variability or CN/AA comparison for Iris/Zoo is established."
+}

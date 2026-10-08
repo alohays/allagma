@@ -1,0 +1,53 @@
+{
+  "id": "context/active-brief",
+  "kind": "method",
+  "entry": "SKILL.md",
+  "contract": "0.2",
+  "inputs": [
+    "StudySpec"
+  ],
+  "outputs": [
+    "ContextRecord"
+  ],
+  "requires": [
+    "artifact.read",
+    "artifact.write"
+  ],
+  "optional": [],
+  "settings": {
+    "context_chars": 12000
+  },
+  "dependencies": [],
+  "resources": [
+    "select.py"
+  ],
+  "sources": [
+    {
+      "repository": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
+      "revision": "5895d19a1d2ea529875fff999320ad83392169c2",
+      "path": "docs/PROJECT_FILES_GUIDE.md",
+      "relationship": "design inspiration"
+    }
+  ],
+  "adaptation": "Original Allagma implementation of the adopted v0.2 artifact boundaries; no upstream code or prose copied.",
+  "lifecycle": "stable",
+  "maintainer": "@alohays",
+  "evaluation": [
+    "example.json"
+  ],
+  "examples": [
+    "example.json"
+  ],
+  "compatibility": {
+    "contracts": [
+      "0.2"
+    ],
+    "python": ">=3.11 for optional helpers",
+    "hosts": [
+      "generic",
+      "codex",
+      "claude-code"
+    ]
+  },
+  "replacement": null
+}

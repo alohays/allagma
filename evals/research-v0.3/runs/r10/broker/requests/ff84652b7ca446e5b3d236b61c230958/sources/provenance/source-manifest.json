@@ -1,0 +1,176 @@
+{
+  "adapted": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "work/capsule/code/LICENSE",
+      "retention": "retained",
+      "sha256": "86f24132a2af026b022666ac11bef2c3b73575ec072f4d33f750e6a9255a486f"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "work/capsule/code/README.md",
+      "retention": "retained",
+      "sha256": "88b1d4ce7571e28de55ab1b8915f8453cd6e7fd404de159d42bf948d1983ac29"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "work/capsule/code/culp/__init__.py",
+      "retention": "retained",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "work/capsule/code/culp/classifier.py",
+      "retention": "retained",
+      "sha256": "29765277bbcc3dc11f03d60d3a22c1e8b6e0688870f6329c3347e8d9480928b0"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "work/capsule/code/culp/leg.py",
+      "retention": "retained",
+      "sha256": "620577a43e68a32c8228193aa47d541b569857f6bb9f6007da07eb9e94d7da55"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "work/capsule/code/culp/link_predictors.py",
+      "retention": "retained",
+      "sha256": "70347199ed928229a7d1cd7cffc31137e443cc8ee2f61ef398ba8ccc552b8243"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "work/capsule/code/iris_sample.py",
+      "retention": "retained",
+      "sha256": "eef48c00cb56e8756ad877f84ed2f3d1a04bd3773b23148ebb2d4766fff561cb"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "work/capsule/code/wine_sample.py",
+      "retention": "retained",
+      "sha256": "8ed53177b4ba126387d9471469498735434a3fd2dfebd539bd80f58999ac9b81"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "work/capsule/code/zoo_sample.py",
+      "retention": "retained",
+      "sha256": "91102161e3f7276e1108c5aee72619f8d0eb1f701440d84576e193de8ece57d8"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "work/capsule/data/LICENSE",
+      "retention": "retained",
+      "sha256": "36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "work/capsule/data/wine.txt",
+      "retention": "retained",
+      "sha256": "6be6b1203f3d51df0b553a70e57b8a723cd405683958204f96d23d7cd6aea659"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "work/capsule/data/zoo.txt",
+      "retention": "retained",
+      "sha256": "cddc71c26ab9bc82795b8f4ff114cade41885d92720c6af29ffb69bcf73f0315"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "work/capsule/metadata/metadata.yml",
+      "retention": "retained",
+      "sha256": "7ae5e1a5c94f23793c907352db657d7249781825d28dd83b5977708d8a010750"
+    }
+  ],
+  "benchmark_commit": "e32a2980e72fe6eb04ee04eb749458f570625663",
+  "changes": [
+    "Only resolve /data/wine.txt and /data/zoo.txt relative to the copied capsule.",
+    "Iris and Zoo hard-coded CS calls intentionally preserved.",
+    "No algorithms, parameters, partitions, printed labels or rounding changed."
+  ],
+  "doi": "https://doi.org/10.24433/CO.0609cc4f-8b95-4d94-8fd0-9456d262b3a5",
+  "original": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "inputs/materials/capsule-6460826/code/LICENSE",
+      "retention": "retained",
+      "sha256": "86f24132a2af026b022666ac11bef2c3b73575ec072f4d33f750e6a9255a486f"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "inputs/materials/capsule-6460826/code/README.md",
+      "retention": "retained",
+      "sha256": "88b1d4ce7571e28de55ab1b8915f8453cd6e7fd404de159d42bf948d1983ac29"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "inputs/materials/capsule-6460826/code/culp/__init__.py",
+      "retention": "retained",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "inputs/materials/capsule-6460826/code/culp/classifier.py",
+      "retention": "retained",
+      "sha256": "29765277bbcc3dc11f03d60d3a22c1e8b6e0688870f6329c3347e8d9480928b0"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "inputs/materials/capsule-6460826/code/culp/leg.py",
+      "retention": "retained",
+      "sha256": "620577a43e68a32c8228193aa47d541b569857f6bb9f6007da07eb9e94d7da55"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "inputs/materials/capsule-6460826/code/culp/link_predictors.py",
+      "retention": "retained",
+      "sha256": "70347199ed928229a7d1cd7cffc31137e443cc8ee2f61ef398ba8ccc552b8243"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "inputs/materials/capsule-6460826/code/iris_sample.py",
+      "retention": "retained",
+      "sha256": "eef48c00cb56e8756ad877f84ed2f3d1a04bd3773b23148ebb2d4766fff561cb"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "inputs/materials/capsule-6460826/code/wine_sample.py",
+      "retention": "retained",
+      "sha256": "ffb9756450e5c0d1ff432e2902bede1e632c142e83f5e93be2c5987977707198"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "inputs/materials/capsule-6460826/code/zoo_sample.py",
+      "retention": "retained",
+      "sha256": "d3750a40e7a2eb4b6500254dd1ebef865f5a264d349310b8942c1f4ed08b8b8c"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "inputs/materials/capsule-6460826/data/LICENSE",
+      "retention": "retained",
+      "sha256": "36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "inputs/materials/capsule-6460826/data/wine.txt",
+      "retention": "retained",
+      "sha256": "6be6b1203f3d51df0b553a70e57b8a723cd405683958204f96d23d7cd6aea659"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "inputs/materials/capsule-6460826/data/zoo.txt",
+      "retention": "retained",
+      "sha256": "cddc71c26ab9bc82795b8f4ff114cade41885d92720c6af29ffb69bcf73f0315"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "inputs/materials/capsule-6460826/metadata/metadata.yml",
+      "retention": "retained",
+      "sha256": "7ae5e1a5c94f23793c907352db657d7249781825d28dd83b5977708d8a010750"
+    }
+  ],
+  "patch": {
+    "media_type": "application/octet-stream",
+    "path": "provenance/platform.patch",
+    "retention": "retained",
+    "sha256": "12d3f50e426b9052024700af67b7b8b15d630c85809df6fa6c9653b5fed6bec0"
+  },
+  "source": "CORE-Bench capsule-6460826"
+}

@@ -1,0 +1,22 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "-m",
+    "pip",
+    "install",
+    "--no-index",
+    "--find-links",
+    "inputs/materials/wheels",
+    "numpy==1.26.4",
+    "scipy==1.14.1",
+    "scikit-learn==1.5.2",
+    "pandas==2.2.3",
+    "networkx==2.8.8"
+  ],
+  "attempt": false,
+  "category": "setup",
+  "cwd": ".",
+  "label": "culp-dependencies",
+  "request_id": "5298a69f43784f23b270d52975829a58",
+  "timeout_seconds": 120.0
+}

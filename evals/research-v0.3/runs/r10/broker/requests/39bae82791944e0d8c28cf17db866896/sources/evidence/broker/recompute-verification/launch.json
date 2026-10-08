@@ -1,0 +1,134 @@
+{
+  "argv": [
+    "/usr/local/bin/python3",
+    "inputs/compute.py",
+    "--category",
+    "compute",
+    "--label",
+    "recompute-verification",
+    "--timeout",
+    "30",
+    "--",
+    "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r10/candidate/.venv/bin/python",
+    "study/analyze.py",
+    "--manifest",
+    "evidence/raw-manifest.json",
+    "--output",
+    "recomputations/verification",
+    "--compare",
+    "analysis/main"
+  ],
+  "category": "compute",
+  "code": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/analyze.py",
+      "retention": "retained",
+      "sha256": "cf0515d0676116818e2bd96b47f979ec35259ef0938513455fca9530833d190c"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/broker_run.py",
+      "retention": "retained",
+      "sha256": "e43d79533fb8f69cc8b80c956a97bb7cfa287f944560481c903c097047d470d6"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/collect.py",
+      "retention": "retained",
+      "sha256": "f8e4df4f9fa2455203b181b31b51ff4db53b9c09d178f332226c9d49d65e4d24"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/common.py",
+      "retention": "retained",
+      "sha256": "f2f75cde8bb6979186809d5d68450371a57947b2ee8114cbffaef6924711ce1c"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/compare_reproduction.py",
+      "retention": "retained",
+      "sha256": "458027f31f8447b22412f2c3921a3c3b8aef459335a9ef6e2b76a461c05177af"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/environment.py",
+      "retention": "retained",
+      "sha256": "62af87f3d365efd1a419bd06bb75ba882e132c8a7ee82323178a03acfbe19732"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/pilot.py",
+      "retention": "retained",
+      "sha256": "f6afb8d90b1cb7d2e806b92eaec4f1e8a0047c19adbc2e779a85511ddea950f1"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/prepare_campaign.py",
+      "retention": "retained",
+      "sha256": "2d4cc1091f07c045305a84658d2c8d1b80192b647ac43eec18cc3451acfbb1ef"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/prepare_sources.py",
+      "retention": "retained",
+      "sha256": "8f60312584729c73d1235d192a9bdb6478ba2122dfb45313f1d09962b9d0b1e5"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/recompute.py",
+      "retention": "retained",
+      "sha256": "23f700eee0b1a2e512f4d2832b3aae18fd899e868c1c2b68383c7dc9b66a693c"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/reproduce.py",
+      "retention": "retained",
+      "sha256": "cc52c1aea178e8493cf5d16ca6e6853d4b4d4eb7a3735825d2cb77bd0df348b5"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/runner.py",
+      "retention": "retained",
+      "sha256": "d5aa19d302c366c579d1ecebad7a5c3a2ee7a2c7b8b178a494dfe4923372c966"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/vanilla.py",
+      "retention": "retained",
+      "sha256": "084ed4d0547cb0dd0dcce17b3cd2951ddc99e446327ac7b085c466e4a85f2000"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/verify.py",
+      "retention": "retained",
+      "sha256": "f9696423e99d1d1992e1bce5d5942d468a378f8abde8257444cd78ef8ea1d2fd"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/write_report.py",
+      "retention": "retained",
+      "sha256": "3f3b7f84a3f82bb40a7479a3d607d598a3676bd5ca4f2afc861b97c951d39dd5"
+    }
+  ],
+  "label": "recompute-verification",
+  "launcher": {
+    "media_type": "application/octet-stream",
+    "path": "study/broker_run.py",
+    "retention": "retained",
+    "sha256": "e43d79533fb8f69cc8b80c956a97bb7cfa287f944560481c903c097047d470d6"
+  },
+  "marked_attempt": false,
+  "started_at": "2026-10-08T06:01:17.925632+00:00",
+  "timeout": 30,
+  "worker_argv": [
+    "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r10/candidate/.venv/bin/python",
+    "study/analyze.py",
+    "--manifest",
+    "evidence/raw-manifest.json",
+    "--output",
+    "recomputations/verification",
+    "--compare",
+    "analysis/main"
+  ]
+}

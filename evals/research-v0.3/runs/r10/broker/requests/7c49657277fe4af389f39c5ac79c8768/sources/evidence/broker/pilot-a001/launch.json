@@ -1,0 +1,86 @@
+{
+  "argv": [
+    "/usr/local/bin/python3",
+    "inputs/compute.py",
+    "--category",
+    "compute",
+    "--label",
+    "pilot-a001",
+    "--timeout",
+    "120",
+    "--",
+    ".venv/bin/python",
+    "study/pilot.py"
+  ],
+  "category": "compute",
+  "code": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/analyze.py",
+      "retention": "retained",
+      "sha256": "cf0515d0676116818e2bd96b47f979ec35259ef0938513455fca9530833d190c"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/broker_run.py",
+      "retention": "retained",
+      "sha256": "e43d79533fb8f69cc8b80c956a97bb7cfa287f944560481c903c097047d470d6"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/common.py",
+      "retention": "retained",
+      "sha256": "f2f75cde8bb6979186809d5d68450371a57947b2ee8114cbffaef6924711ce1c"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/environment.py",
+      "retention": "retained",
+      "sha256": "62af87f3d365efd1a419bd06bb75ba882e132c8a7ee82323178a03acfbe19732"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/pilot.py",
+      "retention": "retained",
+      "sha256": "f6afb8d90b1cb7d2e806b92eaec4f1e8a0047c19adbc2e779a85511ddea950f1"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/prepare_campaign.py",
+      "retention": "retained",
+      "sha256": "2d4cc1091f07c045305a84658d2c8d1b80192b647ac43eec18cc3451acfbb1ef"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/prepare_sources.py",
+      "retention": "retained",
+      "sha256": "8f60312584729c73d1235d192a9bdb6478ba2122dfb45313f1d09962b9d0b1e5"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/runner.py",
+      "retention": "retained",
+      "sha256": "d5aa19d302c366c579d1ecebad7a5c3a2ee7a2c7b8b178a494dfe4923372c966"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/write_report.py",
+      "retention": "retained",
+      "sha256": "3f3b7f84a3f82bb40a7479a3d607d598a3676bd5ca4f2afc861b97c951d39dd5"
+    }
+  ],
+  "label": "pilot-a001",
+  "launcher": {
+    "media_type": "application/octet-stream",
+    "path": "study/broker_run.py",
+    "retention": "retained",
+    "sha256": "e43d79533fb8f69cc8b80c956a97bb7cfa287f944560481c903c097047d470d6"
+  },
+  "marked_attempt": false,
+  "started_at": "2026-10-08T05:52:46.791408+00:00",
+  "timeout": 120,
+  "worker_argv": [
+    ".venv/bin/python",
+    "study/pilot.py"
+  ]
+}

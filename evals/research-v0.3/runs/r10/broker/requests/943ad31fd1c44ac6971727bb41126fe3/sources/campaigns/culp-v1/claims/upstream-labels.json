@@ -1,0 +1,65 @@
+{
+  "claim_id": "upstream-labels",
+  "contradicting": [],
+  "dependencies": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/analysis-record.json",
+      "retention": "retained",
+      "sha256": "ad915b8dbb6d1232144c2ee883931fd3683860a94ff692c84ee1949c94f08391"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/raw-manifest.json",
+      "retention": "retained",
+      "sha256": "3b369075dbf5b908844e4b816ce6ee8f05ea0c25f717c110aae27ac9a537f7d5"
+    }
+  ],
+  "limitations": [
+    "No corrected-algorithm Iris/Zoo comparison performed"
+  ],
+  "record_type": "ClaimRecord",
+  "schema_version": "0.2",
+  "scope": "Static supplied source and observed call arguments",
+  "status": "supported",
+  "supersedes": null,
+  "supporting": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "work/capsule/code/iris_sample.py",
+      "retention": "retained",
+      "sha256": "eef48c00cb56e8756ad877f84ed2f3d1a04bd3773b23148ebb2d4766fff561cb"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "work/capsule/code/zoo_sample.py",
+      "retention": "retained",
+      "sha256": "91102161e3f7276e1108c5aee72619f8d0eb1f701440d84576e193de8ece57d8"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "work/capsule/code/wine_sample.py",
+      "retention": "retained",
+      "sha256": "8ed53177b4ba126387d9471469498735434a3fd2dfebd539bd80f58999ac9b81"
+    },
+    {
+      "media_type": "application/json",
+      "path": "raw/iris-a002/calls.json",
+      "retention": "retained",
+      "sha256": "43785f0dad1cd2d1fb240c9d9dd2a58d2fb647cd906631b5ba12b43a32badaf9"
+    },
+    {
+      "media_type": "application/json",
+      "path": "raw/zoo-a001/calls.json",
+      "retention": "retained",
+      "sha256": "3f6871b1fa0eee86bc637e78268fc0b2d06071f67b61dda8698cc8ad4aa4af1c"
+    },
+    {
+      "media_type": "application/json",
+      "path": "raw/wine-a001/calls.json",
+      "retention": "retained",
+      "sha256": "e2138dc7bd60b446ae0da954bd1ba3fc57bb9f49d67b51dcb61d77cf7fcd01b3"
+    }
+  ],
+  "text": "Iris and Zoo print four predictor names but call CS on all four iterations; Wine dispatches the loop's predictor."
+}

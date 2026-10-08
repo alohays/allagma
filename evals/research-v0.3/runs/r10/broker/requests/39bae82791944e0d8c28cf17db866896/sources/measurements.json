@@ -1,0 +1,170 @@
+{
+  "format": "research-measurements-v1",
+  "protocol": "campaigns/culp-v1/protocol.json",
+  "runs": [
+    {
+      "attempt_id": "iris-a002",
+      "calls": [
+        {
+          "arrays": "raw/iris-a002/call-00.npz",
+          "executed_predictor": "CS",
+          "metrics": {
+            "accuracy": 1.0,
+            "accuracy_percent": 100.0,
+            "correct": 30,
+            "test_n": 30
+          },
+          "printed_label": "CN"
+        },
+        {
+          "arrays": "raw/iris-a002/call-01.npz",
+          "executed_predictor": "CS",
+          "metrics": {
+            "accuracy": 1.0,
+            "accuracy_percent": 100.0,
+            "correct": 30,
+            "test_n": 30
+          },
+          "printed_label": "AA"
+        },
+        {
+          "arrays": "raw/iris-a002/call-02.npz",
+          "executed_predictor": "CS",
+          "metrics": {
+            "accuracy": 1.0,
+            "accuracy_percent": 100.0,
+            "correct": 30,
+            "test_n": 30
+          },
+          "printed_label": "RA"
+        },
+        {
+          "arrays": "raw/iris-a002/call-03.npz",
+          "executed_predictor": "CS",
+          "metrics": {
+            "accuracy": 1.0,
+            "accuracy_percent": 100.0,
+            "correct": 30,
+            "test_n": 30
+          },
+          "printed_label": "CS"
+        }
+      ],
+      "dataset": "iris",
+      "device": "cpu",
+      "phase": "confirmation",
+      "seed": 42,
+      "source_revision": "df12459eae6e3ae115b0b115c2cd38102c3a21c2232962a5dbf68ebed64d520f"
+    },
+    {
+      "attempt_id": "zoo-a001",
+      "calls": [
+        {
+          "arrays": "raw/zoo-a001/call-00.npz",
+          "executed_predictor": "CS",
+          "metrics": {
+            "accuracy": 1.0,
+            "accuracy_percent": 100.0,
+            "correct": 21,
+            "test_n": 21
+          },
+          "printed_label": "CN"
+        },
+        {
+          "arrays": "raw/zoo-a001/call-01.npz",
+          "executed_predictor": "CS",
+          "metrics": {
+            "accuracy": 1.0,
+            "accuracy_percent": 100.0,
+            "correct": 21,
+            "test_n": 21
+          },
+          "printed_label": "AA"
+        },
+        {
+          "arrays": "raw/zoo-a001/call-02.npz",
+          "executed_predictor": "CS",
+          "metrics": {
+            "accuracy": 1.0,
+            "accuracy_percent": 100.0,
+            "correct": 21,
+            "test_n": 21
+          },
+          "printed_label": "RA"
+        },
+        {
+          "arrays": "raw/zoo-a001/call-03.npz",
+          "executed_predictor": "CS",
+          "metrics": {
+            "accuracy": 1.0,
+            "accuracy_percent": 100.0,
+            "correct": 21,
+            "test_n": 21
+          },
+          "printed_label": "CS"
+        }
+      ],
+      "dataset": "zoo",
+      "device": "cpu",
+      "phase": "confirmation",
+      "seed": 42,
+      "source_revision": "df12459eae6e3ae115b0b115c2cd38102c3a21c2232962a5dbf68ebed64d520f"
+    },
+    {
+      "attempt_id": "wine-a001",
+      "calls": [
+        {
+          "arrays": "raw/wine-a001/call-00.npz",
+          "executed_predictor": "CN",
+          "metrics": {
+            "accuracy": 0.9722222222222222,
+            "accuracy_percent": 97.22,
+            "correct": 35,
+            "test_n": 36
+          },
+          "printed_label": "CN"
+        },
+        {
+          "arrays": "raw/wine-a001/call-01.npz",
+          "executed_predictor": "AA",
+          "metrics": {
+            "accuracy": 0.9722222222222222,
+            "accuracy_percent": 97.22,
+            "correct": 35,
+            "test_n": 36
+          },
+          "printed_label": "AA"
+        },
+        {
+          "arrays": "raw/wine-a001/call-02.npz",
+          "executed_predictor": "RA",
+          "metrics": {
+            "accuracy": 0.9722222222222222,
+            "accuracy_percent": 97.22,
+            "correct": 35,
+            "test_n": 36
+          },
+          "printed_label": "RA"
+        },
+        {
+          "arrays": "raw/wine-a001/call-03.npz",
+          "executed_predictor": "CS",
+          "metrics": {
+            "accuracy": 1.0,
+            "accuracy_percent": 100.0,
+            "correct": 36,
+            "test_n": 36
+          },
+          "printed_label": "CS"
+        }
+      ],
+      "dataset": "wine",
+      "device": "cpu",
+      "phase": "confirmation",
+      "seed": 42,
+      "source_revision": "df12459eae6e3ae115b0b115c2cd38102c3a21c2232962a5dbf68ebed64d520f"
+    }
+  ],
+  "schema_note": "MEASUREMENTS.md defines EMA and modular-addition fields only. This CULP extension retains its generic envelope and uses per-call predictions, labels, source data and graph edges; there are no trained weights.",
+  "task_id": "core-culp"
+}

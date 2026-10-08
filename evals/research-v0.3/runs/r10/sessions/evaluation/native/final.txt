@@ -1,0 +1,11 @@
+Completed the reproduction and delivered the [submission package](/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r10/candidate/submission.json).
+
+| Dataset | Printed CN | Printed AA |
+|---|---:|---:|
+| Iris | 100% | 100% |
+| Zoo | 100% | 100% |
+| Wine | 97.22% | 97.22% |
+
+All three scripts ran. Interruption recovery, fresh-environment reproduction and retained-data verification passed.
+
+**Caveat:** Iris and Zoo actually execute CS under their CN/AA labels. That upstream limitation is preserved and explained in [REPORT.md](/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r10/candidate/REPORT.md), alongside review scope and reproduction instructions.

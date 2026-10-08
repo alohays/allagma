@@ -1,0 +1,592 @@
+{
+  "additional_check": {
+    "media_type": "application/json",
+    "path": "evidence/verification.json",
+    "retention": "retained",
+    "sha256": "afb3ff87d3a8b125ceaad7e9c6118c5896fbbc7b2a0222e496a7a4fe3f7d37c1"
+  },
+  "backend": "Locked reviewer/checklist, offline deterministic direct-evidence checker",
+  "claims": [
+    {
+      "claim_id": "fresh-reproduction",
+      "contradicting": [],
+      "dependencies": [
+        {
+          "media_type": "application/json",
+          "path": "campaigns/culp-v1/analysis-record.json",
+          "retention": "retained",
+          "sha256": "ad915b8dbb6d1232144c2ee883931fd3683860a94ff692c84ee1949c94f08391"
+        },
+        {
+          "media_type": "application/json",
+          "path": "evidence/raw-manifest.json",
+          "retention": "retained",
+          "sha256": "3b369075dbf5b908844e4b816ce6ee8f05ea0c25f717c110aae27ac9a537f7d5"
+        }
+      ],
+      "limitations": [
+        "Not an independent-host or historical-environment replication"
+      ],
+      "record_type": "ClaimRecord",
+      "schema_version": "0.2",
+      "scope": "Same supplied Mac and pinned offline packages",
+      "status": "supported",
+      "supersedes": null,
+      "supporting": [
+        {
+          "media_type": "application/json",
+          "path": "reproductions/verification/comparison.json",
+          "retention": "retained",
+          "sha256": "4510dc735d69022f3be290aac98d1fcb155db06a2b403e3e2933ee154114e40a"
+        },
+        {
+          "media_type": "application/json",
+          "path": "reproductions/verification/vanilla/verification.json",
+          "retention": "retained",
+          "sha256": "3696f4d4d09054d2176a65f6e9d6e4e959446255de653a76b555a8dbf74bbe1e"
+        },
+        {
+          "media_type": "application/json",
+          "path": "reproductions/verification/complete.json",
+          "retention": "retained",
+          "sha256": "99f95cb09c3fb322fe66392016d99b97e90fb61b136dda9245c7124f287929a0"
+        }
+      ],
+      "text": "A fresh isolated environment reproduces all six answers and all 12 call measurements; direct uninstrumented source stdout exactly matches the observed execution."
+    },
+    {
+      "claim_id": "graph-loops",
+      "contradicting": [],
+      "dependencies": [
+        {
+          "media_type": "application/json",
+          "path": "campaigns/culp-v1/analysis-record.json",
+          "retention": "retained",
+          "sha256": "ad915b8dbb6d1232144c2ee883931fd3683860a94ff692c84ee1949c94f08391"
+        },
+        {
+          "media_type": "application/json",
+          "path": "evidence/raw-manifest.json",
+          "retention": "retained",
+          "sha256": "3b369075dbf5b908844e4b816ce6ee8f05ea0c25f717c110aae27ac9a537f7d5"
+        }
+      ],
+      "limitations": [
+        "No source repair or claim that tie order is identical in the unavailable original dependency versions"
+      ],
+      "record_type": "ClaimRecord",
+      "schema_version": "0.2",
+      "scope": "Only the retained graphs in this local environment",
+      "status": "supported",
+      "supersedes": null,
+      "supporting": [
+        {
+          "media_type": "application/json",
+          "path": "analysis/main/results.json",
+          "retention": "retained",
+          "sha256": "1abebb11906fb12cf5ab93cb9fad8478e8624a66147ac88610796c496729ae4c"
+        },
+        {
+          "media_type": "application/octet-stream",
+          "path": "work/capsule/code/culp/leg.py",
+          "retention": "retained",
+          "sha256": "620577a43e68a32c8228193aa47d541b569857f6bb9f6007da07eb9e94d7da55"
+        }
+      ],
+      "text": "Saved confirmation graphs contain 1 Iris self-loop, 28 Zoo self-loops and no Wine self-loops; the original neighbor-slicing behavior was preserved."
+    },
+    {
+      "claim_id": "interruption-recovery",
+      "contradicting": [],
+      "dependencies": [
+        {
+          "media_type": "application/json",
+          "path": "campaigns/culp-v1/analysis-record.json",
+          "retention": "retained",
+          "sha256": "ad915b8dbb6d1232144c2ee883931fd3683860a94ff692c84ee1949c94f08391"
+        },
+        {
+          "media_type": "application/json",
+          "path": "evidence/raw-manifest.json",
+          "retention": "retained",
+          "sha256": "3b369075dbf5b908844e4b816ce6ee8f05ea0c25f717c110aae27ac9a537f7d5"
+        }
+      ],
+      "limitations": [
+        "Does not establish recovery from every failure mode"
+      ],
+      "record_type": "ClaimRecord",
+      "schema_version": "0.2",
+      "scope": "One configured controlled interruption",
+      "status": "supported",
+      "supersedes": null,
+      "supporting": [
+        {
+          "media_type": "application/json",
+          "path": "evidence/recovery.json",
+          "retention": "retained",
+          "sha256": "789507b2b3464941d88119b86b3e61c96861b9e391129c937ceb55d4a2485ce5"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/culp-v1/runs/iris/attempts/iris-a001/record.json",
+          "retention": "retained",
+          "sha256": "0de21eb145c0264332794045c098f3e328f310eee96443c544a145dc8037f3c3"
+        },
+        {
+          "media_type": "application/json",
+          "path": "campaigns/culp-v1/runs/iris/attempts/iris-a002/record.json",
+          "retention": "retained",
+          "sha256": "7dfd20d67f96f5c0e99efb048a4d7368a6872f4e4212b0310a1d2d548dc0c5cc"
+        }
+      ],
+      "text": "The marked Iris attempt was interrupted by the controller, retained and excluded; the distinct successor completed successfully."
+    },
+    {
+      "claim_id": "iris-aa",
+      "contradicting": [],
+      "dependencies": [
+        {
+          "media_type": "application/json",
+          "path": "campaigns/culp-v1/analysis-record.json",
+          "retention": "retained",
+          "sha256": "ad915b8dbb6d1232144c2ee883931fd3683860a94ff692c84ee1949c94f08391"
+        },
+        {
+          "media_type": "application/json",
+          "path": "evidence/raw-manifest.json",
+          "retention": "retained",
+          "sha256": "3b369075dbf5b908844e4b816ce6ee8f05ea0c25f717c110aae27ac9a537f7d5"
+        },
+        {
+          "media_type": "application/octet-stream",
+          "path": "study/analyze.py",
+          "retention": "retained",
+          "sha256": "cf0515d0676116818e2bd96b47f979ec35259ef0938513455fca9530833d190c"
+        }
+      ],
+      "limitations": [
+        "One fixed split; no population accuracy or replicate uncertainty",
+        "Original environment/reference outputs unavailable",
+        "The CN/AA label does not identify the executed algorithm; the upstream script uses CS"
+      ],
+      "record_type": "ClaimRecord",
+      "schema_version": "0.2",
+      "scope": "Only the supplied script's printed task output at fixed random_state=42 with documented source/library versions",
+      "status": "supported",
+      "supersedes": null,
+      "supporting": [
+        {
+          "media_type": "application/octet-stream",
+          "path": "raw/iris-a002/call-01.npz",
+          "retention": "retained",
+          "sha256": "a6de438feea278106c313e382a9144e1487f5b0f46705a215935ab3e2589be51"
+        },
+        {
+          "media_type": "application/octet-stream",
+          "path": "raw/iris-a002/stdout.txt",
+          "retention": "retained",
+          "sha256": "9b6bbee09c56848cc00f8079b454b17e4b4a6d56b3426347b750348f01a76a70"
+        },
+        {
+          "media_type": "application/json",
+          "path": "raw/iris-a002/calls.json",
+          "retention": "retained",
+          "sha256": "43785f0dad1cd2d1fb240c9d9dd2a58d2fb647cd906631b5ba12b43a32badaf9"
+        },
+        {
+          "media_type": "application/json",
+          "path": "analysis/main/results.json",
+          "retention": "retained",
+          "sha256": "1abebb11906fb12cf5ab93cb9fad8478e8624a66147ac88610796c496729ae4c"
+        }
+      ],
+      "text": "The supplied Iris script prints 100.00% under AA; saved predictions have 30 correct among 30. The actual executed predictor is CS."
+    },
+    {
+      "claim_id": "iris-cn",
+      "contradicting": [],
+      "dependencies": [
+        {
+          "media_type": "application/json",
+          "path": "campaigns/culp-v1/analysis-record.json",
+          "retention": "retained",
+          "sha256": "ad915b8dbb6d1232144c2ee883931fd3683860a94ff692c84ee1949c94f08391"
+        },
+        {
+          "media_type": "application/json",
+          "path": "evidence/raw-manifest.json",
+          "retention": "retained",
+          "sha256": "3b369075dbf5b908844e4b816ce6ee8f05ea0c25f717c110aae27ac9a537f7d5"
+        },
+        {
+          "media_type": "application/octet-stream",
+          "path": "study/analyze.py",
+          "retention": "retained",
+          "sha256": "cf0515d0676116818e2bd96b47f979ec35259ef0938513455fca9530833d190c"
+        }
+      ],
+      "limitations": [
+        "One fixed split; no population accuracy or replicate uncertainty",
+        "Original environment/reference outputs unavailable",
+        "The CN/AA label does not identify the executed algorithm; the upstream script uses CS"
+      ],
+      "record_type": "ClaimRecord",
+      "schema_version": "0.2",
+      "scope": "Only the supplied script's printed task output at fixed random_state=42 with documented source/library versions",
+      "status": "supported",
+      "supersedes": null,
+      "supporting": [
+        {
+          "media_type": "application/octet-stream",
+          "path": "raw/iris-a002/call-00.npz",
+          "retention": "retained",
+          "sha256": "a6de438feea278106c313e382a9144e1487f5b0f46705a215935ab3e2589be51"
+        },
+        {
+          "media_type": "application/octet-stream",
+          "path": "raw/iris-a002/stdout.txt",
+          "retention": "retained",
+          "sha256": "9b6bbee09c56848cc00f8079b454b17e4b4a6d56b3426347b750348f01a76a70"
+        },
+        {
+          "media_type": "application/json",
+          "path": "raw/iris-a002/calls.json",
+          "retention": "retained",
+          "sha256": "43785f0dad1cd2d1fb240c9d9dd2a58d2fb647cd906631b5ba12b43a32badaf9"
+        },
+        {
+          "media_type": "application/json",
+          "path": "analysis/main/results.json",
+          "retention": "retained",
+          "sha256": "1abebb11906fb12cf5ab93cb9fad8478e8624a66147ac88610796c496729ae4c"
+        }
+      ],
+      "text": "The supplied Iris script prints 100.00% under CN; saved predictions have 30 correct among 30. The actual executed predictor is CS."
+    },
+    {
+      "claim_id": "upstream-labels",
+      "contradicting": [],
+      "dependencies": [
+        {
+          "media_type": "application/json",
+          "path": "campaigns/culp-v1/analysis-record.json",
+          "retention": "retained",
+          "sha256": "ad915b8dbb6d1232144c2ee883931fd3683860a94ff692c84ee1949c94f08391"
+        },
+        {
+          "media_type": "application/json",
+          "path": "evidence/raw-manifest.json",
+          "retention": "retained",
+          "sha256": "3b369075dbf5b908844e4b816ce6ee8f05ea0c25f717c110aae27ac9a537f7d5"
+        }
+      ],
+      "limitations": [
+        "No corrected-algorithm Iris/Zoo comparison performed"
+      ],
+      "record_type": "ClaimRecord",
+      "schema_version": "0.2",
+      "scope": "Static supplied source and observed call arguments",
+      "status": "supported",
+      "supersedes": null,
+      "supporting": [
+        {
+          "media_type": "application/octet-stream",
+          "path": "work/capsule/code/iris_sample.py",
+          "retention": "retained",
+          "sha256": "eef48c00cb56e8756ad877f84ed2f3d1a04bd3773b23148ebb2d4766fff561cb"
+        },
+        {
+          "media_type": "application/octet-stream",
+          "path": "work/capsule/code/zoo_sample.py",
+          "retention": "retained",
+          "sha256": "91102161e3f7276e1108c5aee72619f8d0eb1f701440d84576e193de8ece57d8"
+        },
+        {
+          "media_type": "application/octet-stream",
+          "path": "work/capsule/code/wine_sample.py",
+          "retention": "retained",
+          "sha256": "8ed53177b4ba126387d9471469498735434a3fd2dfebd539bd80f58999ac9b81"
+        },
+        {
+          "media_type": "application/json",
+          "path": "raw/iris-a002/calls.json",
+          "retention": "retained",
+          "sha256": "43785f0dad1cd2d1fb240c9d9dd2a58d2fb647cd906631b5ba12b43a32badaf9"
+        },
+        {
+          "media_type": "application/json",
+          "path": "raw/zoo-a001/calls.json",
+          "retention": "retained",
+          "sha256": "3f6871b1fa0eee86bc637e78268fc0b2d06071f67b61dda8698cc8ad4aa4af1c"
+        },
+        {
+          "media_type": "application/json",
+          "path": "raw/wine-a001/calls.json",
+          "retention": "retained",
+          "sha256": "e2138dc7bd60b446ae0da954bd1ba3fc57bb9f49d67b51dcb61d77cf7fcd01b3"
+        }
+      ],
+      "text": "Iris and Zoo print four predictor names but call CS on all four iterations; Wine dispatches the loop's predictor."
+    },
+    {
+      "claim_id": "wine-aa",
+      "contradicting": [],
+      "dependencies": [
+        {
+          "media_type": "application/json",
+          "path": "campaigns/culp-v1/analysis-record.json",
+          "retention": "retained",
+          "sha256": "ad915b8dbb6d1232144c2ee883931fd3683860a94ff692c84ee1949c94f08391"
+        },
+        {
+          "media_type": "application/json",
+          "path": "evidence/raw-manifest.json",
+          "retention": "retained",
+          "sha256": "3b369075dbf5b908844e4b816ce6ee8f05ea0c25f717c110aae27ac9a537f7d5"
+        },
+        {
+          "media_type": "application/octet-stream",
+          "path": "study/analyze.py",
+          "retention": "retained",
+          "sha256": "cf0515d0676116818e2bd96b47f979ec35259ef0938513455fca9530833d190c"
+        }
+      ],
+      "limitations": [
+        "One fixed split; no population accuracy or replicate uncertainty",
+        "Original environment/reference outputs unavailable"
+      ],
+      "record_type": "ClaimRecord",
+      "schema_version": "0.2",
+      "scope": "Only the supplied script's printed task output at fixed random_state=42 with documented source/library versions",
+      "status": "supported",
+      "supersedes": null,
+      "supporting": [
+        {
+          "media_type": "application/octet-stream",
+          "path": "raw/wine-a001/call-01.npz",
+          "retention": "retained",
+          "sha256": "606d19a735c5ce5805ea61bc2f23674809562592c010b4cb17c4d7052ff09709"
+        },
+        {
+          "media_type": "application/octet-stream",
+          "path": "raw/wine-a001/stdout.txt",
+          "retention": "retained",
+          "sha256": "93c201462bc7615c6b820c541bcbab13d5e22d057b68d5b98a140fd38452314c"
+        },
+        {
+          "media_type": "application/json",
+          "path": "raw/wine-a001/calls.json",
+          "retention": "retained",
+          "sha256": "e2138dc7bd60b446ae0da954bd1ba3fc57bb9f49d67b51dcb61d77cf7fcd01b3"
+        },
+        {
+          "media_type": "application/json",
+          "path": "analysis/main/results.json",
+          "retention": "retained",
+          "sha256": "1abebb11906fb12cf5ab93cb9fad8478e8624a66147ac88610796c496729ae4c"
+        }
+      ],
+      "text": "The supplied Wine script prints 97.22% under AA; saved predictions have 35 correct among 36. The actual executed predictor is AA."
+    },
+    {
+      "claim_id": "wine-cn",
+      "contradicting": [],
+      "dependencies": [
+        {
+          "media_type": "application/json",
+          "path": "campaigns/culp-v1/analysis-record.json",
+          "retention": "retained",
+          "sha256": "ad915b8dbb6d1232144c2ee883931fd3683860a94ff692c84ee1949c94f08391"
+        },
+        {
+          "media_type": "application/json",
+          "path": "evidence/raw-manifest.json",
+          "retention": "retained",
+          "sha256": "3b369075dbf5b908844e4b816ce6ee8f05ea0c25f717c110aae27ac9a537f7d5"
+        },
+        {
+          "media_type": "application/octet-stream",
+          "path": "study/analyze.py",
+          "retention": "retained",
+          "sha256": "cf0515d0676116818e2bd96b47f979ec35259ef0938513455fca9530833d190c"
+        }
+      ],
+      "limitations": [
+        "One fixed split; no population accuracy or replicate uncertainty",
+        "Original environment/reference outputs unavailable"
+      ],
+      "record_type": "ClaimRecord",
+      "schema_version": "0.2",
+      "scope": "Only the supplied script's printed task output at fixed random_state=42 with documented source/library versions",
+      "status": "supported",
+      "supersedes": null,
+      "supporting": [
+        {
+          "media_type": "application/octet-stream",
+          "path": "raw/wine-a001/call-00.npz",
+          "retention": "retained",
+          "sha256": "606d19a735c5ce5805ea61bc2f23674809562592c010b4cb17c4d7052ff09709"
+        },
+        {
+          "media_type": "application/octet-stream",
+          "path": "raw/wine-a001/stdout.txt",
+          "retention": "retained",
+          "sha256": "93c201462bc7615c6b820c541bcbab13d5e22d057b68d5b98a140fd38452314c"
+        },
+        {
+          "media_type": "application/json",
+          "path": "raw/wine-a001/calls.json",
+          "retention": "retained",
+          "sha256": "e2138dc7bd60b446ae0da954bd1ba3fc57bb9f49d67b51dcb61d77cf7fcd01b3"
+        },
+        {
+          "media_type": "application/json",
+          "path": "analysis/main/results.json",
+          "retention": "retained",
+          "sha256": "1abebb11906fb12cf5ab93cb9fad8478e8624a66147ac88610796c496729ae4c"
+        }
+      ],
+      "text": "The supplied Wine script prints 97.22% under CN; saved predictions have 35 correct among 36. The actual executed predictor is CN."
+    },
+    {
+      "claim_id": "zoo-aa",
+      "contradicting": [],
+      "dependencies": [
+        {
+          "media_type": "application/json",
+          "path": "campaigns/culp-v1/analysis-record.json",
+          "retention": "retained",
+          "sha256": "ad915b8dbb6d1232144c2ee883931fd3683860a94ff692c84ee1949c94f08391"
+        },
+        {
+          "media_type": "application/json",
+          "path": "evidence/raw-manifest.json",
+          "retention": "retained",
+          "sha256": "3b369075dbf5b908844e4b816ce6ee8f05ea0c25f717c110aae27ac9a537f7d5"
+        },
+        {
+          "media_type": "application/octet-stream",
+          "path": "study/analyze.py",
+          "retention": "retained",
+          "sha256": "cf0515d0676116818e2bd96b47f979ec35259ef0938513455fca9530833d190c"
+        }
+      ],
+      "limitations": [
+        "One fixed split; no population accuracy or replicate uncertainty",
+        "Original environment/reference outputs unavailable",
+        "The CN/AA label does not identify the executed algorithm; the upstream script uses CS"
+      ],
+      "record_type": "ClaimRecord",
+      "schema_version": "0.2",
+      "scope": "Only the supplied script's printed task output at fixed random_state=42 with documented source/library versions",
+      "status": "supported",
+      "supersedes": null,
+      "supporting": [
+        {
+          "media_type": "application/octet-stream",
+          "path": "raw/zoo-a001/call-01.npz",
+          "retention": "retained",
+          "sha256": "7a02937dd5589d7eef798c1436578c76d61c2e95062d5b7ea7edb8b635531f77"
+        },
+        {
+          "media_type": "application/octet-stream",
+          "path": "raw/zoo-a001/stdout.txt",
+          "retention": "retained",
+          "sha256": "b6be453bfb2b9e7cd1faf9389875ecff5b2d2764badd5be84b5689f2ee1bba0d"
+        },
+        {
+          "media_type": "application/json",
+          "path": "raw/zoo-a001/calls.json",
+          "retention": "retained",
+          "sha256": "3f6871b1fa0eee86bc637e78268fc0b2d06071f67b61dda8698cc8ad4aa4af1c"
+        },
+        {
+          "media_type": "application/json",
+          "path": "analysis/main/results.json",
+          "retention": "retained",
+          "sha256": "1abebb11906fb12cf5ab93cb9fad8478e8624a66147ac88610796c496729ae4c"
+        }
+      ],
+      "text": "The supplied Zoo script prints 100.00% under AA; saved predictions have 21 correct among 21. The actual executed predictor is CS."
+    },
+    {
+      "claim_id": "zoo-cn",
+      "contradicting": [],
+      "dependencies": [
+        {
+          "media_type": "application/json",
+          "path": "campaigns/culp-v1/analysis-record.json",
+          "retention": "retained",
+          "sha256": "ad915b8dbb6d1232144c2ee883931fd3683860a94ff692c84ee1949c94f08391"
+        },
+        {
+          "media_type": "application/json",
+          "path": "evidence/raw-manifest.json",
+          "retention": "retained",
+          "sha256": "3b369075dbf5b908844e4b816ce6ee8f05ea0c25f717c110aae27ac9a537f7d5"
+        },
+        {
+          "media_type": "application/octet-stream",
+          "path": "study/analyze.py",
+          "retention": "retained",
+          "sha256": "cf0515d0676116818e2bd96b47f979ec35259ef0938513455fca9530833d190c"
+        }
+      ],
+      "limitations": [
+        "One fixed split; no population accuracy or replicate uncertainty",
+        "Original environment/reference outputs unavailable",
+        "The CN/AA label does not identify the executed algorithm; the upstream script uses CS"
+      ],
+      "record_type": "ClaimRecord",
+      "schema_version": "0.2",
+      "scope": "Only the supplied script's printed task output at fixed random_state=42 with documented source/library versions",
+      "status": "supported",
+      "supersedes": null,
+      "supporting": [
+        {
+          "media_type": "application/octet-stream",
+          "path": "raw/zoo-a001/call-00.npz",
+          "retention": "retained",
+          "sha256": "7a02937dd5589d7eef798c1436578c76d61c2e95062d5b7ea7edb8b635531f77"
+        },
+        {
+          "media_type": "application/octet-stream",
+          "path": "raw/zoo-a001/stdout.txt",
+          "retention": "retained",
+          "sha256": "b6be453bfb2b9e7cd1faf9389875ecff5b2d2764badd5be84b5689f2ee1bba0d"
+        },
+        {
+          "media_type": "application/json",
+          "path": "raw/zoo-a001/calls.json",
+          "retention": "retained",
+          "sha256": "3f6871b1fa0eee86bc637e78268fc0b2d06071f67b61dda8698cc8ad4aa4af1c"
+        },
+        {
+          "media_type": "application/json",
+          "path": "analysis/main/results.json",
+          "retention": "retained",
+          "sha256": "1abebb11906fb12cf5ab93cb9fad8478e8624a66147ac88610796c496729ae4c"
+        }
+      ],
+      "text": "The supplied Zoo script prints 100.00% under CN; saved predictions have 21 correct among 21. The actual executed predictor is CS."
+    }
+  ],
+  "criteria": [
+    "Exact original task strings and original percentage scoring",
+    "Only documented platform source edits",
+    "Evidence connects printed values, actual predictors, saved labels and graph predictions",
+    "Frozen protocol and input partitions respected",
+    "Interruption retained and recovered with a new identity",
+    "Fresh setup, all three scripts and retained-data recomputation actually tested",
+    "Claims restricted to fixed-split script output; upstream limitations and review scope disclosed",
+    "Current source/artifact hashes and evidence links resolve"
+  ],
+  "material": {
+    "media_type": "application/json",
+    "path": "evidence/review-material.json",
+    "retention": "retained",
+    "sha256": "2965a9d77e8444063c7cf10452bcf6759da1c86bc66b82c5a71888e8695c4974"
+  },
+  "study": "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r10/candidate"
+}

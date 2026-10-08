@@ -1,0 +1,61 @@
+{
+  "budget": {
+    "max_attempts": 32,
+    "max_seconds": 600,
+    "money_usd": 0,
+    "per_attempt_seconds": 180
+  },
+  "editable": [
+    "fault injection for conformance, excluded from successful science"
+  ],
+  "evaluator": {
+    "media_type": "text/x-python",
+    "path": "campaigns/culp-v1/materials/study/analyze.py",
+    "retention": "retain-with-study",
+    "sha256": "cf0515d0676116818e2bd96b47f979ec35259ef0938513455fca9530833d190c"
+  },
+  "expected_artifacts": [
+    "raw.json",
+    "evaluation.json"
+  ],
+  "experiment_id": "zoo",
+  "fixed": [
+    "runner",
+    "evaluator",
+    "seed",
+    "parameters",
+    "protocol",
+    "analysis"
+  ],
+  "hypothesis": "The supplied scripts are locally executable with path-only compatibility edits and their displayed scores are exactly reconstructible from retained predictions.",
+  "inputs": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/runs/zoo/parameters.json",
+      "retention": "retain-with-study",
+      "sha256": "85109fd704e4ad6217c56e315999f31f677217f552beef4786c43ed5062da453"
+    }
+  ],
+  "parameters": {
+    "dataset": "zoo",
+    "k": 2,
+    "seed": 42,
+    "similarity": "manhattan",
+    "test_size": 0.2
+  },
+  "protocol_revision": "culp-protocol-v1",
+  "record_type": "ExperimentSpec",
+  "runner": {
+    "media_type": "text/x-python",
+    "path": "campaigns/culp-v1/materials/study/runner.py",
+    "retention": "retain-with-study",
+    "sha256": "d5aa19d302c366c579d1ecebad7a5c3a2ee7a2c7b8b178a494dfe4923372c966"
+  },
+  "schema_version": "0.2",
+  "seed_policy": {
+    "disjoint_confirmation": true,
+    "seed": 42,
+    "split": "confirmation"
+  },
+  "split": "confirmation"
+}

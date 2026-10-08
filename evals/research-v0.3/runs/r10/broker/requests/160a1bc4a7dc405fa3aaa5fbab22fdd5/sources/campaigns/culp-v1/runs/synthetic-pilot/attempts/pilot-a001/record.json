@@ -1,0 +1,121 @@
+{
+  "attempt_id": "pilot-a001",
+  "attempt_number": 1,
+  "bundle_id": "b-9a39b70665ba909edb8abc13",
+  "campaign_id": "culp-v1",
+  "command": [
+    ".venv/bin/python",
+    "study/pilot.py"
+  ],
+  "data_revision": "df12459eae6e3ae115b0b115c2cd38102c3a21c2232962a5dbf68ebed64d520f",
+  "ended_at": "2026-10-08T05:53:30.110477+00:00",
+  "environment": {
+    "broker": "inputs/compute.py",
+    "broker_response": {
+      "media_type": "application/json",
+      "path": "evidence/broker/pilot-a001/response.json",
+      "retention": "retained",
+      "sha256": "203bd87241444d3afe017b0847dd091bdc4378af25ffafd32201a1587ab8c374"
+    },
+    "device": "cpu",
+    "metadata": {
+      "media_type": "application/json",
+      "path": "provenance/environment.json",
+      "retention": "retained",
+      "sha256": "0c40740ca89594b63393aafd2f21ff0a6a52f3c04214d86628d321b537e2fcf3"
+    },
+    "request_id": "95cab3632b364cf7ba3485d9fcfbc1ef"
+  },
+  "error": null,
+  "exit_code": 0,
+  "experiment_id": "synthetic-pilot",
+  "inputs": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/runs/synthetic-pilot/spec.json",
+      "retention": "retained",
+      "sha256": "a3c48ce5f676ad6ce4bc87015c1b6de48cd2dba9701165fd28a355ff67764599"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/protocol.json",
+      "retention": "retained",
+      "sha256": "8a8625c767725603567d8164d1df52cb2c75e3c870e49ecd1023dd5e8119e4c2"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/code-manifest.json",
+      "retention": "retained",
+      "sha256": "d9aaeca8758db0be6ec5cb1d8b221421713991e92bbdc52108f52cec984a4888"
+    },
+    {
+      "media_type": "application/json",
+      "path": "provenance/source-manifest.json",
+      "retention": "retained",
+      "sha256": "df12459eae6e3ae115b0b115c2cd38102c3a21c2232962a5dbf68ebed64d520f"
+    }
+  ],
+  "model_revision": null,
+  "outputs": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/broker/pilot-a001/client.stderr.txt",
+      "retention": "retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/broker/pilot-a001/client.stdout.txt",
+      "retention": "retained",
+      "sha256": "6faed1800541475acb279ec8c43c552c7e891cd8dfbd78ef8014c916023b7670"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/broker/pilot-a001/launch.json",
+      "retention": "retained",
+      "sha256": "a8852f9c89ae7d6b49599bde88242444a3dce138df49509075645f56e47f15a9"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/broker/pilot-a001/request.json",
+      "retention": "retained",
+      "sha256": "d01cca1d42fbdb1dc44ad4b49f332622a5e4127e1170a556e635bf5331d3c961"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/broker/pilot-a001/response.json",
+      "retention": "retained",
+      "sha256": "203bd87241444d3afe017b0847dd091bdc4378af25ffafd32201a1587ab8c374"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/broker/pilot-a001/stderr.txt",
+      "retention": "retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "evidence/broker/pilot-a001/stdout.txt",
+      "retention": "retained",
+      "sha256": "a74ecf9794a8d55ce9bc9565f12177de9bd6e9e18caf570938741447747675d9"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/pilot/qualification.json",
+      "retention": "retained",
+      "sha256": "9be5d921e60a048fca3e1e0debf3f789fee52eeba7b06b8d0d6189ba62caf207"
+    }
+  ],
+  "protocol_revision": "culp-protocol-v1",
+  "record_type": "RunRecord",
+  "run_id": "synthetic-pilot",
+  "schema_version": "0.2",
+  "split": "pilot",
+  "started_at": "2026-10-08T05:52:46.791408+00:00",
+  "status": "succeeded",
+  "usage": {
+    "money_usd": 0,
+    "tokens": 0,
+    "wall_seconds": 43.11710854200646
+  }
+}

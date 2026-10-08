@@ -1,0 +1,20 @@
+{
+  "attempt": true,
+  "category": "compute",
+  "command": [
+    "/Users/iyunseong/maangeek/allagma/work/v03-development/core-env/bin/python",
+    "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/validation/check_r10_core.py",
+    "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r10/candidate",
+    "/Users/iyunseong/maangeek/allagma/evals/research-v0.3/runs/r10/independent-analysis.json"
+  ],
+  "label": "r10-independent-source-and-arrays",
+  "profile_sha256": "d9ed8b7b47a1c369f31cda162c19023d2942b562f994970218fb55279cc67ced",
+  "request_id": null,
+  "reserved_seconds": 124.75,
+  "started_at": "2026-10-08T06:24:45.905058+00:00",
+  "storage_root": "/Users/iyunseong/maangeek/allagma/work/v03-validation",
+  "supervisor_pid": 43407,
+  "supervisor_sha256": "392f7975f4a4ae77a11e23a2e167cd4cee53d7f0d63a58a42f5782d244f3da8f",
+  "timeout_seconds": 120.0,
+  "workdir": "/Users/iyunseong/maangeek/allagma/work/v03-validation"
+}

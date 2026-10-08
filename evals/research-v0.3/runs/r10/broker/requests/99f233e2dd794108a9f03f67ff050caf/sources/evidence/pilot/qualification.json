@@ -1,0 +1,16 @@
+{
+  "checks": [
+    "CN: analytical two-class graph scores and upstream predictions agree",
+    "AA: analytical two-class graph scores and upstream predictions agree",
+    "RA: analytical two-class graph scores and upstream predictions agree",
+    "CS: analytical two-class graph scores and upstream predictions agree",
+    "All four algorithms select first class under all-zero score ties",
+    "Complete upstream CULP pipeline predicts two separated synthetic classes",
+    "Independent accuracy, source-output parser and exact task key extraction known answers pass"
+  ],
+  "data": "Analytically constructed synthetic graphs and points; no randomness",
+  "independent_of_confirmation": true,
+  "scope": "Basic algorithm and scoring controls; does not establish correctness on all graphs or paper claims",
+  "seed": 314159,
+  "status": "pass"
+}

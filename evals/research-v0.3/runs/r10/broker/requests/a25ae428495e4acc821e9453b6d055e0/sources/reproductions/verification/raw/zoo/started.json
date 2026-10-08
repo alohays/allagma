@@ -1,0 +1,25 @@
+{
+  "argv": [
+    "study/runner.py",
+    "--dataset",
+    "zoo",
+    "--output",
+    "reproductions/verification/raw/zoo"
+  ],
+  "dataset": "zoo",
+  "protocol": {
+    "media_type": "application/json",
+    "path": "campaigns/culp-v1/protocol.json",
+    "retention": "retained",
+    "sha256": "8a8625c767725603567d8164d1df52cb2c75e3c870e49ecd1023dd5e8119e4c2"
+  },
+  "source": {
+    "media_type": "application/octet-stream",
+    "path": "work/capsule/code/zoo_sample.py",
+    "retention": "retained",
+    "sha256": "91102161e3f7276e1108c5aee72619f8d0eb1f701440d84576e193de8ece57d8"
+  },
+  "source_revision": "df12459eae6e3ae115b0b115c2cd38102c3a21c2232962a5dbf68ebed64d520f",
+  "started_at": "2026-10-08T05:59:26.667543+00:00",
+  "status": "running"
+}

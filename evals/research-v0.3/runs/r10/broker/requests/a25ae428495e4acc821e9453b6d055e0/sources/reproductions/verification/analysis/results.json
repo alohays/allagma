@@ -1,0 +1,700 @@
+{
+  "checks": {
+    "exact_question_keys": "pass",
+    "independent_graph_predictor": "pass",
+    "raw_hashes": "pass",
+    "stdout_vs_saved_counts": "pass"
+  },
+  "rows": [
+    {
+      "accuracy": 1.0,
+      "accuracy_percent": 100.0,
+      "arrays": {
+        "media_type": "application/octet-stream",
+        "path": "reproductions/verification/raw/iris/call-00.npz",
+        "retention": "retained",
+        "sha256": "a6de438feea278106c313e382a9144e1487f5b0f46705a215935ab3e2589be51"
+      },
+      "attempt_id": "reproduction-verification-iris",
+      "classes": 3,
+      "confusion_matrix": [
+        [
+          10,
+          0,
+          0
+        ],
+        [
+          0,
+          9,
+          0
+        ],
+        [
+          0,
+          0,
+          11
+        ]
+      ],
+      "correct": 30,
+      "dataset": "iris",
+      "executed_predictor": "CS",
+      "graph_edges": 1197,
+      "independent_graph_predictions_match": true,
+      "k": 11,
+      "metric": "manhattan",
+      "prediction_ties": 0,
+      "printed_label": "CN",
+      "self_loops": 1,
+      "test_n": 30,
+      "train_n": 120
+    },
+    {
+      "accuracy": 1.0,
+      "accuracy_percent": 100.0,
+      "arrays": {
+        "media_type": "application/octet-stream",
+        "path": "reproductions/verification/raw/iris/call-01.npz",
+        "retention": "retained",
+        "sha256": "a6de438feea278106c313e382a9144e1487f5b0f46705a215935ab3e2589be51"
+      },
+      "attempt_id": "reproduction-verification-iris",
+      "classes": 3,
+      "confusion_matrix": [
+        [
+          10,
+          0,
+          0
+        ],
+        [
+          0,
+          9,
+          0
+        ],
+        [
+          0,
+          0,
+          11
+        ]
+      ],
+      "correct": 30,
+      "dataset": "iris",
+      "executed_predictor": "CS",
+      "graph_edges": 1197,
+      "independent_graph_predictions_match": true,
+      "k": 11,
+      "metric": "manhattan",
+      "prediction_ties": 0,
+      "printed_label": "AA",
+      "self_loops": 1,
+      "test_n": 30,
+      "train_n": 120
+    },
+    {
+      "accuracy": 1.0,
+      "accuracy_percent": 100.0,
+      "arrays": {
+        "media_type": "application/octet-stream",
+        "path": "reproductions/verification/raw/iris/call-02.npz",
+        "retention": "retained",
+        "sha256": "a6de438feea278106c313e382a9144e1487f5b0f46705a215935ab3e2589be51"
+      },
+      "attempt_id": "reproduction-verification-iris",
+      "classes": 3,
+      "confusion_matrix": [
+        [
+          10,
+          0,
+          0
+        ],
+        [
+          0,
+          9,
+          0
+        ],
+        [
+          0,
+          0,
+          11
+        ]
+      ],
+      "correct": 30,
+      "dataset": "iris",
+      "executed_predictor": "CS",
+      "graph_edges": 1197,
+      "independent_graph_predictions_match": true,
+      "k": 11,
+      "metric": "manhattan",
+      "prediction_ties": 0,
+      "printed_label": "RA",
+      "self_loops": 1,
+      "test_n": 30,
+      "train_n": 120
+    },
+    {
+      "accuracy": 1.0,
+      "accuracy_percent": 100.0,
+      "arrays": {
+        "media_type": "application/octet-stream",
+        "path": "reproductions/verification/raw/iris/call-03.npz",
+        "retention": "retained",
+        "sha256": "a6de438feea278106c313e382a9144e1487f5b0f46705a215935ab3e2589be51"
+      },
+      "attempt_id": "reproduction-verification-iris",
+      "classes": 3,
+      "confusion_matrix": [
+        [
+          10,
+          0,
+          0
+        ],
+        [
+          0,
+          9,
+          0
+        ],
+        [
+          0,
+          0,
+          11
+        ]
+      ],
+      "correct": 30,
+      "dataset": "iris",
+      "executed_predictor": "CS",
+      "graph_edges": 1197,
+      "independent_graph_predictions_match": true,
+      "k": 11,
+      "metric": "manhattan",
+      "prediction_ties": 0,
+      "printed_label": "CS",
+      "self_loops": 1,
+      "test_n": 30,
+      "train_n": 120
+    },
+    {
+      "accuracy": 1.0,
+      "accuracy_percent": 100.0,
+      "arrays": {
+        "media_type": "application/octet-stream",
+        "path": "reproductions/verification/raw/zoo/call-00.npz",
+        "retention": "retained",
+        "sha256": "7a02937dd5589d7eef798c1436578c76d61c2e95062d5b7ea7edb8b635531f77"
+      },
+      "attempt_id": "reproduction-verification-zoo",
+      "classes": 7,
+      "confusion_matrix": [
+        [
+          12,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "correct": 21,
+      "dataset": "zoo",
+      "executed_predictor": "CS",
+      "graph_edges": 253,
+      "independent_graph_predictions_match": true,
+      "k": 2,
+      "metric": "manhattan",
+      "prediction_ties": 0,
+      "printed_label": "CN",
+      "self_loops": 28,
+      "test_n": 21,
+      "train_n": 80
+    },
+    {
+      "accuracy": 1.0,
+      "accuracy_percent": 100.0,
+      "arrays": {
+        "media_type": "application/octet-stream",
+        "path": "reproductions/verification/raw/zoo/call-01.npz",
+        "retention": "retained",
+        "sha256": "7a02937dd5589d7eef798c1436578c76d61c2e95062d5b7ea7edb8b635531f77"
+      },
+      "attempt_id": "reproduction-verification-zoo",
+      "classes": 7,
+      "confusion_matrix": [
+        [
+          12,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "correct": 21,
+      "dataset": "zoo",
+      "executed_predictor": "CS",
+      "graph_edges": 253,
+      "independent_graph_predictions_match": true,
+      "k": 2,
+      "metric": "manhattan",
+      "prediction_ties": 0,
+      "printed_label": "AA",
+      "self_loops": 28,
+      "test_n": 21,
+      "train_n": 80
+    },
+    {
+      "accuracy": 1.0,
+      "accuracy_percent": 100.0,
+      "arrays": {
+        "media_type": "application/octet-stream",
+        "path": "reproductions/verification/raw/zoo/call-02.npz",
+        "retention": "retained",
+        "sha256": "7a02937dd5589d7eef798c1436578c76d61c2e95062d5b7ea7edb8b635531f77"
+      },
+      "attempt_id": "reproduction-verification-zoo",
+      "classes": 7,
+      "confusion_matrix": [
+        [
+          12,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "correct": 21,
+      "dataset": "zoo",
+      "executed_predictor": "CS",
+      "graph_edges": 253,
+      "independent_graph_predictions_match": true,
+      "k": 2,
+      "metric": "manhattan",
+      "prediction_ties": 0,
+      "printed_label": "RA",
+      "self_loops": 28,
+      "test_n": 21,
+      "train_n": 80
+    },
+    {
+      "accuracy": 1.0,
+      "accuracy_percent": 100.0,
+      "arrays": {
+        "media_type": "application/octet-stream",
+        "path": "reproductions/verification/raw/zoo/call-03.npz",
+        "retention": "retained",
+        "sha256": "7a02937dd5589d7eef798c1436578c76d61c2e95062d5b7ea7edb8b635531f77"
+      },
+      "attempt_id": "reproduction-verification-zoo",
+      "classes": 7,
+      "confusion_matrix": [
+        [
+          12,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "correct": 21,
+      "dataset": "zoo",
+      "executed_predictor": "CS",
+      "graph_edges": 253,
+      "independent_graph_predictions_match": true,
+      "k": 2,
+      "metric": "manhattan",
+      "prediction_ties": 0,
+      "printed_label": "CS",
+      "self_loops": 28,
+      "test_n": 21,
+      "train_n": 80
+    },
+    {
+      "accuracy": 0.9722222222222222,
+      "accuracy_percent": 97.22,
+      "arrays": {
+        "media_type": "application/octet-stream",
+        "path": "reproductions/verification/raw/wine/call-00.npz",
+        "retention": "retained",
+        "sha256": "606d19a735c5ce5805ea61bc2f23674809562592c010b4cb17c4d7052ff09709"
+      },
+      "attempt_id": "reproduction-verification-wine",
+      "classes": 3,
+      "confusion_matrix": [
+        [
+          14,
+          0,
+          0
+        ],
+        [
+          1,
+          13,
+          0
+        ],
+        [
+          0,
+          0,
+          8
+        ]
+      ],
+      "correct": 35,
+      "dataset": "wine",
+      "executed_predictor": "CN",
+      "graph_edges": 1598,
+      "independent_graph_predictions_match": true,
+      "k": 12,
+      "metric": "manhattan",
+      "prediction_ties": 1,
+      "printed_label": "CN",
+      "self_loops": 0,
+      "test_n": 36,
+      "train_n": 142
+    },
+    {
+      "accuracy": 0.9722222222222222,
+      "accuracy_percent": 97.22,
+      "arrays": {
+        "media_type": "application/octet-stream",
+        "path": "reproductions/verification/raw/wine/call-01.npz",
+        "retention": "retained",
+        "sha256": "606d19a735c5ce5805ea61bc2f23674809562592c010b4cb17c4d7052ff09709"
+      },
+      "attempt_id": "reproduction-verification-wine",
+      "classes": 3,
+      "confusion_matrix": [
+        [
+          14,
+          0,
+          0
+        ],
+        [
+          1,
+          13,
+          0
+        ],
+        [
+          0,
+          0,
+          8
+        ]
+      ],
+      "correct": 35,
+      "dataset": "wine",
+      "executed_predictor": "AA",
+      "graph_edges": 1598,
+      "independent_graph_predictions_match": true,
+      "k": 12,
+      "metric": "manhattan",
+      "prediction_ties": 0,
+      "printed_label": "AA",
+      "self_loops": 0,
+      "test_n": 36,
+      "train_n": 142
+    },
+    {
+      "accuracy": 0.9722222222222222,
+      "accuracy_percent": 97.22,
+      "arrays": {
+        "media_type": "application/octet-stream",
+        "path": "reproductions/verification/raw/wine/call-02.npz",
+        "retention": "retained",
+        "sha256": "606d19a735c5ce5805ea61bc2f23674809562592c010b4cb17c4d7052ff09709"
+      },
+      "attempt_id": "reproduction-verification-wine",
+      "classes": 3,
+      "confusion_matrix": [
+        [
+          14,
+          0,
+          0
+        ],
+        [
+          1,
+          13,
+          0
+        ],
+        [
+          0,
+          0,
+          8
+        ]
+      ],
+      "correct": 35,
+      "dataset": "wine",
+      "executed_predictor": "RA",
+      "graph_edges": 1598,
+      "independent_graph_predictions_match": true,
+      "k": 12,
+      "metric": "manhattan",
+      "prediction_ties": 0,
+      "printed_label": "RA",
+      "self_loops": 0,
+      "test_n": 36,
+      "train_n": 142
+    },
+    {
+      "accuracy": 1.0,
+      "accuracy_percent": 100.0,
+      "arrays": {
+        "media_type": "application/octet-stream",
+        "path": "reproductions/verification/raw/wine/call-03.npz",
+        "retention": "retained",
+        "sha256": "af3f4b6a201c6c97efa5c1b5b6a6daaf13c064aa56934e76f0adaa869f322938"
+      },
+      "attempt_id": "reproduction-verification-wine",
+      "classes": 3,
+      "confusion_matrix": [
+        [
+          14,
+          0,
+          0
+        ],
+        [
+          0,
+          14,
+          0
+        ],
+        [
+          0,
+          0,
+          8
+        ]
+      ],
+      "correct": 36,
+      "dataset": "wine",
+      "executed_predictor": "CS",
+      "graph_edges": 1598,
+      "independent_graph_predictions_match": true,
+      "k": 12,
+      "metric": "manhattan",
+      "prediction_ties": 0,
+      "printed_label": "CS",
+      "self_loops": 0,
+      "test_n": 36,
+      "train_n": 142
+    }
+  ],
+  "uncertainty": {
+    "method": "Exact held-out counts and original two-decimal percentages; no inferential interval",
+    "reason": "Repeated loop labels, deterministic reruns and different datasets are not independent replicates.",
+    "scope": "No population accuracy, random-split variability or CN/AA comparison for Iris/Zoo is established.",
+    "unit": "One prescribed deterministic split per dataset, seed 42"
+  }
+}

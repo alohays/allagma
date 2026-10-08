@@ -1,0 +1,78 @@
+{
+  "device": "cpu",
+  "executable": "/Users/iyunseong/maangeek/allagma/work/v03-evaluation/runs/r10/candidate/.venv/bin/python",
+  "machine": "arm64",
+  "network": false,
+  "packages": {
+    "cloudpickle": "3.1.2",
+    "joblib": "1.6.0",
+    "networkx": "2.8.8",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "pip": "23.2.1",
+    "python-dateutil": "2.9.0.post0",
+    "pytz": "2026.5",
+    "scikit-learn": "1.5.2",
+    "scipy": "1.14.1",
+    "setuptools": "65.5.0",
+    "six": "1.17.0",
+    "threadpoolctl": "3.7.0",
+    "tzdata": "2026.5"
+  },
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "python": "3.11.6 (v3.11.6:8b6ee5ba3b, Oct  2 2023, 11:18:21) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "wheels": [
+    {
+      "path": "inputs/materials/wheels/cloudpickle-3.1.2-py3-none-any.whl",
+      "sha256": "9acb47f6afd73f60dc1df93bb801b472f05ff42fa6c84167d25cb206be1fbf4a"
+    },
+    {
+      "path": "inputs/materials/wheels/joblib-1.6.0-py3-none-any.whl",
+      "sha256": "3dbbf9f6e4b592a2357b854608e980fe6390d131d7a82f011a377ef2ebef7aba"
+    },
+    {
+      "path": "inputs/materials/wheels/networkx-2.8.8-py3-none-any.whl",
+      "sha256": "e435dfa75b1d7195c7b8378c3859f0445cd88c6b0375c181ed66823a9ceb7524"
+    },
+    {
+      "path": "inputs/materials/wheels/numpy-1.26.4-cp311-cp311-macosx_11_0_arm64.whl",
+      "sha256": "edd8b5fe47dab091176d21bb6de568acdd906d1887a4584a15a9a96a1dca06ef"
+    },
+    {
+      "path": "inputs/materials/wheels/pandas-2.2.3-cp311-cp311-macosx_11_0_arm64.whl",
+      "sha256": "7c2875855b0ff77b2a64a0365e24455d9990730d6431b9e0ee18ad8acee13dbd"
+    },
+    {
+      "path": "inputs/materials/wheels/python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
+      "sha256": "a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427"
+    },
+    {
+      "path": "inputs/materials/wheels/pytz-2026.5-py2.py3-none-any.whl",
+      "sha256": "e658af3757f9e26a9d25dd2aff38335acd92bc9104f890a894b2c1ba28311b03"
+    },
+    {
+      "path": "inputs/materials/wheels/scikit_fuzzy-0.5.0-py2.py3-none-any.whl",
+      "sha256": "e456c365146bc5c58d9f593f4127ac783112e2daf89f87b12c6ef3c38e4087dd"
+    },
+    {
+      "path": "inputs/materials/wheels/scikit_learn-1.5.2-cp311-cp311-macosx_12_0_arm64.whl",
+      "sha256": "1ff45e26928d3b4eb767a8f14a9a6efbf1cbff7c05d1fb0f95f211a89fd4f5de"
+    },
+    {
+      "path": "inputs/materials/wheels/scipy-1.14.1-cp311-cp311-macosx_14_0_arm64.whl",
+      "sha256": "3a1b111fac6baec1c1d92f27e76511c9e7218f1695d61b59e05e0fe04dc59617"
+    },
+    {
+      "path": "inputs/materials/wheels/six-1.17.0-py2.py3-none-any.whl",
+      "sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274"
+    },
+    {
+      "path": "inputs/materials/wheels/threadpoolctl-3.7.0-py3-none-any.whl",
+      "sha256": "cd8b60b5641b45c67bbf73c64c843235fc2d8a480c87389f52f5dbee893b86be"
+    },
+    {
+      "path": "inputs/materials/wheels/tzdata-2026.5-py2.py3-none-any.whl",
+      "sha256": "b683bd1b6659ddcd810ff02ad09ba821d4bf1065072805063eb35c49617905ac"
+    }
+  ]
+}

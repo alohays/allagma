@@ -1,0 +1,38 @@
+{
+  "network": "unavailable",
+  "sources": [
+    {
+      "metadata": "Capsule DOI and CORE-Bench commit",
+      "source": {
+        "media_type": "application/octet-stream",
+        "path": "inputs/materials/SOURCES.md",
+        "retention": "retained",
+        "sha256": "07ea54a345de52c6f5f9416ad46e81ae5a45425cfb2b5ff4eef172d3727fec21"
+      },
+      "support": "Identifies supplied local capsule",
+      "uncertainty": "DOI landing page and benchmark commit not remotely verified"
+    },
+    {
+      "metadata": "CULP title, authors, abstract",
+      "source": {
+        "media_type": "application/octet-stream",
+        "path": "inputs/materials/capsule-6460826/metadata/metadata.yml",
+        "retention": "retained",
+        "sha256": "7ae5e1a5c94f23793c907352db657d7249781825d28dd83b5977708d8a010750"
+      },
+      "support": "Local metadata only",
+      "uncertainty": "Novelty and competitive performance claims untested; full paper unavailable"
+    },
+    {
+      "metadata": "Dataset commands and GitHub URL",
+      "source": {
+        "media_type": "application/octet-stream",
+        "path": "inputs/materials/capsule-6460826/code/README.md",
+        "retention": "retained",
+        "sha256": "88b1d4ce7571e28de55ab1b8915f8453cd6e7fd404de159d42bf948d1983ac29"
+      },
+      "support": "Direct execution scope",
+      "uncertainty": "No requirements list or original version pins; run.sh absent"
+    }
+  ]
+}

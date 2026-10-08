@@ -1,0 +1,61 @@
+{
+  "claim_id": "iris-cn",
+  "contradicting": [],
+  "dependencies": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/analysis-record.json",
+      "retention": "retained",
+      "sha256": "ad915b8dbb6d1232144c2ee883931fd3683860a94ff692c84ee1949c94f08391"
+    },
+    {
+      "media_type": "application/json",
+      "path": "evidence/raw-manifest.json",
+      "retention": "retained",
+      "sha256": "3b369075dbf5b908844e4b816ce6ee8f05ea0c25f717c110aae27ac9a537f7d5"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "study/analyze.py",
+      "retention": "retained",
+      "sha256": "cf0515d0676116818e2bd96b47f979ec35259ef0938513455fca9530833d190c"
+    }
+  ],
+  "limitations": [
+    "One fixed split; no population accuracy or replicate uncertainty",
+    "Original environment/reference outputs unavailable",
+    "The CN/AA label does not identify the executed algorithm; the upstream script uses CS"
+  ],
+  "record_type": "ClaimRecord",
+  "schema_version": "0.2",
+  "scope": "Only the supplied script's printed task output at fixed random_state=42 with documented source/library versions",
+  "status": "supported",
+  "supersedes": null,
+  "supporting": [
+    {
+      "media_type": "application/octet-stream",
+      "path": "raw/iris-a002/call-00.npz",
+      "retention": "retained",
+      "sha256": "a6de438feea278106c313e382a9144e1487f5b0f46705a215935ab3e2589be51"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "raw/iris-a002/stdout.txt",
+      "retention": "retained",
+      "sha256": "9b6bbee09c56848cc00f8079b454b17e4b4a6d56b3426347b750348f01a76a70"
+    },
+    {
+      "media_type": "application/json",
+      "path": "raw/iris-a002/calls.json",
+      "retention": "retained",
+      "sha256": "43785f0dad1cd2d1fb240c9d9dd2a58d2fb647cd906631b5ba12b43a32badaf9"
+    },
+    {
+      "media_type": "application/json",
+      "path": "analysis/main/results.json",
+      "retention": "retained",
+      "sha256": "1abebb11906fb12cf5ab93cb9fad8478e8624a66147ac88610796c496729ae4c"
+    }
+  ],
+  "text": "The supplied Iris script prints 100.00% under CN; saved predictions have 30 correct among 30. The actual executed predictor is CS."
+}

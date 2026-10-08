@@ -1,0 +1,25 @@
+{
+  "constraints": [
+    "All setup and scientific computation through inputs/compute.py",
+    "Offline wheelhouse and isolated environment",
+    "No scientific source parameter or algorithm changes",
+    "600 compute seconds, 300 setup seconds, 32 compute attempts, 180 seconds per request; 3600 second native session",
+    "Only one scientific worker at a time"
+  ],
+  "motivation": "Faithful offline computational reproduction of the supplied CULP capsule, preserving upstream scoring and limitations.",
+  "output": "submission.json; report.json; REPORT.md; review.json; REPRODUCE.md; artifact-manifest.json; measurements.json",
+  "question": "What accuracies do the supplied Iris, Zoo and Wine scripts print under CN and AA, and what do those measurements actually establish?",
+  "stop_rules": [
+    "Declared completeness with concrete verification",
+    "Resource ceiling -> partial",
+    "Pilot qualification failure -> stop confirmation",
+    "Irrecoverable repeated failure or required missing input -> honest partial/blocked"
+  ],
+  "study_id": "r10",
+  "success_criteria": [
+    "All three exact scripts executed after path-only compatibility adaptation",
+    "Six exact task keys answered from original stdout and saved predictions",
+    "Interruption preserved and recovered with a new attempt",
+    "Recomputed evidence agrees and reviewed artifact revisions are retained"
+  ]
+}

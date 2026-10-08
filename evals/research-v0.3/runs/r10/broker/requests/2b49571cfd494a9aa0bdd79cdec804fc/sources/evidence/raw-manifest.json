@@ -1,0 +1,258 @@
+{
+  "exclusions": [
+    {
+      "reason": "interrupted",
+      "record": {
+        "media_type": "application/json",
+        "path": "campaigns/culp-v1/runs/iris/attempts/iris-a001/record.json",
+        "retention": "retained",
+        "sha256": "0de21eb145c0264332794045c098f3e328f310eee96443c544a145dc8037f3c3"
+      }
+    },
+    {
+      "reason": "pilot qualification",
+      "record": {
+        "media_type": "application/json",
+        "path": "campaigns/culp-v1/runs/synthetic-pilot/attempts/pilot-a001/record.json",
+        "retention": "retained",
+        "sha256": "42a0292618828ff478d5016fe09429346bd1acab80dad294fa7bacafa61c287e"
+      }
+    }
+  ],
+  "files": [
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/code-manifest.json",
+      "retention": "retained",
+      "sha256": "d9aaeca8758db0be6ec5cb1d8b221421713991e92bbdc52108f52cec984a4888"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/protocol.json",
+      "retention": "retained",
+      "sha256": "8a8625c767725603567d8164d1df52cb2c75e3c870e49ecd1023dd5e8119e4c2"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/runs/iris/attempts/iris-a002/record.json",
+      "retention": "retained",
+      "sha256": "7dfd20d67f96f5c0e99efb048a4d7368a6872f4e4212b0310a1d2d548dc0c5cc"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/runs/wine/attempts/wine-a001/record.json",
+      "retention": "retained",
+      "sha256": "6f61a1dd4dbb69ac80dc1f9ba1be0516a2ef8a88c599b9566e572a64663846ab"
+    },
+    {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/runs/zoo/attempts/zoo-a001/record.json",
+      "retention": "retained",
+      "sha256": "b88754f22e6cc40b3ce9af9bd59e3df06f45707a53fb437d8ac892dcbee39030"
+    },
+    {
+      "media_type": "application/json",
+      "path": "provenance/source-manifest.json",
+      "retention": "retained",
+      "sha256": "df12459eae6e3ae115b0b115c2cd38102c3a21c2232962a5dbf68ebed64d520f"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "raw/iris-a002/call-00.npz",
+      "retention": "retained",
+      "sha256": "a6de438feea278106c313e382a9144e1487f5b0f46705a215935ab3e2589be51"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "raw/iris-a002/call-01.npz",
+      "retention": "retained",
+      "sha256": "a6de438feea278106c313e382a9144e1487f5b0f46705a215935ab3e2589be51"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "raw/iris-a002/call-02.npz",
+      "retention": "retained",
+      "sha256": "a6de438feea278106c313e382a9144e1487f5b0f46705a215935ab3e2589be51"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "raw/iris-a002/call-03.npz",
+      "retention": "retained",
+      "sha256": "a6de438feea278106c313e382a9144e1487f5b0f46705a215935ab3e2589be51"
+    },
+    {
+      "media_type": "application/json",
+      "path": "raw/iris-a002/calls.json",
+      "retention": "retained",
+      "sha256": "43785f0dad1cd2d1fb240c9d9dd2a58d2fb647cd906631b5ba12b43a32badaf9"
+    },
+    {
+      "media_type": "application/json",
+      "path": "raw/iris-a002/completion.json",
+      "retention": "retained",
+      "sha256": "a414f33033e244e4bdd848ffa0e851894fc1cfefc5635efb063ea946dd829903"
+    },
+    {
+      "media_type": "application/json",
+      "path": "raw/iris-a002/started.json",
+      "retention": "retained",
+      "sha256": "da4d7249f3ad2e180a1eb703fabe625f50e5cf593a08242c558729ca3c82c2cb"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "raw/iris-a002/stderr.txt",
+      "retention": "retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "raw/iris-a002/stdout.txt",
+      "retention": "retained",
+      "sha256": "9b6bbee09c56848cc00f8079b454b17e4b4a6d56b3426347b750348f01a76a70"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "raw/wine-a001/call-00.npz",
+      "retention": "retained",
+      "sha256": "606d19a735c5ce5805ea61bc2f23674809562592c010b4cb17c4d7052ff09709"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "raw/wine-a001/call-01.npz",
+      "retention": "retained",
+      "sha256": "606d19a735c5ce5805ea61bc2f23674809562592c010b4cb17c4d7052ff09709"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "raw/wine-a001/call-02.npz",
+      "retention": "retained",
+      "sha256": "606d19a735c5ce5805ea61bc2f23674809562592c010b4cb17c4d7052ff09709"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "raw/wine-a001/call-03.npz",
+      "retention": "retained",
+      "sha256": "af3f4b6a201c6c97efa5c1b5b6a6daaf13c064aa56934e76f0adaa869f322938"
+    },
+    {
+      "media_type": "application/json",
+      "path": "raw/wine-a001/calls.json",
+      "retention": "retained",
+      "sha256": "e2138dc7bd60b446ae0da954bd1ba3fc57bb9f49d67b51dcb61d77cf7fcd01b3"
+    },
+    {
+      "media_type": "application/json",
+      "path": "raw/wine-a001/completion.json",
+      "retention": "retained",
+      "sha256": "59309eeb0497a8bc871ac7c439a0db803be1e507e68675d8bfdda47812b323a0"
+    },
+    {
+      "media_type": "application/json",
+      "path": "raw/wine-a001/started.json",
+      "retention": "retained",
+      "sha256": "27d6cadc3abddf65a581d4e2882e452e96d637fddb1fe03656c34a5f31a7e728"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "raw/wine-a001/stderr.txt",
+      "retention": "retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "raw/wine-a001/stdout.txt",
+      "retention": "retained",
+      "sha256": "93c201462bc7615c6b820c541bcbab13d5e22d057b68d5b98a140fd38452314c"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "raw/zoo-a001/call-00.npz",
+      "retention": "retained",
+      "sha256": "7a02937dd5589d7eef798c1436578c76d61c2e95062d5b7ea7edb8b635531f77"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "raw/zoo-a001/call-01.npz",
+      "retention": "retained",
+      "sha256": "7a02937dd5589d7eef798c1436578c76d61c2e95062d5b7ea7edb8b635531f77"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "raw/zoo-a001/call-02.npz",
+      "retention": "retained",
+      "sha256": "7a02937dd5589d7eef798c1436578c76d61c2e95062d5b7ea7edb8b635531f77"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "raw/zoo-a001/call-03.npz",
+      "retention": "retained",
+      "sha256": "7a02937dd5589d7eef798c1436578c76d61c2e95062d5b7ea7edb8b635531f77"
+    },
+    {
+      "media_type": "application/json",
+      "path": "raw/zoo-a001/calls.json",
+      "retention": "retained",
+      "sha256": "3f6871b1fa0eee86bc637e78268fc0b2d06071f67b61dda8698cc8ad4aa4af1c"
+    },
+    {
+      "media_type": "application/json",
+      "path": "raw/zoo-a001/completion.json",
+      "retention": "retained",
+      "sha256": "530696717fc4331e57a7ae747349f7145152d8d1a076ea9e8f63ac2e9db02391"
+    },
+    {
+      "media_type": "application/json",
+      "path": "raw/zoo-a001/started.json",
+      "retention": "retained",
+      "sha256": "cd554f9cdbc780c964ed87b79687184e9baa5ef3b3e583064e731d5ade22ea17"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "raw/zoo-a001/stderr.txt",
+      "retention": "retained",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media_type": "application/octet-stream",
+      "path": "raw/zoo-a001/stdout.txt",
+      "retention": "retained",
+      "sha256": "b6be453bfb2b9e7cd1faf9389875ecff5b2d2764badd5be84b5689f2ee1bba0d"
+    }
+  ],
+  "format": "culp-raw-manifest-v1",
+  "runs": [
+    {
+      "attempt_id": "iris-a002",
+      "dataset": "iris",
+      "directory": "raw/iris-a002",
+      "record": {
+        "media_type": "application/json",
+        "path": "campaigns/culp-v1/runs/iris/attempts/iris-a002/record.json",
+        "retention": "retained",
+        "sha256": "7dfd20d67f96f5c0e99efb048a4d7368a6872f4e4212b0310a1d2d548dc0c5cc"
+      }
+    },
+    {
+      "attempt_id": "wine-a001",
+      "dataset": "wine",
+      "directory": "raw/wine-a001",
+      "record": {
+        "media_type": "application/json",
+        "path": "campaigns/culp-v1/runs/wine/attempts/wine-a001/record.json",
+        "retention": "retained",
+        "sha256": "6f61a1dd4dbb69ac80dc1f9ba1be0516a2ef8a88c599b9566e572a64663846ab"
+      }
+    },
+    {
+      "attempt_id": "zoo-a001",
+      "dataset": "zoo",
+      "directory": "raw/zoo-a001",
+      "record": {
+        "media_type": "application/json",
+        "path": "campaigns/culp-v1/runs/zoo/attempts/zoo-a001/record.json",
+        "retention": "retained",
+        "sha256": "b88754f22e6cc40b3ce9af9bd59e3df06f45707a53fb437d8ac892dcbee39030"
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "basis": "Authoritative terminal response marked injected_interruption=true before retry",
+  "interrupted_request": {
+    "argv": [
+      ".venv/bin/python",
+      "study/runner.py",
+      "--dataset",
+      "iris",
+      "--output",
+      "raw/iris-a001"
+    ],
+    "category": "compute",
+    "charged_seconds": 1.1408324579242617,
+    "ended_at": "2026-10-08T05:55:28.235974+00:00",
+    "injected_interruption": true,
+    "label": "iris-a001",
+    "request": {
+      "media_type": "application/json",
+      "path": "evidence/broker/iris-a001/request.json",
+      "retention": "retained",
+      "sha256": "9f79aafa847e9cb0af81c44a380c539e3421e9070ce16398fd5fbccb4f496f99"
+    },
+    "request_id": "8420c97991f94b088b29f236a151a623",
+    "response": {
+      "media_type": "application/json",
+      "path": "evidence/broker/iris-a001/response.json",
+      "retention": "retained",
+      "sha256": "246082fb0873962b6a52907d3607235b52fe1f48cbe95ed7cf7bbb51fc80fbf9"
+    },
+    "status": "timed_out"
+  },
+  "observation_timeouts": "None observed",
+  "preservation": "Distinct request IDs, broker folders, raw attempt folders and RunRecords. Interrupted artifacts excluded, never overwritten.",
+  "successor": {
+    "attempt_id": "iris-a002",
+    "dataset": "iris",
+    "directory": "raw/iris-a002",
+    "record": {
+      "media_type": "application/json",
+      "path": "campaigns/culp-v1/runs/iris/attempts/iris-a002/record.json",
+      "retention": "retained",
+      "sha256": "7dfd20d67f96f5c0e99efb048a4d7368a6872f4e4212b0310a1d2d548dc0c5cc"
+    }
+  }
+}
