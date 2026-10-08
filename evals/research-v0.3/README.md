@@ -73,3 +73,12 @@ the frozen materials/common interface, identical task profiles, retained input
 identities, archive parts and queue supplements. It requires every package by
 default. `--allow-missing-packages` produces an explicitly partial check during
 evaluation. Neither mode reruns experiments or establishes scientific completion.
+
+`audit_cohort.py --output /path/to/new-control-audit.json` separately checks the
+actual session/config/CLI/adapter observations, unique thread identities,
+immutable supervisor and policy hashes, charged limits, planned interruptions,
+and terminal workspace/runtime byte totals. It requires all assigned runs by
+default; `--allow-partial` labels an incomplete audit explicitly. Private runtime
+contents are not exported, and current final byte totals do not establish a
+continuous historical storage peak. Scientific and review completeness still
+require the per-run substantive audits.
