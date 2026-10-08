@@ -57,6 +57,7 @@ export default defineConfig({
       { label: 'Contribute', collapsed: true, items: [
         { label: 'Contribution guide', slug: 'contributing' },
         { label: 'Small contributions', slug: 'contributing/starter-tasks' },
+        { label: 'Claim, review and credit', slug: 'contributing/workflow' },
         { label: 'Author a module', slug: 'contributing/modules' },
         { label: 'Roadmap', slug: 'project/roadmap' },
         { label: 'Support', slug: 'project/support' },

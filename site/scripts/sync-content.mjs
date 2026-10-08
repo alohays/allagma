@@ -3,6 +3,7 @@ import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import { writeVendorNotices } from './vendor-notices.mjs';
 
 const site = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -65,5 +66,14 @@ await fs.cp(mediaRoot, path.join(assets, 'media'), {
   filter: file => path.relative(mediaRoot, file).split(path.sep)[0] !== 'source',
 });
 await fs.writeFile(path.join(assets, 'content-sources.json'), JSON.stringify(receipts, null, 2) + '\n');
+// A public receipt binds the deployed site and its cleared movie to this build.
+const sourceCommit = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim();
+const movie = await fs.readFile(path.join(mediaRoot, 'demo/allagma-workflow.mp4'));
+await fs.writeFile(path.join(site, 'public/build-info.json'), JSON.stringify({
+  source_commit: sourceCommit,
+  movie_sha256: createHash('sha256').update(movie).digest('hex'),
+  movie_bytes: movie.length,
+  scope: 'Documentation build identity; not historical-media clearance or scientific qualification.',
+}, null, 2) + '\n');
 await writeVendorNotices(site,path.join(assets,'third-party-licenses.txt'));
 console.log(`Synced ${pages.length} canonical pages, command help, and selected media.`);

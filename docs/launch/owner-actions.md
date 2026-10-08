@@ -1,77 +1,57 @@
-# Owner actions for the later public launch
+# Public entry points and remaining owner decisions
 
-Preparation does not authorize activation. Keep the repository private until
-the owner chooses to launch. Source commits, preview artifacts and local release
-assets do not change visibility or create a public release.
+On 9 October 2026 the owner confirmed that public visibility was intentional and
+authorized keeping the repository public, activating Pages/community settings,
+publishing the contributor backlog and draft PRs, and posting one pinned welcome.
+That instruction supersedes the previous private-only activation gate for these
+actions. The earlier decisions and audit receipts remain preserved in Git.
 
-**Public launch is blocked by historical audio clearance.** The final audit
-replaced the current demo's Apple system-voice narration with Kokoro, but two
-earlier narrated video versions remain reachable in Git, including the existing
-pull-request history. On 8 October 2026 the owner explicitly chose to preserve
-that history unchanged and finish the audit with this blocker. Do not make this
-repository public until those historical recordings are cleared for sharing or
-a separately authorized publication/history strategy resolves their exposure.
-The earlier decision to retain personal metadata does not grant audio rights.
+## Activated surfaces
 
-## Review the prepared package
+- [Public documentation](https://alohays.github.io/allagma/), deployed with GitHub Actions and `ALLAGMA_PUBLIC_LAUNCH=true`.
+- [Contributor overview](https://github.com/alohays/allagma/issues/9), pinned above the issue queue, and the [first milestone](https://github.com/alohays/allagma/milestone/1).
+- [Welcome Discussion](https://github.com/alohays/allagma/discussions/13), pinned, with Q&A, Show and tell, and Ideas categories available.
+- Prepared social preview uploaded; the repository website points to the live docs.
+- [Private vulnerability reporting](https://github.com/alohays/allagma/security/advisories/new) enabled.
 
-Read the [final audit](final-audit.md), [launch evidence ledger](requirements.md),
-[publication review](publication-review.md), [third-party notices](../../THIRD_PARTY_NOTICES.md)
-and [release notes](../releases/0.3.0rc2.md). The owner has already chosen to retain
-the full history with author email, local paths and native session IDs disclosed.
-Do not repeat that decision or rewrite frozen records as part of launch.
+The [contributor delivery ledger](../contributing/first-workflow.md) records
+verification and exact current objects. Public documentation describes main's
+available behavior. Diagnostics, evidence-inspection and study-preparation
+features remain proposed in draft PRs, not silently included in main.
 
-Preview locally from `site/` with `npm ci`, `npm run build`, then `npm run preview`.
-Open `http://127.0.0.1:4321/allagma/`. The Python core does not need Node. Read
-[capture instructions](../../media/CAPTURE.md) to inspect or regenerate the film.
+## Unresolved historical-audio rights
 
-## Activate the public surfaces
+[Maintainer issue #8](https://github.com/alohays/allagma/issues/8) tracks two older
+Apple system-voice recordings retained in Git/PR history. The current movie uses
+Kokoro with the recorded Apache-2.0/MIT notices. Replacing it did not clear the
+older recordings; public visibility and documentation activation also do not
+clear them. The owner chose to retain history unchanged. Obtain and document
+clearance or separately authorize an alternative publication/history strategy.
+Do not rewrite history or frozen evidence under the contributor task.
 
-1. **Change repository visibility** to public only when the owner is ready.
-   The working repository is `alohays/allagma`; no mirror or history replacement
-   is required by the selected metadata policy. The historical audio blocker
-   above must be resolved separately before changing visibility.
-2. **Enable GitHub Pages with GitHub Actions as its source.** The configuration
-   uses `https://alohays.github.io/allagma/`. Set the repository Actions variable
-   `ALLAGMA_PUBLIC_LAUNCH` to the exact string `true`. In the `github-pages`
-   environment, require owner review if desired. Dispatch “Public documentation
-   deployment” with `deploy: true`. Both public visibility and the variable are
-   required; ordinary private pushes cannot deploy. Later relevant main-branch
-   pushes can update the site automatically.
-3. **Upload the social preview** from `media/social-preview.png` in repository
-   Settings → Social preview. It is 1280×640 and under 1 MB. GitHub documents
-   that an initial social-preview upload requires a public repository; an
-   existing private preview can be changed. No initial preview was present here.
-   See [GitHub's instructions](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/customizing-your-repositorys-social-media-preview).
-4. **Enable private vulnerability reporting** under Settings → Advanced Security.
-   Test the “Report a vulnerability” link in `SECURITY.md` before announcing.
-   Keep security details out of public issues. See
-   [GitHub's private reporting instructions](https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/configure-vulnerability-reporting/configure-for-a-repository).
-5. **Enable Discussions** with the prepared Q&A, Show and tell, and Ideas
-   categories. Follow the [community plan](community-plan.md). Post the welcome
-   only at launch; create the small number of starter tasks the maintainer is
-   ready to review.
+Serve only the current cleared media on Pages. The earlier accepted exposure of
+author email, local paths and native session IDs is a separate metadata decision,
+not an audio-rights grant. See the [publication review](publication-review.md)
+and [dated final audit](final-audit.md) for the source evidence.
 
-After Pages deploys, verify its production URL, search and movie playback, then
-set the repository website field to that working URL. The description and
-topics are already configured. A local preview cannot prove that the later
-public deployment's DNS/permissions/cache are correct.
+## Review and release decisions
 
-## Publish a release and announcements deliberately
+Review the independent draft changes in this order:
+[PR #10](https://github.com/alohays/allagma/pull/10) (confirmed toy reporting
+ defect and preparation), [PR #11](https://github.com/alohays/allagma/pull/11)
+(prerequisite diagnostics), then [PR #12](https://github.com/alohays/allagma/pull/12)
+(read-only evidence inspection). They are validated but unmerged. The owner
+decides whether/when to merge and include them in a release. Review
+[Dependabot #1](https://github.com/alohays/allagma/pull/1#issuecomment-6065003786)
+separately; the contributor changes do not duplicate its dependency updates.
 
-The current software is **0.3.0rc2**, not an asserted stable 0.3.0 release.
-The “Prepare release assets” workflow runs full acceptance and uploads reviewable
-source assets without creating a tag or release. Inspect the resulting manifests
-and exact source commit. Create an immutable release tag only after deciding its
-version; do not repurpose an existing tag or label a candidate stable by editing
-marketing copy. A version/publication-manifest change requires renewed acceptance
-and regeneration of matching assets before publication.
+The software remains **0.3.0rc2**, not an asserted stable 0.3.0 release. No new
+release, tag, PR merge or external outreach is authorized by this activation.
+Release publication needs a separate version decision, current acceptance and
+matching immutable source assets. The release-preparation workflow only creates
+reviewable assets. Keep large scientific packages opt-in with their hashes and
+licenses; not all retained scientific code is MIT.
 
-Attach the compact source archive, manifest/checksum, release notes, and any
-selected media package. Keep large study evidence opt-in with its existing
-hashes and licenses; do not imply all archived scientific code is MIT.
-
-Finally, adapt and post the [prepared launch copy](announcement.md), linking
-only to now-working public endpoints. No announcement, release, Discussion,
-issue on behalf of a hypothetical user, or public Pages deployment has been
-posted by this preparation task.
+The extra native-onboarding probe remains incomplete at its existing 15-minute
+plus 5-minute model-session limit. No additional continuation, project model
+override, or new scientific campaign is part of this public activation.

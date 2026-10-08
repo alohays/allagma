@@ -12,7 +12,7 @@ shows clearly labeled retained native-study results; no accelerated computation.
 [Download the demo](media/demo/allagma-workflow.mp4) · [Transcript](media/demo/transcript.md) ·
 [English captions](media/demo/allagma-workflow.en.vtt) · [Media sources and licenses](media/CAPTURE.md)
 
-[First study](docs/guides/first-study.md) · [Native agent workflow](docs/guides/native-study.md) ·
+[Documentation](https://alohays.github.io/allagma/) · [First study](https://alohays.github.io/allagma/guides/first-study/) · [Native agent workflow](docs/guides/native-study.md) ·
 [Real studies](docs/showcase/index.md) · [Contribute](CONTRIBUTING.md)
 
 A coding agent can write an experiment. Allagma gives it a reusable process for
@@ -38,9 +38,9 @@ python3 -m allagma check
 python3 -m allagma toy --destination work/my-first-study
 ```
 
-If you already have a checkout, start with `python3 -m allagma check`. Until the
-public launch, cloning requires repository access. Use a new destination for each
-study; existing evidence is never erased. The [full tutorial](docs/guides/first-study.md)
+The repository is public; cloning needs no GitHub authentication. If you already
+have a checkout, start with `python3 -m allagma check`. Use a new destination for
+each study; existing evidence is never erased. The [full tutorial](docs/guides/first-study.md)
 explains every output and the example's finite limits.
 
 The example asks whether adding 0.25 to a sample mean increases squared error.
@@ -117,9 +117,14 @@ bundle. Central changes cannot silently rewrite an existing study.
 [study-owned programs](docs/study-adapters.md) and [versioning](docs/versioning.md)
 cover the implementation. No hooks, subagents or project model pins are installed.
 
-Small contributions need no provider account or GPU. See [contributing](CONTRIBUTING.md),
-[starter tasks](docs/contributing/starter-tasks.md), [roadmap](ROADMAP.md),
-[support](SUPPORT.md) and [security reporting](SECURITY.md).
+Small contributions need no provider account or GPU. Start with the
+[pinned contributor overview](https://github.com/alohays/allagma/issues/9),
+[three available tasks](docs/contributing/starter-tasks.md), and
+[welcome Discussion](https://github.com/alohays/allagma/discussions/13).
+See [contributing](CONTRIBUTING.md), [roadmap](ROADMAP.md), [support](SUPPORT.md)
+and [private security reporting](https://github.com/alohays/allagma/security/advisories/new).
+The three contributor feature PRs are drafts awaiting owner review; their new
+commands and adaptation helper are proposed, not yet available on main.
 
 Allagma core is **MIT licensed**. Scientific adaptations and archived dependencies
 retain their own terms, including the AI Scientist license on EMA-derived code;

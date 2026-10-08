@@ -1,26 +1,32 @@
 # First contributor workflow: delivery ledger
 
-This is an active implementation ledger, not a completed contributor launch.
+The contributor backlog and draft PRs are published. Public entry points are active;
+final live verification and anonymous onboarding are recorded below as they complete.
 The source baseline is `5c9a7651d5f627da8e7ed5992fe869cedb43e8f5`.
 The [goal](../../GOAL.md#first-contributor-workflow--9-october-2026) defines the
 complete outcome; actual GitHub objects and pushed-head checks are required.
 
 ## Current state
 
-Initial GitHub inspection on 9 October 2026 found no issues, one open
-[Dependabot PR](https://github.com/alohays/allagma/pull/1), no milestone, disabled
-Pages/Discussions and public visibility. Work was held while the earlier
-private-only instruction conflicted with that setting.
+The owner resolved the original visibility conflict on 9 October 2026: public
+visibility is intentional and must remain. The [updated goal](../../GOAL.md#public-contributor-workflow-and-documentation-activation--9-october-2026)
+authorizes contributor publication, public documentation and community entry
+points. Earlier private-only decisions remain historical evidence, not current
+gates. [Historical-audio rights](https://github.com/alohays/allagma/issues/8)
+remain unresolved and maintainer-owned.
 
-The owner has now explicitly confirmed that visibility is intentional, instructed
-us to **keep it public**, and authorized contributor publication, Pages, repository
-entry-point settings and a pinned welcome Discussion. The previous visibility
-question is resolved; the [updated goal](../../GOAL.md#public-contributor-workflow-and-documentation-activation--9-october-2026)
-records this authorization without erasing the earlier decisions. Historical
-audio rights remain an unresolved maintainer issue, separate from this authorized
-public activation. No PR merge, new release or external outreach is authorized.
+- [Documentation](https://alohays.github.io/allagma/) is live. The first actual [Pages deployment](https://github.com/alohays/allagma/actions/runs/37813656778) succeeded at `bd4c2a98d0cf37155e65053d601422a114956c23` with the existing scoped permissions.
+- [Overview #9](https://github.com/alohays/allagma/issues/9) is pinned and links [milestone 1](https://github.com/alohays/allagma/milestone/1).
+- Task issues [#2](https://github.com/alohays/allagma/issues/2), [#3](https://github.com/alohays/allagma/issues/3), [#4](https://github.com/alohays/allagma/issues/4) await owner review through draft [#11](https://github.com/alohays/allagma/pull/11), [#10](https://github.com/alohays/allagma/pull/10), [#12](https://github.com/alohays/allagma/pull/12), respectively.
+- [#5](https://github.com/alohays/allagma/issues/5), [#6](https://github.com/alohays/allagma/issues/6), [#7](https://github.com/alohays/allagma/issues/7) are available and unassigned. Only #5/#6 carry `good first issue`; all three carry `help wanted`.
+- [Welcome #13](https://github.com/alohays/allagma/discussions/13) is published and pinned. Q&A, Show and tell, and Ideas are available; no outside outreach was performed.
+- The repository website is the working docs URL; the prepared social preview is uploaded, and private vulnerability reporting is enabled.
 
-## Implemented locally
+The PRs are independent and unmerged. Main's documentation describes main's
+commands and clearly labels these draft features as proposed. New releases and
+PR merges remain owner decisions; no new native session or model usage was added.
+
+## Published draft improvements and local evidence
 
 | Improvement | Branch and commit | Passing local evidence |
 | --- | --- | --- |
@@ -55,32 +61,31 @@ of untyped transport metadata outside graph coverage and rejection of an
 incomplete reference in a typed record field. Before/after receipts are retained
 locally; no original evidence file was repaired to make verification pass.
 
-## Remaining delivery work
+## Pushed-head validation and delivery checks
 
-Seven evidence-grounded issue bodies are prepared locally: the three
-implementation tasks; duplicate-key recovery documentation; an accessible EMA
-figure description; Python 3.13/Linux offline qualification; and the
-maintainer-owned audio blocker. The three small tasks are intended to remain
-unassigned, with `good first issue` only on the two bounded documentation tasks.
+The [PR validation receipt](evidence/pr-validation.json) binds each published
+head and linked issue. All applicable documentation, targeted conformance and
+push-time full offline acceptance jobs passed. Duplicate acceptance is skipped
+on PR events by the existing workflow; a skipped job is not claimed as a pass.
+Every pinned-source issue link resolves in the baseline Git tree. Branch diffs
+leave frozen evaluation/study evidence, media, contract schemas, release
+metadata, model configuration and Dependabot-managed versions unchanged.
 
-Recheck GitHub for duplicates, then publish the label
-set/milestone/issues and pin the contributor overview. Push each implementation
-branch, open its linked draft PR, verify exact pushed-head CI and repair any
-failures. Publish the separate Dependabot recommendation. Connect the actual
-URLs and states from `CONTRIBUTING.md`, `ROADMAP.md`, starter tasks and the
-community plan, then verify all relationships and render the changed docs.
-The lightweight claim/triage/review/evidence/credit guide is prepared locally
-and will link the real overview rather than placeholder URLs.
-The three PR descriptions, overview, label/milestone payloads and separate
-Dependabot comment are also prepared. Every pinned-source issue link resolves
-in the baseline Git tree. Branch-diff inspection confirms that no frozen
-evaluation/study evidence, media, contract schema, release metadata, project
-model configuration or Dependabot-managed dependency version changed.
+The [workflow guide](workflow.md) defines claim, triage, evidence, review and
+credit practices. [Starter tasks](starter-tasks.md), [roadmap](../../ROADMAP.md),
+[contribution guide](../../CONTRIBUTING.md) and [community entry points](../launch/community-plan.md)
+link the actual GitHub objects. Recommended review order is #10, #11, #12;
+there are no stacked dependencies. Keep all drafts unmerged for owner review.
+
+Final live desktop/mobile/media/download checks and the anonymous clean first
+study are in progress. The later verification receipt will bind the deployed
+commit; the first successful deployment above is not a substitute for those
+checks. Only current cleared media is built from main into Pages.
 
 Dependabot review found no blocking issue in its two-file diff at
 `0e612e14c139a5883ddb6fff6595247e15837a12`. Its retained
 [exact-head documentation run](https://github.com/alohays/allagma/actions/runs/37775281206)
 passed installation, npm audit (zero vulnerabilities), 38 pages, 2,167 internal
-links and 14 browser tests; conformance is also green. The recommendation is
+links and 14 browser tests; conformance is also green. The [posted recommendation](https://github.com/alohays/allagma/pull/1#issuecomment-6065003786) is
 owner review followed by merge if the eventual current-head/base checks remain
 green. No dependency bump is duplicated in these contributor branches.
