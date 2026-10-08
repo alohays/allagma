@@ -6,8 +6,10 @@ its tested profile; it does not establish that the complete frozen broker can
 initialize MPS with its high-watermark setting. The defect and its native
 failure are retained, with correction required before release completion.
 
-No final comparison runs have started. These checks validate parts of the
-evaluation infrastructure; they do not establish research-workflow quality.
+These checks were performed before the final comparison. They validate parts
+of the evaluation infrastructure; they do not by themselves establish
+research-workflow quality. Current native outcomes are recorded in the
+[acceptance ledger](requirements.md).
 
 The Codex adapter uses CLI 0.160.1 with the existing authenticated account. It
 copies only selected model controls from the user's current configuration into
@@ -46,11 +48,13 @@ the first attempt, retained it, and successfully executed a new request. This
 is an actual process test, not a native-agent recovery qualification. Offline
 broker contract tests use explicit mocks and are labeled accordingly.
 
-Before freezing the comparison, qualify a complete native brief-to-package
-development run through the broker; implement controller restart reconciliation;
-freeze all common inputs, workflow, scorer, ceilings and intervention rules; and
-verify that no protected material enters candidate workspaces. The initial
-12-run evaluation and a complete study reproduction remain pending.
+A complete native CORE brief-to-package development run and controller restart
+reconciliation were qualified before freezing. Common inputs, workflow, scorer,
+ceilings and intervention rules are now frozen; protected-material checks pass
+for the inspected native sessions. The 12-run evaluation remains in progress.
+A complete CORE study execution and raw recomputation from a clean Git checkout
+have passed; this does not establish an untested second training replay for
+the other two task families.
 
 Official references: [permission profiles](https://learn.chatgpt.com/docs/permissions),
 [disabling personal skills](https://learn.chatgpt.com/docs/build-skills), and
