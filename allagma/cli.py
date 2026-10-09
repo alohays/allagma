@@ -98,6 +98,14 @@ def parser():
     research.add_argument("--auth", type=Path, default=Path.home()/".codex/auth.json")
     research.add_argument("--interrupt-first-attempt", action="store_true")
     research.add_argument("--baseline", action="store_true", help="Evaluation control: common infrastructure without Allagma methods")
+    refs = sub.add_parser("reference", help="Maintain an offline critical literature map and frozen reading inputs")
+    refs.add_argument("operation", choices=["init", "add", "check", "index", "snapshot"])
+    refs.add_argument("--directory", type=Path, required=True)
+    refs.add_argument("--question", default="")
+    refs.add_argument("--mode", choices=["online", "offline", "provided-only"], default="provided-only")
+    refs.add_argument("--record", type=Path)
+    refs.add_argument("--destination", type=Path)
+    refs.add_argument("--require-review", action="store_true")
     return p
 
 
@@ -189,6 +197,22 @@ def main(argv=None):
                 result = resources.recover(args.ledger)
             else:
                 result = resources.summary(args.ledger)
+        elif args.command == "reference":
+            from . import references
+            if args.operation == "init":
+                result = references.initialize(args.directory, question=args.question, mode=args.mode)
+            elif args.operation == "add":
+                if not args.record:
+                    raise AllagmaError("Adding a reference requires --record")
+                value = references.add_record(read_json(args.directory / "map.json"), read_json(args.record), directory=args.directory)
+                write_json(args.directory / "map.json", value)
+                result = references.refresh(args.directory)
+            elif args.operation == "snapshot":
+                if not args.destination:
+                    raise AllagmaError("A reference snapshot requires --destination")
+                result = references.snapshot(args.directory, args.destination, require_review=args.require_review)
+            else:
+                result = references.refresh(args.directory, require_review=args.require_review)
         elif args.command == "research":
             from . import research
             if args.operation == "prepare":
