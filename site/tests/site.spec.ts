@@ -7,6 +7,7 @@ test('opening shows a playable result and direct routes to a study and its repor
   await page.goto('./');
   const hero = page.locator('.launch-hero');
   const play = hero.getByRole('button', {name:'Play demo 1:40'});
+  await expect(hero.locator('.video-cover')).toBeVisible();
   // At the tested phone and desktop sizes, the play control is in the opening viewport.
   await expect(play).toBeInViewport({ ratio: 1 });
   await play.focus();
@@ -14,6 +15,9 @@ test('opening shows a playable result and direct routes to a study and its repor
   const video = hero.locator('video');
   await expect.poll(() => video.evaluate((v:HTMLVideoElement) => v.currentTime)).toBeGreaterThan(.3);
   await expect(play).toBeHidden();
+  await expect(hero.locator('.video-cover')).toBeHidden();
+  await expect(video).toHaveJSProperty('inert', false);
+  await expect(video).toHaveJSProperty('controls', true);
   await video.evaluate((v:HTMLVideoElement) => v.pause());
   await hero.getByRole('link',{name:'Read the report excerpt',exact:true}).click();
   await expect(page.getByRole('tab',{name:'Report',exact:true})).toHaveAttribute('aria-selected','true');

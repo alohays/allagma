@@ -76,7 +76,6 @@ def generate_poster():
             '<text x="726" y="458" font-size="24">The report identifies four</text>',
             '<text x="726" y="492" font-size="24">counterexamples to that claim.</text>',
             '<text x="726" y="557" font-size="19" fill="#52665c">24 seeds · known-answer study</text>',
-            '<text x="40" y="679" font-size="20" fill="#52665c">Actual retained outputs. Full-size figure and report linked below the player.</text>',
             '</g></svg>']
     destination = ROOT/"media/source/results-poster.svg"
     destination.write_text("".join(svg))
