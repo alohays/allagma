@@ -3,6 +3,7 @@ from copy import deepcopy
 import hashlib
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import io
+import shutil
 from pathlib import Path
 import subprocess
 import tarfile
@@ -30,6 +31,7 @@ def asset(name="paper", kind="paper-source", **changes):
     return value
 
 
+@unittest.skipUnless(shutil.which("git"), "Optional acquisition integration requires Git; offline core checks do not")
 class AssetTests(unittest.TestCase):
     def setUp(self):
         temp = tempfile.TemporaryDirectory()
@@ -141,8 +143,10 @@ class AssetTests(unittest.TestCase):
         self.assertEqual(result["transfer_bytes"], 4)
         usage = __import__("shutil").disk_usage(self.cache)
         with patch.object(adapter.shutil, "disk_usage", return_value=type(usage)(usage.total, usage.total, 0)):
-            result = self.fetch(asset("no-space"), b"123")
-        self.assertIn(result["assets"][0]["reason"], ("study_transfer_bytes", "minimum_free_bytes"))
+            provided = self.provided(b"123")
+            result = adapter.acquire(self.cache, self.manifest(asset("no-space"), study_id="free-space-study"),
+                                     self.refs, provided={"no-space": str(provided)})
+        self.assertEqual(result["assets"][0]["reason"], "minimum_free_bytes")
 
     def test_adopted_limit_expansion_requires_bound_researcher_decision(self):
         policy = {**self.policy, "attempts_per_asset": 3}
@@ -264,6 +268,24 @@ class AssetTests(unittest.TestCase):
         self.assertEqual(second["assets"][0]["status"], "available")
         self.assertEqual(second["transfer_bytes"], first["transfer_bytes"])
         adapter.verify(self.cache, second)
+
+    def test_failed_or_interrupted_materialization_preserves_its_charge_and_terminal_status(self):
+        result = self.fetch(asset("selected", use="execution"), b"selected input")
+        target = self.repo / "prepared/inputs/reference-assets"
+        with patch.object(adapter.shutil, "copyfile", side_effect=OSError("controlled copy failure")):
+            with self.assertRaises(OSError):
+                adapter.materialize(self.cache, result, target, storage_limit=10000)
+        ledger_path = self.cache / "studies/test-study/ledger.json"
+        ledger = read_json(ledger_path)
+        self.assertEqual(ledger["materializations"][0]["status"], "failed")
+        self.assertEqual(ledger["materializations"][0]["reserved_bytes"], len(b"selected input"))
+        self.assertTrue(target.exists())
+        ledger["materializations"][0]["status"] = "preparing"  # Controlled killed-owner fixture.
+        write_json(ledger_path, ledger)
+        adapter.acquire(self.cache, self.manifest(asset("selected", use="execution")), self.refs)
+        recovered = read_json(ledger_path)
+        self.assertEqual(recovered["materializations"][0]["status"], "interrupted")
+        self.assertEqual(recovered["materializations"][0]["reserved_bytes"], len(b"selected input"))
 
     def test_preparation_copies_only_execution_assets_and_protects_them(self):
         from allagma import references, research, resources

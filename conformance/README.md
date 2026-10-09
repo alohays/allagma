@@ -3,6 +3,10 @@
 Run `python3 -m unittest discover -s conformance -v`. The kit uses only Python's
 standard library and temporary directories. It invokes actual bounded local
 processes, injects failures and interruptions, and checks the resulting evidence.
+The optional acquisition integration cases use an installed Git executable and
+loopback HTTP, without external network access; they are skipped when Git is
+unavailable. No TeX installation or third-party Python package is needed for
+this command. Actual TeX compilation has its own optional CI workflow.
 
 | Suite | Coverage |
 | --- | --- |
@@ -12,6 +16,9 @@ processes, injects failures and interruptions, and checks the resulting evidence
 | `test_research` | Complete toy workflow, recomputation, stale claims, manuscript revisions, budgets, retries and controller recovery |
 | `test_worker` | Actual timeout and worker termination after controller death |
 | `test_improvement` | Measured rejection versus an unevaluated backend failure, with retained candidate files |
+| `test_references` | Critical map identity, metadata/support separation, snapshots, source links and cache boundaries |
+| `test_reference_assets` | Optional Git/worktree exclusions, bounded transfers/extraction, restart reuse, corruption and immutable preparation |
+| `test_papers` | Report default, configurable attribution, evidence/citation links, review freshness and portable source assembly without TeX |
 
 The tests do not execute a hosted model. Host entrypoint fixtures establish
 registration and artifact contracts, not native activation or model quality.

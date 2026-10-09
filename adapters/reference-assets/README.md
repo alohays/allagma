@@ -45,6 +45,11 @@ attempt. Historical retrieval manifests and attempts remain evidence. Interrupte
 extraction is retained in quarantine before restarting. Archive traversal,
 symlinks, hardlinks, devices, encrypted ZIPs and duplicate members are rejected.
 
+Failed protected-input materializations retain partial files and their reserved
+bytes with a terminal failure record. A new lock owner records an abandoned
+preparation as interrupted; the existence of a ledger entry alone is not treated
+as proof that a copying process is still active.
+
 For initial downloads without a supplied expected hash, the first observed
 digest is trust on first acquisition. Code/model/data revisions must appear in
 the retrieval URL or be bound to an expected digest. A commit string alone does

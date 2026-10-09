@@ -253,6 +253,17 @@ class Cache:
     def save(self):
         write_json(self.ledger_path, self.ledger)
 
+    def recover(self):
+        # Call only while holding the cache's kernel lock. A former owner
+        # cannot still be transferring or materializing through this adapter.
+        for attempt in self.ledger["attempts"]:
+            if attempt["status"] == "running":
+                attempt.update(status="interrupted", ended_at=utcnow())
+        for materialization in self.ledger.get("materializations", []):
+            if materialization["status"] == "preparing":
+                materialization.update(status="interrupted", ended_at=utcnow())
+        self.save()
+
     def study_bytes(self):
         roots = {str(self.study / "partial"), str(self.study / "quarantine")}
         for record in self.ledger["assets"].values():
@@ -616,10 +627,7 @@ def acquire(cache, manifest, directory, *, online=False, provided=None, approval
         controller = Cache(cache, manifest["study_id"])
         # A process that held this lock cannot still be acquiring. Keep the
         # reservation charged and use a new attempt for any continuation.
-        for attempt in controller.ledger["attempts"]:
-            if attempt["status"] == "running":
-                attempt.update(status="interrupted", ended_at=utcnow())
-        controller.save()
+        controller.recover()
         for asset in manifest["assets"]:
             try:
                 result = controller.fetch(asset, online=online, provided=provided.get(asset["id"]), approval=approvals.get(asset["id"]))
@@ -717,6 +725,7 @@ def materialize(cache, retrieval, destination, *, storage_limit):
     require(not destination.exists(), "Reference input destination already exists")
     with mutex(cache):
         controller = Cache(cache, retrieval["study_id"])
+        controller.recover()
         plan = input_plan(cache, retrieval)
         size = sum(item["size_bytes"] for item in plan.values())
         require(size < storage_limit, "Reference execution inputs exceed the prepared workspace storage ceiling")
@@ -756,5 +765,9 @@ def materialize(cache, retrieval, destination, *, storage_limit):
                 public[name] = {k: v for k, v in item.items() if k != "source"}
             transaction.update(status="completed", completed_at=utcnow())
             return {"files": public, "bytes": size, "git_exclusion": exclusion["pattern"]}
+        except BaseException as exc:
+            transaction.update(status="interrupted" if isinstance(exc, (KeyboardInterrupt, SystemExit)) else "failed",
+                               ended_at=utcnow(), reason=type(exc).__name__)
+            raise
         finally:
             controller.save()
