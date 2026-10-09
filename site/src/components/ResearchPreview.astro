@@ -1,0 +1,30 @@
+---
+import emaReport from '../../../media/evidence/ema-r07-report.md?raw';
+// Quote the exact retained report, whose provenance is verified during sync.
+const excerpt = emaReport.match(/The observed relative benefit[\s\S]*?completed cosine endpoints\./)?.[0];
+if (!excerpt) throw new Error('The EMA preview needs an excerpt from the canonical result.');
+const base = '/allagma/';
+---
+<section class="native-preview" aria-labelledby="native-result-title">
+  <div class="section-heading">
+    <p class="eyebrow">Completed native-agent study / weight EMA / r07</p>
+    <h2 id="native-result-title">When does averaging model weights help?</h2>
+    <p>The agent trained tiny diffusion models to compare weight averaging across training durations and learning-rate schedules. The completed package includes the protocol, code, saved weights, statistical analysis, figures, report and critique.</p>
+  </div>
+  <div class="native-preview-layout">
+    <figure>
+      <a href={base+'generated/media/evidence/ema-r07.png'} aria-label="Open the full-size EMA study figure">
+        <img src={base+'generated/media/evidence/ema-r07.png'} width="1800" height="1260" alt="Paired EMA effects by duration and policy. Four panels compare two datasets and two averaging decays." loading="lazy" />
+      </a>
+      <figcaption>Retained output from r07. Dots show paired seeds; diamonds and bars show means and unadjusted 95% t intervals. Negative differences favor EMA. <a href={base+'generated/media/evidence/ema-r07.png'}>Open the full-size figure</a>.</figcaption>
+    </figure>
+    <div class="result-reading">
+      <p class="artifact-label">From the agent's report / report-r1</p>
+      <blockquote>{excerpt}</blockquote>
+      <p>With four seeds per dataset, the duration and interaction estimates remain inconclusive. A smaller relative benefit under cosine scheduling does not imply worse absolute EMA quality.</p>
+      <a class="primary-action" href={base+'studies/ema-schedule/'}>Read the result and its limits <span aria-hidden="true">→</span></a>
+      <p><a href={base+'generated/media/evidence/ema-r07-report.md'} download="ema-r07-report.md">Download the agent's full report (Markdown)</a></p>
+      <p class="source-note">This is a retained study, with raw-data and checkpoint verification. A second full training replay is not claimed. Links within the downloaded report resolve in the full restored package. <a href={base+'project/licenses/'}>AI Scientist source attribution and license</a> apply to the adapted study materials.</p>
+    </div>
+  </div>
+</section>

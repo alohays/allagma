@@ -7,7 +7,7 @@ export default defineConfig({
   trailingSlash: 'always',
   integrations: [starlight({
     title: 'Allagma',
-    description: 'Research workflows for coding agents. Pin the plan, retain every attempt, and connect claims to evidence.',
+    description: 'Give a coding agent a research question. Get code, figures and a report, with the evidence needed to check them.',
     logo: { src: './src/assets/mark.svg', replacesTitle: false },
     favicon: '/favicon.svg',
     social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/alohays/allagma' }],
@@ -22,6 +22,8 @@ export default defineConfig({
       { label: 'Start here', items: [
         { label: 'Your first study', slug: 'guides/first-study' },
         { label: 'Watch the workflow', slug: 'demo' },
+        { label: 'Explore example outputs', slug: 'explore' },
+        { label: 'Completed native studies', slug: 'studies' },
         { label: 'The records behind a study', slug: 'reference/concepts' },
       ]},
       { label: 'Work with Allagma', items: [

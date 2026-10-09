@@ -1,45 +1,61 @@
 ---
-title: Watch the workflow
-description: A recorded walkthrough of actual Allagma commands and research artifacts.
+title: Watch a study take shape
+description: See the offline example produce a figure and report, then inspect results from a completed native-agent study.
 tableOfContents: false
 ---
 
 import WorkflowVideo from '../../components/WorkflowVideo.astro';
 
-Watch a research brief become an executed offline study, a figure, an
-evidence-linked report, and recomputed results. **100 seconds, actual software.**
+The recording follows a small statistical question through execution, analysis
+and reporting. You can inspect the same figure and manuscript below, or run the
+example locally.
 
 <WorkflowVideo />
 
-The first six chapters run the known-answer offline example through the shipped
-recording workbench. The final chapter shows **retained EMA r07 results** from a
-native agent study; it does not retrain that study or simulate a model session.
-The footage is continuous, with automated browser navigation and no accelerated
-computation. Command paths are abbreviated on screen. Narration is synthesized
-locally with Kokoro's af_heart voice using Apache-2.0 model weights. The
-[narration notices](/allagma/generated/media/demo/NARRATION-NOTICES.md) identify
-the model, engine and source licenses.
+<div class="demo-actions">
+  <a class="primary-action" href="/allagma/explore/">Inspect the figure and report →</a>
+  <a class="text-action" href="/allagma/guides/first-study/">Run the offline example →</a>
+</div>
 
-| Time | What you see |
+## What you see
+
+The offline toy includes finished scientific programs. The local recording
+workbench runs that code and displays its outputs. At 1:23, the film switches
+to the retained **EMA r07 figure from a native Codex study**. That chapter shows
+an existing result; it does not retrain the model or simulate an agent session.
+
+| Time | Work and output |
 | --- | --- |
-| 0:00 | The research question and declared inputs |
-| 0:12 | Actual CLI execution and retained attempts |
-| 0:32 | Generated paired-difference figure |
-| 0:46 | Supported and contradicted claims |
-| 1:01 | The generated manuscript |
-| 1:13 | A second audit and 521 verified references |
-| 1:23 | Labeled retained native EMA results |
+| 0:00 | Read the research question and inputs |
+| 0:12 | Run the study and retain its attempts |
+| 0:32 | Inspect the generated paired-difference figure |
+| 0:46 | Compare supported and contradicted claims |
+| 1:01 | Read the generated manuscript |
+| 1:13 | Recompute the result and check its evidence |
+| 1:23 | Inspect the retained native EMA result |
+
+For the native example, [read the completed EMA study](/allagma/studies/ema-schedule/)
+and its qualifications. To use your own question, [prepare a native study](/allagma/guides/native-study/).
+The researcher supplies the brief, materials and limits; the agent develops the
+protocol, scientific code, analysis and report.
+
+## Transcript, downloads and sources
 
 [Read the transcript](/allagma/demo/transcript/) ·
 <a href="/allagma/generated/media/demo/allagma-workflow.mp4" download="allagma-workflow.mp4">Download MP4 (2.9 MB)</a> ·
-<a href="/allagma/generated/media/demo/allagma-workflow.en.vtt" download="allagma-workflow.en.vtt">Download English captions</a> ·
-[Inspect capture provenance](/allagma/generated/media/demo/provenance.json)
+<a href="/allagma/generated/media/demo/allagma-workflow.en.vtt" download="allagma-workflow.en.vtt">Download English captions</a>
 
-[Run your first study](/allagma/guides/first-study/),
-[explore the actual artifacts](/allagma/explore/), or
-[prepare your own native study](/allagma/guides/native-study/).
+The 100-second footage is continuous, with automated navigation and no
+accelerated computation. On-screen command paths are abbreviated. Narration
+uses Kokoro's af_heart voice, generated locally from Apache-2.0 model weights;
+the engine is MIT licensed. The [narration notices](/allagma/generated/media/demo/NARRATION-NOTICES.md)
+identify the exact sources. The retained EMA figure was generated using
+AI Scientist-adapted code and keeps its [separate license](/allagma/generated/media/evidence/EMA-LICENSE.txt).
 
-The EMA figure is machine-generated using AI Scientist-adapted code and retains
-its [separate license](/allagma/generated/media/evidence/EMA-LICENSE.txt).
-The [capture instructions](https://github.com/alohays/allagma/blob/main/media/CAPTURE.md)
-and editable sources are included in the repository.
+The poster arranges the unchanged toy plot and a sentence from its manuscript,
+with an annotation explaining the counterexamples. It is a presentation of
+outputs, not a screenshot of a product interface.
+[Movie provenance](/allagma/generated/media/demo/provenance.json),
+[poster provenance](/allagma/generated/media/demo/results-poster-provenance.json)
+and [capture instructions](https://github.com/alohays/allagma/blob/main/media/CAPTURE.md)
+provide the source record and repeatable steps.

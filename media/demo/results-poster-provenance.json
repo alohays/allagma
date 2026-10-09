@@ -1,0 +1,18 @@
+{
+  "format": "allagma-results-poster-v1",
+  "scope": "Presentation layout around the unchanged toy figure and an exact sentence from its manuscript. The counterexample annotation summarizes the same report. No product UI, fresh execution or new data.",
+  "sources": {
+    "media/evidence/toy-paired-differences.svg": "800452621fa043c92e460149422b4291838ec5426930c60fa76a2d9094d78c10",
+    "media/evidence/toy-manuscript.md": "dd2318ccf2f246d310e086145dab1f397d9d004d51694935b056639133b4fbef"
+  },
+  "editable_source": "media/source/results-poster.svg",
+  "editable_sha256": "76a29022903491240bc49e102dbb6f6b4381d50dd86e8e37ae5e1795e35a84a4",
+  "rendered_file": "media/demo/results-poster.png",
+  "render_command": "cd site && node scripts/render-results-poster.mjs",
+  "rendered_sha256": "e855b7eef3697fb22301df089903ade3700e75b28d4f9d547e76effed0f1eb69",
+  "rendered_bytes": 101302,
+  "rendered_dimensions": {
+    "width": 1280,
+    "height": 720
+  }
+}

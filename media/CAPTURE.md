@@ -32,6 +32,14 @@ digest. This does not publish a software release or resolve the
 
 ## Prerequisites
 
+The docs opening uses `demo/results-poster.png`, a presentation of the unchanged
+toy figure and manuscript. It replaces the poster in the page, not footage in
+the film. To regenerate only the workflow graphics and poster, follow
+[the presentation-asset instructions](README.md); no capture, training or
+narration step is needed. `demo/results-poster-provenance.json` binds the inputs,
+editable SVG and rendered PNG. The original capture poster remains available
+for its historical record.
+
 Use Python 3.11+, Node 22.12+, the site's locked development dependencies,
 Chromium from Playwright, and FFmpeg/ffprobe. Narration uses Kokoro's Apache-2.0
 model and the MIT-licensed `kokoro-onnx` engine in a separate environment.

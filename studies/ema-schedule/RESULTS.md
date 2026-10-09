@@ -1,4 +1,40 @@
-# Verified EMA duration/schedule follow-up
+# When does weight averaging help tiny diffusion models?
+
+<a id="verified-ema-duration-schedule-follow-up"></a>
+
+A native Codex session used Allagma to compare training duration and learning-rate
+policy, producing scientific code, saved model states, statistical estimates,
+this figure and a report. The result below is retained work from run r07.
+
+EMA's mean relative benefit was larger under constant learning rate than at
+completed cosine endpoints. Define Δ = SW1(EMA) − SW1(raw), with negative values
+favoring EMA. The schedule contrast Δ(cosine) − Δ(constant) was positive in all
+eight dataset/decay/duration comparisons. Raw-weight mean SW1 also improved
+under cosine in every dataset/duration comparison, while absolute EMA means
+changed less. A smaller *relative benefit* therefore does not imply worse
+absolute EMA quality.
+
+![Paired EMA effects by duration and policy](figures/r07-main-figure.png)
+
+[Open the full-size figure](https://alohays.github.io/allagma/generated/media/evidence/ema-r07.png).
+
+Dots are the four paired seeds; diamonds and bars are means and unadjusted 95%
+Student t intervals. The figure's `EMA 099` and `EMA 0999` labels mean decays
+0.99 and 0.999. Each panel has its own scale. With four seeds, intervals are
+imprecise, multiplicity is substantial, and zero-containing intervals do not
+establish equality. The intervention is the complete learning-rate path; the
+study does not isolate a mechanism caused solely by its terminal value.
+
+| Finding | Observed result |
+| --- | --- |
+| Cell-level mean Δ below zero | 14/16 |
+| Unadjusted cell-level 95% t intervals wholly below zero | 2/16, both moons at constant 5k |
+| Schedule-contrast means above zero | 8/8 |
+| Duration-contrast intervals containing zero | 8/8 |
+| Interaction intervals containing zero | 4/4 |
+| GMM8 mode coverage | All 48 states covered all eight modes; this is a ceiling effect |
+
+## Execution and verification
 
 The first fully verified Allagma package in frozen run order is **r07**
 (replicate 2). It is the illustrative package selected by the prespecified rule.
@@ -10,32 +46,6 @@ Mac's MPS backend. There are four independent seeds per dataset. The 24 actual
 training trajectories total 200,000 updates: each constant-rate trajectory
 supplies its 5k and 10k endpoints, while cosine-5k and cosine-10k are separately
 trained from identical initial states and training-input prefixes.
-
-EMA's mean relative benefit was larger under constant learning rate than at
-completed cosine endpoints. Define Δ = SW1(EMA) − SW1(raw), with negative values
-favoring EMA. The schedule contrast Δ(cosine) − Δ(constant) was positive in all
-eight dataset/decay/duration comparisons. Raw-weight mean SW1 also improved
-under cosine in every dataset/duration comparison, while absolute EMA means
-changed less. A smaller *relative benefit* therefore does not imply worse
-absolute EMA quality.
-
-| Finding | Observed result |
-| --- | --- |
-| Cell-level mean Δ below zero | 14/16 |
-| Unadjusted cell-level 95% t intervals wholly below zero | 2/16, both moons at constant 5k |
-| Schedule-contrast means above zero | 8/8 |
-| Duration-contrast intervals containing zero | 8/8 |
-| Interaction intervals containing zero | 4/4 |
-| GMM8 mode coverage | All 48 states covered all eight modes; this is a ceiling effect |
-
-![Paired EMA effects by duration and policy](figures/r07-main-figure.png)
-
-Dots are the four paired seeds; diamonds and bars are means and unadjusted 95%
-Student t intervals. The figure's `EMA 099` and `EMA 0999` labels mean decays
-0.99 and 0.999. Each panel has its own scale. With four seeds, intervals are
-imprecise, multiplicity is substantial, and zero-containing intervals do not
-establish equality. The intervention is the complete learning-rate path; the
-study does not isolate a mechanism caused solely by its terminal value.
 
 The unchanged frozen scorer passes **240/240 checks**, including replay of all
 96 states from saved weights and recorded generation noise. Independent
@@ -55,6 +65,10 @@ seconds, with 35 compute requests. Failures remain retained. The same-assistant
 critique and controller audit are provisional, not independent scientific peer
 review. AI-generated/adapted code and reporting are disclosed, with the supplied
 AI Scientist Source Code License retained.
+
+[Read the agent's full report](../../media/evidence/ema-r07-report.md). This exact
+selected copy retains its source license and disclosure; its relative references
+resolve inside the full package below.
 
 ## Restore and reproduce
 

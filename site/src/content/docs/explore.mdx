@@ -1,17 +1,22 @@
 ---
-title: Follow a result back to its evidence
-description: Browse actual outputs from Allagma's offline toy study, from its brief to its claims and report.
+title: Explore a study's figure and report
+description: Read the offline example's result, then follow its claims back to the brief and numerical outputs.
 tableOfContents: false
 ---
 
 import StudyExplorer from '../../components/StudyExplorer.astro';
 
-These are exact selected artifacts from a fresh offline study. Explore the
-brief, numerical results, claim status and report, or open the original files.
-No model or experiment runs in this browser.
+This introductory example compares a sample mean with the same estimate plus
+a fixed bias. It produces a figure and report with a useful distinction: the
+average error increased, but it did not increase on every seed.
 
 <StudyExplorer />
 
-[Run this study yourself](/allagma/guides/first-study/) to create the full
-attempt history and recompute its evidence. For native agent studies, browse
-the [real study showcase](/allagma/studies/).
+These selected files are unchanged outputs from the **offline toy study**,
+which supplies its own scientific code. The complete study also retains its
+inputs, protocol, raw measurements, failures and retries. No model is involved
+in this example.
+
+[Run the example locally](/allagma/guides/first-study/) to create that full
+record and recompute the results. For work performed by a coding agent, read
+the [completed native studies](/allagma/studies/).

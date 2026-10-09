@@ -59,6 +59,13 @@ const help = execFileSync('python3', ['tools/cli_reference.py'], { cwd: root, en
 await fs.mkdir(path.join(generated, 'reference'), { recursive: true });
 await fs.writeFile(path.join(generated, 'reference/commands.md'), '---\ntitle: All command flags\nslug: reference/commands\n---\n\n' + help);
 const mediaRoot = path.join(root, 'media');
+// A display copy must remain identical to the retained native report. The
+// provenance receipt records its binding to the original package index.
+const reportReceipt = JSON.parse(await fs.readFile(path.join(mediaRoot, 'evidence/ema-r07-report-provenance.json'), 'utf8'));
+const reportBytes = await fs.readFile(path.join(root, reportReceipt.preview));
+if (reportBytes.length !== reportReceipt.bytes || createHash('sha256').update(reportBytes).digest('hex') !== reportReceipt.sha256) {
+  throw new Error('The native report preview differs from its retained source.');
+}
 await fs.cp(mediaRoot, path.join(assets, 'media'), {
   recursive: true,
   // Editable capture sources live in Git. The workbench requires its local
