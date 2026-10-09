@@ -8,6 +8,7 @@ import { writeVendorNotices } from './vendor-notices.mjs';
 
 const site = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const root = path.dirname(site);
+const sourceCommit = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim();
 const pages = JSON.parse(await fs.readFile(path.join(site, 'content-map.json'), 'utf8'));
 const routes = new Map(pages.map(p => [p.source, `/allagma/${p.route}/`]));
 const generated = path.join(site, 'src/content/docs/generated');
@@ -18,7 +19,7 @@ await fs.mkdir(generated, { recursive: true });
 await fs.mkdir(assets, { recursive: true });
 const receipts = [];
 const verifiedTargets = new Set();
-const trackedFiles = new Set(execFileSync('git', ['ls-files', '-z'], { cwd: root, encoding: 'utf8' }).split('\0').filter(Boolean));
+const trackedFiles = new Set(execFileSync('git', ['ls-files', '-z', '--', 'media'], { cwd: root, encoding: 'utf8' }).split('\0').filter(Boolean));
 
 function isRawReferenceCache(file) {
   let directory = path.dirname(path.join(root, file));
@@ -43,7 +44,11 @@ async function rewrite(body, source) {
     }
     let href;
     if (image) {
-      if (!trackedFiles.has(resolved) || isRawReferenceCache(resolved)) {
+      if (!trackedFiles.has(resolved)) {
+        execFileSync('git', ['ls-files', '--error-unmatch', '--', resolved], { cwd: root, stdio: 'pipe' });
+        trackedFiles.add(resolved);
+      }
+      if (isRawReferenceCache(resolved)) {
         throw new Error(`Publish only reviewed, tracked image assets, never raw reference caches: ${resolved}`);
       }
       const destination = path.join(assets, resolved);
@@ -51,7 +56,7 @@ async function rewrite(body, source) {
       await fs.copyFile(path.join(root, resolved), destination);
       href = `/allagma/generated/${resolved}`;
     } else {
-      href = routes.get(resolved) || `https://github.com/alohays/allagma/blob/main/${resolved}`;
+      href = routes.get(resolved) || `https://github.com/alohays/allagma/blob/${sourceCommit}/${resolved}`;
     }
     if (fragment) href += '#' + fragment;
     body = body.slice(0, match.index) + `${image}[${label}](${href})` + body.slice(match.index + match[0].length);
@@ -64,7 +69,7 @@ for (const page of pages) {
   const destination = path.join(generated, page.route + '.md');
   await fs.mkdir(path.dirname(destination), { recursive: true });
   const front = `---\ntitle: ${JSON.stringify(page.title)}\nslug: ${page.route}\neditUrl: https://github.com/alohays/allagma/edit/main/${page.source}\n---\n\n`;
-  await fs.writeFile(destination, front + body + `\n\n---\n\n[Canonical source](https://github.com/alohays/allagma/blob/main/${page.source}) · Generated from the maintained repository document.\n`);
+  await fs.writeFile(destination, front + body + `\n\n---\n\n[Canonical source](https://github.com/alohays/allagma/blob/${sourceCommit}/${page.source}) · Generated from the maintained repository document at this build's commit.\n`);
   receipts.push(page);
 }
 
@@ -92,7 +97,6 @@ await fs.cp(mediaRoot, path.join(assets, 'media'), {
 });
 await fs.writeFile(path.join(assets, 'content-sources.json'), JSON.stringify(receipts, null, 2) + '\n');
 // A public receipt binds the deployed site and its cleared movie to this build.
-const sourceCommit = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim();
 const movie = await fs.readFile(path.join(mediaRoot, 'demo/allagma-workflow.mp4'));
 await fs.writeFile(path.join(site, 'public/build-info.json'), JSON.stringify({
   source_commit: sourceCommit,

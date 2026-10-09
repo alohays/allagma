@@ -10,6 +10,8 @@ or start with the [reference index](references/INDEX.md). The paper's author lab
 `allagma` was explicitly supplied by the owner. Other researchers configure their
 own attribution; it is not a framework default.
 
+![First page of the compiled EMA paper, with configured author allagma](evidence/paper-preview.png)
+
 ## What the reference research changed
 
 The eight-entry map covers seven primary papers and the exact upstream code
