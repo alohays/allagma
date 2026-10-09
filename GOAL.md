@@ -315,3 +315,21 @@ unresolved decisions that materially affect scope, cost or correctness.
 The [PR review record](docs/contributing/pr-review.md) tracks the findings,
 repairs, individual and combined verification, GitHub review workflow and final
 states. #1 is merged; #10, #11 and #12 are reviewed, regular and unmerged.
+
+## Highest-priority issue without a PR — 10 October 2026
+
+Inspect the open issues at https://github.com/alohays/allagma/issues, choose the
+highest-priority issue that still needs a PR, implement the fix and submit the
+PR. Check existing implementations and contributor claims before selecting
+work. Follow the existing instruction to commit coherent increments and push
+the completed branch to `origin`. Preserve English documentation, full history,
+frozen evidence, the GUI model choice and existing resource limits.
+
+Selected [#5: duplicate-key recovery](https://github.com/alohays/allagma/issues/5)
+after inspecting all eight open issues and three open PRs. The reproduced
+reporting defect and the two deeper enhancements already have reviewed PRs;
+#6 has a contributor's claim, #8 needs an owner rights decision, and #9 is the
+queue overview. The remaining #7 is a platform-qualification gap. Prioritize
+#5's first-use validation and recovery guidance, with a literal offline
+reproduction, safe recovery, local link checks and rendered documentation
+review. No parser, schema or frozen-record change is needed.
