@@ -10,7 +10,7 @@ from pathlib import Path
 import re
 import shutil
 
-from . import bundles, references, resources
+from . import bundles, papers, references, resources
 from .files import AllagmaError, file_hash, inventory, read_json, utcnow, write_json
 
 
@@ -50,10 +50,15 @@ def _material_files(source):
 
 
 def prepare(source, study, control, *, brief, materials, profile, study_id="study", install_workflow=True,
-            reference_directory=None, reference_cache=None):
+            reference_directory=None, reference_cache=None, paper_configuration=None):
     source,study,control=(Path(p).resolve() for p in (source,study,control))
     _separate(study,control)
     resources.validate_profile(profile)
+    if paper_configuration is not None:
+        if paper_configuration.get("format") != papers.FORMAT or paper_configuration.get("output") not in ("report", "arxiv"):
+            raise AllagmaError("Invalid requested paper output")
+        if paper_configuration["output"] == "arxiv":
+            papers.author_tex(paper_configuration)
     if not {"compute","setup"} <= profile["budgets_seconds"].keys():
         raise AllagmaError("Research preparation requires separate compute and setup budgets")
     if study.exists() and any(study.iterdir()):raise AllagmaError("Use a new or empty study directory")
@@ -93,6 +98,8 @@ def prepare(source, study, control, *, brief, materials, profile, study_id="stud
     shutil.copyfile(brief,inputs/"BRIEF.md")
     shutil.copyfile(source/"adapters/local-process/COMPUTE.md",inputs/"COMPUTE.md")
     shutil.copyfile(source/"adapters/local-process/compute_client.py",inputs/"compute.py")
+    if paper_configuration is not None:
+        write_json(inputs / "PAPER.json", paper_configuration, immutable=True)
     reference_snapshot = None
     if reference_directory is not None:
         reference_snapshot = references.snapshot(reference_directory, inputs / "references")
@@ -108,6 +115,8 @@ def prepare(source, study, control, *, brief, materials, profile, study_id="stud
         "max_seconds":profile["budgets_seconds"]["compute"],"money_usd":0,
         "per_attempt_seconds":profile["command_timeout_seconds"]["compute"]}}
     lock=bundles.initialize(source,study,study_id=study_id,intent=intent) if install_workflow else None
+    if paper_configuration is not None:
+        write_json(study / "paper.json", paper_configuration)
     if install_workflow and reference_snapshot:
         for name in reference_snapshot["files"]:
             target = study / "references" / name

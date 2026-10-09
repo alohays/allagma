@@ -1,0 +1,49 @@
+{
+  "adaptation": "Original optional TeX packaging adapter using installed tools; no submission API.",
+  "compatibility": {
+    "contracts": [
+      "0.2"
+    ],
+    "hosts": [
+      "generic",
+      "codex",
+      "claude-code"
+    ],
+    "python": ">=3.11 for optional helpers"
+  },
+  "contract": "0.2",
+  "dependencies": [],
+  "entry": "README.md",
+  "evaluation": [
+    "example.json"
+  ],
+  "examples": [
+    "example.json"
+  ],
+  "id": "output/arxiv",
+  "inputs": [
+    "StudySpec"
+  ],
+  "kind": "adapter",
+  "lifecycle": "stable",
+  "maintainer": "@alohays",
+  "optional": [
+    "execution.tex"
+  ],
+  "outputs": [
+    "StudySpec"
+  ],
+  "replacement": null,
+  "requires": [
+    "artifact.read",
+    "artifact.write"
+  ],
+  "resources": [
+    "package.py",
+    "build.py",
+    "main.tex.in",
+    "allagma-preprint.sty"
+  ],
+  "settings": {},
+  "sources": []
+}

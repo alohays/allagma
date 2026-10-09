@@ -1,0 +1,16 @@
+\documentclass[11pt]{article}
+\usepackage{allagma-preprint}
+\input{evidence-macros.tex}
+\title{@@TITLE@@}
+\author{@@AUTHORS@@}
+\date{@@DATE@@}
+\begin{document}
+\maketitle
+\begin{abstract}
+\input{sections/abstract.tex}
+\end{abstract}
+@@BODY@@
+\bibliographystyle{plainnat}
+\bibliography{references}
+@@APPENDICES@@
+\end{document}
