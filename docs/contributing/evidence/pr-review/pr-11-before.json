@@ -1,0 +1,7 @@
+{
+  "case": "valid JSON array instead of lock object",
+  "result": {
+    "exception": "AttributeError",
+    "message": "'list' object has no attribute 'keys'"
+  }
+}

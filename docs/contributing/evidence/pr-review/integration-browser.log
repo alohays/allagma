@@ -1,0 +1,33 @@
+
+> test
+> playwright test
+
+[WebServer] (node:67176) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 18 tests using 1 worker
+
+(node:67182) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [desktop] › tests/site.spec.ts:6:1 › opening shows a playable result and direct routes to a study and its report (1.4s)
+  ✓   2 [desktop] › tests/site.spec.ts:33:1 › media and report downloads retain their source bytes (692ms)
+  ✓   3 [desktop] › tests/site.spec.ts:49:1 › landing page works in both themes without horizontal overflow (979ms)
+  ✓   4 [desktop] › tests/site.spec.ts:66:1 › production search finds the tutorial and navigates under the base path (997ms)
+  ✓   5 [desktop] › tests/site.spec.ts:78:1 › artifact tabs support keyboard navigation and show actual values (541ms)
+  ✓   6 [desktop] › tests/site.spec.ts:98:1 › study pages load figures and retain their scientific limits (162ms)
+  ✓   7 [desktop] › tests/site.spec.ts:111:1 › skip link and mobile menu are usable (93ms)
+  ✓   8 [desktop] › tests/site.spec.ts:125:1 › flagship video decodes, plays, seeks and loads English captions (1.2s)
+  ✓   9 [desktop] › tests/site.spec.ts:147:1 › every canonical page renders inside the viewport with no script errors (1.2s)
+(node:67331) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  10 [mobile] › tests/site.spec.ts:6:1 › opening shows a playable result and direct routes to a study and its report (1.2s)
+  ✓  11 [mobile] › tests/site.spec.ts:33:1 › media and report downloads retain their source bytes (695ms)
+  ✓  12 [mobile] › tests/site.spec.ts:49:1 › landing page works in both themes without horizontal overflow (1.4s)
+  ✓  13 [mobile] › tests/site.spec.ts:66:1 › production search finds the tutorial and navigates under the base path (490ms)
+  ✓  14 [mobile] › tests/site.spec.ts:78:1 › artifact tabs support keyboard navigation and show actual values (633ms)
+  ✓  15 [mobile] › tests/site.spec.ts:98:1 › study pages load figures and retain their scientific limits (156ms)
+  ✓  16 [mobile] › tests/site.spec.ts:111:1 › skip link and mobile menu are usable (184ms)
+  ✓  17 [mobile] › tests/site.spec.ts:125:1 › flagship video decodes, plays, seeks and loads English captions (1.2s)
+  ✓  18 [mobile] › tests/site.spec.ts:147:1 › every canonical page renders inside the viewport with no script errors (1.2s)
+
+  18 passed (15.7s)

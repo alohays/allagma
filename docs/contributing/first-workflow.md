@@ -1,5 +1,10 @@
 # First contributor workflow: delivery ledger
 
+Historical delivery record: the draft states and original heads below describe
+the initial contributor setup. The subsequent [PR review](pr-review.md) fixed
+three findings, made #10/#11/#12 regular and ready, and merged #1 with owner
+authorization. The original evidence receipts remain unchanged.
+
 The contributor backlog and draft PRs are published, the public site and community
 entry points are operational, and anonymous onboarding/live checks pass. All
 implementation PRs remain unmerged for owner review.

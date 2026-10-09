@@ -1,0 +1,422 @@
+{
+  "1": {
+    "baseRefName": "main",
+    "headRefOid": "0e612e14c139a5883ddb6fff6595247e15837a12",
+    "isDraft": false,
+    "mergeCommit": {
+      "oid": "5cf169035228b93327c8a76070a5a90b90f95935"
+    },
+    "mergeStateStatus": "UNKNOWN",
+    "mergeable": "UNKNOWN",
+    "mergedAt": "2026-10-09T13:19:04Z",
+    "number": 1,
+    "reviews": [
+      {
+        "author": {
+          "login": "alohays"
+        },
+        "authorAssociation": "OWNER",
+        "body": "Approved after line-by-line review of both changed files and fresh integration validation against main `694f13c1b923ff8e8a58442dd203baf613f76205` (PR head `0e612e14c139a5883ddb6fff6595247e15837a12`). No blocking findings.\n\nThe change is appropriately confined to the documentation build and accessibility tooling. Exact pins, resolved npm registry URLs, integrity hashes and the transitive axe-core version agree; no runtime/scientific dependencies or source behavior change. The MDX escaping patch is compatible with the current components, and the accessibility update passes without suppressing rules.\n\nFresh local evidence on Node 22.20.0 / Python 3.11.6: npm ci, npm audit (0 vulnerabilities), production build (39 pages, 2,418 links/assets), all 18 desktop/mobile browser tests, catalog check, and canonical documentation link check (323 links) pass. The original pushed-head hosted checks are also green. Local integration tree: `af559081158c504dfdec5cc48cbe2d4c6bc45f97`.\n\nThis is an agent-assisted maintainer review. The owner has authorized merging this PR when ready; it is ready. No new native-model or scientific qualification is claimed.",
+        "commit": {
+          "oid": "0e612e14c139a5883ddb6fff6595247e15837a12"
+        },
+        "id": "PRR_kwDOU9o7Fc8AAAABRhH9vQ",
+        "includesCreatedEdit": false,
+        "reactionGroups": [],
+        "state": "APPROVED",
+        "submittedAt": "2026-10-09T13:19:00Z"
+      }
+    ],
+    "state": "MERGED",
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-08T12:12:59Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37775281198/job/113304450316",
+        "name": "targeted",
+        "startedAt": "2026-10-08T12:12:52Z",
+        "status": "COMPLETED",
+        "workflowName": "Conformance"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-08T12:13:35Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37775274655/job/113304428610",
+        "name": "targeted",
+        "startedAt": "2026-10-08T12:12:48Z",
+        "status": "COMPLETED",
+        "workflowName": "Conformance"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-08T12:14:00Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37775281206/job/113304450919",
+        "name": "build-and-test",
+        "startedAt": "2026-10-08T12:12:52Z",
+        "status": "COMPLETED",
+        "workflowName": "Documentation"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-08T12:12:50Z",
+        "conclusion": "SKIPPED",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37775281198/job/113304452932",
+        "name": "acceptance",
+        "startedAt": "2026-10-08T12:12:50Z",
+        "status": "COMPLETED",
+        "workflowName": "Conformance"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-08T12:14:55Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37775274655/job/113304428212",
+        "name": "acceptance",
+        "startedAt": "2026-10-08T12:12:48Z",
+        "status": "COMPLETED",
+        "workflowName": "Conformance"
+      }
+    ],
+    "title": "chore(deps): bump the docs-toolchain group in /site with 2 updates",
+    "url": "https://github.com/alohays/allagma/pull/1"
+  },
+  "10": {
+    "baseRefName": "main",
+    "headRefOid": "a8dfa9042ffc10714b64b0a0cba8759471bcfa40",
+    "isDraft": false,
+    "mergeCommit": null,
+    "mergeStateStatus": "CLEAN",
+    "mergeable": "MERGEABLE",
+    "mergedAt": null,
+    "number": 10,
+    "reviews": [
+      {
+        "author": {
+          "login": "alohays"
+        },
+        "authorAssociation": "OWNER",
+        "body": "Initial review of all six changed files at `16926525de488a8979a98f0ebf312d80847b43f6`: one blocking correctness finding, recorded inline. A full 26-run reproduction with bias 0.123456789 still gives a passing audit while the protocol/claims report 0.123457. I will fix this and retain a regression before marking the PR ready.\n\nArchitecture: keeping preparation and scientific settings under examples/toy-study is appropriate. The change does not alter Allagma record contracts, campaign dispatch or existing frozen programs. Preparation refuses reused destinations, separates inspection from execution, retains source/license lineage, and preserves the finite plan. Analyzer-level mixed-setting rejection complements, rather than replaces, the evaluator's per-run checks. The new tutorial correctly distinguishes a reproducibility audit from independent scientific validation.\n\nCoverage gaps to close: the current regression only exercises exactly representable short bias 0.5; verify longer-precision settings and the exposed boundary values as well. Revalidate the documented CLI sequence and full conformance after integrating current main. Existing drafts predate the updated docs landing and the dependency PR.\n\nThis is an agent-assisted maintainer review. GitHub prohibits an author from requesting changes on their own PR, so this submitted COMMENT review records the blocking finding rather than claiming an independent approval.",
+        "commit": {
+          "oid": "16926525de488a8979a98f0ebf312d80847b43f6"
+        },
+        "id": "PRR_kwDOU9o7Fc8AAAABRhKC3g",
+        "includesCreatedEdit": false,
+        "reactionGroups": [],
+        "state": "COMMENTED",
+        "submittedAt": "2026-10-09T13:21:00Z"
+      },
+      {
+        "author": {
+          "login": "alohays"
+        },
+        "authorAssociation": "OWNER",
+        "body": "",
+        "commit": {
+          "oid": "a8dfa9042ffc10714b64b0a0cba8759471bcfa40"
+        },
+        "id": "PRR_kwDOU9o7Fc8AAAABRhOzag",
+        "includesCreatedEdit": false,
+        "reactionGroups": [],
+        "state": "COMMENTED",
+        "submittedAt": "2026-10-09T13:26:40Z"
+      },
+      {
+        "author": {
+          "login": "alohays"
+        },
+        "authorAssociation": "OWNER",
+        "body": "Final review of `a8dfa9042ffc10714b64b0a0cba8759471bcfa40`: no remaining blocking findings. Ready for the owner's merge decision; now a regular, open PR.\n\nThe inline precision finding is fixed and resolved with linked evidence. I rechecked every changed file against main after #1: preparation remains prospective and study-owned, mixed settings are rejected, raw bias reaches all scientific text without six-digit truncation, and historical campaigns retain their copied code. The regression covers the failure the original 0.5-only test missed. Input refusal, source/license lineage and finite resource limits remain intact.\n\nValidation on the pushed head: 118 conformance tests; catalog/link checks; the literal 26-run bias-0.5 CLI workflow and 504-reference audit; [Documentation including 18 browser tests](https://github.com/alohays/allagma/actions/runs/37936446355); [Conformance and full acceptance](https://github.com/alohays/allagma/actions/runs/37936439323). All pass.\n\nThe three feature heads also merge without conflict and pass combined 134-test/I1\u2013I5 acceptance, a 39-page/2,437-link build, 18 browser tests and an actual precise-bias workflow through doctor and verify-evidence. No cross-PR dependency or model/scientific qualification is introduced.\n\nAgent-assisted maintainer assessment, submitted as COMMENT because GitHub prohibits approving one's own PR. The owner requested readiness, not merging this feature PR.",
+        "commit": {
+          "oid": "a8dfa9042ffc10714b64b0a0cba8759471bcfa40"
+        },
+        "id": "PRR_kwDOU9o7Fc8AAAABRhWHXw",
+        "includesCreatedEdit": false,
+        "reactionGroups": [],
+        "state": "COMMENTED",
+        "submittedAt": "2026-10-09T13:35:44Z"
+      }
+    ],
+    "state": "OPEN",
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-09T13:24:07Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37936446381/job/113839581381",
+        "name": "targeted",
+        "startedAt": "2026-10-09T13:23:07Z",
+        "status": "COMPLETED",
+        "workflowName": "Conformance"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-09T13:24:09Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37936439323/job/113839557813",
+        "name": "targeted",
+        "startedAt": "2026-10-09T13:23:03Z",
+        "status": "COMPLETED",
+        "workflowName": "Conformance"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-09T13:24:27Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37936446355/job/113839581783",
+        "name": "build-and-test",
+        "startedAt": "2026-10-09T13:23:07Z",
+        "status": "COMPLETED",
+        "workflowName": "Documentation"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-09T13:23:05Z",
+        "conclusion": "SKIPPED",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37936446381/job/113839582956",
+        "name": "acceptance",
+        "startedAt": "2026-10-09T13:23:05Z",
+        "status": "COMPLETED",
+        "workflowName": "Conformance"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-09T13:25:29Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37936439323/job/113839557464",
+        "name": "acceptance",
+        "startedAt": "2026-10-09T13:23:03Z",
+        "status": "COMPLETED",
+        "workflowName": "Conformance"
+      }
+    ],
+    "title": "fix: report actual bias and prepare adapted toy studies",
+    "url": "https://github.com/alohays/allagma/pull/10"
+  },
+  "11": {
+    "baseRefName": "main",
+    "headRefOid": "726bb4e0dae0c919f38085b07bbb0c3c3e459352",
+    "isDraft": false,
+    "mergeCommit": null,
+    "mergeStateStatus": "CLEAN",
+    "mergeable": "MERGEABLE",
+    "mergedAt": null,
+    "number": 11,
+    "reviews": [
+      {
+        "author": {
+          "login": "alohays"
+        },
+        "authorAssociation": "OWNER",
+        "body": "Initial review of all five changed files at `9027823d81e45ca71c025d1b49596a0bbfc86b16`: one blocking diagnostic robustness issue, reproduced and annotated inline. The report must survive malformed local prerequisite files, not just missing files or digest mismatches.\n\nArchitecture: a small read-only diagnostics module, called explicitly from the CLI, is the right boundary. Reusing the source catalog and existing lock/ownership verifiers avoids competing definitions of freshness. Native inspection is opt-in, checks only local executable/platform prerequisites, and correctly does not invoke a host, inspect credentials/model settings or claim qualification. The independent check IDs, remedies and versioned JSON are useful for automation. The existing no-subprocess and byte/mtime-preservation assertions are appropriate.\n\nThe present tests omit valid JSON with wrong structural types. Add regressions that prove such input yields exit 1 plus JSON and preserves both later checks and study contents. Keep normal invocation errors at exit 2. Revalidate on current main and inspect the generated command reference before marking ready.\n\nAgent-assisted maintainer review. Since this account is also the PR author, this is a submitted COMMENT review with a blocking finding, not a GitHub self-approval.",
+        "commit": {
+          "oid": "9027823d81e45ca71c025d1b49596a0bbfc86b16"
+        },
+        "id": "PRR_kwDOU9o7Fc8AAAABRhLt9A",
+        "includesCreatedEdit": false,
+        "reactionGroups": [],
+        "state": "COMMENTED",
+        "submittedAt": "2026-10-09T13:23:02Z"
+      },
+      {
+        "author": {
+          "login": "alohays"
+        },
+        "authorAssociation": "OWNER",
+        "body": "",
+        "commit": {
+          "oid": "726bb4e0dae0c919f38085b07bbb0c3c3e459352"
+        },
+        "id": "PRR_kwDOU9o7Fc8AAAABRhPYMA",
+        "includesCreatedEdit": false,
+        "reactionGroups": [],
+        "state": "COMMENTED",
+        "submittedAt": "2026-10-09T13:27:24Z"
+      },
+      {
+        "author": {
+          "login": "alohays"
+        },
+        "authorAssociation": "OWNER",
+        "body": "Final review of `726bb4e0dae0c919f38085b07bbb0c3c3e459352`: no remaining blocking findings. Ready for the owner's merge decision; now a regular, open PR.\n\nThe malformed-document crash is fixed and its inline thread resolved. I rechecked CLI routing/exit semantics, diagnostic isolation, the existing catalog/lock/ownership call paths, all eight focused tests and both documentation changes. Malformed shapes and excessive nesting now fail individual prerequisites while preserving subsequent checks; no mutation or host execution is added. Keeping native inspection opt-in and reusing existing integrity rules is an appropriate architecture. A prerequisite pass remains explicitly narrower than host qualification.\n\nValidation on the pushed head: all 121 conformance tests, actual-CLI malformed-data regression, content/mtime preservation, no-host-execution tests, catalog and link checks; [Documentation including 18 browser tests](https://github.com/alohays/allagma/actions/runs/37936671940); [Conformance and full acceptance](https://github.com/alohays/allagma/actions/runs/37936662020). All pass.\n\nThe combined feature tree additionally passes 134 tests, I1\u2013I5 acceptance, the production docs/browser checks and a real adapted-study workflow using both inspectors. No dependency on the other feature PRs, schema migration, project model pin or additional native session is required.\n\nAgent-assisted maintainer assessment, submitted as COMMENT because this account is the author. Feature merge/release remains the owner's decision.",
+        "commit": {
+          "oid": "726bb4e0dae0c919f38085b07bbb0c3c3e459352"
+        },
+        "id": "PRR_kwDOU9o7Fc8AAAABRhWI0w",
+        "includesCreatedEdit": false,
+        "reactionGroups": [],
+        "state": "COMMENTED",
+        "submittedAt": "2026-10-09T13:35:45Z"
+      }
+    ],
+    "state": "OPEN",
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-09T13:25:48Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37936671961/job/113840338321",
+        "name": "targeted",
+        "startedAt": "2026-10-09T13:25:01Z",
+        "status": "COMPLETED",
+        "workflowName": "Conformance"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-09T13:25:52Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37936662020/job/113840305158",
+        "name": "targeted",
+        "startedAt": "2026-10-09T13:24:56Z",
+        "status": "COMPLETED",
+        "workflowName": "Conformance"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-09T13:26:16Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37936671940/job/113840337078",
+        "name": "build-and-test",
+        "startedAt": "2026-10-09T13:25:01Z",
+        "status": "COMPLETED",
+        "workflowName": "Documentation"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-09T13:24:59Z",
+        "conclusion": "SKIPPED",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37936671961/job/113840338856",
+        "name": "acceptance",
+        "startedAt": "2026-10-09T13:24:59Z",
+        "status": "COMPLETED",
+        "workflowName": "Conformance"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-09T13:27:28Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37936662020/job/113840305430",
+        "name": "acceptance",
+        "startedAt": "2026-10-09T13:24:56Z",
+        "status": "COMPLETED",
+        "workflowName": "Conformance"
+      }
+    ],
+    "title": "feat: inspect offline and native prerequisites without execution",
+    "url": "https://github.com/alohays/allagma/pull/11"
+  },
+  "12": {
+    "baseRefName": "main",
+    "headRefOid": "2ea69f1753d4ecb945d2ab880f11639574110e6f",
+    "isDraft": false,
+    "mergeCommit": null,
+    "mergeStateStatus": "CLEAN",
+    "mergeable": "MERGEABLE",
+    "mergedAt": null,
+    "number": 12,
+    "reviews": [
+      {
+        "author": {
+          "login": "alohays"
+        },
+        "authorAssociation": "OWNER",
+        "body": "Initial review of all six changed files at `ab3b724d42e6b0daa34e67517caa0110c68ab624`: the integrity checks fail closed, but the nonempty entry-list preflight drops independent diagnostic coverage when one member is malformed. The reproduced case and requested fix are inline; I will address it before marking ready.\n\nArchitecture: the command is correctly separate from campaign audit and pinned-helper execution. It reads data, validates current supported record contracts, confines paths, rejects symlinks/special files, hashes bounded reads and traverses explicitly declared JSON references. Strict duplicate-key/non-finite decoding is shared rather than forked. Reference deduplication, independent digest failures, explicit positive file/byte ceilings and exit 1 on limit exhaustion are appropriate. The documentation accurately limits a pass: it is neither an authenticated root nor package completeness, scientific correctness, recomputation or host qualification.\n\nI inspected the CLI routing, decoder extraction, contract/reference schemas, full-toy coverage and mutation/no-execution tests. The missing test is mixed malformed/valid members in the entry list; a report should preserve errors and coverage from valid siblings. I will also verify compatibility with the diagnostics command and adapted-study workflow, including command-help generation, without executing received study code.\n\nAgent-assisted maintainer review. This submitted COMMENT review records a blocking diagnostic finding; GitHub does not permit this account to request changes on its own PR.",
+        "commit": {
+          "oid": "ab3b724d42e6b0daa34e67517caa0110c68ab624"
+        },
+        "id": "PRR_kwDOU9o7Fc8AAAABRhNGmA",
+        "includesCreatedEdit": false,
+        "reactionGroups": [],
+        "state": "COMMENTED",
+        "submittedAt": "2026-10-09T13:24:40Z"
+      },
+      {
+        "author": {
+          "login": "alohays"
+        },
+        "authorAssociation": "OWNER",
+        "body": "",
+        "commit": {
+          "oid": "2ea69f1753d4ecb945d2ab880f11639574110e6f"
+        },
+        "id": "PRR_kwDOU9o7Fc8AAAABRhQ5Vg",
+        "includesCreatedEdit": false,
+        "reactionGroups": [],
+        "state": "COMMENTED",
+        "submittedAt": "2026-10-09T13:29:17Z"
+      },
+      {
+        "author": {
+          "login": "alohays"
+        },
+        "authorAssociation": "OWNER",
+        "body": "Final review of `2ea69f1753d4ecb945d2ab880f11639574110e6f`: no remaining blocking findings. Ready for the owner's merge decision; now a regular, open PR.\n\nThe mixed-entry diagnostic finding is fixed and its inline thread resolved. I rechecked all six changed files, current record/reference schemas and CLI execution boundaries. Valid siblings now retain contract/reference coverage when another member is malformed. Path confinement, strict JSON decoding, regular-file checks, explicit read ceilings and shared-reference deduplication remain intact. The decoder extraction preserves existing readers' strictness. Keeping this inspector separate from mutating/recomputing campaign audit is appropriate.\n\nValidation on the pushed head: 121 conformance tests, including the full immutable 521-reference toy graph and actual-CLI mixed-entry regression; a separate adapted-study inspection passes 504 references/505 reads; catalog and docs links pass. [Documentation including 18 browser tests](https://github.com/alohays/allagma/actions/runs/37936973182) and [Conformance/full acceptance](https://github.com/alohays/allagma/actions/runs/37936965571) pass. The combined feature tree passes 134-test/I1\u2013I5 acceptance and the full preparation/diagnosis/execution/audit/inspection workflow without inspection writes.\n\nLimits are documented rather than overstated: computed entry identity is not authentication; undeclared files, completeness, scientific truth and lock freshness are not covered; use a quiescent copy. No received code is executed, and no independent host qualification is claimed.\n\nAgent-assisted maintainer assessment, submitted as COMMENT because GitHub prohibits author self-approval. Feature merge/release remains the owner's decision.",
+        "commit": {
+          "oid": "2ea69f1753d4ecb945d2ab880f11639574110e6f"
+        },
+        "id": "PRR_kwDOU9o7Fc8AAAABRhWJ9Q",
+        "includesCreatedEdit": false,
+        "reactionGroups": [],
+        "state": "COMMENTED",
+        "submittedAt": "2026-10-09T13:35:46Z"
+      }
+    ],
+    "state": "OPEN",
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-09T13:28:36Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37936973330/job/113841357524",
+        "name": "targeted",
+        "startedAt": "2026-10-09T13:27:33Z",
+        "status": "COMPLETED",
+        "workflowName": "Conformance"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-09T13:28:21Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37936965571/job/113841333317",
+        "name": "targeted",
+        "startedAt": "2026-10-09T13:27:28Z",
+        "status": "COMPLETED",
+        "workflowName": "Conformance"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-09T13:28:48Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37936973182/job/113841368751",
+        "name": "build-and-test",
+        "startedAt": "2026-10-09T13:27:34Z",
+        "status": "COMPLETED",
+        "workflowName": "Documentation"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-09T13:27:30Z",
+        "conclusion": "SKIPPED",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37936973330/job/113841359659",
+        "name": "acceptance",
+        "startedAt": "2026-10-09T13:27:31Z",
+        "status": "COMPLETED",
+        "workflowName": "Conformance"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-09T13:29:44Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37936965571/job/113841333581",
+        "name": "acceptance",
+        "startedAt": "2026-10-09T13:27:28Z",
+        "status": "COMPLETED",
+        "workflowName": "Conformance"
+      }
+    ],
+    "title": "feat: verify declared evidence without running study code",
+    "url": "https://github.com/alohays/allagma/pull/12"
+  }
+}

@@ -1,0 +1,13 @@
+test_cli_failure_is_json_and_does_not_create_a_missing_study (conformance.test_evidence_verification.EvidenceVerification.test_cli_failure_is_json_and_does_not_create_a_missing_study) ... ok
+test_complete_toy_references_are_checked_without_writes_or_execution (conformance.test_evidence_verification.EvidenceVerification.test_complete_toy_references_are_checked_without_writes_or_execution) ... ok
+test_explicit_limits_fail_without_reading_past_the_ceiling (conformance.test_evidence_verification.EvidenceVerification.test_explicit_limits_fail_without_reading_past_the_ceiling) ... ok
+test_invalid_entry_members_do_not_hide_valid_sibling_failures (conformance.test_evidence_verification.EvidenceVerification.test_invalid_entry_members_do_not_hide_valid_sibling_failures) ... ok
+test_invalid_json_records_and_empty_roots_fail_closed (conformance.test_evidence_verification.EvidenceVerification.test_invalid_json_records_and_empty_roots_fail_closed) ... ok
+test_missing_changed_traversal_and_symlink_failures_are_collected (conformance.test_evidence_verification.EvidenceVerification.test_missing_changed_traversal_and_symlink_failures_are_collected) ... ok
+test_nested_reference_lists_and_shared_references (conformance.test_evidence_verification.EvidenceVerification.test_nested_reference_lists_and_shared_references) ... ok
+test_untyped_transport_metadata_is_not_a_declared_reference (conformance.test_evidence_verification.EvidenceVerification.test_untyped_transport_metadata_is_not_a_declared_reference) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 6.045s
+
+OK

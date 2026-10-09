@@ -138,7 +138,8 @@ and [acceptance evidence](docs/acceptance.md) for engineering details.
 For a contribution, start with the [pinned overview](https://github.com/alohays/allagma/issues/9),
 [available tasks](docs/contributing/starter-tasks.md) or
 [welcome Discussion](https://github.com/alohays/allagma/discussions/13).
-The three contributor feature PRs remain drafts; their commands and adaptation
+The three contributor feature PRs are reviewed and ready for a merge decision;
+their commands and adaptation
 helper are not yet available on main. [Contributing](CONTRIBUTING.md),
 [roadmap](ROADMAP.md), [support](SUPPORT.md) and
 [private security reporting](https://github.com/alohays/allagma/security/advisories/new)

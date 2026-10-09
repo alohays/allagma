@@ -2,7 +2,7 @@
 
 The [pinned contributor overview](https://github.com/alohays/allagma/issues/9) is the entry point for the
 [first contributor milestone](https://github.com/alohays/allagma/milestone/1). It links the actual issues and
-draft PRs, shows what is available, and gives the review order. These are
+PRs, shows what is available, and gives the review order. These are
 maintainer-proposed tasks; agent-assisted implementations are identified in their
 PRs. They are not evidence of external adoption or independent endorsement.
 
@@ -32,7 +32,7 @@ milestone are the work queue; no separate project board or bot is required.
 | `status: available` | Scope is bounded and unclaimed. Read prerequisites, then propose a claim. |
 | `status: in progress` | A confirmed assignee is implementing or gathering evidence; link the branch/draft PR when available. |
 | `status: blocked` | Name the concrete missing prerequisite or owner decision in the issue. Keep the issue open and link what will unblock it. |
-| `status: owner review` | A draft PR or qualification receipt is ready for owner review; tests do not imply merge approval. |
+| `status: owner review` | A PR or qualification receipt awaits owner review or a merge decision; tests do not imply merge approval. |
 
 Use `bug` for a reproduced defect, `enhancement` for a proposed behavior or
 usability improvement, and `qualification` for a claim that needs new evidence.
@@ -75,6 +75,10 @@ change when assignments, dependencies or status change.
 
 Draft PRs stay draft until the owner chooses to proceed. The owner authorized this public contributor setup and documentation deployment.
 Merge, default-selection changes and new release publication still require owner decisions.
+On 9 October 2026 the owner requested a full PR review, authorized merging #1
+if ready, and authorized making the three feature PRs regular after fixes.
+That [review and validation](pr-review.md) is complete: #1 is merged;
+#10, #11 and #12 are ready, open and unmerged.
 After an owner-approved merge, close the linked task, remove stale status labels,
 and update the overview. If the implementation is declined, record the reason
 without deleting its tests or discussion. Dependency PRs, including
@@ -94,6 +98,6 @@ The [historical-audio blocker](https://github.com/alohays/allagma/issues/8) rema
 full history and documenting personal metadata did not clear the older audio.
 The owner separately authorized the public Pages site and
 [pinned welcome](https://github.com/alohays/allagma/discussions/13) on 9 October
-2026. New releases, PR merges, external outreach, history changes and additional
-native-onboarding model usage remain outside this work. Use the repository
+2026. New releases, further PR merges, external outreach, history changes and
+additional native-onboarding model usage remain separate owner decisions. Use the repository
 support and code-of-conduct routes.
