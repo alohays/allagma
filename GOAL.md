@@ -360,3 +360,13 @@ Paper attribution is researcher-configurable per study. Never infer paper author
 The owner explicitly chose `allagma` as the demonstration manuscript author. This supersedes the earlier anonymous-draft choice and remains a per-study setting, never a default author for other users.
 
 The optional paper demonstration preserves the fixed manuscript date of 9 October 2026; final implementation verification may occur on 10 October. Do not submit to arXiv. Public documentation deployment waits for the feature PR to be merged.
+
+## PR #14 review follow-up - 10 October 2026
+
+Read the reviews and bring PR #14 to merge-ready quality. Reproduce and repair
+all actionable findings, retain regression evidence and rerun affected checks
+and the complete acceptance workflow. Keep coherent Git increments and push to
+`origin`. Preserve prior scientific records, publication artifacts and the
+configured `allagma` author. Leave the PR unmerged; documentation deployment
+continues to wait for merge. The [repair record](docs/contributing/pr14-revisions.md)
+tracks the four findings and validation.

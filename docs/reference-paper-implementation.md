@@ -31,7 +31,7 @@ arXiv submission, formal release or feature deployment was performed.
 | Immutable scientific inputs | Selective materialization, frozen hashes and [actual broker probe](../studies/ema-schedule/publications/reference-r2/evidence/reference-input-inspection.json): network, input writes and cache reads denied | Pass |
 | Per-study optional paper | `paper.json`, protected author request and configurable named/anonymous attribution; report default starts no compiler | Pass |
 | Complete English manuscript | Seven required sections, references and appendices; generated empirical values/tables, exact figure, scoped claims, negative/inconclusive findings and critical literature context | Pass |
-| Humanizer and scientific review | Separate [revision-bound reviews](../studies/ema-schedule/publications/reference-r2/scientific-review.json), with a stale-review regression; same-assistant scope stated | Pass |
+| Humanizer and scientific review | Separate [revision-bound reviews](../studies/ema-schedule/publications/reference-r2/reviews/pr14-scientific.json), with prose and section-role stale-review regressions; same-assistant scope stated | Pass |
 | Portable sources and template | 42-file archive includes TeX, BibTeX/bbl, exact figure, required custom style, standalone builder, notes and provenance; custom template interface | Pass |
 | Clean compilation | Identical source archive compiled and recompiled after unpacking with network/cache access denied; local TeX Live 2024 and [supported TeX Live 2023 CI](https://github.com/alohays/allagma/actions/runs/37950653898) | Pass |
 | PDF inspection | Eight pages inspected; table widths, pagination and metadata repaired; [digest-bound visual record](../studies/ema-schedule/publications/reference-r2/evidence/pdf-review.json), text/metadata/log checks | Pass |
@@ -97,3 +97,14 @@ existing frozen qualification and model-usage limits remain unchanged.
 The final boundary audit also verifies a complete provided-only paper with no external citations and an explicit References section. [Cache metadata evidence](../studies/ema-schedule/publications/reference-r2/evidence/cache-metadata-budget.json) reproduces and corrects an overrun caused by extraction manifests and indexes. Atomic metadata writes now obey cache/free-space admission. The final complete acceptance receipt is [retained separately](../studies/ema-schedule/publications/reference-r2/evidence/acceptance-complete.json); earlier checkpoints remain intact.
 
 The owner subsequently merged contributor PRs #10, #11 and #12 on main. Their changes are integrated through `5f519e6`, including both new diagnostic/evidence commands and the study-adaptation helper. Combined validation passes 172 tests, I1-I5 and 18 browser checks. [The combined acceptance](../studies/ema-schedule/publications/reference-r2/evidence/acceptance-integrated.json) and [preservation record](../studies/ema-schedule/publications/reference-r2/evidence/preservation-integrated.json) bind this integration. No contributor branch was edited and PR #14 is still unmerged.
+
+## Review repairs - 10 October 2026
+
+The [PR review repair record](contributing/pr14-revisions.md) addresses all four
+findings on `72e88c3`: ancillary-file collisions, missing dossier-copy storage,
+policy-transaction metadata accounting and missing section-role review identity.
+The new full acceptance run passes 184 tests and I1-I5. The portable builder is
+now exercised through the actual unpacked archive, including a real TeX collision
+regression in CI. Renewed demo reviews and a new source archive are retained
+alongside the original evidence; manuscript, scientific inputs and PDF bytes are
+unchanged. Latest-head hosted checks remain authoritative for merge readiness.

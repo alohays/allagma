@@ -1,0 +1,38 @@
+test_admission_counts_working_dossier_only_when_workflow_is_installed (conformance.test_research_prepare.ResearchPreparationTests.test_admission_counts_working_dossier_only_when_workflow_is_installed) ... FAIL
+test_baseline_has_identical_materials_but_no_methods (conformance.test_research_prepare.ResearchPreparationTests.test_baseline_has_identical_materials_but_no_methods) ... ok
+test_both_admitted_dossier_copies_match_within_the_ceiling (conformance.test_research_prepare.ResearchPreparationTests.test_both_admitted_dossier_copies_match_within_the_ceiling) ... ok
+test_brief_materials_limits_and_portable_lock_are_retained (conformance.test_research_prepare.ResearchPreparationTests.test_brief_materials_limits_and_portable_lock_are_retained) ... ok
+test_dossier_growth_after_admission_cannot_exceed_the_copy_plan (conformance.test_research_prepare.ResearchPreparationTests.test_dossier_growth_after_admission_cannot_exceed_the_copy_plan) ... FAIL
+test_material_links_and_nested_output_are_rejected_before_mutation (conformance.test_research_prepare.ResearchPreparationTests.test_material_links_and_nested_output_are_rejected_before_mutation) ... ok
+test_oversized_reference_dossier_is_refused_before_workspace_creation (conformance.test_research_prepare.ResearchPreparationTests.test_oversized_reference_dossier_is_refused_before_workspace_creation) ... FAIL
+test_reprepare_preserves_existing_workspace (conformance.test_research_prepare.ResearchPreparationTests.test_reprepare_preserves_existing_workspace) ... ok
+test_unbounded_or_insufficient_resource_policy_is_rejected (conformance.test_research_prepare.ResearchPreparationTests.test_unbounded_or_insufficient_resource_policy_is_rejected) ... ok
+
+======================================================================
+FAIL: test_admission_counts_working_dossier_only_when_workflow_is_installed (conformance.test_research_prepare.ResearchPreparationTests.test_admission_counts_working_dossier_only_when_workflow_is_installed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repository>/conformance/test_research_prepare.py", line 92, in test_admission_counts_working_dossier_only_when_workflow_is_installed
+    with self.assertRaisesRegex(AllagmaError, "storage ceiling"):
+AssertionError: AllagmaError not raised
+
+======================================================================
+FAIL: test_dossier_growth_after_admission_cannot_exceed_the_copy_plan (conformance.test_research_prepare.ResearchPreparationTests.test_dossier_growth_after_admission_cannot_exceed_the_copy_plan)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repository>/conformance/test_research_prepare.py", line 119, in test_dossier_growth_after_admission_cannot_exceed_the_copy_plan
+    with self.assertRaisesRegex(AllagmaError, "changed|storage ceiling"):
+AssertionError: AllagmaError not raised
+
+======================================================================
+FAIL: test_oversized_reference_dossier_is_refused_before_workspace_creation (conformance.test_research_prepare.ResearchPreparationTests.test_oversized_reference_dossier_is_refused_before_workspace_creation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repository>/conformance/test_research_prepare.py", line 84, in test_oversized_reference_dossier_is_refused_before_workspace_creation
+    with self.assertRaisesRegex(AllagmaError, "storage ceiling"):
+AssertionError: AllagmaError not raised
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.650s
+
+FAILED (failures=3)

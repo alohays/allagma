@@ -1,0 +1,16 @@
+test_corrupt_evidence_missing_citations_and_unlocated_claims_fail (conformance.test_papers.PaperTests.test_corrupt_evidence_missing_citations_and_unlocated_claims_fail) ... ok
+test_missing_sections_review_and_external_input_fail (conformance.test_papers.PaperTests.test_missing_sections_review_and_external_input_fail) ... ok
+test_numeric_formatting_cannot_silently_truncate_or_use_missing_values (conformance.test_papers.PaperTests.test_numeric_formatting_cannot_silently_truncate_or_use_missing_values) ... ok
+test_prose_changes_invalidate_both_retained_reviews (conformance.test_papers.PaperTests.test_prose_changes_invalidate_both_retained_reviews) ... ok
+test_provided_only_paper_without_external_citations_retains_an_honest_reference_section (conformance.test_papers.PaperTests.test_provided_only_paper_without_external_citations_retains_an_honest_reference_section) ... ok
+test_report_default_never_requires_authors_references_or_tex (conformance.test_papers.PaperTests.test_report_default_never_requires_authors_references_or_tex) ... ok
+test_researcher_configures_authors_without_repository_identity_fallback (conformance.test_papers.PaperTests.test_researcher_configures_authors_without_repository_identity_fallback) ... ok
+test_section_roles_are_bound_to_both_reviews (conformance.test_papers.PaperTests.test_section_roles_are_bound_to_both_reviews) ... ok
+test_short_tables_stay_together_and_pdf_attribution_is_configured (conformance.test_papers.PaperTests.test_short_tables_stay_together_and_pdf_attribution_is_configured) ... ok
+test_source_archive_contains_declared_sources_and_no_cache_or_build_outputs (conformance.test_papers.PaperTests.test_source_archive_contains_declared_sources_and_no_cache_or_build_outputs) ... ok
+test_values_tables_claims_and_citations_resolve_to_retained_evidence (conformance.test_papers.PaperTests.test_values_tables_claims_and_citations_resolve_to_retained_evidence) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.101s
+
+OK

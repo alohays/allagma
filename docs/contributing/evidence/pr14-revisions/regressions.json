@@ -1,0 +1,53 @@
+{
+  "findings": [
+    {
+      "after": "ancillary-after.log",
+      "before": "ancillary-before.log",
+      "ci_regression": "packaged-entrypoint-test.log",
+      "fix_commit": "004d2cb",
+      "priority": "P1",
+      "real_tex": "collision-delivery.json",
+      "result": "Notes use a separate namespace; map/index links remap correctly; duplicate targets are refused; actual unpacked builder compiles the collision fixture.",
+      "review_comment": 4232801295
+    },
+    {
+      "after": "preparation-final.log",
+      "before": "preparation-before.log",
+      "fix_commit": "288e3b9",
+      "priority": "P2",
+      "result": "Both dossier copies and receipt are admitted before workspace creation. Fitting copies match hashes; source growth and equal-size content changes fail.",
+      "review_comment": 4232801582
+    },
+    {
+      "after": "policy-after.log",
+      "before": "policy-before.log",
+      "fix_commit": "b16b063",
+      "priority": "P2",
+      "result": "Repeated adoptions stop within capacity. Combined history/replacement and free-space refusals leave all cache bytes unchanged.",
+      "review_comment": 4232801846
+    },
+    {
+      "after": "section-roles-after.log",
+      "before": "section-roles-before.log",
+      "fix_commit": "db1f367",
+      "priority": "P2",
+      "result": "Section swaps invalidate both scientific and humanizer reviews; dictionary ordering alone does not.",
+      "review_comment": 4232802062
+    }
+  ],
+  "format": "allagma-pr-review-regressions-v1",
+  "logs": {
+    "ancillary-after.log": "5590bc1439fc1978434c10583e3f659f739ce9abc63b353112b7a286bb83d67a",
+    "ancillary-before.log": "82bbed362c21bd228cb3fb8270659de1dfa4972fd705b44a9095c1c0a158d612",
+    "packaged-entrypoint-test.log": "3abf26847ee76277fd4a4b81e7b9b99a48c92c63d72f3989866fac71f6ce6766",
+    "policy-after.log": "f4857588c4c2659133205bf43e777db1d0b4daf031dd32630d73627288795712",
+    "policy-before.log": "6e7a88ee4fc3ddd3229923c4226b9fbc5a656c282d6a2c99054e9fb6b4447a70",
+    "preparation-before.log": "64dcb7280d8c9b93c91db157938aab8e244ed5a0d57f6740c24bdf3994e0ad70",
+    "preparation-final.log": "a5bf6606bec59a217d146aa8927fe8a0da925d4498d3404a139c729fe6a3d472",
+    "section-roles-after.log": "ef881e9d9d1ae4f78431cfd7184bc31021a1f87403b0e745156b9ad8a4cac73f",
+    "section-roles-before.log": "fa338909ab44bc444758d3ace8a4a45f3878ad181ddffdad478e623d67189357"
+  },
+  "reviewed_commit": "72e88c39a6631dadb78d8162d8714baf324ab073",
+  "runtime_source_revision": "sha256:bd4aae1be759b3802d7aa075a38839004fd6f8f4bc24c158890da38bc5fbbcd1",
+  "scope": "Synthetic local fixtures and actual TeX compilation; not a new scientific experiment or host/model qualification. Published logs replace the repository path with <repository>; originals remain in work/pr14-revisions."
+}

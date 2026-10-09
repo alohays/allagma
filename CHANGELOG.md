@@ -14,6 +14,10 @@
   No new training, native model session, arXiv submission or release is made.
 - Include public documentation and a separate supported-release TeX CI check.
   Publication of these docs waits for this feature branch to be merged.
+- Address PR #14 review findings: isolate packaged notes, invoke the shipped
+  builder during verification, charge both prepared dossiers and complete policy
+  transactions, and bind reviews to manuscript section roles. Preserve previous
+  demo artifacts and retain renewed reviews plus a repaired source archive.
 
 ## Unreleased contributor improvements — 10 October 2026
 
