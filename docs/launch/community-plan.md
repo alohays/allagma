@@ -1,24 +1,47 @@
-# Community setup for launch
+# Community entry points
 
-No community size, adoption, independent endorsement or maintainer response
-guarantee is claimed. Current ownership remains with the initial maintainer.
+The owner authorized public documentation and community activation on 9 October
+2026. The [documentation site](https://alohays.github.io/allagma/) is public, and
+one [maintainer welcome](https://github.com/alohays/allagma/discussions/13) is
+published and pinned. No community size, external adoption, independent
+endorsement or maintainer response guarantee is claimed.
 
-At public launch, enable Discussions with three categories: **Q&A** (answerable
-usage questions), **Show and tell** (study packages with limitations and source
-links), and **Ideas** (bounded workflow proposals). Keep reproducible defects
-and accepted work in issues. Pin a welcome post that links to the first-study
-tutorial, support boundaries and code of conduct.
+## Use the existing GitHub surfaces
 
-Create only the first two or three [starter issues](../contributing/starter-tasks.md)
-that the maintainer is ready to review. Suggested labels are `good first issue`,
-`help wanted`, `documentation`, `bug` and `proposal`. Do not post placeholder
-activity or create issues on behalf of hypothetical users.
+- [Q&A](https://github.com/alohays/allagma/discussions/categories/q-a): answerable usage questions.
+- [Show and tell](https://github.com/alohays/allagma/discussions/categories/show-and-tell): study packages with sources, evidence and limitations.
+- [Ideas](https://github.com/alohays/allagma/discussions/categories/ideas): bounded workflow proposals.
+- [Issues](https://github.com/alohays/allagma/issues): reproduced defects, accepted work and qualification gaps.
+- [Private vulnerability reporting](https://github.com/alohays/allagma/security/advisories/new): sensitive security reports; never post their details in public issues.
 
-The opening welcome draft is: “Welcome to Allagma. Start with the offline study,
-then share what you could or could not reproduce. Include your environment,
-protocol and evidence scope. Negative findings and small documentation fixes
-are useful contributions. Please keep credentials and private study data out
-of public posts.”
+The [pinned contributor overview](https://github.com/alohays/allagma/issues/9)
+and [focused milestone](https://github.com/alohays/allagma/milestone/1) connect
+seven task issues. [#5](https://github.com/alohays/allagma/issues/5),
+[#6](https://github.com/alohays/allagma/issues/6), and
+[#7](https://github.com/alohays/allagma/issues/7) remain available and unassigned.
+Only the two bounded documentation tasks carry `good first issue`; all three
+carry `help wanted` and need no paid model or GPU.
 
-This file is a plan, not a published announcement. Enabling public Discussions
-and posting the welcome belong to the later owner launch.
+Draft PRs [#10](https://github.com/alohays/allagma/pull/10),
+[#11](https://github.com/alohays/allagma/pull/11) and
+[#12](https://github.com/alohays/allagma/pull/12) contain agent-assisted changes
+awaiting owner review. They are proposed capabilities, not main's interface.
+The [Dependabot review](https://github.com/alohays/allagma/pull/1#issuecomment-6065003786)
+is separate. Keep claims and credit accurate; no hypothetical user reports,
+placeholder activity or independent reviewer is invented.
+
+## Maintain the queue
+
+Follow the [claim, triage, evidence, review and credit process](../contributing/workflow.md).
+Use one of the four status labels at a time; the overview defines available,
+in-progress, blocked and owner-review states. Confirm claims before assigning,
+remove newcomer labels while work is claimed, and keep the overview and
+[starter list](../contributing/starter-tasks.md) current. Native GitHub features
+are sufficient; no extra triage service, automation or response deadline is needed.
+
+The [retained historical-audio rights issue](https://github.com/alohays/allagma/issues/8)
+is assigned to the maintainer. Public visibility and this welcome do not clear
+it. Only the current licensed media is served on Pages; Git history and frozen
+evidence remain intact. New releases, merges and external outreach remain
+separate owner decisions. The earlier pre-activation community plan is preserved
+in Git history; this document records the actual active surfaces.

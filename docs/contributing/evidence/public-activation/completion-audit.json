@@ -1,0 +1,668 @@
+{
+  "status": "pass",
+  "source_commit": "a57ba0a2889cc6516be6685a2153e64541e5abf8",
+  "repository": {
+    "private": false,
+    "homepage": "https://alohays.github.io/allagma/",
+    "discussions_enabled": true,
+    "private_vulnerability_reporting": true,
+    "custom_social_preview": true,
+    "pages_build_type": "workflow",
+    "pages_gate": "true"
+  },
+  "issues": [
+    {
+      "assignees": [],
+      "labels": [
+        {
+          "id": "LA_kwDOU9o7Fc8AAAAC7MDgMw",
+          "name": "documentation",
+          "description": "Improvements or additions to documentation",
+          "color": "0075ca"
+        }
+      ],
+      "milestone": null,
+      "number": 9,
+      "state": "OPEN",
+      "title": "Start here: contributor tasks, draft reviews and maintainer decisions",
+      "url": "https://github.com/alohays/allagma/issues/9"
+    },
+    {
+      "assignees": [
+        {
+          "id": "MDQ6VXNlcjE2MzY3MDU2",
+          "login": "alohays",
+          "name": "Yunsung Lee",
+          "databaseId": 16367056
+        }
+      ],
+      "labels": [
+        {
+          "id": "LA_kwDOU9o7Fc8AAAAC7xWuQg",
+          "name": "status: blocked",
+          "description": "A stated prerequisite or owner decision prevents progress.",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDOU9o7Fc8AAAAC7xWvsA",
+          "name": "maintainer-owned",
+          "description": "Owner decision; contributors cannot resolve it with code or passing tests.",
+          "color": "7057ff"
+        }
+      ],
+      "milestone": null,
+      "number": 8,
+      "state": "OPEN",
+      "title": "Maintainer decision: resolve retained historical-audio rights",
+      "url": "https://github.com/alohays/allagma/issues/8"
+    },
+    {
+      "assignees": [],
+      "labels": [
+        {
+          "id": "LA_kwDOU9o7Fc8AAAAC7MDgcQ",
+          "name": "help wanted",
+          "description": "Extra attention is needed",
+          "color": "008672"
+        },
+        {
+          "id": "LA_kwDOU9o7Fc8AAAAC7xWteg",
+          "name": "status: available",
+          "description": "Bounded and unclaimed; read prerequisites and propose a claim.",
+          "color": "0e8a16"
+        },
+        {
+          "id": "LA_kwDOU9o7Fc8AAAAC7xWu9A",
+          "name": "qualification",
+          "description": "New evidence is needed before extending a support or reproducibility claim.",
+          "color": "1d76db"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "First contributor workflow",
+        "description": "A first review cycle for local study creation, reproducibility and usability: three validated draft improvements and three available contributor tasks. No response-time, release-date or public-launch commitment. Historical-audio clearance remains a separate maintainer decision.",
+        "dueOn": null
+      },
+      "number": 7,
+      "state": "OPEN",
+      "title": "Qualify the offline first-study tutorial on Linux with Python 3.13",
+      "url": "https://github.com/alohays/allagma/issues/7"
+    },
+    {
+      "assignees": [],
+      "labels": [
+        {
+          "id": "LA_kwDOU9o7Fc8AAAAC7MDgMw",
+          "name": "documentation",
+          "description": "Improvements or additions to documentation",
+          "color": "0075ca"
+        },
+        {
+          "id": "LA_kwDOU9o7Fc8AAAAC7MDgXw",
+          "name": "enhancement",
+          "description": "New feature or request",
+          "color": "a2eeef"
+        },
+        {
+          "id": "LA_kwDOU9o7Fc8AAAAC7MDgcQ",
+          "name": "help wanted",
+          "description": "Extra attention is needed",
+          "color": "008672"
+        },
+        {
+          "id": "LA_kwDOU9o7Fc8AAAAC7MDggg",
+          "name": "good first issue",
+          "description": "Good for newcomers",
+          "color": "7057ff"
+        },
+        {
+          "id": "LA_kwDOU9o7Fc8AAAAC7xWteg",
+          "name": "status: available",
+          "description": "Bounded and unclaimed; read prerequisites and propose a claim.",
+          "color": "0e8a16"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "First contributor workflow",
+        "description": "A first review cycle for local study creation, reproducibility and usability: three validated draft improvements and three available contributor tasks. No response-time, release-date or public-launch commitment. Historical-audio clearance remains a separate maintainer decision.",
+        "dueOn": null
+      },
+      "number": 6,
+      "state": "OPEN",
+      "title": "Add a complete accessible reading of the EMA result figure",
+      "url": "https://github.com/alohays/allagma/issues/6"
+    },
+    {
+      "assignees": [],
+      "labels": [
+        {
+          "id": "LA_kwDOU9o7Fc8AAAAC7MDgMw",
+          "name": "documentation",
+          "description": "Improvements or additions to documentation",
+          "color": "0075ca"
+        },
+        {
+          "id": "LA_kwDOU9o7Fc8AAAAC7MDgXw",
+          "name": "enhancement",
+          "description": "New feature or request",
+          "color": "a2eeef"
+        },
+        {
+          "id": "LA_kwDOU9o7Fc8AAAAC7MDgcQ",
+          "name": "help wanted",
+          "description": "Extra attention is needed",
+          "color": "008672"
+        },
+        {
+          "id": "LA_kwDOU9o7Fc8AAAAC7MDggg",
+          "name": "good first issue",
+          "description": "Good for newcomers",
+          "color": "7057ff"
+        },
+        {
+          "id": "LA_kwDOU9o7Fc8AAAAC7xWteg",
+          "name": "status: available",
+          "description": "Bounded and unclaimed; read prerequisites and propose a claim.",
+          "color": "0e8a16"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "First contributor workflow",
+        "description": "A first review cycle for local study creation, reproducibility and usability: three validated draft improvements and three available contributor tasks. No response-time, release-date or public-launch commitment. Historical-audio clearance remains a separate maintainer decision.",
+        "dueOn": null
+      },
+      "number": 5,
+      "state": "OPEN",
+      "title": "Document recovery from a duplicate-key JSON validation error",
+      "url": "https://github.com/alohays/allagma/issues/5"
+    },
+    {
+      "assignees": [
+        {
+          "id": "MDQ6VXNlcjE2MzY3MDU2",
+          "login": "alohays",
+          "name": "Yunsung Lee",
+          "databaseId": 16367056
+        }
+      ],
+      "labels": [
+        {
+          "id": "LA_kwDOU9o7Fc8AAAAC7MDgXw",
+          "name": "enhancement",
+          "description": "New feature or request",
+          "color": "a2eeef"
+        },
+        {
+          "id": "LA_kwDOU9o7Fc8AAAAC7xWuiA",
+          "name": "status: owner review",
+          "description": "Draft change or qualification evidence awaits owner review.",
+          "color": "5319e7"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "First contributor workflow",
+        "description": "A first review cycle for local study creation, reproducibility and usability: three validated draft improvements and three available contributor tasks. No response-time, release-date or public-launch commitment. Historical-audio clearance remains a separate maintainer decision.",
+        "dueOn": null
+      },
+      "number": 4,
+      "state": "OPEN",
+      "title": "Inspect transitive evidence references without executing or modifying a study",
+      "url": "https://github.com/alohays/allagma/issues/4"
+    },
+    {
+      "assignees": [
+        {
+          "id": "MDQ6VXNlcjE2MzY3MDU2",
+          "login": "alohays",
+          "name": "Yunsung Lee",
+          "databaseId": 16367056
+        }
+      ],
+      "labels": [
+        {
+          "id": "LA_kwDOU9o7Fc8AAAAC7MDgBw",
+          "name": "bug",
+          "description": "Something isn't working",
+          "color": "d73a4a"
+        },
+        {
+          "id": "LA_kwDOU9o7Fc8AAAAC7xWuiA",
+          "name": "status: owner review",
+          "description": "Draft change or qualification evidence awaits owner review.",
+          "color": "5319e7"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "First contributor workflow",
+        "description": "A first review cycle for local study creation, reproducibility and usability: three validated draft improvements and three available contributor tasks. No response-time, release-date or public-launch commitment. Historical-audio clearance remains a separate maintainer decision.",
+        "dueOn": null
+      },
+      "number": 3,
+      "state": "OPEN",
+      "title": "Fix stale bias claims when adapting the toy and add a preparation workflow",
+      "url": "https://github.com/alohays/allagma/issues/3"
+    },
+    {
+      "assignees": [
+        {
+          "id": "MDQ6VXNlcjE2MzY3MDU2",
+          "login": "alohays",
+          "name": "Yunsung Lee",
+          "databaseId": 16367056
+        }
+      ],
+      "labels": [
+        {
+          "id": "LA_kwDOU9o7Fc8AAAAC7MDgXw",
+          "name": "enhancement",
+          "description": "New feature or request",
+          "color": "a2eeef"
+        },
+        {
+          "id": "LA_kwDOU9o7Fc8AAAAC7xWuiA",
+          "name": "status: owner review",
+          "description": "Draft change or qualification evidence awaits owner review.",
+          "color": "5319e7"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "First contributor workflow",
+        "description": "A first review cycle for local study creation, reproducibility and usability: three validated draft improvements and three available contributor tasks. No response-time, release-date or public-launch commitment. Historical-audio clearance remains a separate maintainer decision.",
+        "dueOn": null
+      },
+      "number": 2,
+      "state": "OPEN",
+      "title": "Add read-only prerequisite diagnostics for offline and native workflows",
+      "url": "https://github.com/alohays/allagma/issues/2"
+    }
+  ],
+  "prs": [
+    {
+      "baseRefName": "main",
+      "closingIssuesReferences": [
+        {
+          "id": "I_kwDOU9o7Fc8AAAABV6sD6Q",
+          "number": 3,
+          "repository": {
+            "id": "R_kgDOU9o7FQ",
+            "name": "allagma",
+            "owner": {
+              "id": "MDQ6VXNlcjE2MzY3MDU2",
+              "login": "alohays"
+            }
+          },
+          "url": "https://github.com/alohays/allagma/issues/3"
+        }
+      ],
+      "headRefName": "codex/contributor-study-adaptation",
+      "headRefOid": "16926525de488a8979a98f0ebf312d80847b43f6",
+      "isDraft": true,
+      "labels": [
+        {
+          "id": "LA_kwDOU9o7Fc8AAAAC7MDgBw",
+          "name": "bug",
+          "description": "Something isn't working",
+          "color": "d73a4a"
+        },
+        {
+          "id": "LA_kwDOU9o7Fc8AAAAC7xWuiA",
+          "name": "status: owner review",
+          "description": "Draft change or qualification evidence awaits owner review.",
+          "color": "5319e7"
+        }
+      ],
+      "mergeable": "UNKNOWN",
+      "milestone": {
+        "number": 1,
+        "title": "First contributor workflow",
+        "description": "A first review cycle for local study creation, reproducibility and usability: three validated draft improvements and three available contributor tasks. No response-time, release-date or public-launch commitment. Historical-audio clearance remains a separate maintainer decision.",
+        "dueOn": null
+      },
+      "number": 10,
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-08T17:04:26Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37813514859/job/113436131639",
+          "name": "targeted",
+          "startedAt": "2026-10-08T17:02:50Z",
+          "status": "COMPLETED",
+          "workflowName": "Conformance"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-08T17:03:12Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37813420358/job/113435805961",
+          "name": "targeted",
+          "startedAt": "2026-10-08T17:02:08Z",
+          "status": "COMPLETED",
+          "workflowName": "Conformance"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-08T17:04:08Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37813514717/job/113436131704",
+          "name": "build-and-test",
+          "startedAt": "2026-10-08T17:02:51Z",
+          "status": "COMPLETED",
+          "workflowName": "Documentation"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-08T17:02:49Z",
+          "conclusion": "SKIPPED",
+          "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37813514859/job/113436133013",
+          "name": "acceptance",
+          "startedAt": "2026-10-08T17:02:49Z",
+          "status": "COMPLETED",
+          "workflowName": "Conformance"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-08T17:04:46Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37813420358/job/113435805528",
+          "name": "acceptance",
+          "startedAt": "2026-10-08T17:02:07Z",
+          "status": "COMPLETED",
+          "workflowName": "Conformance"
+        }
+      ],
+      "url": "https://github.com/alohays/allagma/pull/10"
+    },
+    {
+      "baseRefName": "main",
+      "closingIssuesReferences": [
+        {
+          "id": "I_kwDOU9o7Fc8AAAABV6sCZw",
+          "number": 2,
+          "repository": {
+            "id": "R_kgDOU9o7FQ",
+            "name": "allagma",
+            "owner": {
+              "id": "MDQ6VXNlcjE2MzY3MDU2",
+              "login": "alohays"
+            }
+          },
+          "url": "https://github.com/alohays/allagma/issues/2"
+        }
+      ],
+      "headRefName": "codex/contributor-doctor",
+      "headRefOid": "9027823d81e45ca71c025d1b49596a0bbfc86b16",
+      "isDraft": true,
+      "labels": [
+        {
+          "id": "LA_kwDOU9o7Fc8AAAAC7MDgXw",
+          "name": "enhancement",
+          "description": "New feature or request",
+          "color": "a2eeef"
+        },
+        {
+          "id": "LA_kwDOU9o7Fc8AAAAC7xWuiA",
+          "name": "status: owner review",
+          "description": "Draft change or qualification evidence awaits owner review.",
+          "color": "5319e7"
+        }
+      ],
+      "mergeable": "UNKNOWN",
+      "milestone": {
+        "number": 1,
+        "title": "First contributor workflow",
+        "description": "A first review cycle for local study creation, reproducibility and usability: three validated draft improvements and three available contributor tasks. No response-time, release-date or public-launch commitment. Historical-audio clearance remains a separate maintainer decision.",
+        "dueOn": null
+      },
+      "number": 11,
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-08T17:04:11Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37813534842/job/113436198098",
+          "name": "targeted",
+          "startedAt": "2026-10-08T17:03:00Z",
+          "status": "COMPLETED",
+          "workflowName": "Conformance"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-08T17:03:05Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37813419953/job/113435802575",
+          "name": "targeted",
+          "startedAt": "2026-10-08T17:02:08Z",
+          "status": "COMPLETED",
+          "workflowName": "Conformance"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-08T17:04:11Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37813534916/job/113436199280",
+          "name": "build-and-test",
+          "startedAt": "2026-10-08T17:03:00Z",
+          "status": "COMPLETED",
+          "workflowName": "Documentation"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-08T17:02:57Z",
+          "conclusion": "SKIPPED",
+          "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37813534842/job/113436199992",
+          "name": "acceptance",
+          "startedAt": "2026-10-08T17:02:58Z",
+          "status": "COMPLETED",
+          "workflowName": "Conformance"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-08T17:04:00Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37813419953/job/113435802994",
+          "name": "acceptance",
+          "startedAt": "2026-10-08T17:02:07Z",
+          "status": "COMPLETED",
+          "workflowName": "Conformance"
+        }
+      ],
+      "url": "https://github.com/alohays/allagma/pull/11"
+    },
+    {
+      "baseRefName": "main",
+      "closingIssuesReferences": [
+        {
+          "id": "I_kwDOU9o7Fc8AAAABV6sFSA",
+          "number": 4,
+          "repository": {
+            "id": "R_kgDOU9o7FQ",
+            "name": "allagma",
+            "owner": {
+              "id": "MDQ6VXNlcjE2MzY3MDU2",
+              "login": "alohays"
+            }
+          },
+          "url": "https://github.com/alohays/allagma/issues/4"
+        }
+      ],
+      "headRefName": "codex/contributor-evidence-verifier",
+      "headRefOid": "ab3b724d42e6b0daa34e67517caa0110c68ab624",
+      "isDraft": true,
+      "labels": [
+        {
+          "id": "LA_kwDOU9o7Fc8AAAAC7MDgXw",
+          "name": "enhancement",
+          "description": "New feature or request",
+          "color": "a2eeef"
+        },
+        {
+          "id": "LA_kwDOU9o7Fc8AAAAC7xWuiA",
+          "name": "status: owner review",
+          "description": "Draft change or qualification evidence awaits owner review.",
+          "color": "5319e7"
+        }
+      ],
+      "mergeable": "MERGEABLE",
+      "milestone": {
+        "number": 1,
+        "title": "First contributor workflow",
+        "description": "A first review cycle for local study creation, reproducibility and usability: three validated draft improvements and three available contributor tasks. No response-time, release-date or public-launch commitment. Historical-audio clearance remains a separate maintainer decision.",
+        "dueOn": null
+      },
+      "number": 12,
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-08T17:04:07Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37813547152/job/113436238998",
+          "name": "targeted",
+          "startedAt": "2026-10-08T17:03:05Z",
+          "status": "COMPLETED",
+          "workflowName": "Conformance"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-08T17:03:03Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37813419596/job/113435802564",
+          "name": "targeted",
+          "startedAt": "2026-10-08T17:02:07Z",
+          "status": "COMPLETED",
+          "workflowName": "Conformance"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-08T17:04:23Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37813547264/job/113436239667",
+          "name": "build-and-test",
+          "startedAt": "2026-10-08T17:03:06Z",
+          "status": "COMPLETED",
+          "workflowName": "Documentation"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-08T17:03:03Z",
+          "conclusion": "SKIPPED",
+          "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37813547152/job/113436240591",
+          "name": "acceptance",
+          "startedAt": "2026-10-08T17:03:03Z",
+          "status": "COMPLETED",
+          "workflowName": "Conformance"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-08T17:03:54Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37813419596/job/113435802155",
+          "name": "acceptance",
+          "startedAt": "2026-10-08T17:02:07Z",
+          "status": "COMPLETED",
+          "workflowName": "Conformance"
+        }
+      ],
+      "url": "https://github.com/alohays/allagma/pull/12"
+    }
+  ],
+  "community": {
+    "usesCustomOpenGraphImage": true,
+    "pinnedIssues": {
+      "nodes": [
+        {
+          "issue": {
+            "number": 9
+          }
+        }
+      ]
+    },
+    "discussionCategories": {
+      "nodes": [
+        {
+          "name": "Announcements",
+          "slug": "announcements",
+          "isAnswerable": false
+        },
+        {
+          "name": "General",
+          "slug": "general",
+          "isAnswerable": false
+        },
+        {
+          "name": "Ideas",
+          "slug": "ideas",
+          "isAnswerable": false
+        },
+        {
+          "name": "Polls",
+          "slug": "polls",
+          "isAnswerable": false
+        },
+        {
+          "name": "Q&A",
+          "slug": "q-a",
+          "isAnswerable": true
+        },
+        {
+          "name": "Show and tell",
+          "slug": "show-and-tell",
+          "isAnswerable": false
+        }
+      ]
+    },
+    "discussion": {
+      "number": 13,
+      "title": "Welcome: run a study, inspect the evidence, contribute",
+      "url": "https://github.com/alohays/allagma/discussions/13",
+      "body": "Welcome to Allagma. Start with the [offline first study](https://alohays.github.io/allagma/guides/first-study/): no model account or GPU is needed. Inspect the attempts, claims and deterministic audit, then share what you could or could not reproduce, including your environment and the limits of the evidence.\n\nLooking for a first contribution? The [pinned contributor overview](https://github.com/alohays/allagma/issues/9) links the milestone and three available, unclaimed tasks:\n\n- [Explain duplicate-key validation and recovery](https://github.com/alohays/allagma/issues/5).\n- [Describe the EMA figure accessibly](https://github.com/alohays/allagma/issues/6).\n- [Qualify the offline tutorial on Linux/Python 3.13](https://github.com/alohays/allagma/issues/7).\n\nComment on a task with your intended scope and environment so the maintainer can confirm the claim. The three deeper implementation PRs are drafts awaiting owner review; their proposed features are not yet available on main.\n\nUse **Q&A** for usage questions, **Show and tell** for study packages with source/evidence links and limitations, and **Ideas** for bounded proposals. Reproducible defects and accepted tasks belong in issues. Read the [support guidance](https://alohays.github.io/allagma/project/support/) and [code of conduct](https://alohays.github.io/allagma/project/conduct/); report vulnerabilities through the private security channel. Keep credentials and private research data out of posts. No response-time guarantee is promised.\n\nThis is a maintainer welcome prepared with agent assistance, not a claim of external adoption or independent scientific qualification.\n"
+    }
+  },
+  "main_checks": [
+    {
+      "conclusion": "success",
+      "databaseId": 37817332243,
+      "headSha": "a57ba0a2889cc6516be6685a2153e64541e5abf8",
+      "status": "completed",
+      "url": "https://github.com/alohays/allagma/actions/runs/37817332243",
+      "workflowName": "Public documentation deployment"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 37817332178,
+      "headSha": "a57ba0a2889cc6516be6685a2153e64541e5abf8",
+      "status": "completed",
+      "url": "https://github.com/alohays/allagma/actions/runs/37817332178",
+      "workflowName": "Documentation"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 37817331906,
+      "headSha": "a57ba0a2889cc6516be6685a2153e64541e5abf8",
+      "status": "completed",
+      "url": "https://github.com/alohays/allagma/actions/runs/37817331906",
+      "workflowName": "Conformance"
+    }
+  ],
+  "live_build": {
+    "source_commit": "a57ba0a2889cc6516be6685a2153e64541e5abf8",
+    "movie_sha256": "6435ccbd6ba55757fd512e3b631478227831b9d77a80b300776bbe8164841cc3",
+    "movie_bytes": 2875851,
+    "scope": "Documentation build identity; not historical-media clearance or scientific qualification."
+  },
+  "preserved": "No main-branch Python core, scientific source, frozen evidence, contracts, release metadata or model-configuration change from 5c9a765. No PR merged and no release created.",
+  "remaining_owner_decisions": [
+    "Review/merge of draft PRs #10, #11, #12 and separate Dependabot #1.",
+    "Resolve retained historical-audio rights in #8 without an unauthorized history rewrite.",
+    "Any later release/version decision or external outreach remains separate."
+  ]
+}

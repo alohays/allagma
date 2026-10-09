@@ -16,6 +16,10 @@ protocol, uncertainty assumptions and evidence scope. A workflow audit is not
 expert validation of a scientific conclusion. Maintainer support is voluntary;
 no response time or managed research service is promised.
 
-Discussions are planned for Q&A and study reports at launch. Until enabled,
-use the question issue form. See [security reporting](SECURITY.md) for sensitive
+Use [Q&A](https://github.com/alohays/allagma/discussions/categories/q-a) for
+usage questions, [Show and tell](https://github.com/alohays/allagma/discussions/categories/show-and-tell)
+for study reports with limitations, and [Ideas](https://github.com/alohays/allagma/discussions/categories/ideas)
+for bounded proposals. The [welcome](https://github.com/alohays/allagma/discussions/13)
+and [contributor overview](https://github.com/alohays/allagma/issues/9) link the
+available tasks. See [security reporting](SECURITY.md) for sensitive
 vulnerabilities and the [code of conduct](CODE_OF_CONDUCT.md) for participation.

@@ -1,33 +1,35 @@
 ---
+import ResearchPreview from './ResearchPreview.astro';
 const base = '/allagma/';
 ---
 <div class="home-content">
   <section class="workflow-section" aria-labelledby="workflow-title">
-    <div class="section-heading"><p class="eyebrow">THE RECORD IS PART OF THE RESULT</p><h2 id="workflow-title">One question. A trail you can follow.</h2></div>
+    <div class="section-heading"><p class="eyebrow">How you work with the agent</p><h2 id="workflow-title">You set the question. The agent develops the study.</h2></div>
     <ol class="workflow-track">
-      <li><span class="step-number">01</span><h3>Brief</h3><p>Define the question, materials and limits.</p></li>
-      <li><span class="step-number">02</span><h3>Plan</h3><p>Freeze the protocol and exact methods.</p></li>
-      <li><span class="step-number">03</span><h3>Attempts</h3><p>Run the work. Keep failures and recovery.</p></li>
-      <li><span class="step-number">04</span><h3>Findings</h3><p>Link claims to results and recompute them.</p></li>
+      <li><span class="step-number">01 / YOU SUPPLY</span><h3>Question and materials</h3><p>Write a brief, provide the sources, and set time and compute limits.</p></li>
+      <li><span class="step-number">02 / THE AGENT PLANS</span><h3>Protocol and code</h3><p>Choose comparisons, check feasibility, and fix the plan before confirmation runs.</p></li>
+      <li><span class="step-number">03 / THE AGENT RUNS</span><h3>Experiments and analysis</h3><p>Execute the work, recover from failures, and examine the results.</p></li>
+      <li><span class="step-number">04 / YOU REVIEW</span><h3>Figures and report</h3><p>Read the findings and critique, inspect the code and data, and reproduce the analysis.</p></li>
     </ol>
   </section>
+  <ResearchPreview />
+  <section class="scope-section" aria-labelledby="scope-title">
+    <div><p class="eyebrow">What Allagma adds</p><h2 id="scope-title">Enough context to check the work later.</h2><p>Allagma gives the agent reusable methods for planning, execution, analysis and critique. It keeps the agreed protocol, failed attempts and the data behind each claim with the report. You can see which runs informed a finding and recompute the reported numbers.</p><p>The researcher chooses the question and judges whether the methods and conclusions make sense. A successful audit checks the recorded work; it does not replace scientific review.</p><a class="text-action" href={base+'reference/concepts/'}>How the research record fits together <span aria-hidden="true">→</span></a></div>
+    <div class="evidence-note"><h3>Work on your own question</h3><p>Prepare a study from a brief, source materials and a finite resource profile, then explicitly start a native Codex session. Preparation is offline; the session uses your account's model allowance.</p><a class="primary-action" href={base+'guides/native-study/'}>Prepare a native study <span aria-hidden="true">→</span></a><p class="source-note">The supervised runner is qualified on the recorded macOS/Codex setup. Completion depends on the task and budget; an additional onboarding probe exhausted its session limits before packaging. <a href={base+'guides/native-study/#launch-explicitly-on-macos'}>Read the setup and measured limits</a>.</p></div>
+  </section>
   <section class="first-result" aria-labelledby="first-result-title">
-    <div><p class="eyebrow">START SMALL. SEE THE WHOLE PROCESS.</p><h2 id="first-result-title">Your first result,<br />on your own machine.</h2><p>The offline example compares two estimators, recovers from a failure and interruption, and writes a figure, report and claim ledger. Everything stays in ordinary files.</p><a class="text-action" href={`${base}guides/first-study/`}>Get the source and follow the tutorial <span aria-hidden="true">→</span></a></div>
-    <div class="command-panel"><div class="command-caption">FROM YOUR SOURCE CHECKOUT</div><pre><code>python3 -m allagma toy \
-  --destination work/my-first-study</code></pre><div class="command-output"><span class="check-symbol" aria-hidden="true">✓</span><div><strong>24 confirmation seeds</strong><br /><span>Figure · manuscript · evidence-linked claims</span></div></div><p class="command-note">Known-answer demonstration. No LLM, GPU or paid API.</p></div>
+    <div><p class="eyebrow">Start here / offline toy study</p><h2 id="first-result-title">Try the whole process on a small example.</h2><p>The introductory study asks whether adding a fixed bias increases a mean estimator's squared error. It supplies the scientific code, so you can generate a figure and report without a model account, GPU or package installation.</p><p>The example runs 24 confirmation seeds and retains an actual failure and interruption. It is a known-answer demonstration of the workflow.</p><a class="primary-action" href={base+'guides/first-study/'}>Get the source and run it <span aria-hidden="true">→</span></a></div>
+    <div class="command-panel"><div class="command-caption">FROM YOUR SOURCE CHECKOUT / PYTHON 3.11+</div><pre tabindex="0" aria-label="Run the offline toy study"><code>python3 -m allagma toy \
+  --destination work/my-first-study</code></pre><p class="command-output">Open the generated figure, manuscript and claim ledger. Recompute the result from the retained data.</p><a class="text-action" href={base+'explore/'}>Preview the example's outputs <span aria-hidden="true">→</span></a></div>
   </section>
   <section aria-labelledby="studies-title" class="study-section">
-    <div class="section-heading split-heading"><div><p class="eyebrow">EXECUTED, RETAINED, INSPECTABLE</p><h2 id="studies-title">Go deeper with a real study.</h2></div><a class="text-action" href={`${base}studies/`}>Browse the evidence <span aria-hidden="true">→</span></a></div>
+    <div class="section-heading split-heading"><div><p class="eyebrow">Other completed native-agent studies</p><h2 id="studies-title">Read the question, result and qualifications.</h2></div><a class="text-action" href={base+'studies/'}>All studies <span aria-hidden="true">→</span></a></div>
     <div class="study-grid">
-      <a class="study-card" href={`${base}studies/core-culp/`}><span class="study-number">01 / REPRODUCTION</span><h3>A graph-classification<br />capsule, reproduced.</h3><p>Six answers match the original scorer. A source labeling defect stays visible.</p><span class="study-meta">CORE CULP · Full fresh-environment replay <span aria-hidden="true">↗</span></span></a>
-      <a class="study-card" href={`${base}studies/modular-addition/`}><span class="study-number">02 / GENERALIZATION</span><h3>Better held-out accuracy.<br />No observed grokking.</h3><p>Eight training trajectories separate an endpoint improvement from a stronger claim.</p><span class="study-meta">Modular addition · Four paired seeds <span aria-hidden="true">↗</span></span></a>
-      <a class="study-card" href={`${base}studies/ema-schedule/`}><span class="study-number">03 / TRAINING DYNAMICS</span><h3>When does weight<br />averaging help?</h3><p>Duration and learning-rate policy, with paired effects and inconclusive intervals.</p><span class="study-meta">Weight EMA · 96 saved model states <span aria-hidden="true">↗</span></span></a>
+      <a class="study-card" href={base+'studies/core-culp/'}><span class="study-number">REPRODUCTION / CORE CULP r01</span><h3>A graph-classification paper reproduced</h3><p>All six requested answers match the original scorer. Inspection also found that two datasets printed the wrong predictor labels. The report preserves and explains that defect.</p><span class="study-meta">Results table and full fresh-environment replay <span aria-hidden="true">→</span></span></a>
+      <a class="study-card" href={base+'studies/modular-addition/'}><span class="study-number">GENERALIZATION / MODULAR ADDITION r04</span><h3>Better held-out accuracy, without observed grokking</h3><p>Weight decay improved final accuracy in four paired seeds. No trajectory reached the prespecified sustained 95% threshold, so the study does not claim a grokking transition.</p><span class="study-meta">Paired estimates, report and saved checkpoints <span aria-hidden="true">→</span></span></a>
     </div>
+    <p class="study-selection">These are completed examples selected by frozen run order. The <a href={base+'evidence/comparison/'}>twelve-session comparison</a> reports all runs and its limits; it does not establish general research superiority or consistent cost savings.</p>
   </section>
-  <section class="scope-section" aria-labelledby="scope-title">
-    <div><p class="eyebrow">A PROCESS YOU CAN INSPECT</p><h2 id="scope-title">The agent does the work.<br />You can check the record.</h2><p>Allagma adds reusable research methods, locked campaign inputs, attempt history and evidence contracts to a coding agent. Your study owns its scientific code and statistical choices.</p><a class="text-action" href={`${base}guides/native-study/`}>Prepare a native study <span aria-hidden="true">→</span></a></div>
-    <div class="evidence-note"><h3>What the evaluation establishes</h3><p>In twelve fresh local sessions, all twelve completed the required science. Allagma delivered <strong>6/6 complete packages</strong>; plain Codex delivered <strong>4/6</strong>.</p><p>The two gaps concern review-revision binding. This small experiment does not establish general research superiority or consistent cost savings.</p><a href={`${base}evidence/comparison/`}>Read the comparison and limitations →</a></div>
-  </section>
-  <section class="home-footer-callout"><div><h2>Build a better research workflow.</h2><p>Start with a small fix, a method, or a reproducible study.</p></div><a class="primary-action" href={`${base}contributing/`}>Contribute <span aria-hidden="true">↗</span></a></section>
-  <p class="release-note">Allagma 0.3.0rc2 · Source release candidate · <a href={`${base}evidence/hosts/`}>Host boundaries</a> · <a href={`${base}project/licenses/`}>MIT core; study-specific notices</a></p>
+  <section class="home-footer-callout"><div><h2>Contribute a useful improvement.</h2><p>Choose an available task, improve a method, or share a reproducible study.</p></div><a class="text-action" href={base+'contributing/'}>Contributor guide <span aria-hidden="true">→</span></a></section>
+  <p class="release-note">Allagma 0.3.0rc2 · Source release candidate · <a href={base+'evidence/hosts/'}>Host support</a> · <a href={base+'project/licenses/'}>MIT core and study-specific licenses</a></p>
 </div>

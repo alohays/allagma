@@ -1,9 +1,9 @@
 # Verified modular-addition study
 
-The first fully verified Allagma package in frozen run order is **r04**
-(replicate 2). This is the illustrative package required by the prespecified
-criteria. The [complete comparison](../../docs/v0.3/COMPARISON.md) reports the
-observed workflow differences and their substantial uncertainty.
+A native Codex session compared weight decay in a small modular-addition MLP.
+It returned training curves, checkpoints, paired statistics and a report:
+held-out accuracy improved, but no trajectory met the prespecified grokking
+threshold. These are retained results from run r04.
 
 All eight prescribed trajectories completed 100,000 full-batch AdamW updates on
 the fixed 37,248-parameter MLP. Within each of four independent seeds, weight
@@ -25,6 +25,13 @@ The mean held-out cross-entropy change is −158.62 nats, with interval
 four seeds cannot resolve smaller two-sided p-values by this enumeration. The
 t intervals rely on fragile small-sample distributional assumptions. Endpoint
 improvement does not establish a delayed 95%-accuracy grokking transition.
+
+## Execution and verification
+
+The first fully verified Allagma package in frozen run order is **r04**
+(replicate 2). This is the illustrative package required by the prespecified
+criteria. The [complete comparison](../../docs/v0.3/COMPARISON.md) reports the
+observed workflow differences and their substantial uncertainty.
 
 The original scorer passes **40/40 checks**; the controller's eight evidence
 requirements also pass. Independent checks reproduce the paired statistics,

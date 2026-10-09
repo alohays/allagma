@@ -2,9 +2,9 @@
 
 Do not put credentials, private data, exploit details affecting other users, or
 unredacted runtime logs in a public issue. Use GitHub's private **Report a
-vulnerability** channel when it is enabled on the public repository:
+vulnerability** channel, enabled on this public repository:
 [private security report](https://github.com/alohays/allagma/security/advisories/new).
-If that channel is unavailable during launch preparation, open an issue that
+If that channel is temporarily unavailable, open an issue that
 only asks for a private reporting channel; include no vulnerability details.
 The maintainer will establish a private contact before receiving sensitive data.
 

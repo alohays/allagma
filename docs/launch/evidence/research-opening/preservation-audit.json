@@ -1,0 +1,83 @@
+{
+  "status": "pass",
+  "baseline": "420e38adb174ded8c476a7a6ffd63c70b8672bf7",
+  "content_commit": "eb888865f1d5bc380e3b5b1d81788255ae3eebcc",
+  "protected_paths_unchanged": [
+    "allagma",
+    "adapters",
+    "contracts",
+    "methods",
+    "recipes",
+    "policies",
+    "profiles",
+    "templates",
+    "conformance",
+    "examples",
+    "evals",
+    "release.json",
+    ".codex"
+  ],
+  "study_changes_limited_to_public_result_summaries": [
+    "studies/core-culp/RESULTS.md",
+    "studies/ema-schedule/RESULTS.md",
+    "studies/modular-addition/RESULTS.md"
+  ],
+  "existing_artifacts_unchanged": {
+    "media/demo/allagma-workflow.mp4": "6435ccbd6ba55757fd512e3b631478227831b9d77a80b300776bbe8164841cc3",
+    "media/demo/allagma-workflow.en.vtt": "8f8bfd94926a2179891c47cd1f3d4ff9a1b73fea8ebf63d7b2fa05c42853e6ad",
+    "media/demo/allagma-workflow.en.srt": "ec63926e0df0c93b5708d20d1f6f6a73788f07664a0cc2a183fd606a3fb99b2c",
+    "media/demo/transcript.md": "88d3f8642df99b4700c844ee92c9097ee9dffe8f8ac5162fbd21e741b68bc52d",
+    "media/demo/provenance.json": "7ce702a88a2e57e05396fc195895835c64ebba8aa9a56923276c7d7eea0927dd",
+    "media/demo/github-attachment.json": "aaba6976ab4cb5d187084494b15ee17443c53b2eeec9d48fd718e5da96b0a928",
+    "media/demo/capture-state.json": "78c2ab41763fcd485c059fe06efe6661fb22524dc08a904d6c43ab142eb2377c",
+    "media/demo/capture-timeline.json": "e4aa31aae5aa19c549897fb550535d1cf243769da988f43c742e35246b7c9511",
+    "media/evidence/toy-brief.json": "ceccf8459eb656d7723618440056855f6100718feca43719c306db3635842a0f",
+    "media/evidence/toy-summary.json": "5f2bfb7d6202de07ce13b7711a3e2e3b6e19a7b5d63736bb1d33caf05b04119f",
+    "media/evidence/toy-claims.json": "6bad5c3bd480f9fb39c7854f8ee59388707386fef90d892b85921fcbd477ccb6",
+    "media/evidence/toy-manuscript.md": "dd2318ccf2f246d310e086145dab1f397d9d004d51694935b056639133b4fbef",
+    "media/evidence/toy-paired-differences.svg": "800452621fa043c92e460149422b4291838ec5426930c60fa76a2d9094d78c10",
+    "media/evidence/ema-r07.png": "b357ed526ed43c94be32d413cb067532f99570e1723ea1a497963f47f25857bc",
+    "media/evidence/provenance.json": "326530b5778107fbcbe22aa2f97f6b65781c91f6b78f9b72de2b373339004e01"
+  },
+  "native_report": {
+    "format": "allagma-native-report-preview-v1",
+    "run": "r07",
+    "scope": "Exact report bytes from the completed retained native-agent study. Relative references resolve inside the full restored package; this selected copy does not contain those files. No new computation.",
+    "source_package_index": "evals/research-v0.3/runs/r07/package/package-index.json",
+    "package_index_sha256": "19f1ef7687d0af84df3b384a0d94a6398144b62be75ae9c26da9fc6b618d1a51",
+    "package_path": "REPORT.md",
+    "preview": "media/evidence/ema-r07-report.md",
+    "sha256": "eef4230629c0e789727df16a990a48c098c26bbecdd9c927630696e5428c384a",
+    "bytes": 17159,
+    "license": "EMA-LICENSE.txt"
+  },
+  "poster": {
+    "format": "allagma-results-poster-v1",
+    "scope": "Presentation layout around the unchanged toy figure and an exact sentence from its manuscript. The counterexample annotation summarizes the same report. No product UI, fresh execution or new data.",
+    "sources": {
+      "media/evidence/toy-paired-differences.svg": "800452621fa043c92e460149422b4291838ec5426930c60fa76a2d9094d78c10",
+      "media/evidence/toy-manuscript.md": "dd2318ccf2f246d310e086145dab1f397d9d004d51694935b056639133b4fbef"
+    },
+    "editable_source": "media/source/results-poster.svg",
+    "editable_sha256": "af1cd6e3871cf666eb34c533a11d4241d61bd269557fced2de11299507df6dca",
+    "rendered_file": "media/demo/results-poster.png",
+    "render_command": "cd site && node scripts/render-results-poster.mjs",
+    "rendered_sha256": "47a3e9770a05950874bbd1106d511a20a6b6772d2dfb1b209ce63f4ada5f6679",
+    "rendered_bytes": 93661,
+    "rendered_dimensions": {
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "history_preserved": true,
+  "open_draft_prs_unchanged": {
+    "10": "16926525de488a8979a98f0ebf312d80847b43f6",
+    "11": "9027823d81e45ca71c025d1b49596a0bbfc86b16",
+    "12": "ab3b724d42e6b0daa34e67517caa0110c68ab624"
+  },
+  "historical_audio_issue": {
+    "state": "OPEN",
+    "url": "https://github.com/alohays/allagma/issues/8"
+  },
+  "scope": "Preservation, publication-copy provenance and current contributor state. No scientific campaign, native model session, PR merge or history rewrite was performed for the presentation task."
+}

@@ -25,8 +25,22 @@ known document links to site routes, preserves other evidence links back to
 GitHub, and adds source/edit links. Never edit ignored generated pages. The
 homepage and components are site-owned; numerical previews cite retained inputs.
 
+The opening embeds `WorkflowVideo.astro` with a poster of actual outputs.
+`ResearchPreview.astro` quotes the retained native report, and the artifact
+explorer quotes the unchanged toy manuscript. The sync step verifies the native
+report copy against its provenance digest. Keep those artifacts unchanged;
+edit the surrounding presentation instead. The explorer accepts existing panel
+IDs as URL fragments, so a link can open the report or claims directly.
+
+`tools/generate_presentation_assets.py` updates the workflow SVGs and the
+results-poster source without running science. From this directory,
+`node scripts/render-results-poster.mjs` renders the PNG using the installed
+Sharp dependency and records its digest. The original movie, captions and
+capture provenance are independent of this presentation graphic.
+
 Run `npx playwright install chromium` once, then `npm test` after building.
-Tests cover production routes, search, keyboard access, mobile layouts and media.
+Tests cover production routes, search, keyboard access, mobile layouts and media,
+including the opening play control, report deep links and exact download bytes.
 The static link check is included in `npm run build`; external link checks are
 separate to avoid making ordinary pull requests depend on every upstream site.
 
@@ -40,6 +54,15 @@ The build also assembles shipped dependency notices at
 license, so their pinned upstream notices are retained in `licenses/` and checked
 against installed versions. Review that fallback when updating Pagefind.
 
-Public Pages deployment is gated and manually activated later by the owner.
-Building this project or pushing source does not change repository visibility,
-publish a release, or enable Pages. See the launch owner checklist when complete.
+The owner activated [public Pages](https://alohays.github.io/allagma/) on
+9 October 2026. The repository uses Actions as its Pages source and
+`ALLAGMA_PUBLIC_LAUNCH=true`. Relevant pushes to `main` now build and deploy;
+manual dispatch also requires `deploy: true`. Deployment permissions remain
+scoped to the deploy job. A local build alone does not deploy or publish a release.
+
+The generated `/allagma/build-info.json` identifies the build's Git commit and
+current movie digest. After deployment, verify the live routes and interactions,
+not only the local preview. Public pages describe main's capabilities; unmerged
+feature PRs remain proposals. Only the current cleared media is copied to the
+site. See [owner decisions](../docs/launch/owner-actions.md) and the
+[delivery ledger](../docs/contributing/first-workflow.md).

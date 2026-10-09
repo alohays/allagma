@@ -1,15 +1,24 @@
 # Publication review
 
-**Final audit: historical audio clearance blocks public launch.** The current
-demo has been replaced with Kokoro narration, but the owner has explicitly
-chosen to keep the two older Apple-voice video versions in private Git history
-unchanged. Do not make the repository public until that separate issue is
-resolved. This supersedes the earlier L7 publication-readiness assessment.
+**Current owner authorization — 9 October 2026:** the owner intentionally kept
+this repository public and authorized public documentation/community activation.
+Historical-audio rights remain unresolved in
+[maintainer issue #8](https://github.com/alohays/allagma/issues/8); the current
+Kokoro movie is the only narration served on Pages. Public visibility is not
+clearance. Keep history and frozen evidence intact; any alternative history
+strategy needs a separate owner decision. This rights issue is not a renewed
+private-only gate for the explicitly authorized work.
 
-The repository remains private while the public-launch package is prepared.
-This review covers the tracked tree, reachable Git history and retained archives;
-it must be completed before the later visibility change. The scan is not a
-guarantee that no secret or redistribution issue exists.
+**Historical final-audit decision — 8 October 2026:** the owner chose to keep two
+older Apple-voice video versions in the then-private Git history and list their
+clearance as a public-launch blocker. That superseded the original L7 readiness
+assessment. The later authorization above changes the allowed activation scope,
+not the rights finding or the preserved evidence.
+
+This review covered the tracked tree, reachable history and retained archives
+while the public-launch package was prepared privately. The scan is not a
+guarantee that no secret or redistribution issue exists. Current status is in
+[owner actions](owner-actions.md).
 
 `tools/audit_publication.py` scans reachable historical blob and commit versions,
 opens ZIP/TAR members, and reassembles distinct multipart archives from historical
