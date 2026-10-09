@@ -35,7 +35,7 @@ arXiv submission, formal release or feature deployment was performed.
 | Portable sources and template | 42-file archive includes TeX, BibTeX/bbl, exact figure, required custom style, standalone builder, notes and provenance; custom template interface | Pass |
 | Clean compilation | Identical source archive compiled and recompiled after unpacking with network/cache access denied; local TeX Live 2024 and [supported TeX Live 2023 CI](https://github.com/alohays/allagma/actions/runs/37950653898) | Pass |
 | PDF inspection | Eight pages inspected; table widths, pagination and metadata repaired; [digest-bound visual record](../studies/ema-schedule/publications/reference-r2/evidence/pdf-review.json), text/metadata/log checks | Pass |
-| Offline core boundary | 149 conformance tests and complete I1–I5 acceptance, including the toy workflow; TeX and network acquisition are separate adapters | Pass |
+| Offline core boundary | 151 conformance tests and complete I1–I5 acceptance, including the toy workflow; TeX and network acquisition are separate adapters | Pass |
 | Preserve historical science/history | [Preservation audit](../studies/ema-schedule/publications/reference-r2/evidence/preservation.json); no old study, frozen evaluation, media or project-model-config changes | Pass |
 | Real completed-study integration | r07 selected outputs match the frozen package index; 114 statistical summaries recomputed from retained seed measurements; no new training | Pass |
 | Public documentation | Reference and paper guides, workspace/native/CLI guidance, study page and index; 43 pages, 2,809 checked links, 18 desktop/mobile browser tests | Pass |
@@ -68,7 +68,7 @@ HTTP archive; acquisition does not execute code or accept provider terms.
 
 ## Validation and limits
 
-[Validation results](../studies/ema-schedule/publications/reference-r2/evidence/validation-final.json)
+[Validation results](../studies/ema-schedule/publications/reference-r2/evidence/validation-complete.json)
 retain the offline acceptance, documentation/browser and compact-source release
 checks. The production docs preview was inspected, including the new paper
 preview and navigation to the reference index. Documentation fallback links now
@@ -93,3 +93,5 @@ existing frozen qualification and model-usage limits remain unchanged.
 ## Review handoff
 
 [PR #14](https://github.com/alohays/allagma/pull/14) is open as a regular review-ready PR against `main` and remains unmerged. The PR checks are the authoritative status for its latest head; the retained receipts bind earlier implementation checkpoints without a recursive evidence-only commit cycle. The final audit corrected terminal state reporting for failed or abandoned protected-input copies and tightened the minimum-free-space regression. Partial inputs and their reserved bytes remain retained.
+
+The final boundary audit also verifies a complete provided-only paper with no external citations and an explicit References section. [Cache metadata evidence](../studies/ema-schedule/publications/reference-r2/evidence/cache-metadata-budget.json) reproduces and corrects an overrun caused by extraction manifests and indexes. Atomic metadata writes now obey cache/free-space admission. The final complete acceptance receipt is [retained separately](../studies/ema-schedule/publications/reference-r2/evidence/acceptance-complete.json); earlier checkpoints remain intact.
