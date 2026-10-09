@@ -31,12 +31,12 @@ def prepare(destination, *, study_id="adapted-bias-study", bias=0.5, source=ROOT
     originals = {name: value for name, value in inventory(example).items()
                  if name in {"protocol.json", "brief.json", "evidence-map.json"} or name.startswith("domain/")}
     protocol["revision"] = f"{study_id}-v1"
-    protocol["hypothesis"] = f"Adding {bias:g} to the sample mean changes expected squared error by {bias ** 2:g} for zero-mean Rademacher data."
+    protocol["hypothesis"] = f"Adding {bias} to the sample mean changes expected squared error by {bias ** 2} for zero-mean Rademacher data."
     for run in protocol["runs"]:
         run["input"]["bias"] = bias
     protocol["code"].append("adaptation.json")
     brief["study_id"] = study_id
-    brief["question"] = f"How does adding {bias:g} change squared error when estimating a synthetic zero mean?"
+    brief["question"] = f"How does adding {bias} change squared error when estimating a synthetic zero mean?"
     brief["motivation"] = "Prospectively adapt the existing known-answer toy; inspect the protocol before execution."
     brief["success_criteria"][-1] = "Any failures and retries remain traceable; preparation executes no attempts"
     # Input validation happens before creation. An unexpected filesystem/setup

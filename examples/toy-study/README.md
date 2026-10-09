@@ -33,6 +33,9 @@ is 0.25, not a promise that the realized estimate or every seed equals that
 value. The derivation's b = 0.25 calculation remains a labeled worked example.
 The analyzer takes the actual common bias from the raw measurements, rejects
 mixed bias/sample-count comparisons, and passes that value to the writer.
+The question, protocol and report retain the accepted bias's full numeric
+precision; rounding displayed result estimates does not change the setting
+stated in the claim scope.
 
 After reviewing the plan, run each lifecycle step explicitly:
 

@@ -25,7 +25,7 @@ def write(study, analysis_path, output):
                         f"{sensitivity['replicates']} retained means were positive.")
     supported = lower > 0
     interpretation = "The biased estimator had higher average squared error" if supported else "The direction of the average error difference was inconclusive"
-    scope = f"{values['replicates']} prespecified seeds, {values['samples_per_replicate']} Rademacher observations per seed, target zero, additive bias {bias:g}"
+    scope = f"{values['replicates']} prespecified seeds, {values['samples_per_replicate']} Rademacher observations per seed, target zero, additive bias {bias}"
     limits = ["This synthetic known-answer problem does not establish novelty or improve an LLM research agent.",
               "The 95% interval is a normal approximation over seed replicates, not an exact small-sample guarantee.",
               "Averages do not establish an ordering for every individual seed."]
@@ -46,7 +46,7 @@ def write(study, analysis_path, output):
 
 ## Abstract
 
-We compared the sample mean with the sample mean plus {bias:g} for a zero-mean
+We compared the sample mean with the sample mean plus {bias} for a zero-mean
 synthetic distribution. {interpretation} across {values['replicates']}
 confirmation seeds. This is a workflow demonstration with a known analytical
 expectation, not a claim of scientific novelty or agent quality.

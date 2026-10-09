@@ -64,6 +64,40 @@ class StudyAdaptation(WorkspaceTest):
             prepare(self.work / "alias")
         self.assertFalse((self.work / "missing").exists())
 
+    def test_long_precision_bias_survives_the_full_reporting_path(self):
+        bias = 0.123456789
+        study = self.work / "precise"
+        prepare(study, bias=bias)
+        self.assertIn(str(bias), read_json(study / "brief.json")["question"])
+        protocol = read_json(study / "protocol.json")
+        self.assertIn(f"Adding {bias} ", protocol["hypothesis"])
+        self.assertIn(str(bias ** 2), protocol["hypothesis"])
+        campaigns.start_campaign(study, "precision")
+        self.assertEqual(campaigns.run_campaign(study, "precision")["execution_status"], "ready")
+        campaigns.analyze_campaign(study, "precision", analysis_id="a001")
+        adir = study / "campaigns/precision/analyses/a001"
+        self.assertEqual(read_json(adir / "outputs/summary.json")["bias"], bias)
+        for claim in read_json(adir / "paper/claims.json"):
+            reported = claim["scope"].split("additive bias ")[1]
+            self.assertEqual(float(reported), bias)
+        self.assertIn(f"sample mean plus {bias} ", (adir / "paper/manuscript.md").read_text())
+        self.assertEqual(campaigns.audit_campaign(study, "precision")["verdict"], "pass")
+
+    def test_boundary_biases_preserve_the_plan_without_execution(self):
+        for bias in (-1.0, 0.0, 1.0):
+            with self.subTest(bias=bias):
+                study = self.work / str(bias)
+                prepare(study, bias=bias)
+                runs = read_json(study / "protocol.json")["runs"]
+                self.assertEqual(len(runs), 26)
+                self.assertEqual(sum(run["split"] == "pilot" for run in runs), 2)
+                self.assertEqual({run["input"]["bias"] for run in runs}, {bias})
+                self.assertEqual({run["input"]["n"] for run in runs}, {64})
+                self.assertFalse((study / "campaigns").exists())
+                budget = bundles.verify_study(study)["effective_configuration"]["budget"]
+                self.assertEqual(budget["max_attempts"], 28)
+                self.assertEqual(budget["max_seconds"], 60)
+
     def test_analysis_refuses_mixed_settings_instead_of_mislabeling(self):
         for mismatch in ("bias", "n"):
             with self.subTest(mismatch=mismatch):
