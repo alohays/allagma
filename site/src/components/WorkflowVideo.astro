@@ -5,7 +5,7 @@ const base = '/allagma/generated/media/demo/';
 ---
 <figure class:list={['workflow-video', {compact}]}>
   <div class="video-frame">
-    <video controls playsinline preload="none" poster={base+'results-poster.png'} aria-label="Allagma workflow demonstration, with English captions" width="1600" height="900">
+    <video controls playsinline preload="metadata" poster={base+'results-poster.png'} aria-label="Allagma workflow demonstration, with English captions" width="1600" height="900">
       <source src={base+'allagma-workflow.mp4'} type="video/mp4" />
       <track kind="captions" src={base+'allagma-workflow.en.vtt'} srclang="en" label="English" default />
       <p><a href={base+'allagma-workflow.mp4'}>Download the video</a> or <a href="/allagma/demo/transcript/">read its transcript</a>.</p>

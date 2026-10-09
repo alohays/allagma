@@ -121,7 +121,7 @@ test('skip link and mobile menu are usable', async ({page}, info) => {
 test('flagship video decodes, plays, seeks and loads English captions', async ({page}, info) => {
   await page.goto('demo/');
   const video = page.locator('video');
-  await expect(video).toHaveAttribute('preload','none');
+  await expect(video).toHaveAttribute('preload','metadata');
   await video.evaluate(async (v:HTMLVideoElement) => { v.muted=true; await v.play(); });
   await expect.poll(() => video.evaluate((v:HTMLVideoElement) => v.currentTime)).toBeGreaterThan(.5);
   const decoded = await video.evaluate((v:HTMLVideoElement) => ({duration:v.duration,width:v.videoWidth,height:v.videoHeight,error:v.error?.code||null,tracks:v.textTracks.length}));
