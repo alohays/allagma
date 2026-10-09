@@ -1,0 +1,52 @@
+{
+  "acceptance": {
+    "I1": "pass",
+    "I2": "pass",
+    "I3": "pass",
+    "I4": "pass",
+    "I5": "pass"
+  },
+  "compact_source_boundary_tests": 7,
+  "conformance_tests": 184,
+  "date": "2026-10-10",
+  "demo": {
+    "archive_sha256": "d1d63141f243632fca1656b7d2a88e72aa53f81fa2ef60a10c64784e5e0c2559",
+    "author": "allagma",
+    "format": "allagma-paper-output-verification-v1",
+    "javascript": false,
+    "pages": 8,
+    "paper_sha256": "7aea0bb5cac8bd0a108a977aaf48c70cdd23cbbde5a08b97b4eed9c34d0c98ce",
+    "scope": "Archive, metadata and text checks; page-by-page visual inspection is separate",
+    "sections_present": true,
+    "source_files": 42,
+    "status": "pass",
+    "tex_release_required": null
+  },
+  "documentation": {
+    "browser_tests": {
+      "duration": 16830.247,
+      "expected": 18,
+      "flaky": 0,
+      "skipped": 0,
+      "startTime": "2026-10-09T18:05:16.210Z",
+      "unexpected": 0
+    },
+    "canonical_links": 380,
+    "errors": [],
+    "local_links_and_assets": 2828,
+    "pages": 43
+  },
+  "format": "allagma-pr-repair-validation-v1",
+  "implementation_commit": "ce93560491b29d9193d6f308d12d579c9f62e37e",
+  "optional_real_tex_collision_test": {
+    "entrypoint": "unpacked anc/build.py",
+    "status": "pass",
+    "tests": 1
+  },
+  "preservation": "No frozen science, evaluation, contracts, media or project model configuration changed. Original publication reviews and artifacts remain intact.",
+  "protected_paths_changed": [],
+  "reviewed_base_commit": "72e88c39a6631dadb78d8162d8714baf324ab073",
+  "runtime_source_revision": "sha256:bd4aae1be759b3802d7aa075a38839004fd6f8f4bc24c158890da38bc5fbbcd1",
+  "scope": "Local checks; current GitHub PR checks provide hosted evidence for the final pushed head. No merge, deployment, acquisition, native-model use or new scientific training.",
+  "status": "pass"
+}
