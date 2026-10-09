@@ -114,3 +114,8 @@ results. An older locked helper will not gain this command implicitly. Local
 compilation does not establish arXiv acceptance, authorship eligibility or
 independent scientific peer review. The delivery receipt names the actual
 compiler used, rather than claiming a different TeX release was tested.
+
+This increment exercises actual reference assets, protected preparation, offline
+helper checks and a paper revision of a completed study. It does not add a fresh
+native-model qualification run; the existing frozen native qualification and
+onboarding session limits keep their recorded scope.
