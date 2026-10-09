@@ -1,0 +1,29 @@
+{
+  "verification_version": 1,
+  "status": "fail",
+  "entry": "claims.json",
+  "entry_sha256": "bb933714fab037684c5e2ae32579e1b333fefdbc491016829e2d552c9ffb3320",
+  "files_read": 1,
+  "bytes_read": 540,
+  "checked_references": 0,
+  "validated_records": 0,
+  "findings": [
+    {
+      "code": "invalid-entry",
+      "artifact": "claims.json",
+      "location": "$",
+      "detail": "Entry must be an Allagma record or a nonempty list of records"
+    }
+  ],
+  "limits": {
+    "max_files": 10000,
+    "max_bytes": 268435456
+  },
+  "coverage": "Record contracts and declared transitive artifact digests; application/json references are traversed.",
+  "limitations": [
+    "The entry digest is computed, not authenticated against an independent trusted source.",
+    "No campaign completeness, lock freshness, scientific correctness, recomputation or native-host qualification check.",
+    "Unreferenced files and undeclared hash maps are outside coverage. Inspect a quiescent copy; this is not an atomic snapshot.",
+    "No study code is executed and no study files or reviews are written."
+  ]
+}

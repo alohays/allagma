@@ -18,15 +18,16 @@ GPU, response-time guarantee or release deadline is involved. Submit concise
 sanitized evidence with its exact tested commit. A documentation change needs a
 rendered review and link check, not a test that merely repeats its prose.
 
-## Proposed changes awaiting owner review
+## Reviewed changes awaiting a merge decision
 
-The deeper agent-assisted work is reserved in draft PRs:
+The deeper agent-assisted work is implemented in reviewed, regular PRs:
 [#10: adapted toy/report repair](https://github.com/alohays/allagma/pull/10),
 [#11: prerequisite diagnostics](https://github.com/alohays/allagma/pull/11), and
 [#12: read-only evidence inspection](https://github.com/alohays/allagma/pull/12).
 These features are **proposed and unmerged**. Main's command guide and first-study
-tutorial describe available behavior; checking a draft requires its explicit
+tutorial describe available behavior; trying a proposed feature requires its explicit
 branch. The three PRs have no dependency on one another.
+The [review record](pr-review.md) documents the findings, fixes and passing checks.
 
 The [historical-audio rights issue](https://github.com/alohays/allagma/issues/8)
 is maintainer-owned and is not a newcomer task. See the complete

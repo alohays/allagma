@@ -295,3 +295,23 @@ an obvious next action. Return live links, deployed commit, validation evidence
 and material limitations. Make routine decisions autonomously and use the
 user-input tool for consequential unresolved choices. The
 [presentation ledger](docs/launch/research-opening.md) records verification.
+
+## Review all pull requests — 9 October 2026
+
+Review every open PR at https://github.com/alohays/allagma/pulls, including
+line-by-line changes, architecture, contracts, compatibility, failure behavior,
+security boundaries, documentation and meaningful tests. Use submitted GitHub
+reviews for high-level assessments and diff-anchored inline findings. Reproduce
+findings, repair the feature branches, retain evidence and re-review the fixes.
+
+The owner explicitly authorizes merging dependency PR #1 if it is merge-ready.
+Make the other PRs merge-ready and convert them from draft to regular PRs after
+verification; their merge is not requested. This supersedes the earlier
+instruction to keep those PRs draft. Commit coherent fixes and push to origin.
+Preserve full history, frozen studies, English technical documentation, the GUI
+model selection and current native-usage limits. Use the user-input tool for
+unresolved decisions that materially affect scope, cost or correctness.
+
+The [PR review record](docs/contributing/pr-review.md) tracks the findings,
+repairs, individual and combined verification, GitHub review workflow and final
+states. #1 is merged; #10, #11 and #12 are reviewed, regular and unmerged.

@@ -1,0 +1,45 @@
+{
+  "commit": "413c184240072468e1b7156a6ddd43181c6154b9",
+  "steps": [
+    {
+      "step": 0,
+      "exit_code": 0,
+      "status": "prepared"
+    },
+    {
+      "step": 1,
+      "exit_code": 0,
+      "status": "pass"
+    },
+    {
+      "step": 2,
+      "exit_code": 0,
+      "status": null
+    },
+    {
+      "step": 3,
+      "exit_code": 0,
+      "status": "ready"
+    },
+    {
+      "step": 4,
+      "exit_code": 0,
+      "status": null
+    },
+    {
+      "step": 5,
+      "exit_code": 0,
+      "status": "pass"
+    }
+  ],
+  "bias": 0.123456789,
+  "verification": {
+    "status": "pass",
+    "checked_references": 504,
+    "validated_records": 56,
+    "files_read": 505,
+    "bytes_read": 436993
+  },
+  "study_contents_and_mtimes_unchanged_by_inspection": true,
+  "scope": "Offline integration only; no authenticated model or received code execution by inspectors."
+}
