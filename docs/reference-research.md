@@ -69,3 +69,57 @@ download cache. Snapshots use new destinations and cannot overwrite a prior
 revision. Later reading belongs in the working dossier or a new snapshot.
 Existing studies and frozen bundles keep their original methods until an
 explicit compatible update is adopted. No migration rewrites historical science.
+
+## Retain selected assets
+
+Write `assets.json` in the dossier with format `allagma-reference-assets-v1`, a
+stable `study_id`, and an `assets` list. Each asset records `id`, `kind`
+(`paper-pdf`, `paper-source`, `code`, `model`, or `dataset`), public `url`, pinned
+`revision`, `purpose`, `use` (`reading` or `execution`), `access`, and `license`
+with a name, source URL and permitted-use note. Add known `sha256` and
+`size_bytes` pins. Code, model and dataset revisions must be immutable hexadecimal
+commit/revision IDs, bound through the URL or expected hash. Datasets also name
+their selected `split`. Set `extract` to `tar` or `zip` only when the archive's
+contents are needed; otherwise leave it `none`.
+
+```sh
+python3 -m allagma reference cache-init --directory /path/to/references \
+  --cache /path/to/git-checkout/.allagma-reference-cache
+python3 -m allagma reference acquire --directory /path/to/references \
+  --cache /path/to/git-checkout/.allagma-reference-cache --online
+python3 -m allagma reference verify-cache --directory /path/to/references \
+  --cache /path/to/git-checkout/.allagma-reference-cache
+```
+
+For supplied files, replace `--online` with `--provided /path/to/local-bindings.json`.
+The binding JSON maps each asset ID to a local file path and stays private.
+Repeat `acquire` without either flag to reuse intact cached objects offline.
+Unavailable or gated assets retain their explicit states and reasons; partial
+success returns exit code 1. No request is made without `--online`.
+
+The [acquisition adapter](../adapters/reference-assets/README.md) documents limits,
+resumption, terms decisions and corruption handling. Defaults reserve 20 GiB free
+disk and cap an asset at 256 MiB, expanded bytes at 512 MiB, a study at 1 GiB and
+the cache at 4 GiB. Two attempts and 2 GiB cumulative transfers per study include
+failed and repeated bytes. These defaults were chosen conservatively for the
+development Mac's measured disk space; RAM is not permission to fill the disk.
+
+Raw assets live under an excluded cache. Initialization resolves Git's actual
+`info/exclude` and preserves existing entries, including in linked worktrees.
+The exclusion is local configuration, not a tracked `.gitignore` edit. Version
+the index, notes, citations, `assets.json` and public-safe `retrieval.json`.
+Retrieval paths are relative to the cache and contain no home directory or
+authentication data. Source-release packaging rejects force-tracked cache
+markers; Pages copies only reviewed, tracked media and rejects raw cache images.
+
+Pass `--references /path/to/references --reference-cache /path/to/cache` to
+`research prepare`. It freezes the dossier and copies only assets marked
+`execution` into `inputs/reference-assets/`, with hashes in
+`inputs/REFERENCE-INPUTS.json`. Reading-only PDFs, sources, weights and data stay
+in the reusable cache. Required input copies count against both acquisition
+retention and workspace storage limits. Their directory is excluded through
+Git's `info/exclude` too; a standalone workspace gets a local Git repository if
+needed for that exclusion. Workers retain the same network denial and read-only
+input protection. Changing an input prevents a native run; prepare a new revision
+instead. The working dossier can accumulate later reading without editing its
+frozen input snapshot.

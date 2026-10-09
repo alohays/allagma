@@ -18,6 +18,16 @@ await fs.mkdir(generated, { recursive: true });
 await fs.mkdir(assets, { recursive: true });
 const receipts = [];
 const verifiedTargets = new Set();
+const trackedFiles = new Set(execFileSync('git', ['ls-files', '-z'], { cwd: root, encoding: 'utf8' }).split('\0').filter(Boolean));
+
+function isRawReferenceCache(file) {
+  let directory = path.dirname(path.join(root, file));
+  while (directory.startsWith(root + path.sep)) {
+    if (existsSync(path.join(directory, '.allagma-reference-cache.json'))) return true;
+    directory = path.dirname(directory);
+  }
+  return file.split('/').includes('.allagma-reference-cache');
+}
 
 async function rewrite(body, source) {
   const links = [...body.matchAll(/(!?)\[([^\]]*)\]\(([^\s)]+)(?:\s+"[^"]*")?\)/g)];
@@ -33,6 +43,9 @@ async function rewrite(body, source) {
     }
     let href;
     if (image) {
+      if (!trackedFiles.has(resolved) || isRawReferenceCache(resolved)) {
+        throw new Error(`Publish only reviewed, tracked image assets, never raw reference caches: ${resolved}`);
+      }
       const destination = path.join(assets, resolved);
       await fs.mkdir(path.dirname(destination), { recursive: true });
       await fs.copyFile(path.join(root, resolved), destination);
@@ -70,7 +83,12 @@ await fs.cp(mediaRoot, path.join(assets, 'media'), {
   recursive: true,
   // Editable capture sources live in Git. The workbench requires its local
   // Python server and must never masquerade as a working static-site feature.
-  filter: file => path.relative(mediaRoot, file).split(path.sep)[0] !== 'source',
+  filter: file => {
+    const relative = path.relative(root, file).split(path.sep).join('/');
+    return path.relative(mediaRoot, file).split(path.sep)[0] !== 'source'
+      && !isRawReferenceCache(relative)
+      && (trackedFiles.has(relative) || [...trackedFiles].some(p => p.startsWith(relative + '/')));
+  },
 });
 await fs.writeFile(path.join(assets, 'content-sources.json'), JSON.stringify(receipts, null, 2) + '\n');
 // A public receipt binds the deployed site and its cleared movie to this build.

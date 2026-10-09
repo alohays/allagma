@@ -90,6 +90,8 @@ def parser():
     research.add_argument("--brief", type=Path)
     research.add_argument("--materials", type=Path)
     research.add_argument("--profile", type=Path)
+    research.add_argument("--references", type=Path, help="Critical reference dossier to freeze into preparation inputs")
+    research.add_argument("--reference-cache", type=Path, help="Verified cache for selected execution assets")
     research.add_argument("--id", default="study")
     research.add_argument("--session", default="session-001")
     research.add_argument("--codex", type=Path)
@@ -99,13 +101,19 @@ def parser():
     research.add_argument("--interrupt-first-attempt", action="store_true")
     research.add_argument("--baseline", action="store_true", help="Evaluation control: common infrastructure without Allagma methods")
     refs = sub.add_parser("reference", help="Maintain an offline critical literature map and frozen reading inputs")
-    refs.add_argument("operation", choices=["init", "add", "check", "index", "snapshot"])
+    refs.add_argument("operation", choices=["init", "add", "check", "index", "snapshot", "cache-init", "acquire", "verify-cache", "policy", "quarantine"])
     refs.add_argument("--directory", type=Path, required=True)
     refs.add_argument("--question", default="")
     refs.add_argument("--mode", choices=["online", "offline", "provided-only"], default="provided-only")
     refs.add_argument("--record", type=Path)
     refs.add_argument("--destination", type=Path)
     refs.add_argument("--require-review", action="store_true")
+    refs.add_argument("--cache", type=Path, default=Path.cwd() / ".allagma-reference-cache")
+    refs.add_argument("--online", action="store_true", help="Explicitly allow acquisition HTTP requests outside scientific workers")
+    refs.add_argument("--provided", type=Path, help="Local-only JSON mapping of asset IDs to supplied file paths")
+    refs.add_argument("--policy", type=Path)
+    refs.add_argument("--approval", type=Path)
+    refs.add_argument("--asset-id")
     return p
 
 
@@ -199,7 +207,30 @@ def main(argv=None):
                 result = resources.summary(args.ledger)
         elif args.command == "reference":
             from . import references
-            if args.operation == "init":
+            if args.operation in ("cache-init", "acquire", "verify-cache", "policy", "quarantine"):
+                from .research import _load
+                adapter_path = ROOT / "adapters/reference-assets/acquire.py"
+                if not adapter_path.exists():
+                    raise AllagmaError("This bundle does not include the optional reference acquisition adapter")
+                adapter = _load("allagma_reference_acquisition", adapter_path)
+                if args.operation == "cache-init":
+                    result = adapter.initialize(args.cache, policy=read_json(args.policy) if args.policy else None)
+                elif args.operation == "acquire":
+                    result = adapter.acquire(args.cache, read_json(args.directory / "assets.json"), args.directory,
+                        online=args.online, provided=read_json(args.provided) if args.provided else None,
+                        approvals=read_json(args.approval) if args.approval else None)
+                elif args.operation == "policy":
+                    if not args.policy:
+                        raise AllagmaError("Policy adoption requires --policy")
+                    result = adapter.adopt_policy(args.cache, read_json(args.policy),
+                        approval=read_json(args.approval) if args.approval else None)
+                elif args.operation == "quarantine":
+                    if not args.asset_id:
+                        raise AllagmaError("Quarantine requires --asset-id")
+                    result = adapter.quarantine(args.cache, read_json(args.directory / "retrieval.json"), args.asset_id)
+                else:
+                    result = adapter.verify(args.cache, read_json(args.directory / "retrieval.json"))
+            elif args.operation == "init":
                 result = references.initialize(args.directory, question=args.question, mode=args.mode)
             elif args.operation == "add":
                 if not args.record:
@@ -219,7 +250,8 @@ def main(argv=None):
                 if not all((args.brief,args.materials,args.profile)):
                     raise AllagmaError("Research preparation requires --brief, --materials and --profile")
                 result = research.prepare(args.source,args.study,args.control,brief=args.brief,materials=args.materials,
-                                          profile=read_json(args.profile),study_id=args.id,install_workflow=not args.baseline)
+                                          profile=read_json(args.profile),study_id=args.id,install_workflow=not args.baseline,
+                                          reference_directory=args.references,reference_cache=args.reference_cache)
             elif args.operation == "run":
                 if args.codex is None or args.timeout is None:
                     raise AllagmaError("Native execution requires explicit --codex and --timeout")
@@ -234,6 +266,8 @@ def main(argv=None):
         if args.command == "resource" and args.operation == "run" and result["status"] != "completed":
             return 1
         if args.command == "research" and args.operation == "run" and result["status"] != "completed":
+            return 1
+        if args.command == "reference" and args.operation == "acquire" and any(a["status"] != "available" for a in result["assets"]):
             return 1
         if isinstance(result, dict) and (result.get("verdict") in ("revise", "blocked") or result.get("execution_status") in ("failed", "blocked", "budget_exhausted", "needs_revision")):
             return 1

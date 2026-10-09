@@ -10,7 +10,7 @@ from pathlib import Path
 import re
 import shutil
 
-from . import bundles, resources
+from . import bundles, references, resources
 from .files import AllagmaError, file_hash, inventory, read_json, utcnow, write_json
 
 
@@ -23,8 +23,7 @@ def _copy_materials(source, destination):
     source=Path(source).resolve()
     if not source.is_dir():raise AllagmaError("Materials must be a directory of explicitly supplied files")
     destination.mkdir(parents=True,exist_ok=True)
-    for path in source.rglob("*"):
-        if any(part in (".git", ".venv", "__pycache__") for part in path.relative_to(source).parts):continue
+    for path in _material_files(source):
         if path.is_symlink():raise AllagmaError("Material symlinks must be resolved explicitly before preparation")
         if path.is_file():
             if path.name in ("auth.json", ".env"):
@@ -34,7 +33,24 @@ def _copy_materials(source, destination):
             shutil.copyfile(path,target)
 
 
-def prepare(source, study, control, *, brief, materials, profile, study_id="study", install_workflow=True):
+def _material_files(source):
+    """Prune local raw caches instead of silently copying them as materials."""
+    import os
+    if (Path(source) / ".allagma-reference-cache.json").exists():
+        raise AllagmaError("Use a reference manifest to select inputs; do not copy an entire raw cache as materials")
+    for directory, dirs, files in os.walk(source, followlinks=False):
+        parent = Path(directory)
+        dirs[:] = [name for name in dirs if name not in (".git", ".venv", "__pycache__")
+                   and not (parent / name / ".allagma-reference-cache.json").exists()]
+        for name in dirs:
+            if (parent / name).is_symlink():
+                raise AllagmaError("Resolve material links before preparation")
+        for name in files:
+            yield parent / name
+
+
+def prepare(source, study, control, *, brief, materials, profile, study_id="study", install_workflow=True,
+            reference_directory=None, reference_cache=None):
     source,study,control=(Path(p).resolve() for p in (source,study,control))
     _separate(study,control)
     resources.validate_profile(profile)
@@ -49,11 +65,24 @@ def prepare(source, study, control, *, brief, materials, profile, study_id="stud
     if materials==study or materials in study.parents or materials==control or materials in control.parents:
         raise AllagmaError("Output directories cannot be inside the materials tree")
     material_bytes=0
-    for path in materials.rglob("*"):
-        if any(part in (".git", ".venv", "__pycache__") for part in path.relative_to(materials).parts):continue
+    for path in _material_files(materials):
         if path.is_symlink() or path.name in ("auth.json", ".env"):
             raise AllagmaError("Resolve material links and remove credentials before preparation")
         if path.is_file():material_bytes+=path.stat().st_size
+    acquisition = None
+    retrieval = None
+    reference_bytes = 0
+    if reference_directory is not None:
+        reference_directory = Path(reference_directory).resolve()
+        references.refresh(reference_directory)
+        if (reference_directory / "retrieval.json").exists():
+            retrieval = read_json(reference_directory / "retrieval.json")
+            if any(item["use"] == "execution" for item in retrieval["assets"]):
+                if reference_cache is None:
+                    raise AllagmaError("Selected reference execution assets require --reference-cache")
+                acquisition = _load("allagma_prepare_acquisition", source / "adapters/reference-assets/acquire.py")
+                reference_bytes = sum(item["size_bytes"] for item in acquisition.input_plan(reference_cache, retrieval).values())
+    material_bytes += reference_bytes
     if material_bytes+1_000_000 >= profile["storage_limit_bytes"]:
         raise AllagmaError("Materials leave insufficient space for the workflow within the storage ceiling")
     if profile["command_timeout_seconds"]["compute"] < .01 or profile["budgets_seconds"]["compute"] < .001:
@@ -64,6 +93,13 @@ def prepare(source, study, control, *, brief, materials, profile, study_id="stud
     shutil.copyfile(brief,inputs/"BRIEF.md")
     shutil.copyfile(source/"adapters/local-process/COMPUTE.md",inputs/"COMPUTE.md")
     shutil.copyfile(source/"adapters/local-process/compute_client.py",inputs/"compute.py")
+    reference_snapshot = None
+    if reference_directory is not None:
+        reference_snapshot = references.snapshot(reference_directory, inputs / "references")
+    if acquisition is not None:
+        selected = acquisition.materialize(reference_cache, retrieval, inputs / "reference-assets",
+            storage_limit=profile["storage_limit_bytes"] - material_bytes + reference_bytes - 1_000_000)
+        write_json(inputs / "REFERENCE-INPUTS.json", selected, immutable=True)
     write_json(inputs/"RESOURCES.json", {"profile":profile,"network":False,
         "scientific_execution":"CPU or MPS through the local resource broker; isolated environment inside this study",
         "model_usage":"Accounted separately by the native adapter; existing Codex authentication only"},immutable=True)
@@ -72,6 +108,11 @@ def prepare(source, study, control, *, brief, materials, profile, study_id="stud
         "max_seconds":profile["budgets_seconds"]["compute"],"money_usd":0,
         "per_attempt_seconds":profile["command_timeout_seconds"]["compute"]}}
     lock=bundles.initialize(source,study,study_id=study_id,intent=intent) if install_workflow else None
+    if install_workflow and reference_snapshot:
+        for name in reference_snapshot["files"]:
+            target = study / "references" / name
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(inputs / "references" / name, target)
     readonly=[inputs]+([study/".allagma/bundles",study/".agents"] if install_workflow else [])
     control.mkdir(parents=True)
     resources.initialize(control/"resources",profile,study)
@@ -88,6 +129,11 @@ def prepare(source, study, control, *, brief, materials, profile, study_id="stud
         "resource receipts outside this workspace. Read `ALLAGMA.md` and use the locked "
         "methods to plan, execute, recover, analyze, write and critically review the study. "
         "The study owns its scientific code and protocol. Never edit the generated bundle.\n\n"
+        "Begin reference research with `references/INDEX.md`. Record primary papers, implementations, baselines, "
+        "competing findings and coverage gaps before choosing the protocol. Consult the relevant notes during "
+        "implementation, analysis, writing and every resumed session. Supplied reference snapshots in "
+        "`inputs/references/` and selected `inputs/reference-assets/` are immutable; later reading belongs in "
+        "the working dossier and a new revision. Scientific workers cannot acquire network inputs.\n\n"
         "Prepare and execute commands through the common local client. Keep setup separate "
         "from scientific computation. Preserve unsuccessful attempts, record uncertainty, "
         "and provide full reproduction and retained-data recomputation commands. "

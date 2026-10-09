@@ -35,7 +35,11 @@ def digest(value):
 
 def file_hash(path):
     try:
-        return digest_bytes(Path(path).read_bytes())
+        result = hashlib.sha256()
+        with Path(path).open("rb") as stream:
+            for block in iter(lambda: stream.read(1024 * 1024), b""):
+                result.update(block)
+        return result.hexdigest()
     except OSError as exc:
         raise AllagmaError(f"Cannot hash artifact {path}: {exc}") from exc
 

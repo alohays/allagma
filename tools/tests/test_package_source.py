@@ -89,6 +89,19 @@ class ReleaseTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "existing release assets"):
             self.archive()
 
+    def test_reference_caches_do_not_enter_release_and_force_tracking_fails(self):
+        self.write("tools/local-cache/.allagma-reference-cache.json", '{"format":"allagma-raw-reference-cache-v1"}')
+        self.write("tools/local-cache/paper.pdf", "RAW_REFERENCE_FIXTURE")
+        exclude = self.source / ".git/info/exclude"
+        with exclude.open("a") as stream:
+            stream.write("\n/tools/local-cache/\n")
+        _, files = self.archive("without-cache")
+        self.assertNotIn(b"RAW_REFERENCE_FIXTURE", b"".join(files.values()))
+        self.git("add", "-f", "tools/local-cache")
+        self.git("-c", "user.name=Test", "-c", "user.email=test@example.invalid", "commit", "-qm", "Force-tracked fixture")
+        with self.assertRaisesRegex(ValueError, "Raw reference caches"):
+            self.archive("blocked")
+
     def test_no_enclosing_repository_fallback(self):
         nested = self.source / "nested"
         nested.mkdir()
