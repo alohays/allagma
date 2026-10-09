@@ -8,6 +8,7 @@ import subprocess
 import tarfile
 import tempfile
 import threading
+import time
 import unittest
 from unittest.mock import patch
 import zipfile
@@ -19,7 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 adapter = _load("test_reference_acquisition", ROOT / "adapters/reference-assets/acquire.py")
 
 
-def asset(name="paper", kind="paper-pdf", **changes):
+def asset(name="paper", kind="paper-source", **changes):
     value = {"id": name, "kind": kind, "url": "https://example.org/" + name,
              "revision": "v1" if kind.startswith("paper-") else "a" * 40,
              "purpose": "Small conformance fixture, not research evidence.", "use": "reading",
@@ -94,6 +95,8 @@ class AssetTests(unittest.TestCase):
         items, bindings = [], {}
         for kind in sorted(adapter.KINDS):
             payload = (kind + " fixture").encode()
+            if kind == "paper-pdf":
+                payload = b"%PDF-1.4\n" + payload
             item = asset(kind, kind, sha256=hashlib.sha256(payload).hexdigest(), size_bytes=len(payload))
             if kind == "dataset":
                 item["split"] = "validation fixture"
@@ -119,7 +122,7 @@ class AssetTests(unittest.TestCase):
             adapter.verify(self.cache, first)
         corrupt = adapter.acquire(self.cache, self.manifest(item), self.refs)
         self.assertEqual(corrupt["assets"][0]["status"], "corrupt")
-        retained = adapter.quarantine(self.cache, first, "paper")
+        retained = adapter.quarantine(self.cache, corrupt, "paper")
         self.assertEqual((self.cache / retained["preserved_paths"][0]).read_bytes(), b"damaged")
         repaired = self.fetch(item, payload)
         self.assertEqual(repaired["assets"][0]["status"], "available")
@@ -159,6 +162,36 @@ class AssetTests(unittest.TestCase):
         result = adapter.acquire(self.cache, self.manifest(missing), self.refs)
         self.assertEqual(result["assets"][0]["status"], "unavailable")
         self.assertEqual(result["assets"][0]["reason"], missing["access_reason"])
+
+    def test_pdf_endpoint_cannot_pass_as_an_html_login_page(self):
+        result = self.fetch(asset("html", "paper-pdf"), b"<html>Login required</html>")
+        self.assertEqual(result["assets"][0]["status"], "failed")
+        self.assertIn("different file format", result["assets"][0]["reason"])
+
+    def test_elapsed_asset_deadline_interrupts_a_stalled_response(self):
+        class Handler(BaseHTTPRequestHandler):
+            def log_message(self, *args):
+                pass
+
+            def do_GET(self):
+                self.send_response(200)
+                self.send_header("Content-Length", "100")
+                self.end_headers()
+                time.sleep(2)
+
+        server = ThreadingHTTPServer(("127.0.0.1", 0), Handler)
+        threading.Thread(target=server.serve_forever, daemon=True).start()
+        self.addCleanup(server.server_close)
+        self.addCleanup(server.shutdown)
+        policy = {**self.policy, "asset_timeout_seconds": 1, "request_timeout_seconds": 1}
+        adapter.adopt_policy(self.cache, policy)
+        item = asset(url=f"http://127.0.0.1:{server.server_port}/stall")
+        start = time.monotonic()
+        result = adapter.acquire(self.cache, self.manifest(item), self.refs, online=True)
+        self.assertLess(time.monotonic() - start, 1.8)
+        self.assertEqual(result["assets"][0]["status"], "budget-exceeded")
+        self.assertEqual(result["assets"][0]["reason"], "asset_timeout_seconds")
+        self.assertGreater(result["transfer_bytes"], 0)  # Interrupted reservation remains charged.
 
     def test_tar_and_zip_extraction_reject_escape_links_and_expansion_bombs(self):
         stream = io.BytesIO()
@@ -214,11 +247,23 @@ class AssetTests(unittest.TestCase):
         item = asset(sha256=hashlib.sha256(payload).hexdigest())
         first = self.fetch(item, payload)
         other = {**item, "id": "second-url", "url": "https://example.org/second"}
-        result = adapter.acquire(self.cache, self.manifest(other, study_id="another-study"), self.refs,
-                                 provided={other["id"]: str(self.root / "source")})
+        result = adapter.acquire(self.cache, self.manifest(other, study_id="another-study"), self.refs)
         self.assertEqual(result["assets"][0]["cache_path"], first["assets"][0]["cache_path"])
         self.assertEqual(result["transfer_bytes"], 0)
         self.assertEqual(len(list((self.cache / "objects").glob("*/data"))), 1)
+
+    def test_interrupted_extraction_reuses_verified_download_offline(self):
+        stream = io.BytesIO()
+        with zipfile.ZipFile(stream, "w") as archive:
+            archive.writestr("main.tex", "Source extraction fixture.")
+        item = asset("source", "paper-source", extract="zip")
+        with patch.object(adapter.Cache, "_extract", side_effect=OSError("controlled extraction interruption")):
+            first = self.fetch(item, stream.getvalue())
+        self.assertEqual(first["assets"][0]["status"], "partial")
+        second = adapter.acquire(self.cache, self.manifest(item), self.refs)
+        self.assertEqual(second["assets"][0]["status"], "available")
+        self.assertEqual(second["transfer_bytes"], first["transfer_bytes"])
+        adapter.verify(self.cache, second)
 
     def test_preparation_copies_only_execution_assets_and_protects_them(self):
         from allagma import references, research, resources

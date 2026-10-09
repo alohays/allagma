@@ -24,7 +24,6 @@ def paper_fixture(study):
     references.refresh(refs)
     data = {"n": 4, "mean": -.025, "rows": [{"name": "A", "mean": -.025, "interval": [-.1, .05]}]}
     write_json(study / "analysis.json", data)
-    (study / "review.md").write_text("Conformance fixture review only, not a scientific qualification.\n")
     sections = {}
     for section in papers.SECTIONS:
         path = study / (section + ".tex")
@@ -35,12 +34,11 @@ def paper_fixture(study):
             text += r"\AllagmaClaim{effect} The sample count is \AllagmaValue{count}. \AllagmaTable{estimates}" + "\n"
         path.write_text(text)
         sections[section] = path.name
-    return {"format": papers.FORMAT, "output": "arxiv", "title": "Evidence boundary fixture", "date": "9 October 2026",
+    config = {"format": papers.FORMAT, "output": "arxiv", "title": "Evidence boundary fixture", "date": "9 October 2026",
         "authors": {"mode": "named", "entries": [{"name": "Fixture researcher"}],
                     "supplied_by": "conformance fixture", "supplied_at": "2026-10-09"},
         "references": "references", "sections": sections,
-        "evidence": {"analysis": {"path": "analysis.json", "sha256": file_hash(study / "analysis.json")},
-                     "review": {"path": "review.md", "sha256": file_hash(study / "review.md")}},
+        "evidence": {"analysis": {"path": "analysis.json", "sha256": file_hash(study / "analysis.json")}},
         "values": {"count": {"evidence": "analysis", "pointer": "/n", "format": "d"},
                    "mean": {"evidence": "analysis", "pointer": "/mean", "format": ".3f"}},
         "claims": [{"id": "effect", "text": "The fixture mean is {{value:mean}}; its interval contains zero.",
@@ -50,8 +48,15 @@ def paper_fixture(study):
             "caption": "Fixture data only.", "columns": [{"title": "Cell", "pointer": "/name"},
             {"title": "Mean and interval", "pointers": ["/mean", "/interval/0", "/interval/1"],
              "format": ".3f", "pattern": "{0} [{1}, {2}]"}]}],
-        "review": {kind: {"status": "complete", "scope": "Fixture structure only.", "record": "review"}
+        "review": {kind: {"status": "complete", "scope": "Fixture structure only.", "record": kind}
                    for kind in ("scientific", "humanizer")}}
+    for kind in config["review"]:
+        path = study / (kind + "-review.json")
+        write_json(path, {"format": "allagma-paper-review-v1", "kind": kind,
+                         "reviewed_content_sha256": papers.review_fingerprint(study, config),
+                         "scope": "Conformance fixture only, not a scientific qualification"})
+        config["evidence"][kind] = {"path": path.name, "sha256": file_hash(path)}
+    return config
 
 
 class PaperTests(unittest.TestCase):
@@ -144,6 +149,22 @@ class PaperTests(unittest.TestCase):
         config["claims"][0]["text"] = "The value is {{value:missing}}."
         with self.assertRaisesRegex(AllagmaError, "Unknown result value"):
             papers.validate(self.study, config)
+
+    def test_prose_changes_invalidate_both_retained_reviews(self):
+        with (self.study / "discussion.tex").open("a") as stream:
+            stream.write("This added interpretation requires review.\n")
+        with self.assertRaisesRegex(AllagmaError, "review is stale"):
+            papers.validate(self.study, self.config)
+
+    def test_short_tables_stay_together_and_pdf_attribution_is_configured(self):
+        value = papers.validate(self.study, self.config)
+        value["tables"]["estimates"]["breakable"] = False
+        self.assertIn(r"\begin{table}", papers.macros(value))
+        source = self.root / "source"
+        adapter.assemble(self.study, self.config, source)
+        main = (source / "main.tex").read_text()
+        self.assertIn("pdfauthor={Fixture researcher}", main)
+        self.assertNotIn("@@PDF_AUTHORS@@", main)
 
 
 if __name__ == "__main__":

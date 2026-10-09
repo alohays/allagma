@@ -14,11 +14,15 @@ import io
 import os
 from pathlib import Path
 import re
+import signal
 import shutil
+import ssl
 import stat
 import subprocess
+import sys
 import tarfile
 import time
+import threading
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 import uuid
@@ -36,6 +40,17 @@ DEFAULTS = {"format": "allagma-acquisition-policy-v1", "asset_bytes": 256 * MIB,
             "attempts_per_asset": 2, "extraction_files": 10000,
             "request_timeout_seconds": 30, "asset_timeout_seconds": 600}
 KINDS = {"paper-pdf", "paper-source", "code", "model", "dataset"}
+
+
+def tls_context():
+    context = ssl.create_default_context()
+    defaults = ssl.get_default_verify_paths()
+    # python.org macOS installations can have an uninstalled optional certifi
+    # link. Use the OS's existing CA bundle when no configured trust path exists;
+    # certificate and hostname verification remain required.
+    if not defaults.cafile and not defaults.capath and sys.platform == "darwin" and Path("/etc/ssl/cert.pem").is_file():
+        context.load_verify_locations(cafile="/etc/ssl/cert.pem")
+    return context
 
 
 def sha256(path):
@@ -170,6 +185,7 @@ def validate_manifest(manifest):
         require(nonempty(asset.get("purpose")) and asset.get("use") in ("reading", "execution"),
                 f"{key}: explain why this asset is needed")
         require(asset.get("access") in ("public", "gated", "unavailable"), f"{key}: declare asset access")
+        require(asset.get("acquisition", "http") in ("http", "provided"), f"{key}: invalid acquisition route")
         license_record = asset.get("license", {})
         require(nonempty(license_record.get("name")) and nonempty(license_record.get("note")),
                 f"{key}: retain a license and permitted-use note, including unknown restrictions")
@@ -199,6 +215,26 @@ def identity(asset):
 
 class BudgetError(AllagmaError):
     pass
+
+
+@contextmanager
+def asset_deadline(seconds):
+    """An elapsed deadline also interrupts a peer that keeps a read alive."""
+    require(threading.current_thread() is threading.main_thread(), "Run acquisition in a dedicated main process, not a background thread")
+    old_handler = signal.getsignal(signal.SIGALRM)
+    old_timer = signal.getitimer(signal.ITIMER_REAL)
+    require(old_timer[0] == 0, "Acquisition cannot replace another active process deadline")
+
+    def expired(signum, frame):
+        raise BudgetError("asset_timeout_seconds")
+
+    signal.signal(signal.SIGALRM, expired)
+    signal.setitimer(signal.ITIMER_REAL, seconds)
+    try:
+        yield
+    finally:
+        signal.setitimer(signal.ITIMER_REAL, 0)
+        signal.signal(signal.SIGALRM, old_handler)
 
 
 class Cache:
@@ -274,7 +310,7 @@ class Cache:
         self.ledger["transfer_bytes"] += amount
         attempt["charged_bytes"] += amount
         self.save()
-        block = stream.read(amount)
+        block = getattr(stream, "read1", stream.read)(amount)
         unused = amount - len(block)
         self.ledger["transfer_bytes"] -= unused
         attempt["charged_bytes"] -= unused
@@ -319,7 +355,7 @@ class Cache:
                         headers["If-Range"] = validator
                 else:
                     offset = 0
-                stream = urlopen(Request(asset["url"], headers=headers), timeout=self.policy["request_timeout_seconds"])
+                stream = urlopen(Request(asset["url"], headers=headers), timeout=self.policy["request_timeout_seconds"], context=tls_context())
                 require(stream.status in (200, 206), "Unexpected acquisition HTTP status")
                 require(stream.headers.get("Content-Encoding", "identity") == "identity", "Encoded HTTP transfer is unsupported")
                 if stream.status == 206:
@@ -362,6 +398,9 @@ class Cache:
             require(asset.get("size_bytes") is None or offset == asset["size_bytes"], "Asset size differs from the pinned size")
             observed = sha256(part)
             require(not asset.get("sha256") or observed == asset["sha256"], "Asset digest differs from the pinned digest")
+            if asset["kind"] == "paper-pdf":
+                with part.open("rb") as check:
+                    require(check.read(5) == b"%PDF-", "Paper PDF endpoint returned a different file format")
             destination = self.path / "objects" / observed / "data"
             destination.parent.mkdir(parents=True, exist_ok=True)
             if destination.exists():
@@ -388,6 +427,9 @@ class Cache:
         if receipt_path.exists():
             record["tree"] = read_json(receipt_path)
             self.check(record)
+            if len(record["tree"]["files"]) > self.policy["extraction_files"]:
+                raise BudgetError("extraction_files")
+            self.admit_existing(record)
             return
         staging = self.study / "partial" / (identity(asset) + "-extract")
         if staging.exists():
@@ -502,32 +544,37 @@ class Cache:
             self.ledger["assets"][key] = result
             self.save()
             return result
+        cached_sha = asset.get("sha256") or (existing or {}).get("sha256")
+        cached_blob = self.path / "objects" / (cached_sha or "unknown") / "data"
+        have_blob = bool(cached_sha and cached_blob.is_file() and sha256(cached_blob) == cached_sha)
         attempts = [a for a in self.ledger["attempts"] if a["asset_identity"] == key]
         if len(attempts) >= self.policy["attempts_per_asset"]:
             return {"status": "budget-exceeded", "reason": "attempts_per_asset", "attempts": len(attempts)}
-        if provided is None and not online:
+        if provided is None and not online and not have_blob:
             return {"status": "unavailable", "reason": "Asset is not cached or provided; online retrieval was not enabled"}
+        if provided is None and asset.get("acquisition") == "provided" and not have_blob:
+            return {"status": "unavailable", "reason": "Import the pinned file from the source package through --provided; its URL records provenance"}
         attempt = {"id": uuid.uuid4().hex, "asset_identity": key, "started_at": utcnow(),
                    "status": "running", "charged_bytes": 0, "policy_sha256": digest(self.policy)}
         self.ledger["attempts"].append(attempt)
         self.save()
         result = {}
         try:
-            # Shared content can be reused by digest even across source URLs.
-            obj = self.path / "objects" / (asset.get("sha256") or "unknown") / "data"
-            if asset.get("sha256") and obj.is_file() and sha256(obj) == asset["sha256"]:
-                result = {"sha256": asset["sha256"], "size_bytes": obj.stat().st_size,
-                          "cache_path": obj.relative_to(self.path).as_posix()}
-                require(asset.get("size_bytes") is None or result["size_bytes"] == asset["size_bytes"],
-                        "Cached asset size disagrees with the supplied pin")
-                self.admit_existing(result)
-            else:
-                result = self._download(asset, key, attempt, online=online, provided=provided)
-            # Account for the object before extraction and preserve its verified
-            # identity even if extraction stops at a ceiling.
-            self.ledger["assets"][key] = result
-            self.save()
-            self._extract(asset, result)
+            with asset_deadline(self.policy["asset_timeout_seconds"]):
+                # Shared content can be reused by digest even across source URLs.
+                if have_blob:
+                    result = {"sha256": cached_sha, "size_bytes": cached_blob.stat().st_size,
+                              "cache_path": cached_blob.relative_to(self.path).as_posix()}
+                    require(asset.get("size_bytes") is None or result["size_bytes"] == asset["size_bytes"],
+                            "Cached asset size disagrees with the supplied pin")
+                    self.admit_existing(result)
+                else:
+                    result = self._download(asset, key, attempt, online=online, provided=provided)
+                # Account for the object before extraction and preserve its verified
+                # identity even if extraction stops at a ceiling.
+                self.ledger["assets"][key] = result
+                self.save()
+                self._extract(asset, result)
             result.update(status="available", acquired_at=utcnow(), asset_identity=key)
             self.index[key] = result
             write_json(self.index_path, self.index)
@@ -536,7 +583,8 @@ class Cache:
         except HTTPError as exc:
             result.update(status="unavailable" if exc.code in (401, 403, 404, 410) else "partial", reason=f"HTTP {exc.code}")
         except (URLError, TimeoutError, OSError, HTTPException) as exc:
-            result.update(status="partial", reason=type(exc).__name__)
+            reason = "TLS verification failed; configure a trusted SSL_CERT_FILE" if isinstance(getattr(exc, "reason", None), ssl.SSLCertVerificationError) else type(exc).__name__
+            result.update(status="partial", reason=reason)
         except (AllagmaError, ValueError, tarfile.TarError, zipfile.BadZipFile) as exc:
             # Our validation messages contain no authenticated transport URL.
             result.update(status="failed", reason=str(exc))
@@ -578,7 +626,9 @@ def acquire(cache, manifest, directory, *, online=False, provided=None, approval
             except BudgetError as exc:
                 result = {"status": "budget-exceeded", "reason": str(exc)}
             except (AllagmaError, OSError) as exc:
-                result = {"status": "corrupt", "reason": str(exc)}
+                previous = controller.ledger["assets"].get(identity(asset)) or controller.index.get(identity(asset)) or {}
+                result = {key: val for key, val in previous.items() if key in ("sha256", "size_bytes", "cache_path", "tree", "asset_identity")}
+                result.update(status="corrupt", reason=str(exc) if isinstance(exc, AllagmaError) else type(exc).__name__)
             assets.append({**asset, **result})
         output = {"format": "allagma-reference-retrieval-v1", "study_id": manifest["study_id"],
                   "created_at": utcnow(), "policy": controller.policy, "assets": assets,

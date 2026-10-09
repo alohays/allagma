@@ -12,7 +12,7 @@ to supplied file paths. Keep that binding file outside versioned notes. The
 public `retrieval.json` uses paths relative to the cache, public source URLs,
 revisions, licenses, hashes, sizes and explicit acquisition states.
 
-The default cache is `.allagma-reference-cache` in the source checkout. Choose
+The default cache is `.allagma-reference-cache` in the current directory. Choose
 another path within a Git working tree with `--cache`. Initialization resolves
 `git rev-parse --path-format=absolute --git-path info/exclude`, preserves existing
 entries and appends the cache exclusion. It works when `.git` is a linked-worktree
@@ -50,3 +50,15 @@ digest is trust on first acquisition. Code/model/data revisions must appear in
 the retrieval URL or be bound to an expected digest. A commit string alone does
 not authenticate arbitrary bytes. Paper PDFs and sources retain their explicit
 version. A successful transfer is not a license clearance or scientific review.
+
+After inspecting an initial acquisition, copy its observed hash and size into
+the public asset request to pin future retrievals. Already verified objects are
+reused without another transfer, including when extraction must resume. For an
+asset restored from a larger package, `acquisition: provided` makes its public
+URL provenance-only and requires the exact local file on first import.
+
+TLS certificate and hostname verification remain enabled. On a python.org macOS
+installation without its optional CA link, the adapter uses the existing system
+CA bundle. An explicit trusted `SSL_CERT_FILE` works through Python's normal TLS
+configuration. Acquisition runs in a main process so an elapsed-time deadline
+can interrupt stalled or slowly delivered transfers as well as extraction.

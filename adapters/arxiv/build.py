@@ -88,19 +88,34 @@ def compile_sources(source, output, *, engine="pdflatex", timeout=60):
 
         def command(argv):
             invocations.append([Path(argv[0]).name, *argv[1:]])
-            text = run([*prefix, *argv], cwd=work, env=env, timeout=timeout)
+            try:
+                text = run([*prefix, *argv], cwd=work, env=env, timeout=timeout)
+            except (RuntimeError, OSError, subprocess.SubprocessError) as exc:
+                for name in ("main.log", "main.fls", "main.pdf"):
+                    if (work / name).is_file():
+                        shutil.copyfile(work / name, output / name)
+                (output / "failure.json").write_text(json.dumps({"status": "failed", "commands": invocations,
+                    "reason": str(exc).replace(str(work), "<clean-build>")}, indent=2) + "\n")
+                raise
             combined.append(text)
 
         tex = [compiler, "-no-shell-escape", "-interaction=nonstopmode", "-halt-on-error", "-file-line-error", "-recorder", "main.tex"]
         command(tex)
         if r"\citation{" in (work / "main.aux").read_text():
             command([bibtex, "main"])
-        command(tex)
-        command(tex)
-        log = (work / "main.log").read_text(errors="replace")
+        for iteration in range(5):
+            command(tex)
+            log = (work / "main.log").read_text(errors="replace")
+            if iteration >= 1 and not re.search(r"Rerun to get|Rerun to get cross-references|Label\(s\) may have changed", log, re.I):
+                break
+        for name in ("main.pdf", "main.bbl", "main.log", "main.fls"):
+            if (work / name).exists():
+                shutil.copyfile(work / name, output / name)
+        (output / "commands.log").write_text("\n".join(combined).replace(str(work), "<clean-build>"))
         defects = [line for line in log.splitlines() if re.search(
             r"Overfull \\[hv]box|undefined|Rerun to get|There were multiply-defined|Citation .*not found", line, re.I)]
         if defects:
+            (output / "failure.json").write_text(json.dumps({"status": "failed", "layout_reference_errors": defects}, indent=2) + "\n")
             raise RuntimeError("Unresolved TeX layout/reference defects:\n" + "\n".join(defects))
         pdf = work / "main.pdf"
         if not pdf.is_file() or not pdf.read_bytes().startswith(b"%PDF-"):

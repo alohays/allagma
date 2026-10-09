@@ -55,6 +55,8 @@ def assemble(study, config, destination):
     for key, replacement in replacements.items():
         require("@@" + key + "@@" in main, "Preprint template is missing its " + key + " slot")
         main = main.replace("@@" + key + "@@", replacement)
+    pdf_authors = "Anonymous draft" if config["authors"]["mode"] == "anonymous" else "; ".join(a["name"] for a in config["authors"]["entries"])
+    main = main.replace("@@PDF_AUTHORS@@", tex_escape(pdf_authors))
     write_text(destination / "main.tex", main, immutable=True)
     write_text(destination / "evidence-macros.tex", papers.macros(value), immutable=True)
     write_text(destination / "references.bib", references.bibliography(value["literature"]), immutable=True)
@@ -67,6 +69,9 @@ def assemble(study, config, destination):
     write_json(destination / "anc/reference-map.json", value["literature"], immutable=True)
     write_text(destination / "anc/reference-index.md", references.render_index(value["literature"]), immutable=True)
     reference_directory = confined(study, config["references"])
+    for original, target in (("assets.json", "reference-assets.json"), ("retrieval.json", "reference-retrieval.json")):
+        if (reference_directory / original).is_file():
+            shutil.copyfile(reference_directory / original, destination / "anc" / target)
     for record in value["literature"]["records"]:
         if record.get("note"):
             target = confined(destination / "anc", record["note"])

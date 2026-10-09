@@ -302,6 +302,6 @@ def main(argv=None):
         if isinstance(result, dict) and (result.get("verdict") in ("revise", "blocked") or result.get("execution_status") in ("failed", "blocked", "budget_exhausted", "needs_revision")):
             return 1
         return 0
-    except (AllagmaError, OSError, KeyError, ValueError) as exc:
+    except (AllagmaError, OSError, KeyError, ValueError, RuntimeError, subprocess.SubprocessError) as exc:
         print(f"allagma: {exc}", file=sys.stderr)
         return 2

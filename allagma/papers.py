@@ -10,7 +10,7 @@ import math
 import re
 
 from . import references
-from .files import AllagmaError, confined, file_hash, read_json, write_json, write_text
+from .files import AllagmaError, confined, digest, file_hash, read_json, write_json, write_text
 from .references import ID, nonempty, require, tex_escape
 
 FORMAT = "allagma-paper-output-v1"
@@ -98,6 +98,18 @@ def _source(study, source):
     path = confined(study, source["path"])
     require(path.is_file() and file_hash(path) == source.get("sha256"), f"Missing or changed paper evidence: {source['path']}")
     return path
+
+
+def review_fingerprint(study, config):
+    """Bind reviews to prose, attribution, citations and the evidence selection."""
+    review_ids = {item.get("record") for item in config.get("review", {}).values()}
+    selected = {key: item for key, item in config.get("evidence", {}).items() if key not in review_ids}
+    content = {key: config.get(key) for key in ("title", "date", "authors", "template", "claims", "values", "figures", "tables")}
+    content.update(evidence=selected,
+                   sections={path: file_hash(confined(study, path)) for path in config["sections"].values()},
+                   appendices=[{**item, "sha256": file_hash(confined(study, item["path"]))} for item in config.get("appendices", [])],
+                   reference_map_sha256=file_hash(confined(study, config["references"]) / "map.json"))
+    return digest(content)
 
 
 def validate(study, config):
@@ -212,6 +224,10 @@ def validate(study, config):
         item = review.get(kind, {})
         require(item.get("status") == "complete" and nonempty(item.get("scope")) and item.get("record") in paths,
                 f"Retain a scoped {kind} review before building the final paper package")
+        record = read_json(paths[item["record"]])
+        require(record.get("format") == "allagma-paper-review-v1" and record.get("kind") == kind
+                and record.get("reviewed_content_sha256") == review_fingerprint(study, config),
+                f"The {kind} review is stale or not bound to this manuscript revision")
     return {"status": "pass", "authors_tex": authors, "literature": literature, "sections": section_text,
             "evidence_paths": {key: str(path) for key, path in paths.items()}, "values": values,
             "value_provenance": value_provenance, "claims": claims, "figures": figures, "tables": tables,
@@ -252,5 +268,10 @@ def macros(validated):
                 r"\toprule " + header + r" \midrule\endfirsthead" + "\n" +
                 r"\toprule " + header + r" \midrule\endhead" + "\n" + rows + "\n" +
                 r"\bottomrule\end{longtable}" + "\n}\n")
+        if table.get("breakable", True) is False:
+            body = ("\n" + r"\begin{table}[htbp]\centering\small" + "\n" +
+                    r"\caption{" + tex_escape(table["caption"]) + r"}\label{tab:" + key + "}\n" +
+                    r"\begin{tabular}{@{}" + "".join(layout) + "@{}}\n" + r"\toprule " + header +
+                    r" \midrule" + "\n" + rows + "\n" + r"\bottomrule\end{tabular}\end{table}" + "\n")
         definition("Table", key, body)
     return "\n".join(lines) + "\n"

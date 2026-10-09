@@ -21,6 +21,11 @@ limitations. Figures copy the exact hashed PDF/PNG/JPEG. Scientific and humanize
 reviews are retained evidence; validation checks their existence and declared
 scope, not whether an agent's judgment is correct.
 
+Reviews are JSON records bound to a content fingerprint of prose, author
+metadata, citations and selected results. Editing that content makes a review
+stale. The final PDF also records the configured title and authors in its metadata.
+Set `breakable: false` on a short table to keep its rows on one page.
+
 The configurable default is a small single-column `article` preprint style with
 standard TeX packages. A custom template declares its main template digest and
 each required `.sty`, `.cls` or `.bst` file. Every template must include the
