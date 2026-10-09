@@ -62,6 +62,18 @@ class ReferenceTests(unittest.TestCase):
         record["metadata"]["arxiv"] = "https://arxiv.org/abs/2006.11239v2"
         self.assertIn("doi:10.1234/fixture", references.identities(record))
         self.assertIn("arxiv:2006.11239", references.identities(record))
+        plain = reference_record()
+        merged = references.add_record(references.add_record(self.value, plain), record)
+        self.assertEqual(len(merged["records"]), 1)
+
+    def test_same_title_with_different_authors_is_not_silently_conflated(self):
+        first = reference_record()
+        first["metadata"].pop("doi")
+        second = deepcopy(first)
+        second["id"] = "DifferentWork"
+        second["metadata"]["authors"] = ["Other, Bob"]
+        value = references.add_record(references.add_record(self.value, first), second)
+        self.assertEqual(len(value["records"]), 2)
 
     def test_bibliographic_accuracy_does_not_imply_claim_support(self):
         record = reference_record()
@@ -126,6 +138,16 @@ class ReferenceTests(unittest.TestCase):
         entry = bundles.resolve_entry(study, "research/scope")
         self.assertIn("reference-research.md", Path(entry["path"]).read_text())
         self.assertFalse((study / "paper.pdf").exists())
+
+    def test_raw_cache_inside_distributable_source_cannot_enter_a_bundle(self):
+        from allagma.bundles import distributable_inventory
+        source = self.root / "source"
+        raw = source / "nested-cache"
+        raw.mkdir(parents=True)
+        write_json(raw / ".allagma-reference-cache.json", {"format": "allagma-raw-reference-cache-v1"})
+        (raw / "weights.bin").write_bytes(b"Never package raw cached assets")
+        with self.assertRaisesRegex(AllagmaError, "Raw reference cache"):
+            distributable_inventory(source)
 
 
 if __name__ == "__main__":

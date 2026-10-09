@@ -56,13 +56,18 @@ def compile_sources(source, output, *, engine="pdflatex", timeout=60):
             shutil.copyfile(source / name, target)
         (work / "home").mkdir()
         tex_root = Path(subprocess.check_output([kpsewhich, "--var-value=TEXMFROOT"], text=True).strip()).resolve()
+        tex_roots = {tex_root}
+        for variable in ("TEXMFSYSVAR", "TEXMFSYSCONFIG", "TEXMFDIST"):
+            raw_path = subprocess.check_output([kpsewhich, "--var-value=" + variable], text=True).strip()
+            if raw_path and Path(raw_path).is_dir():
+                tex_roots.add(Path(raw_path).resolve())
         env = {"PATH": str(Path(compiler).parent) + os.pathsep + "/usr/bin:/bin",
                "HOME": str(work / "home"), "TMPDIR": str(work), "LANG": "C.UTF-8",
                "TEXMFHOME": str(work / "empty-texmf"), "TEXMFVAR": str(work / "texmf-var"),
                "TEXMFCONFIG": str(work / "texmf-config"), "TEXINPUTS": ".:", "BIBINPUTS": ".:", "BSTINPUTS": ".:",
                "openin_any": "p", "openout_any": "p", "SOURCE_DATE_EPOCH": "1791504000", "FORCE_SOURCE_DATE": "1"}
         if sys.platform == "darwin" and Path("/usr/bin/sandbox-exec").is_file():
-            allowed = [work, tex_root, Path("/System"), Path("/usr/lib"), Path("/usr/share"),
+            allowed = [work, *sorted(tex_roots), Path("/System"), Path("/usr/lib"), Path("/usr/share"),
                        Path("/Library/Apple"), Path("/dev")]
             quote = lambda p: json.dumps(str(p))
             policy = "\n".join(["(version 1)", "(allow default)", "(deny network*)", "(deny file-read-data)",
@@ -78,8 +83,9 @@ def compile_sources(source, output, *, engine="pdflatex", timeout=60):
             for directory in ("/usr", "/bin", "/lib", "/lib64", "/etc"):
                 if Path(directory).exists():
                     prefix += ["--ro-bind", directory, directory]
-            if not tex_root.is_relative_to(Path("/usr")):
-                prefix += ["--ro-bind", str(tex_root), str(tex_root)]
+            for runtime_root in sorted(tex_roots):
+                if not runtime_root.is_relative_to(Path("/usr")) and not runtime_root.is_relative_to(Path("/etc")):
+                    prefix += ["--ro-bind", str(runtime_root), str(runtime_root)]
             prefix += ["--proc", "/proc", "--dev", "/dev", "--bind", str(work), str(work), "--chdir", str(work)]
             isolation = "Linux bubblewrap: private network; clean build plus read-only TeX/system runtime; no reference cache mount"
         else:
@@ -113,7 +119,7 @@ def compile_sources(source, output, *, engine="pdflatex", timeout=60):
                 shutil.copyfile(work / name, output / name)
         (output / "commands.log").write_text("\n".join(combined).replace(str(work), "<clean-build>"))
         defects = [line for line in log.splitlines() if re.search(
-            r"Overfull \\[hv]box|undefined|Rerun to get|There were multiply-defined|Citation .*not found", line, re.I)]
+            r"Overfull \\[hv]box|Missing character:|undefined|Rerun to get|There were multiply-defined|Citation .*not found", line, re.I)]
         if defects:
             (output / "failure.json").write_text(json.dumps({"status": "failed", "layout_reference_errors": defects}, indent=2) + "\n")
             raise RuntimeError("Unresolved TeX layout/reference defects:\n" + "\n".join(defects))

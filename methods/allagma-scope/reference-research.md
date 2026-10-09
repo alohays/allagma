@@ -10,7 +10,8 @@ and historical campaign records are immutable.
    implementations, baselines, competing findings and gaps. Record why a category
    is limited or inapplicable. Follow citations and code links where relevant.
 2. Deduplicate by DOI, arXiv identity across versions, and normalized title.
-   Preserve one citation key. Resolve conflicting authors, versions or years by
+   Combine normalized titles with author/year identity; different works can share
+   a title. Preserve one citation key. Resolve conflicting authors, versions or years by
    checking primary publication metadata; do not silently merge conflicts.
 3. Read the relevant source. Record a page/section/code locator, a concise
    paraphrase (or short permitted excerpt), its claim, support assessment and

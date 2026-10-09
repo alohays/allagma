@@ -1,0 +1,59 @@
+name: Paper output
+on:
+  pull_request:
+    paths:
+      - 'allagma/**'
+      - 'adapters/arxiv/**'
+      - 'studies/ema-schedule/publications/reference-r2/**'
+      - 'tools/verify_paper_output.py'
+      - '.github/workflows/paper.yml'
+  push:
+    branches: ['main', 'codex/reference-research-arxiv']
+    paths:
+      - 'allagma/**'
+      - 'adapters/arxiv/**'
+      - 'studies/ema-schedule/publications/reference-r2/**'
+      - 'tools/verify_paper_output.py'
+      - '.github/workflows/paper.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  portable-paper:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          sparse-checkout: |
+            allagma
+            adapters/arxiv
+            studies/ema-schedule/publications/reference-r2
+            tools
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Install the separate TeX and PDF inspection toolchain
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends texlive-latex-recommended texlive-latex-extra lmodern poppler-utils bubblewrap
+          if test -e /proc/sys/kernel/apparmor_restrict_unprivileged_userns; then
+            sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+          fi
+          pdflatex --version
+      - name: Verify retained numerical summaries and paper links
+        run: |
+          python3 studies/ema-schedule/publications/reference-r2/derive.py
+          python3 -m allagma reference check --directory studies/ema-schedule/publications/reference-r2/references --require-review
+          python3 -m allagma paper check --study studies/ema-schedule/publications/reference-r2
+      - name: Compile and recompile the unpacked archive without network or cache access
+        run: |
+          python3 -m allagma paper build --study studies/ema-schedule/publications/reference-r2 --destination build/paper
+          python3 tools/verify_paper_output.py --directory build/paper --author allagma --tex-release 2023
+          mkdir build/paper/rendered
+          pdftoppm -r 90 -png build/paper/paper.pdf build/paper/rendered/page
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: portable-paper
+          path: build/paper

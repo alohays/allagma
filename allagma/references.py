@@ -56,7 +56,8 @@ def normalized_title(value):
 
 def identities(record):
     meta = record["metadata"]
-    values = {"title:" + normalized_title(meta["title"])}
+    values = {"title:" + normalized_title(meta["title"]) + ":" + str(meta["year"]) + ":" +
+              normalized_title(meta["authors"][0])}
     if meta.get("doi"):
         doi = re.sub(r"^https?://(?:dx\.)?doi.org/|^doi:\s*", "", meta["doi"], flags=re.I).strip().lower()
         require(bool(re.fullmatch(r"10\.\d{4,9}/\S+", doi)), "Invalid DOI identifier")
@@ -185,7 +186,9 @@ def add_record(value, record, *, directory=None):
         # verification status. New interpretation belongs in its reading note.
         for name, val in record["metadata"].items():
             if name in existing["metadata"]:
-                require(existing["metadata"][name] == val or name in ("title", "url"),
+                same_doi = name == "doi" and {v for v in identities(existing) if v.startswith("doi:")} == {
+                    v for v in identities(record) if v.startswith("doi:")}
+                require(existing["metadata"][name] == val or name in ("title", "url") or same_doi,
                         f"Conflicting metadata field: {name}")
             else:
                 existing["metadata"][name] = val

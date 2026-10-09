@@ -29,6 +29,8 @@ the study-owned map and notes is supported. `index` regenerates the index and
 citation key. Conflicting metadata requires explicit resolution. A DOI or arXiv
 identity matches across URL spellings or paper versions; different versions
 still require a deliberate choice of which bytes were read.
+Title matching also includes the first author and year, so unrelated works with
+the same title remain distinct. Ambiguous matches require critical review.
 
 ## Record a critical reading
 

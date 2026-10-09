@@ -16,8 +16,10 @@ labeled new manuscript revision.
 Generate empirical numbers and tables from hashed results. Bind figures to
 their retained source hashes and claims to result locators. Cite verified
 metadata and the source passages actually read. A correct DOI does not verify
-support for an assertion. Apply humanizer to improve clarity while preserving
-every fact, number, citation, uncertainty statement and scientific meaning.
+support for an assertion. Apply the humanizer skill when installed. The portable
+fallback removes promotion, stock phrases, filler and repetitive openings, and
+uses concrete verbs. Preserve every fact, number, citation, uncertainty statement
+and scientific meaning during either prose pass.
 Retain a scoped scientific review and a separate record of the prose review.
 
 Use a configurable preprint template compatible with current official arXiv TeX
