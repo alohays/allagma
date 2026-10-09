@@ -5,7 +5,7 @@ literature map, bounded reference acquisition and a compiled paper with portable
 sources. The original science, attempts, bundles, report and audits remain
 unchanged. No new training or native model session was run.
 
-[Read the paper](artifacts/paper.pdf), [download its source archive](artifacts/paper-source.tar.gz),
+[Read the paper](artifacts/review-r1/paper.pdf), [download its source archive](artifacts/review-r1/paper-source.tar.gz),
 or start with the [reference index](references/INDEX.md). The paper's author label
 `allagma` was explicitly supplied by the owner. Other researchers configure their
 own attribution; it is not a framework default.
@@ -112,11 +112,18 @@ arrays and two evaluation arrays, with network, protected-input writes and
 shared-cache reads denied. An earlier preparation is retained; a new preparation
 revision clarifies the evaluation-file description without changing its bytes.
 
-[Scientific review](scientific-review.json) and [humanizer review](humanizer-review.json)
-are bound to the manuscript, citations, attribution and selected evidence.
+[Scientific review](reviews/pr14-scientific.json) and [humanizer review](reviews/pr14-humanizer.json)
+are bound to the manuscript, section roles, citations, attribution and selected evidence.
 They are same-assistant reviews, not independent peer review. The
-[delivery receipt](artifacts/delivery.json) binds the PDF and source archive to
-two clean builds, including compilation of the unpacked archive. The
-[PDF inspection](evidence/pdf-review.json) records the page review. Local TeX
+[delivery receipt](artifacts/review-r1/delivery.json) binds the PDF and source archive to
+two clean builds, including invocation of the unpacked archive's own builder. The
+[PDF inspection](evidence/pdf-review-pr14.json) records the page review. Local TeX
 Live 2024 results are identified separately from the supported-release CI check.
 No arXiv processing or acceptance is claimed, and no submission was made.
+
+The PR review repairs changed packaging and review identity. The manuscript and
+PDF bytes remain unchanged. The original [scientific review](scientific-review.json),
+[prose review](humanizer-review.json) and [delivery](artifacts/delivery.json) remain
+as historical evidence. The current archive isolates reading notes from generated
+ancillary files. [Repair evidence](../../../../docs/contributing/pr14-revisions.md)
+records all four findings and their regressions.

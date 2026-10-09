@@ -161,8 +161,8 @@
   "date": "9 October 2026",
   "evidence": {
     "humanizer-review": {
-      "path": "humanizer-review.json",
-      "sha256": "a8815d094e80dc42ca4353b7282418d1a9bc91d2bc8545622fc6b49714a14868"
+      "path": "reviews/pr14-humanizer.json",
+      "sha256": "87cbaafc21b9defe33f440ad044ffb0cf3664c948f6b9fcad53f8922e5a8c3d9"
     },
     "license": {
       "path": "science/license.txt",
@@ -189,8 +189,8 @@
       "sha256": "12179e08a001fab35570d82de8f8c2f4bb654b9f7ef67d0136101cd0af8f44e8"
     },
     "scientific-review": {
-      "path": "scientific-review.json",
-      "sha256": "50f5c45212ca1a9794d01aeb186f0362ef79f80b7abeb2a51b987e87f28609dd"
+      "path": "reviews/pr14-scientific.json",
+      "sha256": "b63b59a83208feb017d0711c8999f8e3964c4599b6877f8a5f0c51cb3b9699b5"
     },
     "seed-level": {
       "path": "science/seed-level.json",
@@ -219,12 +219,12 @@
   "review": {
     "humanizer": {
       "record": "humanizer-review",
-      "scope": "Same-assistant, revision-bound review; not independent scientific peer review.",
+      "scope": "Same-assistant review under section-role binding; unchanged scientific content, not independent peer review.",
       "status": "complete"
     },
     "scientific": {
       "record": "scientific-review",
-      "scope": "Same-assistant, revision-bound review; not independent scientific peer review.",
+      "scope": "Same-assistant review under section-role binding; unchanged scientific content, not independent peer review.",
       "status": "complete"
     }
   },

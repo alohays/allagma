@@ -6,6 +6,9 @@ on:
       - 'adapters/arxiv/**'
       - 'studies/ema-schedule/publications/reference-r2/**'
       - 'tools/verify_paper_output.py'
+      - 'tools/test_paper_archive.py'
+      - 'conformance/test_papers.py'
+      - 'conformance/test_references.py'
       - '.github/workflows/paper.yml'
   push:
     branches: ['main', 'codex/reference-research-arxiv']
@@ -14,6 +17,9 @@ on:
       - 'adapters/arxiv/**'
       - 'studies/ema-schedule/publications/reference-r2/**'
       - 'tools/verify_paper_output.py'
+      - 'tools/test_paper_archive.py'
+      - 'conformance/test_papers.py'
+      - 'conformance/test_references.py'
       - '.github/workflows/paper.yml'
   workflow_dispatch:
 permissions:
@@ -28,6 +34,7 @@ jobs:
           sparse-checkout: |
             allagma
             adapters/arxiv
+            conformance
             studies/ema-schedule/publications/reference-r2
             tools
       - uses: actions/setup-python@v7
@@ -41,6 +48,8 @@ jobs:
             sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
           fi
           pdflatex --version
+      - name: Exercise a reading-note collision through the packaged builder
+        run: python3 -B tools/test_paper_archive.py
       - name: Verify retained numerical summaries and paper links
         run: |
           python3 studies/ema-schedule/publications/reference-r2/derive.py
