@@ -1,0 +1,23 @@
+There are only four independent seeds per dataset, two synthetic
+distributions and one small denoiser. Confidence intervals are wide,
+multiple comparisons are numerous and generated samples do not increase
+the number of independent training runs. A zero-containing interval does
+not establish equivalence. SW1 on these two-dimensional datasets is not
+directly comparable with image-scale FID or classification accuracy.
+
+The study does not test more EMA windows, SWA, post-hoc averaging,
+parameter-switching methods, different architectures or alternative
+optimizers. It keeps the diffusion-noise schedule fixed and does not
+separate the terminal optimizer rate from the rest of its schedule. Mode
+coverage reaches a ceiling and cannot rule out incorrect component masses.
+The finite-sample SW1 estimates are not debiased by subtracting a reference
+floor.
+
+This publication revision reuses completed scientific outputs. Its
+targeted literature map is retrospective and not an exhaustive systematic
+review. The numerical checks in this revision recompute summaries from
+retained seed-level measurements; they do not rerun training or extract
+metrics anew from all saved samples. Earlier retained controller checks
+provide the separate saved-state replay evidence. The agent-assisted
+scientific critique and prose review are provisional and are not independent
+scientific peer review.

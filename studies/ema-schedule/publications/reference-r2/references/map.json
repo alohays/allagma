@@ -1,0 +1,619 @@
+{
+  "coverage": {
+    "categories": {
+      "baseline": {
+        "reason": "Raw, fixed-decay EMA, SWA and alternative averaging are identified. Only the original raw/EMA comparisons were executed.",
+        "status": "limited"
+      },
+      "competing": {
+        "reason": "Ajroldi 2025 limits replacement-of-annealing claims; Li 2024 contains ordinary-EMA degradations and a distinct switching intervention. Different protocols are kept explicit.",
+        "status": "covered"
+      },
+      "gaps": {
+        "reason": "The retained study leaves averaging windows, more seeds, architectures and alternative averaging untested. The search does not establish that these are novel open problems.",
+        "status": "limited"
+      },
+      "implementation": {
+        "reason": "Three exact AI-Scientist repository files at commit 1de1dbc are retained with hashes, plus the completed study's immutable lineage.",
+        "status": "covered"
+      },
+      "primary": {
+        "reason": "Seven located full papers cover DDPM, weight averaging, optimizer schedules and contrary outcomes.",
+        "status": "covered"
+      }
+    },
+    "limitations": [
+      "Targeted narrative literature map, not a systematic review or exhaustive search through October 2026. Search engine indexing and selected English-language sources limit coverage.",
+      "This map was built for a new manuscript revision after the frozen r07 experiment. It does not retroactively establish preregistered literature choices or change historical science.",
+      "The cited studies differ in architectures, datasets, optimizers, averaging rules and metrics. No cross-paper meta-analysis or new reproduction of their reported results was performed.",
+      "Selected raw PDFs, source archives, repository files, one real model artifact and one evaluation split are local-only. The map does not claim that every upstream model or dataset was acquired."
+    ],
+    "queries": [
+      {
+        "date": "2026-10-09",
+        "query": "site.arxiv.org \"Exponential Moving Average of Weights\"",
+        "selection": "Selected Morales-Brotons et al. for direct schedule/EMA analysis; followed its references to SWA and DDPM.",
+        "source": "Web search; primary arXiv records and retained full papers"
+      },
+      {
+        "date": "2026-10-09",
+        "query": "site.arxiv.org \"Analyzing and Improving the Training Dynamics of Diffusion Models\"",
+        "selection": "Selected Karras et al. for duration/profile interactions in diffusion; retained PDF and available source.",
+        "source": "Web search; arXiv and CVPR primary sources"
+      },
+      {
+        "date": "2026-10-09",
+        "query": "diffusion exponential moving average learning rate schedule training duration limitations",
+        "selection": "Selected the closely related Ajroldi 2025 benchmark. Excluded sampling-time and forward-noise schedule papers from claims about optimizer learning-rate intervention; Nichol remains relevant as the fixed noise-schedule source.",
+        "source": "Web search restricted to arxiv.org, openreview.net and proceedings.mlr.press"
+      },
+      {
+        "date": "2026-10-09",
+        "query": "weight averaging exponential moving average worse than final weights limitations",
+        "selection": "Selected Switch EMA for actual contrary ordinary-EMA outcomes and intervention differences. Excluded control charts and gradient-momentum averaging because they are different mechanisms.",
+        "source": "Web search restricted to arxiv.org, openreview.net and proceedings.mlr.press"
+      },
+      {
+        "date": "2026-10-09",
+        "query": "site.arxiv.org \"When, Where and Why to Average Weights\"",
+        "selection": "Cross-checked all three authors, title, 2025 publication and retained arXiv v3; did not treat the original v1 and later version as independent works.",
+        "source": "Web search; publisher PMLR record, arXiv version metadata and full paper"
+      }
+    ]
+  },
+  "decisions": [
+    {
+      "decision": "For this publication revision, treat the experiment as a small conditional diffusion case study. The schedule/averaging interaction already has direct prior evidence. Do not claim that this retrospective search informed the original freeze.",
+      "phase": "planning",
+      "references": [
+        "Ajroldi2025:main",
+        "MoralesBrotons2024:main",
+        "Karras2024:main"
+      ]
+    },
+    {
+      "decision": "Preserve the original denoiser, fixed cosine diffusion-noise schedule and constant every-step EMA updates. Pin source inspection and the selected retained model/evaluation split; do not substitute upstream warmup, SWA or parameter switching.",
+      "phase": "implementation",
+      "references": [
+        "Sakana2025:implementation",
+        "Nichol2021:main",
+        "Izmailov2018:main",
+        "Li2024:main"
+      ]
+    },
+    {
+      "decision": "Interpret the positive schedule contrast as a smaller relative benefit under the complete cosine path, alongside absolute raw/EMA means. Preserve all zero-containing duration/interaction intervals and do not infer an endpoint-only mechanism.",
+      "phase": "analysis",
+      "references": [
+        "Ajroldi2025:main",
+        "MoralesBrotons2024:main",
+        "Karras2024:main"
+      ]
+    },
+    {
+      "decision": "Cite primary passages for each related-work assertion; emphasize the newer benchmark and ordinary-EMA counterexamples. Keep optimizer/data/metric differences and the unresolved bootstrapping comparison visible.",
+      "phase": "writing",
+      "references": [
+        "Ho2020:main",
+        "Ajroldi2025:main",
+        "Li2024:main",
+        "MoralesBrotons2024:counterpoint"
+      ]
+    }
+  ],
+  "format": "allagma-reference-map-v1",
+  "mode": "online",
+  "question": "How does the relative benefit of weight EMA vary with terminal training duration and the complete learning-rate policy in a tiny 2D DDPM?",
+  "records": [
+    {
+      "bibliography": {
+        "checked_at": "2026-10-09",
+        "sources": [
+          {
+            "fields": [
+              "title",
+              "authors",
+              "year",
+              "arxiv"
+            ],
+            "locator": "Version metadata and retained PDF title page; publication venue/year checked where listed.",
+            "sha256": "aee5e07a802e8dfd2a386374c94fd61d1d056cb7e1e0fec4f28e8120ff5d8505",
+            "url": "https://arxiv.org/abs/2006.11239v2"
+          }
+        ],
+        "status": "verified"
+      },
+      "consequences": {
+        "analysis": "Compare paired raw and averaged weights within the retained study; do not compare SW1 numerically with FID.",
+        "implementation": "Check the adapted noise-prediction equations and distinguish the study-owned denoiser from the original U-Net.",
+        "planning": "Frame the manuscript as a conditional follow-up, not a reproduction of the image results.",
+        "writing": "Cite DDPM for the model family and reported EMA usage, not proof that EMA must improve this study."
+      },
+      "id": "Ho2020",
+      "limitations": [
+        "Image-generation results use much larger networks and FID; they do not establish an EMA effect for a tiny 2D denoiser or compare the decays used here."
+      ],
+      "metadata": {
+        "arxiv": "2006.11239v2",
+        "authors": [
+          "Ho, Jonathan",
+          "Jain, Ajay",
+          "Abbeel, Pieter"
+        ],
+        "doi": "10.48550/arXiv.2006.11239",
+        "title": "Denoising Diffusion Probabilistic Models",
+        "url": "https://arxiv.org/abs/2006.11239v2",
+        "venue": "Advances in Neural Information Processing Systems 33 (2020)",
+        "year": 2020
+      },
+      "note": "notes/Ho2020.md",
+      "passages": [
+        {
+          "assessment": "supports",
+          "asset_id": "Ho2020-pdf",
+          "claim": "EMA is part of this influential DDPM implementation, but its reported performance does not identify the marginal effect of EMA or an optimal decay.",
+          "id": "main",
+          "limitation": "Image-generation results use much larger networks and FID; they do not establish an EMA effect for a tiny 2D denoiser or compare the decays used here.",
+          "locator": "Section 3, Algorithms 1 and 2; Appendix B, PDF pp. 14-15.",
+          "sha256": "aee5e07a802e8dfd2a386374c94fd61d1d056cb7e1e0fec4f28e8120ff5d8505",
+          "summary": "The paper specifies noise-prediction diffusion training and reverse sampling. Appendix B reports EMA with decay 0.9999 without a decay sweep.",
+          "url": "https://arxiv.org/abs/2006.11239v2"
+        }
+      ],
+      "relevance": "Defines the DDPM family and supplies context for evaluating averaged diffusion weights.",
+      "roles": [
+        "primary",
+        "baseline"
+      ]
+    },
+    {
+      "bibliography": {
+        "checked_at": "2026-10-09",
+        "sources": [
+          {
+            "fields": [
+              "title",
+              "authors",
+              "year",
+              "arxiv"
+            ],
+            "locator": "Version metadata and retained PDF title page; publication venue/year checked where listed.",
+            "sha256": "1f041c12d72020bb40cc69c644694027fa89131ab05349ec07dc48a929f75adf",
+            "url": "https://arxiv.org/abs/2102.09672v1"
+          }
+        ],
+        "status": "verified"
+      },
+      "consequences": {
+        "analysis": "Attribute the measured contrast only to the learning-rate-policy comparison actually executed.",
+        "implementation": "Verify the supplied cosine coefficients, offset 0.008 and beta cap independently of the optimizer schedule.",
+        "planning": "Keep the diffusion-noise schedule fixed while interpreting the existing learning-rate intervention.",
+        "writing": "Define both schedules explicitly and cite this source only for the diffusion-noise choice."
+      },
+      "id": "Nichol2021",
+      "limitations": [
+        "The noise schedule changes corruption over diffusion time. The retained factorial study varies optimizer learning rate over training time, so this paper is not evidence for its schedule contrast."
+      ],
+      "metadata": {
+        "arxiv": "2102.09672v1",
+        "authors": [
+          "Nichol, Alex",
+          "Dhariwal, Prafulla"
+        ],
+        "doi": "10.48550/arXiv.2102.09672",
+        "title": "Improved Denoising Diffusion Probabilistic Models",
+        "url": "https://arxiv.org/abs/2102.09672v1",
+        "venue": "Proceedings of the 38th International Conference on Machine Learning (2021)",
+        "year": 2021
+      },
+      "note": "notes/Nichol2021.md",
+      "passages": [
+        {
+          "assessment": "supports",
+          "asset_id": "Nichol2021-pdf",
+          "claim": "Cosine diffusion noise and cosine optimizer learning rate are distinct design choices.",
+          "id": "main",
+          "limitation": "The noise schedule changes corruption over diffusion time. The retained factorial study varies optimizer learning rate over training time, so this paper is not evidence for its schedule contrast.",
+          "locator": "Section 3.2, Equation 17 and Figure 5; Appendix A, architecture and training details.",
+          "sha256": "1f041c12d72020bb40cc69c644694027fa89131ab05349ec07dc48a929f75adf",
+          "summary": "A cosine schedule is defined for cumulative signal retention in the forward diffusion process. The experimental details also report parameter EMA at decay 0.9999.",
+          "url": "https://arxiv.org/abs/2102.09672v1"
+        }
+      ],
+      "relevance": "Explains the fixed cosine diffusion-noise schedule, which must not be confused with the optimizer schedule under study.",
+      "roles": [
+        "primary",
+        "implementation"
+      ]
+    },
+    {
+      "bibliography": {
+        "checked_at": "2026-10-09",
+        "sources": [
+          {
+            "fields": [
+              "title",
+              "authors",
+              "year",
+              "arxiv"
+            ],
+            "locator": "Version metadata and retained PDF title page; publication venue/year checked where listed.",
+            "sha256": "e8d364405f461d619149bbb3ff4653a669b1a42934751b56f731f085f815c830",
+            "url": "https://arxiv.org/abs/1803.05407v3"
+          }
+        ],
+        "status": "verified"
+      },
+      "consequences": {
+        "analysis": "Limit the comparison to raw, EMA 0.99 and EMA 0.999; do not claim superiority to SWA.",
+        "implementation": "Preserve the original fixed-decay EMA update rather than substituting uniform checkpoint averaging.",
+        "planning": "List SWA as a relevant untested baseline instead of retroactively adding it to confirmation.",
+        "writing": "Describe SWA as related work and state its different averaging rule and optimization setting."
+      },
+      "id": "Izmailov2018",
+      "limitations": [
+        "SWA averages selected SGD iterates under constant/cyclical schedules. It is not the same estimator or optimizer as fixed-decay EMA over AdamW steps in the retained study."
+      ],
+      "metadata": {
+        "arxiv": "1803.05407v3",
+        "authors": [
+          "Izmailov, Pavel",
+          "Podoprikhin, Dmitrii",
+          "Garipov, Timur",
+          "Vetrov, Dmitry",
+          "Wilson, Andrew Gordon"
+        ],
+        "doi": "10.48550/arXiv.1803.05407",
+        "title": "Averaging Weights Leads to Wider Optima and Better Generalization",
+        "url": "https://arxiv.org/abs/1803.05407v3",
+        "venue": "Conference on Uncertainty in Artificial Intelligence (2018)",
+        "year": 2018
+      },
+      "note": "notes/Izmailov2018.md",
+      "passages": [
+        {
+          "assessment": "supports",
+          "asset_id": "Izmailov2018-pdf",
+          "claim": "Weight averaging results depend on the averaging rule and the trajectory that supplied the weights.",
+          "id": "main",
+          "limitation": "SWA averages selected SGD iterates under constant/cyclical schedules. It is not the same estimator or optimizer as fixed-decay EMA over AdamW steps in the retained study.",
+          "locator": "Sections 2 and 3.1-3.2; Algorithm 1.",
+          "sha256": "e8d364405f461d619149bbb3ff4653a669b1a42934751b56f731f085f815c830",
+          "summary": "The method uses averaging of weights sampled along SGD trajectories with nonvanishing or cyclical learning rates. The paper analyzes the resulting geometry and classification generalization.",
+          "url": "https://arxiv.org/abs/1803.05407v3"
+        }
+      ],
+      "relevance": "Provides a competing averaging baseline and shows why the averaging rule and learning-rate path need separate names.",
+      "roles": [
+        "primary",
+        "baseline"
+      ]
+    },
+    {
+      "bibliography": {
+        "checked_at": "2026-10-09",
+        "sources": [
+          {
+            "fields": [
+              "title",
+              "authors",
+              "year",
+              "arxiv"
+            ],
+            "locator": "Version metadata and retained PDF title page; publication venue/year checked where listed.",
+            "sha256": "133ecc4d73d2928566e13d8a30b851be611a09a90ec66273e8d9d16f7026076c",
+            "url": "https://arxiv.org/abs/2411.18704v1"
+          }
+        ],
+        "status": "verified"
+      },
+      "consequences": {
+        "analysis": "Interpret reduced relative EMA benefit separately from absolute sample quality.",
+        "implementation": "Keep evaluation endpoints and decays fixed; do not introduce validation-based selection into retained confirmation.",
+        "planning": "Use this as motivation for a careful endpoint comparison, while acknowledging that the reference search was added after the original experiment.",
+        "writing": "Describe agreement in qualitative pattern with explicit optimizer, data and selection differences."
+      },
+      "id": "MoralesBrotons2024",
+      "limitations": [
+        "Most evidence concerns classification with SGD, validation-based early stopping and batch-normalization choices. Those conditions differ from the fixed-endpoint AdamW diffusion experiment."
+      ],
+      "metadata": {
+        "arxiv": "2411.18704v1",
+        "authors": [
+          "Morales-Brotons, Daniel",
+          "Vogels, Thijs",
+          "Hendrikx, Hadrien"
+        ],
+        "doi": "10.48550/arXiv.2411.18704",
+        "title": "Exponential Moving Average of Weights in Deep Learning: Dynamics and Benefits",
+        "url": "https://arxiv.org/abs/2411.18704v1",
+        "venue": "Transactions on Machine Learning Research (April 2024)",
+        "year": 2024
+      },
+      "note": "notes/MoralesBrotons2024.md",
+      "passages": [
+        {
+          "assessment": "supports",
+          "asset_id": "MoralesBrotons2024-pdf",
+          "claim": "Averaging and learning-rate reduction can interact; a strong intermediate EMA result does not imply a large advantage at a fully cooled endpoint.",
+          "id": "main",
+          "limitation": "Most evidence concerns classification with SGD, validation-based early stopping and batch-normalization choices. Those conditions differ from the fixed-endpoint AdamW diffusion experiment.",
+          "locator": "Sections 3.1-3.3, PDF pp. 4-5, and Figure 1.",
+          "sha256": "133ecc4d73d2928566e13d8a30b851be611a09a90ec66273e8d9d16f7026076c",
+          "summary": "The experiments show strong EMA performance before the learning rate is fully reduced and convergence toward the current iterate as updates become small. Section 3.3 reports that their tested bootstrapping from EMA did not help.",
+          "url": "https://arxiv.org/abs/2411.18704v1"
+        },
+        {
+          "assessment": "context",
+          "asset_id": "MoralesBrotons2024-pdf",
+          "claim": "Benefits from swapping training weights cannot be assumed across protocols.",
+          "id": "counterpoint",
+          "limitation": "Most evidence concerns classification with SGD, validation-based early stopping and batch-normalization choices. Those conditions differ from the fixed-endpoint AdamW diffusion experiment.",
+          "locator": "Section 3.3, PDF p. 5, and Appendix C.",
+          "sha256": "133ecc4d73d2928566e13d8a30b851be611a09a90ec66273e8d9d16f7026076c",
+          "summary": "Replacing training weights with their average did not provide a benefit in the tested bootstrapping setting.",
+          "url": "https://arxiv.org/abs/2411.18704v1"
+        }
+      ],
+      "relevance": "Directly connects the benefit of EMA with the learning-rate schedule and offers a comparison to the retained endpoint findings.",
+      "roles": [
+        "primary",
+        "competing",
+        "baseline"
+      ]
+    },
+    {
+      "bibliography": {
+        "checked_at": "2026-10-09",
+        "sources": [
+          {
+            "fields": [
+              "title",
+              "authors",
+              "year",
+              "arxiv"
+            ],
+            "locator": "Version metadata and retained PDF title page; publication venue/year checked where listed.",
+            "sha256": "59e52f098c955ef1fc9b413b1fa2fd2eee5e6efefc1e065f25ac49113f1b00e4",
+            "url": "https://arxiv.org/abs/2312.02696v2"
+          }
+        ],
+        "status": "verified"
+      },
+      "consequences": {
+        "analysis": "Keep uncertainty around duration and interaction contrasts visible rather than predicting their signs from image-scale evidence.",
+        "implementation": "Do not relabel constant exponential decay as the paper's power-function profile.",
+        "planning": "State untested averaging-window and architecture choices as limitations of the existing factorial design.",
+        "writing": "Cite the profile dependence and distinguish post-hoc tuning from this study's prespecified comparisons."
+      },
+      "id": "Karras2024",
+      "limitations": [
+        "The paper uses image synthesis, FID, large architectures and power-function/post-hoc averaging. Its optimal averaging lengths cannot be transferred to two fixed EMA decays in a small 2D model."
+      ],
+      "metadata": {
+        "arxiv": "2312.02696v2",
+        "authors": [
+          "Karras, Tero",
+          "Aittala, Miika",
+          "Lehtinen, Jaakko",
+          "Hellsten, Janne",
+          "Aila, Timo",
+          "Laine, Samuli"
+        ],
+        "doi": "10.48550/arXiv.2312.02696",
+        "title": "Analyzing and Improving the Training Dynamics of Diffusion Models",
+        "url": "https://arxiv.org/abs/2312.02696v2",
+        "venue": "IEEE/CVF Conference on Computer Vision and Pattern Recognition (2024)",
+        "year": 2024
+      },
+      "note": "notes/Karras2024.md",
+      "passages": [
+        {
+          "assessment": "supports",
+          "asset_id": "Karras2024-pdf",
+          "claim": "A single decay should not be treated as universally optimal across training durations and architectures.",
+          "id": "main",
+          "limitation": "The paper uses image synthesis, FID, large architectures and power-function/post-hoc averaging. Its optimal averaging lengths cannot be transferred to two fixed EMA decays in a small 2D model.",
+          "locator": "Sections 3.1-3.3, PDF pp. 5-7; Figure 5 and Appendix C.",
+          "sha256": "59e52f098c955ef1fc9b413b1fa2fd2eee5e6efefc1e065f25ac49113f1b00e4",
+          "summary": "Post-hoc reconstruction permits comparisons of averaging profiles. Figure 5 shows that the preferred profile varies with architecture and shifts as training progresses.",
+          "url": "https://arxiv.org/abs/2312.02696v2"
+        }
+      ],
+      "relevance": "Shows that averaging length interacts with architecture and training duration in diffusion models.",
+      "roles": [
+        "primary",
+        "competing",
+        "gaps"
+      ]
+    },
+    {
+      "bibliography": {
+        "checked_at": "2026-10-09",
+        "sources": [
+          {
+            "fields": [
+              "title",
+              "authors",
+              "year",
+              "arxiv"
+            ],
+            "locator": "Version metadata and retained PDF title page; publication venue/year checked where listed.",
+            "sha256": "b583b964cf83650b5e6d3d8e1f5ddcc35097ed059bf9519be80b63e57753c797",
+            "url": "https://arxiv.org/abs/2502.06761v3"
+          }
+        ],
+        "status": "verified"
+      },
+      "consequences": {
+        "analysis": "Discuss relative EMA benefit and absolute raw/EMA quality together; avoid interpreting the small relative effect as worse absolute EMA quality.",
+        "implementation": "Retain matched complete training paths and report the untested alternative averaging schemes.",
+        "planning": "Narrow the paper to a transparent, small diffusion case study and reject a broad novelty claim.",
+        "writing": "Cite this newer source prominently in related work and discussion, including differences in domain and protocol."
+      },
+      "id": "Ajroldi2025",
+      "limitations": [
+        "AlgoPerf workloads and the language-model experiments use different tasks and tuning budgets. The main baseline optimizers are NadamW and AdamW; there is no matched tiny-diffusion replication of this study."
+      ],
+      "metadata": {
+        "arxiv": "2502.06761v3",
+        "authors": [
+          "Ajroldi, Niccolò",
+          "Orvieto, Antonio",
+          "Geiping, Jonas"
+        ],
+        "doi": "10.48550/arXiv.2502.06761",
+        "title": "When, Where and Why to Average Weights?",
+        "url": "https://arxiv.org/abs/2502.06761v3",
+        "venue": "Proceedings of the 42nd International Conference on Machine Learning, PMLR 267:925-941 (2025)",
+        "year": 2025
+      },
+      "note": "notes/Ajroldi2025.md",
+      "passages": [
+        {
+          "assessment": "supports",
+          "asset_id": "Ajroldi2025-pdf",
+          "claim": "The qualitative interaction between averaging and annealing is prior work, not a new general finding established by the Allagma example.",
+          "id": "main",
+          "limitation": "AlgoPerf workloads and the language-model experiments use different tasks and tuning budgets. The main baseline optimizers are NadamW and AdamW; there is no matched tiny-diffusion replication of this study.",
+          "locator": "Section 6, Figure 7 (PDF p. 7), and Section 8 (limitations).",
+          "sha256": "b583b964cf83650b5e6d3d8e1f5ddcc35097ed059bf9519be80b63e57753c797",
+          "summary": "The study compares no, partial and full annealing. It reports that averaging gains shrink when the baseline is fully annealed and that combining averaging with annealing gives the strongest final performance in its tests.",
+          "url": "https://arxiv.org/abs/2502.06761v3"
+        }
+      ],
+      "relevance": "A newer, closely related benchmark explicitly compares averaging with learning-rate annealing and limits the novelty of the retained study.",
+      "roles": [
+        "primary",
+        "competing",
+        "baseline"
+      ]
+    },
+    {
+      "bibliography": {
+        "checked_at": "2026-10-09",
+        "sources": [
+          {
+            "fields": [
+              "title",
+              "authors",
+              "year",
+              "arxiv"
+            ],
+            "locator": "Version metadata and retained PDF title page; publication venue/year checked where listed.",
+            "sha256": "27da1ca91fb503566bd3a0e88153aefd985444a95a2c444c4029605570d9b964",
+            "url": "https://arxiv.org/abs/2402.09240v2"
+          }
+        ],
+        "status": "verified"
+      },
+      "consequences": {
+        "analysis": "Treat differences from Morales-Brotons et al.'s bootstrapping results as protocol-dependent evidence, not a resolved contradiction.",
+        "implementation": "Do not feed EMA values into the retained raw training trajectory; that would change the experiment.",
+        "planning": "Include contrary outcomes in the literature map and keep Switch EMA as an untested alternative.",
+        "writing": "Avoid repeating the title's universal-benefit framing as an established scientific conclusion."
+      },
+      "id": "Li2024",
+      "limitations": [
+        "Switch EMA feeds averaged parameters back into training. It does not share an unchanged raw trajectory with ordinary EMA, and the reported cross-task comparisons do not test this study's fixed protocol."
+      ],
+      "metadata": {
+        "arxiv": "2402.09240v2",
+        "authors": [
+          "Li, Siyuan",
+          "Liu, Zicheng",
+          "Tian, Juanxi",
+          "Wang, Ge",
+          "Wang, Zedong",
+          "Jin, Weiyang",
+          "Wu, Di",
+          "Tan, Cheng",
+          "Lin, Tao",
+          "Liu, Yang",
+          "Sun, Baigui",
+          "Li, Stan Z."
+        ],
+        "doi": "10.48550/arXiv.2402.09240",
+        "title": "Switch EMA: A Free Lunch for Better Flatness and Sharpness",
+        "url": "https://arxiv.org/abs/2402.09240v2",
+        "venue": "arXiv preprint",
+        "year": 2024
+      },
+      "note": "notes/Li2024.md",
+      "passages": [
+        {
+          "assessment": "contradicts",
+          "asset_id": "Li2024-pdf",
+          "claim": "Ordinary EMA improves every evaluated task endpoint.",
+          "id": "main",
+          "limitation": "Switch EMA feeds averaged parameters back into training. It does not share an unchanged raw trajectory with ordinary EMA, and the reported cross-task comparisons do not test this study's fixed protocol.",
+          "locator": "Section 4.1, Tables 9 and 10 (PDF p. 9); Section 3 definition of switching.",
+          "sha256": "27da1ca91fb503566bd3a0e88153aefd985444a95a2c444c4029605570d9b964",
+          "summary": "Some reported video-prediction and regression cells are worse with ordinary EMA than their basic baseline. The proposed switching procedure replaces training parameters at specified intervals.",
+          "url": "https://arxiv.org/abs/2402.09240v2"
+        }
+      ],
+      "relevance": "Adds explicit counterexamples to universal EMA-benefit language and describes a different intervention that changes training weights.",
+      "roles": [
+        "primary",
+        "competing"
+      ]
+    },
+    {
+      "bibliography": {
+        "checked_at": "2026-10-09",
+        "sources": [
+          {
+            "fields": [
+              "title",
+              "authors",
+              "year"
+            ],
+            "locator": "Repository identity, selected file headers and commit metadata (2025-12-19).",
+            "sha256": "c27171a347fd914bc8ea17dc2869f81a810b32527d80e79e8dab7f8f549f2b77",
+            "url": "https://github.com/SakanaAI/AI-Scientist/commit/1de1dbc1f4ee2c5f61e9c94348d55eb51d7fa2eb"
+          }
+        ],
+        "status": "verified"
+      },
+      "consequences": {
+        "analysis": "Do not mix the upstream estimated KL measurement with the retained paired SW1 results.",
+        "implementation": "Inspect the pinned denoiser and noise scheduler; record the constant every-step EMA difference from the upstream warmup/sparse-update wrapper.",
+        "planning": "Keep the original scientific intervention and describe its lineage accurately.",
+        "writing": "Retain the AI Scientist license and AI-use disclosure while describing the actual adaptations."
+      },
+      "id": "Sakana2025",
+      "limitations": [
+        "The completed study changes dataset generation, metrics, diffusion-noise schedule and EMA update details; this is not an upstream result replication."
+      ],
+      "metadata": {
+        "authors": [
+          "SakanaAI"
+        ],
+        "title": "AI-Scientist 2D diffusion template: selected source snapshot",
+        "url": "https://github.com/SakanaAI/AI-Scientist/tree/1de1dbc1f4ee2c5f61e9c94348d55eb51d7fa2eb/templates/2d_diffusion",
+        "venue": "Software snapshot at commit 1de1dbc1f4ee2c5f61e9c94348d55eb51d7fa2eb",
+        "year": 2025
+      },
+      "note": "notes/Sakana2025.md",
+      "passages": [
+        {
+          "assessment": "supports",
+          "asset_id": "AI-Scientist-experiment",
+          "claim": "The retained experiment is an adaptation with declared differences, not a byte-identical upstream reproduction.",
+          "id": "implementation",
+          "limitation": "Source inspection establishes lineage and implementation differences, not scientific outcome quality.",
+          "locator": "experiment.py: MLPDenoiser at line 51 and NoiseScheduler at line 79; see separately retained datasets.py and ema_pytorch.py.",
+          "sha256": "c27171a347fd914bc8ea17dc2869f81a810b32527d80e79e8dab7f8f549f2b77",
+          "summary": "The template supplies a residual denoiser and diffusion equations. The separately retained EMA wrapper uses a time-dependent decay and configurable update interval.",
+          "url": "https://raw.githubusercontent.com/SakanaAI/AI-Scientist/1de1dbc1f4ee2c5f61e9c94348d55eb51d7fa2eb/templates/2d_diffusion/experiment.py"
+        }
+      ],
+      "relevance": "Exact upstream code lineage of the retained denoiser and diffusion equations.",
+      "roles": [
+        "implementation",
+        "baseline"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "findings": [
+    {
+      "evidence": "Introduction and provenance appendix; science/source-manifest.json.",
+      "finding": "The revision is explicitly retrospective and does not claim that newly read sources determined the frozen r07 protocol.",
+      "status": "pass"
+    },
+    {
+      "evidence": "science/recomputation.json and derive.py; no new training or raw metric extraction is claimed.",
+      "finding": "All six empirical claims resolve to retained result locators. Counts were generated from r07 outputs; 114 statistical summaries were recomputed from retained seed-level measurements.",
+      "status": "pass"
+    },
+    {
+      "evidence": "Methods definitions, raw cosine comparison, results and discussion.",
+      "finding": "Relative EMA benefit is separated from absolute raw/EMA quality, with the complete learning-rate path as the intervention.",
+      "status": "pass"
+    },
+    {
+      "evidence": "Frozen protocol, generated result tables and limitations.",
+      "finding": "The seed remains the independent unit. Four seeds, wide unadjusted intervals, multiplicity, minimum attainable sign-flip p-value and coverage ceiling are stated.",
+      "status": "pass"
+    },
+    {
+      "evidence": "references/map.json; Ajroldi section 6, Li tables 9-10, Morales-Brotons section 3, Karras section 3.",
+      "finding": "Seven primary papers and one exact implementation snapshot are critically read. Newer direct prior work and ordinary-EMA counterexamples prevent a novelty or universal-benefit claim.",
+      "status": "pass"
+    },
+    {
+      "evidence": "references/map.json Li2024:main.",
+      "finding": "The Li passage is correctly marked as contradicting a universal-benefit assertion, not as contradicting its own observed counterexample.",
+      "status": "pass"
+    },
+    {
+      "evidence": "Methods and hash-verified frozen protocol.",
+      "finding": "Static numerical design constants match science/protocol.md: architecture, optimizer, clipping, sample counts, streams, diffusion steps, projections, seeds and mode threshold.",
+      "status": "pass"
+    },
+    {
+      "evidence": "Provenance appendix and science/license.txt.",
+      "finding": "AI assistance, exact upstream code lineage/license, the configured project author label and the lack of independent peer review remain explicit.",
+      "status": "pass"
+    },
+    {
+      "evidence": "paper.json table formatting; no scientific data edits.",
+      "finding": "Table column widths changed only for readability; result pointers, values, labels and caveats are unchanged.",
+      "status": "pass"
+    },
+    {
+      "evidence": "Re-read the revised appendix and title against the previous revision and original source manifest; no numerical or scientific changes.",
+      "finding": "Shortened the provenance appendix while retaining the scope, source identity, critical reading, selected assets, disclosure and build facts. The title now uses plain wording; the short interaction table stays together.",
+      "status": "pass"
+    }
+  ],
+  "format": "allagma-paper-review-v1",
+  "kind": "scientific",
+  "reviewed_at": "2026-10-09",
+  "reviewed_content_sha256": "0943cb1353e822638d37cc16073d6f112cc54305db52aead440aa9d948bdac12",
+  "reviewer": "Codex assistant in the owner-authorized implementation task",
+  "scope": "Same-assistant review of the stated scientific and editorial boundaries; not independent peer review or arXiv acceptance. PDF layout inspection is a separate artifact."
+}

@@ -1,0 +1,40 @@
+{
+  "findings": [
+    {
+      "evidence": "All seven section files and two appendices.",
+      "finding": "Read and revised the complete manuscript as connected technical prose using the installed humanizer skill; removed promotional or novelty language.",
+      "status": "pass"
+    },
+    {
+      "evidence": "paper.json values/claims/tables; derive.py; scientific review.",
+      "finding": "Kept every scientific value, effect sign, uncertainty caveat, citation, attribution and retrospective-scope statement. Empirical claims and tables stay generated from evidence.",
+      "status": "pass"
+    },
+    {
+      "evidence": "Discussion, limitations and related work.",
+      "finding": "Retained necessary limitations while avoiding fabricated objections, generic promises and an unsupported conclusion.",
+      "status": "pass"
+    },
+    {
+      "evidence": "OUTLINE.md versus sections/*.tex.",
+      "finding": "Used full paragraphs in the paper, ordinary English section names and precise verbs. The outline remains separate from the finished prose.",
+      "status": "pass"
+    },
+    {
+      "evidence": "paper.json table formatting; no scientific data edits.",
+      "finding": "Table column widths changed only for readability; result pointers, values, labels and caveats are unchanged.",
+      "status": "pass"
+    },
+    {
+      "evidence": "Re-read the revised appendix and title against the previous revision and original source manifest; no numerical or scientific changes.",
+      "finding": "Shortened the provenance appendix while retaining the scope, source identity, critical reading, selected assets, disclosure and build facts. The title now uses plain wording; the short interaction table stays together.",
+      "status": "pass"
+    }
+  ],
+  "format": "allagma-paper-review-v1",
+  "kind": "humanizer",
+  "reviewed_at": "2026-10-09",
+  "reviewed_content_sha256": "0943cb1353e822638d37cc16073d6f112cc54305db52aead440aa9d948bdac12",
+  "reviewer": "Codex assistant in the owner-authorized implementation task",
+  "scope": "Same-assistant review of the stated scientific and editorial boundaries; not independent peer review or arXiv acceptance. PDF layout inspection is a separate artifact."
+}

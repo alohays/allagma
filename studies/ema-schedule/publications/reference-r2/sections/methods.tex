@@ -1,0 +1,72 @@
+\subsection{Retained design and implementation}
+The experiment crossed two datasets (two moons and an eight-component Gaussian
+mixture, GMM8), two terminal durations (5,000 and 10,000 optimizer updates), and
+two learning-rate policies. The constant policy used $\eta_0=0.0003$. For
+duration $D$, update $k$ under cosine used
+\begin{equation}
+\eta_k(D)=\frac{\eta_0}{2}\left[1+\cos\!\left(\frac{\pi(k-1)}{D}\right)\right].
+\end{equation}
+The final applied rate is slightly above zero, while the scheduled rate after
+$D$ updates is zero. The policies differ over the entire training path; the
+experiment does not isolate an effect caused only by the terminal rate.
+
+Each constant-rate trajectory supplies both checkpoints. Cosine-5k and
+cosine-10k are separate trajectories initialized with the same weights and
+matched training-input prefixes. The \AllagmaValue{cells} evaluation cells
+therefore come from \AllagmaValue{trajectories} trajectories totaling
+\AllagmaValue{updates} optimizer updates, rather than one independent
+trajectory per checkpoint. Within each trajectory, the two EMA copies start
+at the initial raw weights and update after every optimizer step:
+\begin{equation}
+\bar\theta_t^{(\beta)}=\beta\bar\theta_{t-1}^{(\beta)}+(1-\beta)\theta_t,
+\qquad \beta\in\{0.99,0.999\}.
+\end{equation}
+Neither EMA copy changes the raw training trajectory. There is no warmup,
+bias correction or sparse update rule.
+
+The supplied residual denoiser has 296,450 parameters, 128-dimensional
+embeddings, width 256 and three residual blocks. Its lineage is the pinned
+AI-Scientist 2D diffusion template \cite{Sakana2025}. The study retained
+AdamW with weight decay 0.01, batch size 256, gradient-norm clipping at 0.5,
+and MPS float32 training. It used a fixed 100-step cosine diffusion-noise
+schedule and clipped predicted clean samples to $[-6,6]$. Adaptations include
+the dataset generators, evaluation metric and constant every-step EMA; the
+study is not a reproduction of the upstream template's reported results.
+
+\subsection{Pairing, evaluation and uncertainty}
+The independent unit is a training seed within a dataset, with
+$n=\AllagmaValue{seeds}$. Confirmation seeds were 4001--4004 for moons and
+5001--5004 for GMM8, separate from the pilot seeds. Each seed used 100,000
+training draws, 2,048 held-out draws and 2,048 generated draws per model state.
+Initial weights, replacement minibatch indices, training noise, diffusion
+timesteps and evaluation randomness were matched across the relevant
+conditions. Actual arrays and prefix hashes were retained. The held-out and
+generation streams were separate from training.
+
+The primary metric is empirical Sliced Wasserstein-1 (SW1), computed in
+float64 over 128 fixed projection directions with projection seed 7321.
+Lower values indicate better agreement with the held-out sample. For each
+seed, define the relative effect
+\begin{equation}
+\Delta_{p,D,\beta}=\operatorname{SW1}(\mathrm{EMA}_{p,D,\beta})
+                   -\operatorname{SW1}(\mathrm{raw}_{p,D}).
+\end{equation}
+Negative values favor EMA. Schedule contrasts are
+$\Delta_{\mathrm{cosine},D,\beta}-\Delta_{\mathrm{constant},D,\beta}$;
+duration contrasts compare 10k with 5k at a fixed policy. The interaction is
+the 10k schedule contrast minus its 5k counterpart. Absolute raw and EMA
+means are retained alongside these differences.
+
+The analysis reports paired means, unadjusted two-sided 95\% Student $t$
+intervals with three degrees of freedom, individual seed values,
+leave-one-seed-out means and exact two-sided sign-flip $p$-values. With four
+paired seeds, the minimum attainable sign-flip $p$-value is 0.125. Generated
+points, projections, retries and shared checkpoints are not additional
+independent replicates. The intervals are descriptive and imprecise at this
+sample size; no multiplicity-adjusted confirmatory claim is made.
+
+GMM8 coverage counts a mode when at least 21 of the 2,048 generated draws
+lie within distance 0.45 of their nearest mixture center. Coverage is a
+secondary diagnostic and does not establish correct component masses or
+distributional equality. The frozen protocol and selected scientific inputs
+are supplied with the paper's ancillary provenance.

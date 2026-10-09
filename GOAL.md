@@ -318,3 +318,7 @@ Demonstrate the integrated workflow using small real reference assets and an exi
 Continue until both capabilities work and relevant checks pass. Use a dedicated codex/ feature branch. Make small, coherent commits throughout development, grouping each change with its related tests and English documentation. Push the branch to origin and open a review-ready PR against main; leave it unmerged for my review. Include usage, configuration, migration notes, limitations, and validation results. Include public docs updates in the PR; deployment waits for merge. Finish with the PR URL, runnable commands, reference index, compiled paper, source archive, and evidence. Preserve existing contributor work, GUI model selection, and model-usage limits. Make routine decisions autonomously; use the user-input tool for consequential unresolved choices.
 
 Paper attribution is researcher-configurable per study. Never infer paper authors from repository ownership or agent identity.
+
+The owner explicitly chose `allagma` as the demonstration manuscript author. This supersedes the earlier anonymous-draft choice and remains a per-study setting, never a default author for other users.
+
+The optional paper demonstration preserves the fixed manuscript date of 9 October 2026; final implementation verification may occur on 10 October. Do not submit to arXiv. Public documentation deployment waits for the feature PR to be merged.

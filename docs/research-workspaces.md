@@ -21,6 +21,24 @@ locations, unbounded limits and an existing nonempty study are rejected. No mode
 session is launched by preparation. The controller directory retains the frozen
 policy and authoritative receipts outside candidate access.
 
+New workflow scaffolds include a [critical reference dossier](reference-research.md).
+Scope primary papers, implementations, baselines and competing findings before
+settling the protocol. Keep an index and load detailed notes on demand during
+later phases and resumption. The initial provided-only mode makes absent search
+coverage explicit. Reference acquisition runs outside scientific workers and
+requires `--online` for network access.
+
+Pass `--references DOSSIER --reference-cache CACHE` to freeze a completed dossier
+and select verified execution inputs. Reading-only downloads stay in the cache;
+selected raw inputs are protected and locally excluded from Git. Working notes
+can change, while prepared input snapshots remain immutable. The
+[acquisition guide](reference-research.md#retain-selected-assets) explains limits,
+restart reuse, corruption and worktree exclusions.
+
+`--paper-config REQUEST.json` adds an explicit [arXiv paper request](arxiv-papers.md)
+with researcher-supplied attribution. The default remains the normal report.
+This option does not start a compiler or model during preparation.
+
 Explicitly launch a fresh native session using the installed compatible CLI:
 
 ```sh

@@ -1,0 +1,39 @@
+DDPM trains a noise-prediction model and generates samples through a learned
+reverse process \cite{Ho2020}. Ho et al.\ report parameter EMA with a fixed
+decay without a decay sweep in their experimental details. Nichol and
+Dhariwal introduce a cosine schedule for the forward diffusion noise
+\cite{Nichol2021}. That schedule concerns corruption over diffusion time. It
+is distinct from the optimizer learning-rate policy over training updates,
+which is the intervention in the retained experiment.
+
+Stochastic Weight Averaging (SWA) combines selected SGD iterates under constant
+or cyclical learning rates \cite{Izmailov2018}. Its averaging rule differs
+from a fixed exponential decay applied after every AdamW update. SWA is a
+relevant alternative that this experiment did not test, so the results cannot
+rank EMA against it.
+
+Morales-Brotons et al.\ study EMA dynamics and report strong intermediate
+performance before full learning-rate reduction in their classification
+experiments \cite{MoralesBrotons2024}. Their validation-based early stopping,
+SGD trajectories and batch-normalization choices differ from the fixed
+endpoints here. Ajroldi et al.\ subsequently compare averaging across a wider
+optimization benchmark and examine no, partial and full annealing
+\cite{Ajroldi2025}. Their results show that averaging gains can diminish as
+the baseline is fully annealed and that combining the two can give the best
+final performance in the settings tested. This is direct prior evidence for
+the qualitative relationship considered in this paper.
+
+For diffusion models, Karras et al.\ show that preferred averaging profiles
+depend on architecture and training time \cite{Karras2024}. Their
+power-function and post-hoc averaging procedures, image-scale models and FID
+evaluation differ from the two fixed decays and SW1 metric here. Their findings
+support caution about transferring a preferred averaging window across designs.
+
+The literature also contains contrary ordinary-EMA outcomes. Li et al.\ report
+video-prediction and regression cells where ordinary EMA performs worse than
+the basic model, while proposing a switching procedure that feeds averaged
+parameters back into training \cite{Li2024}. That intervention changes the
+training trajectory. Its reported gains and the unhelpful bootstrapping
+experiment in Morales-Brotons et al.\ are not matched comparisons. The present
+study evaluates averages of the same raw trajectories and cannot resolve that
+protocol-dependent difference.

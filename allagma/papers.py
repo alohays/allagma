@@ -10,7 +10,7 @@ import math
 import re
 
 from . import references
-from .files import AllagmaError, confined, digest, file_hash, read_json, write_json, write_text
+from .files import AllagmaError, confined, digest, file_hash, read_json, utcnow, write_json, write_text
 from .references import ID, nonempty, require, tex_escape
 
 FORMAT = "allagma-paper-output-v1"
@@ -26,7 +26,7 @@ def initialize(study, configuration, *, title, authors):
     require(configuration.is_relative_to(study), "Keep the paper configuration inside its study")
     if configuration.exists():
         require(read_json(configuration) == default_configuration(), "Preserve the existing paper configuration; use a new revision")
-    config = {"format": FORMAT, "output": "arxiv", "title": title, "date": "FIXED DATE REQUIRED",
+    config = {"format": FORMAT, "output": "arxiv", "title": title, "date": utcnow()[:10],
               "authors": authors, "references": "references", "template": {"name": "allagma-preprint"},
               "sections": {name: f"paper/sections/{name}.tex" for name in SECTIONS}, "appendices": [],
               "evidence": {}, "values": {}, "claims": [], "figures": [], "tables": [], "review": {}}
@@ -96,6 +96,7 @@ def author_tex(config):
 def _source(study, source):
     require(isinstance(source, dict) and nonempty(source.get("path")), "Evidence requires a study-relative path")
     path = confined(study, source["path"])
+    require(not references.raw_cache_file(study, path), "Keep raw reference downloads out of the public paper archive; retain a derived result or public-safe manifest")
     require(path.is_file() and file_hash(path) == source.get("sha256"), f"Missing or changed paper evidence: {source['path']}")
     return path
 
@@ -118,6 +119,8 @@ def validate(study, config):
     if config["output"] == "report":
         return {"status": "disabled", "output": "report", "scope": "Existing report behavior; no TeX integration invoked"}
     require(nonempty(config.get("title")) and nonempty(config.get("date")), "Paper title and fixed date are required")
+    require(not re.search(r"\b(?:TODO|TBD|PLACEHOLDER|REQUIRED)\b", config["title"] + " " + config["date"]),
+            "Complete the paper title and fixed date")
     authors = author_tex(config)
     if (study / "inputs/PAPER.json").is_file():
         request = read_json(study / "inputs/PAPER.json")
@@ -139,7 +142,9 @@ def validate(study, config):
     appendices = config.get("appendices", [])
     for appendix in appendices:
         require(nonempty(appendix.get("title")), "Appendices need descriptive titles")
-        section_text["appendix-" + str(len(section_text))] = confined(study, appendix["path"]).read_text()
+        content = confined(study, appendix["path"]).read_text()
+        require(nonempty(content) and not re.search(r"\b(?:TODO|TBD|PLACEHOLDER)\b", content), "A declared appendix is incomplete")
+        section_text["appendix-" + str(len(section_text))] = content
     text = "\n".join(section_text.values())
     # Authoring is plain TeX, but input files, bibliography and figures must
     # enter through the retained package specification, never ambient paths.

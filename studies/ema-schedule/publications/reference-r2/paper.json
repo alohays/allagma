@@ -1,0 +1,529 @@
+{
+  "appendices": [
+    {
+      "path": "sections/appendix-contrasts.tex",
+      "title": "Duration and interaction contrasts"
+    },
+    {
+      "path": "sections/appendix-provenance.tex",
+      "title": "Provenance, reference research and reproducibility"
+    }
+  ],
+  "authors": {
+    "entries": [
+      {
+        "name": "allagma"
+      }
+    ],
+    "mode": "named",
+    "supplied_at": "2026-10-09",
+    "supplied_by": "Repository owner, explicit instruction in the Allagma implementation task"
+  },
+  "claims": [
+    {
+      "citations": [],
+      "evidence": [
+        {
+          "id": "publication-values",
+          "locator": "#/counts/negative_cell_means"
+        },
+        {
+          "id": "publication-values",
+          "locator": "#/counts/cell_intervals_below_zero"
+        },
+        {
+          "id": "publication-values",
+          "locator": "#/cells"
+        }
+      ],
+      "id": "directional-effects",
+      "limitations": [
+        "Four independent seeds per dataset; intervals are descriptive, unadjusted and subject to multiple comparisons."
+      ],
+      "status": "supported",
+      "text": "EMA-minus-raw SW1 was negative in {{value:negative-cell-means}} of {{value:ema-cells}} cell-level means, but only {{value:cell-intervals-below-zero}} unadjusted 95% seed-level intervals were wholly below zero."
+    },
+    {
+      "citations": [
+        "Ajroldi2025:main",
+        "MoralesBrotons2024:main"
+      ],
+      "evidence": [
+        {
+          "id": "publication-values",
+          "locator": "#/counts/positive_schedule_means"
+        },
+        {
+          "id": "publication-values",
+          "locator": "#/counts/schedule_intervals_above_zero"
+        },
+        {
+          "id": "publication-values",
+          "locator": "#/schedule"
+        }
+      ],
+      "id": "schedule-pattern",
+      "limitations": [
+        "The full learning-rate path is the intervention. These are related comparisons, not independent replications."
+      ],
+      "status": "supported",
+      "text": "The cosine-minus-constant contrast in the paired EMA effect was positive in all {{value:schedule-contrasts}} comparisons; {{value:schedule-intervals-above-zero}} corresponding intervals were wholly above zero."
+    },
+    {
+      "citations": [
+        "Karras2024:main"
+      ],
+      "evidence": [
+        {
+          "id": "publication-values",
+          "locator": "#/duration"
+        },
+        {
+          "id": "publication-values",
+          "locator": "#/interaction"
+        },
+        {
+          "id": "publication-values",
+          "locator": "#/counts/duration_intervals_containing_zero"
+        },
+        {
+          "id": "publication-values",
+          "locator": "#/counts/interaction_intervals_containing_zero"
+        }
+      ],
+      "id": "duration-uncertainty",
+      "limitations": [
+        "Zero-containing intervals do not establish equivalence, and the sample size is small."
+      ],
+      "status": "inconclusive",
+      "text": "All {{value:duration-contrasts}} duration-contrast intervals and all {{value:interactions}} interaction intervals included zero."
+    },
+    {
+      "citations": [
+        "Ajroldi2025:main"
+      ],
+      "evidence": [
+        {
+          "id": "publication-values",
+          "locator": "#/absolute_cells"
+        },
+        {
+          "id": "publication-values",
+          "locator": "#/counts/raw_cosine_better"
+        }
+      ],
+      "id": "absolute-quality",
+      "limitations": [
+        "This is a descriptive comparison of means. A smaller relative EMA benefit does not itself imply worse absolute EMA quality."
+      ],
+      "status": "supported",
+      "text": "Raw-weight mean SW1 was lower under cosine in all {{value:raw-comparisons}} dataset/duration comparisons."
+    },
+    {
+      "citations": [],
+      "evidence": [
+        {
+          "id": "publication-values",
+          "locator": "#/counts/gmm_all_modes"
+        },
+        {
+          "id": "publication-values",
+          "locator": "#/counts/gmm_states"
+        }
+      ],
+      "id": "coverage-ceiling",
+      "limitations": [
+        "The coverage ceiling cannot establish correct component masses or equality of distributions."
+      ],
+      "status": "supported",
+      "text": "All {{value:gmm-states}} retained GMM8 model states covered all eight modes under the prespecified threshold."
+    },
+    {
+      "citations": [],
+      "evidence": [
+        {
+          "id": "publication-values",
+          "locator": "#/counts/summaries_checked"
+        },
+        {
+          "id": "recomputation",
+          "locator": "#/checks"
+        }
+      ],
+      "id": "recomputed-summaries",
+      "limitations": [
+        "The check does not rerun training or recalculate SW1 from all original generated samples."
+      ],
+      "status": "supported",
+      "text": "This publication revision recomputed {{value:summaries-checked}} statistical summaries from the retained seed-level measurements and matched the frozen results."
+    }
+  ],
+  "date": "9 October 2026",
+  "evidence": {
+    "humanizer-review": {
+      "path": "humanizer-review.json",
+      "sha256": "a8815d094e80dc42ca4353b7282418d1a9bc91d2bc8545622fc6b49714a14868"
+    },
+    "license": {
+      "path": "science/license.txt",
+      "sha256": "9c82e554a54dfcf2550b452801475a36f9cb909ede00b03e492089e4836a7462"
+    },
+    "measurements": {
+      "path": "science/measurements.json",
+      "sha256": "7f06ed04f7f8da9566c7af82e1c74704fd4dc5ad7823168b57377502e1de798c"
+    },
+    "original-figure": {
+      "path": "science/main-figure.pdf",
+      "sha256": "f07832b231d0bf6321f1160754d31a4bf397ca6e53e785be02fe0526d99f10a6"
+    },
+    "protocol": {
+      "path": "science/protocol.md",
+      "sha256": "3300b5e862a704f60ddef19ca785fb1b69fc67cb3ae04a8f85571b490284be61"
+    },
+    "publication-values": {
+      "path": "science/publication-values.json",
+      "sha256": "7745ab2c92ec306e6d4ee6fac56194c3b693ee45f5f2bd8c88e6b4556bc6fbd6"
+    },
+    "recomputation": {
+      "path": "science/recomputation.json",
+      "sha256": "12179e08a001fab35570d82de8f8c2f4bb654b9f7ef67d0136101cd0af8f44e8"
+    },
+    "scientific-review": {
+      "path": "scientific-review.json",
+      "sha256": "50f5c45212ca1a9794d01aeb186f0362ef79f80b7abeb2a51b987e87f28609dd"
+    },
+    "seed-level": {
+      "path": "science/seed-level.json",
+      "sha256": "42b088d17d9988d49e2d38a6da3502fc2b3f981e25181751a14fdbabcd55d9d9"
+    },
+    "source-selection": {
+      "path": "science/source-manifest.json",
+      "sha256": "146db835dc53820c5b34da9818b7b9aafe2259293dabc5ffc53665f02dc56e6d"
+    },
+    "summary": {
+      "path": "science/summary.json",
+      "sha256": "eadd1e78ec6a09d73426dd4ee4dafd19c093a7100552f92119d3df9b5e70abac"
+    }
+  },
+  "figures": [
+    {
+      "caption": "Exact figure retained from r07. Dots are the four paired seeds; diamonds and bars are means and unadjusted 95% Student t intervals. EMA 099 and EMA 0999 denote decays 0.99 and 0.999. Each panel has its own scale. Negative EMA-minus-raw SW1 favors averaging; zero-containing intervals do not establish equality.",
+      "evidence": "original-figure",
+      "id": "effects",
+      "width": 1.0
+    }
+  ],
+  "format": "allagma-paper-output-v1",
+  "output": "arxiv",
+  "references": "references",
+  "review": {
+    "humanizer": {
+      "record": "humanizer-review",
+      "scope": "Same-assistant, revision-bound review; not independent scientific peer review.",
+      "status": "complete"
+    },
+    "scientific": {
+      "record": "scientific-review",
+      "scope": "Same-assistant, revision-bound review; not independent scientific peer review.",
+      "status": "complete"
+    }
+  },
+  "sections": {
+    "abstract": "sections/abstract.tex",
+    "discussion": "sections/discussion.tex",
+    "introduction": "sections/introduction.tex",
+    "limitations": "sections/limitations.tex",
+    "methods": "sections/methods.tex",
+    "related-work": "sections/related-work.tex",
+    "results": "sections/results.tex"
+  },
+  "tables": [
+    {
+      "caption": "All paired EMA-minus-raw SW1 effects (n = {{value:seeds}} seeds per dataset). Neg. counts seeds with a negative effect. Exact sign-flip p-values are descriptive and unadjusted.",
+      "columns": [
+        {
+          "pointer": "/dataset",
+          "title": "Dataset",
+          "width_cm": 1.4
+        },
+        {
+          "pointer": "/schedule",
+          "title": "Policy",
+          "width_cm": 1.5
+        },
+        {
+          "format": "d",
+          "pointer": "/updates",
+          "title": "Updates",
+          "width_cm": 1.35
+        },
+        {
+          "pointer": "/decay",
+          "title": "EMA",
+          "width_cm": 1.05
+        },
+        {
+          "format": ".6f",
+          "pointer": "/mean",
+          "title": "Mean",
+          "width_cm": 1.75
+        },
+        {
+          "format": ".6f",
+          "pattern": "[{0}, {1}]",
+          "pointers": [
+            "/ci95/0",
+            "/ci95/1"
+          ],
+          "title": "95% t interval",
+          "width_cm": 4.35
+        },
+        {
+          "format": "d",
+          "pointer": "/negative_seeds",
+          "title": "Neg.",
+          "width_cm": 0.85
+        },
+        {
+          "format": ".3f",
+          "pointer": "/sign_flip_p",
+          "title": "p",
+          "width_cm": 1.05
+        }
+      ],
+      "evidence": "publication-values",
+      "id": "cells",
+      "pointer": "/cells"
+    },
+    {
+      "caption": "Cosine-minus-constant contrasts in the relative EMA effect at each duration. Positive values indicate a smaller relative EMA benefit under cosine; intervals are unadjusted.",
+      "columns": [
+        {
+          "pointer": "/dataset",
+          "title": "Dataset",
+          "width_cm": 1.4
+        },
+        {
+          "pointer": "/decay",
+          "title": "EMA",
+          "width_cm": 1.05
+        },
+        {
+          "format": "d",
+          "pointer": "/updates",
+          "title": "Updates",
+          "width_cm": 1.35
+        },
+        {
+          "format": ".6f",
+          "pointer": "/mean",
+          "title": "Mean",
+          "width_cm": 1.75
+        },
+        {
+          "format": ".6f",
+          "pattern": "[{0}, {1}]",
+          "pointers": [
+            "/ci95/0",
+            "/ci95/1"
+          ],
+          "title": "95% t interval",
+          "width_cm": 4.35
+        }
+      ],
+      "evidence": "publication-values",
+      "id": "schedule",
+      "pointer": "/schedule"
+    },
+    {
+      "caption": "10k-minus-5k contrasts in the relative EMA effect at a fixed policy. Every unadjusted interval contains zero.",
+      "columns": [
+        {
+          "pointer": "/dataset",
+          "title": "Dataset",
+          "width_cm": 1.4
+        },
+        {
+          "pointer": "/decay",
+          "title": "EMA",
+          "width_cm": 1.05
+        },
+        {
+          "pointer": "/schedule",
+          "title": "Policy",
+          "width_cm": 1.5
+        },
+        {
+          "format": ".6f",
+          "pointer": "/mean",
+          "title": "Mean",
+          "width_cm": 1.75
+        },
+        {
+          "format": ".6f",
+          "pattern": "[{0}, {1}]",
+          "pointers": [
+            "/ci95/0",
+            "/ci95/1"
+          ],
+          "title": "95% t interval",
+          "width_cm": 4.35
+        }
+      ],
+      "evidence": "publication-values",
+      "id": "duration",
+      "pointer": "/duration"
+    },
+    {
+      "breakable": false,
+      "caption": "The schedule contrast at 10k minus the schedule contrast at 5k. Every unadjusted interval contains zero.",
+      "columns": [
+        {
+          "pointer": "/dataset",
+          "title": "Dataset",
+          "width_cm": 1.4
+        },
+        {
+          "pointer": "/decay",
+          "title": "EMA",
+          "width_cm": 1.05
+        },
+        {
+          "format": ".6f",
+          "pointer": "/mean",
+          "title": "Mean",
+          "width_cm": 1.75
+        },
+        {
+          "format": ".6f",
+          "pattern": "[{0}, {1}]",
+          "pointers": [
+            "/ci95/0",
+            "/ci95/1"
+          ],
+          "title": "95% t interval",
+          "width_cm": 4.35
+        }
+      ],
+      "evidence": "publication-values",
+      "id": "interaction",
+      "pointer": "/interaction"
+    }
+  ],
+  "template": {
+    "name": "allagma-preprint"
+  },
+  "title": "Weight EMA after separating training duration from learning-rate policy in a small diffusion model",
+  "values": {
+    "cell-intervals-below-zero": {
+      "evidence": "publication-values",
+      "format": "d",
+      "pointer": "/counts/cell_intervals_below_zero"
+    },
+    "cells": {
+      "evidence": "publication-values",
+      "format": "d",
+      "pointer": "/counts/cells"
+    },
+    "duration-contrasts": {
+      "evidence": "publication-values",
+      "format": "d",
+      "pointer": "/counts/duration_contrasts"
+    },
+    "duration-intervals-containing-zero": {
+      "evidence": "publication-values",
+      "format": "d",
+      "pointer": "/counts/duration_intervals_containing_zero"
+    },
+    "ema-cells": {
+      "evidence": "publication-values",
+      "format": "d",
+      "pointer": "/counts/ema_cells"
+    },
+    "gmm-all-modes": {
+      "evidence": "publication-values",
+      "format": "d",
+      "pointer": "/counts/gmm_all_modes"
+    },
+    "gmm-states": {
+      "evidence": "publication-values",
+      "format": "d",
+      "pointer": "/counts/gmm_states"
+    },
+    "independent-seeds-per-dataset": {
+      "evidence": "publication-values",
+      "format": "d",
+      "pointer": "/counts/independent_seeds_per_dataset"
+    },
+    "interaction-intervals-containing-zero": {
+      "evidence": "publication-values",
+      "format": "d",
+      "pointer": "/counts/interaction_intervals_containing_zero"
+    },
+    "interactions": {
+      "evidence": "publication-values",
+      "format": "d",
+      "pointer": "/counts/interactions"
+    },
+    "negative-cell-means": {
+      "evidence": "publication-values",
+      "format": "d",
+      "pointer": "/counts/negative_cell_means"
+    },
+    "positive-schedule-means": {
+      "evidence": "publication-values",
+      "format": "d",
+      "pointer": "/counts/positive_schedule_means"
+    },
+    "raw-comparisons": {
+      "evidence": "publication-values",
+      "format": "d",
+      "pointer": "/counts/raw_comparisons"
+    },
+    "raw-cosine-better": {
+      "evidence": "publication-values",
+      "format": "d",
+      "pointer": "/counts/raw_cosine_better"
+    },
+    "schedule-contrasts": {
+      "evidence": "publication-values",
+      "format": "d",
+      "pointer": "/counts/schedule_contrasts"
+    },
+    "schedule-intervals-above-zero": {
+      "evidence": "publication-values",
+      "format": "d",
+      "pointer": "/counts/schedule_intervals_above_zero"
+    },
+    "seeds": {
+      "evidence": "publication-values",
+      "format": "d",
+      "pointer": "/counts/independent_seeds_per_dataset"
+    },
+    "states": {
+      "evidence": "publication-values",
+      "format": "d",
+      "pointer": "/counts/states"
+    },
+    "summaries-checked": {
+      "evidence": "publication-values",
+      "format": "d",
+      "pointer": "/counts/summaries_checked"
+    },
+    "training-updates": {
+      "evidence": "publication-values",
+      "format": "d",
+      "pointer": "/counts/training_updates"
+    },
+    "trajectories": {
+      "evidence": "publication-values",
+      "format": "d",
+      "pointer": "/counts/trajectories"
+    },
+    "updates": {
+      "evidence": "publication-values",
+      "format": "d",
+      "pointer": "/counts/training_updates"
+    }
+  }
+}

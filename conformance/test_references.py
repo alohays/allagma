@@ -148,6 +148,11 @@ class ReferenceTests(unittest.TestCase):
         (raw / "weights.bin").write_bytes(b"Never package raw cached assets")
         with self.assertRaisesRegex(AllagmaError, "Raw reference cache"):
             distributable_inventory(source)
+        record = reference_record()
+        record["note"] = "source/nested-cache/raw-notes.md"
+        (raw / "raw-notes.md").write_text("Raw downloaded source, not an authored reading note")
+        with self.assertRaisesRegex(AllagmaError, "outside raw reference caches"):
+            references.add_record(self.value, record, directory=self.root)
 
 
 if __name__ == "__main__":

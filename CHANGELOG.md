@@ -1,5 +1,20 @@
 # Changelog
 
+## Unreleased: reference research and optional papers
+
+- Make the critical reference dossier part of new-study scoping and continuation,
+  with deduplicated identities, separate bibliographic/support checks and explicit
+  offline coverage. Preserve existing studies and frozen bundles.
+- Add bounded acquisition, content reuse, interruption/corruption handling,
+  Git-resolved local exclusions and selected immutable execution inputs.
+- Add configurable paper attribution and an optional arXiv output. Retain the
+  normal report default and keep network/TeX integration outside the offline core.
+- Retain an eight-entry literature map and a new EMA manuscript revision, with
+  exact prior scientific inputs, recomputed summaries, PDF and portable sources.
+  No new training, native model session, arXiv submission or release is made.
+- Include public documentation and a separate supported-release TeX CI check.
+  Publication of these docs waits for this feature branch to be merged.
+
 ## Final publication audit — 8 October 2026
 
 - Package source releases from committed Git blobs only, excluding ignored,

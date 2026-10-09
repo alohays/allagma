@@ -1,0 +1,22 @@
+The descriptive pattern is consistent with earlier observations that
+averaging can provide a stronger relative benefit while a learning-rate
+policy maintains stochastic updates, and a smaller difference once the raw
+model has caught up during annealing \cite{MoralesBrotons2024,Ajroldi2025}.
+The newer benchmark already studies this interaction directly. The present
+results add a transparent small-model diffusion example with retained paired
+states; they do not establish a new general principle.
+
+The experiment intervenes on the full learning-rate path. Changes in the
+terminal rate, the sequence of updates and the parameters entering the EMA
+occur together. A causal explanation restricted to the last rate would
+require another design. Likewise, the four-seed duration and interaction
+intervals do not support a reliable conclusion about how the schedule
+contrast changes with longer training.
+
+Only two fixed EMA decays were tested. Architecture-dependent and
+training-dependent averaging profiles \cite{Karras2024}, uniform averaging
+\cite{Izmailov2018}, and switching averaged parameters back into training
+\cite{Li2024} are different choices. The retained data cannot rank them or
+justify a universal decay recommendation. The contrary ordinary-EMA
+outcomes in the literature also argue against treating an improvement as a
+condition for a valid research package.

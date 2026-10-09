@@ -31,6 +31,18 @@ def nonempty(value):
     return isinstance(value, str) and bool(value.strip())
 
 
+def raw_cache_file(root, path):
+    root, path = Path(root).resolve(), Path(path).absolute()
+    parent = path.parent
+    while parent.is_relative_to(root):
+        if (parent / ".allagma-reference-cache.json").exists():
+            return True
+        if parent == root:
+            break
+        parent = parent.parent
+    return False
+
+
 def public_url(value):
     """Only public provenance URLs, never credential-bearing retrieval links."""
     require(nonempty(value), "A public source URL is required")
@@ -149,7 +161,9 @@ def validate_map(value, *, directory=None, require_review=False, retrieval=None)
                     all(p["assessment"] != "unassessed" for p in passages), f"{key}: critical reading is incomplete")
         if record.get("note"):
             require(directory is not None, "A reference directory is required to validate reading notes")
-            require(confined(directory, record["note"]).is_file(), f"{key}: reading note is missing")
+            note = confined(directory, record["note"])
+            require(note.is_file(), f"{key}: reading note is missing")
+            require(not raw_cache_file(directory, note), "Version useful reading notes outside raw reference caches")
     decisions = value.get("decisions")
     require(isinstance(decisions, list), "Reference decisions must be a list")
     for decision in decisions:
