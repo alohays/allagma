@@ -63,9 +63,18 @@ def verify_evidence(study, record, *, max_files=10000, max_bytes=256 * 1024 * 10
     try:
         entry_hash, root = read(record, json_content=True)
         roots = root if isinstance(root, list) else [root]
-        if not roots or any(not isinstance(item, dict) or "record_type" not in item for item in roots):
+        if not roots:
             raise AllagmaError("Entry must be an Allagma record or a nonempty list of records")
-        pending = [(root, record, "$")]
+        pending = []
+        for index, item in enumerate(roots):
+            location = f"$[{index}]" if isinstance(root, list) else "$"
+            if not isinstance(item, dict) or "record_type" not in item:
+                finding("invalid-entry", record, location, "Expected an Allagma record object with record_type")
+            else:
+                pending.append((item, record, location))
+        # A damaged list member fails the report but must not hide independent
+        # contract or reference failures in the other records.
+        pending.reverse()
         while pending:
             value, origin, location = pending.pop()
             if isinstance(value, dict):

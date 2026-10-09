@@ -2,6 +2,8 @@
 from contextlib import redirect_stdout, redirect_stderr
 from io import StringIO
 import json
+import subprocess
+import sys
 from unittest.mock import patch
 
 from allagma.cli import main
@@ -56,6 +58,32 @@ class EvidenceVerification(WorkspaceTest):
         self.assertEqual(len(result["findings"]), 4)
         self.assertEqual(result["checked_references"], 0)
         self.assertEqual([item["location"] for item in result["findings"]], [f"$.supporting[{i}]" for i in range(4)])
+
+    def test_invalid_entry_members_do_not_hide_valid_sibling_failures(self):
+        write_json(self.work / "raw.json", {"measurement": 7})
+        shared = reference(self.work, self.work / "raw.json")
+        missing = dict(shared, path="missing.json")
+        write_json(self.work / "claims.json", [claim([missing, shared]), 42, {}, claim([shared])])
+        before = inventory(self.work)
+        mtimes = {p: p.stat().st_mtime_ns for p in self.work.rglob("*")}
+        process = subprocess.run(
+            [sys.executable, "-B", "-m", "allagma", "verify-evidence", "--study", str(self.work),
+             "--record", "claims.json"],
+            cwd=ROOT, text=True, capture_output=True, timeout=15,
+        )
+        self.assertEqual(process.returncode, 1, process.stderr)
+        self.assertEqual(process.stderr, "")
+        result = json.loads(process.stdout)
+        self.assertEqual(result["status"], "fail")
+        self.assertEqual({(item["code"], item["location"]) for item in result["findings"]},
+                         {("invalid-entry", "$[1]"), ("invalid-entry", "$[2]"),
+                          ("invalid-reference", "$[0].supporting[0]")})
+        self.assertTrue(all(item["artifact"] == "claims.json" for item in result["findings"]))
+        self.assertEqual(result["validated_records"], 2)
+        self.assertEqual(result["checked_references"], 1)
+        self.assertEqual(result["files_read"], 2)
+        self.assertEqual(inventory(self.work), before)
+        self.assertEqual({p: p.stat().st_mtime_ns for p in self.work.rglob("*")}, mtimes)
 
     def test_untyped_transport_metadata_is_not_a_declared_reference(self):
         # Transport hash maps are deliberately outside graph coverage, even

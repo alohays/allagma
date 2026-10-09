@@ -58,7 +58,9 @@ command checks the current supported record contracts and SHA-256 references,
 following references declared as `application/json` transitively. Shared
 references are checked once. It collects independent failures with the referring
 artifact and JSON location, rejects traversal/symlinks, and reports actual
-coverage counts. Default limits are 10,000 file reads and 256 MiB of evidence
+coverage counts. A malformed member of an entry list fails the report at its
+own location while valid sibling records and their references are still checked.
+Default limits are 10,000 file reads and 256 MiB of evidence
 bytes; `--max-files` and `--max-bytes` must be positive integers. Reaching a limit
 fails the check instead of reporting partial coverage as a pass.
 
