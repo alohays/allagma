@@ -1,6 +1,11 @@
 ## Change
 
-What problem does this solve, and what happens now?
+Link the issue (`Closes #NUMBER` when fully addressed). What concrete problem
+does this solve, and what happens before/after? Identify reproduced defects,
+proposed enhancements or qualification evidence accurately.
+
+State any PR dependencies and remaining owner decisions. Disclose agent-assisted
+work; preserve actual authorship. Keep the PR draft while requesting review.
 
 ## Evidence
 

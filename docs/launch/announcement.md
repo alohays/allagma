@@ -8,8 +8,12 @@ offline Python example, then explore three executed studies with reproducible
 packages. Core is MIT; 0.3.0rc2 is a source release candidate.
 
 Repository: [alohays/allagma](https://github.com/alohays/allagma).
-At launch, add the live documentation and flagship demo links after verifying
-them. Do not describe those endpoints as live before activation.
+The [documentation](https://alohays.github.io/allagma/) and
+[flagship demo](https://alohays.github.io/allagma/demo/) are live under the
+owner's 9 October 2026 authorization, with a separate
+[welcome Discussion](https://github.com/alohays/allagma/discussions/13).
+The announcement copy in this file remains unposted; external outreach is not
+authorized by the documentation/community activation.
 
 ## Longer introduction
 

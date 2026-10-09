@@ -1,10 +1,54 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import { readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+
+test('opening shows a playable result and direct routes to a study and its report', async ({ page }) => {
+  await page.goto('./');
+  const hero = page.locator('.launch-hero');
+  const play = hero.getByRole('button', {name:'Play demo 1:40'});
+  await expect(hero.locator('.video-cover')).toBeVisible();
+  // At the tested phone and desktop sizes, the play control is in the opening viewport.
+  await expect(play).toBeInViewport({ ratio: 1 });
+  await play.focus();
+  await page.keyboard.press('Enter');
+  const video = hero.locator('video');
+  await expect.poll(() => video.evaluate((v:HTMLVideoElement) => v.currentTime)).toBeGreaterThan(.3);
+  await expect(play).toBeHidden();
+  await expect(hero.locator('.video-cover')).toBeHidden();
+  await expect(video).toHaveJSProperty('inert', false);
+  await expect(video).toHaveJSProperty('controls', true);
+  await video.evaluate((v:HTMLVideoElement) => v.pause());
+  await hero.getByRole('link',{name:'Read the report excerpt',exact:true}).click();
+  await expect(page.getByRole('tab',{name:'Report',exact:true})).toHaveAttribute('aria-selected','true');
+  await expect(page.getByRole('tabpanel').locator('blockquote')).toContainText('24');
+  await page.reload();
+  await expect(page.getByRole('tab',{name:'Report',exact:true})).toHaveAttribute('aria-selected','true');
+  await page.goto('./');
+  await hero.getByRole('link',{name:'Read a completed study',exact:true}).click();
+  await expect(page).toHaveURL(/studies\/ema-schedule\/$/);
+  await expect(page.locator('main')).toContainText('The result below is retained work from run r07');
+});
+
+test('media and report downloads retain their source bytes', async ({page}) => {
+  for (const [route, name, source] of [
+    ['demo/', 'Download MP4 (2.9 MB)', '../media/demo/allagma-workflow.mp4'],
+    ['demo/', 'Download English captions', '../media/demo/allagma-workflow.en.vtt'],
+    ['explore/#panel-report', 'Download the full generated manuscript (Markdown)', '../media/evidence/toy-manuscript.md'],
+    ['./', "Download the agent's full report (Markdown)", '../media/evidence/ema-r07-report.md'],
+  ]) {
+    await page.goto(route);
+    const ready = page.waitForEvent('download');
+    await page.getByRole('link',{name}).click();
+    const download = await ready;
+    const actual = readFileSync((await download.path())!);
+    expect(createHash('sha256').update(actual).digest('hex')).toBe(createHash('sha256').update(readFileSync(source)).digest('hex'));
+  }
+});
 
 test('landing page works in both themes without horizontal overflow', async ({ page }, info) => {
   await page.goto('./');
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('checkable results');
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('carry out a study');
   for (const theme of ['light', 'dark']) {
     await page.getByLabel('Select theme').selectOption(theme);
     await expect(page.locator('html')).toHaveAttribute('data-theme', theme);
@@ -13,7 +57,7 @@ test('landing page works in both themes without horizontal overflow', async ({ p
     const result = await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();
     expect(result.violations).toEqual([]);
   }
-  await page.getByRole('link', {name: 'Run your first study'}).click();
+  await page.getByRole('link', {name: 'Try the offline example'}).click();
   await expect(page).toHaveURL(/\/allagma\/guides\/first-study\/$/);
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Your first study');
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
@@ -33,11 +77,13 @@ test('production search finds the tutorial and navigates under the base path', a
 
 test('artifact tabs support keyboard navigation and show actual values', async ({ page }, info) => {
   await page.goto('explore/');
-  const brief = page.getByRole('tab', {name:'Brief', exact:true});
-  await brief.focus();
-  await page.keyboard.press('ArrowRight');
-  await expect(page.getByRole('tab', {name:'Results',exact:true})).toBeFocused();
+  const resultsTab = page.getByRole('tab', {name:'Results', exact:true});
+  await expect(resultsTab).toHaveAttribute('aria-selected','true');
   await expect(page.getByRole('tabpanel')).toContainText('+0.06510');
+  await resultsTab.focus();
+  await page.keyboard.press('ArrowRight');
+  await expect(page.getByRole('tab', {name:'Report',exact:true})).toBeFocused();
+  await expect(page.getByRole('tabpanel').locator('blockquote')).toContainText('sample mean plus 0.25');
   await page.keyboard.press('ArrowRight');
   await expect(page.getByRole('tab', {name:'Claims',exact:true})).toBeFocused();
   await expect(page.getByRole('tabpanel')).toContainText('contradicted');
@@ -79,7 +125,7 @@ test('skip link and mobile menu are usable', async ({page}, info) => {
 test('flagship video decodes, plays, seeks and loads English captions', async ({page}, info) => {
   await page.goto('demo/');
   const video = page.locator('video');
-  await expect(video).toHaveAttribute('preload','none');
+  await expect(video).toHaveAttribute('preload','metadata');
   await video.evaluate(async (v:HTMLVideoElement) => { v.muted=true; await v.play(); });
   await expect.poll(() => video.evaluate((v:HTMLVideoElement) => v.currentTime)).toBeGreaterThan(.5);
   const decoded = await video.evaluate((v:HTMLVideoElement) => ({duration:v.duration,width:v.videoWidth,height:v.videoHeight,error:v.error?.code||null,tracks:v.textTracks.length}));

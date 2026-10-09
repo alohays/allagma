@@ -161,3 +161,137 @@ adapter replacement, an offline contributor path, version/update/migration and
 rollback scenarios, and actual toy raw data, analysis, claims and manuscript.
 Do not mark the goal complete until implementation, passing evidence, technical
 documentation, commits and the authorized push are complete.
+
+## First contributor workflow — 9 October 2026
+
+Establish an actionable GitHub backlog for researchers and Python developers,
+with approximately six to eight distinct tasks and two to three substantive,
+validated draft PRs against `main` on separate `codex/` branches. Inspect current
+issues, PRs, roadmap, starter tasks, retained failures and first-use friction
+before selecting work. Distinguish reproduced defects, proposed enhancements
+and qualification work. Each issue needs its user problem, source/reproduction,
+bounded scope, starting files, acceptance criteria, validation and dependencies.
+
+Keep two to three approachable tasks available and unclaimed, with appropriate
+newcomer labels and local validation requiring no paid model or GPU. Reserve
+deeper changes for the draft PRs. Link each PR to its issue, explain before/after
+behavior, compatibility and owner decisions, verify its pushed head and fix
+relevant CI failures. Keep all PRs draft pending owner review; do not merge.
+Review the existing Dependabot PR separately and record a concise recommendation
+without duplicating its dependency updates.
+
+Use a small label set, a focused milestone and a pinned contributor overview.
+Connect actual GitHub objects from the roadmap, contribution guide, starter-task
+list and community plan. Distinguish available, in-progress, blocked and
+awaiting-owner-review work. Document lightweight claiming, triage, evidence,
+review and credit practices without response-time or release-date promises.
+Issues, labels, milestone, overview, task-relevant comments, PR descriptions and
+implementation-branch pushes are authorized; local drafts alone are insufficient.
+Describe maintainer-proposed and agent-assisted work accurately.
+
+Preserve the private-visibility instruction, full history, frozen evidence and
+historical-audio launch blocker. Public deployment, announcements and external
+outreach are outside this goal. Keep the offline standard-library core,
+study-owned science, GUI model choice and existing native model-usage limits.
+Make routine engineering decisions autonomously; ask through the user-input tool
+for consequential unresolved choices. Commit coherent increments and push the
+completed authorized work to `origin`.
+
+Finish only when the backlog is navigable, newcomer tasks remain available,
+draft PR improvements are validated, documentation matches their actual state,
+and issue/PR links, labels, relationships, branches and applicable CI are
+verified. Handoff must link every created/updated issue and PR, recommend a
+review order and identify exact unresolved owner decisions. The
+[contributor workflow ledger](docs/contributing/first-workflow.md) records current
+progress and evidence without replacing these requirements.
+
+## Public contributor workflow and documentation activation — 9 October 2026
+
+The owner intentionally made `alohays/allagma` public and explicitly authorizes
+keeping it public. This supersedes the earlier private-only and deferred-
+publication restrictions for the following actions; no visibility reconfirmation
+is required. Preserve the historical decisions and evidence as historical facts.
+
+Reuse the three local implementation branches, seven issue drafts and prepared
+contributor materials. Publish the labels, focused milestone, task issues and a
+pinned contributor overview; leave the three smaller tasks unclaimed. Push the
+three `codex/contributor-*` implementation branches, open linked draft PRs
+against main, verify exact pushed-head CI and repair relevant failures. Record
+the separate Dependabot review. Keep all PRs unmerged for owner review.
+
+Enable GitHub Pages with Actions, set `ALLAGMA_PUBLIC_LAUNCH=true`, dispatch the
+existing workflow with deployment enabled and complete an actual successful
+deployment at `https://alohays.github.io/allagma/`. Verify the unauthenticated
+live site's navigation/deep links, search, desktop/mobile layouts, keyboard
+access, figures, video playback/seeking/captions and downloads. Verify the public
+README video and links, and run the documented lightweight anonymous clone and
+complete offline first study in a clean directory. Retain concise evidence of
+the deployed source commit, checks and any repairs.
+
+Set the repository website to the working docs URL, upload the prepared social
+preview, enable private vulnerability reporting and Discussions with Q&A, Show
+and tell, and Ideas. Publish and pin one concise welcome linking the tutorial,
+support, contributor overview and available tasks. Update README, roadmap,
+contributor guidance, starter tasks and community/status documents to the actual
+public URLs and GitHub objects. Public docs must describe main's capabilities
+and clearly identify draft-PR features as proposed. Repository settings, these
+issues/comments, draft PRs, the welcome Discussion, pushes, documentation/
+community/deployment commits to main and Pages deployment are authorized.
+New releases, PR merges and external outreach remain outside this goal.
+
+Historical-audio rights remain an unresolved maintainer issue. Public visibility
+is not clearance. Preserve history and frozen evidence, serve only the current
+cleared media on Pages, and do not treat that issue as a renewed private-only
+gate for this authorized work. Preserve the offline standard-library core,
+study-owned science, GUI model selection and existing model-usage limits. No new
+scientific campaign is required. Continue through publication, live verification
+and repairs until the contributor workflow and public site operate. Final
+handoff must link the docs, every issue/PR/Discussion, deployment/CI evidence,
+review order and exact remaining owner decisions.
+
+## Research outputs in the README and live docs: 9 October 2026
+
+Make the published opening show researchers how a coding agent carries out a
+study and produces useful outputs. Lead with real work and results, then explain
+how Allagma preserves the evidence. Answer what Allagma does, who it serves,
+what the researcher supplies, what the agent does, and what the researcher
+receives. Bring the workflow illustration forward in the README and replace
+the docs hero's isolated toy-result number with actual research outputs.
+
+Restructure the README, landing page, demo, artifact explorer, study previews,
+navigation and microcopy. Keep Starlight and useful existing design work; improve
+typography, spacing, image scale and action hierarchy. Preserve canonical
+content sources and URLs, adding redirects if necessary. Describe main's
+capabilities accurately; contributor PRs remain proposals.
+
+Put an inviting playable demo in the landing page's opening and preserve inline
+GitHub playback. Show a recognizable result before play, with direct routes to a
+completed study and local quickstart. Use real screenshots, plots, purposeful
+annotations, readable captions and links to full-size results. Reuse the licensed
+footage and verified artifacts; a revised poster or shorter introduction is
+allowed. Distinguish recorded offline execution from retained native-agent
+results. Do not invent a product UI or imply another experiment ran. Keep the
+offline toy clearly identified as the introductory example.
+
+Apply the installed humanizer skill to English public prose. Write as a
+researcher explaining a useful tool to a colleague. Rewrite whole paragraphs,
+remove repeated slogans and forced fragments, and keep scientific meaning,
+qualifications, citations and licensing information. Move engineering and
+evaluation detail to linked pages, with limitations beside the claims they
+qualify. Explain the practical value before bundles, contracts, locks or counts.
+
+Presentation changes on main and deployment to the existing public GitHub Pages
+site are explicitly authorized. Preserve scientific code, frozen evidence,
+Git history, open contributor work, GUI model choice and existing resource
+limits. No new scientific campaign or PR merge is needed. Commit coherent
+increments, push to origin, and complete redeployment.
+
+Inspect the rendered README and live site before and after the work. Verify
+desktop/mobile, light/dark, keyboard navigation, media playback and captions,
+links, search, and routes to results and first use. Run affected checks and
+retain screenshots and a concise editorial/visual assessment. Finish only when
+the published experience shows the result, explains the workflow, and offers
+an obvious next action. Return live links, deployed commit, validation evidence
+and material limitations. Make routine decisions autonomously and use the
+user-input tool for consequential unresolved choices. The
+[presentation ledger](docs/launch/research-opening.md) records verification.

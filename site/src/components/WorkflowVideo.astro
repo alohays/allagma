@@ -1,17 +1,62 @@
 ---
+import posterReceipt from '../../../media/demo/results-poster-provenance.json';
+interface Props { compact?: boolean }
+const { compact = false } = Astro.props;
 const base = '/allagma/generated/media/demo/';
+const poster = base+'results-poster.png?v='+posterReceipt.rendered_sha256.slice(0, 12);
 ---
-<figure class="workflow-video">
-  <video controls playsinline preload="none" poster={`${base}poster.png`} aria-label="Allagma workflow demonstration, with English captions" width="1600" height="900">
-    <source src={`${base}allagma-workflow.mp4`} type="video/mp4" />
-    <track kind="captions" src={`${base}allagma-workflow.en.vtt`} srclang="en" label="English" default />
-    <p><a href={`${base}allagma-workflow.mp4`}>Download the video</a> or <a href="/allagma/demo/transcript/">read its transcript</a>.</p>
-  </video>
-  <figcaption>Actual local execution · about 100 seconds · 2.9 MB · English captions and transcript</figcaption>
+<figure class:list={['workflow-video', {compact}]}>
+  <div class="video-frame">
+    <video controls playsinline preload="metadata" poster={poster} aria-label="Allagma workflow demonstration, with English captions" width="1600" height="900">
+      <source src={base+'allagma-workflow.mp4'} type="video/mp4" />
+      <track kind="captions" src={base+'allagma-workflow.en.vtt'} srclang="en" label="English" default />
+      <p><a href={base+'allagma-workflow.mp4'}>Download the video</a> or <a href="/allagma/demo/transcript/">read its transcript</a>.</p>
+    </video>
+    <img class="video-cover" src={poster} width="1280" height="720" alt="" hidden />
+    <button class="video-play" type="button" hidden><span aria-hidden="true">▶</span> Play demo <span class="duration">1:40</span></button>
+  </div>
+  <figcaption>The recording runs the offline example and displays its figure and report. At 1:23, it shows retained native-agent EMA results. <a href="/allagma/explore/">Open the figure</a> · <a href="/allagma/explore/#panel-report">Read the report excerpt</a> · <a href="/allagma/demo/transcript/">Captions and transcript</a>.</figcaption>
 </figure>
+<script>
+  document.querySelectorAll<HTMLElement>('.workflow-video').forEach(figure => {
+    const video = figure.querySelector('video')!;
+    const button = figure.querySelector<HTMLButtonElement>('.video-play')!;
+    const cover = figure.querySelector<HTMLImageElement>('.video-cover')!;
+    // Show a stable poster until playback; some native players show a loading
+    // spinner even while paused. Without JavaScript, native controls remain.
+    cover.hidden = false;
+    button.hidden = false;
+    video.controls = false;
+    video.tabIndex = -1;
+    video.inert = true;
+    function revealVideo() {
+      cover.hidden = true;
+      button.hidden = true;
+      video.controls = true;
+      video.tabIndex = 0;
+      video.inert = false;
+    }
+    button.addEventListener('click', async () => {
+      try { await video.play(); video.focus(); }
+      catch { revealVideo(); video.focus(); }
+    });
+    video.addEventListener('play', revealVideo);
+    video.addEventListener('ended', () => { button.hidden = false; });
+  });
+</script>
 <style>
-  .workflow-video { margin: 1.5rem 0; }
-  video { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 7px; background: #102c24; }
+  .workflow-video { margin: 1.4rem 0; }
+  .compact { margin: .7rem 0 0; }
+  .video-frame { position: relative; }
+  video { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; background: #102c24; }
   video::cue { font-family: system-ui,sans-serif; }
-  figcaption { font-size: .75rem; color: var(--muted); margin-top: .7rem; }
+  .video-cover { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; border: 1px solid var(--line); border-radius: 8px; pointer-events: none; }
+  .video-cover[hidden] { display: none; }
+  .video-play { position: absolute; left: 50%; bottom: 2%; transform: translateX(-50%); display: flex; align-items: center; gap: .7rem; white-space: nowrap; border: 1px solid #a6dac7; border-radius: 5rem; padding: .7rem 1.2rem; background: #10372d; color: #fff; box-shadow: 0 2px 12px #0003; font: 600 .95rem var(--sl-font); cursor: pointer; }
+  .video-play:hover { background: #1d5546; }
+  .video-play[hidden] { display: none; }
+  .duration { font-weight: 400; color: #cce3d9; border-left: 1px solid #6c9588; padding-left: .7rem; }
+  figcaption { font-size: .85rem; color: var(--muted); margin-top: .85rem; line-height: 1.6; }
+  figcaption a { color: var(--teal); }
+  @media (max-width: 500px) { .video-play { padding: .4rem 1rem; font-size: .85rem; } figcaption { font-size: .8rem; } }
 </style>

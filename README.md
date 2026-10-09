@@ -1,33 +1,70 @@
 # Allagma
 
-**Research workflows for coding agents.** Pin the plan, retain every attempt,
-and connect claims to evidence you can inspect.
+**A research workflow for coding agents.** Give the agent a question, source
+materials and resource limits. It develops the protocol, writes and runs the
+experiments, analyzes the results, and prepares a report for you to review.
+
+Allagma is for researchers working with code. You receive the figures and
+findings, along with the code, data and attempt history needed to check them.
+
+[Read a completed study](https://alohays.github.io/allagma/studies/ema-schedule/) ·
+[Try the offline example](#run-your-first-study) ·
+[Documentation](https://alohays.github.io/allagma/)
 
 https://github.com/user-attachments/assets/df7c556b-9251-4514-9fb2-ecacc2de9162
 
-**100 seconds, actual software.** A research brief becomes an executed study,
-a figure, an evidence-linked report, and recomputed results. The final chapter
-shows clearly labeled retained native-study results; no accelerated computation.
+The 100-second demo runs the supplied **offline example**, producing a figure,
+report and reproducible results. At 1:23 it shows **retained native-agent EMA
+results**. The recording uses a local demonstration workbench; it does not show
+a live model session or accelerate computation.
 
-[Download the demo](media/demo/allagma-workflow.mp4) · [Transcript](media/demo/transcript.md) ·
-[English captions](media/demo/allagma-workflow.en.vtt) · [Media sources and licenses](media/CAPTURE.md)
+[Watch with captions](https://alohays.github.io/allagma/demo/) ·
+[Transcript](media/demo/transcript.md) · [Download MP4](media/demo/allagma-workflow.mp4) ·
+[Media sources and licenses](media/CAPTURE.md)
 
-[First study](docs/guides/first-study.md) · [Native agent workflow](docs/guides/native-study.md) ·
-[Real studies](docs/showcase/index.md) · [Contribute](CONTRIBUTING.md)
+<picture>
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="media/workflow-dark-mobile.svg">
+  <source media="(max-width: 600px)" srcset="media/workflow-light-mobile.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="media/workflow-dark.svg">
+  <img src="media/workflow-light.svg" alt="You supply the question, sources and resource limits. The agent develops a protocol and code, runs experiments and analysis. You review figures, a report, critique and reproducible code." width="1000">
+</picture>
 
-A coding agent can write an experiment. Allagma gives it a reusable process for
-leaving a checkable research record: which question it asked, which methods it
-used, what failed, which measurements it included, and what the evidence supports.
-Your study owns its science. Allagma carries the methods, locks and records.
+Allagma gives the agent reusable methods for planning, execution, analysis and
+critique. It keeps the agreed protocol, failed attempts and the data behind
+each claim with the report, so you can see which runs informed a finding and
+recompute the numbers. You choose the question and judge the science.
 
-**0.3.0rc2 is a source release candidate.** The offline core uses Python 3.11+
-and the standard library on macOS or Linux. Native model sessions are optional.
-[Release notes](docs/releases/0.3.0rc2.md) describe the exact qualified scope.
+## What a completed study looks like
+
+A native Codex session used Allagma to investigate **when averaging model
+weights helps tiny diffusion models**. It returned scientific code, saved
+weights, paired estimates, this figure, a report and a critique.
+
+[![Retained EMA study figure: paired effects across learning-rate policy and training duration](media/evidence/ema-r07.png)](https://alohays.github.io/allagma/studies/ema-schedule/)
+
+The observed relative benefit of EMA was larger under constant learning rate
+than at completed cosine endpoints. With four seeds per dataset, duration and
+interaction estimates remain inconclusive. A smaller relative benefit does
+not imply worse absolute EMA quality. The figure shows retained r07 results;
+no new training was run for this preview.
+
+[Read the result and its limits](https://alohays.github.io/allagma/studies/ema-schedule/) ·
+[Open the full-size figure](media/evidence/ema-r07.png) ·
+[Agent's full report (Markdown)](https://alohays.github.io/allagma/generated/media/evidence/ema-r07-report.md) ·
+[Source attribution and study license](studies/ema-schedule/REFERENCE.md)
+
+Other completed native studies include a [CORE CULP reproduction](https://alohays.github.io/allagma/studies/core-culp/)
+with all six requested answers and a disclosed predictor-label defect, and a
+[modular-addition experiment](https://alohays.github.io/allagma/studies/modular-addition/)
+where weight decay improved endpoint accuracy without an observed grokking
+transition. [Browse their outputs and reproduction scope](https://alohays.github.io/allagma/studies/).
 
 ## Run your first study
 
-No model account, paid API, GPU or Python package installation is needed. This
-small checkout leaves the historical scientific archives out of the first download:
+The offline toy supplies finished scientific programs. It is the easiest way
+to try the workflow: Python 3.11+ on macOS or Linux, with no model account, paid
+API, GPU or Python package installation. This small checkout leaves the large
+historical study archives out of the first download:
 
 ```sh
 git clone --depth 1 --filter=blob:none --sparse https://github.com/alohays/allagma.git
@@ -38,90 +75,70 @@ python3 -m allagma check
 python3 -m allagma toy --destination work/my-first-study
 ```
 
-If you already have a checkout, start with `python3 -m allagma check`. Until the
-public launch, cloning requires repository access. Use a new destination for each
-study; existing evidence is never erased. The [full tutorial](docs/guides/first-study.md)
-explains every output and the example's finite limits.
+Use a new destination for each study. If you already have a checkout, start
+with `python3 -m allagma check`.
 
 The example asks whether adding 0.25 to a sample mean increases squared error.
-It runs known-answer pilots and 24 new confirmation seeds, recovers from an actual
-failure and interruption, and produces a figure, report and claim ledger.
+It runs two known-answer pilots and 24 confirmation seeds, retains a deliberate
+failure and interruption, and generates a figure, manuscript and claim ledger.
+The average error increases, but four seeds contradict the claim that it
+increases on every seed. This is a known-answer workflow demonstration.
 
-| Generated finding | What the record says |
-| --- | --- |
-| Mean increase in squared error: **0.06510417** | Supported; approximate 95% interval [0.03985104, 0.09035729] |
-| “Higher error on every seed” | Contradicted by four confirmation seeds |
-| Leave-one-seed-out mean differences | All 24 remain positive |
-
-Open `work/my-first-study/campaigns/toy-v1/analyses/a001/paper/manuscript.md`.
-Its claims link to numerical outputs, included attempts and frozen inputs.
-Then recompute and check the evidence:
+[Preview the actual outputs](https://alohays.github.io/allagma/explore/), or open
+`work/my-first-study/campaigns/toy-v1/analyses/a001/paper/manuscript.md` in your
+editor. Then recompute and check the evidence:
 
 ```sh
 python3 -m allagma campaign audit --study work/my-first-study --campaign toy-v1
 ```
 
-The default example passes **521 evidence-reference checks**. This is a
-known-answer workflow demonstration with approximate seed-level uncertainty,
-not scientific novelty or a language-model quality benchmark.
+The [full tutorial](https://alohays.github.io/allagma/guides/first-study/) explains
+the outputs, uncertainty estimates, retained attempts and audit coverage.
 
-## Use it for research you want to check later
+## Work on your own research question
 
-- **Reproduce a computational paper.** Preserve the original task, code changes,
-  failed attempts and exact answer checks. [CORE CULP](studies/core-culp/RESULTS.md)
-  reproduced six answers and disclosed an upstream predictor-label defect.
-- **Compare experimental choices.** Freeze the comparisons and independent units
-  before interpreting the results. [Modular addition](studies/modular-addition/RESULTS.md)
-  found an endpoint improvement without observing the prespecified grokking transition.
-- **Investigate a training effect.** Keep pairing, uncertainty and qualifications
-  beside the figure. The [EMA study](studies/ema-schedule/RESULTS.md) separates
-  descriptive schedule effects from inconclusive duration and interaction effects.
+<a id="use-it-for-research-you-want-to-check-later"></a>
 
-For your own question, supply a brief, materials and finite resource profile.
-[Prepare a native study](docs/guides/native-study.md) to let the agent develop the
-scientific code and report through the pinned methods. Preparation is offline;
-explicit native execution consumes your existing account's model usage.
+[Prepare a native study](https://alohays.github.io/allagma/guides/native-study/)
+from a brief, materials and finite resource profile. The agent develops the
+scientific code and report through Allagma's methods. Preparation is offline;
+explicit native execution consumes your account's model usage.
 
-## What has actually been tested
+<a id="what-has-actually-been-tested"></a>
 
-| Path | Evidence and boundary |
-| --- | --- |
-| Offline Python core | I1–I5 and 113 conformance tests; complete toy execution, recovery and recomputation |
-| Native Codex | Actual CLI 0.160.1 sessions on the recorded macOS/M4 Pro environment; explicit method loading and locked routing |
-| Claude Code | Packaging and contracts tested; native qualification is not claimed |
-| Experimental composition | Full-record context and the replication recipe are explicit experiments; no model-quality improvement is claimed |
+**0.3.0rc2 is a source release candidate.** The supervised native runner is
+qualified on the recorded macOS/Codex setup. Claude Code packaging is tested,
+but native qualification is not claimed. A session budget is a stopping limit,
+not a promise of completion: an additional onboarding probe completed its
+science and replay but ran out of session time before the final package index.
 
-In the [twelve-session comparison](docs/v0.3/COMPARISON.md), **all twelve runs
-completed the required science**. Allagma produced six complete evidence packages
-out of six; plain Codex produced four out of six. The two gaps concern explicit
-review-revision binding. This small local experiment does not establish general
-research superiority or consistent time or token savings.
-
-A deterministic audit is not independent scientific peer review. See
-[host support](docs/host-support.md), [acceptance evidence](docs/acceptance.md)
-and [resource limits](docs/resource-supervision.md) before extending a claim.
+The [host report](docs/host-support.md), [twelve-session comparison](docs/v0.3/COMPARISON.md)
+and [release notes](docs/releases/0.3.0rc2.md) describe the measured scope.
+The small comparison does not establish general research superiority or
+consistent cost savings. Deterministic checks and model critique do not replace
+independent scientific review.
 
 ## Understand and extend it
 
-<picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="media/workflow-dark-mobile.svg">
-  <source media="(max-width: 600px)" srcset="media/workflow-light-mobile.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="media/workflow-dark.svg">
-  <img src="media/workflow-light.svg" alt="Allagma follows one research question through a brief, pinned plan, retained attempts, and evidence-linked findings." width="1000">
-</picture>
+The [concept guide](https://alohays.github.io/allagma/reference/concepts/) explains
+the research record. Methods are portable Agent Skills, recipes compose them,
+and adapters connect them to a host. A campaign pins its exact bundle, so later
+central changes cannot silently rewrite an existing study. See
+[architecture](docs/architecture.md), [contracts](docs/contracts.md),
+[study-owned programs](docs/study-adapters.md), [versioning](docs/versioning.md)
+and [acceptance evidence](docs/acceptance.md) for engineering details.
 
-Start with [the concepts](docs/concepts.md). Methods are portable Agent Skills;
-recipes compose them; adapters connect them to a host. A campaign pins its exact
-bundle. Central changes cannot silently rewrite an existing study.
-[Architecture](docs/architecture.md), [contracts](docs/contracts.md),
-[study-owned programs](docs/study-adapters.md) and [versioning](docs/versioning.md)
-cover the implementation. No hooks, subagents or project model pins are installed.
+For a contribution, start with the [pinned overview](https://github.com/alohays/allagma/issues/9),
+[available tasks](docs/contributing/starter-tasks.md) or
+[welcome Discussion](https://github.com/alohays/allagma/discussions/13).
+The three contributor feature PRs remain drafts; their commands and adaptation
+helper are not yet available on main. [Contributing](CONTRIBUTING.md),
+[roadmap](ROADMAP.md), [support](SUPPORT.md) and
+[private security reporting](https://github.com/alohays/allagma/security/advisories/new)
+provide the next steps.
 
-Small contributions need no provider account or GPU. See [contributing](CONTRIBUTING.md),
-[starter tasks](docs/contributing/starter-tasks.md), [roadmap](ROADMAP.md),
-[support](SUPPORT.md) and [security reporting](SECURITY.md).
-
-Allagma core is **MIT licensed**. Scientific adaptations and archived dependencies
-retain their own terms, including the AI Scientist license on EMA-derived code;
-see [third-party notices](THIRD_PARTY_NOTICES.md). Cite the exact software version
-using [CITATION.cff](CITATION.cff), and identify a study's bundle separately.
+Allagma core is MIT licensed. Scientific adaptations and archived dependencies
+retain their own terms, including the AI Scientist license on EMA-derived
+materials. See [third-party notices](THIRD_PARTY_NOTICES.md). Cite the exact
+software version using [CITATION.cff](CITATION.cff), and identify a study's
+bundle separately.
