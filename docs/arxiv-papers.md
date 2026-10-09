@@ -66,6 +66,10 @@ covering a new manuscript revision.
 
 ## Build and inspect
 
+A self-contained provided-only study can have no external citations. Its paper
+keeps an explicit References section explaining that coverage, with an empty
+BibTeX file and a generated bbl. It does not invent sources to fill a bibliography.
+
 ```sh
 python3 -m allagma paper check --study /path/to/study
 python3 -m allagma paper build --study /path/to/study \

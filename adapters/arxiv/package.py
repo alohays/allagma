@@ -60,6 +60,14 @@ def assemble(study, config, destination):
     write_text(destination / "main.tex", main, immutable=True)
     write_text(destination / "evidence-macros.tex", papers.macros(value), immutable=True)
     write_text(destination / "references.bib", references.bibliography(value["literature"]), immutable=True)
+    if not value["citations"]:
+        # A provided-only known-answer study may legitimately cite no external
+        # work. Keep the requested References section explicit without inventing
+        # a citation or delivering an archive that depends on a missing bbl.
+        write_text(destination / "main.bbl", r"\section*{References}" + "\n" +
+            "No external bibliographic sources are cited in this manuscript. "
+            "The ancillary reference map records the reviewed materials and "
+            "the limits of literature coverage.\n", immutable=True)
     for figure in value["figures"].values():
         target = destination / figure["target"]
         target.parent.mkdir(parents=True, exist_ok=True)

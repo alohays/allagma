@@ -166,6 +166,24 @@ class PaperTests(unittest.TestCase):
         self.assertIn("pdfauthor={Fixture researcher}", main)
         self.assertNotIn("@@PDF_AUTHORS@@", main)
 
+    def test_provided_only_paper_without_external_citations_retains_an_honest_reference_section(self):
+        config = deepcopy(self.config)
+        write_json(self.study / "references/map.json", references.empty_map("A self-contained known-answer derivation."))
+        references.refresh(self.study / "references")
+        (self.study / "introduction.tex").write_text("This derivation uses only the supplied study evidence.\n")
+        config["claims"][0]["citations"] = []
+        for kind in config["review"]:
+            path = self.study / config["evidence"][kind]["path"]
+            record = read_json(path)
+            record["reviewed_content_sha256"] = papers.review_fingerprint(self.study, config)
+            write_json(path, record)
+            config["evidence"][kind]["sha256"] = file_hash(path)
+        source = self.root / "provided-only"
+        adapter.assemble(self.study, config, source)
+        self.assertIn("No external bibliographic sources", (source / "main.bbl").read_text())
+        self.assertIn(r"\section*{References}", (source / "main.bbl").read_text())
+        self.assertEqual((source / "references.bib").read_text().strip(), "")
+
 
 if __name__ == "__main__":
     unittest.main()
