@@ -60,9 +60,10 @@ them in `review`. These are scoped reviewer judgments. Deterministic checks
 establish integrity and declared links, not that every prose assertion is true.
 Each review record uses `format: allagma-paper-review-v1`, its `kind`, and
 `reviewed_content_sha256` from `allagma.papers.review_fingerprint(study, config)`.
-Changing prose, attribution, the reference map or selected scientific evidence
+Changing prose, section roles or paths, attribution, the reference map or selected scientific evidence
 makes the review stale. This binding prevents an old review from silently
-covering a new manuscript revision.
+covering a new manuscript revision. Reviews created before section-role binding
+was introduced must be checked again and retained as new review records.
 
 ## Build and inspect
 

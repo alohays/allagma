@@ -107,7 +107,8 @@ def review_fingerprint(study, config):
     selected = {key: item for key, item in config.get("evidence", {}).items() if key not in review_ids}
     content = {key: config.get(key) for key in ("title", "date", "authors", "template", "claims", "values", "figures", "tables")}
     content.update(evidence=selected,
-                   sections={path: file_hash(confined(study, path)) for path in config["sections"].values()},
+                   sections={role: {"path": path, "sha256": file_hash(confined(study, path))}
+                             for role, path in config["sections"].items()},
                    appendices=[{**item, "sha256": file_hash(confined(study, item["path"]))} for item in config.get("appendices", [])],
                    reference_map_sha256=file_hash(confined(study, config["references"]) / "map.json"))
     return digest(content)

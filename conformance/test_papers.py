@@ -50,13 +50,17 @@ def paper_fixture(study):
              "format": ".3f", "pattern": "{0} [{1}, {2}]"}]}],
         "review": {kind: {"status": "complete", "scope": "Fixture structure only.", "record": kind}
                    for kind in ("scientific", "humanizer")}}
+    bind_reviews(study, config)
+    return config
+
+
+def bind_reviews(study, config):
     for kind in config["review"]:
         path = study / (kind + "-review.json")
         write_json(path, {"format": "allagma-paper-review-v1", "kind": kind,
                          "reviewed_content_sha256": papers.review_fingerprint(study, config),
                          "scope": "Conformance fixture only, not a scientific qualification"})
         config["evidence"][kind] = {"path": path.name, "sha256": file_hash(path)}
-    return config
 
 
 class PaperTests(unittest.TestCase):
@@ -155,6 +159,26 @@ class PaperTests(unittest.TestCase):
             stream.write("This added interpretation requires review.\n")
         with self.assertRaisesRegex(AllagmaError, "review is stale"):
             papers.validate(self.study, self.config)
+
+    def test_section_roles_are_bound_to_both_reviews(self):
+        (self.study / "limitations.tex").write_text("This fixture cannot establish scientific validity.\n")
+        bind_reviews(self.study, self.config)
+        original = papers.review_fingerprint(self.study, self.config)
+        config = deepcopy(self.config)
+        config["sections"] = dict(reversed(list(config["sections"].items())))
+        self.assertEqual(papers.review_fingerprint(self.study, config), original)
+        config["sections"]["abstract"], config["sections"]["limitations"] = (
+            config["sections"]["limitations"], config["sections"]["abstract"])
+        self.assertNotEqual(papers.review_fingerprint(self.study, config), original)
+        with self.assertRaisesRegex(AllagmaError, "scientific review is stale"):
+            papers.validate(self.study, config)
+        scientific = self.study / config["evidence"]["scientific"]["path"]
+        record = read_json(scientific)
+        record["reviewed_content_sha256"] = papers.review_fingerprint(self.study, config)
+        write_json(scientific, record)
+        config["evidence"]["scientific"]["sha256"] = file_hash(scientific)
+        with self.assertRaisesRegex(AllagmaError, "humanizer review is stale"):
+            papers.validate(self.study, config)
 
     def test_short_tables_stay_together_and_pdf_attribution_is_configured(self):
         value = papers.validate(self.study, self.config)
