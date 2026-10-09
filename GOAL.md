@@ -331,3 +331,20 @@ and Pages deployment on each actual merge. Preserve frozen studies, the GUI
 model selection, existing resource limits and English documentation. Follow
 the standing commit-and-push instruction for any necessary repairs or records.
 The [sequential merge record](docs/contributing/merged-prs.md) tracks completion.
+
+## Review every open PR — 10 October 2026
+
+Review all open pull requests one by one, covering changed code line by line,
+architecture, contracts, failure behavior, meaningful tests and documentation.
+Submit high-level assessments through GitHub reviews and anchor actionable
+findings to the relevant diff lines. Reproduce findings before posting them.
+
+The open set initially contained #14 and #15. Include #16, which opened during
+the review pass. Review the exact current heads and distinguish a completed
+review from merge readiness. This request does not authorize merging these PRs
+or changing their implementations, draft states or live repository settings.
+Preserve earlier owner decisions, frozen evidence, English documentation, GUI
+model selection and native-usage limits. Follow the standing instruction to
+commit coherent work and push to origin; retain the review record on its own
+branch. The [open-PR review record](docs/contributing/open-pr-review.md) links
+the submitted reviews, evidence and remaining findings.

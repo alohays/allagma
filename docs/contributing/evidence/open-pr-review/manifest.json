@@ -1,0 +1,45 @@
+{
+  "base": "5f519e63e7fc50a2e7da887481444dd9b649eab8",
+  "files": {
+    "changed-files.json": {
+      "bytes": 16784,
+      "sha256": "95cbc53a491c7b991cb85271f138f1a7f1e1a7e1a40b62995b53160431db2e4e"
+    },
+    "open-prs.json": {
+      "bytes": 917,
+      "sha256": "7555f1e38980c6bc1028d235f9b52a90b38b6d88474d265cf03bea657f5448c5"
+    },
+    "pr-14-validation.json": {
+      "bytes": 4457,
+      "sha256": "130c2e3936b75551557a3219a2651b6524d3f46cdb92a8a766dc0311480e0432"
+    },
+    "pr-15-validation.json": {
+      "bytes": 2770,
+      "sha256": "f6f783d4112304ebf79eb16266f015cd22f50038192497a9d8cc36668ddfde95"
+    },
+    "pr-16-live-main.json": {
+      "bytes": 1731,
+      "sha256": "a14ea4e39bdb23266c5907c4bab421bcb28f4d8cd693a8033fe909a2bc236ac9"
+    },
+    "pr-16-live-tags.json": {
+      "bytes": 790,
+      "sha256": "c96d68f747969695d43c81a1b8935049c3e10fd06842d2a12dd29281340626e8"
+    },
+    "pr-16-validation.json": {
+      "bytes": 4177,
+      "sha256": "129261b8bdf895aa572df8220ec967db5510eb759b2c2af2edf0be7e21d4401b"
+    },
+    "reviews.json": {
+      "bytes": 6800,
+      "sha256": "fd56913939e3daab1ad6762ff10b003e39caf6b6c9bee9d46acfbe0d3a820e2f"
+    }
+  },
+  "format": "allagma-open-pr-review-evidence-v1",
+  "review_date": "2026-10-10",
+  "review_order": [
+    14,
+    15,
+    16
+  ],
+  "scope": "Completed code/configuration/documentation reviews; not implementation fixes or merge approval. Reviews and lines are bound to exact heads."
+}

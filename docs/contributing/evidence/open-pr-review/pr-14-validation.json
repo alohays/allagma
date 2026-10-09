@@ -1,0 +1,127 @@
+{
+  "acceptance": {
+    "all_cases_pass": true,
+    "full_report_sha256": "34c38e7d8892aebd6972003d4fdb39d25c5215f54b5b57fbd194e6a37d445903",
+    "milestones": {
+      "I1": "pass",
+      "I2": "pass",
+      "I3": "pass",
+      "I4": "pass",
+      "I5": "pass"
+    },
+    "source_revision": "sha256:a6501e0aa369c702eea84de641796785cc5ec2395d7cd579a64d94ce5b442dec",
+    "status": "pass",
+    "tests": 172
+  },
+  "behavior_probes": {
+    "dossier_storage_admission": {
+      "over_limit": true,
+      "prepared_successfully": true,
+      "storage_limit_bytes": 2000000,
+      "study_bytes": 6486603
+    },
+    "note_builder_collision": {
+      "delivery_status": "pass",
+      "paper_check": "pass",
+      "replacement_in_manifest": true,
+      "standalone_produced_pdf": false,
+      "trusted_builder_replaced": true
+    },
+    "policy_metadata_budget": {
+      "after_bytes": 10955,
+      "all_adoptions_succeeded": true,
+      "before_bytes": 863,
+      "cache_limit_bytes": 10000,
+      "over_limit": true
+    },
+    "section_role_swap": {
+      "abstract_after": "The estimate has substantial uncertainty.",
+      "fingerprint_unchanged": true,
+      "status": "pass"
+    }
+  },
+  "catalog": "pass",
+  "delivery": {
+    "archive_bytes": 121800,
+    "archive_sha256": "d3f64553bba07a9501a89ac75dbebf99a149c81eaca19d13e4958cbd3046b2b2",
+    "format": "allagma-paper-delivery-v1",
+    "initial_build": {
+      "compiler_version": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2024)",
+      "network": "denied",
+      "pdf_sha256": "7aea0bb5cac8bd0a108a977aaf48c70cdd23cbbde5a08b97b4eed9c34d0c98ce",
+      "reference_cache": "not accessible"
+    },
+    "paper": "paper.pdf",
+    "paper_sha256": "7aea0bb5cac8bd0a108a977aaf48c70cdd23cbbde5a08b97b4eed9c34d0c98ce",
+    "pdf_bytes_reproduced": true,
+    "source_archive": "paper-source.tar.gz",
+    "status": "pass",
+    "submission": "not-submitted",
+    "unpacked_build": {
+      "compiler_version": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2024)",
+      "network": "denied",
+      "pdf_sha256": "7aea0bb5cac8bd0a108a977aaf48c70cdd23cbbde5a08b97b4eed9c34d0c98ce",
+      "reference_cache": "not accessible"
+    },
+    "visual_inspection": "required separately"
+  },
+  "documentation": {
+    "browser_tests": 18,
+    "links": 2828,
+    "pages": 43
+  },
+  "head": "72e88c39a6631dadb78d8162d8714baf324ab073",
+  "paper": {
+    "archive_sha256": "d3f64553bba07a9501a89ac75dbebf99a149c81eaca19d13e4958cbd3046b2b2",
+    "author": "allagma",
+    "format": "allagma-paper-output-verification-v1",
+    "javascript": false,
+    "pages": 8,
+    "paper_sha256": "7aea0bb5cac8bd0a108a977aaf48c70cdd23cbbde5a08b97b4eed9c34d0c98ce",
+    "scope": "Archive, metadata and text checks; page-by-page visual inspection is separate",
+    "sections_present": true,
+    "source_files": 42,
+    "status": "pass",
+    "tex_release_required": null
+  },
+  "scientific_recomputation": {
+    "original_inputs_verified": {
+      "license.txt": "9c82e554a54dfcf2550b452801475a36f9cb909ede00b03e492089e4836a7462",
+      "main-figure.pdf": "f07832b231d0bf6321f1160754d31a4bf397ca6e53e785be02fe0526d99f10a6",
+      "measurements.json": "7f06ed04f7f8da9566c7af82e1c74704fd4dc5ad7823168b57377502e1de798c",
+      "protocol.md": "3300b5e862a704f60ddef19ca785fb1b69fc67cb3ae04a8f85571b490284be61",
+      "seed-level.json": "42b088d17d9988d49e2d38a6da3502fc2b3f981e25181751a14fdbabcd55d9d9",
+      "summary.json": "eadd1e78ec6a09d73426dd4ee4dafd19c093a7100552f92119d3df9b5e70abac"
+    },
+    "publication_values_reproduced": true,
+    "recomputation": {
+      "cell_intervals_below_zero": 2,
+      "cells": 32,
+      "duration_contrasts": 8,
+      "duration_intervals_containing_zero": 8,
+      "ema_cells": 16,
+      "gmm_all_modes": 48,
+      "gmm_states": 48,
+      "independent_seeds_per_dataset": 4,
+      "interaction_intervals_containing_zero": 4,
+      "interactions": 4,
+      "negative_cell_means": 14,
+      "positive_schedule_means": 8,
+      "raw_comparisons": 4,
+      "raw_cosine_better": 4,
+      "schedule_contrasts": 8,
+      "schedule_intervals_above_zero": 2,
+      "states": 96,
+      "summaries_checked": 114,
+      "training_updates": 200000,
+      "trajectories": 24
+    },
+    "source_revision": "694f13c1b923ff8e8a58442dd203baf613f76205"
+  },
+  "targeted_tests": 45,
+  "visual_inspection": {
+    "layout_findings": [],
+    "pages": 8,
+    "scope": "Rendered PDF inspection; not scientific peer review or arXiv acceptance"
+  }
+}

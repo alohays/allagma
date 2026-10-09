@@ -1,0 +1,194 @@
+[
+  {
+    "body_sha256": "db057d1e72e095ffe7bb225181348234cb000900ac036650f9ef35a5f98405d9",
+    "comments": [
+      {
+        "id": 4232801295,
+        "line": 87,
+        "path": "adapters/arxiv/package.py",
+        "side": "RIGHT",
+        "start_line": 83,
+        "title": "[P1] Keep reading notes out of generated ancillary paths",
+        "url": "https://github.com/alohays/allagma/pull/14#discussion_r4232801295"
+      },
+      {
+        "id": 4232801582,
+        "line": 91,
+        "path": "allagma/research.py",
+        "side": "RIGHT",
+        "start_line": 88,
+        "title": "[P2] Charge both reference-dossier copies before preparing a workspace",
+        "url": "https://github.com/alohays/allagma/pull/14#discussion_r4232801582"
+      },
+      {
+        "id": 4232801846,
+        "line": 187,
+        "path": "adapters/reference-assets/acquire.py",
+        "side": "RIGHT",
+        "start_line": 184,
+        "title": "[P2] Apply cache admission to policy-history writes",
+        "url": "https://github.com/alohays/allagma/pull/14#discussion_r4232801846"
+      },
+      {
+        "id": 4232802062,
+        "line": 112,
+        "path": "allagma/papers.py",
+        "side": "RIGHT",
+        "start_line": 108,
+        "title": "[P2] Bind manuscript section roles into the review fingerprint",
+        "url": "https://github.com/alohays/allagma/pull/14#discussion_r4232802062"
+      }
+    ],
+    "head": "72e88c39a6631dadb78d8162d8714baf324ab073",
+    "hosted_checks": [
+      {
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37961190140/job/113924141424",
+        "name": "targeted",
+        "status": "COMPLETED",
+        "workflowName": "Conformance"
+      },
+      {
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37961184159/job/113924121967",
+        "name": "targeted",
+        "status": "COMPLETED",
+        "workflowName": "Conformance"
+      },
+      {
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37961190113/job/113924141455",
+        "name": "build-and-test",
+        "status": "COMPLETED",
+        "workflowName": "Documentation"
+      },
+      {
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37961190269/job/113924141671",
+        "name": "portable-paper",
+        "status": "COMPLETED",
+        "workflowName": "Paper output"
+      },
+      {
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37961184136/job/113924120847",
+        "name": "portable-paper",
+        "status": "COMPLETED",
+        "workflowName": "Paper output"
+      },
+      {
+        "conclusion": "SKIPPED",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37961190140/job/113924142622",
+        "name": "acceptance",
+        "status": "COMPLETED",
+        "workflowName": "Conformance"
+      },
+      {
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37961184159/job/113924121570",
+        "name": "acceptance",
+        "status": "COMPLETED",
+        "workflowName": "Conformance"
+      }
+    ],
+    "pr": 14,
+    "review_id": 5473294360,
+    "review_url": "https://github.com/alohays/allagma/pull/14#pullrequestreview-5473294360",
+    "state": "COMMENTED",
+    "submitted_at": "2026-10-09T17:30:08Z"
+  },
+  {
+    "body_sha256": "cb0b10cbcc3836a9733e68f2073861d28e43b9b0487c524fb0536c0bc4506887",
+    "comments": [],
+    "head": "32fd57e90348bd7ef6f8e14e0514c3a3b2e01fda",
+    "hosted_checks": [
+      {
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37954509401/job/113901483037",
+        "name": "targeted",
+        "status": "COMPLETED",
+        "workflowName": "Conformance"
+      },
+      {
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37954443157/job/113901252525",
+        "name": "targeted",
+        "status": "COMPLETED",
+        "workflowName": "Conformance"
+      },
+      {
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37954509441/job/113901486820",
+        "name": "build-and-test",
+        "status": "COMPLETED",
+        "workflowName": "Documentation"
+      },
+      {
+        "conclusion": "SKIPPED",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37954509401/job/113901484871",
+        "name": "acceptance",
+        "status": "COMPLETED",
+        "workflowName": "Conformance"
+      },
+      {
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37954443157/job/113901252760",
+        "name": "acceptance",
+        "status": "COMPLETED",
+        "workflowName": "Conformance"
+      }
+    ],
+    "pr": 15,
+    "review_id": 5473343534,
+    "review_url": "https://github.com/alohays/allagma/pull/15#pullrequestreview-5473343534",
+    "state": "COMMENTED",
+    "submitted_at": "2026-10-09T17:33:38Z"
+  },
+  {
+    "body_sha256": "5ffe44cfb1375b7728500ae4dcf6b1cfecdb7116ccaa5b1237173687660f9ff8",
+    "comments": [],
+    "head": "2dbbba76a218eaca4154d2d5314f302752484609",
+    "hosted_checks": [
+      {
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37966274313/job/113941298611",
+        "name": "targeted",
+        "status": "COMPLETED",
+        "workflowName": "Conformance"
+      },
+      {
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37966202566/job/113941056090",
+        "name": "targeted",
+        "status": "COMPLETED",
+        "workflowName": "Conformance"
+      },
+      {
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37966274202/job/113941298763",
+        "name": "build-and-test",
+        "status": "COMPLETED",
+        "workflowName": "Documentation"
+      },
+      {
+        "conclusion": "SKIPPED",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37966274313/job/113941300242",
+        "name": "acceptance",
+        "status": "COMPLETED",
+        "workflowName": "Conformance"
+      },
+      {
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/alohays/allagma/actions/runs/37966202566/job/113941056393",
+        "name": "acceptance",
+        "status": "COMPLETED",
+        "workflowName": "Conformance"
+      }
+    ],
+    "pr": 16,
+    "review_id": 5473371952,
+    "review_url": "https://github.com/alohays/allagma/pull/16#pullrequestreview-5473371952",
+    "state": "COMMENTED",
+    "submitted_at": "2026-10-09T17:36:07Z"
+  }
+]

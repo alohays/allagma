@@ -1,0 +1,158 @@
+{
+  "applicable_main": [
+    {
+      "ruleset_id": 24803950,
+      "ruleset_source": "alohays/allagma",
+      "ruleset_source_type": "Repository",
+      "type": "deletion"
+    },
+    {
+      "ruleset_id": 24803950,
+      "ruleset_source": "alohays/allagma",
+      "ruleset_source_type": "Repository",
+      "type": "non_fast_forward"
+    },
+    {
+      "parameters": {
+        "allowed_merge_methods": [
+          "merge",
+          "squash",
+          "rebase"
+        ],
+        "dismiss_stale_reviews_on_push": false,
+        "require_code_owner_review": false,
+        "require_extra_approval_for_unattributed_changes": true,
+        "require_last_push_approval": false,
+        "required_approving_review_count": 0,
+        "required_review_thread_resolution": true,
+        "required_reviewers": []
+      },
+      "ruleset_id": 24803950,
+      "ruleset_source": "alohays/allagma",
+      "ruleset_source_type": "Repository",
+      "type": "pull_request"
+    },
+    {
+      "parameters": {
+        "do_not_enforce_on_create": false,
+        "required_status_checks": [
+          {
+            "context": "targeted",
+            "integration_id": 15368
+          },
+          {
+            "context": "build-and-test",
+            "integration_id": 15368
+          }
+        ],
+        "strict_required_status_checks_policy": true
+      },
+      "ruleset_id": 24803950,
+      "ruleset_source": "alohays/allagma",
+      "ruleset_source_type": "Repository",
+      "type": "required_status_checks"
+    }
+  ],
+  "catalog": "pass",
+  "check_sources": [
+    {
+      "app_id": 15368,
+      "app_slug": "github-actions",
+      "conclusion": "skipped",
+      "name": "acceptance",
+      "status": "completed"
+    },
+    {
+      "app_id": 15368,
+      "app_slug": "github-actions",
+      "conclusion": "success",
+      "name": "build-and-test",
+      "status": "completed"
+    },
+    {
+      "app_id": 15368,
+      "app_slug": "github-actions",
+      "conclusion": "success",
+      "name": "targeted",
+      "status": "completed"
+    },
+    {
+      "app_id": 15368,
+      "app_slug": "github-actions",
+      "conclusion": "success",
+      "name": "acceptance",
+      "status": "completed"
+    },
+    {
+      "app_id": 15368,
+      "app_slug": "github-actions",
+      "conclusion": "success",
+      "name": "targeted",
+      "status": "completed"
+    }
+  ],
+  "documentation": {
+    "browser_tests": 18,
+    "canonical_links": 348,
+    "links": 2437,
+    "pages": 39,
+    "ruleset_readme_links": 6
+  },
+  "feature_branch_rules": [],
+  "head": "2dbbba76a218eaca4154d2d5314f302752484609",
+  "main_protected": true,
+  "merge_tree": "9333b3a22d8e0d77e9f04434860e462da52210e2",
+  "repository": {
+    "allow_merge_commit": true,
+    "allow_rebase_merge": true,
+    "allow_squash_merge": true,
+    "default_branch": "main"
+  },
+  "required_checks": [
+    {
+      "link": "https://github.com/alohays/allagma/actions/runs/37966274202/job/113941298763",
+      "name": "build-and-test",
+      "state": "SUCCESS",
+      "workflow": "Documentation"
+    },
+    {
+      "link": "https://github.com/alohays/allagma/actions/runs/37966274313/job/113941298611",
+      "name": "targeted",
+      "state": "SUCCESS",
+      "workflow": "Conformance"
+    },
+    {
+      "link": "https://github.com/alohays/allagma/actions/runs/37966202566/job/113941056090",
+      "name": "targeted",
+      "state": "SUCCESS",
+      "workflow": "Conformance"
+    }
+  ],
+  "ruleset_readme_local_links": [
+    "main.json",
+    "../../GOVERNANCE.md",
+    "../../docs/contributing/merged-prs.md",
+    "release-tags.json",
+    "../../release.json",
+    "applied.json"
+  ],
+  "rulesets": [
+    {
+      "current_user_can_bypass": "never",
+      "id": 24803950,
+      "live_payload_fields_match": true,
+      "name": "main-protection",
+      "payload_digest_matches": true
+    },
+    {
+      "current_user_can_bypass": "never",
+      "id": 24803952,
+      "live_payload_fields_match": true,
+      "name": "release-tag-protection",
+      "payload_digest_matches": true
+    }
+  ],
+  "scope": "Read-only live configuration and CI inspection; no destructive enforcement probe or settings change.",
+  "status": "pass",
+  "tool_tests": 6
+}

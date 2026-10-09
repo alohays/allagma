@@ -1,0 +1,71 @@
+{
+  "_links": {
+    "html": {
+      "href": "https://github.com/alohays/allagma/rules/24803950"
+    },
+    "self": {
+      "href": "https://api.github.com/repos/alohays/allagma/rulesets/24803950"
+    }
+  },
+  "bypass_actors": [],
+  "conditions": {
+    "ref_name": {
+      "exclude": [],
+      "include": [
+        "~DEFAULT_BRANCH"
+      ]
+    }
+  },
+  "created_at": "2026-10-10T02:23:17.611+09:00",
+  "current_user_can_bypass": "never",
+  "enforcement": "active",
+  "id": 24803950,
+  "name": "main-protection",
+  "node_id": "RRS_lACqUmVwb3NpdG9yec5T2jsVzgF6em4",
+  "rules": [
+    {
+      "type": "deletion"
+    },
+    {
+      "type": "non_fast_forward"
+    },
+    {
+      "parameters": {
+        "allowed_merge_methods": [
+          "merge",
+          "squash",
+          "rebase"
+        ],
+        "dismiss_stale_reviews_on_push": false,
+        "require_code_owner_review": false,
+        "require_extra_approval_for_unattributed_changes": true,
+        "require_last_push_approval": false,
+        "required_approving_review_count": 0,
+        "required_review_thread_resolution": true,
+        "required_reviewers": []
+      },
+      "type": "pull_request"
+    },
+    {
+      "parameters": {
+        "do_not_enforce_on_create": false,
+        "required_status_checks": [
+          {
+            "context": "targeted",
+            "integration_id": 15368
+          },
+          {
+            "context": "build-and-test",
+            "integration_id": 15368
+          }
+        ],
+        "strict_required_status_checks_policy": true
+      },
+      "type": "required_status_checks"
+    }
+  ],
+  "source": "alohays/allagma",
+  "source_type": "Repository",
+  "target": "branch",
+  "updated_at": "2026-10-10T02:23:17.685+09:00"
+}

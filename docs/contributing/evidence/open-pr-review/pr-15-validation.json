@@ -1,0 +1,88 @@
+{
+  "catalog": "pass",
+  "current_main_cli": {
+    "base": "5f519e63e7fc50a2e7da887481444dd9b649eab8",
+    "literal_commands_pass": true,
+    "scope": "Commands tested separately; GOAL.md merge conflict prevents a passing combined tree claim"
+  },
+  "documentation": {
+    "browser_tests": 18,
+    "canonical_links": 331,
+    "links": 2425,
+    "pages": 39
+  },
+  "head": "32fd57e90348bd7ef6f8e14e0514c3a3b2e01fda",
+  "merge_conflict": {
+    "github_mergeable": "CONFLICTING",
+    "local_merge_tree_exit": 1,
+    "output": "7af958ba181d0fdb08b31e4f059d17d28cba93a8\n100644 4e281b2821d688ce2048cba9180136309cf8449d 1\tGOAL.md\n100644 058e808c6a9eafde69246d77fd65fd04eabbf1f6 2\tGOAL.md\n100644 6f0b8b58cd97aa8097e242b6ebec3620fda9bb9c 3\tGOAL.md\n\nAuto-merging GOAL.md\nCONFLICT (content): Merge conflict in GOAL.md\nAuto-merging docs/guides/troubleshooting.md\n",
+    "path": "GOAL.md"
+  },
+  "recipe": {
+    "blocks_executed": 3,
+    "checks": {
+      "context.json": {
+        "exit_code": 0,
+        "stderr": "",
+        "stdout": "{\n  \"record_type\": \"ContextRecord\",\n  \"status\": \"pass\"\n}\n",
+        "unchanged": true
+      },
+      "duplicate.json": {
+        "exit_code": 2,
+        "stderr": "allagma: Duplicate JSON key: context_id\n",
+        "stdout": "",
+        "unchanged": true
+      }
+    },
+    "literal_shell_exit": 0,
+    "rejected_copy_retained": true,
+    "shell_stderr": "allagma: Duplicate JSON key: context_id\n",
+    "shell_stdout": "Exit code: 2\n{\n  \"record_type\": \"ContextRecord\",\n  \"status\": \"pass\"\n}\n",
+    "source_fixture_unchanged": true,
+    "spaced_temporary_path": true
+  },
+  "rendered": [
+    {
+      "anchor": "#duplicate-json-keys",
+      "errorVisible": true,
+      "overflow": false,
+      "recordVisible": true,
+      "requested_theme": "light",
+      "script_errors": [],
+      "theme": "light",
+      "width": 1440
+    },
+    {
+      "anchor": "#duplicate-json-keys",
+      "errorVisible": true,
+      "overflow": false,
+      "recordVisible": true,
+      "requested_theme": "dark",
+      "script_errors": [],
+      "theme": "dark",
+      "width": 1440
+    },
+    {
+      "anchor": "#duplicate-json-keys",
+      "errorVisible": true,
+      "overflow": false,
+      "recordVisible": true,
+      "requested_theme": "light",
+      "script_errors": [],
+      "theme": "light",
+      "width": 390
+    },
+    {
+      "anchor": "#duplicate-json-keys",
+      "errorVisible": true,
+      "overflow": false,
+      "recordVisible": true,
+      "requested_theme": "dark",
+      "script_errors": [],
+      "theme": "dark",
+      "width": 390
+    }
+  ],
+  "targeted_tests": 18,
+  "visual_inspection": "Production page inspected in both sizes/themes; no clipping or page overflow; code blocks scroll horizontally."
+}
