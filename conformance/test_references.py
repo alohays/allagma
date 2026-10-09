@@ -118,6 +118,18 @@ class ReferenceTests(unittest.TestCase):
         with self.assertRaisesRegex(AllagmaError, "snapshot changed"):
             references.verify_snapshot(target)
 
+    def test_snapshot_admission_counts_receipt_and_rejects_changed_planned_bytes(self):
+        plan = references.plan_snapshot(self.refs)
+        target = self.root / "over-budget"
+        with self.assertRaisesRegex(AllagmaError, "storage ceiling"):
+            references.snapshot(self.refs, target, plan=plan, storage_limit=plan["size_bytes"] - 1)
+        self.assertFalse(target.exists())
+        path = self.refs / "INDEX.md"
+        original = path.read_bytes()
+        path.write_bytes(b"X" + original[1:])  # Same size, wrong admitted content.
+        with self.assertRaisesRegex(AllagmaError, "changed while copying"):
+            references.snapshot(self.refs, self.root / "changed", plan=plan)
+
     def test_sources_cannot_leak_credentials_or_escape_notes_directory(self):
         for url in ("file:///private/source", "https://user:password@example.org/x",
                     "https://example.org/x?token=private", "https://example.org/x?X-Amz-Signature=private"):

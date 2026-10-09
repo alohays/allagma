@@ -7,6 +7,7 @@ scientific endorsement.
 from __future__ import annotations
 
 from copy import deepcopy
+import hashlib
 from pathlib import Path
 import re
 import unicodedata
@@ -272,24 +273,56 @@ def initialize(directory, *, question="", mode="provided-only"):
     return value
 
 
-def snapshot(directory, destination, *, require_review=False):
-    """Freeze notes and public manifests only; never traverse a raw cache."""
-    directory, destination = Path(directory), Path(destination)
-    require(not destination.exists(), "Reference snapshot destination already exists")
+def plan_snapshot(directory, *, require_review=False):
+    """Measure the exact selected files and receipt before creating a copy."""
+    directory = Path(directory)
     result = refresh(directory, require_review=require_review)
     value = read_json(directory / "map.json")
     names = {"map.json", "INDEX.md", "citations.bib"}
     names.update(r["note"] for r in value["records"] if r.get("note"))
     names.update(n for n in ("assets.json", "retrieval.json") if (directory / n).is_file())
-    payloads = {name: confined(directory, name).read_bytes() for name in sorted(names)}
-    for name in payloads:
+    files, sizes = {}, {}
+    for name in sorted(names):
         require(not any(p.startswith(".") for p in Path(name).parts), "Hidden cache paths are not reference notes")
         require(Path(name).suffix in (".json", ".md", ".bib", ".txt"), "Reference snapshots contain notes, not raw downloads")
-    for name, data in payloads.items():
-        write_bytes(confined(destination, name), data, immutable=True)
-    files = {name: file_hash(destination / name) for name in payloads}
+        require(name != "snapshot.json", "Reference note collides with the generated snapshot receipt")
+        path = confined(directory, name)
+        sizes[name] = path.stat().st_size
+        files[name] = file_hash(path)
     record = {"format": "allagma-reference-snapshot-v1", "created_at": utcnow(),
               "files": files, "map_sha256": result["map_sha256"]}
+    return {"record": record, "sizes": sizes,
+            "size_bytes": sum(sizes.values()) + len(canonical(record))}
+
+
+def copy_snapshot_files(directory, destination, plan, *, storage_limit=None, replace=False):
+    """Stream only admitted bytes, checking size and digest for each copy."""
+    require(storage_limit is None or sum(plan["sizes"].values()) < storage_limit,
+            "Reference dossier copies exceed the prepared workspace storage ceiling")
+    for name, expected in plan["record"]["files"].items():
+        source, target = confined(directory, name), confined(destination, name)
+        size = plan["sizes"][name]
+        require(source.stat().st_size == size, "Reference source changed after storage admission")
+        target.parent.mkdir(parents=True, exist_ok=True)
+        observed, copied = hashlib.sha256(), 0
+        with source.open("rb") as incoming, target.open("wb" if replace else "xb") as output:
+            while block := incoming.read(min(1024 * 1024, size - copied + 1)):
+                require(copied + len(block) <= size, "Reference source changed beyond its admitted storage ceiling")
+                output.write(block)
+                observed.update(block)
+                copied += len(block)
+        require(copied == size and observed.hexdigest() == expected, "Reference source changed while copying")
+
+
+def snapshot(directory, destination, *, require_review=False, plan=None, storage_limit=None):
+    """Freeze notes and public manifests only; never traverse a raw cache."""
+    directory, destination = Path(directory), Path(destination)
+    require(not destination.exists(), "Reference snapshot destination already exists")
+    plan = plan if plan is not None else plan_snapshot(directory, require_review=require_review)
+    require(storage_limit is None or plan["size_bytes"] < storage_limit,
+            "Reference snapshot exceeds the prepared workspace storage ceiling")
+    copy_snapshot_files(directory, destination, plan, storage_limit=storage_limit)
+    record = plan["record"]
     write_json(destination / "snapshot.json", record, immutable=True)
     return record
 

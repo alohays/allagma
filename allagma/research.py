@@ -11,7 +11,7 @@ import re
 import shutil
 
 from . import bundles, papers, references, resources
-from .files import AllagmaError, file_hash, inventory, read_json, utcnow, write_json
+from .files import AllagmaError, canonical, file_hash, inventory, read_json, utcnow, write_json
 
 
 def _separate(study, control):
@@ -77,9 +77,13 @@ def prepare(source, study, control, *, brief, materials, profile, study_id="stud
     acquisition = None
     retrieval = None
     reference_bytes = 0
+    dossier_plan = None
+    dossier_bytes = working_dossier_bytes = 0
     if reference_directory is not None:
         reference_directory = Path(reference_directory).resolve()
-        references.refresh(reference_directory)
+        dossier_plan = references.plan_snapshot(reference_directory)
+        working_dossier_bytes = sum(dossier_plan["sizes"].values()) if install_workflow else 0
+        dossier_bytes = dossier_plan["size_bytes"] + working_dossier_bytes
         if (reference_directory / "retrieval.json").exists():
             retrieval = read_json(reference_directory / "retrieval.json")
             if any(item["use"] == "execution" for item in retrieval["assets"]):
@@ -87,8 +91,12 @@ def prepare(source, study, control, *, brief, materials, profile, study_id="stud
                     raise AllagmaError("Selected reference execution assets require --reference-cache")
                 acquisition = _load("allagma_prepare_acquisition", source / "adapters/reference-assets/acquire.py")
                 reference_bytes = sum(item["size_bytes"] for item in acquisition.input_plan(reference_cache, retrieval).values())
-    material_bytes += reference_bytes
-    if material_bytes+1_000_000 >= profile["storage_limit_bytes"]:
+    material_bytes += (reference_bytes + dossier_bytes + brief.stat().st_size +
+        (source / "adapters/local-process/COMPUTE.md").stat().st_size +
+        (source / "adapters/local-process/compute_client.py").stat().st_size +
+        (2 * len(canonical(paper_configuration)) if paper_configuration is not None else 0))
+    workflow_reserve = 1_000_000
+    if material_bytes+workflow_reserve >= profile["storage_limit_bytes"]:
         raise AllagmaError("Materials leave insufficient space for the workflow within the storage ceiling")
     if profile["command_timeout_seconds"]["compute"] < .01 or profile["budgets_seconds"]["compute"] < .001:
         raise AllagmaError("Resource timings are below the campaign contract minimum")
@@ -102,10 +110,12 @@ def prepare(source, study, control, *, brief, materials, profile, study_id="stud
         write_json(inputs / "PAPER.json", paper_configuration, immutable=True)
     reference_snapshot = None
     if reference_directory is not None:
-        reference_snapshot = references.snapshot(reference_directory, inputs / "references")
+        reference_snapshot = references.snapshot(reference_directory, inputs / "references", plan=dossier_plan,
+            storage_limit=profile["storage_limit_bytes"] - resources.storage_bytes(study) -
+                          reference_bytes - working_dossier_bytes - workflow_reserve)
     if acquisition is not None:
         selected = acquisition.materialize(reference_cache, retrieval, inputs / "reference-assets",
-            storage_limit=profile["storage_limit_bytes"] - material_bytes + reference_bytes - 1_000_000)
+            storage_limit=profile["storage_limit_bytes"] - material_bytes + reference_bytes - workflow_reserve)
         write_json(inputs / "REFERENCE-INPUTS.json", selected, immutable=True)
     write_json(inputs/"RESOURCES.json", {"profile":profile,"network":False,
         "scientific_execution":"CPU or MPS through the local resource broker; isolated environment inside this study",
@@ -118,16 +128,16 @@ def prepare(source, study, control, *, brief, materials, profile, study_id="stud
     if paper_configuration is not None:
         write_json(study / "paper.json", paper_configuration)
     if install_workflow and reference_snapshot:
-        for name in reference_snapshot["files"]:
-            target = study / "references" / name
-            target.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copyfile(inputs / "references" / name, target)
+        references.copy_snapshot_files(inputs / "references", study / "references", dossier_plan,
+            storage_limit=profile["storage_limit_bytes"] - resources.storage_bytes(study), replace=True)
     readonly=[inputs]+([study/".allagma/bundles",study/".agents"] if install_workflow else [])
     control.mkdir(parents=True)
     resources.initialize(control/"resources",profile,study)
     prepared={"format":"allagma-research-workspace-v1","created_at":utcnow(),
         "study":str(study),"control":str(control),"study_id":study_id,
         "workflow_enabled":bool(install_workflow),
+        "preparation_storage":{"planned_input_bytes":material_bytes,"dossier_copy_bytes":dossier_bytes,
+                               "workflow_reserve_bytes":workflow_reserve},
         "lock_id":lock["lock_id"] if lock else None,"bundle_id":lock["bundle_id"] if lock else None,
         "common_inputs":inventory(inputs),"readonly":[str(p) for p in readonly]}
     write_json(control/"prepared.json",prepared,immutable=True)
@@ -147,6 +157,8 @@ def prepare(source, study, control, *, brief, materials, profile, study_id="stud
         "from scientific computation. Preserve unsuccessful attempts, record uncertainty, "
         "and provide full reproduction and retained-data recomputation commands. "
         "Do not report a complete package until its evidence supports that status.\n")
+    if resources.storage_bytes(study) >= profile["storage_limit_bytes"]:
+        raise AllagmaError("Prepared workspace reaches its storage ceiling; retain this partial workspace and use a new revision")
     return prepared
 
 

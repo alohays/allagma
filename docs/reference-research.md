@@ -72,6 +72,14 @@ revision. Later reading belongs in the working dossier or a new snapshot.
 Existing studies and frozen bundles keep their original methods until an
 explicit compatible update is adopted. No migration rewrites historical science.
 
+Research preparation measures the selected dossier before creating the study.
+Storage admission includes its protected snapshot, snapshot receipt and, when
+the workflow is installed, its separate working copy. Selected execution assets,
+the brief, supplied materials and paper configuration also count, with reserved
+space for the workflow. Reference copies stream only the planned byte count and
+verify each hash; a source that changes during preparation stops the copy. A
+failed partial preparation remains available for inspection; use a new revision.
+
 ## Retain selected assets
 
 Write `assets.json` in the dossier with format `allagma-reference-assets-v1`, a

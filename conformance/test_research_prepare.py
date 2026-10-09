@@ -2,9 +2,11 @@
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 
-from allagma import bundles,research,resources
-from allagma.files import AllagmaError,read_json
+from allagma import bundles,references,research,resources
+from allagma.files import AllagmaError,file_hash,read_json,write_json
+from conformance.test_references import reference_record
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -64,6 +66,60 @@ class ResearchPreparationTests(unittest.TestCase):
         self.profile["budgets_seconds"]["compute"]=60
         self.profile["storage_limit_bytes"]=100
         with self.assertRaisesRegex(AllagmaError,"storage ceiling"):self.prepare()
+
+    def dossier(self, note_bytes):
+        directory = self.root / "references"
+        value = references.initialize(directory, question="Test preparation storage admission.")
+        record = reference_record()
+        record["note"] = "notes/reading.md"
+        (directory / "notes").mkdir()
+        (directory / record["note"]).write_bytes(b"x" * note_bytes)
+        value = references.add_record(value, record, directory=directory)
+        write_json(directory / "map.json", value)
+        return directory
+
+    def test_oversized_reference_dossier_is_refused_before_workspace_creation(self):
+        directory = self.dossier(3_000_000)
+        self.profile["storage_limit_bytes"] = 2_000_000
+        with self.assertRaisesRegex(AllagmaError, "storage ceiling"):
+            self.prepare(reference_directory=directory)
+        self.assertFalse((self.root / "study").exists())
+        self.assertFalse((self.root / "control").exists())
+
+    def test_admission_counts_working_dossier_only_when_workflow_is_installed(self):
+        directory = self.dossier(800_000)
+        self.profile["storage_limit_bytes"] = 2_500_000
+        with self.assertRaisesRegex(AllagmaError, "storage ceiling"):
+            self.prepare(reference_directory=directory)
+        self.assertFalse((self.root / "study").exists())
+        self.prepare(reference_directory=directory, install_workflow=False)
+        self.assertFalse((self.root / "study/references").exists())
+        self.assertLess(resources.storage_bytes(self.root / "study"), self.profile["storage_limit_bytes"])
+
+    def test_both_admitted_dossier_copies_match_within_the_ceiling(self):
+        directory = self.dossier(300_000)
+        self.profile["storage_limit_bytes"] = 2_000_000
+        self.prepare(reference_directory=directory)
+        study = self.root / "study"
+        record = references.verify_snapshot(study / "inputs/references")
+        for name, expected in record["files"].items():
+            self.assertEqual(file_hash(study / "references" / name), expected)
+        self.assertLess(resources.storage_bytes(study), self.profile["storage_limit_bytes"])
+
+    def test_dossier_growth_after_admission_cannot_exceed_the_copy_plan(self):
+        directory = self.dossier(100)
+        self.profile["storage_limit_bytes"] = 2_000_000
+        snapshot = references.snapshot
+
+        def grow_then_copy(*args, **kwargs):
+            (directory / "notes/reading.md").write_bytes(b"x" * 3_000_000)
+            return snapshot(*args, **kwargs)
+
+        with patch.object(references, "snapshot", side_effect=grow_then_copy):
+            with self.assertRaisesRegex(AllagmaError, "changed|storage ceiling"):
+                self.prepare(reference_directory=directory)
+        self.assertLess(resources.storage_bytes(self.root / "study"), self.profile["storage_limit_bytes"])
+        self.assertFalse((self.root / "control").exists())
 
 
 if __name__=="__main__":unittest.main()
