@@ -248,3 +248,50 @@ scientific campaign is required. Continue through publication, live verification
 and repairs until the contributor workflow and public site operate. Final
 handoff must link the docs, every issue/PR/Discussion, deployment/CI evidence,
 review order and exact remaining owner decisions.
+
+## Research outputs in the README and live docs: 9 October 2026
+
+Make the published opening show researchers how a coding agent carries out a
+study and produces useful outputs. Lead with real work and results, then explain
+how Allagma preserves the evidence. Answer what Allagma does, who it serves,
+what the researcher supplies, what the agent does, and what the researcher
+receives. Bring the workflow illustration forward in the README and replace
+the docs hero's isolated toy-result number with actual research outputs.
+
+Restructure the README, landing page, demo, artifact explorer, study previews,
+navigation and microcopy. Keep Starlight and useful existing design work; improve
+typography, spacing, image scale and action hierarchy. Preserve canonical
+content sources and URLs, adding redirects if necessary. Describe main's
+capabilities accurately; contributor PRs remain proposals.
+
+Put an inviting playable demo in the landing page's opening and preserve inline
+GitHub playback. Show a recognizable result before play, with direct routes to a
+completed study and local quickstart. Use real screenshots, plots, purposeful
+annotations, readable captions and links to full-size results. Reuse the licensed
+footage and verified artifacts; a revised poster or shorter introduction is
+allowed. Distinguish recorded offline execution from retained native-agent
+results. Do not invent a product UI or imply another experiment ran. Keep the
+offline toy clearly identified as the introductory example.
+
+Apply the installed humanizer skill to English public prose. Write as a
+researcher explaining a useful tool to a colleague. Rewrite whole paragraphs,
+remove repeated slogans and forced fragments, and keep scientific meaning,
+qualifications, citations and licensing information. Move engineering and
+evaluation detail to linked pages, with limitations beside the claims they
+qualify. Explain the practical value before bundles, contracts, locks or counts.
+
+Presentation changes on main and deployment to the existing public GitHub Pages
+site are explicitly authorized. Preserve scientific code, frozen evidence,
+Git history, open contributor work, GUI model choice and existing resource
+limits. No new scientific campaign or PR merge is needed. Commit coherent
+increments, push to origin, and complete redeployment.
+
+Inspect the rendered README and live site before and after the work. Verify
+desktop/mobile, light/dark, keyboard navigation, media playback and captions,
+links, search, and routes to results and first use. Run affected checks and
+retain screenshots and a concise editorial/visual assessment. Finish only when
+the published experience shows the result, explains the workflow, and offers
+an obvious next action. Return live links, deployed commit, validation evidence
+and material limitations. Make routine decisions autonomously and use the
+user-input tool for consequential unresolved choices. The
+[presentation ledger](docs/launch/research-opening.md) records verification.
