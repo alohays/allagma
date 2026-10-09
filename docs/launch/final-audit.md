@@ -1,5 +1,12 @@
 # Final audit before public release
 
+**Later authorization, 9 October 2026:** this is the dated pre-activation audit.
+The owner subsequently confirmed intentional public visibility and authorized
+docs/community activation. Historical-audio rights remain open in
+[issue #8](https://github.com/alohays/allagma/issues/8), without reinstating the
+superseded private-only gate. See [current owner actions](owner-actions.md).
+
+
 **Audit completed on 8 October 2026. Public launch remains blocked by historical
 audio clearance.** The owner explicitly chose to retain the full history
 unchanged and finish this audit with that blocker. The current demo uses a

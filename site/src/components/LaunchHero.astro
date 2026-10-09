@@ -1,31 +1,21 @@
 ---
-import summary from '../../public/generated/media/evidence/toy-summary.json';
+import WorkflowVideo from './WorkflowVideo.astro';
 const base = '/allagma/';
 ---
 <section class="launch-hero" aria-labelledby="_top">
   <div class="hero-copy">
-    <p class="eyebrow"><span class="signal-dot"></span> A RESEARCH WORKFLOW FOR CODING AGENTS</p>
-    <h1 id="_top" data-page-title>From a research brief<br class="wide-only" /> to <em>checkable results.</em></h1>
-    <p class="hero-description">Pin the plan and methods. Retain every attempt.<br class="wide-only" /> Connect each claim to the evidence behind it.</p>
+    <p class="eyebrow">Allagma / for researchers using coding agents</p>
+    <h1 id="_top" data-page-title>Have your coding agent <em>carry out a study.</em></h1>
+    <p class="hero-description">Supply a question, source materials and resource limits. Your agent plans the study, writes and runs the code, analyzes the results, and drafts a report.</p>
+    <p class="hero-delivery">Receive the figures and report with the code, data and attempt history needed to check them.</p>
     <div class="hero-actions">
-      <a class="primary-action" href={`${base}guides/first-study/`}>Run your first study <span aria-hidden="true">↗</span></a>
-      <a class="text-action" href={`${base}demo/`}>Watch the workflow <span aria-hidden="true">→</span></a>
+      <a class="primary-action" href={base+'studies/ema-schedule/'}>Read a completed study <span aria-hidden="true">→</span></a>
+      <a class="text-action" href={base+'guides/first-study/'}>Try the offline example <span aria-hidden="true">→</span></a>
     </div>
-    <p class="hero-footnote">Offline example · Python 3.11+ · No model account required</p>
+    <p class="hero-footnote">Offline example: Python 3.11+, Git, no model account.</p>
   </div>
-  <a class="research-sheet" href={`${base}explore/`} aria-label="Explore the actual offline study artifacts">
-    <div class="sheet-top"><span>STUDY 001 / ESTIMATOR BIAS</span><span class="sheet-index">↗</span></div>
-    <p class="sheet-question">Does adding a bias<br />increase squared error?</p>
-    <div class="result-value">+{summary.difference.toFixed(5)}<span>mean paired MSE difference</span></div>
-    <svg class="result-spark" viewBox="0 0 320 67" role="img" aria-label="Interval from 0.03985 to 0.09036; mean 0.06510, above zero">
-      <path d="M12 48H308" stroke="currentColor" opacity=".25"/><path d="M22 4V56" stroke="currentColor" opacity=".35" stroke-dasharray="3 4"/>
-      <path d="M135 22H276M135 14V30M276 14V30" stroke="currentColor" stroke-width="2"/>
-      <path d="m206 14 8 8-8 8-8-8z" fill="currentColor"/>
-      <text x="22" y="66" text-anchor="middle" fill="currentColor" font-size="10">0</text>
-      <text x="206" y="66" text-anchor="middle" fill="currentColor" font-size="10">normal-approximation 95% interval</text>
-    </svg>
-    <div class="claim-row"><span class="claim-state supported">Supported</span><span>Higher average error</span></div>
-    <div class="claim-row"><span class="claim-state contradicted">Contradicted</span><span>Higher error on every seed</span></div>
-    <div class="sheet-bottom">24 confirmation seeds <span>Actual offline result</span></div>
-  </a>
+  <div class="hero-demo">
+    <WorkflowVideo compact />
+    <a class="text-action demo-detail-link" href={base+'demo/'}>Chapters, transcript and downloads <span aria-hidden="true">→</span></a>
+  </div>
 </section>

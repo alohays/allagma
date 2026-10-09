@@ -1,9 +1,8 @@
 # Verified local CULP reproduction
 
-The first fully verified Allagma package in the frozen run order is **r01**
-(replicate 2). It is the illustrative package selected by the prespecified
-criteria. The [12-run comparison is complete](../../docs/v0.3/COMPARISON.md);
-this individual result does not establish a workflow advantage.
+A native Codex session reproduced the graph-classification capsule and returned
+all six requested answers. Its report also explains why four printed predictor
+labels do not describe the predictors the source actually called.
 
 | Dataset | Requested printed label | Actual predictor | Accuracy |
 | --- | --- | --- | ---: |
@@ -30,6 +29,13 @@ without the capture hook agree. The fixed transductive splits provide no
 cross-split or population uncertainty estimate; no general superiority claim is
 made. Review combines source inspection and deterministic checks with explicitly
 provisional model critique, not independent scientific peer review.
+
+## Execution and verification
+
+The first fully verified Allagma package in the frozen run order is **r01**
+(replicate 2). It is the illustrative package selected by the prespecified
+criteria. The [12-run comparison is complete](../../docs/v0.3/COMPARISON.md);
+this individual result does not establish a workflow advantage.
 
 The run consumed 76.26 seconds of scientific computation and 15.43 seconds of
 setup. Native wall time was 1,921.48 seconds. Exact token and measured resource

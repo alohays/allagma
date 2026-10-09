@@ -19,9 +19,9 @@ git sparse-checkout set allagma adapters contracts methods recipes policies prof
 python3 -m allagma check
 ```
 
-The catalog command returns JSON with `"status": "pass"`. Until the owner
-activates the public launch, cloning requires repository access. If you already
-have a checkout, start with that last command. The Python runtime is independent
+The catalog command returns JSON with `"status": "pass"`. The public checkout
+requires no GitHub authentication. If you already have a checkout, start with
+that last command. The Python runtime is independent
 of the documentation site's Node toolchain. A wheel or `pip install allagma`
 is not the supported distribution in this release candidate.
 

@@ -1,0 +1,55 @@
+{
+  "status": "pass",
+  "content_commit": "eb888865f1d5bc380e3b5b1d81788255ae3eebcc",
+  "local_site_tests": {
+    "startTime": "2026-10-09T03:28:59.551Z",
+    "duration": 14841.877,
+    "expected": 18,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "local_tests_scope": "18 Chromium tests across desktop and iPhone 13 emulation; production routes, themes, axe accessibility, search, keyboard, media and exact downloads. Same interaction implementation as content commit; subsequent change versions the poster URL.",
+  "build": {
+    "html_pages": 39,
+    "local_links_and_assets": 2418,
+    "errors": []
+  },
+  "catalog": "python3 -m allagma check: pass",
+  "hosted_runs": [
+    {
+      "conclusion": "success",
+      "databaseId": 37879960484,
+      "headSha": "eb888865f1d5bc380e3b5b1d81788255ae3eebcc",
+      "status": "completed",
+      "url": "https://github.com/alohays/allagma/actions/runs/37879960484",
+      "workflowName": "Public documentation deployment"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 37879960498,
+      "headSha": "eb888865f1d5bc380e3b5b1d81788255ae3eebcc",
+      "status": "completed",
+      "url": "https://github.com/alohays/allagma/actions/runs/37879960498",
+      "workflowName": "Conformance"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 37879960488,
+      "headSha": "eb888865f1d5bc380e3b5b1d81788255ae3eebcc",
+      "status": "completed",
+      "url": "https://github.com/alohays/allagma/actions/runs/37879960488",
+      "workflowName": "Documentation"
+    }
+  ],
+  "hosted_documentation_evidence": {
+    "tests_passed": 18,
+    "dependency_audit_vulnerabilities": 0,
+    "pages_built": 39,
+    "local_links": 2418
+  },
+  "limitations": [
+    "Responsive and emulated phone views, not a physical handset or formal usability study.",
+    "Browser and deterministic checks do not establish additional scientific validity."
+  ]
+}

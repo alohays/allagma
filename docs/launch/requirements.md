@@ -1,17 +1,23 @@
 # Public launch acceptance ledger
 
-The authoritative scope is the public-launch goal in [GOAL.md](../../GOAL.md).
-The baseline is release source `608f34e276aefc00c39ffb6f28c9c63bd420af95`.
-No source qualification is inferred for later edits. The repository remains private.
+This table records the **8 October 2026 launch-preparation audit** against the
+public-launch goal in [GOAL.md](../../GOAL.md), using release source
+`608f34e276aefc00c39ffb6f28c9c63bd420af95`. Its private-visibility and deferred-
+activation statements describe that historical preparation, not current settings.
+No source qualification is inferred for later edits.
 
-**Final-audit correction:** public release is blocked by the two historical
-Apple-voice video versions. The owner chose to retain that history unchanged.
-The current movie uses Kokoro with recorded source licenses; it does not clear
-the older recordings. The [publication review](publication-review.md) and
-[owner actions](owner-actions.md) take precedence over the earlier preparation
-receipts below. Technical preparation can pass while publication remains blocked.
-The [final audit](final-audit.md) records fresh checks, repairs and the exact
-remaining blocker.
+On 9 October the owner confirmed intentional public visibility and authorized
+Pages/community activation and contributor publication. See the current
+[owner actions](owner-actions.md) and [contributor delivery ledger](../contributing/first-workflow.md).
+Historical-audio rights remain unresolved in
+[maintainer issue #8](https://github.com/alohays/allagma/issues/8). The current
+Kokoro movie does not clear older recordings. The owner explicitly instructed
+that this retained rights issue must not be treated as a renewed private-only
+gate for the authorized public documentation and community work.
+
+The [final audit](final-audit.md) and [publication review](publication-review.md)
+retain the exact historical findings and evidence. Technical checks and public
+activation do not themselves establish redistribution rights.
 
 | Gate | Required outcome | Status and evidence |
 | --- | --- | --- |

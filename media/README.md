@@ -12,6 +12,27 @@ references inside the raw Markdown/JSON resolve in the full generated study.
 The site adds navigation around these unchanged files. Run the tutorial to
 obtain and audit the complete package.
 
+`ema-r07-report.md` is an exact copy of the completed native agent's report,
+verified against the retained package index. Its separate provenance receipt
+records the source and SHA-256. Relative references resolve inside the restored
+research package. The site quotes an excerpt and links to the full result and
+report download; it does not rewrite the report.
+
+The opening workflow graphics and results poster can be regenerated without
+executing a study:
+
+```sh
+python3 tools/generate_presentation_assets.py
+cd site
+node scripts/render-results-poster.mjs
+```
+
+The poster arranges the original toy plot and an exact manuscript sentence,
+with a labeled interpretation of its counterexamples. Its source, input hashes
+and rendered digest are retained in `demo/results-poster-provenance.json`.
+It is a presentation graphic, not a product-interface screenshot. The movie,
+captions, narration and original capture receipts remain unchanged.
+
 **EMA disclosure:** `evidence/ema-r07.png` is a retained, machine-generated
 figure from the r07 study, produced with scientific code adapted from The AI
 Scientist. It is not a fresh training result. The accompanying

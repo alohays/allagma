@@ -1,19 +1,33 @@
-# Small contributions with a clear finish line
+# Available first contributions
 
-These are concrete proposed tasks, not claims that a community has already
-requested them. Open a short issue before starting one so work is not duplicated.
-The maintainer can then create an issue with `good first issue` and `help wanted`
-labels. No account usage or scientific training is needed for the tasks below.
+These are actual **maintainer-proposed, unassigned** tasks in the
+[first contributor milestone](https://github.com/alohays/allagma/milestone/1).
+They do not imply external demand or prior contributors. The
+[pinned overview](https://github.com/alohays/allagma/issues/9) is the current work
+queue; read the [claim and review process](workflow.md) before starting.
 
-| Task | Where to work | Done when |
+| Available task | Starting files | Finish line and prerequisites |
 | --- | --- | --- |
-| Explain one validator error with a recovery example | `docs/guides/troubleshooting.md` | A real failing command is reproduced, the corrected command passes, and no historical evidence is edited |
-| Add an accessible description of the EMA figure | `studies/ema-schedule/RESULTS.md` | The prose states axes, independent seeds, interval assumptions and inconclusive findings without changing numerical claims |
-| Add a source-lineage example for a local method | `docs/module-authoring.md` | A minimal local variant passes its module check and names which text/code was adapted and under what license |
-| Document a distinct Python executable on Linux | `docs/guides/first-study.md` | The existing commands pass on the stated environment and the note avoids implying native macOS runner support there |
-| Improve an empty-state or error message in docs search | `site/` | Keyboard and mobile behavior pass the site tests and the production base path remains correct |
+| [#5: Explain duplicate-key validation and recovery](https://github.com/alohays/allagma/issues/5) — good first issue, help wanted | `docs/guides/troubleshooting.md`, `methods/allagma-context-active-brief/` | Reproduce the error in a disposable copy, validate the fresh original, document recovery and check links. Python 3.11+, no package installation. |
+| [#6: Describe the EMA figure accessibly](https://github.com/alohays/allagma/issues/6) — good first issue, help wanted | `studies/ema-schedule/RESULTS.md` and its figure | Describe axes, panels, paired seeds and uncertainty without changing numerical claims. No archive restoration or training; optional Node toolchain for site rendering. |
+| [#7: Qualify Linux/Python 3.13 onboarding](https://github.com/alohays/allagma/issues/7) — help wanted | `docs/guides/first-study.md`, `conformance/` | Record a literal clean-checkout offline tutorial with a distinct interpreter and paths with spaces. Requires local Linux/Python 3.13, not a native model or GPU. |
 
-For code changes, first reproduce the behavior and agree on the intended
-contract. A documentation-only fix usually needs the link check and a rendered
-review, not a new test that merely repeats its text. See the complete
+Comment on the issue with your scope and environment. A maintainer confirms the
+claim and assignment before overlapping implementation. No paid model access,
+GPU, response-time guarantee or release deadline is involved. Submit concise
+sanitized evidence with its exact tested commit. A documentation change needs a
+rendered review and link check, not a test that merely repeats its prose.
+
+## Proposed changes awaiting owner review
+
+The deeper agent-assisted work is reserved in draft PRs:
+[#10: adapted toy/report repair](https://github.com/alohays/allagma/pull/10),
+[#11: prerequisite diagnostics](https://github.com/alohays/allagma/pull/11), and
+[#12: read-only evidence inspection](https://github.com/alohays/allagma/pull/12).
+These features are **proposed and unmerged**. Main's command guide and first-study
+tutorial describe available behavior; checking a draft requires its explicit
+branch. The three PRs have no dependency on one another.
+
+The [historical-audio rights issue](https://github.com/alohays/allagma/issues/8)
+is maintainer-owned and is not a newcomer task. See the complete
 [contribution guide](../../CONTRIBUTING.md) for targeted checks.

@@ -20,3 +20,26 @@ claim or remote scheduler is implied by this roadmap.
 Start with a [small contribution](docs/contributing/starter-tasks.md), or propose
 a bounded change using the module proposal form. Changes to public contracts,
 ownership or defaults follow [governance](GOVERNANCE.md).
+
+## First contributor milestone
+
+The [milestone](https://github.com/alohays/allagma/milestone/1) and
+[pinned overview](https://github.com/alohays/allagma/issues/9) connect the actual
+backlog. This is maintainer-proposed work; the draft implementations are
+agent-assisted. The documentation site is [public](https://alohays.github.io/allagma/),
+and the [welcome Discussion](https://github.com/alohays/allagma/discussions/13)
+provides the community entry point.
+
+| State and kind | Task | Review or contribution path |
+| --- | --- | --- |
+| Owner review · confirmed defect | [#3: adapted toy reports hard-code bias](https://github.com/alohays/allagma/issues/3) | Draft [#10](https://github.com/alohays/allagma/pull/10); review first |
+| Owner review · enhancement | [#2: read-only prerequisite diagnostics](https://github.com/alohays/allagma/issues/2) | Draft [#11](https://github.com/alohays/allagma/pull/11) |
+| Owner review · enhancement | [#4: read-only evidence inspection](https://github.com/alohays/allagma/issues/4) | Draft [#12](https://github.com/alohays/allagma/pull/12) |
+| Available · documentation enhancement | [#5: validator recovery](https://github.com/alohays/allagma/issues/5), [#6: accessible figure description](https://github.com/alohays/allagma/issues/6) | Unassigned; good first issue and help wanted |
+| Available · qualification | [#7: Linux/Python 3.13 tutorial](https://github.com/alohays/allagma/issues/7) | Unassigned; help wanted, local CPU only |
+| Blocked · maintainer decision | [#8: retained historical-audio rights](https://github.com/alohays/allagma/issues/8) | Outside the engineering milestone; public activation does not resolve rights |
+
+The three feature PRs remain proposed and unmerged; main does not yet expose
+the new commands or preparation helper. [Dependabot #1](https://github.com/alohays/allagma/pull/1)
+is reviewed separately. Follow the [triage and review process](docs/contributing/workflow.md)
+for transitions from available to in progress, blocked or owner review.

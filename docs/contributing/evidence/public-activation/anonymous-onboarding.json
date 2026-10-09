@@ -1,0 +1,104 @@
+{
+  "status": "pass",
+  "source_commit": "0a5f41c894611aee06069a6418b9aa57f274f7aa",
+  "authentication": "Minimal subprocess environment: no token variables; system/global Git config disabled, credential helper and extra headers empty, prompts disabled. No gh invocation for clone or tutorial.",
+  "python": "Python 3.11.6",
+  "platform": "darwin",
+  "commands": [
+    {
+      "command": [
+        "git",
+        "-c",
+        "credential.helper=",
+        "-c",
+        "http.extraheader=",
+        "clone",
+        "--depth",
+        "1",
+        "--filter=blob:none",
+        "--sparse",
+        "https://github.com/alohays/allagma.git",
+        "anonymous-checkout"
+      ],
+      "exit_code": 0,
+      "seconds": 1.613,
+      "log": "anonymous-clone.log"
+    },
+    {
+      "command": [
+        "git",
+        "sparse-checkout",
+        "set",
+        "allagma",
+        "adapters",
+        "contracts",
+        "methods",
+        "recipes",
+        "policies",
+        "profiles",
+        "templates",
+        "tools",
+        "conformance",
+        "examples/toy-study",
+        "examples/first-research",
+        "evals/context-retention"
+      ],
+      "exit_code": 0,
+      "seconds": 0.773,
+      "log": "anonymous-sparse.log"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "allagma",
+        "check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.082,
+      "log": "anonymous-catalog.json"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "allagma",
+        "toy",
+        "--destination",
+        "work/my-first-study"
+      ],
+      "exit_code": 0,
+      "seconds": 6.135,
+      "log": "anonymous-toy.json"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "allagma",
+        "campaign",
+        "audit",
+        "--study",
+        "work/my-first-study",
+        "--campaign",
+        "toy-v1"
+      ],
+      "exit_code": 0,
+      "seconds": 0.725,
+      "log": "anonymous-audit.json"
+    }
+  ],
+  "attempts": {
+    "succeeded": 26,
+    "failed": 1,
+    "interrupted": 1
+  },
+  "audit": {
+    "verdict": "pass",
+    "checked_references": 521,
+    "findings": []
+  },
+  "paired_difference": 0.06510416666666667,
+  "expected_realized_fraction": "25/384",
+  "scope": "Anonymous sparse checkout and offline first-study walkthrough on this macOS/Python environment; no native model or GPU qualification."
+}

@@ -1,5 +1,11 @@
 # Contributing to Allagma
 
+Start with the [pinned contributor overview](https://github.com/alohays/allagma/issues/9)
+and [available tasks](docs/contributing/starter-tasks.md). The
+[workflow guide](docs/contributing/workflow.md) explains claiming, triage,
+evidence, review and credit; the [welcome](https://github.com/alohays/allagma/discussions/13)
+links the public community entry points.
+
 Start with one module or example. Python 3.11+ on macOS or Linux is sufficient;
 the default checks need no package installation, provider account or GPU.
 
