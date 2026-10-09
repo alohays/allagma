@@ -28,7 +28,11 @@ def diagnose(source, *, study=None, scope="offline", codex=None):
     def inspect(identity, action, remedy):
         try:
             message = action()
-        except (AllagmaError, OSError, ValueError, KeyError, TypeError) as exc:
+        # Existing verifiers also use mapping methods on decoded documents.
+        # Wrong JSON shapes and excessive nesting are failed prerequisites,
+        # not reasons to lose the remaining independent diagnostics.
+        except (AllagmaError, OSError, ValueError, KeyError, TypeError,
+                AttributeError, RecursionError) as exc:
             add(identity, False, str(exc), remedy)
         else:
             add(identity, True, message)

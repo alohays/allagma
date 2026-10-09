@@ -53,6 +53,8 @@ toy resources. Add `--study PATH` to inspect the current lock, intent freshness
 and generated-file ownership. Each failed check includes a remedy; independent
 checks still run. JSON has `diagnostic_version: 1`; exit 0 means all selected
 checks passed, 1 means a prerequisite failed, and 2 means invalid invocation.
+Malformed prerequisite documents, including wrong JSON shapes or excessive
+nesting, appear as failed checks with remedies; other checks still run.
 
 `doctor --scope native --codex /path/to/codex` additionally checks macOS,
 `sandbox-exec` presence and executable availability. It never invokes Codex,
