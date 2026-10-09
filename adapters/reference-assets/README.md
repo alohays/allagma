@@ -73,3 +73,9 @@ temporary file needed for an atomic metadata update. Large collections of tiny
 files cannot exceed the total cache ceiling through metadata alone. Unchanged
 control records are reused without rewriting them. A metadata budget stop keeps
 partial data and requires space or an explicitly approved policy change.
+
+Policy adoption admits the complete history record and any atomic policy
+replacement under the proposed limits while holding the cache lock. Approved
+expansions may supply that space; contractions must fit immediately. A capacity
+or free-space refusal changes neither policy nor history. Repeating an unchanged
+policy still charges its retained history record and eventually stops at the cap.

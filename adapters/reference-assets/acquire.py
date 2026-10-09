@@ -70,16 +70,21 @@ def disk_bytes(root):
     return total
 
 
+def admit_metadata(cache, policy, size):
+    """Admit peak additional control bytes, including atomic replacement data."""
+    if disk_bytes(cache) + size > policy["cache_bytes"]:
+        raise BudgetError("cache_bytes (control metadata)")
+    if shutil.disk_usage(cache).free - size < policy["minimum_free_bytes"]:
+        raise BudgetError("minimum_free_bytes (control metadata)")
+
+
 def cache_json(cache, policy, path, value, *, immutable=False):
     """Account for control data and its atomic-write temporary file too."""
     path = Path(path)
     data = canonical(value)
     if path.is_file() and path.read_bytes() == data:
         return  # Read-only reuse needs no new metadata allocation.
-    if disk_bytes(cache) + len(data) > policy["cache_bytes"]:
-        raise BudgetError("cache_bytes (control metadata)")
-    if shutil.disk_usage(cache).free - len(data) < policy["minimum_free_bytes"]:
-        raise BudgetError("minimum_free_bytes (control metadata)")
+    admit_metadata(cache, policy, len(data))
     write_bytes(path, data, immutable=immutable)
 
 
@@ -172,8 +177,8 @@ def adopt_policy(cache, policy, *, approval=None):
     cache = Path(cache)
     validate_policy(policy)
     with mutex(cache):
-        old = read_json(cache / "policy.json")
-        expanded = [key for key in DEFAULTS.keys() - {"format"}
+        old = validate_policy(read_json(cache / "policy.json"))
+        expanded = [key for key in sorted(DEFAULTS.keys() - {"format"})
                     if (policy[key] < old[key] if key == "minimum_free_bytes" else policy[key] > old[key])]
         if expanded:
             require(isinstance(approval, dict) and approval.get("decision") == "expand-acquisition-limits"
@@ -183,8 +188,16 @@ def adopt_policy(cache, policy, *, approval=None):
                     "Ask the researcher before expanding adopted limits; supply a decision bound to both policy digests")
         record = {"time": utcnow(), "previous": old, "adopted": policy, "expanded_fields": expanded,
                   "approval": approval}
+        # Admit both writes before either starts. The old policy still occupies
+        # disk while its atomic replacement is staged; unchanged policies need
+        # only the new history record. Expansions have already been authorized,
+        # and contractions must fit the proposed (stricter) limits immediately.
+        policy_data = canonical(policy)
+        changed = (cache / "policy.json").read_bytes() != policy_data
+        admit_metadata(cache, policy, len(canonical(record)) + (len(policy_data) if changed else 0))
         write_json(cache / "policy-history" / f"{uuid.uuid4().hex}.json", record, immutable=True)
-        write_json(cache / "policy.json", policy)
+        if changed:
+            write_bytes(cache / "policy.json", policy_data)
     return record
 
 

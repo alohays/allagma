@@ -14,7 +14,7 @@ import unittest
 from unittest.mock import patch
 import zipfile
 
-from allagma.files import AllagmaError, digest, read_json, write_json
+from allagma.files import AllagmaError, canonical, digest, inventory, read_json, write_json
 from allagma.research import _load
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -157,6 +157,55 @@ class AssetTests(unittest.TestCase):
                     "reason": "Test explicit approval validation."}
         self.assertEqual(adapter.adopt_policy(self.cache, policy, approval=approval)["expanded_fields"], ["attempts_per_asset"])
 
+    def test_repeated_policy_adoption_cannot_exceed_cache_capacity(self):
+        policy = {**self.policy, "asset_bytes": 1000, "study_bytes": 2000, "cache_bytes": 10000}
+        adapter.adopt_policy(self.cache, policy)
+        for attempt in range(20):
+            before = inventory(self.cache)
+            try:
+                adapter.adopt_policy(self.cache, policy)
+            except adapter.BudgetError as exc:
+                self.assertIn("cache_bytes", str(exc))
+                self.assertEqual(inventory(self.cache), before)
+                break
+            self.assertLessEqual(adapter.disk_bytes(self.cache), policy["cache_bytes"])
+        else:
+            self.fail("Repeated history writes were never refused")
+        self.assertEqual(read_json(self.cache / "policy.json"), policy)
+
+    def test_policy_transaction_admits_history_and_atomic_replacement_together(self):
+        policy = {**self.policy, "asset_bytes": 1000, "study_bytes": 2000, "cache_bytes": 10000}
+        adapter.adopt_policy(self.cache, policy)
+        new = {**policy, "attempts_per_asset": 1}
+        record = {"time": "2026-10-10T00:00:00.000000+00:00", "previous": policy,
+                  "adopted": new, "expanded_fields": [], "approval": None}
+        total = len(canonical(record)) + len(canonical(new))
+        # The final files fit, but there is no room for the atomic policy temp file.
+        (self.cache / "padding").write_bytes(b"x" * (policy["cache_bytes"] - adapter.disk_bytes(self.cache) - total + 1))
+        before = inventory(self.cache)
+        with patch.object(adapter, "utcnow", return_value=record["time"]):
+            with self.assertRaisesRegex(adapter.BudgetError, "cache_bytes"):
+                adapter.adopt_policy(self.cache, new)
+        self.assertEqual(inventory(self.cache), before)
+        self.assertEqual(read_json(self.cache / "policy.json"), policy)
+
+    def test_policy_transaction_refuses_free_space_and_invalid_contraction_without_writes(self):
+        policy = {**self.policy, "attempts_per_asset": 1}
+        usage = shutil.disk_usage(self.cache)
+        before = inventory(self.cache)
+        # Enough space for history alone, too little for history plus policy temp.
+        record = {"time": "2026-10-10T00:00:00.000000+00:00", "previous": self.policy,
+                  "adopted": policy, "expanded_fields": [], "approval": None}
+        free = policy["minimum_free_bytes"] + len(canonical(record))
+        with patch.object(adapter, "utcnow", return_value=record["time"]), patch.object(
+                adapter.shutil, "disk_usage", return_value=type(usage)(usage.total, usage.total - free, free)):
+            with self.assertRaisesRegex(adapter.BudgetError, "minimum_free_bytes"):
+                adapter.adopt_policy(self.cache, policy)
+        self.assertEqual(inventory(self.cache), before)
+        with self.assertRaisesRegex(adapter.BudgetError, "cache_bytes"):
+            adapter.adopt_policy(self.cache, {**policy, "asset_bytes": 1, "study_bytes": 2, "cache_bytes": 3})
+        self.assertEqual(inventory(self.cache), before)
+
     def test_gated_and_unavailable_assets_are_explicit_without_automatic_acceptance(self):
         gated = asset(access="gated", access_reason="Requires acceptance of terms")
         result = self.fetch(gated)
@@ -241,7 +290,9 @@ class AssetTests(unittest.TestCase):
         self.assertEqual(first["assets"][0]["status"], "available")
         second = self.fetch(asset("two"), b"b" * 1000)
         self.assertEqual(second["assets"][0]["reason"], "study_bytes")
-        policy["cache_bytes"] = 5000
+        # Leave room for the admitted policy transaction, but not acquisition's
+        # metadata/transfer allowance. Contraction below usage is refused earlier.
+        policy["cache_bytes"] = adapter.disk_bytes(self.cache) + 2500
         adapter.adopt_policy(self.cache, policy)
         third = self.fetch(asset("three"), b"c")
         self.assertEqual(third["assets"][0]["reason"].split()[0], "cache_bytes")
