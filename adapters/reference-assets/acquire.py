@@ -28,7 +28,7 @@ from urllib.request import Request, urlopen
 import uuid
 import zipfile
 
-from allagma.files import AllagmaError, confined, digest, read_json, utcnow, write_json
+from allagma.files import AllagmaError, canonical, confined, digest, read_json, utcnow, write_bytes, write_json
 from allagma.references import ID, SHA, nonempty, public_url, require
 
 MIB = 1024 ** 2
@@ -68,6 +68,19 @@ def disk_bytes(root):
         if path.is_file():
             total += path.stat().st_size
     return total
+
+
+def cache_json(cache, policy, path, value, *, immutable=False):
+    """Account for control data and its atomic-write temporary file too."""
+    path = Path(path)
+    data = canonical(value)
+    if path.is_file() and path.read_bytes() == data:
+        return  # Read-only reuse needs no new metadata allocation.
+    if disk_bytes(cache) + len(data) > policy["cache_bytes"]:
+        raise BudgetError("cache_bytes (control metadata)")
+    if shutil.disk_usage(cache).free - len(data) < policy["minimum_free_bytes"]:
+        raise BudgetError("minimum_free_bytes (control metadata)")
+    write_bytes(path, data, immutable=immutable)
 
 
 def validate_policy(policy):
@@ -136,17 +149,21 @@ def initialize(cache, *, policy=None):
     cache = Path(cache).absolute()
     exclusion = exclude_cache(cache)
     with mutex(cache):
-        write_json(cache / ".allagma-reference-cache.json", {"format": "allagma-raw-reference-cache-v1"}, immutable=True)
         path = cache / "policy.json"
-        if path.exists():
+        existing = path.exists()
+        if existing:
             adopted = validate_policy(read_json(path))
             require(policy is None or policy == adopted, "Cache already has an adopted policy; use explicit policy adoption")
         else:
             adopted = validate_policy(policy or dict(DEFAULTS))
+        # Mark the cache before retaining any control records, including when
+        # a later initialization write cannot fit its adopted ceiling.
+        cache_json(cache, adopted, cache / ".allagma-reference-cache.json", {"format": "allagma-raw-reference-cache-v1"}, immutable=True)
+        if not existing:
             # Initial custom limits are an explicit researcher configuration.
             # Record the observed machine state, not an inferred hardware cap.
-            write_json(path, adopted, immutable=True)
-            write_json(cache / "initialization.json", {"created_at": utcnow(), "exclusion": exclusion,
+            cache_json(cache, adopted, path, adopted, immutable=True)
+            cache_json(cache, adopted, cache / "initialization.json", {"created_at": utcnow(), "exclusion": exclusion,
                 "disk_free_bytes": shutil.disk_usage(cache).free, "policy_sha256": digest(adopted)}, immutable=True)
     return {"policy": adopted, "exclusion": exclusion, "cache": str(cache)}
 
@@ -251,7 +268,7 @@ class Cache:
         self.index = read_json(self.index_path) if self.index_path.exists() else {}
 
     def save(self):
-        write_json(self.ledger_path, self.ledger)
+        cache_json(self.path, self.policy, self.ledger_path, self.ledger)
 
     def recover(self):
         # Call only while holding the cache's kernel lock. A former owner
@@ -384,7 +401,7 @@ class Cache:
             if expected_total is not None and expected_total > limit:
                 raise BudgetError("asset_bytes")
             require(expected_total is None or offset <= expected_total, "Partial file exceeds declared source length")
-            write_json(state_path, state)
+            cache_json(self.path, self.policy, state_path, state)
             with part.open("ab" if offset else "wb") as output:
                 while expected_total is None or offset < expected_total:
                     if time.monotonic() - started > self.policy["asset_timeout_seconds"]:
@@ -517,6 +534,9 @@ class Cache:
         files = {p.relative_to(staging).as_posix(): {"sha256": sha256(p), "size_bytes": p.stat().st_size}
                  for p in sorted(staging.rglob("*")) if p.is_file()}
         require(files, "Source archive contains no files")
+        # The same tree description enters its manifest, source index and study
+        # ledger. Admit that metadata before publishing the extracted tree.
+        self.reserve_storage(3 * len(canonical({"files": files})))
         tree_root.parent.mkdir(parents=True, exist_ok=True)
         require(not tree_root.exists(), "Unindexed extracted tree exists; inspect it before retrying")
         staging.rename(tree_root)
@@ -525,7 +545,7 @@ class Cache:
                 path.chmod(0o444)
         record["tree"] = {"cache_path": tree_root.relative_to(self.path).as_posix(),
                           "size_bytes": written, "files": files}
-        write_json(receipt_path, record["tree"], immutable=True)
+        cache_json(self.path, self.policy, receipt_path, record["tree"], immutable=True)
 
     def fetch(self, asset, *, online=False, provided=None, approval=None):
         key = identity(asset)
@@ -540,7 +560,7 @@ class Cache:
             if not allowed:
                 return {"status": "gated", "reason": "Researcher acceptance of these terms is required", "asset_identity": key}
             if approval:
-                write_json(retained, approval, immutable=True)
+                cache_json(self.path, self.policy, retained, approval, immutable=True)
         existing = self.ledger["assets"].get(key) or self.index.get(key)
         if existing and existing.get("status") == "available":
             self.check(existing)
@@ -588,7 +608,7 @@ class Cache:
                 self._extract(asset, result)
             result.update(status="available", acquired_at=utcnow(), asset_identity=key)
             self.index[key] = result
-            write_json(self.index_path, self.index)
+            cache_json(self.path, self.policy, self.index_path, self.index)
         except BudgetError as exc:
             result.update(status="budget-exceeded", reason=str(exc))
         except HTTPError as exc:
@@ -627,9 +647,15 @@ def acquire(cache, manifest, directory, *, online=False, provided=None, approval
         controller = Cache(cache, manifest["study_id"])
         # A process that held this lock cannot still be acquiring. Keep the
         # reservation charged and use a new attempt for any continuation.
-        controller.recover()
+        admission_error = None
+        try:
+            controller.recover()
+        except BudgetError as exc:
+            admission_error = str(exc)
         for asset in manifest["assets"]:
             try:
+                if admission_error:
+                    raise BudgetError(admission_error)
                 result = controller.fetch(asset, online=online, provided=provided.get(asset["id"]), approval=approvals.get(asset["id"]))
             except BudgetError as exc:
                 result = {"status": "budget-exceeded", "reason": str(exc)}
@@ -694,7 +720,7 @@ def quarantine(cache, retrieval, asset_id):
                 value.pop("cache_path", None)
                 value.pop("tree", None)
         controller.save()
-        write_json(controller.index_path, controller.index)
+        cache_json(controller.path, controller.policy, controller.index_path, controller.index)
     return {"status": "quarantined", "preserved_paths": moved}
 
 

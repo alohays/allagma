@@ -67,3 +67,9 @@ installation without its optional CA link, the adapter uses the existing system
 CA bundle. An explicit trusted `SSL_CERT_FILE` works through Python's normal TLS
 configuration. Acquisition runs in a main process so an elapsed-time deadline
 can interrupt stalled or slowly delivered transfers as well as extraction.
+
+Cache admission includes extraction manifests, indexes, ledger growth and the
+temporary file needed for an atomic metadata update. Large collections of tiny
+files cannot exceed the total cache ceiling through metadata alone. Unchanged
+control records are reused without rewriting them. A metadata budget stop keeps
+partial data and requires space or an explicitly approved policy change.

@@ -146,7 +146,7 @@ class AssetTests(unittest.TestCase):
             provided = self.provided(b"123")
             result = adapter.acquire(self.cache, self.manifest(asset("no-space"), study_id="free-space-study"),
                                      self.refs, provided={"no-space": str(provided)})
-        self.assertEqual(result["assets"][0]["reason"], "minimum_free_bytes")
+        self.assertEqual(result["assets"][0]["reason"].split()[0], "minimum_free_bytes")
 
     def test_adopted_limit_expansion_requires_bound_researcher_decision(self):
         policy = {**self.policy, "attempts_per_asset": 3}
@@ -244,7 +244,23 @@ class AssetTests(unittest.TestCase):
         policy["cache_bytes"] = 5000
         adapter.adopt_policy(self.cache, policy)
         third = self.fetch(asset("three"), b"c")
-        self.assertEqual(third["assets"][0]["reason"], "cache_bytes")
+        self.assertEqual(third["assets"][0]["reason"].split()[0], "cache_bytes")
+
+    def test_extraction_manifests_cannot_overrun_the_total_cache_limit(self):
+        policy = {**self.policy, "asset_bytes": 5000, "study_bytes": 100000,
+                  "cache_bytes": 100000, "expanded_bytes": 200000}
+        adapter.adopt_policy(self.cache, policy)
+        (self.cache / "other-study-payload.bin").write_bytes(b"x" * 70000)
+        stream = io.BytesIO()
+        with tarfile.open(fileobj=stream, mode="w:gz") as archive:
+            for i in range(80):
+                member = tarfile.TarInfo(f"source/file-{i}.txt")
+                member.size = 10
+                archive.addfile(member, io.BytesIO(b"abcdefghij"))
+        result = self.fetch(asset("many-files", "paper-source", extract="tar"), stream.getvalue())
+        self.assertEqual(result["assets"][0]["status"], "budget-exceeded")
+        self.assertIn("cache_bytes", result["assets"][0]["reason"])
+        self.assertLessEqual(adapter.disk_bytes(self.cache), policy["cache_bytes"])
 
     def test_shared_digest_reuses_one_object_across_studies_and_urls(self):
         payload = b"shared source"
