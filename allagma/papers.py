@@ -153,6 +153,8 @@ def validate(study, config):
             "Sections must use Allagma figure/table/value/claim macros; declare extra template files explicitly")
     evidence = config.get("evidence", {})
     require(isinstance(evidence, dict) and evidence, "A research paper requires retained study evidence")
+    require(all(isinstance(key, str) and ID.fullmatch(key) for key in evidence),
+            "Evidence IDs must be portable identifiers")
     paths = {key: _source(study, item) for key, item in evidence.items()}
     values = {}
     value_provenance = {}

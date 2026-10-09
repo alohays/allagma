@@ -92,9 +92,14 @@ BibTeX and bbl, exact figure files, required custom styles and `anc/` with build
 instructions, literature notes, claim/result links and provenance. It excludes
 raw downloads, scientific weights/data, build logs, auxiliary files and the
 compiled paper PDF. The optional source package has a 25 MiB expanded ceiling.
+Reading notes live under `anc/reference-notes/<reference-id>/`; the packaged
+map and index link to those copies. Copied files cannot overwrite an existing
+package path. Provenance retains the original map digest and note locations.
 
 The adapter compiles once, packs the sources, unpacks them into a new directory
-and compiles again without network or access to the reference cache. It rejects
+and invokes that archive's `anc/build.py` without network or access to the
+reference cache. The adapter verifies the packaged builder's digest before
+invocation and retains its output. It rejects
 unresolved references and overfull boxes. Render the PDF and inspect every page
 for clipping, overlap, typography and legible figures/tables before delivery.
 Keep that visual review separate from the build receipt.

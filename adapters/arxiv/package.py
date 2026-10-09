@@ -1,10 +1,13 @@
 """Assemble and verify an optional portable paper package without submission."""
 from __future__ import annotations
 
+from copy import deepcopy
 import gzip
 import io
 from pathlib import Path
 import shutil
+import subprocess
+import sys
 import tarfile
 import tempfile
 
@@ -16,6 +19,17 @@ from allagma.research import _load
 
 ROOT = Path(__file__).resolve().parent
 MAX_SOURCE_BYTES = 25 * 1024 ** 2
+
+
+def copy_new(source, target):
+    """Copied material must never replace another source or generated file."""
+    target = Path(target)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        with target.open("xb") as output, Path(source).open("rb") as incoming:
+            shutil.copyfileobj(incoming, output)
+    except FileExistsError as exc:
+        raise AllagmaError(f"Paper source path collision: {target}") from exc
 
 
 def assemble(study, config, destination):
@@ -37,7 +51,7 @@ def assemble(study, config, destination):
     template = config.get("template", {"name": "allagma-preprint"})
     if template.get("name") == "allagma-preprint":
         main = (ROOT / "main.tex.in").read_text()
-        shutil.copyfile(ROOT / "allagma-preprint.sty", destination / "allagma-preprint.sty")
+        copy_new(ROOT / "allagma-preprint.sty", destination / "allagma-preprint.sty")
     else:
         require(template.get("name") == "custom" and template.get("files"), "Choose the provided preprint template or declare custom template files")
         template_root = confined(study, template["directory"])
@@ -48,7 +62,7 @@ def assemble(study, config, destination):
             require(path.suffix in (".sty", ".cls", ".bst") and file_hash(path) == item["sha256"], "Invalid or changed custom template style")
             target = confined(destination, item["path"])
             target.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copyfile(path, target)
+            copy_new(path, target)
     replacements = {"TITLE": tex_escape(config["title"]), "AUTHORS": value["authors_tex"],
                     "DATE": tex_escape(config["date"]), "BODY": body,
                     "APPENDICES": "\\appendix\n" + "\n".join(appendix_body) if appendix_body else ""}
@@ -71,20 +85,25 @@ def assemble(study, config, destination):
     for figure in value["figures"].values():
         target = destination / figure["target"]
         target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(figure["source_path"], target)
+        copy_new(figure["source_path"], target)
     (destination / "anc").mkdir(exist_ok=True)
-    shutil.copyfile(ROOT / "build.py", destination / "anc/build.py")
-    write_json(destination / "anc/reference-map.json", value["literature"], immutable=True)
-    write_text(destination / "anc/reference-index.md", references.render_index(value["literature"]), immutable=True)
+    copy_new(ROOT / "build.py", destination / "anc/build.py")
     reference_directory = confined(study, config["references"])
     for original, target in (("assets.json", "reference-assets.json"), ("retrieval.json", "reference-retrieval.json")):
         if (reference_directory / original).is_file():
-            shutil.copyfile(reference_directory / original, destination / "anc" / target)
-    for record in value["literature"]["records"]:
+            copy_new(reference_directory / original, destination / "anc" / target)
+    literature = deepcopy(value["literature"])
+    note_copies = {}
+    for record in literature["records"]:
         if record.get("note"):
+            original = record["note"]
+            record["note"] = f"reference-notes/{record['id']}/{Path(original).name}"
             target = confined(destination / "anc", record["note"])
-            target.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copyfile(confined(reference_directory, record["note"]), target)
+            copy_new(confined(reference_directory, original), target)
+            note_copies[record["id"]] = {"original": original, "packaged": "anc/" + record["note"]}
+    write_json(destination / "anc/reference-map.json", literature, immutable=True)
+    write_text(destination / "anc/reference-index.md", references.render_index(literature,
+        map_path="reference-map.json", bibliography_path="../references.bib"), immutable=True)
     write_json(destination / "anc/paper.json", config, immutable=True)
     write_json(destination / "anc/claim-result-links.json", {"claims": config["claims"], "values": value["value_provenance"],
         "tables": {key: {k: v for k, v in table.items() if k != "rendered_rows"} for key, table in value["tables"].items()},
@@ -100,7 +119,7 @@ def assemble(study, config, destination):
             target = f"anc/evidence/{key}{path.suffix}"
             target_path = confined(destination, target)
             target_path.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copyfile(path, target_path)
+            copy_new(path, target_path)
             evidence_copies[key] = target
     write_text(destination / "anc/README.md", "# Portable paper sources\n\n"
         "Compile from the unpacked archive root with an existing TeX distribution:\n\n"
@@ -121,6 +140,8 @@ def assemble(study, config, destination):
         "compiler and its scope; local success is not arXiv server validation or peer review.\n", immutable=True)
     provenance = {"format": "allagma-paper-provenance-v1", "title": config["title"], "authors": config["authors"],
                   "template": template, "original_evidence": config["evidence"], "evidence_copies": evidence_copies,
+                  "original_reference_map_sha256": file_hash(reference_directory / "map.json"),
+                  "reference_note_copies": note_copies,
                   "reference_map_sha256": file_hash(destination / "anc/reference-map.json"),
                   "source_files": inventory(destination), "submission": "not-submitted",
                   "review": config["review"], "scope": value["scope"]}
@@ -175,7 +196,14 @@ def build(study, config, destination, *, engine="pdflatex", timeout=60):
     archive_sources(source, archive)
     with tempfile.TemporaryDirectory(prefix="allagma-paper-unpack-", dir="/tmp") as temporary:
         extracted = unpack_archive(archive, Path(temporary) / "source")
-        verified = builder.compile_sources(extracted, destination / "unpacked-build", engine=engine, timeout=timeout)
+        require(file_hash(extracted / "anc/build.py") == file_hash(ROOT / "build.py"),
+                "Packaged builder differs from the supplied integration")
+        result = subprocess.run([sys.executable, "-B", str(extracted / "anc/build.py"),
+            "--output", str(destination / "unpacked-build"), "--engine", engine, "--timeout", str(timeout)],
+            cwd=extracted, capture_output=True, text=True, timeout=timeout * 8 + 30)
+        write_text(destination / "unpacked-entrypoint.log", result.stdout + result.stderr, immutable=True)
+        require(result.returncode == 0, "Packaged builder failed; see unpacked-entrypoint.log")
+        verified = read_json(destination / "unpacked-build/build.json")
     shutil.copyfile(destination / "unpacked-build/main.pdf", destination / "paper.pdf")
     receipt = {"format": "allagma-paper-delivery-v1", "status": "pass", "paper": "paper.pdf",
                "paper_sha256": file_hash(destination / "paper.pdf"), "source_archive": archive.name,
@@ -183,6 +211,7 @@ def build(study, config, destination, *, engine="pdflatex", timeout=60):
                "initial_build": {k: initial[k] for k in ("compiler_version", "pdf_sha256", "network", "reference_cache")},
                "unpacked_build": {k: verified[k] for k in ("compiler_version", "pdf_sha256", "network", "reference_cache")},
                "pdf_bytes_reproduced": initial["pdf_sha256"] == verified["pdf_sha256"],
+               "unpacked_entrypoint": "python3 anc/build.py", "packaged_builder_verified": True,
                "visual_inspection": "required separately", "submission": "not-submitted"}
     write_json(destination / "delivery.json", receipt, immutable=True)
     return receipt

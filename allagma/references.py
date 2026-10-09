@@ -235,7 +235,7 @@ def bibliography(value):
     return "\n\n".join(entries) + "\n"
 
 
-def render_index(value):
+def render_index(value, *, map_path="map.json", bibliography_path="citations.bib"):
     lines = ["# Reference index", "", value["question"] or "Study question has not been recorded.", "",
              f"Coverage mode: **{value['mode']}**. Metadata accuracy and scientific support are reviewed separately.", "",
              "## Coverage", ""]
@@ -246,8 +246,8 @@ def render_index(value):
         label = f"[{record['id']}]({record['note']})" if record.get("note") else f"`{record['id']}`"
         lines.append(f"- {label}: {meta['title']} ({meta['year']}); {', '.join(record['roles'])}. "
                      f"Metadata: {record['bibliography']['status']}. {record['relevance']}")
-    lines += ["", "Read `map.json` for located passages, disagreements, limitations and phase decisions. "
-              "Read individual notes and retained source assets when needed. `citations.bib` includes only "
+    lines += ["", f"Read `{map_path}` for located passages, disagreements, limitations and phase decisions. "
+              f"Read individual notes and retained source assets when needed. `{bibliography_path}` includes only "
               "metadata marked verified; that status does not verify a claim.", ""]
     return "\n".join(lines)
 

@@ -1,6 +1,8 @@
 """Paper structure and evidence tests without a TeX or network dependency."""
 from copy import deepcopy
 from pathlib import Path
+import subprocess
+import sys
 import tempfile
 import unittest
 
@@ -143,6 +145,51 @@ class PaperTests(unittest.TestCase):
         self.assertEqual(file_hash(unpacked / "anc/evidence/analysis.json"), self.config["evidence"]["analysis"]["sha256"])
         with self.assertRaisesRegex(AllagmaError, "new paper revision"):
             adapter.assemble(self.study, self.config, source)
+
+    def test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance(self):
+        literature = read_json(self.study / "references/map.json")
+        note = b"print('A reading note, not the portable builder.')\n"
+        for index, name in enumerate(("build.py", "reference-map.json", "reference-index.md",
+                                      "provenance.json", "evidence/analysis.json", "README.md")):
+            with self.subTest(note=name):
+                path = self.study / "references" / name
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_bytes(note)
+                literature["records"][0]["note"] = name
+                write_json(self.study / "references/map.json", literature)
+                bind_reviews(self.study, self.config)
+                source = self.root / f"source-{index}"
+                adapter.assemble(self.study, self.config, source)
+                archive = self.root / f"source-{index}.tar.gz"
+                adapter.archive_sources(source, archive)
+                unpacked = adapter.unpack_archive(archive, self.root / f"unpacked-{index}")
+                result = subprocess.run([sys.executable, str(unpacked / "anc/build.py"), "--help"],
+                                        cwd=self.root, capture_output=True, text=True, timeout=10)
+                self.assertEqual(result.returncode, 0, result.stderr)
+                self.assertIn("--output", result.stdout)
+                self.assertEqual(file_hash(unpacked / "anc/build.py"), file_hash(adapter.ROOT / "build.py"))
+                packaged = read_json(unpacked / "anc/reference-map.json")
+                mapped = packaged["records"][0]["note"]
+                self.assertTrue(mapped.startswith("reference-notes/Fixture2026/"))
+                self.assertEqual((unpacked / "anc" / mapped).read_bytes(), note)
+                self.assertIn(f"]({mapped})", (unpacked / "anc/reference-index.md").read_text())
+                self.assertIn("`reference-map.json`", (unpacked / "anc/reference-index.md").read_text())
+                provenance = read_json(unpacked / "anc/provenance.json")
+                self.assertEqual(provenance["original_reference_map_sha256"], file_hash(self.study / "references/map.json"))
+                self.assertEqual(file_hash(unpacked / "anc/evidence/analysis.json"), self.config["evidence"]["analysis"]["sha256"])
+
+    def test_archive_copy_refuses_existing_targets(self):
+        target = self.root / "reserved.txt"
+        target.write_text("Retain generated content.\n")
+        with self.assertRaisesRegex(AllagmaError, "collision"):
+            adapter.copy_new(self.study / "analysis.json", target)
+        self.assertEqual(target.read_text(), "Retain generated content.\n")
+
+    def test_evidence_identifiers_cannot_address_generated_ancillary_files(self):
+        self.config["evidence"]["../reference-map"] = self.config["evidence"]["analysis"]
+        bind_reviews(self.study, self.config)
+        with self.assertRaisesRegex(AllagmaError, "Evidence IDs"):
+            papers.validate(self.study, self.config)
 
     def test_numeric_formatting_cannot_silently_truncate_or_use_missing_values(self):
         with self.assertRaisesRegex(AllagmaError, "cannot truncate"):

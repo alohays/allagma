@@ -35,14 +35,19 @@ subject to clean compilation and visual review.
 
 `paper build` compiles in a fresh temporary directory, includes the generated
 BibTeX `.bbl`, creates `paper-source.tar.gz`, unpacks that archive in another new
-directory and compiles it again with network and reference-cache access denied.
+directory and invokes its packaged `anc/build.py` with network and reference-cache
+access denied. The packaged entrypoint must match the integration's builder;
+`delivery.json` records that check and `unpacked-entrypoint.log` retains its output.
 It checks final logs for unresolved references and overfull boxes. Inspect every
 PDF page separately before delivery. Failed builds remain in their output
 directory; use a new revision for the next attempt.
 
 The archive contains `main.tex`, section sources, the bibliography, `.bbl`,
 figures, required custom styles, and an `anc/` directory with build instructions,
-the standalone builder, reference notes and provenance. Its total expanded size
+the standalone builder, reference notes and provenance. Reading notes occupy
+`anc/reference-notes/<reference-id>/`, with remapped map/index links and original
+locations in provenance. Copies reject existing targets, including generated
+files. Evidence IDs must be portable identifiers. The total expanded size
 is capped at 25 MiB. Raw downloaded papers, code archives, model weights and
 dataset files belong in the excluded reference cache and cannot be copied as
 paper evidence. No build log, auxiliary file or final paper PDF enters the source
