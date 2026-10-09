@@ -22,13 +22,14 @@ seven task issues. [#5](https://github.com/alohays/allagma/issues/5),
 Only the two bounded documentation tasks carry `good first issue`; all three
 carry `help wanted` and need no paid model or GPU.
 
-Regular PRs [#10](https://github.com/alohays/allagma/pull/10),
+PRs [#10](https://github.com/alohays/allagma/pull/10),
 [#11](https://github.com/alohays/allagma/pull/11) and
 [#12](https://github.com/alohays/allagma/pull/12) contain agent-assisted changes
-reviewed and ready for the owner's merge decision. They remain proposed capabilities.
+merged after the owner's final review request, with successful CI between merges.
 The [Dependabot review](https://github.com/alohays/allagma/pull/1#pullrequestreview-5470551485)
 led to its separately authorized merge. The [review record](../contributing/pr-review.md)
-documents all three fixes and validation. Keep claims and credit accurate; no hypothetical user reports,
+and [merge record](../contributing/merged-prs.md) document all three fixes and
+validation. Keep claims and credit accurate; no hypothetical user reports,
 placeholder activity or independent reviewer is invented.
 
 ## Maintain the queue

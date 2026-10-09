@@ -1,0 +1,45 @@
+{
+  "commit": "657ea5d279235bffe384d96e3cc41fe7522b234f",
+  "steps": [
+    {
+      "step": 0,
+      "exit_code": 0,
+      "status": "prepared"
+    },
+    {
+      "step": 1,
+      "exit_code": 0,
+      "status": "pass"
+    },
+    {
+      "step": 2,
+      "exit_code": 0,
+      "status": null
+    },
+    {
+      "step": 3,
+      "exit_code": 0,
+      "status": "ready"
+    },
+    {
+      "step": 4,
+      "exit_code": 0,
+      "status": null
+    },
+    {
+      "step": 5,
+      "exit_code": 0,
+      "status": "pass"
+    }
+  ],
+  "bias": 0.123456789,
+  "inspection": {
+    "status": "pass",
+    "checked_references": 504,
+    "files_read": 505,
+    "validated_records": 56,
+    "bytes_read": 427176
+  },
+  "inspection_preserved_content_and_mtimes": true,
+  "scope": "Fresh offline example on merged main, not native-model qualification."
+}

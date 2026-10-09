@@ -1,0 +1,85 @@
+{
+  "commit": "b7bdf3411d046c5c9e94d4936e8bc4d64d48b9a8",
+  "next_merge_allowed": true,
+  "status": "pass",
+  "verified_at": "2026-10-09T16:11:55.037786+00:00",
+  "workflows": {
+    "Conformance": {
+      "jobs": [
+        {
+          "completed_at": "2026-10-09T16:11:47Z",
+          "conclusion": "success",
+          "html_url": "https://github.com/alohays/allagma/actions/runs/37956962919/job/113909805519",
+          "name": "acceptance",
+          "started_at": "2026-10-09T16:08:50Z"
+        },
+        {
+          "completed_at": "2026-10-09T16:10:15Z",
+          "conclusion": "success",
+          "html_url": "https://github.com/alohays/allagma/actions/runs/37956962919/job/113909805787",
+          "name": "targeted",
+          "started_at": "2026-10-09T16:08:49Z"
+        }
+      ],
+      "run": {
+        "conclusion": "success",
+        "createdAt": "2026-10-09T16:08:46Z",
+        "databaseId": 37956962919,
+        "headSha": "b7bdf3411d046c5c9e94d4936e8bc4d64d48b9a8",
+        "name": "Conformance",
+        "status": "completed",
+        "updatedAt": "2026-10-09T16:11:48Z",
+        "url": "https://github.com/alohays/allagma/actions/runs/37956962919"
+      }
+    },
+    "Documentation": {
+      "jobs": [
+        {
+          "completed_at": "2026-10-09T16:09:55Z",
+          "conclusion": "success",
+          "html_url": "https://github.com/alohays/allagma/actions/runs/37956962899/job/113909804619",
+          "name": "build-and-test",
+          "started_at": "2026-10-09T16:08:49Z"
+        }
+      ],
+      "run": {
+        "conclusion": "success",
+        "createdAt": "2026-10-09T16:08:46Z",
+        "databaseId": 37956962899,
+        "headSha": "b7bdf3411d046c5c9e94d4936e8bc4d64d48b9a8",
+        "name": "Documentation",
+        "status": "completed",
+        "updatedAt": "2026-10-09T16:09:56Z",
+        "url": "https://github.com/alohays/allagma/actions/runs/37956962899"
+      }
+    },
+    "Public documentation deployment": {
+      "jobs": [
+        {
+          "completed_at": "2026-10-09T16:09:18Z",
+          "conclusion": "success",
+          "html_url": "https://github.com/alohays/allagma/actions/runs/37956962826/job/113909803783",
+          "name": "build",
+          "started_at": "2026-10-09T16:08:49Z"
+        },
+        {
+          "completed_at": "2026-10-09T16:09:32Z",
+          "conclusion": "success",
+          "html_url": "https://github.com/alohays/allagma/actions/runs/37956962826/job/113910026293",
+          "name": "deploy",
+          "started_at": "2026-10-09T16:09:22Z"
+        }
+      ],
+      "run": {
+        "conclusion": "success",
+        "createdAt": "2026-10-09T16:08:46Z",
+        "databaseId": 37956962826,
+        "headSha": "b7bdf3411d046c5c9e94d4936e8bc4d64d48b9a8",
+        "name": "Public documentation deployment",
+        "status": "completed",
+        "updatedAt": "2026-10-09T16:09:33Z",
+        "url": "https://github.com/alohays/allagma/actions/runs/37956962826"
+      }
+    }
+  }
+}
