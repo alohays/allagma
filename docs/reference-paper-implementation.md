@@ -3,7 +3,7 @@
 The feature branch is `codex/reference-research-arxiv`. The full objective and
 owner decisions are retained in [GOAL.md](../GOAL.md). Development began at
 `694f13c1b923ff8e8a58442dd203baf613f76205`; the owner's subsequent main changes
-through `2db830a9bb289ddd7e4cb454464cd5dd9d666b2c` were merged without altering
+through `5f519e63e7fc50a2e7da887481444dd9b649eab8` were merged without altering
 other contributor branches. The PR remains unmerged and deployment waits for merge.
 
 The [completed-study demonstration](../studies/ema-schedule/publications/reference-r2/README.md)
@@ -35,10 +35,10 @@ arXiv submission, formal release or feature deployment was performed.
 | Portable sources and template | 42-file archive includes TeX, BibTeX/bbl, exact figure, required custom style, standalone builder, notes and provenance; custom template interface | Pass |
 | Clean compilation | Identical source archive compiled and recompiled after unpacking with network/cache access denied; local TeX Live 2024 and [supported TeX Live 2023 CI](https://github.com/alohays/allagma/actions/runs/37950653898) | Pass |
 | PDF inspection | Eight pages inspected; table widths, pagination and metadata repaired; [digest-bound visual record](../studies/ema-schedule/publications/reference-r2/evidence/pdf-review.json), text/metadata/log checks | Pass |
-| Offline core boundary | 151 conformance tests and complete I1–I5 acceptance, including the toy workflow; TeX and network acquisition are separate adapters | Pass |
+| Offline core boundary | 172 conformance tests and complete I1–I5 acceptance, including the toy workflow; TeX and network acquisition are separate adapters | Pass |
 | Preserve historical science/history | [Preservation audit](../studies/ema-schedule/publications/reference-r2/evidence/preservation.json); no old study, frozen evaluation, media or project-model-config changes | Pass |
 | Real completed-study integration | r07 selected outputs match the frozen package index; 114 statistical summaries recomputed from retained seed measurements; no new training | Pass |
-| Public documentation | Reference and paper guides, workspace/native/CLI guidance, study page and index; 43 pages, 2,809 checked links, 18 desktop/mobile browser tests | Pass |
+| Public documentation | Reference and paper guides, workspace/native/CLI guidance, study page and index; 43 pages, 2,828 checked links, 18 desktop/mobile browser tests | Pass |
 | Commit/push/review handoff | Coherent commits, pushed feature branch and current-main merge; [regular, unmerged PR #14](https://github.com/alohays/allagma/pull/14) provides authoritative current-head CI | See PR checks |
 
 ## Resource and acquisition record
@@ -68,7 +68,7 @@ HTTP archive; acquisition does not execute code or accept provider terms.
 
 ## Validation and limits
 
-[Validation results](../studies/ema-schedule/publications/reference-r2/evidence/validation-complete.json)
+[Validation results](../studies/ema-schedule/publications/reference-r2/evidence/validation-integrated.json)
 retain the offline acceptance, documentation/browser and compact-source release
 checks. The production docs preview was inspected, including the new paper
 preview and navigation to the reference index. Documentation fallback links now
@@ -95,3 +95,5 @@ existing frozen qualification and model-usage limits remain unchanged.
 [PR #14](https://github.com/alohays/allagma/pull/14) is open as a regular review-ready PR against `main` and remains unmerged. The PR checks are the authoritative status for its latest head; the retained receipts bind earlier implementation checkpoints without a recursive evidence-only commit cycle. The final audit corrected terminal state reporting for failed or abandoned protected-input copies and tightened the minimum-free-space regression. Partial inputs and their reserved bytes remain retained.
 
 The final boundary audit also verifies a complete provided-only paper with no external citations and an explicit References section. [Cache metadata evidence](../studies/ema-schedule/publications/reference-r2/evidence/cache-metadata-budget.json) reproduces and corrects an overrun caused by extraction manifests and indexes. Atomic metadata writes now obey cache/free-space admission. The final complete acceptance receipt is [retained separately](../studies/ema-schedule/publications/reference-r2/evidence/acceptance-complete.json); earlier checkpoints remain intact.
+
+The owner subsequently merged contributor PRs #10, #11 and #12 on main. Their changes are integrated through `5f519e6`, including both new diagnostic/evidence commands and the study-adaptation helper. Combined validation passes 172 tests, I1-I5 and 18 browser checks. [The combined acceptance](../studies/ema-schedule/publications/reference-r2/evidence/acceptance-integrated.json) and [preservation record](../studies/ema-schedule/publications/reference-r2/evidence/preservation-integrated.json) bind this integration. No contributor branch was edited and PR #14 is still unmerged.
