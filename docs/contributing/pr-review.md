@@ -1,5 +1,9 @@
 # Pull request review — 9 October 2026
 
+This is the retained pre-merge review record. The three feature PRs were
+subsequently merged after a final review on 10 October; the
+[sequential merge record](merged-prs.md) contains their final states and CI gates.
+
 The owner requested review of every open PR, authorized merging #1 if ready,
 and asked for the other PRs to be fixed and made regular. Four PRs were open.
 All changed files, their callers/contracts, issue acceptance criteria and tests

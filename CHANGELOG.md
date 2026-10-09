@@ -15,6 +15,21 @@
 - Include public documentation and a separate supported-release TeX CI check.
   Publication of these docs waits for this feature branch to be merged.
 
+## Unreleased contributor improvements — 10 October 2026
+
+- Preserve the actual bias, including full setting precision, in adapted toy
+  questions, protocols, claims and manuscripts; reject mixed analysis settings.
+- Add a study-owned preparation helper for a new bounded toy variant.
+- Add read-only `doctor` prerequisite diagnostics and `verify-evidence` contract/
+  digest inspection, with independent findings and explicit coverage limits.
+- Merge [#10](https://github.com/alohays/allagma/pull/10),
+  [#11](https://github.com/alohays/allagma/pull/11) and
+  [#12](https://github.com/alohays/allagma/pull/12) sequentially after review and
+  successful CI. See the [merge record](docs/contributing/merged-prs.md).
+
+These changes are available on main; no new release is published. Existing
+locked bundles, scientific records and native-host qualification remain intact.
+
 ## Final publication audit — 8 October 2026
 
 - Package source releases from committed Git blobs only, excluding ignored,
