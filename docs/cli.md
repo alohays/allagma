@@ -17,6 +17,7 @@ be reused as if they were empty.
 | `update check/plan/reconcile/validate/adopt/rollback/recover` | Change composition at a campaign boundary |
 | `migrate plan/apply/rollback/recover` | Apply or recover a scaffold migration |
 | `validate-record` | Validate an evidence record against its declared contract |
+| `verify-evidence` | Read a record and its declared transitive references without executing study code |
 | `compare` | Run the bounded context-method fixture comparison |
 | `acceptance` | Generate complete I1–I5 evidence and offline conformance results |
 
@@ -45,6 +46,42 @@ python3 -m allagma validate-record work/my-first-study/campaigns/toy-v1/analyses
 through that campaign's helper, even when the central checkout has changed.
 `validate-record` checks a record's shape; it does not independently verify
 every scientific claim referenced by that record.
+
+## Read-only evidence inspection
+
+```sh
+python3 -B -m allagma verify-evidence --study work/my-first-study \
+  --record campaigns/toy-v1/analyses/a001/paper/claims.json
+```
+
+The entry is a study-relative JSON record or nonempty list of records. The
+command checks the current supported record contracts and SHA-256 references,
+following references declared as `application/json` transitively. Shared
+references are checked once. It collects independent failures with the referring
+artifact and JSON location, rejects traversal/symlinks, and reports actual
+coverage counts. A malformed member of an entry list fails the report at its
+own location while valid sibling records and their references are still checked.
+Default limits are 10,000 file reads and 256 MiB of evidence
+bytes; `--max-files` and `--max-bytes` must be positive integers. Reaching a limit
+fails the check instead of reporting partial coverage as a pass.
+
+JSON output has `verification_version: 1`. Exit 0 means the declared graph
+passed these checks; exit 1 means findings or a limit stopped verification; exit
+2 means invalid invocation. The computed entry hash identifies the inspected
+bytes but is not a trusted signature. Unreferenced files, undeclared hash maps,
+campaign completeness and lock freshness are outside this command's coverage.
+Only objects declaring `path`, `sha256`, `media_type` and `retention` are treated
+as artifact references. An untyped transport manifest's path/hash metadata is
+not followed; incomplete references inside typed record fields still fail their
+record contract.
+
+Inspect a quiescent copy: there is no atomic snapshot or mutation lock. The
+command does not import study code, execute helpers, contact a service, append
+reviews, recover attempts or change assurance. `-B` also disables Python's
+source bytecode cache. For recomputation and a new review, use the explicitly
+mutating `campaign audit` command. Neither check establishes scientific truth
+or native-host qualification. Historical evidence remains usable with its
+original programs; the reader does not upgrade its lock or execute its bundle.
 
 ## Exit status and costs
 
