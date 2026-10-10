@@ -1,0 +1,46 @@
+{
+  "source_commit": "f235f1868eec7f6cc9518e5d59053a236b876358",
+  "archive_sha256": "0269727ce8515b0866ac5af1bfe11d1a436e0b2e9ebb68541610f9465ad6ec68",
+  "archive_bytes": 209954,
+  "python": "3.11.6 (v3.11.6:8b6ee5ba3b, Oct  2 2023, 11:18:21) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "allagma",
+        "check"
+      ],
+      "exit": 0,
+      "retained_local_log_sha256": "45cbae9c0fb3480436c6a8056b85a08f3cdcde96cd5af8deac5d6b7f26c70b31"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "conformance",
+        "-v"
+      ],
+      "exit": 0,
+      "retained_local_log_sha256": "0b75182497aa792561d7240005d8736c8eeadef6d9dca04068367f211f9f3ccb"
+    }
+  ],
+  "environment": {
+    "system": "macOS",
+    "python": "3.11.6",
+    "path_with_spaces": true,
+    "git_checkout_required_for_consumption": false
+  },
+  "conformance": {
+    "tests": 184,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "scope": "Actual catalog and full conformance from unpacked committed source; no release publication, Linux qualification, native model session or TeX compilation."
+}

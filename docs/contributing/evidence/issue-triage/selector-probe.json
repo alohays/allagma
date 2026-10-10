@@ -1,0 +1,39 @@
+{
+  "source_commit": "f235f1868eec7f6cc9518e5d59053a236b876358",
+  "cases": [
+    {
+      "changed_path": "adapters/reference-assets/acquire.py",
+      "selector_exit": 0,
+      "selected_commands": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "conformance.test_modules",
+          "conformance.test_research",
+          "conformance.test_versions",
+          "-v"
+        ]
+      ],
+      "stdout": "Changed-module checks: ['asset/reference-cache']; suites: ['conformance.test_modules', 'conformance.test_research', 'conformance.test_versions']; documentation links: 384\n",
+      "scope": "Real selector with synthetic Git diff and unittest execution capture; selected suites recorded, not run. Catalog and documentation checks ran."
+    },
+    {
+      "changed_path": "adapters/arxiv/package.py",
+      "selector_exit": 0,
+      "selected_commands": [
+        [
+          "python3",
+          "-m",
+          "unittest",
+          "conformance.test_modules",
+          "conformance.test_research",
+          "conformance.test_versions",
+          "-v"
+        ]
+      ],
+      "stdout": "Changed-module checks: ['output/arxiv']; suites: ['conformance.test_modules', 'conformance.test_research', 'conformance.test_versions']; documentation links: 384\n",
+      "scope": "Real selector with synthetic Git diff and unittest execution capture; selected suites recorded, not run. Catalog and documentation checks ran."
+    }
+  ]
+}

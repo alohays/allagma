@@ -389,6 +389,22 @@ configured `allagma` author. Leave the PR unmerged; documentation deployment
 continues to wait for merge. The [repair record](docs/contributing/pr14-revisions.md)
 tracks the four findings and validation.
 
+## Issue triage and immediate open-source work — 10 October 2026
+
+Check the current status of the issues, clean up outdated status and guidance,
+and open only two or three well-considered issues based on the latest `main`.
+Select work that is essential at the project's current open-source stage and
+represents immediate next steps. Recheck existing issues, claims and PRs before
+creating anything; preserve real contributor work and historical evidence.
+Make routine engineering decisions autonomously and ask through the user-input
+tool only for unresolved choices that materially affect scope, cost or correctness.
+
+Keep English technical documentation. Follow the standing instruction to commit
+in appropriate increments and push the completed work to `origin`. This goal
+does not request implementation of the newly selected issues. The
+[triage record](docs/contributing/issue-triage.md) records the evidence, cleanup
+and selected issues.
+
 ## Final audit and merge of every open PR — 10 October 2026
 
 Perform a final audit of every open pull request and merge each one that is
