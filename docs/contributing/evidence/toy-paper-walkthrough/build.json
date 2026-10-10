@@ -1,0 +1,85 @@
+{
+  "delivery": {
+    "archive_bytes": 18863,
+    "archive_sha256": "a376bbe9a33d9d51de21e0d7e950203590a46749297b69c0af808d4aa6445864",
+    "format": "allagma-paper-delivery-v1",
+    "initial_build": {
+      "compiler_version": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2024)",
+      "network": "denied",
+      "pdf_sha256": "fb3e4488c53067a702a37c913b2b4f36f90cfd23cae0e8370b086232a470c178",
+      "reference_cache": "not accessible"
+    },
+    "packaged_builder_verified": true,
+    "paper": "paper.pdf",
+    "paper_sha256": "fb3e4488c53067a702a37c913b2b4f36f90cfd23cae0e8370b086232a470c178",
+    "pdf_bytes_reproduced": true,
+    "source_archive": "paper-source.tar.gz",
+    "status": "pass",
+    "submission": "not-submitted",
+    "unpacked_build": {
+      "compiler_version": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2024)",
+      "network": "denied",
+      "pdf_sha256": "fb3e4488c53067a702a37c913b2b4f36f90cfd23cae0e8370b086232a470c178",
+      "reference_cache": "not accessible"
+    },
+    "unpacked_entrypoint": "python3 anc/build.py",
+    "visual_inspection": "required separately"
+  },
+  "recipient_rebuild": {
+    "status": "pass",
+    "compiler_version": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2024)",
+    "engine": "pdflatex",
+    "isolation": "macOS Seatbelt: deny network; read only clean source, TeX and system runtime; write only clean build",
+    "network": "denied",
+    "reference_cache": "not accessible",
+    "commands": [
+      [
+        "pdflatex",
+        "-no-shell-escape",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-file-line-error",
+        "-recorder",
+        "main.tex"
+      ],
+      [
+        "pdflatex",
+        "-no-shell-escape",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-file-line-error",
+        "-recorder",
+        "main.tex"
+      ],
+      [
+        "pdflatex",
+        "-no-shell-escape",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-file-line-error",
+        "-recorder",
+        "main.tex"
+      ]
+    ],
+    "pdf_sha256": "fb3e4488c53067a702a37c913b2b4f36f90cfd23cae0e8370b086232a470c178",
+    "pdf_bytes": 170496,
+    "layout_reference_errors": [],
+    "scope": "Clean local compilation and log checks; PDF visual inspection and arXiv server processing are separate"
+  },
+  "source_expanded_bytes": 121476,
+  "visual_review": {
+    "reviewer": "Codex assistant, same-assistant visual review",
+    "pages_inspected": [
+      1,
+      2
+    ],
+    "status": "pass",
+    "observations": [
+      "Inspected both rendered pages at 1200-pixel height. No clipped text, overlapping sections or unreadable table cells.",
+      "Title, Anonymous draft attribution, fixed date, two page numbers and all seven section roles render correctly.",
+      "Checked paired increase 0.06510417, interval [0.03985104, 0.09035729], table values and retained counterexample/sensitivity qualifiers.",
+      "References explicitly states that no external bibliographic sources are cited."
+    ],
+    "limits": "Visual and deterministic build checks do not establish independent peer review or arXiv acceptance."
+  }
+}
