@@ -24,6 +24,11 @@ def parser():
     check = sub.add_parser("check", help="Check all modules, or only one module's contract")
     check.add_argument("--source", type=Path, default=ROOT)
     check.add_argument("--module")
+    doctor = sub.add_parser("doctor", help="Inspect local prerequisites without executing hosts or changing a study")
+    doctor.add_argument("--source", type=Path, default=ROOT)
+    doctor.add_argument("--study", type=Path)
+    doctor.add_argument("--scope", choices=["offline", "native"], default="offline")
+    doctor.add_argument("--codex", type=Path, help="Native executable to inspect, never invoke (with --scope native)")
     init = sub.add_parser("init", help="Initialize a study while preserving user-owned files")
     init.add_argument("--source", type=Path, default=ROOT)
     init.add_argument("--study", type=Path, required=True)
@@ -37,6 +42,11 @@ def parser():
     verify.add_argument("--study", type=Path, required=True)
     val = sub.add_parser("validate-record")
     val.add_argument("path", type=Path)
+    evidence = sub.add_parser("verify-evidence", help="Read records and their declared references without executing study code")
+    evidence.add_argument("--study", type=Path, required=True)
+    evidence.add_argument("--record", required=True, help="Study-relative JSON record or nonempty record list")
+    evidence.add_argument("--max-files", type=int, default=10000)
+    evidence.add_argument("--max-bytes", type=int, default=256 * 1024 * 1024)
     toy = sub.add_parser("toy", help="Run a complete offline toy study with failure and interruption")
     toy.add_argument("--source", type=Path, default=ROOT)
     toy.add_argument("--destination", type=Path, required=True)
@@ -125,6 +135,11 @@ def main(argv=None):
                 return subprocess.run([sys.executable, str(root / "tools/allagma.py"), *argv]).returncode
         if args.command == "check":
             result = {"checked": Catalog(args.source).check(args.module), "status": "pass"}
+        elif args.command == "doctor":
+            from .diagnostics import diagnose
+            if args.codex is not None and args.scope != "native":
+                raise AllagmaError("--codex requires --scope native")
+            result = diagnose(args.source, study=args.study, scope=args.scope, codex=args.codex)
         elif args.command == "init":
             result = bundles.initialize(args.source, args.study, study_id=args.id, intent=read_json(args.intent) if args.intent else None)
         elif args.command == "entry":
@@ -135,6 +150,9 @@ def main(argv=None):
             result = {"status": "pass", "bundle_id": lock["bundle_id"], "lock_id": lock["lock_id"]}
         elif args.command == "validate-record":
             result = {"status": "pass", "record_type": validate_record(read_json(args.path))["record_type"]}
+        elif args.command == "verify-evidence":
+            from .evidence import verify_evidence
+            result = verify_evidence(args.study, args.record, max_files=args.max_files, max_bytes=args.max_bytes)
         elif args.command == "toy":
             roles = {key: value for key, value in {"context": args.context, "reviewer": args.reviewer}.items() if value}
             result = toy_workflow(args.source, args.destination, host=args.host, faults=not args.no_faults, roles=roles, recipe=args.recipe)
@@ -207,9 +225,13 @@ def main(argv=None):
             from .acceptance import run_acceptance
             result = run_acceptance(ROOT, args.output)
         print(canonical(result).decode(), end="")
+        if args.command == "doctor" and result["status"] != "pass":
+            return 1
         if args.command == "resource" and args.operation == "run" and result["status"] != "completed":
             return 1
         if args.command == "research" and args.operation == "run" and result["status"] != "completed":
+            return 1
+        if args.command == "verify-evidence" and result["status"] != "pass":
             return 1
         if isinstance(result, dict) and (result.get("verdict") in ("revise", "blocked") or result.get("execution_status") in ("failed", "blocked", "budget_exhausted", "needs_revision")):
             return 1

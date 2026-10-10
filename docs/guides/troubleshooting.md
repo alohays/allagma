@@ -4,6 +4,14 @@ Start with the exact command, Python/host version, exit code and sanitized
 error. Retain the attempt directory. A failed command is evidence to diagnose,
 not a reason to delete the study.
 
+Run `python3 -m allagma doctor` from the source checkout for a read-only report
+of offline prerequisites. Add `--study work/my-first-study` to inspect a current
+lock and its generated files, or `--scope native --codex /path/to/codex` for
+local native-runner prerequisites. Each failed item includes a recovery hint.
+The command does not launch a model, read credentials or repair evidence; it
+cannot establish scientific correctness or real-host qualification. See the
+[CLI reference](../cli.md#exit-status-and-costs) for scope and exit codes.
+
 | Symptom | What to check or do |
 | --- | --- |
 | `No module named allagma` | Run from the source checkout root, with Python 3.11+. A partial Python wheel is not the supported distribution. |

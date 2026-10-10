@@ -21,6 +21,20 @@ reservation recovery and what the local supervisor actually bounds.
 
 ## Recompute the report
 
+First, inspect a delivered record without executing any of its programs:
+
+```sh
+python3 -B -m allagma verify-evidence --study work/my-first-study \
+  --record campaigns/toy-v1/analyses/a001/paper/claims.json
+```
+
+This reads declared references and reports all independent missing/changed
+artifacts it reaches. It writes no study files or reviews. Use a quiescent copy
+and review the coverage and findings; a pass does not establish package
+completeness or scientific correctness. See [limits and exit codes](../cli.md#read-only-evidence-inspection).
+
+To rerun the study-owned analyzer and writer and append a new review:
+
 ```sh
 python3 -m allagma campaign audit --study work/my-first-study --campaign toy-v1
 ```

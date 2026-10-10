@@ -333,3 +333,19 @@ queue overview. The remaining #7 is a platform-qualification gap. Prioritize
 #5's first-use validation and recovery guidance, with a literal offline
 reproduction, safe recovery, local link checks and rendered documentation
 review. No parser, schema or frozen-record change is needed.
+
+## Final sequential PR merges — 10 October 2026
+
+Perform a final review of the merge-ready PRs already reviewed and updated.
+If they remain sound, merge them one by one, verifying CI stability after each
+merge before proceeding. The reviewed set is #10, #11 and #12; newer unreviewed
+#14 and draft #15 are outside this merge pass.
+
+The owner now explicitly authorizes those three merges, superseding the earlier
+instruction to leave them open. Recheck the actual heads and current main,
+retain review and merge evidence, and use merge commits to preserve history.
+Wait for successful conformance/full acceptance, documentation/browser checks
+and Pages deployment on each actual merge. Preserve frozen studies, the GUI
+model selection, existing resource limits and English documentation. Follow
+the standing commit-and-push instruction for any necessary repairs or records.
+The [sequential merge record](docs/contributing/merged-prs.md) tracks completion.

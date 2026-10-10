@@ -17,6 +17,7 @@ def write(study, analysis_path, output):
     if hashlib.sha256(summary_path.read_bytes()).hexdigest() != summary_ref["sha256"]:
         raise ValueError("Summary digest mismatch")
     values = json.loads(summary_path.read_text())
+    bias = values["bias"]
     lower, upper = values["ci95_normal"]
     sensitivity = values["leave_one_seed_out"]
     sensitivity_text = (f"Leave-one-seed-out mean differences ranged from {sensitivity['minimum_difference']:.8f} "
@@ -24,7 +25,7 @@ def write(study, analysis_path, output):
                         f"{sensitivity['replicates']} retained means were positive.")
     supported = lower > 0
     interpretation = "The biased estimator had higher average squared error" if supported else "The direction of the average error difference was inconclusive"
-    scope = f"{values['replicates']} prespecified seeds, {values['samples_per_replicate']} Rademacher observations per seed, target zero, additive bias 0.25"
+    scope = f"{values['replicates']} prespecified seeds, {values['samples_per_replicate']} Rademacher observations per seed, target zero, additive bias {bias}"
     limits = ["This synthetic known-answer problem does not establish novelty or improve an LLM research agent.",
               "The 95% interval is a normal approximation over seed replicates, not an exact small-sample guarantee.",
               "Averages do not establish an ordering for every individual seed."]
@@ -45,7 +46,7 @@ def write(study, analysis_path, output):
 
 ## Abstract
 
-We compared the sample mean with the sample mean plus 0.25 for a zero-mean
+We compared the sample mean with the sample mean plus {bias} for a zero-mean
 synthetic distribution. {interpretation} across {values['replicates']}
 confirmation seeds. This is a workflow demonstration with a known analytical
 expectation, not a claim of scientific novelty or agent quality.

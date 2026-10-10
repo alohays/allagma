@@ -77,8 +77,9 @@ Draft PRs stay draft until the owner chooses to proceed. The owner authorized th
 Merge, default-selection changes and new release publication still require owner decisions.
 On 9 October 2026 the owner requested a full PR review, authorized merging #1
 if ready, and authorized making the three feature PRs regular after fixes.
-That [review and validation](pr-review.md) is complete: #1 is merged;
-#10, #11 and #12 are ready, open and unmerged.
+That [review and validation](pr-review.md) is complete. On 10 October the owner
+authorized a final review and sequential merges. #10, #11 and #12 are now
+merged, with [successful CI after each merge](merged-prs.md); #1 was merged earlier.
 After an owner-approved merge, close the linked task, remove stale status labels,
 and update the overview. If the implementation is declined, record the reason
 without deleting its tests or discussion. Dependency PRs, including

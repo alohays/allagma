@@ -40,7 +40,8 @@ def file_hash(path):
         raise AllagmaError(f"Cannot hash artifact {path}: {exc}") from exc
 
 
-def read_json(path):
+def parse_json(text):
+    """Decode already-read JSON with the same strict rules as file reads."""
     def reject_constant(value):
         raise AllagmaError(f"Non-finite JSON value: {value}")
 
@@ -58,10 +59,13 @@ def read_json(path):
             raise AllagmaError(f"Non-finite JSON number: {value}")
         return result
 
+    return json.loads(text, parse_constant=reject_constant, parse_float=finite_float,
+                      object_pairs_hook=unique)
+
+
+def read_json(path):
     try:
-        return json.loads(Path(path).read_text(encoding="utf-8"),
-                          parse_constant=reject_constant, parse_float=finite_float,
-                          object_pairs_hook=unique)
+        return parse_json(Path(path).read_text(encoding="utf-8"))
     except (OSError, ValueError) as exc:
         raise AllagmaError(f"Cannot read {path}: {exc}. Use JSON-compatible YAML.") from exc
 

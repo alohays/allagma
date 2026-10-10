@@ -41,6 +41,7 @@ def figure(rows, average):
 
 def analyze(study, manifest, output):
     rows = []
+    settings = set()
     for ref in manifest["raw"]:
         path = study / ref["path"]
         if hashlib.sha256(path.read_bytes()).hexdigest() != ref["sha256"]:
@@ -48,6 +49,10 @@ def analyze(study, manifest, output):
         raw = json.loads(path.read_text())
         if raw["control"] != "random":
             raise ValueError("Pilot/control output leaked into confirmation")
+        if (type(raw["bias"]) not in (int, float) or not math.isfinite(raw["bias"])
+                or raw["target"] != 0 or raw["n"] != len(raw["samples"])):
+            raise ValueError("Expected a finite bias, target zero and consistent sample count")
+        settings.add((raw["bias"], raw["n"]))
         estimate = math.fsum(raw["samples"]) / len(raw["samples"])
         mean_error = (estimate - raw["target"]) ** 2
         biased_error = (estimate + raw["bias"] - raw["target"]) ** 2
@@ -57,12 +62,14 @@ def analyze(study, manifest, output):
     rows.sort(key=lambda row: row["seed"])
     if len(rows) < 2 or len({row["seed"] for row in rows}) != len(rows):
         raise ValueError("Need independent distinct seeds for uncertainty")
+    if len(settings) != 1:
+        raise ValueError("This paired comparison requires one common bias and sample count")
     differences = [row["paired_difference"] for row in rows]
     delta = statistics.mean(differences)
     se = statistics.stdev(differences) / math.sqrt(len(rows))
     sensitivity = [{"omitted_seed": row["seed"], "mean_difference": statistics.mean(
         other["paired_difference"] for other in rows if other["seed"] != row["seed"])} for row in rows]
-    summary = {"replicates": len(rows), "samples_per_replicate": rows[0]["n"],
+    summary = {"replicates": len(rows), "samples_per_replicate": rows[0]["n"], "bias": next(iter(settings))[0],
                "mean_mse": statistics.mean(row["mean_squared_error"] for row in rows),
                "biased_mse": statistics.mean(row["biased_squared_error"] for row in rows),
                "difference": delta, "standard_error": se, "ci95_normal": [delta - 1.96 * se, delta + 1.96 * se],
