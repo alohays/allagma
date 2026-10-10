@@ -23,8 +23,10 @@ after confirming the existing claim. [#7](https://github.com/alohays/allagma/iss
 remains available. The [latest triage](../contributing/issue-triage.md) added only
 [#18: required adapter regressions](https://github.com/alohays/allagma/issues/18)
 and [#19: runnable toy-to-paper onboarding](https://github.com/alohays/allagma/issues/19).
-The three available tasks carry `help wanted`; claimed #6 no longer appears in
-newcomer-discovery searches. None needs a paid model or GPU.
+PR #20 appeared during triage with a proposed #18 repair, so #18 now awaits owner
+review and is assigned to `alohays`. The two available tasks (#19 and #7) carry
+`help wanted`; #18 and claimed #6 have no newcomer-discovery labels. None needs
+a paid model or GPU.
 
 PRs [#10](https://github.com/alohays/allagma/pull/10),
 [#11](https://github.com/alohays/allagma/pull/11) and

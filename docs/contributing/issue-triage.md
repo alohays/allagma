@@ -6,12 +6,14 @@ documentation audit merge `14c2fba9c54b636a34c0e8da10155c1f66bef6c8` was include
 before updating this queue. It changes documentation and receipts, not the
 implementation used by the probes below.
 
-Only two new issues were selected. Both are available, unassigned and in the
+Only two new issues were selected and added to the
 [first contributor milestone](https://github.com/alohays/allagma/milestone/1).
+Both were initially available. During final verification, PR #20 appeared with
+a proposed #18 repair; #18 now awaits owner review, while #19 remains available.
 
 | Order | Issue | Why it is next |
 | --- | --- | --- |
-| 1 | [#18: required adapter regressions](https://github.com/alohays/allagma/issues/18) | The new acquisition and paper adapters have dedicated regression suites that the required change selector omits for adapter-only diffs. Make the existing pre-merge check cover them. |
+| 1 | [#18: required adapter regressions](https://github.com/alohays/allagma/issues/18) | The required selector omits dedicated suites for adapter-only diffs. Review the proposed repair in [#20](https://github.com/alohays/allagma/pull/20); do not start a duplicate implementation. |
 | 2 | [#19: runnable toy-to-paper walkthrough](https://github.com/alohays/allagma/issues/19) | The merged guides describe contracts and placeholder commands. A small example should let contributors follow actual toy results through explicit reference coverage, attribution, review and optional paper compilation. |
 
 This is agent-assisted maintainer triage. The issues distinguish a reproduced
@@ -38,6 +40,13 @@ qualifying the POSIX runtime. Assignment does not imply a completed contribution
 uses Python 3.11 for targeted checks and 3.12 for push acceptance, so the requested
 literal Linux/Python 3.13 tutorial receipt is still missing. The issue now links
 the current main baseline and distinguishes this gap from #18 and #19.
+
+The [follow-up queue receipt](evidence/issue-triage/queue-follow-up.json) records
+PR #20 appearing before this task finished. Its proposed selector repair overlaps
+#18, so #18 was assigned to `alohays`, moved to `owner review`, and removed from
+`help wanted`. The issue links the PR and retains its full acceptance criteria.
+It remains open pending review and merge; this triage does not approve PR #20.
+The original queue snapshot is preserved.
 
 [#8](https://github.com/alohays/allagma/issues/8) remains blocked and assigned to
 the owner. Its wording recognizes the authorized completed merges without
@@ -75,8 +84,8 @@ artifact infrastructure were deferred: they add scope or owner/cost decisions
 without addressing these immediate contribution gaps. The four #14 findings
 were already repaired and merged, so they were not reopened.
 
-The [validation receipt](evidence/issue-triage/validation.json) records 412
-canonical links, 43 built pages with 2,848 internal links/assets, 18 passing
+The [final validation receipt](evidence/issue-triage/validation-follow-up.json) records 413
+canonical links, 43 built pages with 2,851 internal links/assets, 18 passing
 browser tests and the desktop/light and mobile/dark review of the updated task
 page. The [manifest](evidence/issue-triage/manifest.json) binds the compact
 receipts. Later issue changes belong in GitHub rather than rewriting this dated

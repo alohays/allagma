@@ -8,21 +8,17 @@ queue; read the [claim and review process](workflow.md) before starting.
 
 ## Available work
 
-1. [#18: Run adapter regressions in the required check](https://github.com/alohays/allagma/issues/18).
-   Start with `tools/check_changed.py`, `tools/tests/` and the adapter conformance
-   suites. Adapter-only diffs must run the relevant offline tests and propagate
-   failure. Python/CI familiarity is useful; no TeX or account is required.
-2. [#19: Document a runnable toy-to-paper workflow](https://github.com/alohays/allagma/issues/19).
+1. [#19: Document a runnable toy-to-paper workflow](https://github.com/alohays/allagma/issues/19).
    Start with `examples/toy-study/` and the first-study and paper guides. Bind
    actual toy values and claims to a new paper revision, with explicit coverage
    and scoped reviews. Python/research-documentation familiarity is useful;
    TeX is only needed for the separate optional build.
-3. [#7: Qualify Linux/Python 3.13 onboarding](https://github.com/alohays/allagma/issues/7).
+2. [#7: Qualify Linux/Python 3.13 onboarding](https://github.com/alohays/allagma/issues/7).
    Start with `docs/guides/first-study.md` and `conformance/`. Record the literal
    clean-checkout tutorial with a distinct interpreter and paths with spaces.
    Requires local Linux/Python 3.13, not a native model or GPU.
 
-All three are unassigned. The order reflects the immediate priorities.
+Both are unassigned. The order reflects the available implementation work.
 
 Comment on the issue with your scope and environment. A maintainer confirms the
 claim and assignment before overlapping implementation. No paid model access,
@@ -33,6 +29,14 @@ rendered review and link check, not a test that merely repeats its prose.
 The [triage record](issue-triage.md) explains why only #18 and #19 were added.
 These available tasks carry `help wanted`; their prerequisites make them more
 involved than a good first issue. Claimed #6 has no newcomer-discovery labels.
+
+## Awaiting owner review
+
+[#18: Run adapter regressions in the required check](https://github.com/alohays/allagma/issues/18)
+is assigned to `alohays`. [PR #20](https://github.com/alohays/allagma/pull/20)
+appeared during triage and proposes the repair. Review its acceptance criteria
+before closure; do not begin a duplicate implementation. This issue has no
+`help wanted` label while it awaits review.
 
 ## Claimed work
 
