@@ -37,10 +37,24 @@ their independent scope and failure assertions.
 All 11 selector tests and seven record/locking tests pass after the change.
 Runtime record semantics, schemas and the lock implementation are unchanged.
 
-## Remaining iterations
+## Iteration 2: recheck regressions and bound invalid-type diagnostics
 
-Iteration 2 will re-evaluate the first repair, including regressions against
-independent mutations and failure propagation. Iteration 3 will review the
-combined change against current main and run the complete required validation.
-This record is incomplete until those two iterations and the final pushed-head
-checks are recorded.
+Reviewed `268761c266b86891fcaeb0599fb251faa7ac2732`. Independently removing each
+of the three Git protections in memory makes its corresponding regression fail:
+four path cases, one rename case and two base-argument cases. Repository source
+remains unchanged by the mutation probes. The earlier selector findings are
+resolved, including mixed changes and failure propagation.
+
+A deeper API probe found a remaining malformed-record failure. Formatting an
+invalid list/object `record_type` could raise `RecursionError` while producing
+the rejection message. Both nested-container cases reproduce that failure.
+The validator now rejects non-string types with a bounded diagnostic before
+the known-string membership check. This does not change valid records, schemas
+or scientific results. The new API regression fails before the fix and passes
+after it, alongside the existing positive, malformed-file and lock cases.
+
+## Remaining iteration
+
+Iteration 3 will review the combined change against current main and run the
+complete required validation. This record is incomplete until that iteration
+and the final pushed-head checks are recorded.

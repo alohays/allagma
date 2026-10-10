@@ -26,6 +26,14 @@ class RecordValidation(WorkspaceTest):
             with self.subTest(value=value), self.assertRaises(AllagmaError):
                 validate_record(value)
 
+    def test_invalid_record_type_does_not_render_unbounded_container_contents(self):
+        for shape in ("list", "object"):
+            kind = "not a record type"
+            for _ in range(2 * sys.getrecursionlimit()):
+                kind = [kind] if shape == "list" else {"nested": kind}
+            with self.subTest(shape=shape), self.assertRaisesRegex(AllagmaError, "string record_type"):
+                validate_record({"record_type": kind})
+
     def test_cli_rejects_malformed_records_without_tracebacks_or_writes(self):
         cases = (b"null", b"false", b"42", b'"RunRecord"', b"[]", b"{}",
                  b'{"record_type":[]}', b'{"record_type":{}}',
