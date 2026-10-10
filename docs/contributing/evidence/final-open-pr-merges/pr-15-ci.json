@@ -1,0 +1,72 @@
+[
+  {
+    "conclusion": "success",
+    "databaseId": 38022280502,
+    "headSha": "342ee4f23a754df1a1440e6506c215dd2560802c",
+    "name": "Documentation",
+    "status": "completed",
+    "url": "https://github.com/alohays/allagma/actions/runs/38022280502",
+    "jobs": [
+      {
+        "name": "build-and-test",
+        "status": "completed",
+        "conclusion": "success",
+        "startedAt": "2026-10-10T03:55:54Z",
+        "completedAt": "2026-10-10T03:57:20Z",
+        "url": "https://github.com/alohays/allagma/actions/runs/38022280502/job/114125643113"
+      }
+    ]
+  },
+  {
+    "conclusion": "success",
+    "databaseId": 38022280498,
+    "headSha": "342ee4f23a754df1a1440e6506c215dd2560802c",
+    "name": "Public documentation deployment",
+    "status": "completed",
+    "url": "https://github.com/alohays/allagma/actions/runs/38022280498",
+    "jobs": [
+      {
+        "name": "build",
+        "status": "completed",
+        "conclusion": "success",
+        "startedAt": "2026-10-10T03:55:54Z",
+        "completedAt": "2026-10-10T03:56:15Z",
+        "url": "https://github.com/alohays/allagma/actions/runs/38022280498/job/114125643091"
+      },
+      {
+        "name": "deploy",
+        "status": "completed",
+        "conclusion": "success",
+        "startedAt": "2026-10-10T03:56:18Z",
+        "completedAt": "2026-10-10T03:56:29Z",
+        "url": "https://github.com/alohays/allagma/actions/runs/38022280498/job/114125708548"
+      }
+    ]
+  },
+  {
+    "conclusion": "success",
+    "databaseId": 38022280547,
+    "headSha": "342ee4f23a754df1a1440e6506c215dd2560802c",
+    "name": "Conformance",
+    "status": "completed",
+    "url": "https://github.com/alohays/allagma/actions/runs/38022280547",
+    "jobs": [
+      {
+        "name": "acceptance",
+        "status": "completed",
+        "conclusion": "success",
+        "startedAt": "2026-10-10T03:55:54Z",
+        "completedAt": "2026-10-10T03:58:12Z",
+        "url": "https://github.com/alohays/allagma/actions/runs/38022280547/job/114125642923"
+      },
+      {
+        "name": "targeted",
+        "status": "completed",
+        "conclusion": "success",
+        "startedAt": "2026-10-10T03:55:54Z",
+        "completedAt": "2026-10-10T03:56:03Z",
+        "url": "https://github.com/alohays/allagma/actions/runs/38022280547/job/114125643079"
+      }
+    ]
+  }
+]

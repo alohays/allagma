@@ -1,0 +1,28 @@
+{
+  "status": "pass",
+  "counts": {
+    "cells": 32,
+    "states": 96,
+    "independent_seeds_per_dataset": 4,
+    "trajectories": 24,
+    "training_updates": 200000,
+    "ema_cells": 16,
+    "negative_cell_means": 14,
+    "cell_intervals_below_zero": 2,
+    "schedule_contrasts": 8,
+    "positive_schedule_means": 8,
+    "schedule_intervals_above_zero": 2,
+    "duration_contrasts": 8,
+    "duration_intervals_containing_zero": 8,
+    "interactions": 4,
+    "interaction_intervals_containing_zero": 4,
+    "raw_comparisons": 4,
+    "raw_cosine_better": 4,
+    "gmm_states": 48,
+    "gmm_all_modes": 48,
+    "summaries_checked": 114
+  },
+  "original_inputs_match": 6,
+  "retained_generated_values_match": true,
+  "scope": "Recomputed retained seed-level summaries in a temporary copy; no new training or retained-file writes."
+}

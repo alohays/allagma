@@ -16,11 +16,12 @@ endorsement or maintainer response guarantee is claimed.
 
 The [pinned contributor overview](https://github.com/alohays/allagma/issues/9)
 and [focused milestone](https://github.com/alohays/allagma/milestone/1) connect
-seven task issues. [#5](https://github.com/alohays/allagma/issues/5),
-[#6](https://github.com/alohays/allagma/issues/6), and
-[#7](https://github.com/alohays/allagma/issues/7) remain available and unassigned.
-Only the two bounded documentation tasks carry `good first issue`; all three
-carry `help wanted` and need no paid model or GPU.
+seven task issues. [#5](https://github.com/alohays/allagma/issues/5) is complete
+through [#15](https://github.com/alohays/allagma/pull/15).
+[#6](https://github.com/alohays/allagma/issues/6) has a contributor claim awaiting
+maintainer confirmation and remains unassigned; read that claim before starting
+overlapping work. [#7](https://github.com/alohays/allagma/issues/7) remains available
+and unassigned. Both remaining tasks need no paid model or GPU.
 
 PRs [#10](https://github.com/alohays/allagma/pull/10),
 [#11](https://github.com/alohays/allagma/pull/11) and
@@ -31,6 +32,9 @@ led to its separately authorized merge. The [review record](../contributing/pr-r
 and [merge record](../contributing/merged-prs.md) document all three fixes and
 validation. Keep claims and credit accurate; no hypothetical user reports,
 placeholder activity or independent reviewer is invented.
+
+The later [final audit](../contributing/final-open-pr-merges.md) records merges
+of #14, #15 and #16, including rechecking the four repaired findings in #14.
 
 ## Maintain the queue
 

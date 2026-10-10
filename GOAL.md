@@ -388,3 +388,20 @@ and the complete acceptance workflow. Keep coherent Git increments and push to
 configured `allagma` author. Leave the PR unmerged; documentation deployment
 continues to wait for merge. The [repair record](docs/contributing/pr14-revisions.md)
 tracks the four findings and validation.
+
+## Final audit and merge of every open PR — 10 October 2026
+
+Perform a final audit of every open pull request and merge each one that is
+ready, one by one. The initial set is #14, #15 and #16. This owner instruction
+supersedes the earlier restrictions on merging those PRs. Recheck their actual
+heads, earlier findings, integration with current main and relevant validation.
+Preserve feature history with merge commits and honor the active repository
+rules without bypasses. Verify CI and deployment after each merge before the
+next merge.
+
+Retain the final decisions, checks and merge evidence in English, reconcile
+contributor documentation with the completed work, and follow the standing
+commit-and-push instruction. Preserve frozen scientific evidence, full Git
+history, the GUI model choice and existing native model-usage limits. Historical
+audio rights remain a separate unresolved maintainer issue. The
+[final audit record](docs/contributing/final-open-pr-merges.md) tracks this pass.
