@@ -1,0 +1,44 @@
+{
+  "format": "allagma-pr-review-iterations-v1",
+  "recorded_at": "2026-10-10T05:04:44.838702+00:00",
+  "pull_request": "https://github.com/alohays/allagma/pull/20",
+  "initial_head": "b1674542b516b2c9c28ee5562c5a1cecbd926196",
+  "iterations": [
+    {
+      "number": 1,
+      "review": "Real Git path, rename and revision admission",
+      "fix_commit": "268761c266b86891fcaeb0599fb251faa7ac2732",
+      "before_failing_subcases": 7,
+      "after_selector_tests": 11,
+      "status": "pass"
+    },
+    {
+      "number": 2,
+      "review": "Mutation checks and invalid record-type diagnostics",
+      "fix_commit": "6ccb408560c78b137bcac2050185434f30559e1f",
+      "before_api_errors": 2,
+      "after_record_lock_tests": 8,
+      "status": "pass"
+    },
+    {
+      "number": 3,
+      "review": "Current-main integration and issue #18 enforcement requirements",
+      "integration_commit": "205db50",
+      "change": "Actual selected-regression failure test plus final evidence",
+      "tooling_tests": 19,
+      "status": "pass"
+    }
+  ],
+  "scope": "Local completed iterations; exact final-head CI and final review are recorded on the PR. No merge.",
+  "files": {
+    "initial-selector-probes.json": "855b5592a8abb8474ad1b03bccaf1921172989d3a2407b2bed49d4dec08abd90",
+    "iteration-2-mutations.json": "9d7b4eb63fbb9f0da0c57c13869de717ed2c15f8292eb3864f4594b493ec0a78",
+    "iteration-2-record-after.json": "65eca79784c872b71a40ba0138d6652727d1c5aed01da56f74a2399ef969bb6c",
+    "iteration-2-record-before.json": "0206f7afe6bc833f5e6a1a0f4958e7033342da31542032d3563326383ae917e3",
+    "iteration-3-enforcement.json": "8ae4556ddec9dca32fd098c8bf48132dfa4e63cf03dd0b75b20e43bedbcafa95",
+    "local-log-hashes.json": "0434bf16d468bd2742c161e5a4aa8ca9e2f3b82dc9fbd3b3fbaa21f1cc6aa98a",
+    "preservation.json": "dd0fec012d86b165e7a05dd92242ae69643e939312a5a2e4d00297c80f3cdeba",
+    "submitted-reviews.json": "8c60351f4796dcdd49f930e0536af88155f42e84a24c843325f5c6c68b9a413c",
+    "validation.json": "eb1c7ffbf3bc06a8a4b77dc8d7903b8ef67de51b54ae5050d8e5ef0ab22212c8"
+  }
+}

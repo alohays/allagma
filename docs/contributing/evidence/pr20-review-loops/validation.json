@@ -1,0 +1,52 @@
+{
+  "status": "pass",
+  "tested_merge_commit": "205db50",
+  "runtime_source_revision": "sha256:32c6491f46dd51cdf871caab11945a19156eca5f00272db5edee526056e36b46",
+  "conformance_tests": 192,
+  "milestones": {
+    "I1": "pass",
+    "I2": "pass",
+    "I3": "pass",
+    "I4": "pass",
+    "I5": "pass"
+  },
+  "toy": {
+    "attempts": {
+      "failed": 1,
+      "interrupted": 1,
+      "succeeded": 26
+    },
+    "confirmation_replicates": 24,
+    "audit": {
+      "analysis_repetitions": 1,
+      "checked_references": 521,
+      "findings": [],
+      "limitations": [
+        "No independent scientific peer review or real-model quality evaluation."
+      ],
+      "review": {
+        "media_type": "application/json",
+        "path": "campaigns/toy-v1/analyses/a001/reviews/review-001/record.json",
+        "retention": "retain-with-study",
+        "sha256": "3cf8a8aafffa4f360c9c6fd3c3b11f1d074f64d296d6cb8d20cc137032607db9"
+      },
+      "stale_claims": [],
+      "verdict": "pass"
+    }
+  },
+  "host_scope": "Real generic execution; native entrypoint registration/routing contract fixtures",
+  "catalog_entries": 23,
+  "tooling_tests": 19,
+  "documentation": {
+    "pages": 43,
+    "local_links_and_assets": 2851,
+    "browser_tests": 18
+  },
+  "reviewed_files": {
+    "allagma/contracts.py": "40eafde7764894629bd262ff80dd6dd02345a38ac53fad42d9b195fb334565e3",
+    "tools/check_changed.py": "7c5653fb53e0ccf34571e6c33dc199d64f719bdb8ac438f61bcbe878fa5ca4ba",
+    "tools/tests/test_check_changed.py": "688b8645b63d59e39c4efba74dadb8e79df1fa8ea7be1247d275972496c9d976",
+    "conformance/test_record_validation.py": "55518e0bd6e8a1dfe1fb43bf244b6e8db3c12a1785652085cf51f3a20c3eb597",
+    "conformance/test_study_locking.py": "fea93845fc4ba2abb563ef8a580d1ff2db1ccb29050bc0b0a6e958278788eb14"
+  }
+}

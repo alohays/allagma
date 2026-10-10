@@ -12,9 +12,9 @@ boundaries with direct consequences for contributors and retained studies.
 | [Study mutation lock](../../conformance/test_study_locking.py) | Existing crash tests did not prove exclusion between live processes. New subprocess tests cover refused campaign start/run and update/migration planning, progress in another study, release after normal exit, and kernel release after a killed owner without deleting its lock file. No locking implementation change was needed. |
 | [Required CI selection](../../tools/tests/test_check_changed.py) | Adapter-only changes omitted their own regression suites; profile/policy changes and evaluation fixtures also missed relevant behavior checks. Runtime and workflow changes now run all offline conformance suites. Context/evaluation changes retain comparison checks, mixed changes retain both scopes, an unreadable base includes tooling checks, and selected-test failures propagate. |
 
-The record tests failed before the type checks were added: seven CLI cases
+The initial record tests failed before the type checks were added: seven CLI cases
 returned tracebacks, and eight API cases raised the wrong exception type. The
-final eight CI-selection tests produce twelve failing subcases against the
+initial eight CI-selection tests produce twelve failing subcases against the
 original selector. Both suites pass after their fixes. Removing `flock` only
 in a disposable source copy makes the new contention test fail; the unmodified
 implementation passes. This checks that the concurrency test detects loss of
@@ -51,3 +51,13 @@ model qualification. Valid records keep their existing behavior. Malformed
 records receive a controlled validation error; no data migration is required.
 The selector tests intercept Git/test commands to inspect routing and exit
 codes; actual conformance execution is verified separately by acceptance and CI.
+
+## Subsequent review iterations
+
+The [three-iteration review](pr20-review-loops.md) adds real-Git path/base tests,
+a nested invalid-type API regression, and an actual failing selected test in a
+disposable checkout. It repairs quoted-path, rename-removal and base-argument
+selection gaps, and prevents invalid record-type diagnostics from raising a
+secondary recursion error. The final local totals are 192 conformance tests and
+19 tooling tests, with I1–I5 and the complete toy workflow passing. Earlier
+counts above describe the initial implementation.

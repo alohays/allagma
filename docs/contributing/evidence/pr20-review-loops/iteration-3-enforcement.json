@@ -1,0 +1,9 @@
+{
+  "regression_status": "pass",
+  "deliberate_failure": {
+    "exit_code": 1,
+    "stdout": "Changed-module checks: ['asset/reference-cache']; suites: ['conformance.test_reference_assets']; documentation links: 0\n",
+    "stderr": "test_deliberate_failure (conformance.test_reference_assets.SelectedRegression.test_deliberate_failure) ... FAIL\n\n======================================================================\nFAIL: test_deliberate_failure (conformance.test_reference_assets.SelectedRegression.test_deliberate_failure)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private<temporary-checkout>/conformance/test_reference_assets.py\", line 4, in test_deliberate_failure\n    self.fail('intentional selected regression')\nAssertionError: intentional selected regression\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (failures=1)\n",
+    "execution": "Actual Python selector, real Git diff and real unittest process; no mocked subprocess outcome"
+  }
+}

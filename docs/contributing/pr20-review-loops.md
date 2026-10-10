@@ -53,8 +53,43 @@ the known-string membership check. This does not change valid records, schemas
 or scientific results. The new API regression fails before the fix and passes
 after it, alongside the existing positive, malformed-file and lock cases.
 
-## Remaining iteration
+## Iteration 3: integration and actual failure enforcement
 
-Iteration 3 will review the combined change against current main and run the
-complete required validation. This record is incomplete until that iteration
-and the final pushed-head checks are recorded.
+Re-reviewed `6ccb408560c78b137bcac2050185434f30559e1f` and integrated current main
+`cc667a5` in merge commit `205db50`, preserving both goal histories. No additional
+production-code defect was found in the revised validator, selector or lock
+path. The review checked the related [issue #18](https://github.com/alohays/allagma/issues/18)
+against the implementation rather than relying only on the existing green tests.
+
+One acceptance item needed stronger evidence: the original failure-propagation
+test simulated a failed process. The new disposable-checkout regression invokes
+the actual selector, Git diff and unittest process. An adapter-only change
+selects a deliberately failing `conformance.test_reference_assets` fixture;
+the selector exits 1 and retains the expected assertion in captured stderr.
+Checking that assertion rules out a misleading pass caused by an unrelated
+import or setup failure. The same enforcement test rejects the original main
+selector. It adds no failure to the real conformance suite.
+
+All 19 tooling tests pass. Fresh full acceptance passes **192 conformance tests
+and I1–I5**, with 24 confirmation replicates, 26 successful attempts, one
+deliberate failure, one interruption and a clean 521-reference toy audit. The
+catalog check passes all 23 entries. The integrated documentation builds 43
+pages with 2,851 local links/assets and passes all 18 desktop/mobile browser
+tests. The scope remains offline contract, process and artifact behavior;
+native model or scientific-quality qualification is not extended.
+
+## Final evidence and scope
+
+The [evidence manifest](evidence/pr20-review-loops/manifest.json) binds the
+before/after reproductions, mutation results, actual failing-test output,
+validation and preservation comparison. Detailed logs and the full acceptance
+workspace remain in ignored `work/pr20-review-loops/`. Current-head hosted
+results are available through [PR #20's checks](https://github.com/alohays/allagma/pull/20/checks),
+including the actual required selector command and separate portable-paper job.
+
+The fixes and evidence are committed in separate iteration increments and
+pushed to the existing PR branch. Existing studies, frozen evaluations,
+schemas, methods, adapters, media and project model settings are unchanged by
+this review pass. No model session, new scientific training, resource expansion,
+release or PR merge is part of this task. The earlier review findings and
+original implementation history remain intact.

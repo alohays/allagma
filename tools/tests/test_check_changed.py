@@ -2,7 +2,9 @@
 from contextlib import redirect_stdout
 import importlib.util
 from io import StringIO
+import os
 from pathlib import Path
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -15,6 +17,7 @@ SPEC = importlib.util.spec_from_file_location("check_changed", TOOLS / "check_ch
 selector = importlib.util.module_from_spec(SPEC)
 with patch.object(sys, "path", [str(TOOLS), *sys.path]):
     SPEC.loader.exec_module(selector)
+from allagma.bundles import source_inventory
 
 
 class ChangedChecks(unittest.TestCase):
@@ -174,6 +177,37 @@ class GitChangedChecks(unittest.TestCase):
                 suites, commands = self.select(base)
                 self.assertIn("conformance.test_reference_assets", suites)
                 self.assertIn(["discover", "-s", "tools/tests", "-v"], commands)
+
+    def test_actual_selected_regression_failure_reaches_the_gate_exit(self):
+        # Keep the real selector, catalog and Git path, but make the selected
+        # suite a tiny disposable regression with a recognizable failure.
+        for name in source_inventory(TOOLS.parent):
+            target = self.repo / name
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(TOOLS.parent / name, target)
+        for name in ("check_changed.py", "check_docs.py"):
+            shutil.copyfile(TOOLS / name, self.repo / "tools" / name)
+        suite = self.repo / "conformance"
+        suite.mkdir()
+        (suite / "__init__.py").write_text("")
+        (suite / "test_reference_assets.py").write_text(
+            "import unittest\n"
+            "class SelectedRegression(unittest.TestCase):\n"
+            "    def test_deliberate_failure(self):\n"
+            "        self.fail('intentional selected regression')\n")
+        base = self.commit("Fixture with a selected failing regression")
+        adapter = self.repo / "adapters/reference-assets/acquire.py"
+        with adapter.open("a") as stream:
+            stream.write("\n# Adapter-only selection fixture.\n")
+        self.commit("Change only the acquisition adapter")
+        result = self.real_run(
+            [sys.executable, "-B", str(self.repo / "tools/check_changed.py"), "--base", base],
+            cwd=self.repo, env={**os.environ, "PYTHONDONTWRITEBYTECODE": "1"},
+            capture_output=True, text=True, timeout=30)
+        self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
+        self.assertIn("conformance.test_reference_assets", result.stdout)
+        self.assertIn("intentional selected regression", result.stderr)
+        self.assertIn("FAILED (failures=1)", result.stderr)
 
 
 if __name__ == "__main__":
