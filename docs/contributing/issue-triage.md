@@ -75,7 +75,7 @@ artifact infrastructure were deferred: they add scope or owner/cost decisions
 without addressing these immediate contribution gaps. The four #14 findings
 were already repaired and merged, so they were not reopened.
 
-The [validation receipt](evidence/issue-triage/validation.json) records 410
+The [validation receipt](evidence/issue-triage/validation.json) records 412
 canonical links, 43 built pages with 2,848 internal links/assets, 18 passing
 browser tests and the desktop/light and mobile/dark review of the updated task
 page. The [manifest](evidence/issue-triage/manifest.json) binds the compact
