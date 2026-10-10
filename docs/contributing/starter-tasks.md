@@ -27,7 +27,7 @@ queue; read the [claim and review process](workflow.md) before starting.
    Requires local Linux/Python 3.13, not a native model or GPU.
 
 All four are unassigned. The order reflects the available implementation work;
-the small #19 walkthrough can proceed alongside the two repairs.
+the small #19 walkthrough can proceed alongside the two follow-ups.
 
 Comment on the issue with your scope and environment. A maintainer confirms the
 claim and assignment before overlapping implementation. No paid model access,

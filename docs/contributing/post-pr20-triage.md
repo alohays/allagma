@@ -7,7 +7,7 @@ checks pass. The earlier [three-iteration review](pr20-review-loops.md) records
 192 conformance tests, 19 tooling tests and I1–I5; those checks do not cover
 every possible input boundary.
 
-Exactly two new issues were opened. Both reproduce on this main revision, need
+Exactly two new issues were opened. Both have probes on this main revision, need
 no new model or scientific workload, and have bounded offline acceptance tests.
 
 | New issue | Observed problem | Immediate value |
@@ -31,6 +31,11 @@ and [diagnostic control](evidence/post-pr20-triage/bundle-doctor-control.json)
 record the original observations. These are maintainer-observed gaps, not
 invented external incidents or independent scientific review.
 
+#22 is a confirmed packaging defect. #23 is a portability enhancement: the
+current CLI documentation and original #2 acceptance cover source-checkout
+diagnostics. Its probe establishes the need for a separate standalone scope;
+it does not reopen or invalidate the completed source-checkout feature.
+
 ## Existing work and cleanup
 
 - #18 remains closed through #20. Its stale `status: owner review` label was
@@ -49,8 +54,9 @@ invented external incidents or independent scientific review.
   milestone. Successful code checks and current licensed media do not clear
   historical audio rights. The full-history decision is preserved.
 - The pinned overview #9 and milestone now show #19, #22, #23 and #7 as the
-  available work. Only #22 and #23 are new; both are unassigned with `bug`,
+  available work. Only #22 and #23 are new; both are unassigned with
   `help wanted` and `status: available`, without a `good first issue` label.
+  #22 has `bug`; #23 has `enhancement`.
 
 The roadmap, starter list and community/owner guidance are updated in the
 documentation cleanup branch. Historical review and triage records retain
@@ -60,8 +66,8 @@ issues are published; their implementation remains future contributor work.
 ## Selection and limits
 
 The existing #19 onboarding work retains first priority. The two new issues
-address a source-budget inconsistency and an exposed diagnostic false failure
-in features already on main. They do not duplicate the repaired #14 findings,
+address a source-budget inconsistency and a missing standalone diagnostic scope
+alongside features already on main. They do not duplicate the repaired #14 findings,
 the completed #18 selector work, or the existing #7 qualification task.
 
 No extra issue was added merely because there is no formal GitHub release.

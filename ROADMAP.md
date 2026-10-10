@@ -16,7 +16,7 @@ reproduced boundary issues, #22 and #23, while retaining the existing work:
 2. [#22: align paper-source size admission and extraction](https://github.com/alohays/allagma/issues/22).
    Include generated metadata in the limit and refuse oversized copies early.
 3. [#23: diagnose self-contained exported studies](https://github.com/alohays/allagma/issues/23).
-   Avoid a false missing-example failure from the bundled helper.
+   Add a standalone diagnostic scope without requiring source-only toy files.
 
 Existing work remains relevant: [#6](https://github.com/alohays/allagma/issues/6)
 is assigned to `codedbypraneetha`, and [#7](https://github.com/alohays/allagma/issues/7)
@@ -64,7 +64,7 @@ provides the community entry point.
 | Merged · confirmed CI gap | [#18: adapter regression selection](https://github.com/alohays/allagma/issues/18) | [#20](https://github.com/alohays/allagma/pull/20); actual failure propagation and real-Git boundaries verified |
 | Available · documentation enhancement | [#19: runnable toy-to-paper walkthrough](https://github.com/alohays/allagma/issues/19) | Unassigned; Python/research documentation; TeX only for optional compilation |
 | Available · source-budget defect | [#22: paper-source size admission](https://github.com/alohays/allagma/issues/22) | Unassigned; offline packaging fixtures and the existing optional TeX check |
-| Available · diagnostic defect | [#23: standalone bundle diagnostics](https://github.com/alohays/allagma/issues/23) | Unassigned; read-only CLI and exported-study coverage |
+| Available · portability enhancement | [#23: standalone bundle diagnostics](https://github.com/alohays/allagma/issues/23) | Unassigned; extend the source-checkout diagnostic scope to exported studies |
 | Blocked · maintainer decision | [#8: retained historical-audio rights](https://github.com/alohays/allagma/issues/8) | Outside the engineering milestone; public activation does not resolve rights |
 
 The three feature PRs were merged sequentially after final review and passing

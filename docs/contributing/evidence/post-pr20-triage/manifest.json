@@ -20,12 +20,16 @@
   "files": {
     "bundle-doctor-control.json": "583ddd2fa50ba30dea0dc2fcf948f64cc587ccf1dddeaab23ff9bb685daab4e1",
     "bundle-doctor-probe.json": "6e36c9c20ae4bcd8872b2e5383aa38d01197c0312f4ac224b182242f27c3afd6",
-    "issues-after.json": "ab80b038c45b9a87c457de86913e6c8dd9012e560be9d9486429c3c997c45dec",
+    "issues-after.json": "d9c71c31e1cd3c2f0b1a592c89749fb8bf79b3f7eaf43cf71c61d2e5338c2b4b",
     "issues-before.json": "4835082dc405e7681394cea3bfed4aa45ee65d60397e3b014961dbdfbe5597b1",
     "main-ci.json": "1a4a1a183c5f0ddc0456ce10dfd057db2d48a08347ede62620ac4149d37db2e5",
     "paper-limit-probe.json": "432b9c75b5b6b66c094b70543cb583c259a46237c71a23dec525e9936d4a05ea",
     "preservation.json": "015f8dfc90af732580bd50ac2ebbf8b595094a2c4a88bf7570831a263241c198",
     "probe_boundaries.py": "579979a6323e4c9ab3125b588b44f118e49a34ae8a247f1ba956daedd5db2ae6",
     "runnable-probe.json": "486af002c6faba705cb21f3b647650bb855cd58e32a72fbb8988a60d101c8f76"
+  },
+  "classification": {
+    "22": "reproduced packaging defect",
+    "23": "standalone diagnostic portability enhancement; documented source-checkout behavior works"
   }
 }
