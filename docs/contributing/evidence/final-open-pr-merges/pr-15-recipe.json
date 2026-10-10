@@ -1,0 +1,23 @@
+{
+  "literal_shell_exit": 0,
+  "shell_stdout": "Exit code: 2\n{\n  \"record_type\": \"ContextRecord\",\n  \"status\": \"pass\"\n}\n",
+  "shell_stderr": "allagma: Duplicate JSON key: context_id\n",
+  "blocks_executed": 3,
+  "spaced_temporary_path": true,
+  "source_fixture_unchanged": true,
+  "checks": {
+    "duplicate.json": {
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "allagma: Duplicate JSON key: context_id\n",
+      "unchanged": true
+    },
+    "context.json": {
+      "exit_code": 0,
+      "stdout": "{\n  \"record_type\": \"ContextRecord\",\n  \"status\": \"pass\"\n}\n",
+      "stderr": "",
+      "unchanged": true
+    }
+  },
+  "rejected_copy_retained": true
+}

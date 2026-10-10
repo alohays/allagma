@@ -1,0 +1,184 @@
+{
+  "format": "allagma-final-pr-audit-local-v1",
+  "feature_head": "8ec5e5e18fc71e9e93815ede183f31c80a3cc3c9",
+  "integrated_head": "13cf79e1a8d68e8f2733ea8bb448d67ddf9dae59",
+  "status": "pass",
+  "runtime_source_revision": "sha256:bd4aae1be759b3802d7aa075a38839004fd6f8f4bc24c158890da38bc5fbbcd1",
+  "acceptance": {
+    "tests": 184,
+    "milestones": {
+      "I1": {
+        "evidence": [
+          "generic/walkthrough.json",
+          "codex/walkthrough.json",
+          "claude-code/walkthrough.json"
+        ],
+        "host_scope": "Real generic execution; native entrypoint registration/routing contract fixtures",
+        "native_hooks": false,
+        "native_subagents": false,
+        "same_numerical_output": true,
+        "shared_bundle": "b-c31d823a8e20bc75419d9c19",
+        "status": "pass"
+      },
+      "I2": {
+        "comparisons": [
+          "comparison/decision.json",
+          "comparison-rejected/decision.json",
+          "comparison-unevaluated/decision.json"
+        ],
+        "replacements": [
+          {
+            "case": "context-replacement",
+            "evidence": "context-replacement/walkthrough.json",
+            "unchanged_shared_modules": 16
+          },
+          {
+            "case": "reviewer-replacement",
+            "evidence": "reviewer-replacement/walkthrough.json",
+            "unchanged_shared_modules": 16
+          },
+          {
+            "case": "recipe-replacement",
+            "evidence": "recipe-replacement/walkthrough.json",
+            "unchanged_shared_modules": 16
+          }
+        ],
+        "status": "pass"
+      },
+      "I3": {
+        "checks": [
+          "one-module authoring and targeted check",
+          "capability/contract guards",
+          "offline contributor workflow"
+        ],
+        "evidence": [
+          "conformance.json",
+          "conformance.log"
+        ],
+        "status": "pass"
+      },
+      "I4": {
+        "checks": [
+          "central/profile isolation",
+          "explicit update stages",
+          "generated-file conflicts",
+          "contract mismatch",
+          "coexistence and retirement",
+          "old campaign resume",
+          "complete rollback",
+          "separate scaffold migration and inverse"
+        ],
+        "evidence": [
+          "versioning/scenario.json"
+        ],
+        "status": "pass"
+      },
+      "I5": {
+        "attempts": {
+          "failed": 1,
+          "interrupted": 1,
+          "succeeded": 26
+        },
+        "audit": {
+          "analysis_repetitions": 1,
+          "checked_references": 521,
+          "findings": [],
+          "limitations": [
+            "No independent scientific peer review or real-model quality evaluation."
+          ],
+          "review": {
+            "media_type": "application/json",
+            "path": "campaigns/toy-v1/analyses/a001/reviews/review-001/record.json",
+            "retention": "retain-with-study",
+            "sha256": "67206719e472ae63450c0883749c211379a57b26f0f6ccce4a387ccde686ef6f"
+          },
+          "stale_claims": [],
+          "verdict": "pass"
+        },
+        "confirmation_replicates": 24,
+        "evidence": [
+          "generic/campaigns/toy-v1/analyses/a001/raw-manifest.json",
+          "generic/campaigns/toy-v1/analyses/a001/record.json",
+          "generic/campaigns/toy-v1/analyses/a001/paper/claims.json",
+          "generic/campaigns/toy-v1/analyses/a001/paper/manuscript.md",
+          "generic/campaigns/toy-v1/latest-audit.json",
+          "partial-study/campaigns/limited/latest-audit.json"
+        ],
+        "scientific_summary": {
+          "bias": 0.25,
+          "biased_mse": 0.08040364583333333,
+          "ci95_normal": [
+            0.039851041785294965,
+            0.09035729154803837
+          ],
+          "counterexample_seeds": [
+            104,
+            108,
+            118,
+            121
+          ],
+          "difference": 0.06510416666666667,
+          "leave_one_seed_out": {
+            "maximum_difference": 0.07269021739130435,
+            "minimum_difference": 0.06182065217391304,
+            "positive_count": 24,
+            "replicates": 24
+          },
+          "mean_mse": 0.015299479166666666,
+          "method": "paired differences across seeds; normal approximation, 1.96 standard errors",
+          "replicates": 24,
+          "samples_per_replicate": 64,
+          "standard_error": 0.012884247388454952
+        },
+        "status": "pass"
+      }
+    },
+    "started_at": "2026-10-10T03:52:54.940156+00:00",
+    "completed_at": "2026-10-10T03:54:36.284882+00:00"
+  },
+  "focused_tests": 55,
+  "compact_source_tests": 7,
+  "real_tex_collision_tests": 1,
+  "documentation": {
+    "canonical_links": 384,
+    "pages": 43,
+    "internal_links_and_assets": 2835,
+    "browser_tests": 18
+  },
+  "paper_delivery": {
+    "archive_bytes": 120206,
+    "archive_sha256": "d1d63141f243632fca1656b7d2a88e72aa53f81fa2ef60a10c64784e5e0c2559",
+    "format": "allagma-paper-delivery-v1",
+    "initial_build": {
+      "compiler_version": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2024)",
+      "network": "denied",
+      "pdf_sha256": "7aea0bb5cac8bd0a108a977aaf48c70cdd23cbbde5a08b97b4eed9c34d0c98ce",
+      "reference_cache": "not accessible"
+    },
+    "packaged_builder_verified": true,
+    "paper": "paper.pdf",
+    "paper_sha256": "7aea0bb5cac8bd0a108a977aaf48c70cdd23cbbde5a08b97b4eed9c34d0c98ce",
+    "pdf_bytes_reproduced": true,
+    "source_archive": "paper-source.tar.gz",
+    "status": "pass",
+    "submission": "not-submitted",
+    "unpacked_build": {
+      "compiler_version": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2024)",
+      "network": "denied",
+      "pdf_sha256": "7aea0bb5cac8bd0a108a977aaf48c70cdd23cbbde5a08b97b4eed9c34d0c98ce",
+      "reference_cache": "not accessible"
+    },
+    "unpacked_entrypoint": "python3 anc/build.py",
+    "visual_inspection": "required separately"
+  },
+  "paper_retained_match": {
+    "paper.pdf": {
+      "sha256": "7aea0bb5cac8bd0a108a977aaf48c70cdd23cbbde5a08b97b4eed9c34d0c98ce",
+      "matches_retained": true
+    },
+    "paper-source.tar.gz": {
+      "sha256": "d1d63141f243632fca1656b7d2a88e72aa53f81fa2ef60a10c64784e5e0c2559",
+      "matches_retained": true
+    }
+  }
+}

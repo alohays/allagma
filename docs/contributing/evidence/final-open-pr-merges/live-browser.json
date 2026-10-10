@@ -1,0 +1,64 @@
+{
+  "url": "https://alohays.github.io/allagma/",
+  "source_commit": "f235f1868eec7f6cc9518e5d59053a236b876358",
+  "status": "pass",
+  "stats": {
+    "startTime": "2026-10-10T04:03:34.083Z",
+    "duration": 20959.696,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "cases": [
+    {
+      "title": "production search finds the tutorial and navigates under the base path",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "flagship video decodes, plays, seeks and loads English captions",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "every canonical page renders inside the viewport with no script errors",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "production search finds the tutorial and navigates under the base path",
+      "project": "mobile",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "flagship video decodes, plays, seeks and loads English captions",
+      "project": "mobile",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "every canonical page renders inside the viewport with no script errors",
+      "project": "mobile",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    }
+  ],
+  "log_sha256": "c09e19a7667a652a2b87154e3f49c19bb5b4a250d85a2ecc17c4b85ea89a7915"
+}
