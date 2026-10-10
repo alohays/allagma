@@ -6,14 +6,17 @@ describes priorities, not promised delivery dates or existing community demand.
 
 ## Immediate work on public main
 
-The latest feature merges add reference research and optional portable papers.
-The [10 October triage](docs/contributing/issue-triage.md) selected two new issues:
+Main now includes [#20](https://github.com/alohays/allagma/pull/20); the required
+adapter-regression checks and issue #18 are complete. The
+[follow-up triage](docs/contributing/post-pr20-triage.md) adds exactly two
+reproduced boundary issues, #22 and #23, while retaining the existing work:
 
-1. [#18: run adapter regressions in the required PR check](https://github.com/alohays/allagma/issues/18).
-   Review the proposed repair in [PR #20](https://github.com/alohays/allagma/pull/20).
-   Changes confined to the new adapters must select their offline regression suites.
-2. [#19: make the toy-to-paper workflow runnable](https://github.com/alohays/allagma/issues/19).
+1. [#19: make the toy-to-paper workflow runnable](https://github.com/alohays/allagma/issues/19).
    Teach contributors to turn actual toy results into a new, evidence-bound paper revision.
+2. [#22: align paper-source size admission and extraction](https://github.com/alohays/allagma/issues/22).
+   Include generated metadata in the limit and refuse oversized copies early.
+3. [#23: diagnose self-contained exported studies](https://github.com/alohays/allagma/issues/23).
+   Add a standalone diagnostic scope without requiring source-only toy files.
 
 Existing work remains relevant: [#6](https://github.com/alohays/allagma/issues/6)
 is assigned to `codedbypraneetha`, and [#7](https://github.com/alohays/allagma/issues/7)
@@ -58,8 +61,10 @@ provides the community entry point.
 | Merged · documentation enhancement | [#5: validator recovery](https://github.com/alohays/allagma/issues/5) | [#15](https://github.com/alohays/allagma/pull/15); verified recovery recipe available on main |
 | In progress · accessibility | [#6: accessible figure description](https://github.com/alohays/allagma/issues/6) | Claim confirmed and assigned to `codedbypraneetha`; coordinate before overlapping work |
 | Available · qualification | [#7: Linux/Python 3.13 tutorial](https://github.com/alohays/allagma/issues/7) | Unassigned; help wanted, local CPU only |
-| Owner review · confirmed CI gap | [#18: adapter regression selection](https://github.com/alohays/allagma/issues/18) | Assigned to `alohays`; proposed repair in [#20](https://github.com/alohays/allagma/pull/20), opened during triage |
+| Merged · confirmed CI gap | [#18: adapter regression selection](https://github.com/alohays/allagma/issues/18) | [#20](https://github.com/alohays/allagma/pull/20); actual failure propagation and real-Git boundaries verified |
 | Available · documentation enhancement | [#19: runnable toy-to-paper walkthrough](https://github.com/alohays/allagma/issues/19) | Unassigned; Python/research documentation; TeX only for optional compilation |
+| Available · source-budget defect | [#22: paper-source size admission](https://github.com/alohays/allagma/issues/22) | Unassigned; offline packaging fixtures and the existing optional TeX check |
+| Available · portability enhancement | [#23: standalone bundle diagnostics](https://github.com/alohays/allagma/issues/23) | Unassigned; extend the source-checkout diagnostic scope to exported studies |
 | Blocked · maintainer decision | [#8: retained historical-audio rights](https://github.com/alohays/allagma/issues/8) | Outside the engineering milestone; public activation does not resolve rights |
 
 The three feature PRs were merged sequentially after final review and passing

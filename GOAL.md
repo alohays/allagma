@@ -448,3 +448,19 @@ documentation, preserve existing Git history and frozen evidence, and retain
 the GUI model choice and native-usage limits. The
 [iteration record](docs/contributing/pr20-review-loops.md) tracks the initial
 review, subsequent feedback, changes and verification.
+
+## Selective issue refresh after PR #20 — 10 October 2026
+
+Check the current issue status, tidy outdated guidance and open only two or
+three well-considered issues that are essential immediate next steps for the
+project's current open-source stage. Base decisions on the latest main,
+current claims, merged work and concrete evidence; do not duplicate existing
+tasks. This follow-up starts from `174e200`, which merged PR #20 and closed #18.
+
+Publish the selected issues and reconcile the overview, milestone and repository
+guidance. Preserve the confirmed #6 claim, historical rights decision, frozen
+evidence, full Git history, English documentation and GUI model choice. Keep
+new issue implementation, native-model work, budget expansion and release
+publication outside this triage. Follow the standing coherent-commit and push
+instruction. The [post-merge triage](docs/contributing/post-pr20-triage.md)
+records the chosen work, cleanup and verification.

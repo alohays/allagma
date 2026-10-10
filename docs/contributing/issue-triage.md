@@ -1,5 +1,9 @@
 # Issue triage — 10 October 2026
 
+This is the earlier triage snapshot. PR #20 has since merged and #18 is closed.
+Use the [post-merge triage](post-pr20-triage.md) for the current queue; the
+original reproductions, decisions and dated receipts below remain preserved.
+
 Main was inspected at `f235f1868eec7f6cc9518e5d59053a236b876358`, including the
 reference/paper feature and its four repaired review findings. The subsequent
 documentation audit merge `14c2fba9c54b636a34c0e8da10155c1f66bef6c8` was included

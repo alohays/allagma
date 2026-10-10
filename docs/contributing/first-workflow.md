@@ -5,7 +5,8 @@ the initial contributor setup. The subsequent [PR review](pr-review.md) fixed
 three findings, made #10/#11/#12 regular and ready, and merged #1 with owner
 authorization. The later [merge records](final-open-pr-merges.md) include
 #10–#12 and #14–#16; those features are now on main. Use the
-[current triage](issue-triage.md) for issue status and claims. The original
+[current triage](post-pr20-triage.md) for issue status and claims, including the
+completed #20 merge and closed #18. The original
 evidence receipts and the dated setup narrative below remain unchanged.
 
 The contributor backlog and draft PRs are published, the public site and community
