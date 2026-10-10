@@ -13,12 +13,21 @@ queue; read the [claim and review process](workflow.md) before starting.
    actual toy values and claims to a new paper revision, with explicit coverage
    and scoped reviews. Python/research-documentation familiarity is useful;
    TeX is only needed for the separate optional build.
-2. [#7: Qualify Linux/Python 3.13 onboarding](https://github.com/alohays/allagma/issues/7).
+2. [#22: Align paper-source size admission with extraction](https://github.com/alohays/allagma/issues/22).
+   Start with `adapters/arxiv/package.py` and the paper conformance fixtures.
+   Count generated source files and bound copies before accepting an archive.
+   The boundary tests need no TeX, model or scientific rerun.
+3. [#23: Diagnose exported studies accurately](https://github.com/alohays/allagma/issues/23).
+   Start with `allagma/diagnostics.py` and the bundled CLI. A healthy standalone
+   study should not fail because source-only toy examples are absent. Preserve
+   read-only behavior and meaningful missing-resource, lock and ownership checks.
+4. [#7: Qualify Linux/Python 3.13 onboarding](https://github.com/alohays/allagma/issues/7).
    Start with `docs/guides/first-study.md` and `conformance/`. Record the literal
    clean-checkout tutorial with a distinct interpreter and paths with spaces.
    Requires local Linux/Python 3.13, not a native model or GPU.
 
-Both are unassigned. The order reflects the available implementation work.
+All four are unassigned. The order reflects the available implementation work;
+the small #19 walkthrough can proceed alongside the two repairs.
 
 Comment on the issue with your scope and environment. A maintainer confirms the
 claim and assignment before overlapping implementation. No paid model access,
@@ -26,17 +35,9 @@ GPU, response-time guarantee or release deadline is involved. Submit concise
 sanitized evidence with its exact tested commit. A documentation change needs a
 rendered review and link check, not a test that merely repeats its prose.
 
-The [triage record](issue-triage.md) explains why only #18 and #19 were added.
+The [latest triage](post-pr20-triage.md) explains why only #22 and #23 were added.
 These available tasks carry `help wanted`; their prerequisites make them more
 involved than a good first issue. Claimed #6 has no newcomer-discovery labels.
-
-## Awaiting owner review
-
-[#18: Run adapter regressions in the required check](https://github.com/alohays/allagma/issues/18)
-is assigned to `alohays`. [PR #20](https://github.com/alohays/allagma/pull/20)
-appeared during triage and proposes the repair. Review its acceptance criteria
-before closure; do not begin a duplicate implementation. This issue has no
-`help wanted` label while it awaits review.
 
 ## Claimed work
 
@@ -47,6 +48,12 @@ coordinate with the assignee and preserve the figure and results. The stated
 Windows/Node environment is suitable for this documentation task.
 
 ## Merged contributor improvements
+
+[#18: required adapter regressions](https://github.com/alohays/allagma/issues/18)
+is complete through [#20](https://github.com/alohays/allagma/pull/20). The
+[three-iteration review](pr20-review-loops.md) records 192 conformance tests,
+19 tooling tests and the actual selected-failure proof. No duplicate repair or
+owner-review wait remains for that issue.
 
 The initial agent-assisted improvements are merged and available on main:
 [#10: adapted toy/report repair](https://github.com/alohays/allagma/pull/10),
