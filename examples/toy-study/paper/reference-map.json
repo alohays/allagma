@@ -1,0 +1,36 @@
+{
+  "format": "allagma-reference-map-v1",
+  "question": "Does adding 0.25 increase the sample mean squared error on the default toy distribution?",
+  "mode": "provided-only",
+  "coverage": {
+    "queries": [],
+    "limitations": [
+      "Only the supplied toy protocol, derivation, analysis and claim ledger were read. No external literature search was performed.",
+      "This known-answer workflow example does not establish novelty or comprehensive literature coverage."
+    ],
+    "categories": {
+      "primary": {
+        "status": "limited",
+        "reason": "Only the study-owned algebraic derivation; no external primary papers."
+      },
+      "implementation": {
+        "status": "limited",
+        "reason": "Only the frozen toy programs; no survey of implementations."
+      },
+      "baseline": {
+        "status": "limited",
+        "reason": "Only the two estimators fixed in the toy protocol."
+      },
+      "competing": {
+        "status": "limited",
+        "reason": "No external competing findings were searched."
+      },
+      "gaps": {
+        "status": "limited",
+        "reason": "No claim about gaps or novelty follows from this provided-only reading."
+      }
+    }
+  },
+  "records": [],
+  "decisions": []
+}
