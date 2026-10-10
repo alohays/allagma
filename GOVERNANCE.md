@@ -5,6 +5,13 @@ maker. `.github/CODEOWNERS` assigns review ownership; module manifests identify
 the owner of each supported responsibility. Delegation can be recorded as the
 contributor base grows. No review response time is promised.
 
+[Repository rules](.github/rulesets/README.md) require PRs and passing CI on the
+default branch, prevent force pushes and deletion, and prevent updates or
+deletion of release tags. They have no standing administrator or bot bypass.
+The single-maintainer configuration does not require approval votes on the
+maintainer's own PRs. Maintainer review and merge decisions remain required;
+consider one required approval when a second active maintainer can provide it.
+
 Discuss disagreements with concrete examples, compatibility effects and
 evaluation scope. The maintainer records the decision and rationale in the
 issue, proposal or ImprovementRecord. Rejected proposals remain available as

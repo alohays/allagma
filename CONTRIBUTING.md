@@ -36,6 +36,12 @@ campaign is not required for an ordinary contribution. Claims about a model or
 host require evidence for that claim; fixture success must not be described as
 real-host or scientific-quality qualification.
 
+Changes to `main` require a pull request, a branch current with `main`, passing
+`targeted` and `build-and-test` checks, and resolved review conversations. The
+current single-maintainer rules require zero approval votes; external changes
+still receive maintainer review. See [repository rules](.github/rulesets/README.md)
+for the configuration and the distinction between PR checks and release acceptance.
+
 Use an issue or a direct pull request. Small fixes and documentation changes
 need no prior proposal. A broad change to a public contract, ownership rule or
 default behavior starts with a short proposal describing the problem,
