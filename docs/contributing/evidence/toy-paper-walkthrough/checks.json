@@ -26,9 +26,18 @@
     {
       "command": "python3 tools/check_docs.py",
       "exit_code": 0,
-      "checked_links": 443,
+      "checked_links": 447,
       "errors": [],
       "scope": "Final walkthrough and evidence documentation"
+    },
+    {
+      "command": "npm run build",
+      "cwd": "site",
+      "exit_code": 0,
+      "pages": 44,
+      "local_links": 2975,
+      "scope": "Final guide/evidence/issue-status documentation; helper and manuscript source unchanged",
+      "log_sha256": "36fd82726ffdd287d7cc510b79c1d43af3642026b1f1512df9f3cd4429a43d16"
     }
   ],
   "ci": {

@@ -8,17 +8,13 @@ queue; read the [claim and review process](workflow.md) before starting.
 
 ## Available work
 
-1. [#19: Document a runnable toy-to-paper workflow](https://github.com/alohays/allagma/issues/19).
-   Start with `examples/toy-study/` and the first-study and paper guides. Bind
-   actual toy values and claims to a new paper revision, with explicit coverage
-   and scoped reviews. Python/research-documentation familiarity is useful;
-   TeX is only needed for the separate optional build.
-2. [#7: Qualify Linux/Python 3.13 onboarding](https://github.com/alohays/allagma/issues/7).
+1. [#7: Qualify Linux/Python 3.13 onboarding](https://github.com/alohays/allagma/issues/7).
    Start with `docs/guides/first-study.md` and `conformance/`. Record the literal
    clean-checkout tutorial with a distinct interpreter and paths with spaces.
    Requires local Linux/Python 3.13, not a native model or GPU.
 
-Both are unassigned. The order reflects the available implementation work.
+This qualification remains unassigned. Check the pinned overview for the latest
+queue; its separate post-merge refresh is tracked in PR #24.
 
 Comment on the issue with your scope and environment. A maintainer confirms the
 claim and assignment before overlapping implementation. No paid model access,
@@ -31,6 +27,13 @@ These available tasks carry `help wanted`; their prerequisites make them more
 involved than a good first issue. Claimed #6 has no newcomer-discovery labels.
 
 ## Awaiting owner review
+
+[#19: runnable toy-to-paper workflow](https://github.com/alohays/allagma/issues/19)
+is implemented in [draft PR #25](https://github.com/alohays/allagma/pull/25),
+assigned to `alohays`. The [walkthrough](../guides/toy-to-paper.md) and
+[acceptance record](toy-paper-walkthrough.md) cover actual retained values,
+explicit attribution, review freshness, preservation and the optional TeX
+rebuild. It remains open pending owner review/merge; do not duplicate the work.
 
 [#18: Run adapter regressions in the required check](https://github.com/alohays/allagma/issues/18)
 is assigned to `alohays`. [PR #20](https://github.com/alohays/allagma/pull/20)

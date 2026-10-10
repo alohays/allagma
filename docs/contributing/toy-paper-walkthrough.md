@@ -83,5 +83,8 @@ the exact commands and current documentation counts.
 No external bibliography, online acquisition, native model session, scientific
 budget expansion, GPU, arXiv submission or release is part of this change. This
 macOS receipt does not close #7's Linux/Python 3.13 qualification or #23's
-standalone diagnostics enhancement. The new draft PR links #19 for closure
-after review and merge; opening the draft does not itself close the issue.
+standalone diagnostics enhancement. [Draft PR #25](https://github.com/alohays/allagma/pull/25)
+links #19 for closure after review and merge; opening the draft does not itself
+close the issue. This PR updates only #19's roadmap/starter status; #24 carries
+the broader queue cleanup, so those status lines need to stay current when the
+two documentation changes are integrated.
