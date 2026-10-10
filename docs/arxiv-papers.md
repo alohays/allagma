@@ -4,6 +4,11 @@ Allagma's normal manuscript/report remains the default. A study can explicitly
 request an additional English paper, compiled PDF and portable source archive.
 The feature does not submit the paper to arXiv.
 
+For literal commands and editable inputs, start with the
+[offline toy-to-paper walkthrough](guides/toy-to-paper.md). It uses actual toy
+results, explicit anonymous attribution, honest provided-only coverage and
+retained scientific/wording reviews, including a stale-review recovery example.
+
 New studies contain `paper.json` with `output: report`. To request a paper while
 preparing a native study, pass `research prepare --paper-config REQUEST.json`.
 The request includes `format: allagma-paper-output-v1`, `output: arxiv` and

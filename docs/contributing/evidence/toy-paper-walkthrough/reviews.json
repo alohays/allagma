@@ -1,0 +1,70 @@
+{
+  "executor": "Codex assistant implementing issue #19; agent-assisted self-review",
+  "scope": "Actual default-toy scientific/prose reading and changed-section continuation; no independent peer review. Test-fixture judgments are separate.",
+  "records": {
+    "reviews/r1/scientific.json": {
+      "format": "allagma-paper-review-v1",
+      "kind": "scientific",
+      "observations": [
+        "Read the frozen derivation and recomputed the paired mean and normal interval from the raw samples using 2*b*mean+b*b.",
+        "Checked 24 confirmation seeds, pilot and unsuccessful-attempt exclusions, and counterexamples 104, 108, 118 and 121.",
+        "The text limits the positive average result to this synthetic problem and retains the approximate-interval and self-review limits."
+      ],
+      "reviewed_at": "2026-10-10T07:43:04.403784+00:00",
+      "reviewed_content_sha256": "4c4a6656bfb2234bbfa443b040ec59a29a66597e767448f85b1acb19e1aaa1e8",
+      "reviewer": "Walkthrough executor (self-review; no independent reviewer)",
+      "scope": "Default toy derivation, retained raw/summary/claim links and all seven sections; no external literature or model-quality assessment.",
+      "verdict": "accept"
+    },
+    "reviews/r1/humanizer.json": {
+      "format": "allagma-paper-review-v1",
+      "kind": "humanizer",
+      "observations": [
+        "Read every section for clear subjects, concrete comparisons and unsupported novelty or agent-quality language.",
+        "Checked that numerical macros, the counterexample and uncertainty qualifications retain the scientific meaning."
+      ],
+      "reviewed_at": "2026-10-10T07:43:04.404142+00:00",
+      "reviewed_content_sha256": "4c4a6656bfb2234bbfa443b040ec59a29a66597e767448f85b1acb19e1aaa1e8",
+      "reviewer": "Walkthrough executor (self-review; no independent reviewer)",
+      "scope": "Clarity and claim-preserving wording review of all seven sections; no independent scientific endorsement.",
+      "verdict": "accept"
+    },
+    "reviews/r2/scientific.json": {
+      "format": "allagma-paper-review-v1",
+      "kind": "scientific",
+      "observations": [
+        "Read the frozen derivation and recomputed the paired mean and normal interval from the raw samples using 2*b*mean+b*b.",
+        "Checked 24 confirmation seeds, pilot and unsuccessful-attempt exclusions, and counterexamples 104, 108, 118 and 121.",
+        "The text limits the positive average result to this synthetic problem and retains the approximate-interval and self-review limits.",
+        "Read discussion-r2 and compared the new configuration: the added sentence describes reuse, no new experiment or empirical conclusion; original evidence and other sections are unchanged."
+      ],
+      "reviewed_at": "2026-10-10T07:43:04.644420+00:00",
+      "reviewed_content_sha256": "eedec30208d0d39090c00b0c9b96a37f4204cdf2487d2e50863568ac0782d34b",
+      "reviewer": "Walkthrough executor (self-review; no independent reviewer)",
+      "scope": "Default toy derivation, retained raw/summary/claim links and all seven sections; no external literature or model-quality assessment.",
+      "supersedes": {
+        "path": "publications/toy-paper-r1/reviews/r1/scientific.json",
+        "sha256": "2933b31bfb394a5d7ac3ae694b06a103da60bd1d791b1749fcc18b35df822a83"
+      },
+      "verdict": "accept"
+    },
+    "reviews/r2/humanizer.json": {
+      "format": "allagma-paper-review-v1",
+      "kind": "humanizer",
+      "observations": [
+        "Read every section for clear subjects, concrete comparisons and unsupported novelty or agent-quality language.",
+        "Checked that numerical macros, the counterexample and uncertainty qualifications retain the scientific meaning.",
+        "Reread the added sentence in context; it preserves the distinction between publication revision and experiment."
+      ],
+      "reviewed_at": "2026-10-10T07:43:04.644875+00:00",
+      "reviewed_content_sha256": "eedec30208d0d39090c00b0c9b96a37f4204cdf2487d2e50863568ac0782d34b",
+      "reviewer": "Walkthrough executor (self-review; no independent reviewer)",
+      "scope": "Clarity and claim-preserving wording review of all seven sections; no independent scientific endorsement.",
+      "supersedes": {
+        "path": "publications/toy-paper-r1/reviews/r1/humanizer.json",
+        "sha256": "553502a2f621755313127b7f16eda62d635d9aaa066c3f6635db8231558bd855"
+      },
+      "verdict": "accept"
+    }
+  }
+}

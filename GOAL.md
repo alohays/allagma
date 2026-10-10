@@ -448,3 +448,16 @@ documentation, preserve existing Git history and frozen evidence, and retain
 the GUI model choice and native-usage limits. The
 [iteration record](docs/contributing/pr20-review-loops.md) tracks the initial
 review, subsequent feedback, changes and verification.
+
+## Implement the highest-priority open issue — 10 October 2026
+
+Choose the highest-priority actionable open issue, implement its full acceptance
+scope, verify the result, and open a draft pull request. The current contributor
+overview ranks #19, the runnable offline toy-to-paper walkthrough, first. It is
+unclaimed and independent of the documentation-only queue refresh in #24.
+
+Work from current main. Preserve existing campaign and publication evidence;
+keep science in the study-owned example, with explicit attribution, honest
+reference coverage and scoped reviews. Integrity checks do not approve science.
+Follow the standing coherent-commit and push instruction. Link the complete
+implementation with `Closes #19` in the draft PR and leave it draft for review.

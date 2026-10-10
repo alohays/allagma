@@ -108,6 +108,11 @@ different things and are intentionally distinct. The state separates phase
 
 ## Continue from here
 
+Turn these retained results into an additional paper with the
+[runnable toy-to-paper walkthrough](toy-to-paper.md). It covers explicit
+attribution, provided-only references, scoped reviews and stale-review recovery.
+The base walkthrough stays offline; TeX compilation is a separate optional step.
+
 To change the offline question without a model session, follow
 [prepare an adapted toy study](../../examples/toy-study/README.md#prepare-an-adapted-study-before-running-it).
 It stops before execution so you can inspect the changed bias, source lineage
