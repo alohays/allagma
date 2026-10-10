@@ -16,12 +16,17 @@ endorsement or maintainer response guarantee is claimed.
 
 The [pinned contributor overview](https://github.com/alohays/allagma/issues/9)
 and [focused milestone](https://github.com/alohays/allagma/milestone/1) connect
-seven task issues. [#5](https://github.com/alohays/allagma/issues/5) is complete
+the completed work and immediate queue. [#5](https://github.com/alohays/allagma/issues/5) is complete
 through [#15](https://github.com/alohays/allagma/pull/15).
-[#6](https://github.com/alohays/allagma/issues/6) has a contributor claim awaiting
-maintainer confirmation and remains unassigned; read that claim before starting
-overlapping work. [#7](https://github.com/alohays/allagma/issues/7) remains available
-and unassigned. Both remaining tasks need no paid model or GPU.
+[#6](https://github.com/alohays/allagma/issues/6) is assigned to `codedbypraneetha`
+after confirming the existing claim. [#7](https://github.com/alohays/allagma/issues/7)
+remains available. The [latest triage](../contributing/issue-triage.md) added only
+[#18: required adapter regressions](https://github.com/alohays/allagma/issues/18)
+and [#19: runnable toy-to-paper onboarding](https://github.com/alohays/allagma/issues/19).
+PR #20 appeared during triage with a proposed #18 repair, so #18 now awaits owner
+review and is assigned to `alohays`. The two available tasks (#19 and #7) carry
+`help wanted`; #18 and claimed #6 have no newcomer-discovery labels. None needs
+a paid model or GPU.
 
 PRs [#10](https://github.com/alohays/allagma/pull/10),
 [#11](https://github.com/alohays/allagma/pull/11) and

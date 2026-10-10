@@ -3,7 +3,9 @@
 The owner requested that [PR #14](https://github.com/alohays/allagma/pull/14)
 be made ready for merge. The review of `72e88c3` reported four reproduced
 findings. Each is fixed in a separate commit with a regression that fails on
-the affected behavior. The PR remains unmerged.
+the affected behavior. PR #14 was subsequently merged on 10 October as
+`f235f1868eec7f6cc9518e5d59053a236b876358`; the [final audit](final-open-pr-merges.md)
+records that merge. The repair evidence below describes its earlier review phase.
 
 | Finding | Repair | Evidence |
 | --- | --- | --- |
@@ -48,7 +50,7 @@ links/assets, all 18 desktop/mobile browser tests and seven compact-source
 boundary tests. No frozen science, evaluation, contract, media or project model
 configuration changed.
 
-The PR checks are authoritative for the latest pushed commit. This repair work
+The PR checks recorded the reviewed branch state. This repair work itself
 does not merge, deploy, submit to arXiv, acquire new reference assets, start a
 native model session or change adopted resource limits. Review judgments remain
 agent-assisted maintainer checks, not independent scientific peer review.

@@ -17,7 +17,12 @@ actions. The earlier decisions and audit receipts remain preserved in Git.
 The [contributor delivery ledger](../contributing/first-workflow.md) records
 verification and exact current objects. Public documentation describes main's
 available behavior. Diagnostics, evidence-inspection and study-preparation
-features remain proposed in draft PRs, not silently included in main.
+features are available on main through merged PRs #10–#12. Reference research,
+optional portable papers and duplicate-key recovery are also merged through
+#14 and #15; #16 installed the documented repository rules. The
+[final merge audit](../contributing/final-open-pr-merges.md) records their
+validation. The [current issue triage](../contributing/issue-triage.md) identifies
+the remaining contributor work.
 
 ## Unresolved historical-audio rights
 
@@ -36,17 +41,15 @@ and [dated final audit](final-audit.md) for the source evidence.
 
 ## Review and release decisions
 
-Review the independent draft changes in this order:
-[PR #10](https://github.com/alohays/allagma/pull/10) (confirmed toy reporting
- defect and preparation), [PR #11](https://github.com/alohays/allagma/pull/11)
-(prerequisite diagnostics), then [PR #12](https://github.com/alohays/allagma/pull/12)
-(read-only evidence inspection). They are validated but unmerged. The owner
-decides whether/when to merge and include them in a release. Review
-[Dependabot #1](https://github.com/alohays/allagma/pull/1#issuecomment-6065003786)
-separately; the contributor changes do not duplicate its dependency updates.
+The owner authorized the completed feature and dependency merges. Issues
+#2–#5 are closed as completed; their original reproductions and review evidence
+remain retained. They no longer await a merge decision. Follow the
+[pinned overview](https://github.com/alohays/allagma/issues/9) for current claims,
+available tasks and the maintainer-owned rights issue.
 
 The software remains **0.3.0rc2**, not an asserted stable 0.3.0 release. No new
-release, tag, PR merge or external outreach is authorized by this activation.
+release, tag or external outreach is authorized by the earlier activation or
+the issue-triage task. Future PRs follow the normal maintainer review process.
 Release publication needs a separate version decision, current acceptance and
 matching immutable source assets. The release-preparation workflow only creates
 reviewable assets. Keep large scientific packages opt-in with their hashes and

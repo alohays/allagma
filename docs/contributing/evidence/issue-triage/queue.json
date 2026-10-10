@@ -1,0 +1,185 @@
+{
+  "recorded_at": "2026-10-10T04:16:32.463897+00:00",
+  "main_reviewed": "14c2fba9c54b636a34c0e8da10155c1f66bef6c8",
+  "feature_baseline": "f235f1868eec7f6cc9518e5d59053a236b876358",
+  "new_issues": [
+    18,
+    19
+  ],
+  "new_issue_count": 2,
+  "existing_issues_reopened_or_closed": [],
+  "claim_confirmation": "https://github.com/alohays/allagma/issues/6#issuecomment-6093638371",
+  "milestone": {
+    "number": 1,
+    "title": "First contributor workflow",
+    "description": "Immediate contributor work on public main: complete figure accessibility and Linux/Python 3.13 qualification, make the required adapter regression checks reliable, and document a runnable offline toy-to-paper workflow. Earlier diagnostics, adaptation, evidence inspection and JSON recovery tasks are merged. No promised response time or release date. Historical-audio rights remain a separate maintainer decision.",
+    "state": "open",
+    "open_issues": 4,
+    "closed_issues": 7,
+    "html_url": "https://github.com/alohays/allagma/milestone/1"
+  },
+  "issues": [
+    {
+      "number": 19,
+      "title": "Add a runnable offline walkthrough from toy results to an evidence-bound paper",
+      "state": "OPEN",
+      "stateReason": "",
+      "url": "https://github.com/alohays/allagma/issues/19",
+      "updatedAt": "2026-10-10T04:10:43Z",
+      "labels": [
+        "documentation",
+        "enhancement",
+        "help wanted",
+        "status: available"
+      ],
+      "assignees": [],
+      "milestone": 1,
+      "body_sha256": "a8b56c9b427e75979f16fb8569f94c50ab2ed5c00b46faca755907cb04a212d4"
+    },
+    {
+      "number": 18,
+      "title": "Run the new adapter regressions in the required PR check",
+      "state": "OPEN",
+      "stateReason": "",
+      "url": "https://github.com/alohays/allagma/issues/18",
+      "updatedAt": "2026-10-10T04:10:41Z",
+      "labels": [
+        "bug",
+        "help wanted",
+        "status: available"
+      ],
+      "assignees": [],
+      "milestone": 1,
+      "body_sha256": "2e627e8628b91f296a20960bc4f457a2e9672717c69b376a034652ed0dad9690"
+    },
+    {
+      "number": 9,
+      "title": "Start here: current contributor tasks and maintainer decisions",
+      "state": "OPEN",
+      "stateReason": "",
+      "url": "https://github.com/alohays/allagma/issues/9",
+      "updatedAt": "2026-10-10T04:15:40Z",
+      "labels": [
+        "documentation"
+      ],
+      "assignees": [],
+      "milestone": null,
+      "body_sha256": "1dd597e0ec89aca9e7107b36cdac6e7c798d5d86d45cce749948aa14d3d15426"
+    },
+    {
+      "number": 8,
+      "title": "Maintainer decision: resolve retained historical-audio rights",
+      "state": "OPEN",
+      "stateReason": "",
+      "url": "https://github.com/alohays/allagma/issues/8",
+      "updatedAt": "2026-10-10T04:12:02Z",
+      "labels": [
+        "status: blocked",
+        "maintainer-owned"
+      ],
+      "assignees": [
+        "alohays"
+      ],
+      "milestone": null,
+      "body_sha256": "95d581f461785b804ab847ccc463e7e43909390f46029cae46efadce8a1396be"
+    },
+    {
+      "number": 7,
+      "title": "Qualify the offline first-study tutorial on Linux with Python 3.13",
+      "state": "OPEN",
+      "stateReason": "",
+      "url": "https://github.com/alohays/allagma/issues/7",
+      "updatedAt": "2026-10-10T04:12:00Z",
+      "labels": [
+        "help wanted",
+        "status: available",
+        "qualification"
+      ],
+      "assignees": [],
+      "milestone": 1,
+      "body_sha256": "a39ca699faa2d65e265e1779e55c77e8c6e0af9598b6c313232a5b715f0fbfaa"
+    },
+    {
+      "number": 6,
+      "title": "Add a complete accessible reading of the EMA result figure",
+      "state": "OPEN",
+      "stateReason": "",
+      "url": "https://github.com/alohays/allagma/issues/6",
+      "updatedAt": "2026-10-10T04:12:03Z",
+      "labels": [
+        "accessibility",
+        "documentation",
+        "enhancement",
+        "status: in progress"
+      ],
+      "assignees": [
+        "codedbypraneetha"
+      ],
+      "milestone": 1,
+      "body_sha256": "c76c2fb5803f673e196ea540d466fe8f8b0b054094cd696aef85fbdccded1851"
+    },
+    {
+      "number": 5,
+      "title": "Document recovery from a duplicate-key JSON validation error",
+      "state": "CLOSED",
+      "stateReason": "COMPLETED",
+      "url": "https://github.com/alohays/allagma/issues/5",
+      "updatedAt": "2026-10-10T04:11:56Z",
+      "labels": [
+        "documentation",
+        "enhancement"
+      ],
+      "assignees": [],
+      "milestone": 1,
+      "body_sha256": "fa2fcf47a82fd79fd22014826ef934f5b0fc84a84ac37b5b663858a35eee0900"
+    },
+    {
+      "number": 4,
+      "title": "Inspect transitive evidence references without executing or modifying a study",
+      "state": "CLOSED",
+      "stateReason": "COMPLETED",
+      "url": "https://github.com/alohays/allagma/issues/4",
+      "updatedAt": "2026-10-10T04:11:55Z",
+      "labels": [
+        "enhancement"
+      ],
+      "assignees": [
+        "alohays"
+      ],
+      "milestone": 1,
+      "body_sha256": "a34e13e9f6d047436115291f29b42952704219df0f861c5cf7989284fe9f1f11"
+    },
+    {
+      "number": 3,
+      "title": "Fix stale bias claims when adapting the toy and add a preparation workflow",
+      "state": "CLOSED",
+      "stateReason": "COMPLETED",
+      "url": "https://github.com/alohays/allagma/issues/3",
+      "updatedAt": "2026-10-10T04:11:53Z",
+      "labels": [
+        "bug"
+      ],
+      "assignees": [
+        "alohays"
+      ],
+      "milestone": 1,
+      "body_sha256": "47bbbb5356bf4827af412245aae0b650caae40c14669362bb08f18fe2f84c340"
+    },
+    {
+      "number": 2,
+      "title": "Add read-only prerequisite diagnostics for offline and native workflows",
+      "state": "CLOSED",
+      "stateReason": "COMPLETED",
+      "url": "https://github.com/alohays/allagma/issues/2",
+      "updatedAt": "2026-10-10T04:11:52Z",
+      "labels": [
+        "enhancement"
+      ],
+      "assignees": [
+        "alohays"
+      ],
+      "milestone": 1,
+      "body_sha256": "5142bdde4fc7d9175965353c7785d000526bccac1762f507d075b5fc2d19594e"
+    }
+  ]
+}

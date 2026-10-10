@@ -1,0 +1,49 @@
+{
+  "scope": "Final documentation verification after moving issue #18 to review of the concurrently opened PR #20. Original validation.json is preserved.",
+  "canonical_links": {
+    "checked_links": 413,
+    "errors": []
+  },
+  "production_build": {
+    "pages": 43,
+    "local_links_and_assets": 2851,
+    "errors": []
+  },
+  "browser_tests": {
+    "passed": 18,
+    "failed": 0,
+    "skipped": 0,
+    "flaky": 0
+  },
+  "visual_inspection": [
+    {
+      "viewport": [
+        1440,
+        1000
+      ],
+      "theme": "light",
+      "page": "contributing/starter-tasks",
+      "overflow": false,
+      "screenshot_sha256": "8ef714ad738a550959ac4cd88f3da16e4e6900638332644ae505324ca7eb912c",
+      "inspection": "Available tasks and confirmed claim are readable; no clipping or overlap."
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "theme": "dark",
+      "page": "contributing/starter-tasks",
+      "overflow": false,
+      "screenshot_sha256": "e7f6e15f032261498009d300081c7f9fe1e83b06f7441a3563a71238e273450c",
+      "inspection": "Available tasks and confirmed claim are readable; no clipping or overlap."
+    }
+  ],
+  "logs": {
+    "doc-links-follow-up.log": "f03809b922b135ab226193274eed8431ddc8459304b17864ed939541bc7fc5b2",
+    "site-build-follow-up.log": "4122321106dea3eda68b57e0819c9db5182a2717a379059bde8f552ff7d10e33",
+    "browser-follow-up.log": "005596e7267ddba9ab5ce3aeaf00f5fd636dbcb08882409b6f3ae2c68d526b23"
+  },
+  "pinned_overview": 9,
+  "runtime_and_ci_probe_sources_unchanged_between_feature_and_documentation_merge": true
+}

@@ -80,6 +80,9 @@ if ready, and authorized making the three feature PRs regular after fixes.
 That [review and validation](pr-review.md) is complete. On 10 October the owner
 authorized a final review and sequential merges. #10, #11 and #12 are now
 merged, with [successful CI after each merge](merged-prs.md); #1 was merged earlier.
+The [subsequent final audit](final-open-pr-merges.md) also records the completed
+#14–#16 merges. Issue #5 is closed through #15. Follow the
+[current triage](issue-triage.md) for available work and confirmed claims.
 After an owner-approved merge, close the linked task, remove stale status labels,
 and update the overview. If the implementation is declined, record the reason
 without deleting its tests or discussion. Dependency PRs, including
