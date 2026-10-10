@@ -1,0 +1,40 @@
+{
+  "format": "allagma-final-open-pr-merge-audit-v1",
+  "recorded_at": "2026-10-10T04:05:07.782587+00:00",
+  "initial_open_prs": [
+    14,
+    15,
+    16
+  ],
+  "merge_order": [
+    16,
+    15,
+    14
+  ],
+  "merged_main": "f235f1868eec7f6cc9518e5d59053a236b876358",
+  "status": "pass",
+  "prior_ci_completed_before_next_merge": true,
+  "remaining_initial_prs": [],
+  "scope": "Maintainer audit and merge verification, not independent scientific peer review or expanded native-host qualification.",
+  "files": {
+    "issue-5-after.json": "4d2442338a15c56e580010f1df108e0a0171e18b948d730c460e940525c567ac",
+    "live-browser.json": "7f737ffe7f803f702e52042b991b2662e3cfdf396b46a8958be02e827d3fafce",
+    "live-build.json": "996b0ddf40fda69fdb50efde3dd06758a4cafaa884c98c947ce509b4355b3818",
+    "local-logs.json": "a82e1764becbdc95469cd7eef434008a76027a519bb85a0948211a4be52ec66c",
+    "local-validation.json": "c42f1378eca3e51bd4ae3032ba941c05ffd6d210948d161ccebfcc5af6521495",
+    "pr-14-ci.json": "fcd5b0e784bcb602d404f650a95f0cec7c7f22dd47c8ccc36a151caee84db7ec",
+    "pr-14-merge.json": "758283d587ff2f4c20817fa783f9340d480164cdee35c62bf13df8d7c3dc0951",
+    "pr-14-pdf-visual.json": "afd7977726efd0ab07f64ba1cebbeefd089e5c6f13664ac316cc415878fb593a",
+    "pr-14-review-threads.json": "c84c20fd8a6659db8f641100768a2b5307d1da2a761c336958cf450815b3038f",
+    "pr-14-science.json": "23aea51d2a509d67213427d9e901858ed94089a3f26a3c973b4fb384820e1392",
+    "pr-15-ci.json": "d8b6a9c04b3c27083f7ca629bf9808b6c6601d9f6024a4b7472f2a2306cc6278",
+    "pr-15-merge.json": "11007f146e464d562892699bdf2b3c7b97cf37bc45716df09faebaa50b957295",
+    "pr-15-recipe.json": "89f169b3c85555e68dd80af7daf053b07aeafc122b77f37db21b53ebd57a5139",
+    "pr-16-ci.json": "5957a7106c96c8d6943d6cf4feb3a0534a3218d8e521c4be654a08f666cae1c0",
+    "pr-16-live-main-protection.json": "dc989db718071cbf0502981e59c2b5ce05921f41393de2719a79321c98200337",
+    "pr-16-live-release-tag-protection.json": "82dc9356d85dca0877ddeb770ed6e11872f6631055854adedfc7524dc4149cfe",
+    "pr-16-merge.json": "459a1c6477ca9821e613f8765eab162271ccf8343a5576f54c996b9f9c22a1b7",
+    "premerge-checks.json": "93c162da677860b6a4d6a14bd23e7d5c018dae93a6bc39f659a8b5bdc9f2b07d",
+    "preservation.json": "135a09fcd301da8a17acc4041b426a4ea4fe4cbbe4b5d92ffe93af9fd087d40c"
+  }
+}

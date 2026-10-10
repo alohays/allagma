@@ -1,0 +1,37 @@
+{
+  "id": 24803952,
+  "name": "release-tag-protection",
+  "target": "tag",
+  "source_type": "Repository",
+  "source": "alohays/allagma",
+  "enforcement": "active",
+  "conditions": {
+    "ref_name": {
+      "exclude": [],
+      "include": [
+        "refs/tags/v*"
+      ]
+    }
+  },
+  "rules": [
+    {
+      "type": "update"
+    },
+    {
+      "type": "deletion"
+    }
+  ],
+  "node_id": "RRS_lACqUmVwb3NpdG9yec5T2jsVzgF6enA",
+  "created_at": "2026-10-10T02:23:18.781+09:00",
+  "updated_at": "2026-10-10T02:23:18.814+09:00",
+  "bypass_actors": [],
+  "current_user_can_bypass": "never",
+  "_links": {
+    "self": {
+      "href": "https://api.github.com/repos/alohays/allagma/rulesets/24803952"
+    },
+    "html": {
+      "href": "https://github.com/alohays/allagma/rules/24803952"
+    }
+  }
+}

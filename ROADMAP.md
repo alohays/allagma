@@ -35,7 +35,8 @@ provides the community entry point.
 | Merged · confirmed defect | [#3: adapted toy reports hard-code bias](https://github.com/alohays/allagma/issues/3) | [#10](https://github.com/alohays/allagma/pull/10); available on main |
 | Merged · enhancement | [#2: read-only prerequisite diagnostics](https://github.com/alohays/allagma/issues/2) | [#11](https://github.com/alohays/allagma/pull/11); available on main |
 | Merged · enhancement | [#4: read-only evidence inspection](https://github.com/alohays/allagma/issues/4) | [#12](https://github.com/alohays/allagma/pull/12); available on main |
-| Available · documentation enhancement | [#5: validator recovery](https://github.com/alohays/allagma/issues/5), [#6: accessible figure description](https://github.com/alohays/allagma/issues/6) | Unassigned; good first issue and help wanted |
+| Merged · documentation enhancement | [#5: validator recovery](https://github.com/alohays/allagma/issues/5) | [#15](https://github.com/alohays/allagma/pull/15); verified recovery recipe available on main |
+| Claim requested · documentation enhancement | [#6: accessible figure description](https://github.com/alohays/allagma/issues/6) | Unassigned; an existing contributor claim awaits maintainer confirmation |
 | Available · qualification | [#7: Linux/Python 3.13 tutorial](https://github.com/alohays/allagma/issues/7) | Unassigned; help wanted, local CPU only |
 | Blocked · maintainer decision | [#8: retained historical-audio rights](https://github.com/alohays/allagma/issues/8) | Outside the engineering milestone; public activation does not resolve rights |
 
@@ -45,3 +46,11 @@ was reviewed and merged separately. The [review record](docs/contributing/pr-rev
 and [merge record](docs/contributing/merged-prs.md) link findings, fixes and
 validation. Follow the [triage and review process](docs/contributing/workflow.md)
 for transitions from available to in progress, blocked or owner review.
+
+The subsequent [final audit](docs/contributing/final-open-pr-merges.md) records
+the sequential merges of [#16](https://github.com/alohays/allagma/pull/16)
+(repository rules), [#15](https://github.com/alohays/allagma/pull/15)
+(duplicate-key recovery), and [#14](https://github.com/alohays/allagma/pull/14)
+(critical reference research and optional portable papers). These capabilities
+are available on main; native-host coverage and scientific scope retain their
+documented limits.

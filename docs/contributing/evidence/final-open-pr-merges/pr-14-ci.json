@@ -1,0 +1,90 @@
+[
+  {
+    "conclusion": "success",
+    "databaseId": 38022458484,
+    "headSha": "f235f1868eec7f6cc9518e5d59053a236b876358",
+    "name": "Public documentation deployment",
+    "status": "completed",
+    "url": "https://github.com/alohays/allagma/actions/runs/38022458484",
+    "jobs": [
+      {
+        "name": "build",
+        "status": "completed",
+        "conclusion": "success",
+        "startedAt": "2026-10-10T03:59:08Z",
+        "completedAt": "2026-10-10T03:59:34Z",
+        "url": "https://github.com/alohays/allagma/actions/runs/38022458484/job/114126187912"
+      },
+      {
+        "name": "deploy",
+        "status": "completed",
+        "conclusion": "success",
+        "startedAt": "2026-10-10T03:59:37Z",
+        "completedAt": "2026-10-10T03:59:47Z",
+        "url": "https://github.com/alohays/allagma/actions/runs/38022458484/job/114126265985"
+      }
+    ]
+  },
+  {
+    "conclusion": "success",
+    "databaseId": 38022458478,
+    "headSha": "f235f1868eec7f6cc9518e5d59053a236b876358",
+    "name": "Documentation",
+    "status": "completed",
+    "url": "https://github.com/alohays/allagma/actions/runs/38022458478",
+    "jobs": [
+      {
+        "name": "build-and-test",
+        "status": "completed",
+        "conclusion": "success",
+        "startedAt": "2026-10-10T03:59:07Z",
+        "completedAt": "2026-10-10T04:00:23Z",
+        "url": "https://github.com/alohays/allagma/actions/runs/38022458478/job/114126188123"
+      }
+    ]
+  },
+  {
+    "conclusion": "success",
+    "databaseId": 38022458471,
+    "headSha": "f235f1868eec7f6cc9518e5d59053a236b876358",
+    "name": "Paper output",
+    "status": "completed",
+    "url": "https://github.com/alohays/allagma/actions/runs/38022458471",
+    "jobs": [
+      {
+        "name": "portable-paper",
+        "status": "completed",
+        "conclusion": "success",
+        "startedAt": "2026-10-10T03:59:08Z",
+        "completedAt": "2026-10-10T04:00:34Z",
+        "url": "https://github.com/alohays/allagma/actions/runs/38022458471/job/114126187755"
+      }
+    ]
+  },
+  {
+    "conclusion": "success",
+    "databaseId": 38022458464,
+    "headSha": "f235f1868eec7f6cc9518e5d59053a236b876358",
+    "name": "Conformance",
+    "status": "completed",
+    "url": "https://github.com/alohays/allagma/actions/runs/38022458464",
+    "jobs": [
+      {
+        "name": "targeted",
+        "status": "completed",
+        "conclusion": "success",
+        "startedAt": "2026-10-10T03:59:07Z",
+        "completedAt": "2026-10-10T04:00:48Z",
+        "url": "https://github.com/alohays/allagma/actions/runs/38022458464/job/114126187682"
+      },
+      {
+        "name": "acceptance",
+        "status": "completed",
+        "conclusion": "success",
+        "startedAt": "2026-10-10T03:59:07Z",
+        "completedAt": "2026-10-10T04:02:18Z",
+        "url": "https://github.com/alohays/allagma/actions/runs/38022458464/job/114126187802"
+      }
+    ]
+  }
+]
