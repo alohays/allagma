@@ -5,6 +5,7 @@ from io import StringIO
 from pathlib import Path
 import subprocess
 import sys
+import tempfile
 import unittest
 from unittest.mock import patch
 
@@ -22,7 +23,8 @@ class ChangedChecks(unittest.TestCase):
 
         def run(command, **kwargs):
             if command[:3] == ["git", "diff", "--name-only"]:
-                return subprocess.CompletedProcess(command, diff_status, "\n".join(paths), "")
+                delimiter = "\0" if "-z" in command else "\n"
+                return subprocess.CompletedProcess(command, diff_status, delimiter.join(paths), "")
             self.assertEqual(command[:3], [sys.executable, "-m", "unittest"])
             commands.append(command[3:])
             return subprocess.CompletedProcess(command, suite_status)
@@ -98,6 +100,80 @@ class ChangedChecks(unittest.TestCase):
         status, _, commands = self.selected(["allagma/contracts.py"], docs_errors=["Broken link"])
         self.assertEqual(status, 1)
         self.assertFalse(commands)
+
+
+class GitChangedChecks(unittest.TestCase):
+    """Use real Git output; only the expensive selected test commands are replaced."""
+
+    def setUp(self):
+        temporary = tempfile.TemporaryDirectory(prefix="allagma-selector-git-")
+        self.addCleanup(temporary.cleanup)
+        self.repo = Path(temporary.name)
+        self.real_run = subprocess.run
+        self.git("init", "-q")
+        for name, value in (("user.name", "Allagma test"), ("user.email", "test@example.invalid"),
+                            ("commit.gpgSign", "false"), ("core.hooksPath", str(self.repo / "empty-hooks")),
+                            ("core.quotePath", "true"), ("diff.renames", "true")):
+            self.git("config", name, value)
+        self.commit("Empty base", allow_empty=True)
+
+    def git(self, *args):
+        return self.real_run(["git", *args], cwd=self.repo, check=True,
+                             capture_output=True, text=True, timeout=15).stdout.strip()
+
+    def commit(self, message, *, allow_empty=False):
+        self.git("add", "-A")
+        self.git("commit", "-qm", message, *(["--allow-empty"] if allow_empty else []))
+        return self.git("rev-parse", "HEAD")
+
+    def select(self, base):
+        commands = []
+
+        def run(command, **kwargs):
+            if command[:2] == ["git", "diff"]:
+                return self.real_run(command, **{**kwargs, "cwd": self.repo, "timeout": 15})
+            self.assertEqual(command[:3], [sys.executable, "-m", "unittest"])
+            commands.append(command[3:])
+            return subprocess.CompletedProcess(command, 0)
+
+        with patch.object(sys, "argv", ["check_changed.py", "--base=" + base]), \
+             patch.object(selector.subprocess, "run", side_effect=run), \
+             patch.object(selector, "check_docs", return_value={"checked_links": 1, "errors": []}), \
+             redirect_stdout(StringIO()):
+            status = selector.main()
+        self.assertEqual(status, 0)
+        suites = {item for command in commands for item in command if item.startswith("conformance.")}
+        return suites, commands
+
+    def test_quoted_git_paths_still_select_adapter_checks(self):
+        for name in ("caf\u00e9.py", "tab\tname.py", "line\nbreak.py", 'quote"name.py'):
+            with self.subTest(name=name):
+                base = self.git("rev-parse", "HEAD")
+                path = self.repo / "adapters/reference-assets" / name
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text("Fixture source.\n")
+                self.commit("Add a path Git quotes")
+                suites, _ = self.select(base)
+                self.assertIn("conformance.test_reference_assets", suites)
+
+    def test_renaming_runtime_source_into_docs_keeps_removal_checks(self):
+        source = self.repo / "adapters/reference-assets/acquire.py"
+        source.parent.mkdir(parents=True)
+        source.write_text("Unchanged fixture source.\n")
+        base = self.commit("Add runtime source")
+        target = self.repo / "docs/acquire.py"
+        target.parent.mkdir()
+        source.rename(target)
+        self.commit("Move source into documentation")
+        suites, _ = self.select(base)
+        self.assertIn("conformance.test_reference_assets", suites)
+
+    def test_option_like_base_values_use_the_unknown_revision_fallback(self):
+        for base in ("--quiet", "--stat"):
+            with self.subTest(base=base):
+                suites, commands = self.select(base)
+                self.assertIn("conformance.test_reference_assets", suites)
+                self.assertIn(["discover", "-s", "tools/tests", "-v"], commands)
 
 
 if __name__ == "__main__":

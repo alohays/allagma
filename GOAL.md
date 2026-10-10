@@ -417,3 +417,18 @@ process behavior matters. Preserve prior evidence and model settings. Commit
 coherent increments, push to `origin`, and leave the new PR unmerged for review.
 The [coverage audit](docs/contributing/essential-test-coverage.md) records the
 selected gaps, failing controls, fixes and validation scope.
+
+## Three review and implementation iterations — 10 October 2026
+
+Review each currently open PR, then run the review/implementation loop three
+times, re-evaluating the feedback and applying necessary changes in each
+iteration. The initial inventory contains only #20, concerning record admission,
+study mutation locks and CI test selection. Inspect current heads and feedback,
+reproduce findings, make coherent fixes, and retain the evidence from all three
+iterations. A clean review does not require an invented code change.
+
+Follow the standing commit-and-push instruction, maintain English technical
+documentation, preserve existing Git history and frozen evidence, and retain
+the GUI model choice and native-usage limits. The
+[iteration record](docs/contributing/pr20-review-loops.md) tracks the initial
+review, subsequent feedback, changes and verification.

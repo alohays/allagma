@@ -43,6 +43,9 @@ their evaluation fixtures also run the comparison tests. Documentation-only
 changes keep link checks. An unreadable Git base selects all offline tests,
 including tooling checks. Test this selection with
 `python3 -m unittest discover -s tools/tests -v` when changing CI or tooling.
+Git paths are read without quoting, and renames retain checks for removed code.
+Base arguments are revisions, so an invalid option-like value also takes the
+full-check fallback. Real Git fixtures cover these boundaries.
 
 Changes to `main` require a pull request, a branch current with `main`, passing
 `targeted` and `build-and-test` checks, and resolved review conversations. The

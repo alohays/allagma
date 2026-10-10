@@ -15,11 +15,16 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--base", default="HEAD~1")
     args = parser.parse_args()
-    diff = subprocess.run(["git", "diff", "--name-only", args.base or "HEAD~1", "HEAD"], cwd=ROOT, capture_output=True, text=True)
+    # NUL separators preserve paths Git would otherwise quote. Treat renames as
+    # removal/addition so moving code into docs still checks its old consumers.
+    # A base is always a revision, never an option or an implicit pathspec.
+    diff = subprocess.run(["git", "diff", "--name-only", "-z", "--no-renames",
+                           "--end-of-options", args.base or "HEAD~1", "HEAD", "--"],
+                          cwd=ROOT, capture_output=True, text=True)
     if diff.returncode:
         changed = ["allagma/", "tools/"]
     else:
-        changed = diff.stdout.splitlines()
+        changed = [name for name in diff.stdout.split("\0") if name]
     catalog = Catalog(ROOT)
     modules = [key for key, path in catalog.registry["modules"].items() if any(name.startswith(path + "/") for name in changed)]
     for module in modules:
