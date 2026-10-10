@@ -6,16 +6,41 @@ They do not imply external demand or prior contributors. The
 [pinned overview](https://github.com/alohays/allagma/issues/9) is the current work
 queue; read the [claim and review process](workflow.md) before starting.
 
-| Task and current state | Starting files | Finish line and prerequisites |
-| --- | --- | --- |
-| [#6: Describe the EMA figure accessibly](https://github.com/alohays/allagma/issues/6) — claim requested; maintainer confirmation pending | `studies/ema-schedule/RESULTS.md` and its figure | Describe axes, panels, paired seeds and uncertainty without changing numerical claims. Read the existing claim before starting overlapping work. No archive restoration or training; optional Node toolchain for site rendering. |
-| [#7: Qualify Linux/Python 3.13 onboarding](https://github.com/alohays/allagma/issues/7) — available and unassigned; help wanted | `docs/guides/first-study.md`, `conformance/` | Record a literal clean-checkout offline tutorial with a distinct interpreter and paths with spaces. Requires local Linux/Python 3.13, not a native model or GPU. |
+## Available work
+
+1. [#18: Run adapter regressions in the required check](https://github.com/alohays/allagma/issues/18).
+   Start with `tools/check_changed.py`, `tools/tests/` and the adapter conformance
+   suites. Adapter-only diffs must run the relevant offline tests and propagate
+   failure. Python/CI familiarity is useful; no TeX or account is required.
+2. [#19: Document a runnable toy-to-paper workflow](https://github.com/alohays/allagma/issues/19).
+   Start with `examples/toy-study/` and the first-study and paper guides. Bind
+   actual toy values and claims to a new paper revision, with explicit coverage
+   and scoped reviews. Python/research-documentation familiarity is useful;
+   TeX is only needed for the separate optional build.
+3. [#7: Qualify Linux/Python 3.13 onboarding](https://github.com/alohays/allagma/issues/7).
+   Start with `docs/guides/first-study.md` and `conformance/`. Record the literal
+   clean-checkout tutorial with a distinct interpreter and paths with spaces.
+   Requires local Linux/Python 3.13, not a native model or GPU.
+
+All three are unassigned. The order reflects the immediate priorities.
 
 Comment on the issue with your scope and environment. A maintainer confirms the
 claim and assignment before overlapping implementation. No paid model access,
 GPU, response-time guarantee or release deadline is involved. Submit concise
 sanitized evidence with its exact tested commit. A documentation change needs a
 rendered review and link check, not a test that merely repeats its prose.
+
+The [triage record](issue-triage.md) explains why only #18 and #19 were added.
+These available tasks carry `help wanted`; their prerequisites make them more
+involved than a good first issue. Claimed #6 has no newcomer-discovery labels.
+
+## Claimed work
+
+[#6: Describe the EMA figure accessibly](https://github.com/alohays/allagma/issues/6)
+is in progress, assigned to `codedbypraneetha`. Start with
+`studies/ema-schedule/RESULTS.md` and its figure. The existing claim is confirmed;
+coordinate with the assignee and preserve the figure and results. The stated
+Windows/Node environment is suitable for this documentation task.
 
 ## Merged contributor improvements
 

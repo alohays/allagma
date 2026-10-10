@@ -4,14 +4,19 @@ The feature branch is `codex/reference-research-arxiv`. The full objective and
 owner decisions are retained in [GOAL.md](../GOAL.md). Development began at
 `694f13c1b923ff8e8a58442dd203baf613f76205`; the owner's subsequent main changes
 through `5f519e63e7fc50a2e7da887481444dd9b649eab8` were merged without altering
-other contributor branches. The PR remains unmerged and deployment waits for merge.
+other contributor branches. [PR #14](https://github.com/alohays/allagma/pull/14)
+was merged on 10 October as `f235f1868eec7f6cc9518e5d59053a236b876358`.
+The feature is available on main and Pages; the
+[final audit](contributing/final-open-pr-merges.md) records the merge and deployment.
+The implementation checkpoints below preserve their original scope and receipts.
 
 The [completed-study demonstration](../studies/ema-schedule/publications/reference-r2/README.md)
 links the eight-entry reference index, paper, portable source archive, exact
 scientific inputs, reviews and validation receipts. The configured demonstration
 author is `allagma`, explicitly selected by the owner. Other studies configure
 their own attribution. No native model session, new scientific training campaign,
-arXiv submission, formal release or feature deployment was performed.
+arXiv submission or formal release was performed. Deployment followed the
+subsequently authorized merge.
 
 ## Requirement-by-requirement evidence
 
@@ -39,7 +44,7 @@ arXiv submission, formal release or feature deployment was performed.
 | Preserve historical science/history | [Preservation audit](../studies/ema-schedule/publications/reference-r2/evidence/preservation.json); no old study, frozen evaluation, media or project-model-config changes | Pass |
 | Real completed-study integration | r07 selected outputs match the frozen package index; 114 statistical summaries recomputed from retained seed measurements; no new training | Pass |
 | Public documentation | Reference and paper guides, workspace/native/CLI guidance, study page and index; 43 pages, 2,828 checked links, 18 desktop/mobile browser tests | Pass |
-| Commit/push/review handoff | Coherent commits, pushed feature branch and current-main merge; [regular, unmerged PR #14](https://github.com/alohays/allagma/pull/14) provides authoritative current-head CI | See PR checks |
+| Commit/push/review handoff | Coherent commits, pushed feature branch, repairs and [merged PR #14](https://github.com/alohays/allagma/pull/14); [final audit](contributing/final-open-pr-merges.md) records exact merge CI | Pass |
 
 ## Resource and acquisition record
 
@@ -92,11 +97,11 @@ existing frozen qualification and model-usage limits remain unchanged.
 
 ## Review handoff
 
-[PR #14](https://github.com/alohays/allagma/pull/14) is open as a regular review-ready PR against `main` and remains unmerged. The PR checks are the authoritative status for its latest head; the retained receipts bind earlier implementation checkpoints without a recursive evidence-only commit cycle. The final audit corrected terminal state reporting for failed or abandoned protected-input copies and tightened the minimum-free-space regression. Partial inputs and their reserved bytes remain retained.
+At this implementation checkpoint, [PR #14](https://github.com/alohays/allagma/pull/14) was a regular review-ready PR awaiting merge. Its checks recorded the branch state; the retained receipts bind earlier implementation checkpoints without a recursive evidence-only commit cycle. The final audit corrected terminal state reporting for failed or abandoned protected-input copies and tightened the minimum-free-space regression. Partial inputs and their reserved bytes remain retained.
 
 The final boundary audit also verifies a complete provided-only paper with no external citations and an explicit References section. [Cache metadata evidence](../studies/ema-schedule/publications/reference-r2/evidence/cache-metadata-budget.json) reproduces and corrects an overrun caused by extraction manifests and indexes. Atomic metadata writes now obey cache/free-space admission. The final complete acceptance receipt is [retained separately](../studies/ema-schedule/publications/reference-r2/evidence/acceptance-complete.json); earlier checkpoints remain intact.
 
-The owner subsequently merged contributor PRs #10, #11 and #12 on main. Their changes are integrated through `5f519e6`, including both new diagnostic/evidence commands and the study-adaptation helper. Combined validation passes 172 tests, I1-I5 and 18 browser checks. [The combined acceptance](../studies/ema-schedule/publications/reference-r2/evidence/acceptance-integrated.json) and [preservation record](../studies/ema-schedule/publications/reference-r2/evidence/preservation-integrated.json) bind this integration. No contributor branch was edited and PR #14 is still unmerged.
+The owner subsequently merged contributor PRs #10, #11 and #12 on main. Their changes are integrated through `5f519e6`, including both new diagnostic/evidence commands and the study-adaptation helper. Combined validation passes 172 tests, I1-I5 and 18 browser checks. [The combined acceptance](../studies/ema-schedule/publications/reference-r2/evidence/acceptance-integrated.json) and [preservation record](../studies/ema-schedule/publications/reference-r2/evidence/preservation-integrated.json) bind this integration. No contributor branch was edited during that integration; PR #14 was still awaiting its later authorized merge.
 
 ## Review repairs - 10 October 2026
 

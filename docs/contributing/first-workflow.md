@@ -3,7 +3,10 @@
 Historical delivery record: the draft states and original heads below describe
 the initial contributor setup. The subsequent [PR review](pr-review.md) fixed
 three findings, made #10/#11/#12 regular and ready, and merged #1 with owner
-authorization. The original evidence receipts remain unchanged.
+authorization. The later [merge records](final-open-pr-merges.md) include
+#10–#12 and #14–#16; those features are now on main. Use the
+[current triage](issue-triage.md) for issue status and claims. The original
+evidence receipts and the dated setup narrative below remain unchanged.
 
 The contributor backlog and draft PRs are published, the public site and community
 entry points are operational, and anonymous onboarding/live checks pass. All
@@ -12,7 +15,7 @@ The source baseline is `5c9a7651d5f627da8e7ed5992fe869cedb43e8f5`.
 The [goal](../../GOAL.md#first-contributor-workflow--9-october-2026) defines the
 complete outcome; actual GitHub objects and pushed-head checks are required.
 
-## Current state
+## State at initial public activation
 
 The owner resolved the original visibility conflict on 9 October 2026: public
 visibility is intentional and must remain. The [updated goal](../../GOAL.md#public-contributor-workflow-and-documentation-activation--9-october-2026)
