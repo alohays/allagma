@@ -31,6 +31,7 @@ jobs:
             /evals/context-retention/
             /studies/*/RESULTS.md
             /studies/ema-schedule/figures/
+            /studies/ema-schedule/publications/reference-r2/
       - uses: actions/setup-node@v7
         with:
           node-version: '22'

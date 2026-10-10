@@ -104,6 +104,13 @@ from a brief, materials and finite resource profile. The agent develops the
 scientific code and report through Allagma's methods. Preparation is offline;
 explicit native execution consumes your account's model usage.
 
+New studies include a [critical reference map](docs/reference-research.md) for
+prior papers, implementations, competing findings and study decisions. Selected
+source assets use a bounded local cache. An optional [arXiv paper output](docs/arxiv-papers.md)
+adds a compiled PDF and portable sources with researcher-configured attribution.
+See the [EMA paper and reference demonstration](studies/ema-schedule/publications/reference-r2/README.md)
+for a revision of completed research with unchanged scientific evidence.
+
 <a id="what-has-actually-been-tested"></a>
 
 **0.3.0rc2 is a source release candidate.** The supervised native runner is

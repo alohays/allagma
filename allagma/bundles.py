@@ -18,11 +18,18 @@ HOSTS = ["generic", "codex", "claude-code"]
 CAPABILITIES = ["artifact.read", "artifact.write", "execution.local"]
 
 
+def distributable_inventory(directory):
+    directory = Path(directory)
+    if any(directory.rglob(".allagma-reference-cache.json")):
+        raise AllagmaError("Raw reference cache inside distributable source; move it outside catalog, helper and scaffold directories")
+    return inventory(directory)
+
+
 def source_inventory(source):
     catalog = Catalog(source)
     paths = {"registry.json", "release.json", "LICENSE", "tools/allagma.py"}
     for directory in ["allagma", "contracts", "templates/study", *catalog.registry["modules"].values()]:
-        for name in inventory(confined(source, directory)):
+        for name in distributable_inventory(confined(source, directory)):
             paths.add(f"{directory}/{name}")
     return {name: file_hash(confined(source, name)) for name in sorted(paths)}
 
@@ -112,7 +119,7 @@ def build_bundle(source, study, intent, destination, *, _local_prepared=False):
     composition, config, origins, inputs, provenance = resolve_study(source, study, intent)
     paths = {"release.json", "LICENSE", "tools/allagma.py"}
     for directory in ["allagma", "contracts", *[catalog.registry["modules"][key] for key in composition["modules"]]]:
-        for name in inventory(confined(source, directory)):
+        for name in distributable_inventory(confined(source, directory)):
             paths.add(f"{directory}/{name}")
     destination.mkdir(parents=True, exist_ok=False)
     for name in sorted(paths):
@@ -236,6 +243,11 @@ def generated_entries(study, lock, previous=None):
                "`--campaign` only for a new study phase. Required capabilities must be available; "
                "sequential artifact handoffs are the default. Shared contracts are in the bundle's "
                "`contracts/` directory.\n")
+    generic += ("\nFor new study phases, begin with `references/INDEX.md` and record critical "
+                "source readings before selecting baselines. On resumption, retain the reference "
+                "snapshot and coverage limits recorded with the campaign's inputs; later working "
+                "notes do not rewrite them. Read `paper.json` for an explicit additional output "
+                "request. Its default keeps the ordinary report.\n")
 
     def choose(key, preferred):
         if key in previous["mapping"]:

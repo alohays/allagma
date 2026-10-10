@@ -349,3 +349,42 @@ and Pages deployment on each actual merge. Preserve frozen studies, the GUI
 model selection, existing resource limits and English documentation. Follow
 the standing commit-and-push instruction for any necessary repairs or records.
 The [sequential merge record](docs/contributing/merged-prs.md) tracks completion.
+
+
+
+
+## Reference research and optional arXiv papers - 9 October 2026
+
+Make rigorous reference research part of Allagma's default workflow for new studies and add an optional arXiv paper output with a compiled PDF and portable submission sources.
+
+Build a deduplicated, critical literature map covering primary papers, implementations, baselines, competing findings, and gaps. Record relevance, verified bibliographic metadata, supporting passages, limitations, and consequences for the study. Distinguish bibliographic accuracy from support for a claim. Use this map throughout planning, implementation, analysis, writing, and resumed sessions, with a concise index and on-demand reading. Support offline/provided-only operation with explicit coverage limits.
+
+Retain important paper PDFs and available source, code repositories pinned to commits, and relevant model weights and dataset files or splits pinned to revisions. Select assets for understanding or planned reproduction. Record provenance, acquisition status, local paths, hashes, sizes, and licenses. Support interrupted acquisition, reuse, integrity checks, and explicit unavailable states.
+
+Keep raw downloads in local cache paths excluded through Git's info/exclude. Resolve the correct file using Git, preserve existing entries, and support linked worktrees without assuming .git is a directory. Version useful notes, citations, and public-safe retrieval manifests; keep raw caches out of commits, releases, and Pages. Preserve existing history and frozen evidence.
+
+Make acquisition limits configurable. Inspect current disk space and choose conservative per-asset, per-study, total-cache, and minimum-free-space defaults for this M4 Pro Mac with 48GB RAM. Enforce limits during downloads and extraction, accounting for retries and expanded sizes. Ask before expanding adopted limits or accepting gated terms. Avoid unnecessary copies. Integrate acquisition with preparation and versioned inputs while preserving scientific-worker network restrictions and immutable inputs.
+
+Expose a per-study arXiv output option while retaining existing output behavior by default. Write a complete English paper with abstract, introduction, related work, methods, results, discussion, limitations, references, and relevant appendices. Ground claims, figures, tables, and numbers in retained evidence. Use verified citations and researcher-supplied author metadata; preserve negative and inconclusive findings. Apply humanizer without changing scientific meaning.
+
+Deliver the PDF and a portable source archive with LaTeX, bibliography files, figures, required styles, build instructions, and provenance. Follow current official arXiv TeX requirements using a configurable preprint template. Compile the unpacked archive in a clean environment without the reference cache or network, then inspect the PDF for layout defects and unresolved references. Keep TeX and acquisition integrations separate from the offline standard-library core. Do not submit to arXiv.
+
+Demonstrate the integrated workflow using small real reference assets and an existing completed study. Exercise each supported asset type and produce a new manuscript revision without altering historical science. Verify exclusions, cache reuse after restart, corruption and budget handling, citation-to-source and claim-to-result links, unchanged default behavior, and clean compilation. Keep skills concise.
+
+Continue until both capabilities work and relevant checks pass. Use a dedicated codex/ feature branch. Make small, coherent commits throughout development, grouping each change with its related tests and English documentation. Push the branch to origin and open a review-ready PR against main; leave it unmerged for my review. Include usage, configuration, migration notes, limitations, and validation results. Include public docs updates in the PR; deployment waits for merge. Finish with the PR URL, runnable commands, reference index, compiled paper, source archive, and evidence. Preserve existing contributor work, GUI model selection, and model-usage limits. Make routine decisions autonomously; use the user-input tool for consequential unresolved choices.
+
+Paper attribution is researcher-configurable per study. Never infer paper authors from repository ownership or agent identity.
+
+The owner explicitly chose `allagma` as the demonstration manuscript author. This supersedes the earlier anonymous-draft choice and remains a per-study setting, never a default author for other users.
+
+The optional paper demonstration preserves the fixed manuscript date of 9 October 2026; final implementation verification may occur on 10 October. Do not submit to arXiv. Public documentation deployment waits for the feature PR to be merged.
+
+## PR #14 review follow-up - 10 October 2026
+
+Read the reviews and bring PR #14 to merge-ready quality. Reproduce and repair
+all actionable findings, retain regression evidence and rerun affected checks
+and the complete acceptance workflow. Keep coherent Git increments and push to
+`origin`. Preserve prior scientific records, publication artifacts and the
+configured `allagma` author. Leave the PR unmerged; documentation deployment
+continues to wait for merge. The [repair record](docs/contributing/pr14-revisions.md)
+tracks the four findings and validation.

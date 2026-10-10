@@ -1,0 +1,308 @@
+{
+  "assets": {
+    "r07-gmm8-evaluation/evaluation.npz": {
+      "arrays": [
+        {
+          "dtype": "<f4",
+          "name": "heldout.npy",
+          "shape": [
+            2048,
+            2
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "generation_noise.npy",
+          "shape": [
+            100,
+            2048,
+            2
+          ]
+        }
+      ],
+      "bytes": 1655316,
+      "sha256": "c489a1689a25366423afeaaf293b3165e6dacf2307232d026397d60325401673"
+    },
+    "r07-gmm8-weights/weights.npz": {
+      "arrays": [
+        {
+          "dtype": "<f4",
+          "name": "raw__time.frequencies.npy",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "raw__coord.frequencies.npy",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "raw__network.0.weight.npy",
+          "shape": [
+            256,
+            384
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "raw__network.0.bias.npy",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "raw__network.1.ff.weight.npy",
+          "shape": [
+            256,
+            256
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "raw__network.1.ff.bias.npy",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "raw__network.2.ff.weight.npy",
+          "shape": [
+            256,
+            256
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "raw__network.2.ff.bias.npy",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "raw__network.3.ff.weight.npy",
+          "shape": [
+            256,
+            256
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "raw__network.3.ff.bias.npy",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "raw__network.5.weight.npy",
+          "shape": [
+            2,
+            256
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "raw__network.5.bias.npy",
+          "shape": [
+            2
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "ema099__time.frequencies.npy",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "ema099__coord.frequencies.npy",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "ema099__network.0.weight.npy",
+          "shape": [
+            256,
+            384
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "ema099__network.0.bias.npy",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "ema099__network.1.ff.weight.npy",
+          "shape": [
+            256,
+            256
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "ema099__network.1.ff.bias.npy",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "ema099__network.2.ff.weight.npy",
+          "shape": [
+            256,
+            256
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "ema099__network.2.ff.bias.npy",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "ema099__network.3.ff.weight.npy",
+          "shape": [
+            256,
+            256
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "ema099__network.3.ff.bias.npy",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "ema099__network.5.weight.npy",
+          "shape": [
+            2,
+            256
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "ema099__network.5.bias.npy",
+          "shape": [
+            2
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "ema0999__time.frequencies.npy",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "ema0999__coord.frequencies.npy",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "ema0999__network.0.weight.npy",
+          "shape": [
+            256,
+            384
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "ema0999__network.0.bias.npy",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "ema0999__network.1.ff.weight.npy",
+          "shape": [
+            256,
+            256
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "ema0999__network.1.ff.bias.npy",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "ema0999__network.2.ff.weight.npy",
+          "shape": [
+            256,
+            256
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "ema0999__network.2.ff.bias.npy",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "ema0999__network.3.ff.weight.npy",
+          "shape": [
+            256,
+            256
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "ema0999__network.3.ff.bias.npy",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "ema0999__network.5.weight.npy",
+          "shape": [
+            2,
+            256
+          ]
+        },
+        {
+          "dtype": "<f4",
+          "name": "ema0999__network.5.bias.npy",
+          "shape": [
+            2
+          ]
+        }
+      ],
+      "bytes": 3569044,
+      "sha256": "073d03a8938e031c817c2f8fbf7a540c6310a35af21197c93b64cbdc2e60fcd8"
+    }
+  },
+  "checks": {
+    "cache_read_denied": true,
+    "input_write_denied": true,
+    "network_denied": true
+  },
+  "format": "allagma-reference-input-inspection-v1",
+  "scope": "Real pinned NPZ headers and hashes; actual broker restrictions; no training or model inference",
+  "status": "pass"
+}

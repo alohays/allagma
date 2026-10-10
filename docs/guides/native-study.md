@@ -26,6 +26,13 @@ and `ALLAGMA.md`. Preparation copies materials and pins methods. It does not
 launch a model, train anything, or promise an answer. Study and controller
 directories must be separate and new. Keep secrets out of supplied materials.
 
+New studies also include `references/INDEX.md` and `references/map.json`. Build
+the critical literature map during scoping and consult its notes throughout the
+study. See [reference research](../reference-research.md) for offline/provided-only
+coverage, bounded acquisition and immutable prepared assets. An
+[optional paper request](../arxiv-papers.md) adds a PDF and portable source package
+with the researcher's own author metadata.
+
 ## Launch explicitly on macOS
 
 The supervised native runner currently targets **macOS and a compatible Codex

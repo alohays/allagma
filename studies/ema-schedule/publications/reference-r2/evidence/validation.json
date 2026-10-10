@@ -1,0 +1,46 @@
+{
+  "acceptance_source": "build/reference-paper-acceptance/acceptance.json",
+  "browser_stats": {
+    "duration": 16095.195,
+    "expected": 18,
+    "flaky": 0,
+    "skipped": 0,
+    "startTime": "2026-10-09T15:19:58.054Z",
+    "unexpected": 0
+  },
+  "catalog_modules": 23,
+  "conformance_tests": 148,
+  "documentation_link_errors": [],
+  "documentation_links": 2809,
+  "documentation_pages": 43,
+  "format": "allagma-reference-paper-validation-v1",
+  "i1_i5": {
+    "I1": "pass",
+    "I2": "pass",
+    "I3": "pass",
+    "I4": "pass",
+    "I5": "pass"
+  },
+  "native_model_sessions_started": 0,
+  "new_training_runs": 0,
+  "notes": [
+    "Browser suite rerun after merging the owner's dependency and contributor-review changes from main.",
+    "Conformance and toy workflow retain the standard-library offline core. Loopback HTTP tests do not use external services.",
+    "Separate real TeX builds cover pdfLaTeX and XeLaTeX locally; supported TeX Live 2023 CI compiles the same portable source archive."
+  ],
+  "raw_cache_excluded_from_git_bundles_releases_pages": true,
+  "source_release": {
+    "archive": "allagma-0.3.0rc2-source.tar.gz",
+    "bytes": 188570,
+    "format": "allagma-source-distribution-v2",
+    "git_head": "0931f8369ccf0d8e210980ecf7101ebecd5cec48",
+    "publication": "prepared-locally-not-published",
+    "release": "0.3.0rc2",
+    "scope": "Core, all catalog modules, offline example, small native-study inputs, and conformance. No retained scientific archives, site toolchain, third-party study adaptations or wheels. Omitted documentation targets link to the source commit.",
+    "sha256": "5fcf35266bb82df41d58362b7f0627eadc071aaed6d2761b2f364e3c1889d9d9",
+    "source_policy": "Committed HEAD blobs only; all local edits, ignored files and untracked files excluded.",
+    "tracked_worktree_changes": false
+  },
+  "source_release_tests": 7,
+  "status": "pass"
+}

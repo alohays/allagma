@@ -1,0 +1,14 @@
+test_section_roles_are_bound_to_both_reviews (conformance.test_papers.PaperTests.test_section_roles_are_bound_to_both_reviews) ... FAIL
+
+======================================================================
+FAIL: test_section_roles_are_bound_to_both_reviews (conformance.test_papers.PaperTests.test_section_roles_are_bound_to_both_reviews)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repository>/conformance/test_papers.py", line 172, in test_section_roles_are_bound_to_both_reviews
+    self.assertNotEqual(papers.review_fingerprint(self.study, config), original)
+AssertionError: '436c8473751044fa17f1761fcc304297f66fb795b19c93fa1c134051e4b76d9b' == '436c8473751044fa17f1761fcc304297f66fb795b19c93fa1c134051e4b76d9b'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.009s
+
+FAILED (failures=1)

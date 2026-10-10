@@ -1,0 +1,32 @@
+test_repeated_policy_adoption_cannot_exceed_cache_capacity (conformance.test_reference_assets.AssetTests.test_repeated_policy_adoption_cannot_exceed_cache_capacity) ... FAIL
+test_policy_transaction_admits_history_and_atomic_replacement_together (conformance.test_reference_assets.AssetTests.test_policy_transaction_admits_history_and_atomic_replacement_together) ... FAIL
+test_policy_transaction_refuses_free_space_and_invalid_contraction_without_writes (conformance.test_reference_assets.AssetTests.test_policy_transaction_refuses_free_space_and_invalid_contraction_without_writes) ... FAIL
+
+======================================================================
+FAIL: test_repeated_policy_adoption_cannot_exceed_cache_capacity (conformance.test_reference_assets.AssetTests.test_repeated_policy_adoption_cannot_exceed_cache_capacity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repository>/conformance/test_reference_assets.py", line 171, in test_repeated_policy_adoption_cannot_exceed_cache_capacity
+    self.assertLessEqual(adapter.disk_bytes(self.cache), policy["cache_bytes"])
+AssertionError: 10016 not less than or equal to 10000
+
+======================================================================
+FAIL: test_policy_transaction_admits_history_and_atomic_replacement_together (conformance.test_reference_assets.AssetTests.test_policy_transaction_admits_history_and_atomic_replacement_together)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repository>/conformance/test_reference_assets.py", line 187, in test_policy_transaction_admits_history_and_atomic_replacement_together
+    with self.assertRaisesRegex(adapter.BudgetError, "cache_bytes"):
+AssertionError: BudgetError not raised
+
+======================================================================
+FAIL: test_policy_transaction_refuses_free_space_and_invalid_contraction_without_writes (conformance.test_reference_assets.AssetTests.test_policy_transaction_refuses_free_space_and_invalid_contraction_without_writes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repository>/conformance/test_reference_assets.py", line 202, in test_policy_transaction_refuses_free_space_and_invalid_contraction_without_writes
+    with self.assertRaisesRegex(adapter.BudgetError, "minimum_free_bytes"):
+AssertionError: BudgetError not raised
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.187s
+
+FAILED (failures=3)

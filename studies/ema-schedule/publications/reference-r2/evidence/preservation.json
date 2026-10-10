@@ -1,0 +1,33 @@
+{
+  "actual_git_exclusion": ".git/info/exclude:8:/.allagma-reference-cache/\t.allagma-reference-cache/objects/073d03a8938e031c817c2f8fbf7a540c6310a35af21197c93b64cbdc2e60fcd8/data",
+  "baseline": "694f13c1b923ff8e8a58442dd203baf613f76205",
+  "compared_head": "0931f8369ccf0d8e210980ecf7101ebecd5cec48",
+  "contributor_prs_observed": [
+    {
+      "headRefName": "codex/contributor-evidence-verifier",
+      "headRefOid": "2ea69f1753d4ecb945d2ab880f11639574110e6f",
+      "isDraft": false,
+      "number": 12,
+      "url": "https://github.com/alohays/allagma/pull/12"
+    },
+    {
+      "headRefName": "codex/contributor-doctor",
+      "headRefOid": "726bb4e0dae0c919f38085b07bbb0c3c3e459352",
+      "isDraft": false,
+      "number": 11,
+      "url": "https://github.com/alohays/allagma/pull/11"
+    },
+    {
+      "headRefName": "codex/contributor-study-adaptation",
+      "headRefOid": "a8dfa9042ffc10714b64b0a0cba8759471bcfa40",
+      "isDraft": false,
+      "number": 10,
+      "url": "https://github.com/alohays/allagma/pull/10"
+    }
+  ],
+  "git_history_preserved": true,
+  "note": "The owner concurrently merged dependency PR 1 and made contributor PRs 10-12 review-ready. Their main changes were merged into this feature branch; their branches were not edited here. No feature merge or Pages deployment was performed.",
+  "protected_changes": [],
+  "status": "pass",
+  "tracked_raw_cache_paths": []
+}

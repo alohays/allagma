@@ -1,0 +1,27 @@
+Weight averaging offers a way to evaluate a training trajectory through more
+than its final iterate. Diffusion-model implementations often retain an EMA of
+the trained parameters, including the original DDPM work \cite{Ho2020}. This
+practice does not establish that every averaging rule improves every endpoint.
+The optimizer, learning-rate path, averaging window and evaluation procedure
+all affect the comparison.
+
+A smaller difference between averaged and raw weights also has two possible
+interpretations: the average may have become worse, or the raw model may have
+caught up. A useful comparison therefore reports both the paired relative
+effect and the absolute quality of each model. The distinction matters when
+comparing constant learning rates with a schedule that approaches zero.
+
+The retained study asks how the relative benefit of fixed-decay EMA changes
+across terminal training duration and the complete learning-rate policy in a
+small DDPM. It separates complete cosine schedules at two durations from a
+constant-rate trajectory evaluated at the same update counts. The study uses
+simple two-dimensional distributions so that paired model states, generated
+samples and inputs can be retained and checked within a finite local budget.
+It does not seek a new state of the art or establish a general explanation of
+averaging. In particular, the relationship between averaging and annealing is
+already directly examined by Ajroldi et al.\ \cite{Ajroldi2025}.
+
+This paper is a publication revision of completed Allagma run r07. The
+literature search described here occurred after that experiment. Its role is to
+correctly situate and qualify the retained findings, not to retroactively change
+the protocol or claim that these sources determined its original freeze.

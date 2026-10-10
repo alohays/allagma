@@ -1,0 +1,31 @@
+{
+  "checks": [
+    "Configured author and title visible and also present in PDF metadata",
+    "All required sections, references and relevant appendices present",
+    "Original scientific figure legible with full caption and no clipping",
+    "Tables match retained values; the long table repeats its header and the short interaction table stays together",
+    "No unresolved references, missing glyphs, overlap, clipped text or nearly empty trailing page"
+  ],
+  "format": "allagma-paper-visual-review-v1",
+  "page_images": {
+    "1": "6071f218c5605d2ac9bfc76b3b566194c3e6bebca76460845d160f988f49123c",
+    "2": "d043a8fc41aa8d75e081b168f63a965341d249d7a1a30555f4effb97cfeea40a",
+    "3": "8de55e3bc0f8384055de6c0921e196a072bf4b021bb65c317b1571a83920a4e8",
+    "4": "2ed306121d2616e083ae5edfda1aa7e1c28b641d80cc7bc765a40f8c3b25e400",
+    "5": "8b9b81eb4a7a5dd9240f781b73f4134906b162f69cbe1d2c8df4339cde51604d",
+    "6": "ce54bb3c2f538be7942d6bd89a3b3f3435e1c29340ab30272b248d53a7cda39b",
+    "7": "49538aab406185a7d68c9923965378071846f1e059012a39466f09f825dd10fa",
+    "8": "0e5179f395ab347407c174232565840734a38b2f3c6de55be194a920850ab5cb"
+  },
+  "pages": 8,
+  "paper_sha256": "7aea0bb5cac8bd0a108a977aaf48c70cdd23cbbde5a08b97b4eed9c34d0c98ce",
+  "prior_review": {
+    "path": "pdf-review.json",
+    "sha256": "16cea90ae79a3e1293c290834edb7754c08a6179a34ec77aab18e8bc4f5a5efd"
+  },
+  "rendering": "Poppler pdftoppm at 100 dpi; all eight fresh page images match the previously inspected images byte-for-byte.",
+  "reviewed_at": "2026-10-10",
+  "reviewer": "Codex assistant; direct inspection of all eight freshly rendered pages",
+  "scope": "Human-style visual inspection by the same assistant, plus separate structural/log checks; not independent peer review or arXiv validation.",
+  "status": "pass"
+}

@@ -30,6 +30,8 @@ export default defineConfig({
         { label: 'Start a native study', slug: 'guides/native-study' },
         { label: 'Resume and reproduce', slug: 'guides/reproduce' },
         { label: 'Research workspaces', slug: 'guides/workspaces' },
+        { label: 'Research the references', slug: 'guides/reference-research' },
+        { label: 'Build an arXiv paper', slug: 'guides/arxiv-papers' },
         { label: 'Resource supervision', slug: 'guides/resources' },
         { label: 'Updates and rollback', slug: 'guides/versioning' },
         { label: 'Artifacts and downloads', slug: 'guides/artifacts' },
@@ -41,6 +43,7 @@ export default defineConfig({
         { label: 'CORE CULP reproduction', slug: 'studies/core-culp' },
         { label: 'Modular addition', slug: 'studies/modular-addition' },
         { label: 'Weight EMA', slug: 'studies/ema-schedule' },
+        { label: 'EMA paper and references', slug: 'studies/ema-paper' },
       ]},
       { label: 'Reference', collapsed: true, items: [
         { label: 'CLI overview', slug: 'reference/cli' },

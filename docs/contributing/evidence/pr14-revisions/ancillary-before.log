@@ -1,0 +1,116 @@
+test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance (conformance.test_papers.PaperTests.test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance) ... 
+  test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance (conformance.test_papers.PaperTests.test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance) (note='build.py') ... FAIL
+  test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance (conformance.test_papers.PaperTests.test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance) (note='reference-map.json') ... ERROR
+  test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance (conformance.test_papers.PaperTests.test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance) (note='reference-index.md') ... FAIL
+  test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance (conformance.test_papers.PaperTests.test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance) (note='provenance.json') ... ERROR
+  test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance (conformance.test_papers.PaperTests.test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance) (note='evidence/analysis.json') ... FAIL
+  test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance (conformance.test_papers.PaperTests.test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance) (note='README.md') ... ERROR
+
+======================================================================
+ERROR: test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance (conformance.test_papers.PaperTests.test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance) (note='reference-map.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repository>/allagma/files.py", line 72, in read_json
+    return parse_json(Path(path).read_text(encoding="utf-8"))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repository>/allagma/files.py", line 66, in parse_json
+    return json.loads(text, parse_constant=reject_constant, parse_float=finite_float,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<repository>/conformance/test_papers.py", line 171, in test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance
+    packaged = read_json(unpacked / "anc/reference-map.json")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repository>/allagma/files.py", line 74, in read_json
+    raise AllagmaError(f"Cannot read {path}: {exc}. Use JSON-compatible YAML.") from exc
+allagma.files.AllagmaError: Cannot read /var/folders/41/bgxhqvj96qdbb67hzcfgxdy40000gn/T/tmp2kp17g6x/unpacked-1/anc/reference-map.json: Expecting value: line 1 column 1 (char 0). Use JSON-compatible YAML.
+
+======================================================================
+ERROR: test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance (conformance.test_papers.PaperTests.test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance) (note='provenance.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repository>/allagma/files.py", line 102, in write_bytes
+    with path.open("xb") as stream:
+         ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileExistsError: [Errno 17] File exists: '/private/var/folders/41/bgxhqvj96qdbb67hzcfgxdy40000gn/T/tmp2kp17g6x/source-3/anc/provenance.json'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<repository>/conformance/test_papers.py", line 162, in test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance
+    adapter.assemble(self.study, self.config, source)
+  File "<repository>/adapters/arxiv/package.py", line 129, in assemble
+    write_json(destination / "anc/provenance.json", provenance, immutable=True)
+  File "<repository>/allagma/files.py", line 123, in write_json
+    write_bytes(path, canonical(value), immutable=immutable)
+  File "<repository>/allagma/files.py", line 108, in write_bytes
+    raise AllagmaError(f"Immutable artifact already exists: {path}") from exc
+allagma.files.AllagmaError: Immutable artifact already exists: /private/var/folders/41/bgxhqvj96qdbb67hzcfgxdy40000gn/T/tmp2kp17g6x/source-3/anc/provenance.json
+
+======================================================================
+ERROR: test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance (conformance.test_papers.PaperTests.test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance) (note='README.md')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repository>/allagma/files.py", line 102, in write_bytes
+    with path.open("xb") as stream:
+         ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileExistsError: [Errno 17] File exists: '/private/var/folders/41/bgxhqvj96qdbb67hzcfgxdy40000gn/T/tmp2kp17g6x/source-5/anc/README.md'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<repository>/conformance/test_papers.py", line 162, in test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance
+    adapter.assemble(self.study, self.config, source)
+  File "<repository>/adapters/arxiv/package.py", line 105, in assemble
+    write_text(destination / "anc/README.md", "# Portable paper sources\n\n"
+  File "<repository>/allagma/files.py", line 127, in write_text
+    write_bytes(path, value.encode(), immutable=immutable)
+  File "<repository>/allagma/files.py", line 108, in write_bytes
+    raise AllagmaError(f"Immutable artifact already exists: {path}") from exc
+allagma.files.AllagmaError: Immutable artifact already exists: /private/var/folders/41/bgxhqvj96qdbb67hzcfgxdy40000gn/T/tmp2kp17g6x/source-5/anc/README.md
+
+======================================================================
+FAIL: test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance (conformance.test_papers.PaperTests.test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance) (note='build.py')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repository>/conformance/test_papers.py", line 169, in test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance
+    self.assertIn("--output", result.stdout)
+AssertionError: '--output' not found in 'A reading note, not the portable builder.\n'
+
+======================================================================
+FAIL: test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance (conformance.test_papers.PaperTests.test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance) (note='reference-index.md')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repository>/conformance/test_papers.py", line 173, in test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance
+    self.assertTrue(mapped.startswith("reference-notes/Fixture2026/"))
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance (conformance.test_papers.PaperTests.test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance) (note='evidence/analysis.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repository>/conformance/test_papers.py", line 173, in test_reading_notes_cannot_replace_packaged_entrypoint_or_provenance
+    self.assertTrue(mapped.startswith("reference-notes/Fixture2026/"))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 1 test in 0.187s
+
+FAILED (failures=3, errors=3)

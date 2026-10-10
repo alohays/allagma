@@ -1,0 +1,17 @@
+{
+  "after": {
+    "cache_bytes": 74157,
+    "limit": 100000,
+    "reason": "cache_bytes",
+    "status": "budget-exceeded"
+  },
+  "after_source_sha256": "4c4bd4fe66d1d51e2c6af343379c889cec14a2ffc3e652ab516d248b19b22bbb",
+  "before": {
+    "cache_bytes": 112439,
+    "limit": 100000,
+    "reason": null,
+    "status": "available"
+  },
+  "before_revision": "db0605978773f850cdb67cc1f69fa9a38a4b485d",
+  "scope": "Real temporary Git/cache I/O with synthetic archive contents; an acquisition quota regression, not scientific or native-model qualification."
+}

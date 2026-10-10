@@ -66,6 +66,9 @@ def build(output: Path, source: Path = ROOT):
             mode, kind, oid = meta.decode().split()
             entries[path.decode()] = (mode, kind, oid)
     registry = json.loads(git(source, "show", head + ":registry.json"))
+    cache_roots = {str(PurePosixPath(p).parent) for p in entries if p.endswith('/.allagma-reference-cache.json')}
+    if cache_roots or any('.allagma-reference-cache' in PurePosixPath(p).parts for p in entries):
+        raise ValueError("Raw reference caches were force-tracked; remove them from the index before packaging")
     directories = ["allagma", "contracts", "templates/study", *registry["modules"].values()]
     for directory in directories:
         if PurePosixPath(directory).is_absolute() or ".." in directory.split("/"):

@@ -1,0 +1,59 @@
+{
+  "findings": [
+    {
+      "evidence": "paper.json sections/appendices and all nine TeX source files; re-read on 10 October 2026.",
+      "finding": "Every required section is assigned to its intended role, and both appendices retain their titles and order.",
+      "status": "pass"
+    },
+    {
+      "evidence": "Git comparison with 72e88c39a6631dadb78d8162d8714baf324ab073 and retained SHA-256 values.",
+      "finding": "Manuscript prose, title, configured author allagma, date, citations, claims, tables, figures and non-review evidence are byte-for-byte unchanged from reviewed commit 72e88c3.",
+      "status": "pass"
+    },
+    {
+      "evidence": "derive.py, science/recomputation.json, paper.json and the complete manuscript.",
+      "finding": "Recomputation again matches all 114 retained statistical summaries. The six empirical claims retain their result locators and uncertainty limits. Retrospective literature coverage, the four-seed unit, unadjusted intervals and lack of independent peer review remain explicit.",
+      "status": "pass"
+    }
+  ],
+  "format": "allagma-paper-review-v1",
+  "kind": "scientific",
+  "reviewed_at": "2026-10-10",
+  "reviewed_content_sha256": "482911e214bec9a42b194d29b5d81136f88318eb61d3d054111a6857135d817b",
+  "reviewer": "Codex assistant addressing the owner-requested PR #14 review",
+  "scope": "Same-assistant revalidation of unchanged manuscript content under the corrected section-role fingerprint. The retained previous review supplies the earlier literature/scientific assessment; no new source acquisition or independent peer review is claimed.",
+  "section_roles": {
+    "abstract": {
+      "path": "sections/abstract.tex",
+      "sha256": "0eb4227d4c758046fbace5682922ebd65a49fea258441320308d2d0c8e1b45d9"
+    },
+    "discussion": {
+      "path": "sections/discussion.tex",
+      "sha256": "1a46d7c38ec0edbae8bc6a1f861032a50d584f638f97ae7160a87a60a93fd66d"
+    },
+    "introduction": {
+      "path": "sections/introduction.tex",
+      "sha256": "ef7080d1be788221dded8165767e034ec4eaab2d79d0b7d95aaace85e2c3f9cb"
+    },
+    "limitations": {
+      "path": "sections/limitations.tex",
+      "sha256": "fa4fbe81a12477a0b071cc0d99976d7f0aeed8ea12f669875f9ff93a1ab9ba22"
+    },
+    "methods": {
+      "path": "sections/methods.tex",
+      "sha256": "77bc35c379266071f8ecb4ff3e04ee12d51747d20f6e29e6d6c840c7141931c1"
+    },
+    "related-work": {
+      "path": "sections/related-work.tex",
+      "sha256": "0f0316da0a6149549d649522ad51e6e55e25583d4626e063f825bca29f2657ca"
+    },
+    "results": {
+      "path": "sections/results.tex",
+      "sha256": "44664458366a13247ef3c7902fce8e9f94d392b62e125ce2b54626dd00a655b3"
+    }
+  },
+  "supersedes": {
+    "path": "scientific-review.json",
+    "sha256": "50f5c45212ca1a9794d01aeb186f0362ef79f80b7abeb2a51b987e87f28609dd"
+  }
+}

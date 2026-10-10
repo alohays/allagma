@@ -1,0 +1,46 @@
+{
+  "adaptation": "Original bounded acquisition adapter; no provider SDK or scientific mechanism.",
+  "compatibility": {
+    "contracts": [
+      "0.2"
+    ],
+    "hosts": [
+      "generic",
+      "codex",
+      "claude-code"
+    ],
+    "python": ">=3.11 for optional helpers"
+  },
+  "contract": "0.2",
+  "dependencies": [],
+  "entry": "README.md",
+  "evaluation": [
+    "example.json"
+  ],
+  "examples": [
+    "example.json"
+  ],
+  "id": "asset/reference-cache",
+  "inputs": [
+    "StudySpec"
+  ],
+  "kind": "adapter",
+  "lifecycle": "stable",
+  "maintainer": "@alohays",
+  "optional": [
+    "network.acquire"
+  ],
+  "outputs": [
+    "StudySpec"
+  ],
+  "replacement": null,
+  "requires": [
+    "artifact.read",
+    "artifact.write"
+  ],
+  "resources": [
+    "acquire.py"
+  ],
+  "settings": {},
+  "sources": []
+}
