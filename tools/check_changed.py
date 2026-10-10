@@ -17,7 +17,7 @@ def main():
     args = parser.parse_args()
     diff = subprocess.run(["git", "diff", "--name-only", args.base or "HEAD~1", "HEAD"], cwd=ROOT, capture_output=True, text=True)
     if diff.returncode:
-        changed = ["allagma/"]
+        changed = ["allagma/", "tools/"]
     else:
         changed = diff.stdout.splitlines()
     catalog = Catalog(ROOT)
@@ -25,13 +25,16 @@ def main():
     for module in modules:
         catalog.check(module)
     suites = set()
-    if any(name.startswith(("allagma/", "contracts/", "tools/", "conformance/", ".github/")) or name in ("registry.json", "release.json") for name in changed):
+    # Runtime and workflow inputs share exported bundles and study handoffs.
+    # Run the small offline kit rather than maintaining an adapter dependency map.
+    if any(name.startswith(("allagma/", "adapters/", "contracts/", "recipes/",
+                            "examples/", "templates/", "profiles/", "policies/",
+                            "tools/", "conformance/", ".github/"))
+           or name in ("registry.json", "release.json") for name in changed):
         suites.update("conformance." + path.stem for path in (ROOT / "conformance").glob("test_*.py"))
-    elif any(name.startswith(("adapters/", "recipes/", "examples/", "templates/")) for name in changed):
-        suites.update(["conformance.test_modules", "conformance.test_versions", "conformance.test_research"])
     elif modules:
         suites.update(["conformance.test_modules"])
-        if any(module.startswith("context/") for module in modules):
+        if any(module.startswith(("context/", "evaluation/")) for module in modules):
             suites.add("conformance.test_improvement")
     result = check_docs()
     if result["errors"]:
