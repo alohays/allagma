@@ -27,6 +27,11 @@ registration and artifact contracts, not native activation or model quality.
 Study metrics are checked by the study-owned evaluator; method comparisons
 measure their declared narrow fixture scope.
 
+The [essential coverage audit](../docs/contributing/essential-test-coverage.md)
+explains the record-admission, process-locking and CI-selection regressions.
+The selection tests live in `tools/tests` and run with
+`python3 -m unittest discover -s tools/tests -v`.
+
 `python3 -m allagma acceptance --output build/acceptance` adds retained I1–I5
 scenarios, artifacts, a per-test receipt and a source inventory. Existing output
 directories are not overwritten. `tools/verify_external.py` optionally checks

@@ -415,3 +415,5 @@ validation, study mutation safety, and reliable selection of existing CI tests.
 Use offline, standard-library fixtures and real bounded local processes where
 process behavior matters. Preserve prior evidence and model settings. Commit
 coherent increments, push to `origin`, and leave the new PR unmerged for review.
+The [coverage audit](docs/contributing/essential-test-coverage.md) records the
+selected gaps, failing controls, fixes and validation scope.
