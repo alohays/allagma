@@ -1,0 +1,48 @@
+{
+  "repository": "alohays/allagma",
+  "recorded_at": "2026-10-09T17:24:01.090588+00:00",
+  "base_commit": "5f519e63e7fc50a2e7da887481444dd9b649eab8",
+  "previous_repository_rulesets": [],
+  "rulesets": [
+    {
+      "name": "main-protection",
+      "id": 24803950,
+      "url": "https://github.com/alohays/allagma/rules/24803950",
+      "payload": "main.json",
+      "payload_sha256": "194e8fcc9716f07d8befc9fb0bee30f1035d309d2e8653137442639bc6ab1c91",
+      "payload_fields_match": true,
+      "additional_api_parameters": {
+        "pull_request": {
+          "required_reviewers": [],
+          "require_extra_approval_for_unattributed_changes": true
+        }
+      }
+    },
+    {
+      "name": "release-tag-protection",
+      "id": 24803952,
+      "url": "https://github.com/alohays/allagma/rules/24803952",
+      "payload": "release-tags.json",
+      "payload_sha256": "b9f33ad390b1c1962f3c401f6b895fadfc948422c6b7b58b3c429b00e41541a0",
+      "payload_fields_match": true,
+      "additional_api_parameters": {}
+    }
+  ],
+  "verification": {
+    "method": "GitHub REST API readback; every specified payload field compared",
+    "main_protected": true,
+    "main_rule_types": [
+      "deletion",
+      "non_fast_forward",
+      "pull_request",
+      "required_status_checks"
+    ],
+    "feature_branch": "codex/repository-protection",
+    "feature_branch_rules": [],
+    "required_check_source": {
+      "slug": "github-actions",
+      "id": 15368
+    },
+    "scope": "Configured rules only; no force-push, deletion, tag publication, or merge was attempted."
+  }
+}
