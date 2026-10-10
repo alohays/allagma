@@ -388,3 +388,13 @@ and the complete acceptance workflow. Keep coherent Git increments and push to
 configured `allagma` author. Leave the PR unmerged; documentation deployment
 continues to wait for merge. The [repair record](docs/contributing/pr14-revisions.md)
 tracks the four findings and validation.
+
+## Essential test coverage on current main — 10 October 2026
+
+Inspect the current `main` branch for critical missing tests, implement the
+essential coverage and any demonstrated fixes, and open a review-ready PR.
+Keep the scope appropriate for the current open-source project: record
+validation, study mutation safety, and reliable selection of existing CI tests.
+Use offline, standard-library fixtures and real bounded local processes where
+process behavior matters. Preserve prior evidence and model settings. Commit
+coherent increments, push to `origin`, and leave the new PR unmerged for review.

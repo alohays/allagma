@@ -11,6 +11,7 @@ this command. Actual TeX compilation has its own optional CI workflow.
 | Suite | Coverage |
 | --- | --- |
 | `test_contracts` | Closed/versioned schemas, configuration provenance, capability narrowing, immutable references, path confinement and required context |
+| `test_record_validation` | Public CLI rejection without writes or tracebacks, malformed record roots, attempt outcome consistency and supported-claim evidence requirements |
 | `test_modules` | Portable metadata, role contracts, capability closure, lifecycle selection and one-module contribution |
 | `test_versions` | Exact export, namespacing, central isolation, local variants, planned updates, conflicts, transactions, historical resume, rollback and scaffold migration |
 | `test_research` | Complete toy workflow, recomputation, stale claims, manuscript revisions, budgets, retries and controller recovery |
