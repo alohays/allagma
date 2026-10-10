@@ -36,6 +36,17 @@ campaign is not required for an ordinary contribution. Claims about a model or
 host require evidence for that claim; fixture success must not be described as
 real-host or scientific-quality qualification.
 
+Changes to runtime code, adapters, recipes, example studies, templates, profiles
+or policies run the full offline conformance kit in the required `targeted`
+check. Instruction-only methods keep scoped module checks; context methods and
+their evaluation fixtures also run the comparison tests. Documentation-only
+changes keep link checks. An unreadable Git base selects all offline tests,
+including tooling checks. Test this selection with
+`python3 -m unittest discover -s tools/tests -v` when changing CI or tooling.
+Git paths are read without quoting, and renames retain checks for removed code.
+Base arguments are revisions, so an invalid option-like value also takes the
+full-check fallback. Real Git fixtures cover these boundaries.
+
 Changes to `main` require a pull request, a branch current with `main`, passing
 `targeted` and `build-and-test` checks, and resolved review conversations. The
 current single-maintainer rules require zero approval votes; external changes

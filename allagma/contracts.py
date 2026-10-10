@@ -108,7 +108,11 @@ def validate(value, schema, path="$", *, root=None):
 
 
 def validate_record(record, root=ROOT):
+    if not isinstance(record, dict):
+        raise AllagmaError("Expected an Allagma record object")
     kind = record.get("record_type")
+    if not isinstance(kind, str):
+        raise AllagmaError("Expected a string record_type")
     if kind not in {"StudySpec", "ExperimentSpec", "RunRecord", "AnalysisRecord",
                     "ClaimRecord", "ReviewRecord", "ImprovementRecord", "ContextRecord"}:
         raise AllagmaError(f"Unknown record type: {kind}")
