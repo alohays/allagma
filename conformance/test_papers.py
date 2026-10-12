@@ -254,6 +254,82 @@ class PaperTests(unittest.TestCase):
                     adapter.unpack_archive(archive_path, self.root / f"unpacked-{case}")
         self.assertFalse((self.root / "escaped.txt").exists())
 
+    def test_copy_admission_retains_the_validated_evidence_digest(self):
+        for label in ("analysis", "figure"):
+            with self.subTest(kind=label):
+                study = self.root / f"input-{label}"
+                study.mkdir()
+                config = paper_fixture(study)
+                path = study / "analysis.json"
+                original = path.read_bytes()
+                if label == "figure":
+                    path = study / "fixture.png"
+                    path.write_bytes(b"Structural figure fixture; no rendering claim.")
+                    config["evidence"]["plot"] = {"path": path.name, "sha256": file_hash(path)}
+                    config["figures"] = [{"id": "plot", "evidence": "plot", "caption": "Fixture only."}]
+                    results = study / "results.tex"
+                    results.write_text(results.read_text() + r"\AllagmaFigure{plot}" + "\n")
+                    bind_reviews(study, config)
+                validate = adapter.papers.validate
+
+                def validate_then_change(*args, **kwargs):
+                    value = validate(*args, **kwargs)
+                    path.write_bytes(path.read_bytes() + b" ")
+                    return value
+
+                destination = self.root / f"after-validation-{label}"
+                with patch.object(adapter.papers, "validate", side_effect=validate_then_change):
+                    with self.assertRaisesRegex(AllagmaError, "validated digest"):
+                        adapter.assemble(study, config, destination)
+                self.assertEqual(list(destination.iterdir()), [])
+                if label == "analysis":
+                    self.assertEqual(path.read_bytes(), original + b" ")
+                    path.write_bytes(original)
+
+    def test_copy_rechecks_the_opened_file_after_admission(self):
+        # A separate bounded process makes a FIFO regression a test failure,
+        # not an indefinitely blocked conformance runner.
+        script = r"""
+from pathlib import Path
+import os, sys
+from unittest.mock import patch
+from allagma.files import AllagmaError
+from allagma.research import _load
+adapter = _load('copy_race_adapter', Path(sys.argv[1]))
+root, kind = Path(sys.argv[2]), sys.argv[3]
+source, other, target = root/'source.txt', root/'other.txt', root/'output.txt'
+source.write_bytes(b'hello'); other.write_bytes(b'hello')
+original = adapter.source_size
+
+def swap_after_stat(path):
+    size = original(path)
+    source.unlink()
+    if kind == 'symlink':
+        source.symlink_to(other)
+    else:
+        os.mkfifo(source)
+    return size
+
+with patch.object(adapter, 'source_size', side_effect=swap_after_stat):
+    try:
+        adapter.copy_new(source, target, size=5)
+    except AllagmaError:
+        assert not target.exists()
+    else:
+        raise AssertionError('A non-regular or symlink replacement was accepted')
+"""
+        for kind in ("symlink", "fifo"):
+            with self.subTest(kind=kind):
+                root = self.root / kind
+                root.mkdir()
+                try:
+                    result = subprocess.run([sys.executable, "-B", "-c", script,
+                        str(adapter.ROOT / "package.py"), str(root), kind],
+                        cwd=ROOT, capture_output=True, text=True, timeout=5)
+                except subprocess.TimeoutExpired:
+                    self.fail("Copy blocked opening a FIFO after admission")
+                self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
     def test_compiled_bibliography_and_updated_provenance_are_admitted_together(self):
         baseline = self.root / "baseline"
         adapter.assemble(self.study, self.config, baseline)

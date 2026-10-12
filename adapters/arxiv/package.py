@@ -4,6 +4,7 @@ from __future__ import annotations
 from copy import deepcopy
 import gzip
 import io
+import os
 from pathlib import Path, PurePosixPath
 import shutil
 import stat
@@ -20,8 +21,6 @@ from allagma.research import _load
 
 ROOT = Path(__file__).resolve().parent
 MAX_SOURCE_BYTES = 25 * 1024 ** 2
-
-
 MAX_SOURCE_FILES = 1000
 
 
@@ -34,15 +33,24 @@ def check_budget(size, count):
 
 def source_size(path):
     path = Path(path)
-    require(not path.is_symlink() and stat.S_ISREG(path.stat().st_mode),
-            f"Paper sources must be regular files: {path}")
-    return path.stat().st_size
+    metadata = path.lstat()
+    require(stat.S_ISREG(metadata.st_mode), f"Paper sources must be regular files: {path}")
+    return metadata.st_size
 
 
 def read_admitted(path, size, expected=None):
     require(source_size(path) == size, f"Paper source changed after admission: {path}")
-    with Path(path).open("rb") as stream:
-        data = stream.read(size + 1)
+    # Check the opened descriptor as well as the pathname. A replacement between
+    # stat and open must not follow a symlink or wait for a FIFO writer.
+    try:
+        descriptor = os.open(path, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK)
+        with os.fdopen(descriptor, "rb") as stream:
+            metadata = os.fstat(stream.fileno())
+            require(stat.S_ISREG(metadata.st_mode) and metadata.st_size == size,
+                    f"Paper source changed after admission: {path}")
+            data = stream.read(size + 1)
+    except OSError as exc:
+        raise AllagmaError(f"Cannot safely read admitted paper source: {path}: {exc}") from exc
     require(len(data) == size and (expected is None or digest_bytes(data) == expected),
             f"Paper source changed after admission: {path}")
     return data
@@ -71,7 +79,7 @@ class SourcePlan:
         self.entries = {}
         self.size = 0
 
-    def add(self, name, *, data=None, source=None):
+    def add(self, name, *, data=None, source=None, expected=None):
         # The same confinement and collision rules apply to generated and copied files.
         require(isinstance(name, str) and name and "\\" not in name and
                 not PurePosixPath(name).is_absolute() and ".." not in PurePosixPath(name).parts and
@@ -82,6 +90,8 @@ class SourcePlan:
         size = len(data) if data is not None else source_size(source)
         check_budget(self.size + size, len(self.entries) + 1)
         sha = digest_bytes(data if data is not None else read_admitted(source, size))
+        require(expected is None or sha == expected,
+                f"Paper source differs from its validated digest: {name}; use a new paper revision")
         self.entries[name] = {"data": data, "source": source, "size": size, "sha256": sha}
         self.size += size
 
@@ -147,7 +157,7 @@ def assemble(study, config, destination):
         for item in template["files"]:
             path = confined(template_root, item["path"])
             require(path.suffix in (".sty", ".cls", ".bst") and file_hash(path) == item["sha256"], "Invalid or changed custom template style")
-            plan.add(item["path"], source=path)
+            plan.add(item["path"], source=path, expected=item["sha256"])
     replacements = {"TITLE": tex_escape(config["title"]), "AUTHORS": value["authors_tex"],
                     "DATE": tex_escape(config["date"]), "BODY": body,
                     "APPENDICES": "\\appendix\n" + "\n".join(appendix_body) if appendix_body else ""}
@@ -168,7 +178,8 @@ def assemble(study, config, destination):
             "The ancillary reference map records the reviewed materials and "
             "the limits of literature coverage.\n")
     for figure in value["figures"].values():
-        plan.add(figure["target"], source=figure["source_path"])
+        plan.add(figure["target"], source=figure["source_path"],
+                 expected=config["evidence"][figure["evidence"]]["sha256"])
     plan.add("anc/build.py", source=ROOT / "build.py")
     reference_directory = confined(study, config["references"])
     for original, target in (("assets.json", "reference-assets.json"), ("retrieval.json", "reference-retrieval.json")):
@@ -198,7 +209,7 @@ def assemble(study, config, destination):
         else:
             require(path.suffix in (".json", ".md", ".txt", ".csv"), "Put raw model/data/reference downloads in the cache, not the paper archive")
             target = f"anc/evidence/{key}{path.suffix}"
-            plan.add(target, source=path)
+            plan.add(target, source=path, expected=config["evidence"][key]["sha256"])
             evidence_copies[key] = target
     plan.text("anc/README.md", "# Portable paper sources\n\n"
         "Compile from the unpacked archive root with an existing TeX distribution:\n\n"
