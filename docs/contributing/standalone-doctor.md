@@ -33,14 +33,39 @@ in bundles have recovery guidance that preserves frozen content. See the
 The [baseline reproduction](evidence/standalone-doctor/before.json) uses the
 original diagnostics at main `174e200` in a newly exported helper: `verify`
 exits 0 but `doctor` exits 1 solely for `toy-resources`, preserving bytes and
-mtimes. The [current reports](evidence/standalone-doctor/after.json) show source,
+mtimes. The [initial implementation reports](evidence/standalone-doctor/after.json) show source,
 bundle and current-central-helper inspection routes all passing. The
 [diagnostic tests](evidence/standalone-doctor/diagnostics.log) and
 [validation receipt](evidence/standalone-doctor/validation.json) record the
-11 focused tests, 195 passing full conformance tests, environment, commands and
+initial 11 focused tests and 195 passing full conformance tests, environment, commands and
 implementation digests. Catalog and canonical documentation checks also pass.
 
 This is agent-assisted implementation and self-review. Fixtures do not qualify
 a native host or scientific result. Existing studies, bundles, evaluations,
 media, history and model configuration are unchanged. This independent PR leaves
 the paper-source repair to #26 and remains unmerged for review.
+
+## Self-audit before handoff — 12 October 2026
+
+A second audit of PR #27 at `9a21fce` found two untested faults. A relocated
+bundle with a missing, malformed or wrong-shape registry was treated as a
+source checkout, producing an inappropriate central-toy recovery hint. A
+selected catalog with an empty module mapping passed after checking zero
+modules. Both are reproduced by actual helper invocations in disposable exports.
+
+The repaired diagnostic reports unknown distribution when a relocated catalog
+cannot identify it, fails the catalog check, and explicitly leaves the central
+toy check unassessed. Its recovery hint forbids adding files to a frozen bundle.
+Empty module mappings fail admission. Normal source-checkout and bundle scopes
+retain their checks and read-only guarantees.
+
+The [before log](evidence/standalone-doctor/self-audit/before.log) records four
+expected failing assertions across two tests on the reviewed head. The
+[after log](evidence/standalone-doctor/self-audit/after.log) passes all 13
+diagnostic tests, including bytes/mtime preservation for the new faults. Full
+offline conformance passes 197 tests. The
+[audit receipt](evidence/standalone-doctor/self-audit/validation.json) records
+commands, environment and repaired code digests. Earlier receipts above remain
+historical evidence rather than being overwritten. GitHub had no external
+reviews or unresolved conversations at this audit; this is same-assistant
+self-review, not independent approval. The PR remains regular and unmerged.
