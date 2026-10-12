@@ -101,7 +101,10 @@ Malformed prerequisite documents, including wrong JSON shapes or excessive
 nesting, appear as failed checks with remedies; other checks still run.
 
 A selected bundle catalog is reported as `standalone-bundle`; a central catalog
-is `source-checkout`. Bundles carry their selected modules and helper, while the
+is `source-checkout`. If a relocated catalog is missing or unreadable, its
+distribution is `unknown`: the catalog check fails and the toy check is explicitly
+unassessed until the distribution can be identified. An empty module mapping
+fails instead of passing with zero checked modules. Bundles carry their selected modules and helper, while the
 study owns its science files. The bundle route therefore lists `toy-resources`
 in `excluded_checks` with a reason instead of requiring the central checkout's
 `examples/toy-study`. Missing central toy files still fail a source-checkout

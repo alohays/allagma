@@ -129,6 +129,45 @@ class Diagnostics(WorkspaceTest):
         self.assertEqual({c["id"] for c in report["checks"]}, {"python", "platform", "catalog"})
         self.assertEqual([c["id"] for c in report["excluded_checks"]], ["toy-resources"])
 
+    def test_damaged_relocated_catalog_reports_unknown_scope_without_checkout_remedy(self):
+        study = create_toy(ROOT, self.work / "study")
+        bundle = bundles.bundle_path(study, bundles.verify_study(study))
+        for label, data in (("missing", None), ("malformed", "{"), ("wrong-shape", "[]")):
+            with self.subTest(case=label):
+                relocated = self.work / f"relocated {label}"
+                shutil.copytree(bundle, relocated)
+                registry = relocated / "registry.json"
+                if data is None:
+                    registry.unlink()
+                else:
+                    registry.write_text(data)
+                before = inventory(relocated)
+                mtimes = {p: p.stat().st_mtime_ns for p in relocated.rglob("*")}
+                process, report = self.run_helper(relocated / "tools/allagma.py")
+                self.assertEqual(process.returncode, 1, process.stdout)
+                self.assertEqual(report["distribution"], "unknown")
+                self.assertEqual({c["id"] for c in report["checks"] if c["status"] == "fail"}, {"catalog"})
+                self.assertIn("cannot be determined", report["excluded_checks"][0]["reason"])
+                remedy = next(c["remedy"] for c in report["checks"] if c["id"] == "catalog")
+                self.assertIn("never insert files into or rewrite a locked bundle", remedy)
+                self.assertNotIn("Restore examples/toy-study", str(report))
+                self.assertEqual(inventory(relocated), before)
+                self.assertEqual({p: p.stat().st_mtime_ns for p in relocated.rglob("*")}, mtimes)
+
+    def test_empty_selected_catalog_cannot_pass_by_checking_zero_modules(self):
+        study = create_toy(ROOT, self.work / "study")
+        bundle = bundles.bundle_path(study, bundles.verify_study(study))
+        relocated = self.work / "empty selected catalog"
+        shutil.copytree(bundle, relocated)
+        registry = read_json(relocated / "registry.json")
+        registry["modules"] = {}
+        write_json(relocated / "registry.json", registry)
+        process, report = self.run_helper(relocated / "tools/allagma.py")
+        self.assertEqual(process.returncode, 1, process.stdout)
+        self.assertEqual(report["distribution"], "standalone-bundle")
+        self.assertEqual({c["id"] for c in report["checks"] if c["status"] == "fail"}, {"catalog"})
+        self.assertIn("nonempty", next(c["message"] for c in report["checks"] if c["id"] == "catalog"))
+
     def test_incomplete_source_reports_independent_failures_and_remedies(self):
         source = self.source_copy()
         (source / "methods/allagma-context-active-brief/select.py").unlink()

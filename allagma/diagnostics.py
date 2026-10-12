@@ -21,9 +21,12 @@ def distribution_kind(source):
     try:
         registry = read_json(source / "registry.json")
     except (AllagmaError, OSError, ValueError, RecursionError):
+        return "unknown"
+    if isinstance(registry, dict) and "composition" in registry:
+        return "standalone-bundle"
+    if isinstance(registry, dict) and isinstance(registry.get("modules"), dict) and registry["modules"]:
         return "source-checkout"
-    return ("standalone-bundle" if isinstance(registry, dict) and "composition" in registry
-            else "source-checkout")
+    return "unknown"
 
 
 def diagnose(source, *, study=None, scope="offline", codex=None):
@@ -58,13 +61,17 @@ def diagnose(source, *, study=None, scope="offline", codex=None):
         "Run the offline core on macOS or Linux; other platforms are not qualified.")
 
     def catalog():
-        checked = Catalog(source).check()
+        catalog = Catalog(source)
+        if (not isinstance(catalog.registry, dict) or
+                not isinstance(catalog.registry.get("modules"), dict) or not catalog.registry["modules"]):
+            raise AllagmaError("Expected a catalog object with a nonempty modules mapping")
+        checked = catalog.check()
         return f"{len(checked)} catalog modules checked."
 
-    catalog_remedy = ("Recover an intact exported study from its retained copy or owner. "
+    catalog_remedy = ("Recover an intact source checkout or exported study from its retained copy or owner. "
                       "For an intentional change, use the update workflow from a source checkout; "
                       "never insert files into or rewrite a locked bundle."
-                      if distribution == "standalone-bundle" else
+                      if distribution != "source-checkout" else
                       "Restore the source checkout's declared modules and resources; see the first-study sparse-checkout list.")
     inspect("catalog", catalog, catalog_remedy)
 
@@ -79,10 +86,15 @@ def diagnose(source, *, study=None, scope="offline", codex=None):
 
     if distribution == "source-checkout":
         inspect("toy-resources", toy, "Restore examples/toy-study from the same checkout before running the toy.")
-    else:
+    elif distribution == "standalone-bundle":
         excluded.append({"id": "toy-resources", "reason":
             "Central examples/toy-study resources are outside standalone-bundle scope. "
             "Science files belong to the study; this report does not execute or validate its protocol."})
+    else:
+        excluded.append({"id": "toy-resources", "reason":
+            "Distribution cannot be determined from the damaged or missing catalog. "
+            "Central toy resources were not assessed; resolve the catalog failure first. "
+            "Never insert files into or rewrite a locked bundle."})
 
     if study is not None:
         def lock():
