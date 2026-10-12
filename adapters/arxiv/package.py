@@ -4,15 +4,16 @@ from __future__ import annotations
 from copy import deepcopy
 import gzip
 import io
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 import shutil
+import stat
 import subprocess
 import sys
 import tarfile
 import tempfile
 
 from allagma import papers, references
-from allagma.files import (AllagmaError, confined, file_hash, inventory, read_json,
+from allagma.files import (AllagmaError, canonical, confined, digest_bytes, file_hash, read_json,
                            write_bytes, write_json, write_text)
 from allagma.references import require, tex_escape
 from allagma.research import _load
@@ -21,15 +22,100 @@ ROOT = Path(__file__).resolve().parent
 MAX_SOURCE_BYTES = 25 * 1024 ** 2
 
 
-def copy_new(source, target):
-    """Copied material must never replace another source or generated file."""
+MAX_SOURCE_FILES = 1000
+
+
+def check_budget(size, count):
+    require(size <= MAX_SOURCE_BYTES and count <= MAX_SOURCE_FILES,
+            f"Paper source package exceeds the {MAX_SOURCE_BYTES}-byte / "
+            f"{MAX_SOURCE_FILES}-file integration ceiling; reduce declared sources "
+            "and use a new paper revision/output directory. Failed revisions are retained.")
+
+
+def source_size(path):
+    path = Path(path)
+    require(not path.is_symlink() and stat.S_ISREG(path.stat().st_mode),
+            f"Paper sources must be regular files: {path}")
+    return path.stat().st_size
+
+
+def read_admitted(path, size, expected=None):
+    require(source_size(path) == size, f"Paper source changed after admission: {path}")
+    with Path(path).open("rb") as stream:
+        data = stream.read(size + 1)
+    require(len(data) == size and (expected is None or digest_bytes(data) == expected),
+            f"Paper source changed after admission: {path}")
+    return data
+
+
+def copy_new(source, target, *, size=None, expected=None):
+    """Bound a copy to its admitted size; never replace an existing target."""
     target = Path(target)
+    require(not target.exists() and not target.is_symlink(),
+            f"Paper source path collision: {target}")
+    size = source_size(source) if size is None else size
+    check_budget(size, 1)
+    data = read_admitted(source, size, expected)
     target.parent.mkdir(parents=True, exist_ok=True)
     try:
-        with target.open("xb") as output, Path(source).open("rb") as incoming:
-            shutil.copyfileobj(incoming, output)
+        with target.open("xb") as output:
+            output.write(data)
     except FileExistsError as exc:
         raise AllagmaError(f"Paper source path collision: {target}") from exc
+
+
+class SourcePlan:
+    """Admit the complete expanded source set before copying any payload."""
+
+    def __init__(self):
+        self.entries = {}
+        self.size = 0
+
+    def add(self, name, *, data=None, source=None):
+        # The same confinement and collision rules apply to generated and copied files.
+        require(isinstance(name, str) and name and "\\" not in name and
+                not PurePosixPath(name).is_absolute() and ".." not in PurePosixPath(name).parts and
+                PurePosixPath(name).as_posix() == name, f"Invalid paper source path: {name}")
+        require(all(name != old and not name.startswith(old + "/") and
+                    not old.startswith(name + "/") for old in self.entries),
+                f"Paper source path collision: {name}")
+        size = len(data) if data is not None else source_size(source)
+        check_budget(self.size + size, len(self.entries) + 1)
+        sha = digest_bytes(data if data is not None else read_admitted(source, size))
+        self.entries[name] = {"data": data, "source": source, "size": size, "sha256": sha}
+        self.size += size
+
+    def text(self, name, value):
+        self.add(name, data=value.encode())
+
+    def json(self, name, value):
+        self.add(name, data=canonical(value))
+
+    def inventory(self):
+        return {name: item["sha256"] for name, item in sorted(self.entries.items())}
+
+    def data(self, name):
+        item = self.entries[name]
+        return (item["data"] if item["data"] is not None else
+                read_admitted(item["source"], item["size"], item["sha256"]))
+
+    def write(self, destination):
+        for name, item in self.entries.items():
+            target = confined(destination, name)
+            if item["data"] is None:
+                copy_new(item["source"], target, size=item["size"], expected=item["sha256"])
+            else:
+                write_bytes(target, item["data"], immutable=True)
+
+
+def source_plan(source, *, exclude=()):
+    plan = SourcePlan()
+    for path in sorted(Path(source).rglob("*")):
+        name = path.relative_to(source).as_posix()
+        require(not path.is_symlink(), f"Paper sources must be regular files: {name}")
+        if not path.is_dir() and name not in exclude:
+            plan.add(name, source=path)
+    return plan
 
 
 def assemble(study, config, destination):
@@ -39,19 +125,20 @@ def assemble(study, config, destination):
         return value
     require(not destination.exists(), "Use a new paper revision/output directory")
     destination.mkdir(parents=True)
+    plan = SourcePlan()
     for name in papers.SECTIONS:
-        write_text(destination / f"sections/{name}.tex", value["sections"][name], immutable=True)
+        plan.text(f"sections/{name}.tex", value["sections"][name])
     body = "\n".join(r"\section{" + name.replace("-", " ").capitalize() + "}\n" +
                      r"\input{sections/" + name + ".tex}" for name in papers.SECTIONS if name != "abstract")
     appendix_body = []
     for i, appendix in enumerate(config.get("appendices", [])):
         name = f"sections/appendix-{i+1}.tex"
-        write_text(destination / name, confined(study, appendix["path"]).read_text(), immutable=True)
+        plan.text(name, confined(study, appendix["path"]).read_text())
         appendix_body.append(r"\section{" + tex_escape(appendix["title"]) + "}\n" + r"\input{" + name + "}")
     template = config.get("template", {"name": "allagma-preprint"})
     if template.get("name") == "allagma-preprint":
         main = (ROOT / "main.tex.in").read_text()
-        copy_new(ROOT / "allagma-preprint.sty", destination / "allagma-preprint.sty")
+        plan.add("allagma-preprint.sty", source=ROOT / "allagma-preprint.sty")
     else:
         require(template.get("name") == "custom" and template.get("files"), "Choose the provided preprint template or declare custom template files")
         template_root = confined(study, template["directory"])
@@ -60,9 +147,7 @@ def assemble(study, config, destination):
         for item in template["files"]:
             path = confined(template_root, item["path"])
             require(path.suffix in (".sty", ".cls", ".bst") and file_hash(path) == item["sha256"], "Invalid or changed custom template style")
-            target = confined(destination, item["path"])
-            target.parent.mkdir(parents=True, exist_ok=True)
-            copy_new(path, target)
+            plan.add(item["path"], source=path)
     replacements = {"TITLE": tex_escape(config["title"]), "AUTHORS": value["authors_tex"],
                     "DATE": tex_escape(config["date"]), "BODY": body,
                     "APPENDICES": "\\appendix\n" + "\n".join(appendix_body) if appendix_body else ""}
@@ -71,43 +156,39 @@ def assemble(study, config, destination):
         main = main.replace("@@" + key + "@@", replacement)
     pdf_authors = "Anonymous draft" if config["authors"]["mode"] == "anonymous" else "; ".join(a["name"] for a in config["authors"]["entries"])
     main = main.replace("@@PDF_AUTHORS@@", tex_escape(pdf_authors))
-    write_text(destination / "main.tex", main, immutable=True)
-    write_text(destination / "evidence-macros.tex", papers.macros(value), immutable=True)
-    write_text(destination / "references.bib", references.bibliography(value["literature"]), immutable=True)
+    plan.text("main.tex", main)
+    plan.text("evidence-macros.tex", papers.macros(value))
+    plan.text("references.bib", references.bibliography(value["literature"]))
     if not value["citations"]:
         # A provided-only known-answer study may legitimately cite no external
         # work. Keep the requested References section explicit without inventing
         # a citation or delivering an archive that depends on a missing bbl.
-        write_text(destination / "main.bbl", r"\section*{References}" + "\n" +
+        plan.text("main.bbl", r"\section*{References}" + "\n" +
             "No external bibliographic sources are cited in this manuscript. "
             "The ancillary reference map records the reviewed materials and "
-            "the limits of literature coverage.\n", immutable=True)
+            "the limits of literature coverage.\n")
     for figure in value["figures"].values():
-        target = destination / figure["target"]
-        target.parent.mkdir(parents=True, exist_ok=True)
-        copy_new(figure["source_path"], target)
-    (destination / "anc").mkdir(exist_ok=True)
-    copy_new(ROOT / "build.py", destination / "anc/build.py")
+        plan.add(figure["target"], source=figure["source_path"])
+    plan.add("anc/build.py", source=ROOT / "build.py")
     reference_directory = confined(study, config["references"])
     for original, target in (("assets.json", "reference-assets.json"), ("retrieval.json", "reference-retrieval.json")):
         if (reference_directory / original).is_file():
-            copy_new(reference_directory / original, destination / "anc" / target)
+            plan.add("anc/" + target, source=reference_directory / original)
     literature = deepcopy(value["literature"])
     note_copies = {}
     for record in literature["records"]:
         if record.get("note"):
             original = record["note"]
             record["note"] = f"reference-notes/{record['id']}/{Path(original).name}"
-            target = confined(destination / "anc", record["note"])
-            copy_new(confined(reference_directory, original), target)
+            plan.add("anc/" + record["note"], source=confined(reference_directory, original))
             note_copies[record["id"]] = {"original": original, "packaged": "anc/" + record["note"]}
-    write_json(destination / "anc/reference-map.json", literature, immutable=True)
-    write_text(destination / "anc/reference-index.md", references.render_index(literature,
-        map_path="reference-map.json", bibliography_path="../references.bib"), immutable=True)
-    write_json(destination / "anc/paper.json", config, immutable=True)
-    write_json(destination / "anc/claim-result-links.json", {"claims": config["claims"], "values": value["value_provenance"],
+    plan.json("anc/reference-map.json", literature)
+    plan.text("anc/reference-index.md", references.render_index(literature,
+        map_path="reference-map.json", bibliography_path="../references.bib"))
+    plan.json("anc/paper.json", config)
+    plan.json("anc/claim-result-links.json", {"claims": config["claims"], "values": value["value_provenance"],
         "tables": {key: {k: v for k, v in table.items() if k != "rendered_rows"} for key, table in value["tables"].items()},
-        "figures": config.get("figures", []), "citations": value["citations"]}, immutable=True)
+        "figures": config.get("figures", []), "citations": value["citations"]})
     figure_evidence = {fig["evidence"]: fig["target"] for fig in value["figures"].values()}
     evidence_copies = {}
     for key, source in value["evidence_paths"].items():
@@ -117,11 +198,9 @@ def assemble(study, config, destination):
         else:
             require(path.suffix in (".json", ".md", ".txt", ".csv"), "Put raw model/data/reference downloads in the cache, not the paper archive")
             target = f"anc/evidence/{key}{path.suffix}"
-            target_path = confined(destination, target)
-            target_path.parent.mkdir(parents=True, exist_ok=True)
-            copy_new(path, target_path)
+            plan.add(target, source=path)
             evidence_copies[key] = target
-    write_text(destination / "anc/README.md", "# Portable paper sources\n\n"
+    plan.text("anc/README.md", "# Portable paper sources\n\n"
         "Compile from the unpacked archive root with an existing TeX distribution:\n\n"
         "```sh\npython3 anc/build.py --output /path/to/new-clean-build\n```\n\n"
         "The builder verifies the source manifest and compiles in an empty temporary directory. "
@@ -137,30 +216,33 @@ def assemble(study, config, destination):
         "arXiv requirements were checked on 2026-10-09: https://info.arxiv.org/help/submit_tex.html "
         "and https://info.arxiv.org/help/faq/texlive.html. Supported TeX releases at that check "
         "were 2023 and 2025, with 2025 the default. The build receipt reports the actual local "
-        "compiler and its scope; local success is not arXiv server validation or peer review.\n", immutable=True)
+        "compiler and its scope; local success is not arXiv server validation or peer review.\n")
     provenance = {"format": "allagma-paper-provenance-v1", "title": config["title"], "authors": config["authors"],
                   "template": template, "original_evidence": config["evidence"], "evidence_copies": evidence_copies,
                   "original_reference_map_sha256": file_hash(reference_directory / "map.json"),
                   "reference_note_copies": note_copies,
-                  "reference_map_sha256": file_hash(destination / "anc/reference-map.json"),
-                  "source_files": inventory(destination), "submission": "not-submitted",
+                  "reference_map_sha256": plan.inventory()["anc/reference-map.json"],
+                  "source_files": plan.inventory(), "submission": "not-submitted",
                   "review": config["review"], "scope": value["scope"]}
-    size = sum(p.stat().st_size for p in destination.rglob("*") if p.is_file())
-    require(size <= MAX_SOURCE_BYTES, "Paper source package exceeds the 25 MiB integration ceiling")
-    write_json(destination / "anc/provenance.json", provenance, immutable=True)
+    plan.json("anc/provenance.json", provenance)
+    plan.write(destination)
+    require(source_plan(destination).inventory() == plan.inventory(), "Paper sources changed during assembly")
     return provenance
 
 
 def archive_sources(source, target):
     source, target = Path(source), Path(target)
     require(not target.exists(), "Do not overwrite a prior source archive")
+    plan = source_plan(source)
+    require(not target.resolve().is_relative_to(source.resolve()), "Source archive must be outside its source directory")
     with target.open("xb") as raw, gzip.GzipFile(filename="", mode="wb", fileobj=raw, mtime=0) as compressed:
         with tarfile.open(fileobj=compressed, mode="w|") as archive:
-            for name in sorted(inventory(source)):
-                data = (source / name).read_bytes()
+            for name in sorted(plan.entries):
+                data = plan.data(name)
                 member = tarfile.TarInfo(name)
                 member.size, member.mode, member.mtime = len(data), 0o644, 0
                 archive.addfile(member, io.BytesIO(data))
+    require(source_plan(source).inventory() == plan.inventory(), "Paper sources changed during archiving")
 
 
 def unpack_archive(archive_path, target):
@@ -172,7 +254,7 @@ def unpack_archive(archive_path, target):
             require(member.isfile() and member.name not in names, "Portable paper archive must contain unique regular files")
             names.add(member.name)
             total += member.size
-            require(total <= MAX_SOURCE_BYTES and len(names) <= 1000, "Paper archive expansion limit exceeded")
+            require(total <= MAX_SOURCE_BYTES and len(names) <= MAX_SOURCE_FILES, "Paper archive expansion limit exceeded")
             path = confined(target, member.name)
             write_bytes(path, archive.extractfile(member).read(), immutable=True)
     return target
@@ -187,11 +269,18 @@ def build(study, config, destination, *, engine="pdflatex", timeout=60):
     assemble(study, config, source)
     builder = _load("allagma_clean_paper_builder", ROOT / "build.py")
     initial = builder.compile_sources(source, destination / "initial-build", engine=engine, timeout=timeout)
-    if (destination / "initial-build/main.bbl").exists():
-        shutil.copyfile(destination / "initial-build/main.bbl", source / "main.bbl")
+    bibliography = destination / "initial-build/main.bbl"
+    replaced = ("anc/provenance.json", "main.bbl") if bibliography.exists() else ("anc/provenance.json",)
+    final = source_plan(source, exclude=replaced)
+    if bibliography.exists():
+        final.add("main.bbl", source=bibliography)
     provenance = read_json(source / "anc/provenance.json")
-    provenance["source_files"] = {name: value for name, value in inventory(source).items() if name != "anc/provenance.json"}
-    write_json(source / "anc/provenance.json", provenance)
+    provenance["source_files"] = final.inventory()
+    final.json("anc/provenance.json", provenance)
+    # Admit the bibliography and its new manifest entry together before either write.
+    if bibliography.exists():
+        write_bytes(source / "main.bbl", final.data("main.bbl"))
+    write_bytes(source / "anc/provenance.json", final.data("anc/provenance.json"))
     archive = destination / "paper-source.tar.gz"
     archive_sources(source, archive)
     with tempfile.TemporaryDirectory(prefix="allagma-paper-unpack-", dir="/tmp") as temporary:
