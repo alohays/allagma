@@ -1,0 +1,26 @@
+{
+  "paper": {
+    "limit_bytes": 26214400,
+    "boundary_admission": "accepted",
+    "expanded_bytes": 26218229,
+    "round_trip": "Paper archive expansion limit exceeded",
+    "inputs_unchanged": true,
+    "oversized_admission": "Paper source package exceeds the 25 MiB integration ceiling",
+    "oversized_payload_copied": 26214401,
+    "oversized_inputs_unchanged": true
+  },
+  "doctor": {
+    "doctor_exit": 1,
+    "failed_checks": [
+      "toy-resources"
+    ],
+    "doctor_bytes_and_mtimes_unchanged": true,
+    "verify_exit": 0,
+    "start_exit": 0,
+    "run_exit": 0,
+    "execution_status": "paused",
+    "attempts": [
+      "succeeded"
+    ]
+  }
+}

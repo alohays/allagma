@@ -1,5 +1,9 @@
 # PR #20: three review and implementation iterations
 
+The owner subsequently merged this work as `174e200` and closed #18. This
+document retains the pre-merge review/implementation record; the
+[current triage](post-pr20-triage.md) tracks subsequent issues and claims.
+
 The owner requested review of every currently open PR followed by three
 review/implementation iterations. On 10 October 2026, the open set contained
 only [#20](https://github.com/alohays/allagma/pull/20), initially at

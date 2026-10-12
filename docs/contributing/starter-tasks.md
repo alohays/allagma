@@ -8,17 +8,13 @@ queue; read the [claim and review process](workflow.md) before starting.
 
 ## Available work
 
-1. [#19: Document a runnable toy-to-paper workflow](https://github.com/alohays/allagma/issues/19).
-   Start with `examples/toy-study/` and the first-study and paper guides. Bind
-   actual toy values and claims to a new paper revision, with explicit coverage
-   and scoped reviews. Python/research-documentation familiarity is useful;
-   TeX is only needed for the separate optional build.
-2. [#7: Qualify Linux/Python 3.13 onboarding](https://github.com/alohays/allagma/issues/7).
+1. [#7: Qualify Linux/Python 3.13 onboarding](https://github.com/alohays/allagma/issues/7).
    Start with `docs/guides/first-study.md` and `conformance/`. Record the literal
    clean-checkout tutorial with a distinct interpreter and paths with spaces.
    Requires local Linux/Python 3.13, not a native model or GPU.
 
-Both are unassigned. The order reflects the available implementation work.
+This qualification remains unassigned. Implementations for #19, #22 and #23
+await review in the PRs below; do not start duplicate work.
 
 Comment on the issue with your scope and environment. A maintainer confirms the
 claim and assignment before overlapping implementation. No paid model access,
@@ -26,17 +22,26 @@ GPU, response-time guarantee or release deadline is involved. Submit concise
 sanitized evidence with its exact tested commit. A documentation change needs a
 rendered review and link check, not a test that merely repeats its prose.
 
-The [triage record](issue-triage.md) explains why only #18 and #19 were added.
-These available tasks carry `help wanted`; their prerequisites make them more
-involved than a good first issue. Claimed #6 has no newcomer-discovery labels.
+The [latest triage](post-pr20-triage.md) explains why only #22 and #23 were added.
+The available qualification carries `help wanted`; its prerequisites make it
+more involved than a good first issue. Claimed #6 has no newcomer-discovery labels.
 
 ## Awaiting owner review
 
-[#18: Run adapter regressions in the required check](https://github.com/alohays/allagma/issues/18)
-is assigned to `alohays`. [PR #20](https://github.com/alohays/allagma/pull/20)
-appeared during triage and proposes the repair. Review its acceptance criteria
-before closure; do not begin a duplicate implementation. This issue has no
-`help wanted` label while it awaits review.
+[#19: runnable toy-to-paper workflow](https://github.com/alohays/allagma/issues/19)
+is assigned to `alohays` and implemented in
+[draft PR #25](https://github.com/alohays/allagma/pull/25). Its retained evidence
+covers actual toy results, explicit attribution, scoped review revisions and
+the optional TeX rebuild. The issue remains open pending review and merge;
+do not start a duplicate implementation.
+
+[#22: complete paper-source size admission](https://github.com/alohays/allagma/issues/22)
+is implemented in [PR #26](https://github.com/alohays/allagma/pull/26), with
+boundary regressions, bounded copies and a verified real-TeX archive rebuild.
+[#23: standalone study diagnostics](https://github.com/alohays/allagma/issues/23)
+is implemented in [PR #27](https://github.com/alohays/allagma/pull/27), with
+actual exported-helper checks and read-only failure handling. Both PRs are
+regular and open for owner review; their features are not yet on main.
 
 ## Claimed work
 
@@ -47,6 +52,12 @@ coordinate with the assignee and preserve the figure and results. The stated
 Windows/Node environment is suitable for this documentation task.
 
 ## Merged contributor improvements
+
+[#18: required adapter regressions](https://github.com/alohays/allagma/issues/18)
+is complete through [#20](https://github.com/alohays/allagma/pull/20). The
+[three-iteration review](pr20-review-loops.md) records 192 conformance tests,
+19 tooling tests and the actual selected-failure proof. No duplicate repair or
+owner-review wait remains for that issue.
 
 The initial agent-assisted improvements are merged and available on main:
 [#10: adapted toy/report repair](https://github.com/alohays/allagma/pull/10),
