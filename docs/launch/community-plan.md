@@ -28,9 +28,10 @@ and awaiting owner review.
 has been removed. The [latest triage](../contributing/post-pr20-triage.md) adds
 only [#22: paper-source size admission](https://github.com/alohays/allagma/issues/22)
 and [#23: standalone bundle diagnostics](https://github.com/alohays/allagma/issues/23).
-The three available tasks (#22, #23 and #7) carry `help wanted`; claimed #6
-and owner-review #19 have no newcomer-discovery labels. None needs a paid model
-or GPU.
+Those two implementations now await review in [#26](https://github.com/alohays/allagma/pull/26)
+and [#27](https://github.com/alohays/allagma/pull/27). #7 remains available with
+`help wanted`; #19, #22 and #23 have open implementation PRs and should not
+invite duplicate work. None needs a paid model or GPU.
 
 PRs [#10](https://github.com/alohays/allagma/pull/10),
 [#11](https://github.com/alohays/allagma/pull/11) and

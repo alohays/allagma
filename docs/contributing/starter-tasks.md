@@ -8,21 +8,13 @@ queue; read the [claim and review process](workflow.md) before starting.
 
 ## Available work
 
-1. [#22: Align paper-source size admission with extraction](https://github.com/alohays/allagma/issues/22).
-   Start with `adapters/arxiv/package.py` and the paper conformance fixtures.
-   Count generated source files and bound copies before accepting an archive.
-   The boundary tests need no TeX, model or scientific rerun.
-2. [#23: Diagnose exported studies accurately](https://github.com/alohays/allagma/issues/23).
-   Start with `allagma/diagnostics.py` and the bundled CLI. A healthy standalone
-   study should not fail because source-only toy examples are absent. Preserve
-   read-only behavior and meaningful missing-resource, lock and ownership checks.
-3. [#7: Qualify Linux/Python 3.13 onboarding](https://github.com/alohays/allagma/issues/7).
+1. [#7: Qualify Linux/Python 3.13 onboarding](https://github.com/alohays/allagma/issues/7).
    Start with `docs/guides/first-study.md` and `conformance/`. Record the literal
    clean-checkout tutorial with a distinct interpreter and paths with spaces.
    Requires local Linux/Python 3.13, not a native model or GPU.
 
-All three are unassigned. The order matches the pinned contributor overview;
-#19 is implemented in draft #25 and awaits owner review.
+This qualification remains unassigned. Implementations for #19, #22 and #23
+await review in the PRs below; do not start duplicate work.
 
 Comment on the issue with your scope and environment. A maintainer confirms the
 claim and assignment before overlapping implementation. No paid model access,
@@ -31,8 +23,8 @@ sanitized evidence with its exact tested commit. A documentation change needs a
 rendered review and link check, not a test that merely repeats its prose.
 
 The [latest triage](post-pr20-triage.md) explains why only #22 and #23 were added.
-These available tasks carry `help wanted`; their prerequisites make them more
-involved than a good first issue. Claimed #6 has no newcomer-discovery labels.
+The available qualification carries `help wanted`; its prerequisites make it
+more involved than a good first issue. Claimed #6 has no newcomer-discovery labels.
 
 ## Awaiting owner review
 
@@ -42,6 +34,14 @@ is assigned to `alohays` and implemented in
 covers actual toy results, explicit attribution, scoped review revisions and
 the optional TeX rebuild. The issue remains open pending review and merge;
 do not start a duplicate implementation.
+
+[#22: complete paper-source size admission](https://github.com/alohays/allagma/issues/22)
+is implemented in [PR #26](https://github.com/alohays/allagma/pull/26), with
+boundary regressions, bounded copies and a verified real-TeX archive rebuild.
+[#23: standalone study diagnostics](https://github.com/alohays/allagma/issues/23)
+is implemented in [PR #27](https://github.com/alohays/allagma/pull/27), with
+actual exported-helper checks and read-only failure handling. Both PRs are
+regular and open for owner review; their features are not yet on main.
 
 ## Claimed work
 

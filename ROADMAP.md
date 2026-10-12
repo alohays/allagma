@@ -12,9 +12,9 @@ adapter-regression checks and issue #18 are complete. The
 reproduced boundary issues, #22 and #23, while retaining the existing work:
 
 1. [#22: align paper-source size admission and extraction](https://github.com/alohays/allagma/issues/22).
-   Include generated metadata in the limit and refuse oversized copies early.
+   Implemented in [PR #26](https://github.com/alohays/allagma/pull/26), awaiting review.
 2. [#23: diagnose self-contained exported studies](https://github.com/alohays/allagma/issues/23).
-   Add a standalone diagnostic scope without requiring source-only toy files.
+   Implemented in [PR #27](https://github.com/alohays/allagma/pull/27), awaiting review.
 
 The [#19 toy-to-paper walkthrough](https://github.com/alohays/allagma/issues/19)
 is implemented in [draft PR #25](https://github.com/alohays/allagma/pull/25),
@@ -65,8 +65,8 @@ provides the community entry point.
 | Available · qualification | [#7: Linux/Python 3.13 tutorial](https://github.com/alohays/allagma/issues/7) | Unassigned; help wanted, local CPU only |
 | Merged · confirmed CI gap | [#18: adapter regression selection](https://github.com/alohays/allagma/issues/18) | [#20](https://github.com/alohays/allagma/pull/20); actual failure propagation and real-Git boundaries verified |
 | Owner review · documentation enhancement | [#19: runnable toy-to-paper walkthrough](https://github.com/alohays/allagma/issues/19) | Assigned to `alohays`; implemented in [draft #25](https://github.com/alohays/allagma/pull/25), with retained command/review/build evidence |
-| Available · source-budget defect | [#22: paper-source size admission](https://github.com/alohays/allagma/issues/22) | Unassigned; offline packaging fixtures and the existing optional TeX check |
-| Available · portability enhancement | [#23: standalone bundle diagnostics](https://github.com/alohays/allagma/issues/23) | Unassigned; extend the source-checkout diagnostic scope to exported studies |
+| Owner review · source-budget defect | [#22: paper-source size admission](https://github.com/alohays/allagma/issues/22) | Implemented in [#26](https://github.com/alohays/allagma/pull/26); review before starting overlapping work |
+| Owner review · portability enhancement | [#23: standalone bundle diagnostics](https://github.com/alohays/allagma/issues/23) | Implemented in [#27](https://github.com/alohays/allagma/pull/27); review before starting overlapping work |
 | Blocked · maintainer decision | [#8: retained historical-audio rights](https://github.com/alohays/allagma/issues/8) | Outside the engineering milestone; public activation does not resolve rights |
 
 The three feature PRs were merged sequentially after final review and passing
