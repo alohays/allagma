@@ -1,0 +1,30 @@
+{
+  "base": "174e200b508b07f022ba36233db54ca0b60e48e1",
+  "implementation_commit": "3fd8a0a4b88489de8a2966acd312f7fff0fd0b82",
+  "environment": {
+    "system": "Darwin",
+    "release": "26.6.2",
+    "architecture": "arm64",
+    "python": "3.11.6"
+  },
+  "checks": {
+    "command": "python3 -B tools/check_changed.py --base origin/main",
+    "exit": 0,
+    "result": [
+      "",
+      "----------------------------------------------------------------------",
+      "Ran 195 tests in 79.456s",
+      "",
+      "OK"
+    ]
+  },
+  "catalog": {
+    "command": "python3 -B -m allagma check",
+    "exit": 0
+  },
+  "code": {
+    "allagma/diagnostics.py": "b2043849f586917072c513dba1950f7513bdf7153f2da448c1910b28490fed13",
+    "conformance/test_diagnostics.py": "668bc47746ab11114462b272b0e25ef73a03cd3b9d734266007c7a277d4f4aad"
+  },
+  "scope": "Read-only prerequisite diagnostics from real source and exported helpers, not scientific or native-host execution/qualification."
+}
