@@ -28,7 +28,7 @@ failures against the original adapter, using the new regressions. The
 [passing paper tests](evidence/paper-source-budget/regressions.log),
 [real entrypoint test](evidence/paper-source-budget/real-tex-entrypoint.log) and
 [validation receipt](evidence/paper-source-budget/validation.json) bind commands,
-environment and implementation digests. Full offline conformance passes 199
+environment and implementation digests. Initial offline conformance passes 199
 tests; all 19 tooling tests and the catalog also pass.
 
 The original default-limit observation remains: 26,214,400 admitted bytes plus
@@ -43,3 +43,33 @@ This is agent-assisted implementation and self-review of packaging behavior.
 Fixture data is not a scientific finding. No native model session, scientific
 campaign, network literature acquisition or submission is part of this repair.
 The PR remains unmerged for review.
+
+## Self-audit before handoff — 12 October 2026
+
+A second audit of PR #26 at `a90ae73` reproduced two gaps. Evidence changed after
+paper validation but before copy-plan admission could acquire a new package
+digest while retaining the old declared evidence digest. This affected both
+ordinary evidence and figures. A path replaced after its size check could also
+become a symlink, or a FIFO that blocked the copy indefinitely.
+
+Copy admission now retains the declared digests for evidence, figures and custom
+styles, in addition to checking the expanded-byte budget. Reading uses a
+nonblocking, no-follow open and checks the opened file descriptor's type and
+size; the existing bounded read and hash check remain. These guards reject the
+reproduced changes before writing the affected payload. They do not constitute
+a general filesystem isolation boundary against an adversarial source owner.
+
+The [before log](evidence/paper-source-budget/self-audit/before.log) retains four
+expected failures across two regressions, including a five-second child-process
+timeout that safely detects the FIFO hang. The
+[after log](evidence/paper-source-budget/self-audit/after.log) passes all 23 paper
+tests. Full offline conformance passes 201 tests; catalog and documentation checks
+also pass. The [actual TeX test](evidence/paper-source-budget/self-audit/real-tex-entrypoint.log)
+and retained EMA paper rebuild pass again. The PDF and source archive have the
+same hashes as the previous local build; sources, attribution and scientific
+results were not changed. The
+[audit receipt](evidence/paper-source-budget/self-audit/validation.json) records
+the repaired code digests, commands and outputs. Earlier receipts are retained.
+GitHub had no external reviews or unresolved conversations at this audit; this
+is same-assistant self-review, not independent approval. The PR remains regular
+and unmerged.
