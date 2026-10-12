@@ -1,12 +1,17 @@
 """Prerequisite reports must not launch hosts or mutate the inspected study."""
 from contextlib import redirect_stdout, redirect_stderr
 from io import StringIO
+from pathlib import Path
 import json
+import os
+import shutil
 import subprocess
 import sys
 from unittest.mock import patch
 
 from allagma import bundles
+from allagma.catalog import Catalog
+from allagma.demo import create_toy
 from allagma.cli import main
 from allagma.diagnostics import diagnose
 from allagma.files import inventory, read_json, write_json
@@ -20,6 +25,109 @@ class Diagnostics(WorkspaceTest):
             result = diagnose(ROOT)
         self.assertEqual(result["status"], "pass")
         self.assertEqual({item["id"] for item in result["checks"]}, {"python", "platform", "catalog", "toy-resources"})
+
+    def run_helper(self, helper, *arguments):
+        process = subprocess.run([sys.executable, "-B", str(helper), "doctor", *arguments],
+            cwd=self.work, env={k: v for k, v in os.environ.items() if k != "PYTHONPATH"},
+            capture_output=True, text=True, timeout=20)
+        self.assertEqual(process.stderr, "")
+        return process, json.loads(process.stdout)
+
+    def assert_read_only_helper(self, study, helper, *arguments):
+        before = inventory(study)
+        mtimes = {p: p.stat().st_mtime_ns for p in study.rglob("*")}
+        result = self.run_helper(helper, "--study", str(study), *arguments)
+        self.assertEqual(inventory(study), before)
+        self.assertEqual({p: p.stat().st_mtime_ns for p in study.rglob("*")}, mtimes)
+        return result
+
+    def test_exported_helper_outside_checkout_scopes_toy_without_writes_or_host_execution(self):
+        source = self.source_copy("source with spaces")
+        study = create_toy(source, self.work / "study with spaces")
+        lock = bundles.verify_study(study)
+        bundle = bundles.bundle_path(study, lock)
+        helper = bundle / "tools/allagma.py"
+        process, report = self.assert_read_only_helper(study, source / "tools/allagma.py",
+                                                      "--source", str(source))
+        self.assertEqual(process.returncode, 0, process.stdout)
+        self.assertEqual(report["distribution"], "source-checkout")
+        self.assertEqual(report["excluded_checks"], [])
+        self.assertIn("toy-resources", {c["id"] for c in report["checks"]})
+        source.rename(self.work / "unavailable original checkout")
+        self.assertFalse((bundle / "examples/toy-study").exists())
+        process, report = self.assert_read_only_helper(study, helper)
+        self.assertEqual(process.returncode, 0, process.stdout)
+        self.assertEqual(report["distribution"], "standalone-bundle")
+        self.assertEqual({c["id"] for c in report["checks"]},
+                         {"python", "platform", "catalog", "study-lock", "generated-files"})
+        self.assertTrue(all(c["status"] == "pass" for c in report["checks"]))
+        self.assertEqual([c["id"] for c in report["excluded_checks"]], ["toy-resources"])
+        self.assertIn("outside standalone-bundle scope", report["excluded_checks"][0]["reason"])
+        program = self.work / "codex sentinel"
+        marker = self.work / "unexpected execution"
+        program.write_text(f"#!/bin/sh\ntouch '{marker}'\n")
+        program.chmod(0o755)
+        process, native = self.assert_read_only_helper(study, helper, "--scope", "native", "--codex", str(program))
+        self.assertEqual(native["distribution"], "standalone-bundle")
+        self.assertEqual(next(c for c in native["checks"] if c["id"] == "native-executable")["status"], "pass")
+        self.assertFalse(marker.exists())
+        self.assertNotIn(str(self.work), process.stdout)
+
+    def test_disposable_bundle_faults_remain_independent_and_read_only(self):
+        original = create_toy(ROOT, self.work / "original study")
+        lock = bundles.verify_study(original)
+        for fault, expected in (("catalog", {"catalog", "study-lock"}),
+                                ("registry", {"catalog", "study-lock"}),
+                                ("lock", {"study-lock"}),
+                                ("generated", {"generated-files"})):
+            with self.subTest(fault=fault):
+                # Corrupt only a disposable copy, never an existing retained bundle.
+                study = self.work / fault
+                shutil.copytree(original, study)
+                bundle = bundles.bundle_path(study, lock)
+                helper = bundle / "tools/allagma.py"
+                if fault == "catalog":
+                    catalog = Catalog(bundle)
+                    module = next(catalog.module(key) for key in catalog.registry["modules"]
+                                  if catalog.module(key)["resources"])
+                    (catalog.directory(module["id"]) / module["resources"][0]).unlink()
+                elif fault == "registry":
+                    (bundle / "registry.json").write_text("[]")
+                elif fault == "lock":
+                    (study / ".allagma/lock.yaml").write_text("[]")
+                else:
+                    (study / "ALLAGMA.md").write_text("A retained user edit.\n")
+                process, report = self.assert_read_only_helper(study, helper)
+                self.assertEqual(process.returncode, 1, process.stdout)
+                self.assertEqual(report["distribution"], "standalone-bundle")
+                self.assertEqual({c["id"] for c in report["checks"] if c["status"] == "fail"}, expected)
+                self.assertTrue(all(c["remedy"] for c in report["checks"] if c["status"] == "fail"))
+                if "catalog" in expected:
+                    remedy = next(c["remedy"] for c in report["checks"] if c["id"] == "catalog")
+                    self.assertIn("never insert files into or rewrite a locked bundle", remedy)
+                    self.assertNotIn("Restore examples/toy-study", str(report))
+
+    def test_relocated_selected_catalog_does_not_need_a_study_or_central_example(self):
+        study = create_toy(ROOT, self.work / "study")
+        bundle = bundles.bundle_path(study, bundles.verify_study(study))
+        relocated = self.work / "relocated bundle"
+        shutil.copytree(bundle, relocated)
+        original_open = Path.open
+
+        def confined_open(path, *args, **kwargs):
+            self.assertTrue(path.resolve().is_relative_to(relocated.resolve()),
+                            "Diagnostics must not read credentials or other ambient files")
+            return original_open(path, *args, **kwargs)
+
+        with patch("shutil.which", side_effect=AssertionError("host lookup")), \
+             patch("subprocess.Popen", side_effect=AssertionError("execution")), \
+             patch("socket.socket", side_effect=AssertionError("network")), \
+             patch.object(Path, "open", confined_open):
+            report = diagnose(relocated)
+        self.assertEqual(report["status"], "pass")
+        self.assertEqual(report["distribution"], "standalone-bundle")
+        self.assertEqual({c["id"] for c in report["checks"]}, {"python", "platform", "catalog"})
+        self.assertEqual([c["id"] for c in report["excluded_checks"]], ["toy-resources"])
 
     def test_incomplete_source_reports_independent_failures_and_remedies(self):
         source = self.source_copy()
