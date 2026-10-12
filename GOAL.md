@@ -464,3 +464,12 @@ new issue implementation, native-model work, budget expansion and release
 publication outside this triage. Follow the standing coherent-commit and push
 instruction. The [post-merge triage](docs/contributing/post-pr20-triage.md)
 records the chosen work, cleanup and verification.
+
+## Resolve reviews of open PRs — 12 October 2026
+
+Inspect every open PR, including drafts, and resolve its review feedback with
+verified fixes. When no submitted feedback exists, review the changes directly
+and address concrete defects. Commit coherent increments, push each affected
+branch to `origin`, verify its current CI, and retain an English review record.
+Preserve draft states, existing evidence and the standing resource/model limits;
+this goal does not authorize merging PRs.

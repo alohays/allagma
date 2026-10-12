@@ -1,5 +1,12 @@
 # Issue refresh after PR #20 — 10 October 2026
 
+**Status update — 12 October:** #19 is now assigned to `alohays` and implemented
+in [draft PR #25](https://github.com/alohays/allagma/pull/25), awaiting owner
+review. The [starter list](starter-tasks.md) and
+[pinned overview](https://github.com/alohays/allagma/issues/9) list #22, #23 and
+#7 as available. The [PR #24 review](pr24-review.md) records this correction.
+The dated triage narrative and original evidence below remain unchanged.
+
 Inspected main `174e200b508b07f022ba36233db54ca0b60e48e1`, every issue's current
 state, recent PRs, confirmed claims and the preceding triage. PR #20 is merged
 and #18 is closed. Main's conformance, documentation, portable-paper and Pages

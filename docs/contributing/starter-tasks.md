@@ -8,26 +8,21 @@ queue; read the [claim and review process](workflow.md) before starting.
 
 ## Available work
 
-1. [#19: Document a runnable toy-to-paper workflow](https://github.com/alohays/allagma/issues/19).
-   Start with `examples/toy-study/` and the first-study and paper guides. Bind
-   actual toy values and claims to a new paper revision, with explicit coverage
-   and scoped reviews. Python/research-documentation familiarity is useful;
-   TeX is only needed for the separate optional build.
-2. [#22: Align paper-source size admission with extraction](https://github.com/alohays/allagma/issues/22).
+1. [#22: Align paper-source size admission with extraction](https://github.com/alohays/allagma/issues/22).
    Start with `adapters/arxiv/package.py` and the paper conformance fixtures.
    Count generated source files and bound copies before accepting an archive.
    The boundary tests need no TeX, model or scientific rerun.
-3. [#23: Diagnose exported studies accurately](https://github.com/alohays/allagma/issues/23).
+2. [#23: Diagnose exported studies accurately](https://github.com/alohays/allagma/issues/23).
    Start with `allagma/diagnostics.py` and the bundled CLI. A healthy standalone
    study should not fail because source-only toy examples are absent. Preserve
    read-only behavior and meaningful missing-resource, lock and ownership checks.
-4. [#7: Qualify Linux/Python 3.13 onboarding](https://github.com/alohays/allagma/issues/7).
+3. [#7: Qualify Linux/Python 3.13 onboarding](https://github.com/alohays/allagma/issues/7).
    Start with `docs/guides/first-study.md` and `conformance/`. Record the literal
    clean-checkout tutorial with a distinct interpreter and paths with spaces.
    Requires local Linux/Python 3.13, not a native model or GPU.
 
-All four are unassigned. The order reflects the available implementation work;
-the small #19 walkthrough can proceed alongside the two follow-ups.
+All three are unassigned. The order matches the pinned contributor overview;
+#19 is implemented in draft #25 and awaits owner review.
 
 Comment on the issue with your scope and environment. A maintainer confirms the
 claim and assignment before overlapping implementation. No paid model access,
@@ -38,6 +33,15 @@ rendered review and link check, not a test that merely repeats its prose.
 The [latest triage](post-pr20-triage.md) explains why only #22 and #23 were added.
 These available tasks carry `help wanted`; their prerequisites make them more
 involved than a good first issue. Claimed #6 has no newcomer-discovery labels.
+
+## Awaiting owner review
+
+[#19: runnable toy-to-paper workflow](https://github.com/alohays/allagma/issues/19)
+is assigned to `alohays` and implemented in
+[draft PR #25](https://github.com/alohays/allagma/pull/25). Its retained evidence
+covers actual toy results, explicit attribution, scoped review revisions and
+the optional TeX rebuild. The issue remains open pending review and merge;
+do not start a duplicate implementation.
 
 ## Claimed work
 
