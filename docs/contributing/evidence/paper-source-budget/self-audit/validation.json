@@ -1,0 +1,62 @@
+{
+  "reviewed_head": "a90ae738dd1b6428c62867dbe96950b4cbe3154d",
+  "repair_commit": "a27638d368ce3761c485948bfc95f32c48665401",
+  "environment": {
+    "system": "Darwin",
+    "python": "3.11.6",
+    "architecture": "arm64"
+  },
+  "checks": [
+    {
+      "command": "python3 -B tools/check_changed.py --base origin/main",
+      "exit": 0,
+      "summary": [
+        "",
+        "----------------------------------------------------------------------",
+        "Ran 201 tests in 66.423s",
+        "",
+        "OK"
+      ]
+    },
+    {
+      "command": "python3 -B -m unittest conformance.test_papers -v",
+      "exit": 0,
+      "tests": 23
+    },
+    {
+      "command": "python3 -B tools/test_paper_archive.py",
+      "exit": 0
+    },
+    {
+      "command": "python3 -B -m allagma paper build --study studies/ema-schedule/publications/reference-r2 --destination work/pr26-self-audit/real-paper",
+      "exit": 0
+    },
+    {
+      "command": "python3 -B tools/verify_paper_output.py --directory work/pr26-self-audit/real-paper --author allagma --tex-release 2024",
+      "exit": 0
+    }
+  ],
+  "real_paper": {
+    "archive_sha256": "d1d63141f243632fca1656b7d2a88e72aa53f81fa2ef60a10c64784e5e0c2559",
+    "author": "allagma",
+    "format": "allagma-paper-output-verification-v1",
+    "javascript": false,
+    "pages": 8,
+    "paper_sha256": "7aea0bb5cac8bd0a108a977aaf48c70cdd23cbbde5a08b97b4eed9c34d0c98ce",
+    "scope": "Archive, metadata and text checks; page-by-page visual inspection is separate",
+    "sections_present": true,
+    "source_files": 42,
+    "status": "pass",
+    "tex_release_required": "2024"
+  },
+  "paper_and_archive_match_previous_build": true,
+  "code": {
+    "adapters/arxiv/package.py": "bcfb70ff892cf7fe50eebdc5cc7e009321a0d6e69fdedfb11867166b15fec1cb",
+    "conformance/test_papers.py": "66c1865f16250e0c6830bafd48811d584a9c605e6b3e9454073186ea05c751cf"
+  },
+  "findings": [
+    "Input changes after paper validation but before plan admission could replace a declared evidence digest.",
+    "A stat/open race could follow a replacement symlink or block opening a FIFO."
+  ],
+  "scope": "Same-assistant self-audit of source packaging. Controlled failures affect disposable fixtures only; no new scientific or native agent run."
+}
