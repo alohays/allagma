@@ -461,3 +461,12 @@ keep science in the study-owned example, with explicit attribution, honest
 reference coverage and scoped reviews. Integrity checks do not approve science.
 Follow the standing coherent-commit and push instruction. Link the complete
 implementation with `Closes #19` in the draft PR and leave it draft for review.
+
+## Resolve reviews of open PRs — 12 October 2026
+
+Inspect every open PR, including drafts, and resolve its review feedback with
+verified fixes. When no submitted feedback exists, review the changes directly
+and address concrete defects. Commit coherent increments, push each affected
+branch to `origin`, verify its current CI, and retain an English review record.
+Preserve draft states, existing evidence and the standing resource/model limits;
+this goal does not authorize merging PRs.

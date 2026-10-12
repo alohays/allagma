@@ -13,8 +13,24 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
 from allagma import papers, references
-from allagma.files import AllagmaError, confined, file_hash, read_json, utcnow, write_json
+from allagma.files import AllagmaError, confined, file_hash, read_json, utcnow, verify_reference, write_json
 from allagma.references import nonempty, require
+
+
+def verify_review_history(study, kind, source):
+    """Check every superseded record without requiring its old prose to be current."""
+    seen = set()
+    while source is not None:
+        require(isinstance(source, dict) and nonempty(source.get("path")) and nonempty(source.get("sha256")),
+                "Previous reviews need retained paths and digests")
+        path = verify_reference(study, source)
+        identity = (source["path"], source["sha256"])
+        require(identity not in seen, "Previous review history contains a cycle")
+        seen.add(identity)
+        record = read_json(path)
+        require(isinstance(record, dict) and record.get("format") == "allagma-paper-review-v1"
+                and record.get("kind") == kind, f"Invalid previous {kind} review")
+        source = record.get("supersedes")
 
 
 def record_review(study, publication, configuration, revision, judgments):
@@ -34,10 +50,16 @@ def record_review(study, publication, configuration, revision, judgments):
                 f"Supply an actual accepted {kind} review with scope and observations; a check is not a review")
     destination = confined(directory, f"reviews/{revision}")
     require(not destination.exists(), "Preserve the old review; choose a new review revision")
-    destination.mkdir(parents=True, exist_ok=False)
-    write_json(destination / "input.json", judgments, immutable=True)
     old_reviews = deepcopy(config.get("review", {}))
     old_evidence = deepcopy(config["evidence"])
+    # A new fingerprint can approve changed prose, but cannot repair lost history.
+    # Verify the entire chain before dropping old review IDs from this config.
+    for kind, item in old_reviews.items():
+        require(isinstance(item, dict) and item.get("record") in old_evidence,
+                f"Missing previous {kind} review reference")
+        verify_review_history(study, kind, old_evidence[item["record"]])
+    destination.mkdir(parents=True, exist_ok=False)
+    write_json(destination / "input.json", judgments, immutable=True)
     for item in old_reviews.values():
         config["evidence"].pop(item.get("record"), None)
     config["review"] = {}

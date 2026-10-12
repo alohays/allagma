@@ -236,7 +236,11 @@ python3 -B -m allagma paper check --study "$TOY_PAPER_STUDY" \
 ```
 
 This new check passes. Both review revisions remain, and the new records point
-to the superseded records by path and digest. If any preparation, review or
+to the superseded records by path and digest. Before writing a new revision,
+the helper verifies every previous record in those chains. A missing or changed
+record stops the operation; a new review cannot replace lost history. Restore
+the exact retained file from your own intact copy before retrying.
+If any preparation, review or
 build stops partway, preserve its directory and use a new revision ID/output
 path; do not delete a failed revision to make the same command pass.
 

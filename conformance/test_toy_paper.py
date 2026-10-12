@@ -122,6 +122,33 @@ class ToyPaperTests(unittest.TestCase):
                 record_review(self.study, "toy-paper-r1", configuration, revision, notes)
         self.assertEqual(before, snapshot(self.study))
 
+    def test_missing_or_changed_review_history_cannot_be_superseded(self):
+        config = self.prepared()
+        record_review(self.study, "toy-paper-r1", "paper.json", "r1", fixture_judgments(self.study, config))
+        reviewed = read_json(self.publication / "reviews/r1/paper.json")
+        record_review(self.study, "toy-paper-r1", "reviews/r1/paper.json", "r2",
+                      fixture_judgments(self.study, reviewed))
+        for revision in ("r1", "r2"):
+            for kind in ("scientific", "humanizer"):
+                for damage in ("missing", "changed"):
+                    with self.subTest(revision=revision, kind=kind, damage=damage):
+                        study = self.root / f"history-{revision}-{kind}-{damage}"
+                        shutil.copytree(self.study, study)
+                        publication = study / "publications/toy-paper-r1"
+                        previous = publication / f"reviews/{revision}/{kind}.json"
+                        if damage == "missing":
+                            previous.unlink()
+                        else:
+                            previous.write_text(previous.read_text() + "\n")
+                        before = snapshot(study)
+                        config = read_json(publication / "reviews/r2/paper.json")
+                        with self.assertRaisesRegex(AllagmaError, "Missing or changed evidence"):
+                            record_review(study, "toy-paper-r1", "reviews/r2/paper.json", "r3",
+                                          fixture_judgments(study, config))
+                        self.assertFalse((publication / "reviews/r3").exists())
+                        self.assertEqual(before, snapshot(study))
+        self.assertOriginalsPreserved()
+
     def test_changed_retained_evidence_is_refused_before_writing(self):
         summary = self.study / "campaigns/toy-v1/analyses/a001/outputs/summary.json"
         data = read_json(summary)

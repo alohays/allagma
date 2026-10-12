@@ -1,5 +1,9 @@
 # Toy-to-paper walkthrough validation
 
+The [12 October review](pr25-review.md) adds a guard against superseding missing
+or changed review history. The original execution and source manifests below
+remain the evidence for their explicitly recorded revision.
+
 Issue [#19](https://github.com/alohays/allagma/issues/19) is the first available
 task in the contributor overview inspected on 10 October 2026. The implementation
 starts from main `174e200b508b07f022ba36233db54ca0b60e48e1`, independently of the
