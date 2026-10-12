@@ -7,7 +7,12 @@ not a reason to delete the study.
 Run `python3 -m allagma doctor` from the source checkout for a read-only report
 of offline prerequisites. Add `--study work/my-first-study` to inspect a current
 lock and its generated files, or `--scope native --codex /path/to/codex` for
-local native-runner prerequisites. Each failed item includes a recovery hint.
+local native-runner prerequisites. For a standalone exported study, run its
+retained `tools/allagma.py` helper with `python3 -B`, then `doctor --study PATH`,
+as shown in the [bundle invocation](../cli.md#exit-status-and-costs). The report
+names its distribution and lists central toy resources as excluded from bundle
+scope. A source checkout still checks those resources. Each failed item includes
+a recovery hint.
 The command does not launch a model, read credentials or repair evidence; it
 cannot establish scientific correctness or real-host qualification. See the
 [CLI reference](../cli.md#exit-status-and-costs) for scope and exit codes.
@@ -15,7 +20,8 @@ cannot establish scientific correctness or real-host qualification. See the
 | Symptom | What to check or do |
 | --- | --- |
 | `No module named allagma` | Run from the source checkout root, with Python 3.11+. A partial Python wheel is not the supported distribution. |
-| A catalog resource is missing | Complete the sparse-checkout directory list in the [first-study tutorial](first-study.md). It includes `evals/context-retention`. |
+| A catalog resource is missing | In a source checkout, complete the [first-study sparse-checkout list](first-study.md), including `evals/context-retention`. For a bundle, recover an intact export or use the normal update workflow; never insert files into a locked bundle. |
+| An older bundled `doctor` asks for central toy files | Use a current central helper with `--source` pointing to the retained bundle, or export a new prospective revision. Older helpers retain their behavior; do not patch frozen bundles to silence a diagnostic. |
 | Destination already exists | Choose a new destination, or resume the existing campaign. Never erase evidence just to rerun a tutorial. |
 | `Duplicate JSON key` | Follow the [disposable-copy recovery example](#duplicate-json-keys) below. Keep the rejected file for diagnosis; do not edit retained evidence to make validation pass. |
 | Toy command prints nothing for a while | It prints its JSON handoff after the bounded workflow. Check its process before retrying. |
