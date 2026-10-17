@@ -12,10 +12,28 @@ from .catalog import Catalog
 from .files import AllagmaError, confined, read_json
 
 
+def distribution_kind(source):
+    """Recognize selected catalogs without using absent toy files as a signal."""
+    # The location still identifies a study bundle if its registry is damaged.
+    # A relocated bundle retains the composition marker written by build_bundle.
+    if source.parent.name == "bundles" and source.parent.parent.name == ".allagma":
+        return "standalone-bundle"
+    try:
+        registry = read_json(source / "registry.json")
+    except (AllagmaError, OSError, ValueError, RecursionError):
+        return "unknown"
+    if isinstance(registry, dict) and "composition" in registry:
+        return "standalone-bundle"
+    if isinstance(registry, dict) and isinstance(registry.get("modules"), dict) and registry["modules"]:
+        return "source-checkout"
+    return "unknown"
+
+
 def diagnose(source, *, study=None, scope="offline", codex=None):
     source = Path(source).resolve()
     study = Path(study).resolve() if study is not None else None
-    checks = []
+    distribution = distribution_kind(source)
+    checks, excluded = [], []
 
     def add(identity, passed, message, remedy=None):
         # Reports are suitable for issue triage without exposing home paths.
@@ -43,10 +61,19 @@ def diagnose(source, *, study=None, scope="offline", codex=None):
         "Run the offline core on macOS or Linux; other platforms are not qualified.")
 
     def catalog():
-        checked = Catalog(source).check()
+        catalog = Catalog(source)
+        if (not isinstance(catalog.registry, dict) or
+                not isinstance(catalog.registry.get("modules"), dict) or not catalog.registry["modules"]):
+            raise AllagmaError("Expected a catalog object with a nonempty modules mapping")
+        checked = catalog.check()
         return f"{len(checked)} catalog modules checked."
 
-    inspect("catalog", catalog, "Restore the source checkout's declared modules and resources; see the first-study sparse-checkout list.")
+    catalog_remedy = ("Recover an intact source checkout or exported study from its retained copy or owner. "
+                      "For an intentional change, use the update workflow from a source checkout; "
+                      "never insert files into or rewrite a locked bundle."
+                      if distribution != "source-checkout" else
+                      "Restore the source checkout's declared modules and resources; see the first-study sparse-checkout list.")
+    inspect("catalog", catalog, catalog_remedy)
 
     def toy():
         root = confined(source, "examples/toy-study")
@@ -57,7 +84,17 @@ def diagnose(source, *, study=None, scope="offline", codex=None):
                 raise AllagmaError(f"Missing toy resource: examples/toy-study/{name}")
         return "Toy protocol and declared local resources are present; no experiment executed."
 
-    inspect("toy-resources", toy, "Restore examples/toy-study from the same checkout before running the toy.")
+    if distribution == "source-checkout":
+        inspect("toy-resources", toy, "Restore examples/toy-study from the same checkout before running the toy.")
+    elif distribution == "standalone-bundle":
+        excluded.append({"id": "toy-resources", "reason":
+            "Central examples/toy-study resources are outside standalone-bundle scope. "
+            "Science files belong to the study; this report does not execute or validate its protocol."})
+    else:
+        excluded.append({"id": "toy-resources", "reason":
+            "Distribution cannot be determined from the damaged or missing catalog. "
+            "Central toy resources were not assessed; resolve the catalog failure first. "
+            "Never insert files into or rewrite a locked bundle."})
 
     if study is not None:
         def lock():
@@ -79,9 +116,9 @@ def diagnose(source, *, study=None, scope="offline", codex=None):
         add("native-executable", found, "Codex executable found; not invoked" if found else "Codex executable not found or not executable",
             "Supply --codex /path/to/codex or install it separately; doctor does not install software.")
 
-    return {"diagnostic_version": 1, "scope": scope,
+    return {"diagnostic_version": 1, "scope": scope, "distribution": distribution,
             "status": "pass" if all(item["status"] == "pass" for item in checks) else "fail",
-            "checks": checks,
+            "checks": checks, "excluded_checks": excluded,
             "limitations": ["Read-only prerequisite inspection, not execution or host qualification.",
                             "No authentication, model availability, scientific dependencies, network or resource-capacity checks.",
                             "A passing study lock does not verify campaign evidence or scientific conclusions."]}

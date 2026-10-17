@@ -1,0 +1,15 @@
+{
+  "verify": {
+    "exit": 0,
+    "status": "pass",
+    "failed_checks": []
+  },
+  "doctor": {
+    "exit": 1,
+    "status": "fail",
+    "failed_checks": [
+      "toy-resources"
+    ]
+  },
+  "bytes_and_mtimes_unchanged": true
+}
