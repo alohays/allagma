@@ -12,9 +12,44 @@ sys.path.insert(0, str(EXAMPLE.parents[2]))
 
 from allagma import papers, references
 from allagma.bundles import verify_study
-from allagma.campaigns import audit_evidence
-from allagma.files import AllagmaError, confined, file_hash, read_json, utcnow, write_json
+from allagma.campaigns import _check_materials, audit_evidence
+from allagma.contracts import validate_record
+from allagma.files import (AllagmaError, canonical, confined, file_hash, read_json,
+                          utcnow, verify_reference, write_json)
 from allagma.references import require
+
+
+def verify_retained_audit(study, campaign, analysis, claims):
+    """Bind the selected claim ledger to its retained passing review, read-only."""
+    audit = read_json(campaign / "latest-audit.json")
+    require(isinstance(audit, dict) and audit.get("verdict") == "pass"
+            and audit.get("findings") == [], "The toy needs a passing retained audit")
+    source = audit.get("review")
+    require(isinstance(source, dict) and isinstance(source.get("path"), str)
+            and isinstance(source.get("sha256"), str), "The retained audit needs a review reference")
+    review_path = verify_reference(study, source)
+    selected = campaign / "analyses/a001"
+    require(review_path.name == "record.json" and review_path.parent.parent == selected / "reviews",
+            "Retained audit must cover the selected a001 analysis")
+    receipt = read_json(confined(study, review_path.with_name("audit.json").relative_to(study).as_posix()))
+    require(canonical(receipt) == canonical(audit), "Latest audit differs from its retained audit receipt")
+    review = validate_record(read_json(review_path))
+    require(review["record_type"] == "ReviewRecord" and review["verdict"] == "pass"
+            and review["findings"] == [] and review["review_id"] == review_path.parent.name,
+            "The retained review must record a passing audit")
+    require(verify_reference(study, review["material"]) == selected / "paper/manuscript.md",
+            "Retained audit must cover the selected a001 analysis")
+    input_name = review_path.with_name("input.json").relative_to(study).as_posix()
+    inputs = [item for item in review["trace"] if item["path"] == input_name]
+    require(len(inputs) == 1, "The retained review needs its original audit input")
+    reviewed = read_json(verify_reference(study, inputs[0]))
+    require(isinstance(reviewed, dict) and reviewed.get("material") == review["material"],
+            "Retained audit input does not identify the reviewed manuscript")
+    require(canonical(reviewed.get("claims")) == canonical(claims),
+            "Claims differ from the retained audit input; preserve the evidence and investigate")
+    _check_materials(study, campaign)
+    # Traversal verifies descendants; the comparison above binds the claim root.
+    audit_evidence(study, [analysis, claims, review])
 
 
 def prepare(study, revision, authors):
@@ -28,13 +63,13 @@ def prepare(study, revision, authors):
     protocol = read_json(campaign / "protocol.json")
     require(protocol == read_json(EXAMPLE.parent / "protocol.json"),
             "This example supports the default toy protocol only; write a separate paper for an adapted study")
-    analysis = read_json(campaign / "analyses/a001/record.json")
+    analysis = validate_record(read_json(campaign / "analyses/a001/record.json"))
     require(analysis["configuration"]["partial"] is False, "Complete the toy before preparing its paper")
-    audit = read_json(campaign / "latest-audit.json")
-    require(audit.get("verdict") == "pass" and not audit.get("findings"), "The toy needs a passing retained audit")
     claims = read_json(campaign / "analyses/a001/paper/claims.json")
-    # Read-only traversal: retain the existing audit and never rerun a campaign.
-    audit_evidence(study, [analysis, claims, audit])
+    require(isinstance(claims, list) and claims, "Expected the default toy claim ledger")
+    for claim in claims:
+        validate_record(claim)
+    verify_retained_audit(study, campaign, analysis, claims)
     summary = read_json(campaign / "analyses/a001/outputs/summary.json")
     require(summary["replicates"] == 24 and summary["samples_per_replicate"] == 64
             and summary["bias"] == .25 and summary["counterexample_seeds"],

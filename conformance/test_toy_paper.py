@@ -6,6 +6,7 @@ import tempfile
 import unittest
 
 from allagma import papers, references
+from allagma.campaigns import analyze_campaign, audit_campaign
 from allagma.demo import toy_workflow
 from allagma.files import AllagmaError, file_hash, read_json, write_json
 from allagma.research import _load
@@ -156,6 +157,65 @@ class ToyPaperTests(unittest.TestCase):
         write_json(summary, data)
         before = snapshot(self.study)
         with self.assertRaisesRegex(AllagmaError, "Missing or changed evidence"):
+            self.prepared()
+        self.assertEqual(before, snapshot(self.study))
+        self.assertFalse(self.publication.exists())
+
+    def test_changed_claim_content_is_refused_before_writing(self):
+        for field, value in (("text", "The paired MSE difference is 999."),
+                             ("status", "inconclusive")):
+            with self.subTest(field=field):
+                study = self.root / f"changed-claim-{field}"
+                shutil.copytree(self.study, study)
+                path = study / "campaigns/toy-v1/analyses/a001/paper/claims.json"
+                claims = read_json(path)
+                claims[0][field] = value
+                write_json(path, claims)
+                before = snapshot(study)
+                with self.assertRaisesRegex(AllagmaError, "Claims differ from the retained audit input"):
+                    prepare(study, "toy-paper-r1", self.authors)
+                self.assertEqual(before, snapshot(study))
+                self.assertFalse((study / "publications").exists())
+
+    def test_changed_frozen_derivation_is_refused_before_writing(self):
+        path = self.study / "campaigns/toy-v1/materials/domain/derivation.md"
+        path.write_text(path.read_text() + "\nAn unaudited change to the frozen derivation.\n")
+        before = snapshot(self.study)
+        with self.assertRaisesRegex(AllagmaError, "Missing or changed evidence"):
+            self.prepared()
+        self.assertEqual(before, snapshot(self.study))
+        self.assertFalse(self.publication.exists())
+
+    def test_missing_or_inconsistent_retained_audit_is_refused_before_writing(self):
+        for case in ("missing-review", "missing-receipt", "changed-receipt", "changed-review"):
+            with self.subTest(case=case):
+                study = self.root / case
+                shutil.copytree(self.study, study)
+                audit_path = study / "campaigns/toy-v1/latest-audit.json"
+                audit = read_json(audit_path)
+                review_path = study / audit["review"]["path"]
+                receipt_path = review_path.with_name("audit.json")
+                if case == "missing-review":
+                    write_json(audit_path, {"verdict": "pass", "findings": []})
+                elif case == "missing-receipt":
+                    receipt_path.unlink()
+                elif case == "changed-receipt":
+                    receipt = read_json(receipt_path)
+                    receipt["verdict"] = "revise"
+                    write_json(receipt_path, receipt)
+                else:
+                    review_path.write_text(review_path.read_text() + "\n")
+                before = snapshot(study)
+                with self.assertRaises(AllagmaError):
+                    prepare(study, "toy-paper-r1", self.authors)
+                self.assertEqual(before, snapshot(study))
+                self.assertFalse((study / "publications").exists())
+
+    def test_audit_of_another_analysis_cannot_approve_the_selected_analysis(self):
+        analyze_campaign(self.study, "toy-v1", analysis_id="a002")
+        self.assertEqual(audit_campaign(self.study, "toy-v1", analysis_id="a002")["verdict"], "pass")
+        before = snapshot(self.study)
+        with self.assertRaisesRegex(AllagmaError, "Retained audit must cover the selected a001 analysis"):
             self.prepared()
         self.assertEqual(before, snapshot(self.study))
         self.assertFalse(self.publication.exists())
