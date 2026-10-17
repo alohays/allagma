@@ -448,3 +448,21 @@ documentation, preserve existing Git history and frozen evidence, and retain
 the GUI model choice and native-usage limits. The
 [iteration record](docs/contributing/pr20-review-loops.md) tracks the initial
 review, subsequent feedback, changes and verification.
+
+## Select and resolve the most impactful available issue — 18 October 2026
+
+Inspect the current open issues and pull requests, select the most impactful
+issue that still needs work, and prepare a draft PR that fully addresses it.
+Use current repository and execution evidence, respect existing contributor
+claims, and avoid duplicating implementations already awaiting review. Keep
+technical documentation in English, commit coherent increments as work
+progresses, and push the completed branch to `origin`. Leave the PR draft and
+unmerged for owner review.
+
+Issue #7 is selected: the literal offline tutorial still lacks Linux/Python 3.13
+qualification. Issues #19, #22 and #23 already have implementations in PRs #25,
+#26 and #27; #6 has an active contributor and #8 requires a rights decision.
+Record a real local Linux run of the current main revision, the complete toy,
+audit, conformance checks and manuscript/evidence inspection. Preserve existing
+records and resource limits; do not claim native-host or model-quality
+qualification from these offline checks.
