@@ -1,0 +1,88 @@
+test_damaged_relocated_catalog_reports_unknown_scope_without_checkout_remedy (conformance.test_diagnostics.Diagnostics.test_damaged_relocated_catalog_reports_unknown_scope_without_checkout_remedy) ...
+  test_damaged_relocated_catalog_reports_unknown_scope_without_checkout_remedy (conformance.test_diagnostics.Diagnostics.test_damaged_relocated_catalog_reports_unknown_scope_without_checkout_remedy) (case='missing') ... FAIL
+  test_damaged_relocated_catalog_reports_unknown_scope_without_checkout_remedy (conformance.test_diagnostics.Diagnostics.test_damaged_relocated_catalog_reports_unknown_scope_without_checkout_remedy) (case='malformed') ... FAIL
+  test_damaged_relocated_catalog_reports_unknown_scope_without_checkout_remedy (conformance.test_diagnostics.Diagnostics.test_damaged_relocated_catalog_reports_unknown_scope_without_checkout_remedy) (case='wrong-shape') ... FAIL
+test_empty_selected_catalog_cannot_pass_by_checking_zero_modules (conformance.test_diagnostics.Diagnostics.test_empty_selected_catalog_cannot_pass_by_checking_zero_modules) ... FAIL
+
+======================================================================
+FAIL: test_damaged_relocated_catalog_reports_unknown_scope_without_checkout_remedy (conformance.test_diagnostics.Diagnostics.test_damaged_relocated_catalog_reports_unknown_scope_without_checkout_remedy) (case='missing')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<checkout>/conformance/test_diagnostics.py", line 148, in test_damaged_relocated_catalog_reports_unknown_scope_without_checkout_remedy
+    self.assertEqual(report["distribution"], "unknown")
+AssertionError: 'source-checkout' != 'unknown'
+- source-checkout
++ unknown
+
+
+======================================================================
+FAIL: test_damaged_relocated_catalog_reports_unknown_scope_without_checkout_remedy (conformance.test_diagnostics.Diagnostics.test_damaged_relocated_catalog_reports_unknown_scope_without_checkout_remedy) (case='malformed')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<checkout>/conformance/test_diagnostics.py", line 148, in test_damaged_relocated_catalog_reports_unknown_scope_without_checkout_remedy
+    self.assertEqual(report["distribution"], "unknown")
+AssertionError: 'source-checkout' != 'unknown'
+- source-checkout
++ unknown
+
+
+======================================================================
+FAIL: test_damaged_relocated_catalog_reports_unknown_scope_without_checkout_remedy (conformance.test_diagnostics.Diagnostics.test_damaged_relocated_catalog_reports_unknown_scope_without_checkout_remedy) (case='wrong-shape')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<checkout>/conformance/test_diagnostics.py", line 148, in test_damaged_relocated_catalog_reports_unknown_scope_without_checkout_remedy
+    self.assertEqual(report["distribution"], "unknown")
+AssertionError: 'source-checkout' != 'unknown'
+- source-checkout
++ unknown
+
+
+======================================================================
+FAIL: test_empty_selected_catalog_cannot_pass_by_checking_zero_modules (conformance.test_diagnostics.Diagnostics.test_empty_selected_catalog_cannot_pass_by_checking_zero_modules)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<checkout>/conformance/test_diagnostics.py", line 166, in test_empty_selected_catalog_cannot_pass_by_checking_zero_modules
+    self.assertEqual(process.returncode, 1, process.stdout)
+AssertionError: 0 != 1 : {
+  "checks": [
+    {
+      "id": "python",
+      "message": "3.11.6",
+      "remedy": null,
+      "status": "pass"
+    },
+    {
+      "id": "platform",
+      "message": "Darwin",
+      "remedy": null,
+      "status": "pass"
+    },
+    {
+      "id": "catalog",
+      "message": "0 catalog modules checked.",
+      "remedy": null,
+      "status": "pass"
+    }
+  ],
+  "diagnostic_version": 1,
+  "distribution": "standalone-bundle",
+  "excluded_checks": [
+    {
+      "id": "toy-resources",
+      "reason": "Central examples/toy-study resources are outside standalone-bundle scope. Science files belong to the study; this report does not execute or validate its protocol."
+    }
+  ],
+  "limitations": [
+    "Read-only prerequisite inspection, not execution or host qualification.",
+    "No authentication, model availability, scientific dependencies, network or resource-capacity checks.",
+    "A passing study lock does not verify campaign evidence or scientific conclusions."
+  ],
+  "scope": "offline",
+  "status": "pass"
+}
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.607s
+
+FAILED (failures=4)
