@@ -471,6 +471,17 @@ branch to `origin`, verify its current CI, and retain an English review record.
 Preserve draft states, existing evidence and the standing resource/model limits;
 this goal does not authorize merging PRs.
 
+## Two highest-priority open issues — 12 October 2026
+
+Select the two highest-priority actionable open issues, implement their complete
+acceptance criteria, and open regular pull requests with passing evidence. The
+current queue selects #22 (paper-source byte admission) and #23 (standalone
+study diagnostics); #19 already has an implementation, #6 has a confirmed
+contributor, and #8 requires a separate rights decision. Commit coherent
+increments and push to `origin`. Keep both PRs unmerged for review, preserve
+existing evidence and history, and do not expand model or scientific budgets.
+This branch implements #22; #23 is an independent change.
+
 ## Bring all open PRs to merge readiness
 
 Repair and review every open pull request, convert ready drafts to regular PRs,

@@ -1,0 +1,40 @@
+{
+  "reviewed_head": "9a21fce6874973b627ca36b5d91ee3215c37525f",
+  "repair_commit": "b94352c13f80f544147aeac0b3ee94f3b4f5731c",
+  "environment": {
+    "system": "Darwin",
+    "python": "3.11.6",
+    "architecture": "arm64"
+  },
+  "checks": [
+    {
+      "command": "python3 -B tools/check_changed.py --base origin/main",
+      "exit": 0,
+      "summary": [
+        "",
+        "----------------------------------------------------------------------",
+        "Ran 197 tests in 69.754s",
+        "",
+        "OK"
+      ]
+    },
+    {
+      "command": "python3 -B -m unittest conformance.test_diagnostics -v",
+      "exit": 0,
+      "tests": 13
+    },
+    {
+      "command": "python3 -B -m allagma check",
+      "exit": 0
+    }
+  ],
+  "code": {
+    "allagma/diagnostics.py": "29f17c2d3e1c6713b8b05fd5675cc4ea9008cad903cb0f538e258663ced6a8a9",
+    "conformance/test_diagnostics.py": "9f60870fbd9d4681c718128eb49844ec6e1e219adccc74a25e7761ff022c16d4"
+  },
+  "findings": [
+    "A relocated damaged catalog was misclassified as a source checkout and prompted restoration of central toy files.",
+    "An empty selected catalog passed after checking zero modules."
+  ],
+  "scope": "Same-assistant self-audit. Failure injection affects disposable fixtures only; no native agent or scientific run."
+}

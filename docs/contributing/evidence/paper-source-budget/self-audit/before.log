@@ -1,0 +1,64 @@
+test_copy_admission_retains_the_validated_evidence_digest (conformance.test_papers.PaperTests.test_copy_admission_retains_the_validated_evidence_digest) ...
+  test_copy_admission_retains_the_validated_evidence_digest (conformance.test_papers.PaperTests.test_copy_admission_retains_the_validated_evidence_digest) (kind='analysis') ... FAIL
+  test_copy_admission_retains_the_validated_evidence_digest (conformance.test_papers.PaperTests.test_copy_admission_retains_the_validated_evidence_digest) (kind='figure') ... FAIL
+test_copy_rechecks_the_opened_file_after_admission (conformance.test_papers.PaperTests.test_copy_rechecks_the_opened_file_after_admission) ...
+  test_copy_rechecks_the_opened_file_after_admission (conformance.test_papers.PaperTests.test_copy_rechecks_the_opened_file_after_admission) (kind='symlink') ... FAIL
+  test_copy_rechecks_the_opened_file_after_admission (conformance.test_papers.PaperTests.test_copy_rechecks_the_opened_file_after_admission) (kind='fifo') ... FAIL
+
+======================================================================
+FAIL: test_copy_admission_retains_the_validated_evidence_digest (conformance.test_papers.PaperTests.test_copy_admission_retains_the_validated_evidence_digest) (kind='analysis')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<checkout>/conformance/test_papers.py", line 282, in test_copy_admission_retains_the_validated_evidence_digest
+    with self.assertRaisesRegex(AllagmaError, "validated digest"):
+AssertionError: AllagmaError not raised
+
+======================================================================
+FAIL: test_copy_admission_retains_the_validated_evidence_digest (conformance.test_papers.PaperTests.test_copy_admission_retains_the_validated_evidence_digest) (kind='figure')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<checkout>/conformance/test_papers.py", line 282, in test_copy_admission_retains_the_validated_evidence_digest
+    with self.assertRaisesRegex(AllagmaError, "validated digest"):
+AssertionError: AllagmaError not raised
+
+======================================================================
+FAIL: test_copy_rechecks_the_opened_file_after_admission (conformance.test_papers.PaperTests.test_copy_rechecks_the_opened_file_after_admission) (kind='symlink')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<checkout>/conformance/test_papers.py", line 331, in test_copy_rechecks_the_opened_file_after_admission
+    self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+AssertionError: 1 != 0 : Traceback (most recent call last):
+  File "<string>", line 28, in <module>
+AssertionError: A non-regular or symlink replacement was accepted
+
+
+======================================================================
+FAIL: test_copy_rechecks_the_opened_file_after_admission (conformance.test_papers.PaperTests.test_copy_rechecks_the_opened_file_after_admission) (kind='fifo')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<checkout>/conformance/test_papers.py", line 326, in test_copy_rechecks_the_opened_file_after_admission
+    result = subprocess.run([sys.executable, "-B", "-c", script,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/subprocess.py", line 1209, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/subprocess.py", line 2109, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/subprocess.py", line 1253, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['/usr/local/bin/python3', '-B', '-c', "\nfrom pathlib import Path\nimport os, sys\nfrom unittest.mock import patch\nfrom allagma.files import AllagmaError\nfrom allagma.research import _load\nadapter = _load('copy_race_adapter', Path(sys.argv[1]))\nroot, kind = Path(sys.argv[2]), sys.argv[3]\nsource, other, target = root/'source.txt', root/'other.txt', root/'output.txt'\nsource.write_bytes(b'hello'); other.write_bytes(b'hello')\noriginal = adapter.source_size\n\ndef swap_after_stat(path):\n    size = original(path)\n    source.unlink()\n    if kind == 'symlink':\n        source.symlink_to(other)\n    else:\n        os.mkfifo(source)\n    return size\n\nwith patch.object(adapter, 'source_size', side_effect=swap_after_stat):\n    try:\n        adapter.copy_new(source, target, size=5)\n    except AllagmaError:\n        assert not target.exists()\n    else:\n        raise AssertionError('A non-regular or symlink replacement was accepted')\n", '<checkout>/adapters/arxiv/package.py', '<temporary-path>', 'fifo']' timed out after 5 seconds
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<checkout>/conformance/test_papers.py", line 330, in test_copy_rechecks_the_opened_file_after_admission
+    self.fail("Copy blocked opening a FIFO after admission")
+AssertionError: Copy blocked opening a FIFO after admission
+
+----------------------------------------------------------------------
+Ran 2 tests in 5.130s
+
+FAILED (failures=4)
