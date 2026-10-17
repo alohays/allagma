@@ -1,0 +1,55 @@
+{
+  "baseline": "174e200b508b07f022ba36233db54ca0b60e48e1",
+  "command": "python3 <study>/.allagma/bundles/<bundle-id>/tools/allagma.py doctor --study <study>",
+  "exit_code": 1,
+  "result": {
+    "checks": [
+      {
+        "id": "python",
+        "message": "3.11.6",
+        "remedy": null,
+        "status": "pass"
+      },
+      {
+        "id": "platform",
+        "message": "Darwin",
+        "remedy": null,
+        "status": "pass"
+      },
+      {
+        "id": "catalog",
+        "message": "17 catalog modules checked.",
+        "remedy": null,
+        "status": "pass"
+      },
+      {
+        "id": "toy-resources",
+        "message": "Cannot read <study>/.allagma/bundles/b-af9d667b4ff199d1a876a242/examples/toy-study/protocol.json: [Errno 2] No such file or directory: '<study>/.allagma/bundles/b-af9d667b4ff199d1a876a242/examples/toy-study/protocol.json'. Use JSON-compatible YAML.",
+        "remedy": "Restore examples/toy-study from the same checkout before running the toy.",
+        "status": "fail"
+      },
+      {
+        "id": "study-lock",
+        "message": "Verified current lock 97c6a8cbf784e93f826eabda1006489e90e2c7da12aeeb1b517b8290b1f95f07 and selection freshness.",
+        "remedy": null,
+        "status": "pass"
+      },
+      {
+        "id": "generated-files",
+        "message": "17 generated files match ownership.",
+        "remedy": null,
+        "status": "pass"
+      }
+    ],
+    "diagnostic_version": 1,
+    "limitations": [
+      "Read-only prerequisite inspection, not execution or host qualification.",
+      "No authentication, model availability, scientific dependencies, network or resource-capacity checks.",
+      "A passing study lock does not verify campaign evidence or scientific conclusions."
+    ],
+    "scope": "offline",
+    "status": "fail"
+  },
+  "study_inventory_unchanged": true,
+  "scope": "Offline generated toy fixture; no model or new scientific study"
+}

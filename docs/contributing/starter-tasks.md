@@ -8,13 +8,10 @@ queue; read the [claim and review process](workflow.md) before starting.
 
 ## Available work
 
-1. [#7: Qualify Linux/Python 3.13 onboarding](https://github.com/alohays/allagma/issues/7).
-   Start with `docs/guides/first-study.md` and `conformance/`. Record the literal
-   clean-checkout tutorial with a distinct interpreter and paths with spaces.
-   Requires local Linux/Python 3.13, not a native model or GPU.
-
-This qualification remains unassigned. Check the pinned overview for the latest
-queue; its separate post-merge refresh is tracked in PR #24.
+No unclaimed implementation or qualification task is currently listed.
+Issues #7, #19, #22 and #23 are completed on main; their merged work is listed
+below. The accessibility task #6 remains claimed. Check the pinned overview
+before proposing a new bounded contribution.
 
 Comment on the issue with your scope and environment. A maintainer confirms the
 claim and assignment before overlapping implementation. No paid model access,
@@ -22,24 +19,9 @@ GPU, response-time guarantee or release deadline is involved. Submit concise
 sanitized evidence with its exact tested commit. A documentation change needs a
 rendered review and link check, not a test that merely repeats its prose.
 
-The [triage record](issue-triage.md) explains why only #18 and #19 were added.
-These available tasks carry `help wanted`; their prerequisites make them more
-involved than a good first issue. Claimed #6 has no newcomer-discovery labels.
-
-## Awaiting owner review
-
-[#19: runnable toy-to-paper workflow](https://github.com/alohays/allagma/issues/19)
-is implemented in [draft PR #25](https://github.com/alohays/allagma/pull/25),
-assigned to `alohays`. The [walkthrough](../guides/toy-to-paper.md) and
-[acceptance record](toy-paper-walkthrough.md) cover actual retained values,
-explicit attribution, review freshness, preservation and the optional TeX
-rebuild. It remains open pending owner review/merge; do not duplicate the work.
-
-[#18: Run adapter regressions in the required check](https://github.com/alohays/allagma/issues/18)
-is assigned to `alohays`. [PR #20](https://github.com/alohays/allagma/pull/20)
-appeared during triage and proposes the repair. Review its acceptance criteria
-before closure; do not begin a duplicate implementation. This issue has no
-`help wanted` label while it awaits review.
+The [dated triage](post-pr20-triage.md) explains why only #22 and #23 were added.
+Claimed #6 has no newcomer-discovery labels. Completed tasks are not advertised
+as available work.
 
 ## Claimed work
 
@@ -50,6 +32,30 @@ coordinate with the assignee and preserve the figure and results. The stated
 Windows/Node environment is suitable for this documentation task.
 
 ## Merged contributor improvements
+
+[#7: Linux/Python 3.13 onboarding](https://github.com/alohays/allagma/issues/7)
+is complete through [#28](https://github.com/alohays/allagma/pull/28). The
+[qualification record](linux-python313.md) retains actual Debian 12/aarch64,
+CPython 3.13.16 execution, the missing-`ps` failure, and 217 passing tests on
+the integrated feature main. This does not qualify all Linux/Python combinations.
+
+Issues [#19](https://github.com/alohays/allagma/issues/19),
+[#22](https://github.com/alohays/allagma/issues/22) and
+[#23](https://github.com/alohays/allagma/issues/23) are complete through
+PRs [#25](https://github.com/alohays/allagma/pull/25),
+[#26](https://github.com/alohays/allagma/pull/26) and
+[#27](https://github.com/alohays/allagma/pull/27). Use the
+[toy-to-paper walkthrough](../guides/toy-to-paper.md),
+[paper-source guide](../arxiv-papers.md) and
+[standalone diagnostics](../cli.md#exit-status-and-costs) on main. The
+[integration record](open-pr-integration.md) includes audit-binding regressions,
+bounded-copy and exported-helper checks, the complete workflow and TeX rebuild.
+
+[#18: required adapter regressions](https://github.com/alohays/allagma/issues/18)
+is complete through [#20](https://github.com/alohays/allagma/pull/20). The
+[three-iteration review](pr20-review-loops.md) records 192 conformance tests,
+19 tooling tests and the actual selected-failure proof. No duplicate repair or
+owner-review wait remains for that issue.
 
 The initial agent-assisted improvements are merged and available on main:
 [#10: adapted toy/report repair](https://github.com/alohays/allagma/pull/10),

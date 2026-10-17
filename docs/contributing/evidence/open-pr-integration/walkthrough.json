@@ -1,0 +1,145 @@
+{
+  "head": "74e00f5ad7bba239e36467454f3a3b2b18f98db6",
+  "environment": {
+    "python": "3.11.6",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "reporting_timezone": "Asia/Seoul"
+  },
+  "guide_sha256": "8319fae7f7b5ba438f7495cffdb6c9547298d6d1a0398c623ff8b0e0ec430f0b",
+  "blocks": [
+    {
+      "block": 1,
+      "exit": 0,
+      "expected": 0,
+      "command": "export TOY_PAPER_STUDY='work/toy paper study'\nexport TOY_PAPER_PUBLICATION=\"$TOY_PAPER_STUDY/publications/toy-paper-r1\"\npython3 -B -m allagma check\npython3 -B -m allagma toy --destination \"$TOY_PAPER_STUDY\""
+    },
+    {
+      "block": 2,
+      "exit": 0,
+      "expected": 0,
+      "command": "cat examples/toy-study/paper/authors.anonymous.json\npython3 -B examples/toy-study/paper/prepare.py \\\n  --study \"$TOY_PAPER_STUDY\" --revision toy-paper-r1 \\\n  --authors examples/toy-study/paper/authors.anonymous.json\npython3 -B -m allagma reference check \\\n  --directory \"$TOY_PAPER_PUBLICATION/references\" --require-review"
+    },
+    {
+      "block": 3,
+      "exit": 2,
+      "expected": 2,
+      "command": "python3 -B -m allagma paper check --study \"$TOY_PAPER_STUDY\" \\\n  --config \"$TOY_PAPER_PUBLICATION/paper.json\""
+    },
+    {
+      "block": 4,
+      "exit": 0,
+      "expected": 0,
+      "command": "cat examples/toy-study/paper/OUTLINE.md\ncat \"$TOY_PAPER_PUBLICATION\"/sections/*.tex\ncat \"$TOY_PAPER_STUDY/campaigns/toy-v1/materials/domain/derivation.md\"\ncat \"$TOY_PAPER_STUDY/campaigns/toy-v1/analyses/a001/paper/manuscript.md\"\npython3 -B - <<'PY'\nimport math, os, statistics\nfrom pathlib import Path\nfrom allagma.files import read_json, verify_reference\nfrom allagma.papers import json_pointer, review_fingerprint\nstudy = Path(os.environ['TOY_PAPER_STUDY'])\npublication = Path(os.environ['TOY_PAPER_PUBLICATION'])\nconfig = read_json(publication / 'paper.json')\nsummary = read_json(study / config['evidence']['summary']['path'])\nmanifest = read_json(study / config['evidence']['raw-manifest']['path'])\ndifferences = []\ncounterexamples = []\nfor ref in manifest['raw']:\n    raw = read_json(verify_reference(study, ref))\n    # Independent algebraic route to (mean+b)^2 - mean^2, target zero.\n    delta = 2 * raw['bias'] * statistics.mean(raw['samples']) + raw['bias'] ** 2\n    differences.append(delta)\n    if delta <= 0:\n        counterexamples.append(raw['seed'])\nmean = statistics.mean(differences)\nse = statistics.stdev(differences) / math.sqrt(len(differences))\nassert len(differences) == summary['replicates'] == 24\nassert math.isclose(mean, summary['difference'])\nassert all(math.isclose(a, b) for a, b in zip(\n    [mean - 1.96 * se, mean + 1.96 * se], summary['ci95_normal']))\nassert sorted(counterexamples) == summary['counterexample_seeds']\nfor key, value in config['values'].items():\n    data = read_json(study / config['evidence'][value['evidence']]['path'])\n    print(key, json_pointer(data, value['pointer']))\nprint('Exclusions:', manifest['exclusions'])\nprint('Claims:', read_json(study / config['evidence']['toy-claims']['path']))\nprint('Review fingerprint:', review_fingerprint(study, config))\nPY"
+    },
+    {
+      "block": 5,
+      "exit": 0,
+      "expected": 0,
+      "command": "python3 -B - <<'PY'\nimport os\nfrom pathlib import Path\nfrom allagma.files import read_json, write_json\np = Path(os.environ['TOY_PAPER_PUBLICATION'])\nnotes = read_json(p / 'review-input.json')\nnotes['reviewer'] = 'Walkthrough executor (self-review; no independent reviewer)'\nnotes['scientific'] = {\n    'verdict': 'accept',\n    'scope': 'Default toy derivation, retained raw/summary/claim links and all seven sections; no external literature or model-quality assessment.',\n    'observations': [\n        'Read the frozen derivation and recomputed the paired mean and normal interval from the raw samples using 2*b*mean+b*b.',\n        'Checked 24 confirmation seeds, pilot and unsuccessful-attempt exclusions, and counterexamples 104, 108, 118 and 121.',\n        'The text limits the positive average result to this synthetic problem and retains the approximate-interval and self-review limits.']}\nnotes['humanizer'] = {\n    'verdict': 'accept',\n    'scope': 'Clarity and claim-preserving wording review of all seven sections; no independent scientific endorsement.',\n    'observations': [\n        'Read every section for clear subjects, concrete comparisons and unsupported novelty or agent-quality language.',\n        'Checked that numerical macros, the counterexample and uncertainty qualifications retain the scientific meaning.']}\nwrite_json(p / 'review-input-r1.json', notes, immutable=True)\nPY\npython3 -B examples/toy-study/paper/record_review.py \\\n  --study \"$TOY_PAPER_STUDY\" --publication toy-paper-r1 --revision r1 \\\n  --input \"$TOY_PAPER_PUBLICATION/review-input-r1.json\"\npython3 -B -m allagma paper check --study \"$TOY_PAPER_STUDY\" \\\n  --config \"$TOY_PAPER_PUBLICATION/reviews/r1/paper.json\""
+    },
+    {
+      "block": 6,
+      "exit": 2,
+      "expected": 2,
+      "command": "python3 -B - <<'PY'\nimport os\nfrom pathlib import Path\nfrom allagma.files import read_json, write_json, write_text\nstudy = Path(os.environ['TOY_PAPER_STUDY'])\np = Path(os.environ['TOY_PAPER_PUBLICATION'])\nconfig = read_json(p / 'reviews/r1/paper.json')\nnew = p / 'sections/discussion-r2.tex'\ntext = (study / config['sections']['discussion']).read_text()\nwrite_text(new, text + '\\nThis publication revision reuses the completed experiment.\\n', immutable=True)\nconfig['sections']['discussion'] = new.relative_to(study).as_posix()\nwrite_json(p / 'paper-r2.json', config, immutable=True)\nPY\npython3 -B -m allagma paper check --study \"$TOY_PAPER_STUDY\" \\\n  --config \"$TOY_PAPER_PUBLICATION/paper-r2.json\""
+    },
+    {
+      "block": 7,
+      "exit": 0,
+      "expected": 0,
+      "command": "cat \"$TOY_PAPER_PUBLICATION/sections/discussion-r2.tex\"\npython3 -B - <<'PY'\nimport os\nfrom pathlib import Path\nfrom allagma.files import read_json, write_json\nfrom allagma.papers import review_fingerprint\nstudy = Path(os.environ['TOY_PAPER_STUDY'])\np = Path(os.environ['TOY_PAPER_PUBLICATION'])\nnotes = read_json(p / 'review-input-r1.json')\nnotes['reviewed_content_sha256'] = review_fingerprint(study, read_json(p / 'paper-r2.json'))\nnotes['scientific']['observations'].append(\n    'Read discussion-r2 and compared the new configuration: the added sentence describes reuse, no new experiment or empirical conclusion; original evidence and other sections are unchanged.')\nnotes['humanizer']['observations'].append(\n    'Reread the added sentence in context; it preserves the distinction between publication revision and experiment.')\nwrite_json(p / 'review-input-r2.json', notes, immutable=True)\nPY\npython3 -B examples/toy-study/paper/record_review.py \\\n  --study \"$TOY_PAPER_STUDY\" --publication toy-paper-r1 --config paper-r2.json \\\n  --revision r2 --input \"$TOY_PAPER_PUBLICATION/review-input-r2.json\"\npython3 -B -m allagma paper check --study \"$TOY_PAPER_STUDY\" \\\n  --config \"$TOY_PAPER_PUBLICATION/reviews/r2/paper.json\""
+    },
+    {
+      "block": 8,
+      "exit": 0,
+      "expected": 0,
+      "command": "pdflatex --version\npython3 -B -m allagma paper build --study \"$TOY_PAPER_STUDY\" \\\n  --config \"$TOY_PAPER_PUBLICATION/reviews/r2/paper.json\" \\\n  --destination \"$TOY_PAPER_PUBLICATION/build-r2\"\nmkdir \"$TOY_PAPER_PUBLICATION/unpacked-r2\"\ntar -xzf \"$TOY_PAPER_PUBLICATION/build-r2/paper-source.tar.gz\" \\\n  -C \"$TOY_PAPER_PUBLICATION/unpacked-r2\"\npython3 -B \"$TOY_PAPER_PUBLICATION/unpacked-r2/anc/build.py\" \\\n  --output \"$TOY_PAPER_PUBLICATION/rebuilt-r2\"\npdfinfo \"$TOY_PAPER_PUBLICATION/build-r2/paper.pdf\"\nmkdir \"$TOY_PAPER_PUBLICATION/rendered-r2\"\npdftoppm -scale-to 1200 -png \"$TOY_PAPER_PUBLICATION/build-r2/paper.pdf\" \\\n  \"$TOY_PAPER_PUBLICATION/rendered-r2/page\""
+    }
+  ],
+  "preservation": {
+    "original-files": 765,
+    "first-publication": 17
+  },
+  "audit": {
+    "checked_references": 521,
+    "findings": [],
+    "verdict": "pass"
+  },
+  "summary": {
+    "bias": 0.25,
+    "biased_mse": 0.08040364583333333,
+    "ci95_normal": [
+      0.039851041785294965,
+      0.09035729154803837
+    ],
+    "counterexample_seeds": [
+      104,
+      108,
+      118,
+      121
+    ],
+    "difference": 0.06510416666666667,
+    "leave_one_seed_out": {
+      "maximum_difference": 0.07269021739130435,
+      "minimum_difference": 0.06182065217391304,
+      "positive_count": 24,
+      "replicates": 24
+    },
+    "mean_mse": 0.015299479166666666,
+    "method": "paired differences across seeds; normal approximation, 1.96 standard errors",
+    "replicates": 24,
+    "samples_per_replicate": 64,
+    "standard_error": 0.012884247388454952
+  },
+  "delivery": {
+    "archive_bytes": 18850,
+    "archive_sha256": "b8cdfc5e26cfde43329a8b3e530f31a0665234836f7449e3017c3ea6a3e94d03",
+    "format": "allagma-paper-delivery-v1",
+    "initial_build": {
+      "compiler_version": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2024)",
+      "network": "denied",
+      "pdf_sha256": "73d993274782c36dffb4fa854fc0a40d48766226071ae0ce3a5c0e73cce73f0d",
+      "reference_cache": "not accessible"
+    },
+    "packaged_builder_verified": true,
+    "paper": "paper.pdf",
+    "paper_sha256": "73d993274782c36dffb4fa854fc0a40d48766226071ae0ce3a5c0e73cce73f0d",
+    "pdf_bytes_reproduced": true,
+    "source_archive": "paper-source.tar.gz",
+    "status": "pass",
+    "submission": "not-submitted",
+    "unpacked_build": {
+      "compiler_version": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2024)",
+      "network": "denied",
+      "pdf_sha256": "73d993274782c36dffb4fa854fc0a40d48766226071ae0ce3a5c0e73cce73f0d",
+      "reference_cache": "not accessible"
+    },
+    "unpacked_entrypoint": "python3 anc/build.py",
+    "visual_inspection": "required separately"
+  },
+  "recipient_rebuild": {
+    "network": "denied",
+    "pdf_sha256": "73d993274782c36dffb4fa854fc0a40d48766226071ae0ce3a5c0e73cce73f0d"
+  },
+  "visual_review": {
+    "pages": 2,
+    "result": "pass",
+    "observations": [
+      "Both pages inspected for clipping, overlap, table values, headings, page numbers and attribution.",
+      "Anonymous draft, scoped uncertainty, counterexamples and the explicit empty bibliography remain visible."
+    ]
+  },
+  "source_sha256": {
+    "allagma/campaigns.py": "c695c3ff8e9413c217fb6159bd94e984dfe574d7e866983a79032bfcd6b6c3ad",
+    "allagma/papers.py": "250cbb453b2d72ce1b43f299cc657619e66a1cfd3912a3a6817138d3013d88e4",
+    "allagma/diagnostics.py": "29f17c2d3e1c6713b8b05fd5675cc4ea9008cad903cb0f538e258663ced6a8a9",
+    "adapters/arxiv/package.py": "bcfb70ff892cf7fe50eebdc5cc7e009321a0d6e69fdedfb11867166b15fec1cb",
+    "examples/toy-study/paper/prepare.py": "4aab903363e7e779c871efd5029edbaf4e45d7609eca3615db3a85dbe0bfbb75",
+    "examples/toy-study/paper/record_review.py": "53216f7e03cdffaff03b6787f6931f38f84d5c1662424cbac3b6a000918eacea",
+    "conformance/test_toy_paper.py": "91bf19dc77de0a9df7643c251f8fb8dfdf0ed71f287f42d8605f12ca71bc82e0",
+    "conformance/test_papers.py": "66c1865f16250e0c6830bafd48811d584a9c605e6b3e9454073186ea05c751cf",
+    "conformance/test_diagnostics.py": "9f60870fbd9d4681c718128eb49844ec6e1e219adccc74a25e7761ff022c16d4",
+    "docs/guides/toy-to-paper.md": "8319fae7f7b5ba438f7495cffdb6c9547298d6d1a0398c623ff8b0e0ec430f0b"
+  },
+  "scope": "Literal offline workflow and scoped executor self-review. No independent scientific review, native session, or submission."
+}

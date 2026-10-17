@@ -1,5 +1,10 @@
 # Standalone study diagnostics
 
+The feature PRs #25, #26 and #27 have since merged, closing #19, #22 and #23.
+Qualification PR #28 has also merged, closing #7.
+See the [integration record](open-pr-integration.md) for current status and new
+validation. The dated observations and evidence below remain preserved.
+
 Issue [#23](https://github.com/alohays/allagma/issues/23) was selected alongside
 [#22](https://github.com/alohays/allagma/issues/22) as the next highest-priority
 available engineering work on 12 October 2026. A correctly exported study could

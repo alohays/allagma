@@ -136,8 +136,9 @@ is deterministic verification of this example, not scientific or model-quality
 qualification.
 
 The repeat audit appended `review-002` and an event, updated the two documented
-mutable state/audit pointers, and preserved the other 753 original files by
-SHA-256 and nanosecond mtime. Original attempts, bundles, analysis and
+mutable state/audit pointers, and preserved the other 753 retained files by
+SHA-256 and nanosecond mtime. This inventory excludes interpreter bytecode
+caches, as shown in the retained inspection script. Original attempts, bundles, analysis and
 `review-001` remain intact. The study finished at phase `audit`, execution
 status `completed`, assurance `deterministic`. Only compact sanitized receipts
 are committed; the complete studies remain in the local stopped containers.

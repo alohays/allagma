@@ -449,6 +449,22 @@ the GUI model choice and native-usage limits. The
 [iteration record](docs/contributing/pr20-review-loops.md) tracks the initial
 review, subsequent feedback, changes and verification.
 
+## Selective issue refresh after PR #20 — 10 October 2026
+
+Check the current issue status, tidy outdated guidance and open only two or
+three well-considered issues that are essential immediate next steps for the
+project's current open-source stage. Base decisions on the latest main,
+current claims, merged work and concrete evidence; do not duplicate existing
+tasks. This follow-up starts from `174e200`, which merged PR #20 and closed #18.
+
+Publish the selected issues and reconcile the overview, milestone and repository
+guidance. Preserve the confirmed #6 claim, historical rights decision, frozen
+evidence, full Git history, English documentation and GUI model choice. Keep
+new issue implementation, native-model work, budget expansion and release
+publication outside this triage. Follow the standing coherent-commit and push
+instruction. The [post-merge triage](docs/contributing/post-pr20-triage.md)
+records the chosen work, cleanup and verification.
+
 ## Implement the highest-priority open issue — 10 October 2026
 
 Choose the highest-priority actionable open issue, implement its full acceptance
@@ -482,19 +498,6 @@ increments and push to `origin`. Keep both PRs unmerged for review, preserve
 existing evidence and history, and do not expand model or scientific budgets.
 This branch implements #22; #23 is an independent change.
 
-## Bring all open PRs to merge readiness
-
-Repair and review every open pull request, convert ready drafts to regular PRs,
-and merge each PR only when its acceptance evidence and protected branch gates
-support that decision. The current scope begins with #24, #25, #26 and #27;
-recheck the open set before completion. Reconcile integrations and live task
-status, preserve original history and frozen evidence, and keep English
-technical documentation. Commit coherent increments and push them to origin
-as progress is verified. Do not bypass required checks or override the GUI
-model selection. The [toy audit-binding follow-up](docs/contributing/pr25-audit-binding.md)
-records the additional preparation repair; final integration evidence must
-cover the combined changes and the complete runnable workflow.
-
 ## Select and resolve the most impactful available issue — 18 October 2026
 
 Inspect the current open issues and pull requests, select the most impactful
@@ -512,3 +515,22 @@ Record a real local Linux run of the current main revision, the complete toy,
 audit, conformance checks and manuscript/evidence inspection. Preserve existing
 records and resource limits; do not claim native-host or model-quality
 qualification from these offline checks.
+
+## Bring all open PRs to merge readiness
+
+Repair and review every open pull request, convert ready drafts to regular PRs,
+and merge each PR only when its acceptance evidence and protected branch gates
+support that decision. The current scope begins with #24, #25, #26 and #27;
+recheck the open set before completion. Reconcile integrations and live task
+status, preserve original history and frozen evidence, and keep English
+technical documentation. Commit coherent increments and push them to origin
+as progress is verified. Do not bypass required checks or override the GUI
+model selection. The [toy audit-binding follow-up](docs/contributing/pr25-audit-binding.md)
+records the additional preparation repair; final integration evidence must
+cover the combined changes and the complete runnable workflow.
+
+The [integration record](docs/contributing/open-pr-integration.md) retains the repairs,
+combined workflow evidence and sequential merge decisions for this pass.
+
+The refreshed open set also included #28 during this integration. Apply the
+same review, regular-PR and protected-merge gates to that qualification PR.

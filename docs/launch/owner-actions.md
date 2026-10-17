@@ -21,8 +21,13 @@ features are available on main through merged PRs #10–#12. Reference research,
 optional portable papers and duplicate-key recovery are also merged through
 #14 and #15; #16 installed the documented repository rules. The
 [final merge audit](../contributing/final-open-pr-merges.md) records their
-validation. The [current issue triage](../contributing/issue-triage.md) identifies
-the remaining contributor work.
+validation. The required adapter checks and record/lock coverage are now merged
+through #20, closing #18. The toy-to-paper walkthrough, complete paper-source
+admission and standalone diagnostics are also on main through #25, #26 and #27.
+The scoped Linux/Python 3.13 qualification is complete through #28.
+The [integration record](../contributing/open-pr-integration.md) retains those merge
+decisions; the [starter list](../contributing/starter-tasks.md) identifies the
+remaining contributor work.
 
 ## Unresolved historical-audio rights
 
@@ -42,7 +47,7 @@ and [dated final audit](final-audit.md) for the source evidence.
 ## Review and release decisions
 
 The owner authorized the completed feature and dependency merges. Issues
-#2–#5 are closed as completed; their original reproductions and review evidence
+#2–#5, #7, #18, #19, #22 and #23 are closed as completed; their original reproductions and review evidence
 remain retained. They no longer await a merge decision. Follow the
 [pinned overview](https://github.com/alohays/allagma/issues/9) for current claims,
 available tasks and the maintainer-owned rights issue.
