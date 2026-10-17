@@ -1,0 +1,45 @@
+{
+  "analysis": "a001",
+  "audit": {
+    "analysis_repetitions": 1,
+    "checked_references": 521,
+    "findings": [],
+    "limitations": [
+      "No independent scientific peer review or real-model quality evaluation."
+    ],
+    "review": {
+      "media_type": "application/json",
+      "path": "campaigns/toy-v1/analyses/a001/reviews/review-001/record.json",
+      "retention": "retain-with-study",
+      "sha256": "b8ae53bba67e6a71601ab014a4d9f996ce5bcf594c6e86cefff881607a118a7b"
+    },
+    "stale_claims": [],
+    "verdict": "pass"
+  },
+  "context": {
+    "media_type": "application/json",
+    "path": "campaigns/toy-v1/context.json",
+    "retention": "retain-with-study",
+    "sha256": "9ef9b3ddfde48bc277144955fafcbac07a7998515751898ce617ed49b1502480"
+  },
+  "context_method": {
+    "bundle_id": "b-af9d667b4ff199d1a876a242",
+    "capabilities": [
+      "artifact.read",
+      "artifact.write",
+      "execution.local"
+    ],
+    "contract": "0.2",
+    "lock_id": "dbaf78194f70e7de55f22a809096c2ba27a7bccfca2902706ecd9f41497eb4f9",
+    "module_id": "context/active-brief",
+    "path": "/qualification/clean path with spaces/allagma/work/my-first-study/.allagma/bundles/b-af9d667b4ff199d1a876a242/methods/allagma-context-active-brief/SKILL.md",
+    "sha256": "264089727ffd44b03c0cbd1af45ffb4abac33ffd7f4c790a9fd16259886997f3"
+  },
+  "entrypoint": "ALLAGMA.md",
+  "faults_demonstrated": true,
+  "host": "generic",
+  "native_hooks": false,
+  "native_subagents": false,
+  "recorded_at": "2026-10-17T16:27:29.428578+00:00",
+  "scope": "Generic execution; native hosts are packaging/contract fixtures, not real-model smoke tests"
+}

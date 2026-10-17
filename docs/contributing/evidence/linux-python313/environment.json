@@ -1,0 +1,39 @@
+{
+  "os_release": "PRETTY_NAME=\"Debian GNU/Linux 12 (bookworm)\"\nNAME=\"Debian GNU/Linux\"\nVERSION_ID=\"12\"\nVERSION=\"12 (bookworm)\"\nVERSION_CODENAME=bookworm\nID=debian\nHOME_URL=\"https://www.debian.org/\"\nSUPPORT_URL=\"https://www.debian.org/support\"\nBUG_REPORT_URL=\"https://bugs.debian.org/\"\n",
+  "kernel": "6.10.14-linuxkit",
+  "architecture": "aarch64",
+  "python_version": "3.13.16 (main, Oct  6 2026, 02:09:20) [GCC 12.2.0]",
+  "python_executable": "/usr/local/bin/python3",
+  "python_real_executable": "/usr/local/bin/python3.13",
+  "python_sha256": "cb4548d280f38c2b1df4cba45f12c90a034729e08fce5bf1a223c58add0e21e3",
+  "python_implementation": "CPython",
+  "python_soabi": "cpython-313-aarch64-linux-gnu",
+  "git_version": "git version 2.39.5",
+  "checkout": "/qualification/clean path with spaces/allagma",
+  "path_contains_spaces": true,
+  "source_commit": "174e200b508b07f022ba36233db54ca0b60e48e1",
+  "source_status": "",
+  "sparse_paths": [
+    "adapters",
+    "allagma",
+    "conformance",
+    "contracts",
+    "evals/context-retention",
+    "examples/first-research",
+    "examples/toy-study",
+    "methods",
+    "policies",
+    "profiles",
+    "recipes",
+    "templates",
+    "tools"
+  ],
+  "guide_sha256": "4574ecdc57fc94920ab2dc03d54f8dc348ff3cf0564853e200429290e04fa7d7",
+  "ps_version": "ps from procps-ng 4.0.2",
+  "pip_packages": [
+    {
+      "name": "pip",
+      "version": "26.2.1"
+    }
+  ]
+}

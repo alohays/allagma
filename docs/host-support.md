@@ -19,6 +19,12 @@ recipe. Optional metadata can be added in a host adapter when actually needed.
 | Codex CLI 0.160.1 | Real explicit skill activation, campaign-lock routing, interrupted/fresh-session continuation and complete MPS diffusion study | Other models/versions, implicit triggering, desktop UI interaction and general research quality |
 | Claude Code | Format and contract checked; registration/conflict/campaign-routing fixtures | Real native activation/tool-use smoke; model quality |
 
+The [Linux/Python 3.13 onboarding receipt](contributing/linux-python313.md)
+records the literal sparse-checkout tutorial and offline conformance on Debian
+12/aarch64, CPython 3.13.16, in a local Docker Linux VM. This measures one
+container/interpreter combination; it does not extend native-host qualification
+or establish every Linux distribution, architecture or Python version.
+
 The subsequent [v0.3 comparison](v0.3/COMPARISON.md) retains twelve distinct
 fresh CLI 0.160.1 sessions under the same inherited model/settings. All twelve
 complete required scientific execution; ten complete all evidence requirements.

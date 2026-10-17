@@ -6,8 +6,11 @@ and [available tasks](docs/contributing/starter-tasks.md). The
 evidence, review and credit; the [welcome](https://github.com/alohays/allagma/discussions/13)
 links the public community entry points.
 
-Start with one module or example. Python 3.11+ on macOS or Linux is sufficient;
-the default checks need no package installation, provider account or GPU.
+Start with one module or example using Python 3.11+ on macOS or Linux.
+The default checks need no third-party Python packages, provider account or GPU.
+For the full offline suite, also provide Git and the POSIX `ps` command
+(`procps` on minimal Debian/Ubuntu installations); see the
+[conformance prerequisites](conformance/README.md).
 
 ```sh
 python3 -m allagma check --module context/active-brief

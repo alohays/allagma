@@ -494,3 +494,21 @@ as progress is verified. Do not bypass required checks or override the GUI
 model selection. The [toy audit-binding follow-up](docs/contributing/pr25-audit-binding.md)
 records the additional preparation repair; final integration evidence must
 cover the combined changes and the complete runnable workflow.
+
+## Select and resolve the most impactful available issue — 18 October 2026
+
+Inspect the current open issues and pull requests, select the most impactful
+issue that still needs work, and prepare a draft PR that fully addresses it.
+Use current repository and execution evidence, respect existing contributor
+claims, and avoid duplicating implementations already awaiting review. Keep
+technical documentation in English, commit coherent increments as work
+progresses, and push the completed branch to `origin`. Leave the PR draft and
+unmerged for owner review.
+
+Issue #7 is selected: the literal offline tutorial still lacks Linux/Python 3.13
+qualification. Issues #19, #22 and #23 already have implementations in PRs #25,
+#26 and #27; #6 has an active contributor and #8 requires a rights decision.
+Record a real local Linux run of the current main revision, the complete toy,
+audit, conformance checks and manuscript/evidence inspection. Preserve existing
+records and resource limits; do not claim native-host or model-quality
+qualification from these offline checks.
