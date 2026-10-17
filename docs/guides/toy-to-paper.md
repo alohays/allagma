@@ -36,6 +36,13 @@ Use the current source checkout's helper. An older locked bundle does not gain
 new commands implicitly. The example accepts the complete default `toy-v1`
 campaign and `a001` analysis, not an adapted or partial experiment.
 
+Preparation requires the retained passing audit for that selected analysis.
+It checks the original review input against the current claim ledger, verifies
+the review and audit receipt, and checks frozen campaign materials before
+creating publication files. Changed claims or derivations, missing audit
+history, and an audit of another analysis are refused. Preserve the rejected
+evidence and investigate; do not edit a retained record to make preparation pass.
+
 The toy keeps its 60-second execution budget and 28-attempt ceiling: 26
 successful attempts, one deliberate failure and one interruption. Its final
 audit reports `pass` and 521 checked references. Publication work does not

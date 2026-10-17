@@ -1,5 +1,9 @@
 # PR #25 review — 12 October 2026
 
+This is the earlier review snapshot. The subsequent
+[audit-binding repair](pr25-audit-binding.md) closes additional preparation
+gaps and records the owner's authorization to make ready PRs regular and merge.
+
 The owner requested resolution of reviews on every open PR, including drafts.
 The GitHub inventory contained regular [#24](https://github.com/alohays/allagma/pull/24)
 and draft [#25](https://github.com/alohays/allagma/pull/25), with no submitted

@@ -9,6 +9,9 @@ It verifies the existing evidence, copies the editable sections/configuration,
 binds actual result digests and creates pending review input. It does not rerun
 experiments, edit the default report configuration, or approve the manuscript.
 Select the anonymous attribution file explicitly or supply your own authors.
+The current claims must match the selected analysis's retained passing review
+input. The review, audit receipt and frozen materials must remain intact;
+preparation refuses inconsistencies before writing a publication.
 
 `record_review.py` records the reader's actual scientific and wording judgments
 in a new review/configuration revision. It refuses pending or stale input and
