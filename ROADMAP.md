@@ -13,7 +13,10 @@ The [10 October triage](docs/contributing/issue-triage.md) selected two new issu
    Review the proposed repair in [PR #20](https://github.com/alohays/allagma/pull/20).
    Changes confined to the new adapters must select their offline regression suites.
 2. [#19: make the toy-to-paper workflow runnable](https://github.com/alohays/allagma/issues/19).
-   Teach contributors to turn actual toy results into a new, evidence-bound paper revision.
+   Implemented in [draft PR #25](https://github.com/alohays/allagma/pull/25),
+   with a [walkthrough](docs/guides/toy-to-paper.md) and
+   [acceptance evidence](docs/contributing/toy-paper-walkthrough.md); awaiting
+   owner review and merge.
 
 Existing work remains relevant: [#6](https://github.com/alohays/allagma/issues/6)
 is assigned to `codedbypraneetha`, and [#7](https://github.com/alohays/allagma/issues/7)
@@ -59,7 +62,7 @@ provides the community entry point.
 | In progress · accessibility | [#6: accessible figure description](https://github.com/alohays/allagma/issues/6) | Claim confirmed and assigned to `codedbypraneetha`; coordinate before overlapping work |
 | Available · qualification | [#7: Linux/Python 3.13 tutorial](https://github.com/alohays/allagma/issues/7) | Unassigned; help wanted, local CPU only |
 | Owner review · confirmed CI gap | [#18: adapter regression selection](https://github.com/alohays/allagma/issues/18) | Assigned to `alohays`; proposed repair in [#20](https://github.com/alohays/allagma/pull/20), opened during triage |
-| Available · documentation enhancement | [#19: runnable toy-to-paper walkthrough](https://github.com/alohays/allagma/issues/19) | Unassigned; Python/research documentation; TeX only for optional compilation |
+| Owner review · documentation enhancement | [#19: runnable toy-to-paper walkthrough](https://github.com/alohays/allagma/issues/19) | Assigned to `alohays`; implemented in [draft #25](https://github.com/alohays/allagma/pull/25), with retained command/review/build evidence |
 | Blocked · maintainer decision | [#8: retained historical-audio rights](https://github.com/alohays/allagma/issues/8) | Outside the engineering milestone; public activation does not resolve rights |
 
 The three feature PRs were merged sequentially after final review and passing

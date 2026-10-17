@@ -1,0 +1,20 @@
+\AllagmaClaim{average}
+
+\begin{center}
+\begin{tabular}{lr}
+\hline
+Quantity & Retained value \\
+\hline
+Sample-mean MSE & \AllagmaValue{mean-mse} \\
+Shifted-estimator MSE & \AllagmaValue{biased-mse} \\
+Paired increase in MSE & \AllagmaValue{difference} \\
+\hline
+\end{tabular}
+\end{center}
+
+\AllagmaClaim{universal} Seed \AllagmaValue{first-counterexample} is one of the
+counterexamples recorded in the retained summary. Leave-one-seed-out mean
+differences range from \AllagmaValue{sensitivity-min} to
+\AllagmaValue{sensitivity-max}; \AllagmaValue{sensitivity-positive} of
+\AllagmaValue{seeds} retained means are positive. This sensitivity calculation
+changes the included seed set, not the data distribution or estimator.

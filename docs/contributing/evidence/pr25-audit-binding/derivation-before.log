@@ -1,0 +1,14 @@
+test_changed_frozen_derivation_is_refused_before_writing (conformance.test_toy_paper.ToyPaperTests.test_changed_frozen_derivation_is_refused_before_writing) ... FAIL
+
+======================================================================
+FAIL: test_changed_frozen_derivation_is_refused_before_writing (conformance.test_toy_paper.ToyPaperTests.test_changed_frozen_derivation_is_refused_before_writing)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<checkout>/conformance/test_toy_paper.py", line 184, in test_changed_frozen_derivation_is_refused_before_writing
+    with self.assertRaisesRegex(AllagmaError, "Missing or changed evidence"):
+AssertionError: AllagmaError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 6.663s
+
+FAILED (failures=1)

@@ -108,6 +108,11 @@ different things and are intentionally distinct. The state separates phase
 
 ## Continue from here
 
+Turn these retained results into an additional paper with the
+[runnable toy-to-paper walkthrough](toy-to-paper.md). It covers explicit
+attribution, provided-only references, scoped reviews and stale-review recovery.
+The base walkthrough stays offline; TeX compilation is a separate optional step.
+
 The [Linux/Python 3.13 qualification receipt](../contributing/linux-python313.md)
 records these exact commands on Debian 12/aarch64 with CPython 3.13.16, including
 a checkout path with spaces. It covers the offline toy and conformance suite

@@ -1,0 +1,167 @@
+{
+  "format": "allagma-paper-output-v1",
+  "output": "arxiv",
+  "title": "A retained toy comparison of two mean estimators",
+  "date": "",
+  "authors": {},
+  "template": {
+    "name": "allagma-preprint"
+  },
+  "references": "references",
+  "sections": {
+    "abstract": "sections/abstract.tex",
+    "introduction": "sections/introduction.tex",
+    "related-work": "sections/related-work.tex",
+    "methods": "sections/methods.tex",
+    "results": "sections/results.tex",
+    "discussion": "sections/discussion.tex",
+    "limitations": "sections/limitations.tex"
+  },
+  "appendices": [],
+  "evidence": {
+    "summary": {
+      "path": "campaigns/toy-v1/analyses/a001/outputs/summary.json",
+      "sha256": ""
+    },
+    "toy-claims": {
+      "path": "campaigns/toy-v1/analyses/a001/paper/claims.json",
+      "sha256": ""
+    },
+    "analysis": {
+      "path": "campaigns/toy-v1/analyses/a001/record.json",
+      "sha256": ""
+    },
+    "raw-manifest": {
+      "path": "campaigns/toy-v1/analyses/a001/raw-manifest.json",
+      "sha256": ""
+    },
+    "protocol": {
+      "path": "campaigns/toy-v1/protocol.json",
+      "sha256": ""
+    },
+    "derivation": {
+      "path": "campaigns/toy-v1/materials/domain/derivation.md",
+      "sha256": ""
+    }
+  },
+  "values": {
+    "seeds": {
+      "evidence": "summary",
+      "pointer": "/replicates",
+      "format": "d"
+    },
+    "samples": {
+      "evidence": "summary",
+      "pointer": "/samples_per_replicate",
+      "format": "d"
+    },
+    "bias": {
+      "evidence": "summary",
+      "pointer": "/bias",
+      "format": "text"
+    },
+    "mean-mse": {
+      "evidence": "summary",
+      "pointer": "/mean_mse",
+      "format": ".8f"
+    },
+    "biased-mse": {
+      "evidence": "summary",
+      "pointer": "/biased_mse",
+      "format": ".8f"
+    },
+    "difference": {
+      "evidence": "summary",
+      "pointer": "/difference",
+      "format": ".8f"
+    },
+    "lower": {
+      "evidence": "summary",
+      "pointer": "/ci95_normal/0",
+      "format": ".8f"
+    },
+    "upper": {
+      "evidence": "summary",
+      "pointer": "/ci95_normal/1",
+      "format": ".8f"
+    },
+    "first-counterexample": {
+      "evidence": "summary",
+      "pointer": "/counterexample_seeds/0",
+      "format": "d"
+    },
+    "sensitivity-min": {
+      "evidence": "summary",
+      "pointer": "/leave_one_seed_out/minimum_difference",
+      "format": ".8f"
+    },
+    "sensitivity-max": {
+      "evidence": "summary",
+      "pointer": "/leave_one_seed_out/maximum_difference",
+      "format": ".8f"
+    },
+    "sensitivity-positive": {
+      "evidence": "summary",
+      "pointer": "/leave_one_seed_out/positive_count",
+      "format": "d"
+    },
+    "average-result": {
+      "evidence": "toy-claims",
+      "pointer": "/0/text",
+      "format": "text"
+    },
+    "universal-status": {
+      "evidence": "toy-claims",
+      "pointer": "/1/status",
+      "format": "text"
+    }
+  },
+  "claims": [
+    {
+      "id": "average",
+      "text": "{{value:average-result}}",
+      "status": "supported",
+      "evidence": [
+        {
+          "id": "summary",
+          "locator": "#/difference"
+        },
+        {
+          "id": "summary",
+          "locator": "#/ci95_normal"
+        },
+        {
+          "id": "toy-claims",
+          "locator": "#/0"
+        }
+      ],
+      "citations": [],
+      "limitations": [
+        "Default toy only: 24 seed replicates, 64 observations per seed, target zero and additive bias 0.25.",
+        "Normal-approximation interval; no model-quality or novelty claim."
+      ]
+    },
+    {
+      "id": "universal",
+      "text": "The assertion that the shifted estimator has greater squared error on every confirmation seed was {{value:universal-status}} by the retained toy claim ledger.",
+      "status": "negative",
+      "evidence": [
+        {
+          "id": "summary",
+          "locator": "#/counterexample_seeds"
+        },
+        {
+          "id": "toy-claims",
+          "locator": "#/1"
+        }
+      ],
+      "citations": [],
+      "limitations": [
+        "A positive average does not establish an ordering on every seed."
+      ]
+    }
+  ],
+  "figures": [],
+  "tables": [],
+  "review": {}
+}

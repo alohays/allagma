@@ -1,0 +1,43 @@
+{
+  "implementation_commit": "cefd166ba51bf4f5ee8d9d1f90e607a211af272f",
+  "python": "3.11.6",
+  "commands": {
+    "python3 -B -m allagma check": "pass",
+    "python3 -B -m unittest conformance.test_toy_paper -v": {
+      "tests": 11,
+      "result": "pass"
+    },
+    "python3 -B -m allagma acceptance --output work/merge-ready-20261018/pr25-acceptance": {
+      "status": "pass",
+      "tests": 203,
+      "milestones": {
+        "I1": "pass",
+        "I2": "pass",
+        "I3": "pass",
+        "I4": "pass",
+        "I5": "pass"
+      },
+      "attempts": {
+        "failed": 1,
+        "interrupted": 1,
+        "succeeded": 26
+      },
+      "audit_references": 521
+    },
+    "npm run build": {
+      "pages": 44,
+      "local_links": 2975,
+      "result": "pass"
+    },
+    "npm test": {
+      "tests": 18,
+      "result": "pass"
+    }
+  },
+  "source_files": {
+    "examples/toy-study/paper/prepare.py": "4aab903363e7e779c871efd5029edbaf4e45d7609eca3615db3a85dbe0bfbb75",
+    "examples/toy-study/paper/record_review.py": "53216f7e03cdffaff03b6787f6931f38f84d5c1662424cbac3b6a000918eacea",
+    "conformance/test_toy_paper.py": "91bf19dc77de0a9df7643c251f8fb8dfdf0ed71f287f42d8605f12ca71bc82e0"
+  },
+  "scope": "Read-only audit binding and engineering checks; no independent scientific review or native host qualification."
+}
