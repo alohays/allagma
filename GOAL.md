@@ -470,3 +470,16 @@ and address concrete defects. Commit coherent increments, push each affected
 branch to `origin`, verify its current CI, and retain an English review record.
 Preserve draft states, existing evidence and the standing resource/model limits;
 this goal does not authorize merging PRs.
+
+## Bring all open PRs to merge readiness
+
+Repair and review every open pull request, convert ready drafts to regular PRs,
+and merge each PR only when its acceptance evidence and protected branch gates
+support that decision. The current scope begins with #24, #25, #26 and #27;
+recheck the open set before completion. Reconcile integrations and live task
+status, preserve original history and frozen evidence, and keep English
+technical documentation. Commit coherent increments and push them to origin
+as progress is verified. Do not bypass required checks or override the GUI
+model selection. The [toy audit-binding follow-up](docs/contributing/pr25-audit-binding.md)
+records the additional preparation repair; final integration evidence must
+cover the combined changes and the complete runnable workflow.
