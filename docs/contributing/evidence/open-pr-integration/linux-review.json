@@ -1,0 +1,58 @@
+{
+  "reviewed_head": "1b4a52077da5be24d19f4e7baeafa2e7b608bc27",
+  "tested_linux_source": "f7e32a70b43675444e9f88c07d227a8b762b9e56",
+  "historical_manifest_payloads_verified": 13,
+  "conformance_log_digest_verified": true,
+  "actual_container_source_ref_verified": true,
+  "retained_original_content_hashes_verified": 753,
+  "real_python_binary_digest_verified": "cb4548d280f38c2b1df4cba45f12c90a034729e08fce5bf1a223c58add0e21e3",
+  "live_container_networks_observed": {},
+  "local_read_only_recomputation": {
+    "status": "pass",
+    "checked_at": "2026-10-17T16:46:51.214899+00:00",
+    "attempts": {
+      "succeeded": 26,
+      "failed": 1,
+      "interrupted": 1
+    },
+    "confirmation_replicates": 24,
+    "distinct_direct_references": 487,
+    "exact_observed": {
+      "mean_mse": "47/3072",
+      "biased_mse": "247/3072",
+      "difference": "25/384"
+    },
+    "scientific_summary": {
+      "mean_mse": 0.015299479166666666,
+      "biased_mse": 0.08040364583333333,
+      "difference": 0.06510416666666667,
+      "standard_error": 0.01288424738845495,
+      "ci95_normal": [
+        0.03985104178529497,
+        0.09035729154803837
+      ],
+      "counterexample_seeds": [
+        104,
+        108,
+        118,
+        121
+      ]
+    },
+    "sensitivity": {
+      "replicates": 24,
+      "minimum_difference": 0.06182065217391304,
+      "maximum_difference": 0.07269021739130435,
+      "positive_count": 24
+    },
+    "figure_points": 24,
+    "enumerated_population_mse": {
+      "mean": "1/64",
+      "biased": "5/64"
+    },
+    "implementation_sha256": "21ff4857be543cdcc42975c29e36d5b700d09b3f9bd796e3f600d12901d999e9",
+    "coverage": "Separate rational arithmetic and binomial enumeration; complete-toy eligibility, reference digests, primary and sensitivity CSVs, figure points, claims and manuscript numbers. No Allagma or study helper imports."
+  },
+  "copied_study_files_preserved": 771,
+  "bytecode_cache_directories_in_study": 1,
+  "scope": "Inspected the recorded Linux container while live, then read its stopped filesystem. Recomputed retained data locally; this review is not a new Linux execution or independent scientific review."
+}

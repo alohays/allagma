@@ -1,0 +1,55 @@
+Retained excerpt of the first Linux/Python 3.13 conformance run without ps.
+The complete unchanged log remains local; its SHA-256 and length are in attempts.json.
+
+ERROR: test_recorded_request_without_reservation_never_launches_on_recovery (test_broker.BrokerTests.test_recorded_request_without_reservation_never_launches_on_recovery)
+ERROR: test_recovery_refuses_a_live_job_then_conservatively_abandons_it (test_broker.BrokerTests.test_recovery_refuses_a_live_job_then_conservatively_abandons_it)
+ERROR: test_final_storage_after_fake_cli_exit_is_enforced (test_native_capture.NativeCaptureTests.test_final_storage_after_fake_cli_exit_is_enforced)
+ERROR: test_command_cwd_stays_inside_budgeted_storage (test_resources.ResourceTests.test_command_cwd_stays_inside_budgeted_storage)
+ERROR: test_failed_launch_is_fully_charged_until_recovered (test_resources.ResourceTests.test_failed_launch_is_fully_charged_until_recovered)
+ERROR: test_failure_retry_and_separate_categories_preserve_history (test_resources.ResourceTests.test_failure_retry_and_separate_categories_preserve_history)
+ERROR: test_final_storage_is_checked_after_fast_exit_without_masking_failure (test_resources.ResourceTests.test_final_storage_is_checked_after_fast_exit_without_masking_failure) (exit_code=0)
+ERROR: test_final_storage_is_checked_after_fast_exit_without_masking_failure (test_resources.ResourceTests.test_final_storage_is_checked_after_fast_exit_without_masking_failure) (exit_code=3)
+ERROR: test_memory_watchdog (test_resources.ResourceTests.test_memory_watchdog)
+ERROR: test_normal_subprocess_exit_is_not_an_orphan (test_resources.ResourceTests.test_normal_subprocess_exit_is_not_an_orphan)
+ERROR: test_observed_detached_child_is_stopped_after_parent_exits (test_resources.ResourceTests.test_observed_detached_child_is_stopped_after_parent_exits)
+ERROR: test_per_file_kernel_limit (test_resources.ResourceTests.test_per_file_kernel_limit)
+ERROR: test_storage_and_per_file_limits (test_resources.ResourceTests.test_storage_and_per_file_limits)
+ERROR: test_timeout_stops_actual_child (test_resources.ResourceTests.test_timeout_stops_actual_child)
+ERROR: test_unresolved_live_job_is_not_recovered_or_restarted (test_resources.ResourceTests.test_unresolved_live_job_is_not_recovered_or_restarted)
+FAIL: test_recovery_delivers_completed_job_without_a_second_execution (test_broker.BrokerTests.test_recovery_delivers_completed_job_without_a_second_execution)
+FAIL: test_cli_preserves_command_arguments_and_nonzero_status (test_resources.ResourceTests.test_cli_preserves_command_arguments_and_nonzero_status)
+
+ERROR: test_recorded_request_without_reservation_never_launches_on_recovery (test_broker.BrokerTests.test_recorded_request_without_reservation_never_launches_on_recovery)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/qualification/clean path with spaces/allagma/conformance/test_broker.py", line 124, in test_recorded_request_without_reservation_never_launches_on_recovery
+    result = self.broker.recover()
+  File "/qualification/clean path with spaces/allagma/adapters/local-process/broker.py", line 104, in recover
+    resources.recover(self.ledger)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/qualification/clean path with spaces/allagma/allagma/resources.py", line 181, in recover
+    table = process_table()
+  File "/qualification/clean path with spaces/allagma/allagma/resources.py", line 130, in process_table
+    result = subprocess.run(["ps", "-axo", "pid=,ppid=,pgid=,rss=,stat=,lstart="],
+                            capture_output=True, text=True, timeout=3, check=True)
+  File "/usr/local/lib/python3.13/subprocess.py", line 555, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/subprocess.py", line 1040, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/subprocess.py", line 1992, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ps'
+
+
+Ran 192 tests in 42.381s
+
+FAILED (failures=2, errors=15)

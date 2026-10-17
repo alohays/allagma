@@ -1,0 +1,326 @@
+{
+  "commands": [
+    {
+      "command": "mkdir -p '/qualification/clean path with spaces' /qualification/evidence",
+      "cwd": "/",
+      "exit_code": 0,
+      "id": "prepare-directory",
+      "seconds": 0.048,
+      "started_at": "2026-10-17T16:27:21.096747+00:00",
+      "stderr": {
+        "bytes": 0,
+        "local_log": "prepare-directory.stderr",
+        "retained_as": null,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 0,
+        "local_log": "prepare-directory.stdout",
+        "retained_as": null,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "command": "python3 --version",
+      "cwd": "/",
+      "exit_code": 0,
+      "id": "python-version",
+      "seconds": 0.047,
+      "started_at": "2026-10-17T16:27:21.145557+00:00",
+      "stderr": {
+        "bytes": 0,
+        "local_log": "python-version.stderr",
+        "retained_as": null,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 15,
+        "local_log": "python-version.stdout",
+        "retained_as": null,
+        "sha256": "8a078b480fefb612930032cc46f81bc6d76b152bac4903485d0c5771f32219ad"
+      }
+    },
+    {
+      "command": "git clone --depth 1 --filter=blob:none --sparse https://github.com/alohays/allagma.git",
+      "cwd": "/qualification/clean path with spaces",
+      "exit_code": 0,
+      "id": "clone",
+      "seconds": 1.879,
+      "started_at": "2026-10-17T16:27:21.192516+00:00",
+      "stderr": {
+        "bytes": 26,
+        "local_log": "clone.stderr",
+        "retained_as": null,
+        "sha256": "42c7d25f06b16518570ae635cb4e233896926de3036a025a5e96777c4ac43186"
+      },
+      "stdout": {
+        "bytes": 0,
+        "local_log": "clone.stdout",
+        "retained_as": null,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "command": "cd allagma && pwd",
+      "cwd": "/qualification/clean path with spaces",
+      "exit_code": 0,
+      "id": "enter-checkout",
+      "seconds": 0.051,
+      "started_at": "2026-10-17T16:27:23.071530+00:00",
+      "stderr": {
+        "bytes": 0,
+        "local_log": "enter-checkout.stderr",
+        "retained_as": null,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 46,
+        "local_log": "enter-checkout.stdout",
+        "retained_as": null,
+        "sha256": "964083370e82a6a8e2b6a235c84f8a1f44239b94a5e3412315af268fcd009dd0"
+      }
+    },
+    {
+      "command": "git sparse-checkout set allagma adapters contracts methods recipes policies profiles \\\n  templates tools conformance examples/toy-study examples/first-research evals/context-retention",
+      "cwd": "/qualification/clean path with spaces/allagma",
+      "exit_code": 0,
+      "id": "sparse-checkout",
+      "seconds": 1.375,
+      "started_at": "2026-10-17T16:27:23.122380+00:00",
+      "stderr": {
+        "bytes": 0,
+        "local_log": "sparse-checkout.stderr",
+        "retained_as": null,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 0,
+        "local_log": "sparse-checkout.stdout",
+        "retained_as": null,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "command": "git rev-parse HEAD",
+      "cwd": "/qualification/clean path with spaces/allagma",
+      "exit_code": 0,
+      "id": "source-commit",
+      "seconds": 0.045,
+      "started_at": "2026-10-17T16:27:24.497485+00:00",
+      "stderr": {
+        "bytes": 0,
+        "local_log": "source-commit.stderr",
+        "retained_as": null,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 41,
+        "local_log": "source-commit.stdout",
+        "retained_as": null,
+        "sha256": "e381deceed2ee711a2febdd270b74963a23133fd1a3d574d8721d9a84af0493c"
+      }
+    },
+    {
+      "command": "git show HEAD:docs/guides/first-study.md",
+      "cwd": "/qualification/clean path with spaces/allagma",
+      "exit_code": 0,
+      "id": "guide-source",
+      "seconds": 0.532,
+      "started_at": "2026-10-17T16:27:24.542618+00:00",
+      "stderr": {
+        "bytes": 0,
+        "local_log": "guide-source.stderr",
+        "retained_as": null,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 5292,
+        "local_log": "guide-source.stdout",
+        "retained_as": null,
+        "sha256": "4574ecdc57fc94920ab2dc03d54f8dc348ff3cf0564853e200429290e04fa7d7"
+      }
+    },
+    {
+      "command": "python3 - <<'PY'\nimport hashlib, json, os, pathlib, platform, subprocess, sys, sysconfig\nexe = pathlib.Path(sys.executable).resolve()\nassert platform.system() == 'Linux'\nassert sys.version_info[:2] == (3, 13)\nassert ' ' in os.getcwd()\nprint(json.dumps({\n    'os_release': pathlib.Path('/etc/os-release').read_text(),\n    'kernel': platform.release(), 'architecture': platform.machine(),\n    'python_version': sys.version, 'python_executable': sys.executable,\n    'python_real_executable': str(exe), 'python_sha256': hashlib.sha256(exe.read_bytes()).hexdigest(),\n    'python_implementation': platform.python_implementation(),\n    'python_soabi': sysconfig.get_config_var('SOABI'),\n    'git_version': subprocess.check_output(['git', '--version'], text=True).strip(),\n    'checkout': os.getcwd(), 'path_contains_spaces': True,\n    'source_commit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),\n    'source_status': subprocess.check_output(['git', 'status', '--porcelain'], text=True),\n    'sparse_paths': subprocess.check_output(['git', 'sparse-checkout', 'list'], text=True).splitlines(),\n    'guide_sha256': hashlib.sha256(subprocess.check_output(['git', 'show', 'HEAD:docs/guides/first-study.md'])).hexdigest(),\n    'ps_version': subprocess.check_output(['ps', '--version'], text=True).strip(),\n    'pip_packages': json.loads(subprocess.check_output([sys.executable, '-m', 'pip', 'list', '--format=json'], text=True))\n}, indent=2))\nPY",
+      "cwd": "/qualification/clean path with spaces/allagma",
+      "exit_code": 0,
+      "id": "environment",
+      "seconds": 0.555,
+      "started_at": "2026-10-17T16:27:25.075501+00:00",
+      "stderr": {
+        "bytes": 0,
+        "local_log": "environment.stderr",
+        "retained_as": null,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 1434,
+        "local_log": "environment.stdout",
+        "retained_as": "environment.json",
+        "sha256": "94738260de6fa7ee0c1379d57cc6f679d95649367596f9a3330ce88cc0418ee3"
+      }
+    },
+    {
+      "command": "python3 -m allagma check",
+      "cwd": "/qualification/clean path with spaces/allagma",
+      "exit_code": 0,
+      "id": "catalog",
+      "seconds": 0.115,
+      "started_at": "2026-10-17T16:27:25.743810+00:00",
+      "stderr": {
+        "bytes": 0,
+        "local_log": "catalog.stderr",
+        "retained_as": null,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 611,
+        "local_log": "catalog.stdout",
+        "retained_as": "catalog.json",
+        "sha256": "45cbae9c0fb3480436c6a8056b85a08f3cdcde96cd5af8deac5d6b7f26c70b31"
+      }
+    },
+    {
+      "command": "python3 -m allagma toy --destination work/my-first-study",
+      "cwd": "/qualification/clean path with spaces/allagma",
+      "exit_code": 0,
+      "id": "toy",
+      "seconds": 3.579,
+      "started_at": "2026-10-17T16:27:25.859441+00:00",
+      "stderr": {
+        "bytes": 0,
+        "local_log": "toy.stderr",
+        "retained_as": null,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 1634,
+        "local_log": "toy.stdout",
+        "retained_as": "toy.json",
+        "sha256": "12eea50a18440141f87608eec025a5e65e8dea464c6dcd08f1c9637285e1eff1"
+      }
+    },
+    {
+      "command": "python3 /qualification/inspect_study.py snapshot",
+      "cwd": "/qualification/clean path with spaces/allagma",
+      "exit_code": 0,
+      "id": "before-audit",
+      "seconds": 0.085,
+      "started_at": "2026-10-17T16:27:29.438474+00:00",
+      "stderr": {
+        "bytes": 0,
+        "local_log": "before-audit.stderr",
+        "retained_as": null,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 102,
+        "local_log": "before-audit.stdout",
+        "retained_as": null,
+        "sha256": "886bbf872ab36c5fe3c4918134734b0a245012638a8a62cd1a771cccc00bd632"
+      }
+    },
+    {
+      "command": "python3 -m allagma campaign audit --study work/my-first-study --campaign toy-v1",
+      "cwd": "/qualification/clean path with spaces/allagma",
+      "exit_code": 0,
+      "id": "audit",
+      "seconds": 0.497,
+      "started_at": "2026-10-17T16:27:29.524075+00:00",
+      "stderr": {
+        "bytes": 0,
+        "local_log": "audit.stderr",
+        "retained_as": null,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 477,
+        "local_log": "audit.stdout",
+        "retained_as": "audit.json",
+        "sha256": "41071c7331b73bb2fa267327bb24baffaafd88437709248069791da9499312d9"
+      }
+    },
+    {
+      "command": "python3 -m unittest discover -s conformance -v",
+      "cwd": "/qualification/clean path with spaces/allagma",
+      "exit_code": 0,
+      "id": "conformance",
+      "seconds": 49.278,
+      "started_at": "2026-10-17T16:27:30.021648+00:00",
+      "stderr": {
+        "bytes": 28827,
+        "local_log": "conformance.stderr",
+        "retained_as": "conformance.log",
+        "sha256": "42d29f6c3d8347b6423e75c4549edea3af4d57bc08e77790860f71f522fd0e8b"
+      },
+      "stdout": {
+        "bytes": 0,
+        "local_log": "conformance.stdout",
+        "retained_as": null,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "command": "python3 tools/audit_toy.py --study work/my-first-study --output /qualification/evidence/rational-audit.json",
+      "cwd": "/qualification/clean path with spaces/allagma",
+      "exit_code": 0,
+      "id": "rational-audit",
+      "seconds": 0.102,
+      "started_at": "2026-10-17T16:28:19.300410+00:00",
+      "stderr": {
+        "bytes": 0,
+        "local_log": "rational-audit.stderr",
+        "retained_as": null,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 1277,
+        "local_log": "rational-audit.stdout",
+        "retained_as": "rational-audit.json",
+        "sha256": "abf21859f1e1927fc42f61007b67e80d619979b2ad1d37b49d1ad8852a8bb248"
+      }
+    },
+    {
+      "command": "python3 /qualification/inspect_study.py inspect",
+      "cwd": "/qualification/clean path with spaces/allagma",
+      "exit_code": 0,
+      "id": "inspect-study",
+      "seconds": 0.097,
+      "started_at": "2026-10-17T16:28:19.402878+00:00",
+      "stderr": {
+        "bytes": 0,
+        "local_log": "inspect-study.stderr",
+        "retained_as": null,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 11450,
+        "local_log": "inspect-study.stdout",
+        "retained_as": "study-inspection.json",
+        "sha256": "13bd3b11b505422efe260db52b039a5cb7bd7955ca17ca7577457d5ffc8cc181"
+      }
+    },
+    {
+      "command": "git status --porcelain",
+      "cwd": "/qualification/clean path with spaces/allagma",
+      "exit_code": 0,
+      "id": "source-status-final",
+      "seconds": 0.077,
+      "started_at": "2026-10-17T16:28:19.500202+00:00",
+      "stderr": {
+        "bytes": 0,
+        "local_log": "source-status-final.stderr",
+        "retained_as": null,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 0,
+        "local_log": "source-status-final.stdout",
+        "retained_as": null,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "scope": "Actual commands executed in the isolated Linux container; empty/acquisition-only output logs retained locally. cd was followed by pwd to record the directory transition.",
+  "source_commit": "174e200b508b07f022ba36233db54ca0b60e48e1"
+}

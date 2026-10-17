@@ -85,7 +85,8 @@ The [subsequent final audit](final-open-pr-merges.md) also records the completed
 [current starter list](starter-tasks.md) for available work and confirmed claims.
 The owner later authorized bringing every open PR to merge readiness and
 merging verified changes. The [integration record](open-pr-integration.md) covers
-#24–#27, including #25's regular-PR conversion and the feature merges.
+#24–#28, including both draft conversions, the feature merges and the measured
+Linux/Python 3.13 qualification.
 After an owner-approved merge, close the linked task, remove stale status labels,
 and update the overview. If the implementation is declined, record the reason
 without deleting its tests or discussion. Dependency PRs, including

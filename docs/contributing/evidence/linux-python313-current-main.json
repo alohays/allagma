@@ -1,0 +1,685 @@
+{
+  "audit": {
+    "analysis_repetitions": 1,
+    "checked_references": 521,
+    "findings": [],
+    "limitations": [
+      "No independent scientific peer review or real-model quality evaluation."
+    ],
+    "review": {
+      "media_type": "application/json",
+      "path": "campaigns/toy-v1/analyses/a001/reviews/review-002/record.json",
+      "retention": "retain-with-study",
+      "sha256": "a2b92abb2ec98bc01e5c893166ca2c50131be228241da094f9637f2002318fcd"
+    },
+    "stale_claims": [],
+    "verdict": "pass"
+  },
+  "catalog": {
+    "checked": [
+      "asset/reference-cache",
+      "context/active-brief",
+      "context/full-record",
+      "evaluation/context-retention",
+      "host/claude-code",
+      "host/codex",
+      "host/generic",
+      "output/arxiv",
+      "policy/local",
+      "profile/default",
+      "recipe/improve-allagma",
+      "recipe/replication",
+      "recipe/research",
+      "research/analysis",
+      "research/audit",
+      "research/experiment",
+      "research/improve",
+      "research/protocol",
+      "research/scope",
+      "research/writing",
+      "reviewer/checklist",
+      "reviewer/trace",
+      "runner/local-process"
+    ],
+    "status": "pass"
+  },
+  "commands": [
+    {
+      "command": "mkdir -p '/qualification/integration path with spaces' /qualification/integration-evidence",
+      "cwd": "/",
+      "exit_code": 0,
+      "id": "prepare-directory",
+      "seconds": 0.041,
+      "started_at": "2026-10-17T16:33:34.159858+00:00",
+      "stderr": {
+        "bytes": 0,
+        "file": "prepare-directory.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 0,
+        "file": "prepare-directory.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "command": "python3 --version",
+      "cwd": "/",
+      "exit_code": 0,
+      "id": "python-version",
+      "seconds": 0.05,
+      "started_at": "2026-10-17T16:33:34.201660+00:00",
+      "stderr": {
+        "bytes": 0,
+        "file": "python-version.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 15,
+        "file": "python-version.stdout",
+        "sha256": "8a078b480fefb612930032cc46f81bc6d76b152bac4903485d0c5771f32219ad"
+      }
+    },
+    {
+      "command": "git clone --depth 1 --filter=blob:none --sparse https://github.com/alohays/allagma.git",
+      "cwd": "/qualification/integration path with spaces",
+      "exit_code": 0,
+      "id": "clone",
+      "seconds": 1.46,
+      "started_at": "2026-10-17T16:33:34.252337+00:00",
+      "stderr": {
+        "bytes": 26,
+        "file": "clone.stderr",
+        "sha256": "42c7d25f06b16518570ae635cb4e233896926de3036a025a5e96777c4ac43186"
+      },
+      "stdout": {
+        "bytes": 0,
+        "file": "clone.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "command": "cd allagma && pwd",
+      "cwd": "/qualification/integration path with spaces",
+      "exit_code": 0,
+      "id": "enter-checkout",
+      "seconds": 0.047,
+      "started_at": "2026-10-17T16:33:35.712597+00:00",
+      "stderr": {
+        "bytes": 0,
+        "file": "enter-checkout.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 52,
+        "file": "enter-checkout.stdout",
+        "sha256": "0dd5fbf480de9784474a741565292d28ac8e06ffae8c0833d9e9fa02df6b410d"
+      }
+    },
+    {
+      "command": "git sparse-checkout set allagma adapters contracts methods recipes policies profiles \\\n  templates tools conformance examples/toy-study examples/first-research evals/context-retention",
+      "cwd": "/qualification/integration path with spaces/allagma",
+      "exit_code": 0,
+      "id": "sparse-checkout",
+      "seconds": 0.69,
+      "started_at": "2026-10-17T16:33:35.759737+00:00",
+      "stderr": {
+        "bytes": 0,
+        "file": "sparse-checkout.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 0,
+        "file": "sparse-checkout.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "command": "git rev-parse HEAD",
+      "cwd": "/qualification/integration path with spaces/allagma",
+      "exit_code": 0,
+      "id": "source-commit",
+      "seconds": 0.047,
+      "started_at": "2026-10-17T16:33:36.450368+00:00",
+      "stderr": {
+        "bytes": 0,
+        "file": "source-commit.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 41,
+        "file": "source-commit.stdout",
+        "sha256": "e3d7e3cd0bc4331c729f43a40514feeb8e433c81ad94244db865a41323ad03a5"
+      }
+    },
+    {
+      "command": "git rev-parse HEAD",
+      "cwd": "/qualification/integration path with spaces/allagma",
+      "exit_code": 0,
+      "id": "source-commit-after-review",
+      "seconds": 0.053,
+      "started_at": "2026-10-17T16:34:36.529593+00:00",
+      "stderr": {
+        "bytes": 0,
+        "file": "source-commit-after-review.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 41,
+        "file": "source-commit-after-review.stdout",
+        "sha256": "e3d7e3cd0bc4331c729f43a40514feeb8e433c81ad94244db865a41323ad03a5"
+      }
+    },
+    {
+      "command": "git show HEAD:docs/guides/first-study.md",
+      "cwd": "/qualification/integration path with spaces/allagma",
+      "exit_code": 0,
+      "id": "guide-source",
+      "seconds": 0.495,
+      "started_at": "2026-10-17T16:34:36.582588+00:00",
+      "stderr": {
+        "bytes": 0,
+        "file": "guide-source.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 5292,
+        "file": "guide-source.stdout",
+        "sha256": "4574ecdc57fc94920ab2dc03d54f8dc348ff3cf0564853e200429290e04fa7d7"
+      }
+    },
+    {
+      "command": "python3 - <<'PY'\nimport hashlib, json, os, pathlib, platform, subprocess, sys, sysconfig\nexe = pathlib.Path(sys.executable).resolve()\nassert platform.system() == 'Linux'\nassert sys.version_info[:2] == (3, 13)\nassert ' ' in os.getcwd()\nprint(json.dumps({\n    'os_release': pathlib.Path('/etc/os-release').read_text(),\n    'kernel': platform.release(), 'architecture': platform.machine(),\n    'python_version': sys.version, 'python_executable': sys.executable,\n    'python_real_executable': str(exe), 'python_sha256': hashlib.sha256(exe.read_bytes()).hexdigest(),\n    'python_implementation': platform.python_implementation(),\n    'python_soabi': sysconfig.get_config_var('SOABI'),\n    'git_version': subprocess.check_output(['git', '--version'], text=True).strip(),\n    'checkout': os.getcwd(), 'path_contains_spaces': True,\n    'source_commit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),\n    'source_status': subprocess.check_output(['git', 'status', '--porcelain'], text=True),\n    'sparse_paths': subprocess.check_output(['git', 'sparse-checkout', 'list'], text=True).splitlines(),\n    'guide_sha256': hashlib.sha256(subprocess.check_output(['git', 'show', 'HEAD:docs/guides/first-study.md'])).hexdigest(),\n    'ps_version': subprocess.check_output(['ps', '--version'], text=True).strip(),\n    'pip_packages': json.loads(subprocess.check_output([sys.executable, '-m', 'pip', 'list', '--format=json'], text=True))\n}, indent=2))\nPY",
+      "cwd": "/qualification/integration path with spaces/allagma",
+      "exit_code": 0,
+      "id": "environment",
+      "seconds": 0.231,
+      "started_at": "2026-10-17T16:34:37.078646+00:00",
+      "stderr": {
+        "bytes": 0,
+        "file": "environment.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 1440,
+        "file": "environment.stdout",
+        "sha256": "36fa40f9407c80f612eab0a000be817b4c662ae8b90999b3187c257c98e8384e"
+      }
+    },
+    {
+      "command": "python3 -m allagma check",
+      "cwd": "/qualification/integration path with spaces/allagma",
+      "exit_code": 0,
+      "id": "catalog",
+      "seconds": 0.104,
+      "started_at": "2026-10-17T16:34:37.405082+00:00",
+      "stderr": {
+        "bytes": 0,
+        "file": "catalog.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 611,
+        "file": "catalog.stdout",
+        "sha256": "45cbae9c0fb3480436c6a8056b85a08f3cdcde96cd5af8deac5d6b7f26c70b31"
+      }
+    },
+    {
+      "command": "python3 -m allagma toy --destination work/my-first-study",
+      "cwd": "/qualification/integration path with spaces/allagma",
+      "exit_code": 0,
+      "id": "toy",
+      "seconds": 3.847,
+      "started_at": "2026-10-17T16:34:37.509712+00:00",
+      "stderr": {
+        "bytes": 0,
+        "file": "toy.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 1640,
+        "file": "toy.stdout",
+        "sha256": "d3f408940a560f6564d4cab6888d4f3024b2ef9c2df07bcffcee291f008d5d36"
+      }
+    },
+    {
+      "command": "python3 /qualification/inspect_study_integration.py snapshot",
+      "cwd": "/qualification/integration path with spaces/allagma",
+      "exit_code": 0,
+      "id": "before-audit",
+      "seconds": 0.081,
+      "started_at": "2026-10-17T16:34:41.357016+00:00",
+      "stderr": {
+        "bytes": 0,
+        "file": "before-audit.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 102,
+        "file": "before-audit.stdout",
+        "sha256": "9e9c17a95584190f347d40fe9c69eb1264476b0ffdbbc01a7a0ff9ed75ae214c"
+      }
+    },
+    {
+      "command": "python3 -m allagma campaign audit --study work/my-first-study --campaign toy-v1",
+      "cwd": "/qualification/integration path with spaces/allagma",
+      "exit_code": 0,
+      "id": "audit",
+      "seconds": 0.519,
+      "started_at": "2026-10-17T16:34:41.438776+00:00",
+      "stderr": {
+        "bytes": 0,
+        "file": "audit.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 477,
+        "file": "audit.stdout",
+        "sha256": "f6978ab6edbe36a2a4d573118c571aabbce69afcd5517dd4f33e12e9f038496b"
+      }
+    },
+    {
+      "command": "python3 -m unittest discover -s conformance -v",
+      "cwd": "/qualification/integration path with spaces/allagma",
+      "exit_code": 0,
+      "id": "conformance",
+      "seconds": 52.027,
+      "started_at": "2026-10-17T16:34:41.959442+00:00",
+      "stderr": {
+        "bytes": 31191,
+        "file": "conformance.stderr",
+        "sha256": "6f5a09cb957387df78f234d450bc401cdecba238710e249129085524d0bb5644"
+      },
+      "stdout": {
+        "bytes": 0,
+        "file": "conformance.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "command": "python3 tools/audit_toy.py --study work/my-first-study --output /qualification/integration-evidence/rational-audit.json",
+      "cwd": "/qualification/integration path with spaces/allagma",
+      "exit_code": 0,
+      "id": "rational-audit",
+      "seconds": 0.091,
+      "started_at": "2026-10-17T16:35:33.987244+00:00",
+      "stderr": {
+        "bytes": 0,
+        "file": "rational-audit.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 1277,
+        "file": "rational-audit.stdout",
+        "sha256": "ebe787bf8dbfb3591743654c1fc35fb497dcd96c67676a7c2d2bf80436c19ac6"
+      }
+    },
+    {
+      "command": "python3 /qualification/inspect_study_integration.py inspect",
+      "cwd": "/qualification/integration path with spaces/allagma",
+      "exit_code": 0,
+      "id": "inspect-study",
+      "seconds": 0.095,
+      "started_at": "2026-10-17T16:35:34.078425+00:00",
+      "stderr": {
+        "bytes": 0,
+        "file": "inspect-study.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 11450,
+        "file": "inspect-study.stdout",
+        "sha256": "f67ccf02f98736205f513797ed22e101f6f355015842ffa3841573cbfe7f23bf"
+      }
+    },
+    {
+      "command": "git status --porcelain",
+      "cwd": "/qualification/integration path with spaces/allagma",
+      "exit_code": 0,
+      "id": "source-status-final",
+      "seconds": 0.076,
+      "started_at": "2026-10-17T16:35:34.173296+00:00",
+      "stderr": {
+        "bytes": 0,
+        "file": "source-status-final.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 0,
+        "file": "source-status-final.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "conformance": {
+    "bytes": 31191,
+    "errors": 0,
+    "exit_code": 0,
+    "failures": 0,
+    "log": "linux-python313-current-main.log",
+    "seconds": 51.861,
+    "sha256": "6f5a09cb957387df78f234d450bc401cdecba238710e249129085524d0bb5644",
+    "skipped": 0,
+    "tests": 206
+  },
+  "environment": {
+    "architecture": "aarch64",
+    "checkout": "/qualification/integration path with spaces/allagma",
+    "git_version": "git version 2.39.5",
+    "guide_sha256": "4574ecdc57fc94920ab2dc03d54f8dc348ff3cf0564853e200429290e04fa7d7",
+    "kernel": "6.10.14-linuxkit",
+    "os_release": "PRETTY_NAME=\"Debian GNU/Linux 12 (bookworm)\"\nNAME=\"Debian GNU/Linux\"\nVERSION_ID=\"12\"\nVERSION=\"12 (bookworm)\"\nVERSION_CODENAME=bookworm\nID=debian\nHOME_URL=\"https://www.debian.org/\"\nSUPPORT_URL=\"https://www.debian.org/support\"\nBUG_REPORT_URL=\"https://bugs.debian.org/\"\n",
+    "path_contains_spaces": true,
+    "pip_packages": [
+      {
+        "name": "pip",
+        "version": "26.2.1"
+      }
+    ],
+    "ps_version": "ps from procps-ng 4.0.2",
+    "python_executable": "/usr/local/bin/python3",
+    "python_implementation": "CPython",
+    "python_real_executable": "/usr/local/bin/python3.13",
+    "python_sha256": "cb4548d280f38c2b1df4cba45f12c90a034729e08fce5bf1a223c58add0e21e3",
+    "python_soabi": "cpython-313-aarch64-linux-gnu",
+    "python_version": "3.13.16 (main, Oct  6 2026, 02:09:20) [GCC 12.2.0]",
+    "source_commit": "da9ea45844c59d14ece28789f2707627e8af724f",
+    "source_status": "",
+    "sparse_paths": [
+      "adapters",
+      "allagma",
+      "conformance",
+      "contracts",
+      "evals/context-retention",
+      "examples/first-research",
+      "examples/toy-study",
+      "methods",
+      "policies",
+      "profiles",
+      "recipes",
+      "templates",
+      "tools"
+    ]
+  },
+  "helper_sha256": "688db73933dfaf293ce967f3bcb2ab04553a7d1304ff9fb76b8b24a86923af5c",
+  "limits": "Same local Linux/Python 3.13 environment and original toy ceilings. Offline core and fixtures; no native-host, scientific/model-quality or independent review qualification.",
+  "network_isolation": {
+    "command": "docker network disconnect bridge allagma-issue7-20261018-procps",
+    "exit_code": 0,
+    "networks_after_disconnect": {},
+    "scope": "Image/bootstrap and anonymous Git acquisition used network; every Allagma and conformance command below ran after disconnect. No host workspace, credentials or sockets were mounted."
+  },
+  "rational_audit": {
+    "attempts": {
+      "failed": 1,
+      "interrupted": 1,
+      "succeeded": 26
+    },
+    "checked_at": "2026-10-17T16:35:34.068855+00:00",
+    "confirmation_replicates": 24,
+    "coverage": "Separate rational arithmetic and binomial enumeration; complete-toy eligibility, reference digests, primary and sensitivity CSVs, figure points, claims and manuscript numbers. No Allagma or study helper imports.",
+    "distinct_direct_references": 487,
+    "enumerated_population_mse": {
+      "biased": "5/64",
+      "mean": "1/64"
+    },
+    "exact_observed": {
+      "biased_mse": "247/3072",
+      "difference": "25/384",
+      "mean_mse": "47/3072"
+    },
+    "figure_points": 24,
+    "implementation_sha256": "21ff4857be543cdcc42975c29e36d5b700d09b3f9bd796e3f600d12901d999e9",
+    "scientific_summary": {
+      "biased_mse": 0.08040364583333333,
+      "ci95_normal": [
+        0.03985104178529497,
+        0.09035729154803837
+      ],
+      "counterexample_seeds": [
+        104,
+        108,
+        118,
+        121
+      ],
+      "difference": 0.06510416666666667,
+      "mean_mse": 0.015299479166666666,
+      "standard_error": 0.01288424738845495
+    },
+    "sensitivity": {
+      "maximum_difference": 0.07269021739130435,
+      "minimum_difference": 0.06182065217391304,
+      "positive_count": 24,
+      "replicates": 24
+    },
+    "status": "pass"
+  },
+  "reason": "Public main advanced through merges of PRs #26 and #27 during the qualification. Retain the initial 174e200 receipts unchanged and verify the merged main in another fresh sparse checkout.",
+  "retention": "Full raw command logs, original snapshots and study retained locally; no prior qualification or study files overwritten.",
+  "source_commit": "da9ea45844c59d14ece28789f2707627e8af724f",
+  "source_selection": "The first clone observed da9ea458 instead of the expected dac1380. The source guard stopped before any Allagma execution. After inspecting the #27 merge, explicitly selected da9ea458 and resumed that new checkout.",
+  "source_status_after": "clean",
+  "status": "pass",
+  "study_inspection": {
+    "attempts": {
+      "failed": 1,
+      "interrupted": 1,
+      "succeeded": 26
+    },
+    "audit": {
+      "analysis_repetitions": 1,
+      "checked_references": 521,
+      "findings": [],
+      "limitations": [
+        "No independent scientific peer review or real-model quality evaluation."
+      ],
+      "review": {
+        "media_type": "application/json",
+        "path": "campaigns/toy-v1/analyses/a001/reviews/review-002/record.json",
+        "retention": "retain-with-study",
+        "sha256": "a2b92abb2ec98bc01e5c893166ca2c50131be228241da094f9637f2002318fcd"
+      },
+      "stale_claims": [],
+      "verdict": "pass"
+    },
+    "claim_statuses": {
+      "C1": "supported",
+      "C2": "contradicted",
+      "C3": "supported"
+    },
+    "claims_sha256": "b4e883eebfe9cf3968a68d93d350e4b33ccffa280576f1335e00e21c50948814",
+    "direct_claim_references": {
+      "campaigns/toy-v1/analyses/a001/outputs/summary.json": "cf60fe8211bf355c9a8f29b731119dbbf207d3943df9c936214b336b6f8bd8da",
+      "campaigns/toy-v1/analyses/a001/raw-manifest.json": "b02685743d000b0774b07bd93055fadf210098a4938a3bbe7225d96e9a92e015",
+      "campaigns/toy-v1/analyses/a001/record.json": "1c65340c348e4ed60a188904f4ca64cac7e31b292982d99e79a858bcf235dc71",
+      "campaigns/toy-v1/protocol.json": "e1fbac18b5401adfcb492b989a8e0b46baae49438e6b0dc867999ee84d362865",
+      "campaigns/toy-v1/runs/confirm-100/attempts/001/record.json": "8ff90c74192c576034c6b4efe6ef84217e2c41e1ad1aa350297a6c8a79db9570",
+      "campaigns/toy-v1/runs/confirm-100/attempts/002/raw.json": "1d257c2c9b57606a232ad01be4e7f50499f420d7597f56b5ad0e65ac0bef7ca5",
+      "campaigns/toy-v1/runs/confirm-100/attempts/002/record.json": "5e4bf9679171147fba1d04a5c66f4b3b860c64fdd3b971a5c4b5573fccdd3432",
+      "campaigns/toy-v1/runs/confirm-101/attempts/001/record.json": "bd66b92da79bae45d1b7994165450907cdf95c05b4e476578ae5aebde9b22997",
+      "campaigns/toy-v1/runs/confirm-101/attempts/002/raw.json": "c4d4c04bc6d16b3a96abb34414bf175d3ccdd81b1cdb7166cacc0529d73946ff",
+      "campaigns/toy-v1/runs/confirm-101/attempts/002/record.json": "05c31a1c0ed33253eb543faa140e13e4a0bb8f5d68d3fe6f10fcb3114689072a",
+      "campaigns/toy-v1/runs/confirm-102/attempts/001/raw.json": "cdab552e7715495a4e2d7f30d509202a36248775c37c85a477e342e8c2037a61",
+      "campaigns/toy-v1/runs/confirm-102/attempts/001/record.json": "6c662226d70b990570a0227f278bf2320b8e81095d2b7eb6f948af2142b47a15",
+      "campaigns/toy-v1/runs/confirm-103/attempts/001/raw.json": "a8fb60b18c21ec835d6ac6b91bf41bdb0a5eb9dd3713571df8c0433dc31cb3e3",
+      "campaigns/toy-v1/runs/confirm-103/attempts/001/record.json": "ec7110626f9be0a21c22f55424a5958a71615c7018f10bd9db3fcb37157f2ba8",
+      "campaigns/toy-v1/runs/confirm-104/attempts/001/raw.json": "ef73c39cef397ca1db8a6dc5e3d5d20b2ac69a27b44fc34b70fa55bf0a3e5a26",
+      "campaigns/toy-v1/runs/confirm-104/attempts/001/record.json": "183bd4b53bf5611fc0ed7e9b083c867662934562bce2841250d46f0976acf623",
+      "campaigns/toy-v1/runs/confirm-105/attempts/001/raw.json": "3643351910391bc9ff32455027b82dc6c5550d3cbac1f4c2c665bfbd94f6e52e",
+      "campaigns/toy-v1/runs/confirm-105/attempts/001/record.json": "de3e69ca3a8aadc4206cfdc5ce376ae1fdba98bffaa97046e7b37b353187380f",
+      "campaigns/toy-v1/runs/confirm-106/attempts/001/raw.json": "eaae1a0d9347bef552668acaec89171157b27f89ba64fdf95f7d06bb04bd476f",
+      "campaigns/toy-v1/runs/confirm-106/attempts/001/record.json": "4d57be50fde4ef40f455f6bfd836b8324ec88bbc5c3f2004d9b76fbbab2fb257",
+      "campaigns/toy-v1/runs/confirm-107/attempts/001/raw.json": "97945cb6cf37aa89039b940730fa3c58304491c67bad22f09ac882a794d500d4",
+      "campaigns/toy-v1/runs/confirm-107/attempts/001/record.json": "32deb987acbe0815a782be7e559f0e531e9b774abce20c701c387ce635268a1f",
+      "campaigns/toy-v1/runs/confirm-108/attempts/001/raw.json": "c4dc8e6fade216333fd08de5589490016f46181482ecb814b21417db57fa46a0",
+      "campaigns/toy-v1/runs/confirm-108/attempts/001/record.json": "a9f803b6a352a8991db66714f3ec105db06f18541210ec75e60f1ab600b3d91f",
+      "campaigns/toy-v1/runs/confirm-109/attempts/001/raw.json": "cf973ac583d0f997bf60ef5739618831c9c7e0d66ed7e0b773eed68027e92701",
+      "campaigns/toy-v1/runs/confirm-109/attempts/001/record.json": "1a3d7ff78d353f33fe2e6940de79110e7aa6b15a69963437d61c4135f6d6c3ce",
+      "campaigns/toy-v1/runs/confirm-110/attempts/001/raw.json": "efff0918de364c748349a616a467408fa9485088ff354e5e58dd400b57d1363b",
+      "campaigns/toy-v1/runs/confirm-110/attempts/001/record.json": "e729f51d3841fa57170cee4def27f1474cfd3df349dc13ea312da67cb7fc1161",
+      "campaigns/toy-v1/runs/confirm-111/attempts/001/raw.json": "9ee1258e06fe47375111d1aaad572367d289ae4a6f2136b7142fb3e75ce25992",
+      "campaigns/toy-v1/runs/confirm-111/attempts/001/record.json": "a10eb73a625f5d40bcf35d5ab9984bc8a216d70d68fe004bc613a26de15d59f9",
+      "campaigns/toy-v1/runs/confirm-112/attempts/001/raw.json": "30a09d407ed2e0f9ebea09f020c5180a8a205cec84ab88ad30a97b482190a0be",
+      "campaigns/toy-v1/runs/confirm-112/attempts/001/record.json": "522cccc0259c2e4691a51c6f8a70ff2dae68d1a4ac89a777f5d62c560a80deec",
+      "campaigns/toy-v1/runs/confirm-113/attempts/001/raw.json": "ff7896a0b65c36eca159005f09caca26dcef62d2d653e1ebcf372e57e1037d36",
+      "campaigns/toy-v1/runs/confirm-113/attempts/001/record.json": "eb5f554821bfa26c0ce47797f05e629e24a382d669ee997e5a44f6cabec09226",
+      "campaigns/toy-v1/runs/confirm-114/attempts/001/raw.json": "6f0e657c0b8c26f70d861b83b398346745d6893c88d193721d8042a9ff4ecc26",
+      "campaigns/toy-v1/runs/confirm-114/attempts/001/record.json": "9577bfde787a295196f76782967f7d942060012f01614c12f94db1d58cf9ce7a",
+      "campaigns/toy-v1/runs/confirm-115/attempts/001/raw.json": "c6fbb9bf30bedd6ba04974ded8a62d493d8a9749554a1075d3261685700f3411",
+      "campaigns/toy-v1/runs/confirm-115/attempts/001/record.json": "e551825d3f48ba11c1eacdbc5161072228a6587e99b7cdea379720d939710e89",
+      "campaigns/toy-v1/runs/confirm-116/attempts/001/raw.json": "5bf8d23db5cfe3d85a2e858b334cfdbb1fada7209fdead2e6d7d0b242895c849",
+      "campaigns/toy-v1/runs/confirm-116/attempts/001/record.json": "ec48042ddead4e0972e1e02c2344e99b2d37535736069d50a5f714bb955969d4",
+      "campaigns/toy-v1/runs/confirm-117/attempts/001/raw.json": "9fc7dff3de12dc8dbbaba59d70be6e5136aa8b3646386c9be3eb26c14d575839",
+      "campaigns/toy-v1/runs/confirm-117/attempts/001/record.json": "4aadedf0569a73c399191d62da99ce300391adc3fb86ecfbfad278dd51032a64",
+      "campaigns/toy-v1/runs/confirm-118/attempts/001/raw.json": "3724eb25817e2b390d42377b2b9c186383cc13b23e1cd51ec49e34b212dba8bf",
+      "campaigns/toy-v1/runs/confirm-118/attempts/001/record.json": "e032b9269836034599e35738024030575088601f7e32e37a88d335a1c1b4c7cf",
+      "campaigns/toy-v1/runs/confirm-119/attempts/001/raw.json": "69ea3d83efa7a49ffec8c9c62a99c6ab9a9178742587bdceec12373b90e84237",
+      "campaigns/toy-v1/runs/confirm-119/attempts/001/record.json": "92bba639f79ed4717e2d960b9369777da8651bb118b5b7140b0e10d4ff0a7e35",
+      "campaigns/toy-v1/runs/confirm-120/attempts/001/raw.json": "978b68519eae2e5450ea015a10d3ec3c3ca1d30535ef6bd7a30be892ab2ad73e",
+      "campaigns/toy-v1/runs/confirm-120/attempts/001/record.json": "75da8274118c15675069ffd91339147579d5dc559c7ec9d0837d126ade452909",
+      "campaigns/toy-v1/runs/confirm-121/attempts/001/raw.json": "131a64aad28ad61ba53dddbe86c5e05ea6313872fdb5ef0f80859da5f10c7bff",
+      "campaigns/toy-v1/runs/confirm-121/attempts/001/record.json": "72de6cc4036d69f30e1f4228f1e2ee5aebcf2752f85291c114f7a3410b19d784",
+      "campaigns/toy-v1/runs/confirm-122/attempts/001/raw.json": "16f77e8182f126f6af91b55eec68db0f1d937dc1a99e29d1fbc7b367603fa72f",
+      "campaigns/toy-v1/runs/confirm-122/attempts/001/record.json": "f66ba6e416895b54f759d462e57e93690562628e404414b623c3192db7ea780d",
+      "campaigns/toy-v1/runs/confirm-123/attempts/001/raw.json": "08bc3ddbaf390b4a720ebc9da959e5784d15f904338b2ea0076e1a0415308287",
+      "campaigns/toy-v1/runs/confirm-123/attempts/001/record.json": "8f603fb908fe65192d5780f5a795ad8e140e88eac957616b9a146dc85ea9b047",
+      "campaigns/toy-v1/runs/pilot-balanced/attempts/001/record.json": "5520affe46bb05963cfe09fe6fe0c5079c9c0c58b85d21256764d28e5694ddca",
+      "campaigns/toy-v1/runs/pilot-zero/attempts/001/record.json": "461b6115be9d573caa5ac65e3a14fbe2783d111732979ce40111e31a37b60c3a"
+    },
+    "effective_configuration": {
+      "budget": {
+        "max_attempts": 28,
+        "max_seconds": 60.0,
+        "money_usd": 0.0,
+        "per_attempt_seconds": 5.0
+      },
+      "capabilities": [
+        "artifact.read",
+        "artifact.write",
+        "execution.local"
+      ],
+      "context_chars": 12000,
+      "language": "English",
+      "max_revisions": 2
+    },
+    "manuscript_links": [
+      {
+        "label": "Paired squared-error differences by confirmation seed",
+        "sha256": "800452621fa043c92e460149422b4291838ec5426930c60fa76a2d9094d78c10",
+        "study_path": "campaigns/toy-v1/analyses/a001/outputs/paired-differences.svg",
+        "target": "../outputs/paired-differences.svg"
+      },
+      {
+        "label": "claim ledger",
+        "sha256": "b4e883eebfe9cf3968a68d93d350e4b33ccffa280576f1335e00e21c50948814",
+        "study_path": "campaigns/toy-v1/analyses/a001/paper/claims.json",
+        "target": "claims.json"
+      },
+      {
+        "label": "analysis record",
+        "sha256": "1c65340c348e4ed60a188904f4ca64cac7e31b292982d99e79a858bcf235dc71",
+        "study_path": "campaigns/toy-v1/analyses/a001/record.json",
+        "target": "../record.json"
+      }
+    ],
+    "manuscript_sha256": "dd2318ccf2f246d310e086145dab1f397d9d004d51694935b056639133b4fbef",
+    "preservation": {
+      "added_files": [
+        "campaigns/toy-v1/analyses/a001/reviews/review-002/adapter-result.json",
+        "campaigns/toy-v1/analyses/a001/reviews/review-002/audit.json",
+        "campaigns/toy-v1/analyses/a001/reviews/review-002/execution.json",
+        "campaigns/toy-v1/analyses/a001/reviews/review-002/input.json",
+        "campaigns/toy-v1/analyses/a001/reviews/review-002/record.json",
+        "campaigns/toy-v1/events/1792254881941444208-2fdcd2.json"
+      ],
+      "before_inventory_sha256": "cfa3dabb5a781d0e230a24758c384df69f7215c604a8b625125a676c71c93a58",
+      "changed_mutable_pointers": [
+        "campaigns/toy-v1/latest-audit.json",
+        "campaigns/toy-v1/state.json"
+      ],
+      "comparison": "SHA-256 and nanosecond mtime for every original file except the two mutable state/audit pointers",
+      "immutable_original_files_unchanged": 753,
+      "original_files": 755
+    },
+    "scope": "Offline deterministic example on the recorded Linux container/Python interpreter. No scientific or model-quality qualification, independent peer review, or native-host qualification.",
+    "state": {
+      "assurance": "deterministic",
+      "execution_status": "completed",
+      "phase": "audit",
+      "stop_reason": null
+    },
+    "status": "pass",
+    "summary": {
+      "bias": 0.25,
+      "biased_mse": 0.08040364583333333,
+      "ci95_normal": [
+        0.039851041785294965,
+        0.09035729154803837
+      ],
+      "counterexample_seeds": [
+        104,
+        108,
+        118,
+        121
+      ],
+      "difference": 0.06510416666666667,
+      "leave_one_seed_out": {
+        "maximum_difference": 0.07269021739130435,
+        "minimum_difference": 0.06182065217391304,
+        "positive_count": 24,
+        "replicates": 24
+      },
+      "mean_mse": 0.015299479166666666,
+      "method": "paired differences across seeds; normal approximation, 1.96 standard errors",
+      "replicates": 24,
+      "samples_per_replicate": 64,
+      "standard_error": 0.012884247388454952
+    },
+    "summary_sha256": "cf60fe8211bf355c9a8f29b731119dbbf207d3943df9c936214b336b6f8bd8da"
+  },
+  "toy": {
+    "analysis": "a001",
+    "audit": {
+      "analysis_repetitions": 1,
+      "checked_references": 521,
+      "findings": [],
+      "limitations": [
+        "No independent scientific peer review or real-model quality evaluation."
+      ],
+      "review": {
+        "media_type": "application/json",
+        "path": "campaigns/toy-v1/analyses/a001/reviews/review-001/record.json",
+        "retention": "retain-with-study",
+        "sha256": "aee410f041ec79bab472f62d72992571db63da5cccfd11f2c37764895cab6de6"
+      },
+      "stale_claims": [],
+      "verdict": "pass"
+    },
+    "context": {
+      "media_type": "application/json",
+      "path": "campaigns/toy-v1/context.json",
+      "retention": "retain-with-study",
+      "sha256": "9ef9b3ddfde48bc277144955fafcbac07a7998515751898ce617ed49b1502480"
+    },
+    "context_method": {
+      "bundle_id": "b-b75747bd7b1b54c1352ea866",
+      "capabilities": [
+        "artifact.read",
+        "artifact.write",
+        "execution.local"
+      ],
+      "contract": "0.2",
+      "lock_id": "3b6fcb57d5ce8c35fff7272a362e21be88513d69bd734fdd70651de44324782c",
+      "module_id": "context/active-brief",
+      "path": "/qualification/integration path with spaces/allagma/work/my-first-study/.allagma/bundles/b-b75747bd7b1b54c1352ea866/methods/allagma-context-active-brief/SKILL.md",
+      "sha256": "264089727ffd44b03c0cbd1af45ffb4abac33ffd7f4c790a9fd16259886997f3"
+    },
+    "entrypoint": "ALLAGMA.md",
+    "faults_demonstrated": true,
+    "host": "generic",
+    "native_hooks": false,
+    "native_subagents": false,
+    "recorded_at": "2026-10-17T16:34:41.345964+00:00",
+    "scope": "Generic execution; native hosts are packaging/contract fixtures, not real-model smoke tests"
+  }
+}

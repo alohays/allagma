@@ -1,6 +1,7 @@
 # PR #24 review — 12 October 2026
 
 The feature PRs #25, #26 and #27 have since merged, closing #19, #22 and #23.
+Qualification PR #28 has also merged, closing #7.
 See the [integration record](open-pr-integration.md) for current status and new
 validation. The dated observations and evidence below remain preserved.
 

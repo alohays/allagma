@@ -1,0 +1,45 @@
+{
+  "status": "pass",
+  "checked_at": "2026-10-17T16:28:19.393640+00:00",
+  "attempts": {
+    "succeeded": 26,
+    "interrupted": 1,
+    "failed": 1
+  },
+  "confirmation_replicates": 24,
+  "distinct_direct_references": 487,
+  "exact_observed": {
+    "mean_mse": "47/3072",
+    "biased_mse": "247/3072",
+    "difference": "25/384"
+  },
+  "scientific_summary": {
+    "mean_mse": 0.015299479166666666,
+    "biased_mse": 0.08040364583333333,
+    "difference": 0.06510416666666667,
+    "standard_error": 0.01288424738845495,
+    "ci95_normal": [
+      0.03985104178529497,
+      0.09035729154803837
+    ],
+    "counterexample_seeds": [
+      104,
+      108,
+      118,
+      121
+    ]
+  },
+  "sensitivity": {
+    "replicates": 24,
+    "minimum_difference": 0.06182065217391304,
+    "maximum_difference": 0.07269021739130435,
+    "positive_count": 24
+  },
+  "figure_points": 24,
+  "enumerated_population_mse": {
+    "mean": "1/64",
+    "biased": "5/64"
+  },
+  "implementation_sha256": "21ff4857be543cdcc42975c29e36d5b700d09b3f9bd796e3f600d12901d999e9",
+  "coverage": "Separate rational arithmetic and binomial enumeration; complete-toy eligibility, reference digests, primary and sensitivity CSVs, figure points, claims and manuscript numbers. No Allagma or study helper imports."
+}

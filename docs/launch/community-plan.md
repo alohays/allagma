@@ -20,7 +20,8 @@ the completed work and immediate queue. [#5](https://github.com/alohays/allagma/
 through [#15](https://github.com/alohays/allagma/pull/15).
 [#6](https://github.com/alohays/allagma/issues/6) is assigned to `codedbypraneetha`
 after confirming the existing claim. [#7](https://github.com/alohays/allagma/issues/7)
-remains available. [#19: runnable toy-to-paper onboarding](https://github.com/alohays/allagma/issues/19)
+is complete through merged [#28](https://github.com/alohays/allagma/pull/28), with
+scoped Linux/Python 3.13 execution evidence. [#19: runnable toy-to-paper onboarding](https://github.com/alohays/allagma/issues/19)
 is complete through merged [#25](https://github.com/alohays/allagma/pull/25).
 [#18](https://github.com/alohays/allagma/issues/18) is complete through merged
 [#20](https://github.com/alohays/allagma/pull/20); its stale review-status label
@@ -28,8 +29,8 @@ has been removed. The [dated triage](../contributing/post-pr20-triage.md) added
 only [#22: paper-source size admission](https://github.com/alohays/allagma/issues/22)
 and [#23: standalone bundle diagnostics](https://github.com/alohays/allagma/issues/23).
 Those tasks are now complete through merged [#26](https://github.com/alohays/allagma/pull/26)
-and [#27](https://github.com/alohays/allagma/pull/27). #7 remains available with
-`help wanted`; #19, #22 and #23 are closed and their stale review-status labels
+and [#27](https://github.com/alohays/allagma/pull/27). #7, #19, #22 and #23 are
+closed and their stale review-status labels
 have been removed. The [integration record](../contributing/open-pr-integration.md)
 retains the final review and complete workflow checks. None needs a paid model or GPU.
 

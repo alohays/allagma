@@ -1,0 +1,118 @@
+{
+  "attempts": [
+    {
+      "collector_before_sha256": "d2787cdf48698e74f95aab6d3b4559dadb32ddf0f057c2c1b1001e065615e327",
+      "correction": "Corrected the collector and used a fresh directory; kept the first checkout and logs.",
+      "exit_code": 0,
+      "guard": "The guide shell-block equality assertion rejected the extra + path.",
+      "id": "setup-path-list-check",
+      "offending_command": "git sparse-checkout set allagma adapters contracts methods recipes policies profiles \\\n+  templates tools conformance examples/toy-study examples/first-research evals/context-retention",
+      "result": "Collection assertion failed before Allagma execution; not a product test failure.",
+      "source_commit": "174e200b508b07f022ba36233db54ca0b60e48e1"
+    },
+    {
+      "commands": [
+        {
+          "command": "python3 -m allagma check",
+          "exit_code": 0,
+          "id": "catalog",
+          "seconds": 0.124
+        },
+        {
+          "command": "python3 -m allagma toy --destination work/my-first-study",
+          "exit_code": 0,
+          "id": "toy",
+          "seconds": 3.83
+        },
+        {
+          "command": "python3 -m allagma campaign audit --study work/my-first-study --campaign toy-v1",
+          "exit_code": 0,
+          "id": "audit",
+          "seconds": 0.518
+        },
+        {
+          "command": "python3 -m unittest discover -s conformance -v",
+          "exit_code": 1,
+          "id": "conformance",
+          "seconds": 42.646
+        }
+      ],
+      "correction": "Fresh container from the same pinned base, with procps installed before acquisition. Allagma source and test assertions unchanged.",
+      "environment": {
+        "architecture": "aarch64",
+        "checkout": "/qualification/clean path with spaces/allagma",
+        "git_version": "git version 2.39.5",
+        "guide_sha256": "4574ecdc57fc94920ab2dc03d54f8dc348ff3cf0564853e200429290e04fa7d7",
+        "kernel": "6.10.14-linuxkit",
+        "os_release": "PRETTY_NAME=\"Debian GNU/Linux 12 (bookworm)\"\nNAME=\"Debian GNU/Linux\"\nVERSION_ID=\"12\"\nVERSION=\"12 (bookworm)\"\nVERSION_CODENAME=bookworm\nID=debian\nHOME_URL=\"https://www.debian.org/\"\nSUPPORT_URL=\"https://www.debian.org/support\"\nBUG_REPORT_URL=\"https://bugs.debian.org/\"\n",
+        "path_contains_spaces": true,
+        "pip_packages": [
+          {
+            "name": "pip",
+            "version": "26.2.1"
+          }
+        ],
+        "python_executable": "/usr/local/bin/python3",
+        "python_implementation": "CPython",
+        "python_real_executable": "/usr/local/bin/python3.13",
+        "python_sha256": "cb4548d280f38c2b1df4cba45f12c90a034729e08fce5bf1a223c58add0e21e3",
+        "python_soabi": "cpython-313-aarch64-linux-gnu",
+        "python_version": "3.13.16 (main, Oct  6 2026, 02:09:20) [GCC 12.2.0]",
+        "source_commit": "174e200b508b07f022ba36233db54ca0b60e48e1",
+        "source_status": "",
+        "sparse_paths": [
+          "adapters",
+          "allagma",
+          "conformance",
+          "contracts",
+          "evals/context-retention",
+          "examples/first-research",
+          "examples/toy-study",
+          "methods",
+          "policies",
+          "profiles",
+          "recipes",
+          "templates",
+          "tools"
+        ]
+      },
+      "errors": 15,
+      "failures": 2,
+      "full_conformance_log": {
+        "bytes": 83004,
+        "sha256": "a2e12c1acaa625b08b82e990ae2be0e83670a93aad23ae44ebd3a544c8380c4c"
+      },
+      "id": "linux-without-procps",
+      "missing_executable": "ps",
+      "preservation": "Original container stopped to terminate remaining test children; container filesystem, full logs and original study retained locally.",
+      "result": "Full conformance failed; catalog, full toy and repeated audit passed.",
+      "retained_excerpt": "conformance-without-ps.log",
+      "skipped": 0,
+      "tests": 192,
+      "toy_audit": {
+        "analysis_repetitions": 1,
+        "checked_references": 521,
+        "findings": [],
+        "limitations": [
+          "No independent scientific peer review or real-model quality evaluation."
+        ],
+        "review": {
+          "media_type": "application/json",
+          "path": "campaigns/toy-v1/analyses/a001/reviews/review-002/record.json",
+          "retention": "retain-with-study",
+          "sha256": "b2cb27af86177346d10a47f921ce192ee703a9f6c790867a10a4dc5e6b94d7a8"
+        },
+        "stale_claims": [],
+        "verdict": "pass"
+      }
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "id": "linux-with-procps",
+      "result": "All commands pass; see commands.json, conformance.log and study-inspection.json.",
+      "skipped": 0,
+      "tests": 192
+    }
+  ]
+}

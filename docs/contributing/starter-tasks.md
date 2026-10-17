@@ -8,13 +8,10 @@ queue; read the [claim and review process](workflow.md) before starting.
 
 ## Available work
 
-1. [#7: Qualify Linux/Python 3.13 onboarding](https://github.com/alohays/allagma/issues/7).
-   Start with `docs/guides/first-study.md` and `conformance/`. Record the literal
-   clean-checkout tutorial with a distinct interpreter and paths with spaces.
-   Requires local Linux/Python 3.13, not a native model or GPU.
-
-This qualification remains unassigned. Issues #19, #22 and #23 are completed
-on main; their merged implementations are listed below.
+No unclaimed implementation or qualification task is currently listed.
+Issues #7, #19, #22 and #23 are completed on main; their merged work is listed
+below. The accessibility task #6 remains claimed. Check the pinned overview
+before proposing a new bounded contribution.
 
 Comment on the issue with your scope and environment. A maintainer confirms the
 claim and assignment before overlapping implementation. No paid model access,
@@ -23,8 +20,8 @@ sanitized evidence with its exact tested commit. A documentation change needs a
 rendered review and link check, not a test that merely repeats its prose.
 
 The [dated triage](post-pr20-triage.md) explains why only #22 and #23 were added.
-The available qualification carries `help wanted`; its prerequisites make it
-more involved than a good first issue. Claimed #6 has no newcomer-discovery labels.
+Claimed #6 has no newcomer-discovery labels. Completed tasks are not advertised
+as available work.
 
 ## Claimed work
 
@@ -35,6 +32,12 @@ coordinate with the assignee and preserve the figure and results. The stated
 Windows/Node environment is suitable for this documentation task.
 
 ## Merged contributor improvements
+
+[#7: Linux/Python 3.13 onboarding](https://github.com/alohays/allagma/issues/7)
+is complete through [#28](https://github.com/alohays/allagma/pull/28). The
+[qualification record](linux-python313.md) retains actual Debian 12/aarch64,
+CPython 3.13.16 execution, the missing-`ps` failure, and 217 passing tests on
+the integrated feature main. This does not qualify all Linux/Python combinations.
 
 Issues [#19](https://github.com/alohays/allagma/issues/19),
 [#22](https://github.com/alohays/allagma/issues/22) and

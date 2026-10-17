@@ -1,8 +1,9 @@
 # Open PR integration
 
 The owner authorized repairing every open PR, making ready drafts regular, and
-merging changes after verification. The initial open set was #24–#27. The
-three feature PRs were integrated sequentially with merge commits, preserving
+merging changes after verification. The initial open set was #24–#27; #28
+appeared during the open-set refresh and was included. The four feature and
+qualification PRs were integrated sequentially with merge commits, preserving
 their original authors and history. Required checks were enforced without
 administrator bypasses. Documentation PR #24 reconciles the resulting queue
 and retains this record; its final merge commit and checks are on
@@ -15,7 +16,8 @@ and retains this record; its final merge commit and checks are on
 | [#26](https://github.com/alohays/allagma/pull/26) | Complete source-byte/file accounting, generated bibliography/provenance, bounded copies, validated digests and nonblocking regular-file reads. Current-head conformance, docs, actual TeX and acceptance passed before merge. | `dac1380278a3186ce14f6f9ce41248814fc08104` |
 | [#27](https://github.com/alohays/allagma/pull/27) | Standalone/source/unknown diagnostic scopes, independent failures, immutable recovery and no execution. Updated against #26; the source tree matches the combined 36-test and real-TeX run. Fresh CI and acceptance passed before merge. | `da9ea45844c59d14ece28789f2707627e8af724f` |
 | [#25](https://github.com/alohays/allagma/pull/25) | Repaired retained-audit binding, verified the complete walkthrough after integrating #26/#27, converted the draft to regular, and merged after fresh CI and I1–I5 acceptance. | `f7e32a70b43675444e9f88c07d227a8b762b9e56` |
-| [#24](https://github.com/alohays/allagma/pull/24) | Reconciles the three documentation conflicts and changes #19/#22/#23 from owner review to completed. Preserves historical triage receipts, #6's assignee, #7's available qualification scope and #8's separate rights decision. | See the PR's final merge metadata. |
+| [#28](https://github.com/alohays/allagma/pull/28) | Reviewed the actual Linux container, retained execution/log/source evidence and read-only arithmetic; verified 217 passing tests on Linux/Python 3.13. Converted the draft to regular and merged after current-head CI and acceptance passed. | `44be89c61bf04a0139bbf1fabe5b389f304a6aca` |
+| [#24](https://github.com/alohays/allagma/pull/24) | Reconciles documentation conflicts and changes #7/#19/#22/#23 from owner review to completed. Preserves historical triage receipts, #6's assignee and #8's separate rights decision. | See the PR's final merge metadata. |
 
 PR #25's earlier superseded-review-chain repair did not address preparation's
 stale claim ledger. Seven new failing assertions covered changed claim text or
@@ -62,18 +64,37 @@ counts, measurements and delivery results. Inspect
 [verification receipt](evidence/open-pr-integration/validation.json) records the
 reviewed heads, merge metadata and CI gates; its timestamps identify the snapshot.
 
+## Linux qualification review
+
+PR #28 records actual Debian 12/aarch64 and CPython 3.13.16 execution at main
+`f7e32a70b43675444e9f88c07d227a8b762b9e56`: 217 tests without skips, the complete
+26/1/1 toy and a passing 521-reference audit. The earlier missing-`ps` failure
+is preserved, and the guides now name the existing system prerequisite.
+
+This integration review inspected the running container's interpreter/platform,
+network exclusion and resource limits. After its owner stopped it, the retained
+filesystem confirmed the source ref, test-log digest, inspection records and
+753 original non-cache content hashes. A separate read-only arithmetic check
+of the copied study agreed with the recorded values and left all copied files
+unchanged. All 13 files in the initial evidence manifest match their hashes.
+The [review receipt](evidence/open-pr-integration/linux-review.json) distinguishes
+these verification steps from a new Linux execution. The
+[qualification record](linux-python313.md) retains the actual runs and their
+limits; no additional host/interpreter combination is inferred.
+
 ## Queue and scope
 
-Issues #19, #22 and #23 are closed through their implementation PRs and their
+Issues #7, #19, #22 and #23 are closed through their implementation PRs and their
 stale `status: owner review` labels are removed. The roadmap, starter list,
 community/owner guidance and pinned overview reflect completion. Issue #6
-remains assigned to `codedbypraneetha`; #7 remains available; #8 remains blocked
+remains assigned to `codedbypraneetha`; #8 remains blocked
 on the maintainer's historical-audio decision. No completed implementation is
 advertised as unclaimed work.
 
 These are agent-assisted engineering and scoped executor reviews, not
-independent scientific approvals. Tests do not extend native-host or
-Linux/Python 3.13 qualification. Frozen studies, evaluations, existing bundles,
+independent scientific approvals. The measured Linux/Python 3.13 combination
+does not extend native-host qualification or establish every Linux build.
+Frozen studies, evaluations, existing bundles,
 historical media, model selection and scientific resource ceilings are unchanged.
 No new release, submission, native session or history rewrite is part of this
 integration.

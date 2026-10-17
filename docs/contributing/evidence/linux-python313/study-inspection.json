@@ -1,0 +1,177 @@
+{
+  "status": "pass",
+  "attempts": {
+    "failed": 1,
+    "succeeded": 26,
+    "interrupted": 1
+  },
+  "audit": {
+    "analysis_repetitions": 1,
+    "checked_references": 521,
+    "findings": [],
+    "limitations": [
+      "No independent scientific peer review or real-model quality evaluation."
+    ],
+    "review": {
+      "media_type": "application/json",
+      "path": "campaigns/toy-v1/analyses/a001/reviews/review-002/record.json",
+      "retention": "retain-with-study",
+      "sha256": "588918b1e5246cb3e6166a8944c9daa6151acd6e41a67ac9d02f5f20b96d0a40"
+    },
+    "stale_claims": [],
+    "verdict": "pass"
+  },
+  "state": {
+    "assurance": "deterministic",
+    "execution_status": "completed",
+    "phase": "audit",
+    "stop_reason": null
+  },
+  "effective_configuration": {
+    "budget": {
+      "max_attempts": 28,
+      "max_seconds": 60.0,
+      "money_usd": 0.0,
+      "per_attempt_seconds": 5.0
+    },
+    "capabilities": [
+      "artifact.read",
+      "artifact.write",
+      "execution.local"
+    ],
+    "context_chars": 12000,
+    "language": "English",
+    "max_revisions": 2
+  },
+  "summary": {
+    "bias": 0.25,
+    "biased_mse": 0.08040364583333333,
+    "ci95_normal": [
+      0.039851041785294965,
+      0.09035729154803837
+    ],
+    "counterexample_seeds": [
+      104,
+      108,
+      118,
+      121
+    ],
+    "difference": 0.06510416666666667,
+    "leave_one_seed_out": {
+      "maximum_difference": 0.07269021739130435,
+      "minimum_difference": 0.06182065217391304,
+      "positive_count": 24,
+      "replicates": 24
+    },
+    "mean_mse": 0.015299479166666666,
+    "method": "paired differences across seeds; normal approximation, 1.96 standard errors",
+    "replicates": 24,
+    "samples_per_replicate": 64,
+    "standard_error": 0.012884247388454952
+  },
+  "manuscript_sha256": "dd2318ccf2f246d310e086145dab1f397d9d004d51694935b056639133b4fbef",
+  "claims_sha256": "ca09cf4497e0fc8756af659b1cba7e83d9ec3cca7769beb7094440d935df1857",
+  "summary_sha256": "cf60fe8211bf355c9a8f29b731119dbbf207d3943df9c936214b336b6f8bd8da",
+  "manuscript_links": [
+    {
+      "label": "Paired squared-error differences by confirmation seed",
+      "target": "../outputs/paired-differences.svg",
+      "study_path": "campaigns/toy-v1/analyses/a001/outputs/paired-differences.svg",
+      "sha256": "800452621fa043c92e460149422b4291838ec5426930c60fa76a2d9094d78c10"
+    },
+    {
+      "label": "claim ledger",
+      "target": "claims.json",
+      "study_path": "campaigns/toy-v1/analyses/a001/paper/claims.json",
+      "sha256": "ca09cf4497e0fc8756af659b1cba7e83d9ec3cca7769beb7094440d935df1857"
+    },
+    {
+      "label": "analysis record",
+      "target": "../record.json",
+      "study_path": "campaigns/toy-v1/analyses/a001/record.json",
+      "sha256": "b460f259a6c069d22cce7922b94856773ec785995632c42ab83eebd86f81fb63"
+    }
+  ],
+  "direct_claim_references": {
+    "campaigns/toy-v1/analyses/a001/record.json": "b460f259a6c069d22cce7922b94856773ec785995632c42ab83eebd86f81fb63",
+    "campaigns/toy-v1/analyses/a001/raw-manifest.json": "a5986ed2b7b54b509014e0125d38e75f404a9bf452057ec8c95d0ed09fb81bb3",
+    "campaigns/toy-v1/protocol.json": "e1fbac18b5401adfcb492b989a8e0b46baae49438e6b0dc867999ee84d362865",
+    "campaigns/toy-v1/runs/confirm-100/attempts/001/record.json": "4fc5a5ef1c42b1cd82308685902daee1f80a03767fdfc186c4f00d0da7b83ee4",
+    "campaigns/toy-v1/runs/confirm-100/attempts/002/record.json": "5182dcb1420f552066be033ed21694bd6bc34736b9df8daf207512b6d6ab2983",
+    "campaigns/toy-v1/runs/confirm-101/attempts/001/record.json": "c816ac8ef4f18a56a5b75565b762902f6a64b2de437dc82b88999d02b80213b2",
+    "campaigns/toy-v1/runs/confirm-101/attempts/002/record.json": "1f33b0629f5e4a9da3d4b63b69267969929e040296e431229475776e659a76c6",
+    "campaigns/toy-v1/runs/confirm-102/attempts/001/record.json": "7f04e271ecb6b7cfa720f1218f24d2433ffd855899fc9816c157618661b237ac",
+    "campaigns/toy-v1/runs/confirm-103/attempts/001/record.json": "45c203b42f2f62f6bbe960e3c607cac81d4cbc2ebb26f487ccf1562784928542",
+    "campaigns/toy-v1/runs/confirm-104/attempts/001/record.json": "cbf999511df0dd722d5258d604906da87cfabc3d79984b258740b0914aa31c8b",
+    "campaigns/toy-v1/runs/confirm-105/attempts/001/record.json": "64c1adeb44688dae23834b6c2dc3a45f348e507b590f7e7a3d70c88c4021e0e4",
+    "campaigns/toy-v1/runs/confirm-106/attempts/001/record.json": "23da66ee0dcbfab006a036969983802c821f18af1bf36a7b3454716ed4145b33",
+    "campaigns/toy-v1/runs/confirm-107/attempts/001/record.json": "b4ec3b70707077d60fb4200b8ccf88888a4ad92f358a522536b0d2c6d8bdb2c7",
+    "campaigns/toy-v1/runs/confirm-108/attempts/001/record.json": "72264258ca4825ff657c32787d0a17d9048f69f139a7c8b080ea2a4fbae38357",
+    "campaigns/toy-v1/runs/confirm-109/attempts/001/record.json": "de039495e228e4c3268ea1a235ee57ead6756744f5639b0170d874542d8d559b",
+    "campaigns/toy-v1/runs/confirm-110/attempts/001/record.json": "fd1aac4fb97fdc4a958fc161413b6bd0b100616667dd8f332bc953365cb045d5",
+    "campaigns/toy-v1/runs/confirm-111/attempts/001/record.json": "94300835d76b14409ec91021d4f412a660ea278e1f07c4b6fc022746699f72cd",
+    "campaigns/toy-v1/runs/confirm-112/attempts/001/record.json": "b1983a796f87bdf7e7215c07a1679a2bb73c5656db4a07faa80236fb6a919fe7",
+    "campaigns/toy-v1/runs/confirm-113/attempts/001/record.json": "34f024b83f8cd599b837725ef18541a9e20a75cfaee3ea590ff2d83d6a910fcf",
+    "campaigns/toy-v1/runs/confirm-114/attempts/001/record.json": "024c74b6d79bca97bb3905840ec9292e6eae71f0cf8ec0321ec6409c95ba664a",
+    "campaigns/toy-v1/runs/confirm-115/attempts/001/record.json": "92d7d8f79dc4fa409b13d590647553c5a8edec0bcba4c8c9ad9d3d411a136867",
+    "campaigns/toy-v1/runs/confirm-116/attempts/001/record.json": "0e2fc4f460d72003be35a712564fe6ab2e639eeb243909daa9a0716274b7f228",
+    "campaigns/toy-v1/runs/confirm-117/attempts/001/record.json": "3ddf5a5c41de6b540284523a85501c8a96cc50a0c95177588f24a9fed552a9f5",
+    "campaigns/toy-v1/runs/confirm-118/attempts/001/record.json": "50eba288da7ff433efa78d3f1b3ab1cd90eef0444880a6bc3e6e02726f5a6d52",
+    "campaigns/toy-v1/runs/confirm-119/attempts/001/record.json": "7467298c0ab9245cbcf474d7d34e5fe60b125a7422f6ab56b240fcd142665582",
+    "campaigns/toy-v1/runs/confirm-120/attempts/001/record.json": "641abbd079817ff1f824b1434f9bb55f68e4bcb63aff001bb242ebf0c60c6167",
+    "campaigns/toy-v1/runs/confirm-121/attempts/001/record.json": "b93dfb0993dcf383624302eb82da35d0c057fb3ba44cb55c8354a97a9a7c4078",
+    "campaigns/toy-v1/runs/confirm-122/attempts/001/record.json": "55277a0bcbc4769df704637f90ef568da4e61cfa4af53687919a8e3a02bf31fd",
+    "campaigns/toy-v1/runs/confirm-123/attempts/001/record.json": "89baee8d7b8c1fe8b0626bb20ae5b8d9839eefc121e166016e58820f6435eae1",
+    "campaigns/toy-v1/runs/pilot-balanced/attempts/001/record.json": "8892e8378e150e316c13a6351a35ce180d87eb06442cc68eecc3ca38ecce38af",
+    "campaigns/toy-v1/runs/pilot-zero/attempts/001/record.json": "1869fc9c104d0549c8fb792f5d22c2bb176e537b956e7812fbf3177106a0196f",
+    "campaigns/toy-v1/runs/confirm-100/attempts/002/raw.json": "1d257c2c9b57606a232ad01be4e7f50499f420d7597f56b5ad0e65ac0bef7ca5",
+    "campaigns/toy-v1/runs/confirm-101/attempts/002/raw.json": "c4d4c04bc6d16b3a96abb34414bf175d3ccdd81b1cdb7166cacc0529d73946ff",
+    "campaigns/toy-v1/runs/confirm-102/attempts/001/raw.json": "cdab552e7715495a4e2d7f30d509202a36248775c37c85a477e342e8c2037a61",
+    "campaigns/toy-v1/runs/confirm-103/attempts/001/raw.json": "a8fb60b18c21ec835d6ac6b91bf41bdb0a5eb9dd3713571df8c0433dc31cb3e3",
+    "campaigns/toy-v1/runs/confirm-104/attempts/001/raw.json": "ef73c39cef397ca1db8a6dc5e3d5d20b2ac69a27b44fc34b70fa55bf0a3e5a26",
+    "campaigns/toy-v1/runs/confirm-105/attempts/001/raw.json": "3643351910391bc9ff32455027b82dc6c5550d3cbac1f4c2c665bfbd94f6e52e",
+    "campaigns/toy-v1/runs/confirm-106/attempts/001/raw.json": "eaae1a0d9347bef552668acaec89171157b27f89ba64fdf95f7d06bb04bd476f",
+    "campaigns/toy-v1/runs/confirm-107/attempts/001/raw.json": "97945cb6cf37aa89039b940730fa3c58304491c67bad22f09ac882a794d500d4",
+    "campaigns/toy-v1/runs/confirm-108/attempts/001/raw.json": "c4dc8e6fade216333fd08de5589490016f46181482ecb814b21417db57fa46a0",
+    "campaigns/toy-v1/runs/confirm-109/attempts/001/raw.json": "cf973ac583d0f997bf60ef5739618831c9c7e0d66ed7e0b773eed68027e92701",
+    "campaigns/toy-v1/runs/confirm-110/attempts/001/raw.json": "efff0918de364c748349a616a467408fa9485088ff354e5e58dd400b57d1363b",
+    "campaigns/toy-v1/runs/confirm-111/attempts/001/raw.json": "9ee1258e06fe47375111d1aaad572367d289ae4a6f2136b7142fb3e75ce25992",
+    "campaigns/toy-v1/runs/confirm-112/attempts/001/raw.json": "30a09d407ed2e0f9ebea09f020c5180a8a205cec84ab88ad30a97b482190a0be",
+    "campaigns/toy-v1/runs/confirm-113/attempts/001/raw.json": "ff7896a0b65c36eca159005f09caca26dcef62d2d653e1ebcf372e57e1037d36",
+    "campaigns/toy-v1/runs/confirm-114/attempts/001/raw.json": "6f0e657c0b8c26f70d861b83b398346745d6893c88d193721d8042a9ff4ecc26",
+    "campaigns/toy-v1/runs/confirm-115/attempts/001/raw.json": "c6fbb9bf30bedd6ba04974ded8a62d493d8a9749554a1075d3261685700f3411",
+    "campaigns/toy-v1/runs/confirm-116/attempts/001/raw.json": "5bf8d23db5cfe3d85a2e858b334cfdbb1fada7209fdead2e6d7d0b242895c849",
+    "campaigns/toy-v1/runs/confirm-117/attempts/001/raw.json": "9fc7dff3de12dc8dbbaba59d70be6e5136aa8b3646386c9be3eb26c14d575839",
+    "campaigns/toy-v1/runs/confirm-118/attempts/001/raw.json": "3724eb25817e2b390d42377b2b9c186383cc13b23e1cd51ec49e34b212dba8bf",
+    "campaigns/toy-v1/runs/confirm-119/attempts/001/raw.json": "69ea3d83efa7a49ffec8c9c62a99c6ab9a9178742587bdceec12373b90e84237",
+    "campaigns/toy-v1/runs/confirm-120/attempts/001/raw.json": "978b68519eae2e5450ea015a10d3ec3c3ca1d30535ef6bd7a30be892ab2ad73e",
+    "campaigns/toy-v1/runs/confirm-121/attempts/001/raw.json": "131a64aad28ad61ba53dddbe86c5e05ea6313872fdb5ef0f80859da5f10c7bff",
+    "campaigns/toy-v1/runs/confirm-122/attempts/001/raw.json": "16f77e8182f126f6af91b55eec68db0f1d937dc1a99e29d1fbc7b367603fa72f",
+    "campaigns/toy-v1/runs/confirm-123/attempts/001/raw.json": "08bc3ddbaf390b4a720ebc9da959e5784d15f904338b2ea0076e1a0415308287",
+    "campaigns/toy-v1/analyses/a001/outputs/summary.json": "cf60fe8211bf355c9a8f29b731119dbbf207d3943df9c936214b336b6f8bd8da"
+  },
+  "claim_statuses": {
+    "C1": "supported",
+    "C2": "contradicted",
+    "C3": "supported"
+  },
+  "preservation": {
+    "original_files": 755,
+    "immutable_original_files_unchanged": 753,
+    "comparison": "SHA-256 and nanosecond mtime for every original file except the two mutable state/audit pointers",
+    "changed_mutable_pointers": [
+      "campaigns/toy-v1/latest-audit.json",
+      "campaigns/toy-v1/state.json"
+    ],
+    "added_files": [
+      "campaigns/toy-v1/analyses/a001/reviews/review-002/adapter-result.json",
+      "campaigns/toy-v1/analyses/a001/reviews/review-002/audit.json",
+      "campaigns/toy-v1/analyses/a001/reviews/review-002/execution.json",
+      "campaigns/toy-v1/analyses/a001/reviews/review-002/input.json",
+      "campaigns/toy-v1/analyses/a001/reviews/review-002/record.json",
+      "campaigns/toy-v1/events/1792254450004200009-4a2bbf.json"
+    ],
+    "before_inventory_sha256": "3a76351bf2e5909a6299ec2a913feef4f2053e5d31cf71c265ce92ff02cd6428"
+  },
+  "scope": "Offline deterministic example on the recorded Linux container/Python interpreter. No scientific or model-quality qualification, independent peer review, or native-host qualification."
+}

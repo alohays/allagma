@@ -16,9 +16,10 @@ closed. The required adapter-regression checks and #18 were completed through
 [integration record](docs/contributing/open-pr-integration.md) retains the final
 repairs, combined workflow checks and merge decisions.
 
-Existing work remains relevant: [#6](https://github.com/alohays/allagma/issues/6)
-is assigned to `codedbypraneetha`, and [#7](https://github.com/alohays/allagma/issues/7)
-still needs a literal Linux/Python 3.13 onboarding receipt. Historical-audio
+Remaining contributor work is [#6](https://github.com/alohays/allagma/issues/6),
+assigned to `codedbypraneetha`. [#7](https://github.com/alohays/allagma/issues/7)
+is complete through [#28](https://github.com/alohays/allagma/pull/28), with a
+[measured Linux/Python 3.13 receipt](docs/contributing/linux-python313.md). Historical-audio
 rights stay with the maintainer in [#8](https://github.com/alohays/allagma/issues/8).
 New provider integrations, larger studies and distribution services are later
 directions, rather than additional issues in this small immediate queue.
@@ -58,7 +59,7 @@ provides the community entry point.
 | Merged · enhancement | [#4: read-only evidence inspection](https://github.com/alohays/allagma/issues/4) | [#12](https://github.com/alohays/allagma/pull/12); available on main |
 | Merged · documentation enhancement | [#5: validator recovery](https://github.com/alohays/allagma/issues/5) | [#15](https://github.com/alohays/allagma/pull/15); verified recovery recipe available on main |
 | In progress · accessibility | [#6: accessible figure description](https://github.com/alohays/allagma/issues/6) | Claim confirmed and assigned to `codedbypraneetha`; coordinate before overlapping work |
-| Available · qualification | [#7: Linux/Python 3.13 tutorial](https://github.com/alohays/allagma/issues/7) | Unassigned; help wanted, local CPU only |
+| Merged · qualification | [#7: Linux/Python 3.13 tutorial](https://github.com/alohays/allagma/issues/7) | [#28](https://github.com/alohays/allagma/pull/28); measured Debian 12/aarch64 and CPython 3.13.16, within the recorded scope |
 | Merged · confirmed CI gap | [#18: adapter regression selection](https://github.com/alohays/allagma/issues/18) | [#20](https://github.com/alohays/allagma/pull/20); actual failure propagation and real-Git boundaries verified |
 | Merged · documentation enhancement | [#19: runnable toy-to-paper walkthrough](https://github.com/alohays/allagma/issues/19) | [#25](https://github.com/alohays/allagma/pull/25); retained audit binding, complete workflow and optional TeX rebuild |
 | Merged · source-budget defect | [#22: paper-source size admission](https://github.com/alohays/allagma/issues/22) | [#26](https://github.com/alohays/allagma/pull/26); complete source accounting and bounded copies |

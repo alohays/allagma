@@ -498,6 +498,24 @@ increments and push to `origin`. Keep both PRs unmerged for review, preserve
 existing evidence and history, and do not expand model or scientific budgets.
 This branch implements #22; #23 is an independent change.
 
+## Select and resolve the most impactful available issue — 18 October 2026
+
+Inspect the current open issues and pull requests, select the most impactful
+issue that still needs work, and prepare a draft PR that fully addresses it.
+Use current repository and execution evidence, respect existing contributor
+claims, and avoid duplicating implementations already awaiting review. Keep
+technical documentation in English, commit coherent increments as work
+progresses, and push the completed branch to `origin`. Leave the PR draft and
+unmerged for owner review.
+
+Issue #7 is selected: the literal offline tutorial still lacks Linux/Python 3.13
+qualification. Issues #19, #22 and #23 already have implementations in PRs #25,
+#26 and #27; #6 has an active contributor and #8 requires a rights decision.
+Record a real local Linux run of the current main revision, the complete toy,
+audit, conformance checks and manuscript/evidence inspection. Preserve existing
+records and resource limits; do not claim native-host or model-quality
+qualification from these offline checks.
+
 ## Bring all open PRs to merge readiness
 
 Repair and review every open pull request, convert ready drafts to regular PRs,
@@ -513,3 +531,6 @@ cover the combined changes and the complete runnable workflow.
 
 The [integration record](docs/contributing/open-pr-integration.md) retains the repairs,
 combined workflow evidence and sequential merge decisions for this pass.
+
+The refreshed open set also included #28 during this integration. Apply the
+same review, regular-PR and protected-merge gates to that qualification PR.
