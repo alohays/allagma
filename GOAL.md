@@ -465,6 +465,19 @@ publication outside this triage. Follow the standing coherent-commit and push
 instruction. The [post-merge triage](docs/contributing/post-pr20-triage.md)
 records the chosen work, cleanup and verification.
 
+## Implement the highest-priority open issue — 10 October 2026
+
+Choose the highest-priority actionable open issue, implement its full acceptance
+scope, verify the result, and open a draft pull request. The current contributor
+overview ranks #19, the runnable offline toy-to-paper walkthrough, first. It is
+unclaimed and independent of the documentation-only queue refresh in #24.
+
+Work from current main. Preserve existing campaign and publication evidence;
+keep science in the study-owned example, with explicit attribution, honest
+reference coverage and scoped reviews. Integrity checks do not approve science.
+Follow the standing coherent-commit and push instruction. Link the complete
+implementation with `Closes #19` in the draft PR and leave it draft for review.
+
 ## Resolve reviews of open PRs — 12 October 2026
 
 Inspect every open PR, including drafts, and resolve its review feedback with
@@ -473,3 +486,30 @@ and address concrete defects. Commit coherent increments, push each affected
 branch to `origin`, verify its current CI, and retain an English review record.
 Preserve draft states, existing evidence and the standing resource/model limits;
 this goal does not authorize merging PRs.
+
+## Two highest-priority open issues — 12 October 2026
+
+Select the two highest-priority actionable open issues, implement their complete
+acceptance criteria, and open regular pull requests with passing evidence. The
+current queue selects #22 (paper-source byte admission) and #23 (standalone
+study diagnostics); #19 already has an implementation, #6 has a confirmed
+contributor, and #8 requires a separate rights decision. Commit coherent
+increments and push to `origin`. Keep both PRs unmerged for review, preserve
+existing evidence and history, and do not expand model or scientific budgets.
+This branch implements #22; #23 is an independent change.
+
+## Bring all open PRs to merge readiness
+
+Repair and review every open pull request, convert ready drafts to regular PRs,
+and merge each PR only when its acceptance evidence and protected branch gates
+support that decision. The current scope begins with #24, #25, #26 and #27;
+recheck the open set before completion. Reconcile integrations and live task
+status, preserve original history and frozen evidence, and keep English
+technical documentation. Commit coherent increments and push them to origin
+as progress is verified. Do not bypass required checks or override the GUI
+model selection. The [toy audit-binding follow-up](docs/contributing/pr25-audit-binding.md)
+records the additional preparation repair; final integration evidence must
+cover the combined changes and the complete runnable workflow.
+
+The [integration record](docs/contributing/open-pr-integration.md) retains the repairs,
+combined workflow evidence and sequential merge decisions for this pass.

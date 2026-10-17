@@ -93,10 +93,47 @@ original programs; the reader does not upgrade its lock or execute its bundle.
 `python3 -m allagma doctor` checks Python/POSIX support, the source catalog and
 toy resources. Add `--study PATH` to inspect the current lock, intent freshness
 and generated-file ownership. Each failed check includes a remedy; independent
-checks still run. JSON has `diagnostic_version: 1`; exit 0 means all selected
+checks still run. JSON keeps `diagnostic_version: 1` and pass/fail check statuses,
+and adds `distribution` and `excluded_checks` to describe the inspected scope.
+Exit 0 means all selected
 checks passed, 1 means a prerequisite failed, and 2 means invalid invocation.
 Malformed prerequisite documents, including wrong JSON shapes or excessive
 nesting, appear as failed checks with remedies; other checks still run.
+
+A selected bundle catalog is reported as `standalone-bundle`; a central catalog
+is `source-checkout`. If a relocated catalog is missing or unreadable, its
+distribution is `unknown`: the catalog check fails and the toy check is explicitly
+unassessed until the distribution can be identified. An empty module mapping
+fails instead of passing with zero checked modules. Bundles carry their selected modules and helper, while the
+study owns its science files. The bundle route therefore lists `toy-resources`
+in `excluded_checks` with a reason instead of requiring the central checkout's
+`examples/toy-study`. Missing central toy files still fail a source-checkout
+inspection. Required catalog resources, study locks and generated-file ownership
+remain separate checks in both routes. An excluded check is not a passing check.
+
+For an exported study, use the helper in its retained bundle from any directory,
+including a machine without the original checkout. Replace `BUNDLE_ID` with the
+bundle identity from `.allagma/lock.yaml` or the study's retained entrypoint:
+
+```sh
+python3 -B "/path/to/exported study/.allagma/bundles/BUNDLE_ID/tools/allagma.py" \
+  doctor --study "/path/to/exported study"
+```
+
+A current central helper can also inspect an older bundle without changing it:
+
+```sh
+python3 -B -m allagma doctor \
+  --source "/path/to/exported study/.allagma/bundles/BUNDLE_ID" \
+  --study "/path/to/exported study"
+```
+
+This fix applies to newly exported helpers. Older helpers retain their historical
+behavior; never patch one in place. A catalog failure in a bundle directs the
+recipient to an intact exported copy or the normal update workflow from a source
+checkout, not to adding example files inside a frozen bundle. Neither route
+executes or validates the study's scientific protocol. Native prerequisite scope
+is independent of the distribution scope.
 
 `doctor --scope native --codex /path/to/codex` additionally checks macOS,
 `sandbox-exec` presence and executable availability. It never invokes Codex,

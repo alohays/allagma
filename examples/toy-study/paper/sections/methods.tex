@@ -1,0 +1,14 @@
+The frozen protocol separates two known-answer pilot controls from
+\AllagmaValue{seeds} confirmation seeds. Each confirmation seed generates
+\AllagmaValue{samples} Rademacher observations using Python's pseudorandom
+generator. Both estimators use the same observations and target zero. We
+subtract the sample mean's squared error from the shifted estimator's squared
+error within each seed, then average the paired differences across seeds.
+Positive differences favor the sample mean.
+
+The standard error is the sample standard deviation of the seed differences
+divided by the square root of the number of confirmation seeds. The approximate
+95\% interval is the mean plus or minus 1.96 standard errors. Leave-one-seed-out
+analysis recomputes the mean after omitting each seed once. Pilots and unsuccessful
+attempts do not enter confirmation analysis; retained retries are attempts to
+complete the same seed, not additional independent observations.

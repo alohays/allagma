@@ -1,5 +1,9 @@
 # Issue refresh after PR #20 — 10 October 2026
 
+The feature PRs #25, #26 and #27 have since merged, closing #19, #22 and #23.
+See the [integration record](open-pr-integration.md) for current status and new
+validation. The dated observations and evidence below remain preserved.
+
 **Status update — 12 October:** #19 is now assigned to `alohays` and implemented
 in [draft PR #25](https://github.com/alohays/allagma/pull/25), awaiting owner
 review. #22 and #23 also have implementations awaiting review in

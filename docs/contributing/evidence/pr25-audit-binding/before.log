@@ -1,0 +1,61 @@
+test_changed_claim_content_is_refused_before_writing (conformance.test_toy_paper.ToyPaperTests.test_changed_claim_content_is_refused_before_writing) ... 
+  test_changed_claim_content_is_refused_before_writing (conformance.test_toy_paper.ToyPaperTests.test_changed_claim_content_is_refused_before_writing) (field='text') ... FAIL
+  test_changed_claim_content_is_refused_before_writing (conformance.test_toy_paper.ToyPaperTests.test_changed_claim_content_is_refused_before_writing) (field='status') ... FAIL
+test_missing_or_inconsistent_retained_audit_is_refused_before_writing (conformance.test_toy_paper.ToyPaperTests.test_missing_or_inconsistent_retained_audit_is_refused_before_writing) ... 
+  test_missing_or_inconsistent_retained_audit_is_refused_before_writing (conformance.test_toy_paper.ToyPaperTests.test_missing_or_inconsistent_retained_audit_is_refused_before_writing) (case='missing-review') ... FAIL
+  test_missing_or_inconsistent_retained_audit_is_refused_before_writing (conformance.test_toy_paper.ToyPaperTests.test_missing_or_inconsistent_retained_audit_is_refused_before_writing) (case='missing-receipt') ... FAIL
+  test_missing_or_inconsistent_retained_audit_is_refused_before_writing (conformance.test_toy_paper.ToyPaperTests.test_missing_or_inconsistent_retained_audit_is_refused_before_writing) (case='changed-receipt') ... FAIL
+test_audit_of_another_analysis_cannot_approve_the_selected_analysis (conformance.test_toy_paper.ToyPaperTests.test_audit_of_another_analysis_cannot_approve_the_selected_analysis) ... FAIL
+
+======================================================================
+FAIL: test_changed_claim_content_is_refused_before_writing (conformance.test_toy_paper.ToyPaperTests.test_changed_claim_content_is_refused_before_writing) (field='text')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<checkout>/conformance/test_toy_paper.py", line 175, in test_changed_claim_content_is_refused_before_writing
+    with self.assertRaisesRegex(AllagmaError, "Claims differ from the retained audit input"):
+AssertionError: AllagmaError not raised
+
+======================================================================
+FAIL: test_changed_claim_content_is_refused_before_writing (conformance.test_toy_paper.ToyPaperTests.test_changed_claim_content_is_refused_before_writing) (field='status')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<checkout>/conformance/test_toy_paper.py", line 175, in test_changed_claim_content_is_refused_before_writing
+    with self.assertRaisesRegex(AllagmaError, "Claims differ from the retained audit input"):
+AssertionError: AllagmaError not raised
+
+======================================================================
+FAIL: test_missing_or_inconsistent_retained_audit_is_refused_before_writing (conformance.test_toy_paper.ToyPaperTests.test_missing_or_inconsistent_retained_audit_is_refused_before_writing) (case='missing-review')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<checkout>/conformance/test_toy_paper.py", line 200, in test_missing_or_inconsistent_retained_audit_is_refused_before_writing
+    with self.assertRaises(AllagmaError):
+AssertionError: AllagmaError not raised
+
+======================================================================
+FAIL: test_missing_or_inconsistent_retained_audit_is_refused_before_writing (conformance.test_toy_paper.ToyPaperTests.test_missing_or_inconsistent_retained_audit_is_refused_before_writing) (case='missing-receipt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<checkout>/conformance/test_toy_paper.py", line 200, in test_missing_or_inconsistent_retained_audit_is_refused_before_writing
+    with self.assertRaises(AllagmaError):
+AssertionError: AllagmaError not raised
+
+======================================================================
+FAIL: test_missing_or_inconsistent_retained_audit_is_refused_before_writing (conformance.test_toy_paper.ToyPaperTests.test_missing_or_inconsistent_retained_audit_is_refused_before_writing) (case='changed-receipt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<checkout>/conformance/test_toy_paper.py", line 200, in test_missing_or_inconsistent_retained_audit_is_refused_before_writing
+    with self.assertRaises(AllagmaError):
+AssertionError: AllagmaError not raised
+
+======================================================================
+FAIL: test_audit_of_another_analysis_cannot_approve_the_selected_analysis (conformance.test_toy_paper.ToyPaperTests.test_audit_of_another_analysis_cannot_approve_the_selected_analysis)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<checkout>/conformance/test_toy_paper.py", line 209, in test_audit_of_another_analysis_cannot_approve_the_selected_analysis
+    with self.assertRaisesRegex(AllagmaError, "Retained audit must cover the selected a001 analysis"):
+AssertionError: AllagmaError not raised
+
+----------------------------------------------------------------------
+Ran 3 tests in 9.209s
+
+FAILED (failures=6)

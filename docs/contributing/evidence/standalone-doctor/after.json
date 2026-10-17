@@ -1,0 +1,160 @@
+{
+  "source-checkout": {
+    "exit": 0,
+    "report": {
+      "checks": [
+        {
+          "id": "python",
+          "message": "3.11.6",
+          "remedy": null,
+          "status": "pass"
+        },
+        {
+          "id": "platform",
+          "message": "Darwin",
+          "remedy": null,
+          "status": "pass"
+        },
+        {
+          "id": "catalog",
+          "message": "23 catalog modules checked.",
+          "remedy": null,
+          "status": "pass"
+        },
+        {
+          "id": "toy-resources",
+          "message": "Toy protocol and declared local resources are present; no experiment executed.",
+          "remedy": null,
+          "status": "pass"
+        },
+        {
+          "id": "study-lock",
+          "message": "Verified current lock ca5bf6d64c3dd8f5f9dbacb886485f9f79db6f41d22abe4904b324c912e336a4 and selection freshness.",
+          "remedy": null,
+          "status": "pass"
+        },
+        {
+          "id": "generated-files",
+          "message": "17 generated files match ownership.",
+          "remedy": null,
+          "status": "pass"
+        }
+      ],
+      "diagnostic_version": 1,
+      "distribution": "source-checkout",
+      "excluded_checks": [],
+      "limitations": [
+        "Read-only prerequisite inspection, not execution or host qualification.",
+        "No authentication, model availability, scientific dependencies, network or resource-capacity checks.",
+        "A passing study lock does not verify campaign evidence or scientific conclusions."
+      ],
+      "scope": "offline",
+      "status": "pass"
+    }
+  },
+  "standalone-bundle": {
+    "exit": 0,
+    "report": {
+      "checks": [
+        {
+          "id": "python",
+          "message": "3.11.6",
+          "remedy": null,
+          "status": "pass"
+        },
+        {
+          "id": "platform",
+          "message": "Darwin",
+          "remedy": null,
+          "status": "pass"
+        },
+        {
+          "id": "catalog",
+          "message": "17 catalog modules checked.",
+          "remedy": null,
+          "status": "pass"
+        },
+        {
+          "id": "study-lock",
+          "message": "Verified current lock ca5bf6d64c3dd8f5f9dbacb886485f9f79db6f41d22abe4904b324c912e336a4 and selection freshness.",
+          "remedy": null,
+          "status": "pass"
+        },
+        {
+          "id": "generated-files",
+          "message": "17 generated files match ownership.",
+          "remedy": null,
+          "status": "pass"
+        }
+      ],
+      "diagnostic_version": 1,
+      "distribution": "standalone-bundle",
+      "excluded_checks": [
+        {
+          "id": "toy-resources",
+          "reason": "Central examples/toy-study resources are outside standalone-bundle scope. Science files belong to the study; this report does not execute or validate its protocol."
+        }
+      ],
+      "limitations": [
+        "Read-only prerequisite inspection, not execution or host qualification.",
+        "No authentication, model availability, scientific dependencies, network or resource-capacity checks.",
+        "A passing study lock does not verify campaign evidence or scientific conclusions."
+      ],
+      "scope": "offline",
+      "status": "pass"
+    }
+  },
+  "central-inspection": {
+    "exit": 0,
+    "report": {
+      "checks": [
+        {
+          "id": "python",
+          "message": "3.11.6",
+          "remedy": null,
+          "status": "pass"
+        },
+        {
+          "id": "platform",
+          "message": "Darwin",
+          "remedy": null,
+          "status": "pass"
+        },
+        {
+          "id": "catalog",
+          "message": "17 catalog modules checked.",
+          "remedy": null,
+          "status": "pass"
+        },
+        {
+          "id": "study-lock",
+          "message": "Verified current lock ca5bf6d64c3dd8f5f9dbacb886485f9f79db6f41d22abe4904b324c912e336a4 and selection freshness.",
+          "remedy": null,
+          "status": "pass"
+        },
+        {
+          "id": "generated-files",
+          "message": "17 generated files match ownership.",
+          "remedy": null,
+          "status": "pass"
+        }
+      ],
+      "diagnostic_version": 1,
+      "distribution": "standalone-bundle",
+      "excluded_checks": [
+        {
+          "id": "toy-resources",
+          "reason": "Central examples/toy-study resources are outside standalone-bundle scope. Science files belong to the study; this report does not execute or validate its protocol."
+        }
+      ],
+      "limitations": [
+        "Read-only prerequisite inspection, not execution or host qualification.",
+        "No authentication, model availability, scientific dependencies, network or resource-capacity checks.",
+        "A passing study lock does not verify campaign evidence or scientific conclusions."
+      ],
+      "scope": "offline",
+      "status": "pass"
+    }
+  },
+  "bytes_and_mtimes_unchanged": true
+}

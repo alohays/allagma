@@ -1,5 +1,9 @@
 # PR #24 review — 12 October 2026
 
+The feature PRs #25, #26 and #27 have since merged, closing #19, #22 and #23.
+See the [integration record](open-pr-integration.md) for current status and new
+validation. The dated observations and evidence below remain preserved.
+
 The owner requested resolution of reviews on every open PR, including drafts.
 The open set contained regular [#24](https://github.com/alohays/allagma/pull/24)
 and draft [#25](https://github.com/alohays/allagma/pull/25). Neither had submitted

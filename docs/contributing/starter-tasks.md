@@ -13,8 +13,8 @@ queue; read the [claim and review process](workflow.md) before starting.
    clean-checkout tutorial with a distinct interpreter and paths with spaces.
    Requires local Linux/Python 3.13, not a native model or GPU.
 
-This qualification remains unassigned. Implementations for #19, #22 and #23
-await review in the PRs below; do not start duplicate work.
+This qualification remains unassigned. Issues #19, #22 and #23 are completed
+on main; their merged implementations are listed below.
 
 Comment on the issue with your scope and environment. A maintainer confirms the
 claim and assignment before overlapping implementation. No paid model access,
@@ -22,26 +22,9 @@ GPU, response-time guarantee or release deadline is involved. Submit concise
 sanitized evidence with its exact tested commit. A documentation change needs a
 rendered review and link check, not a test that merely repeats its prose.
 
-The [latest triage](post-pr20-triage.md) explains why only #22 and #23 were added.
+The [dated triage](post-pr20-triage.md) explains why only #22 and #23 were added.
 The available qualification carries `help wanted`; its prerequisites make it
 more involved than a good first issue. Claimed #6 has no newcomer-discovery labels.
-
-## Awaiting owner review
-
-[#19: runnable toy-to-paper workflow](https://github.com/alohays/allagma/issues/19)
-is assigned to `alohays` and implemented in
-[draft PR #25](https://github.com/alohays/allagma/pull/25). Its retained evidence
-covers actual toy results, explicit attribution, scoped review revisions and
-the optional TeX rebuild. The issue remains open pending review and merge;
-do not start a duplicate implementation.
-
-[#22: complete paper-source size admission](https://github.com/alohays/allagma/issues/22)
-is implemented in [PR #26](https://github.com/alohays/allagma/pull/26), with
-boundary regressions, bounded copies and a verified real-TeX archive rebuild.
-[#23: standalone study diagnostics](https://github.com/alohays/allagma/issues/23)
-is implemented in [PR #27](https://github.com/alohays/allagma/pull/27), with
-actual exported-helper checks and read-only failure handling. Both PRs are
-regular and open for owner review; their features are not yet on main.
 
 ## Claimed work
 
@@ -52,6 +35,18 @@ coordinate with the assignee and preserve the figure and results. The stated
 Windows/Node environment is suitable for this documentation task.
 
 ## Merged contributor improvements
+
+Issues [#19](https://github.com/alohays/allagma/issues/19),
+[#22](https://github.com/alohays/allagma/issues/22) and
+[#23](https://github.com/alohays/allagma/issues/23) are complete through
+PRs [#25](https://github.com/alohays/allagma/pull/25),
+[#26](https://github.com/alohays/allagma/pull/26) and
+[#27](https://github.com/alohays/allagma/pull/27). Use the
+[toy-to-paper walkthrough](../guides/toy-to-paper.md),
+[paper-source guide](../arxiv-papers.md) and
+[standalone diagnostics](../cli.md#exit-status-and-costs) on main. The
+[integration record](open-pr-integration.md) includes audit-binding regressions,
+bounded-copy and exported-helper checks, the complete workflow and TeX rebuild.
 
 [#18: required adapter regressions](https://github.com/alohays/allagma/issues/18)
 is complete through [#20](https://github.com/alohays/allagma/pull/20). The

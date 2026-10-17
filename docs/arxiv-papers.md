@@ -4,6 +4,11 @@ Allagma's normal manuscript/report remains the default. A study can explicitly
 request an additional English paper, compiled PDF and portable source archive.
 The feature does not submit the paper to arXiv.
 
+For literal commands and editable inputs, start with the
+[offline toy-to-paper walkthrough](guides/toy-to-paper.md). It uses actual toy
+results, explicit anonymous attribution, honest provided-only coverage and
+retained scientific/wording reviews, including a stale-review recovery example.
+
 New studies contain `paper.json` with `output: report`. To request a paper while
 preparing a native study, pass `research prepare --paper-config REQUEST.json`.
 The request includes `format: allagma-paper-output-v1`, `output: arxiv` and
@@ -91,7 +96,14 @@ sources and retained compiler receipts. The source archive contains TeX,
 BibTeX and bbl, exact figure files, required custom styles and `anc/` with build
 instructions, literature notes, claim/result links and provenance. It excludes
 raw downloads, scientific weights/data, build logs, auxiliary files and the
-compiled paper PDF. The optional source package has a 25 MiB expanded ceiling.
+compiled paper PDF. The optional source package has a 25 MiB (26,214,400-byte)
+expanded ceiling and at most 1,000 regular files. This counts every delivered
+source byte, including generated provenance and the final `.bbl`, independently
+of compressed archive size. Declared copies are admitted before writing and
+checked for changes during copying. The post-compilation source set is checked
+before an archive or successful delivery is produced. If the budget is exceeded,
+reduce the declared sources and choose a new output revision; the failed
+revision and any compiler output remain available for inspection.
 Reading notes live under `anc/reference-notes/<reference-id>/`; the packaged
 map and index link to those copies. Copied files cannot overwrite an existing
 package path. Provenance retains the original map digest and note locations.
