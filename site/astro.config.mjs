@@ -54,6 +54,7 @@ export default defineConfig({
       ]},
       { label: 'Evidence and limits', collapsed: true, items: [
         { label: 'Host qualification', slug: 'evidence/hosts' },
+        { label: 'Linux and Python 3.13', slug: 'evidence/linux-python313' },
         { label: 'Twelve-session comparison', slug: 'evidence/comparison' },
         { label: 'Acceptance scope', slug: 'evidence/acceptance' },
         { label: 'I1–I5 evidence', slug: 'evidence/implementation' },

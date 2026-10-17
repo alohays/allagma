@@ -1,0 +1,25 @@
+{
+  "bootstrap_command": "apt-get update && apt-get install -y --no-install-recommends git ca-certificates procps",
+  "bootstrap_exit_code": 0,
+  "bootstrap_log": {
+    "bytes": 10559,
+    "sha256": "1c88440d2be58d0a976630197661bd4c28369b526df2d5d1d9b756120a1d1ba2"
+  },
+  "cpus": 4.0,
+  "docker_desktop": "4.40.0 (187762)",
+  "docker_engine": "28.0.4",
+  "image_config_digest": "sha256:a1165e272e578941b84abc79e4ab38a0305cd12803a5c4247979ac7655f4d641",
+  "image_manifest_digest": "sha256:a1165e272e578941b84abc79e4ab38a0305cd12803a5c4247979ac7655f4d641",
+  "memory_bytes": 4294967296,
+  "mounts": [],
+  "network_isolation": {
+    "command": "docker network disconnect bridge allagma-issue7-20261018-procps",
+    "exit_code": 0,
+    "networks_after_disconnect": {},
+    "scope": "Image/bootstrap and anonymous Git acquisition used network; every Allagma and conformance command below ran after disconnect. No host workspace, credentials or sockets were mounted."
+  },
+  "pids_limit": 256,
+  "ps_interface_command": "ps -axo pid=,ppid=,pgid=,rss=,stat=,lstart=",
+  "ps_interface_exit_code": 0,
+  "virtualization": "Local Docker Desktop Linux VM on macOS arm64; native aarch64 container, not x86 emulation"
+}

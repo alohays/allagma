@@ -8,6 +8,15 @@ loopback HTTP, without external network access; they are skipped when Git is
 unavailable. No TeX installation or third-party Python package is needed for
 this command. Actual TeX compilation has its own optional CI workflow.
 
+The full suite also needs the POSIX process-listing command `ps` for
+[resource-supervision checks](../docs/resource-supervision.md). Minimal Linux
+images may omit it. On Debian or Ubuntu, install the system package `procps`
+before running the full suite; it is not a Python dependency. Verify the needed
+interface with `ps -axo pid=,ppid=,pgid=,rss=,stat=,lstart=`. The ordinary toy
+tutorial does not exercise this resource-supervision interface. The
+[Linux/Python 3.13 receipt](../docs/contributing/linux-python313.md) retains both
+the missing-`ps` failure and the complete run with that prerequisite present.
+
 | Suite | Coverage |
 | --- | --- |
 | `test_contracts` | Closed/versioned schemas, configuration provenance, capability narrowing, immutable references, path confinement and required context |

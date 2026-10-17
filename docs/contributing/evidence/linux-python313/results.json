@@ -1,0 +1,118 @@
+{
+  "attempts": {
+    "failed": 1,
+    "interrupted": 1,
+    "succeeded": 26
+  },
+  "audit": {
+    "analysis_repetitions": 1,
+    "checked_references": 521,
+    "findings": [],
+    "limitations": [
+      "No independent scientific peer review or real-model quality evaluation."
+    ],
+    "review": {
+      "media_type": "application/json",
+      "path": "campaigns/toy-v1/analyses/a001/reviews/review-002/record.json",
+      "retention": "retain-with-study",
+      "sha256": "588918b1e5246cb3e6166a8944c9daa6151acd6e41a67ac9d02f5f20b96d0a40"
+    },
+    "stale_claims": [],
+    "verdict": "pass"
+  },
+  "budget": {
+    "max_attempts": 28,
+    "max_seconds": 60.0,
+    "money_usd": 0.0,
+    "per_attempt_seconds": 5.0
+  },
+  "catalog": {
+    "checked": [
+      "asset/reference-cache",
+      "context/active-brief",
+      "context/full-record",
+      "evaluation/context-retention",
+      "host/claude-code",
+      "host/codex",
+      "host/generic",
+      "output/arxiv",
+      "policy/local",
+      "profile/default",
+      "recipe/improve-allagma",
+      "recipe/replication",
+      "recipe/research",
+      "research/analysis",
+      "research/audit",
+      "research/experiment",
+      "research/improve",
+      "research/protocol",
+      "research/scope",
+      "research/writing",
+      "reviewer/checklist",
+      "reviewer/trace",
+      "runner/local-process"
+    ],
+    "status": "pass"
+  },
+  "date": "2026-10-18 (Asia/Seoul); command timestamps are UTC",
+  "full_conformance": {
+    "errors": 0,
+    "exit_code": 0,
+    "failures": 0,
+    "log": "conformance.log",
+    "reported_seconds": 49.037,
+    "skipped": 0,
+    "tests": 192
+  },
+  "guide_sha256": "4574ecdc57fc94920ab2dc03d54f8dc348ff3cf0564853e200429290e04fa7d7",
+  "manuscript_inspection": {
+    "direct_claim_references_checked": 56,
+    "files_read": [
+      "paper/manuscript.md",
+      "paper/claims.json",
+      "outputs/summary.json",
+      "raw-manifest.json",
+      "runs/confirm-104/attempts/001/raw.json"
+    ],
+    "finding": "All three manuscript links resolve; report values match the summary; 24 raw confirmation records and 28 attempt records, with failed/interrupted attempts and two pilots excluded. Claim statuses supported/contradicted/supported and counterexamples 104,108,118,121 agree with the raw-data arithmetic. Normal-approximation and synthetic-scope limits remain explicit.",
+    "link_receipt": "study-inspection.json",
+    "manuscript_sha256": "dd2318ccf2f246d310e086145dab1f397d9d004d51694935b056639133b4fbef",
+    "reviewer": "Implementing Codex assistant; same-assistant engineering inspection, not independent scientific review"
+  },
+  "path_contains_spaces": true,
+  "preservation": {
+    "added_files": [
+      "campaigns/toy-v1/analyses/a001/reviews/review-002/adapter-result.json",
+      "campaigns/toy-v1/analyses/a001/reviews/review-002/audit.json",
+      "campaigns/toy-v1/analyses/a001/reviews/review-002/execution.json",
+      "campaigns/toy-v1/analyses/a001/reviews/review-002/input.json",
+      "campaigns/toy-v1/analyses/a001/reviews/review-002/record.json",
+      "campaigns/toy-v1/events/1792254450004200009-4a2bbf.json"
+    ],
+    "before_inventory_sha256": "3a76351bf2e5909a6299ec2a913feef4f2053e5d31cf71c265ce92ff02cd6428",
+    "changed_mutable_pointers": [
+      "campaigns/toy-v1/latest-audit.json",
+      "campaigns/toy-v1/state.json"
+    ],
+    "comparison": "SHA-256 and nanosecond mtime for every original file except the two mutable state/audit pointers",
+    "immutable_original_files_unchanged": 753,
+    "original_files": 755
+  },
+  "qualification_limits": [
+    "One Debian 12/aarch64 Docker Linux VM and CPython 3.13.16 build",
+    "Offline core and conformance fixtures only",
+    "No native-agent execution, scientific/model-quality qualification or independent peer review",
+    "No TeX, external literature acquisition, real research training or release publication"
+  ],
+  "retention": "Compact sanitized receipts only. Full logs, both complete studies and stopped containers retained locally. Existing repository frozen studies and prior receipts untouched.",
+  "source_commit": "174e200b508b07f022ba36233db54ca0b60e48e1",
+  "source_status_after": "clean",
+  "state": {
+    "assurance": "deterministic",
+    "execution_status": "completed",
+    "phase": "audit",
+    "stop_reason": null
+  },
+  "status": "pass",
+  "tutorial_shell_blocks_match_tested_guide": true
+}

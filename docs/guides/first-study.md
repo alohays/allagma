@@ -108,6 +108,12 @@ different things and are intentionally distinct. The state separates phase
 
 ## Continue from here
 
+The [Linux/Python 3.13 qualification receipt](../contributing/linux-python313.md)
+records these exact commands on Debian 12/aarch64 with CPython 3.13.16, including
+a checkout path with spaces. It covers the offline toy and conformance suite
+in that container environment; native agents and model quality need separate
+evidence.
+
 To change the offline question without a model session, follow
 [prepare an adapted toy study](../../examples/toy-study/README.md#prepare-an-adapted-study-before-running-it).
 It stops before execution so you can inspect the changed bias, source lineage
