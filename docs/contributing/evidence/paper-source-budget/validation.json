@@ -1,0 +1,64 @@
+{
+  "base": "174e200b508b07f022ba36233db54ca0b60e48e1",
+  "implementation_commit": "66baa4e02a2a6ebb92df83aa32c356576aa5a50b",
+  "environment": {
+    "system": "Darwin",
+    "release": "26.6.2",
+    "architecture": "arm64",
+    "python": "3.11.6"
+  },
+  "checks": {
+    "changed-checks.log": {
+      "command": "python3 -B tools/check_changed.py --base origin/main",
+      "exit": 0,
+      "result": [
+        "",
+        "----------------------------------------------------------------------",
+        "Ran 199 tests in 69.476s",
+        "",
+        "OK"
+      ]
+    },
+    "tooling.log": {
+      "command": "python3 -B -m unittest discover -s tools/tests -v",
+      "exit": 0,
+      "result": [
+        "",
+        "----------------------------------------------------------------------",
+        "Ran 19 tests in 2.807s",
+        "",
+        "OK"
+      ]
+    },
+    "docs.log": {
+      "command": "python3 -B tools/check_docs.py",
+      "exit": 0,
+      "result": [
+        "{'checked_links': 421, 'errors': []}"
+      ]
+    }
+  },
+  "code": {
+    "adapters/arxiv/package.py": "27f29ff8ea8fc13babec66088e59512e6b5c63e082fc8eef07a790d14167f19a",
+    "conformance/test_papers.py": "15d0cf3ab76bcf880e004f917f59a489d28b247a542dab9501a5831fd0dd87da"
+  },
+  "real_paper": {
+    "archive_sha256": "d1d63141f243632fca1656b7d2a88e72aa53f81fa2ef60a10c64784e5e0c2559",
+    "author": "allagma",
+    "format": "allagma-paper-output-verification-v1",
+    "javascript": false,
+    "pages": 8,
+    "paper_sha256": "7aea0bb5cac8bd0a108a977aaf48c70cdd23cbbde5a08b97b4eed9c34d0c98ce",
+    "scope": "Archive, metadata and text checks; page-by-page visual inspection is separate",
+    "sections_present": true,
+    "source_files": 42,
+    "status": "pass",
+    "tex_release_required": "2024"
+  },
+  "real_tex_command": "python3 -B tools/test_paper_archive.py",
+  "real_paper_commands": [
+    "python3 -B -m allagma paper build --study studies/ema-schedule/publications/reference-r2 --destination work/issue22/real-paper",
+    "python3 -B tools/verify_paper_output.py --directory work/issue22/real-paper --author allagma --tex-release 2024"
+  ],
+  "scope": "Engineering boundary and archive/build checks; no new scientific experiment, native-host qualification or independent peer review."
+}

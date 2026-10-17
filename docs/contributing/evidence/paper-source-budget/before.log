@@ -1,0 +1,44 @@
+test_complete_source_budget_includes_provenance_and_accepts_exact_limit (conformance.test_papers.PaperTests.test_complete_source_budget_includes_provenance_and_accepts_exact_limit) ... FAIL
+test_oversized_declared_copy_is_rejected_before_any_payload_write (conformance.test_papers.PaperTests.test_oversized_declared_copy_is_rejected_before_any_payload_write) ... FAIL
+test_compiled_bibliography_and_updated_provenance_are_admitted_together (conformance.test_papers.PaperTests.test_compiled_bibliography_and_updated_provenance_are_admitted_together) ... FAIL
+
+======================================================================
+FAIL: test_complete_source_budget_includes_provenance_and_accepts_exact_limit (conformance.test_papers.PaperTests.test_complete_source_budget_includes_provenance_and_accepts_exact_limit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<checkout>/conformance/test_papers.py", line 163, in test_complete_source_budget_includes_provenance_and_accepts_exact_limit
+    with self.assertRaisesRegex(AllagmaError, "new paper revision"):
+AssertionError: AllagmaError not raised
+
+======================================================================
+FAIL: test_oversized_declared_copy_is_rejected_before_any_payload_write (conformance.test_papers.PaperTests.test_oversized_declared_copy_is_rejected_before_any_payload_write)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<checkout>/conformance/test_papers.py", line 190, in test_oversized_declared_copy_is_rejected_before_any_payload_write
+    copies.assert_not_called()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 900, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'copy_new' to not have been called. Called 6 times.
+Calls: [call(PosixPath('<checkout>/adapters/arxiv/allagma-preprint.sty'), PosixPath('<temporary-path>')),
+ call(PosixPath('<checkout>/adapters/arxiv/build.py'), PosixPath('<temporary-path>')),
+ call(PosixPath('<temporary-path>'), PosixPath('<temporary-path>')),
+ call(PosixPath('<temporary-path>'), PosixPath('<temporary-path>')),
+ call(PosixPath('<temporary-path>'), PosixPath('<temporary-path>')),
+ call(PosixPath('<temporary-path>'), PosixPath('<temporary-path>'))].
+
+======================================================================
+FAIL: test_compiled_bibliography_and_updated_provenance_are_admitted_together (conformance.test_papers.PaperTests.test_compiled_bibliography_and_updated_provenance_are_admitted_together)
+----------------------------------------------------------------------
+allagma.files.AllagmaError: Paper archive expansion limit exceeded
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<checkout>/conformance/test_papers.py", line 233, in test_compiled_bibliography_and_updated_provenance_are_admitted_together
+    with self.assertRaisesRegex(AllagmaError, "integration ceiling"):
+AssertionError: "integration ceiling" does not match "Paper archive expansion limit exceeded"
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.065s
+
+FAILED (failures=3)
