@@ -27,6 +27,12 @@ the before/after tests. Preparation now rejects these inputs before publication
 writes and keeps the original evidence intact. No other actionable finding
 remained after reviewing the current #26/#27 implementations and their callers.
 
+The original production-limit probe was also rerun on the combined source.
+It now rejects both oversized source sets before copying their payloads, while
+the exported helper's diagnostic passes without requiring central toy files.
+The [after-repair receipt](evidence/open-pr-integration/boundary-after.json)
+records zero oversized bytes copied and unchanged diagnostic inputs.
+
 ## Combined verification
 
 The integrated feature head is `74e00f5ad7bba239e36467454f3a3b2b18f98db6`.
@@ -37,6 +43,14 @@ passes I1–I5 and the complete toy. The local production site build generates
 44 pages and 2,976 valid local links/assets; all 18 desktop/mobile browser
 tests pass. The required [documentation CI](https://github.com/alohays/allagma/actions/runs/39049966081)
 also passes. The final documentation PR has its own current-head checks.
+
+After the Linux qualification and queue reconciliation, the local documentation
+build at `4569dbf` contains 45 pages and 3,099 valid local links/assets; all 18
+browser tests pass. The canonical documentation check passes 525 links.
+The updated [desktop](evidence/open-pr-integration/starter-desktop.png) and
+[mobile](evidence/open-pr-integration/starter-mobile-completed.png) views show
+completed tasks separately from the preserved #6 claim, without clipping or
+horizontal overflow. The Linux qualification page was inspected at both widths.
 
 All eight literal [toy-to-paper commands](../guides/toy-to-paper.md) were rerun
 from a fresh sparse checkout with spaces in checkout and study paths. Their
