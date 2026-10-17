@@ -21,6 +21,7 @@ export default defineConfig({
     sidebar: [
       { label: 'Start here', items: [
         { label: 'Your first study', slug: 'guides/first-study' },
+        { label: 'From toy results to a paper', slug: 'guides/toy-to-paper' },
         { label: 'Watch the workflow', slug: 'demo' },
         { label: 'Explore example outputs', slug: 'explore' },
         { label: 'Completed native studies', slug: 'studies' },

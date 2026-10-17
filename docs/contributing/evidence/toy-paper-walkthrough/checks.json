@@ -1,0 +1,53 @@
+{
+  "tested_implementation_commit": "d4391da6664ec20c05c7fac91765fdbc4ba5cd1b",
+  "local": [
+    {
+      "command": "python3 -B -m unittest discover -s conformance -v",
+      "exit_code": 0,
+      "tests": 198,
+      "skips": 0,
+      "log_sha256": "198c3b68999686b4a29a272ee308ff0207694069d4737cdfb91ee969a6e4b0e3"
+    },
+    {
+      "command": "npm run build",
+      "cwd": "site",
+      "exit_code": 0,
+      "pages": 44,
+      "local_links": 2973,
+      "log_sha256": "a7a888de06b62ac8f9a2d240e09a77b6d478234c967a6a17fc41a614aa760f0d"
+    },
+    {
+      "command": "npm test",
+      "cwd": "site",
+      "exit_code": 0,
+      "tests": 18,
+      "log_sha256": "d099effa50a8c62134751126cf600ba1cb24bcccb7239f600c00725a8877b8e9"
+    },
+    {
+      "command": "python3 tools/check_docs.py",
+      "exit_code": 0,
+      "checked_links": 447,
+      "errors": [],
+      "scope": "Final walkthrough and evidence documentation"
+    },
+    {
+      "command": "npm run build",
+      "cwd": "site",
+      "exit_code": 0,
+      "pages": 44,
+      "local_links": 2975,
+      "scope": "Final guide/evidence/issue-status documentation; helper and manuscript source unchanged",
+      "log_sha256": "36fd82726ffdd287d7cc510b79c1d43af3642026b1f1512df9f3cd4429a43d16"
+    }
+  ],
+  "ci": {
+    "url": "https://github.com/alohays/allagma/actions/runs/38035281153",
+    "head": "d4391da6664ec20c05c7fac91765fdbc4ba5cd1b",
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": {
+      "targeted": "success",
+      "acceptance": "success"
+    }
+  }
+}
