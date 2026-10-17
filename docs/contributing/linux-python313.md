@@ -141,3 +141,26 @@ SHA-256 and nanosecond mtime. Original attempts, bundles, analysis and
 `review-001` remain intact. The study finished at phase `audit`, execution
 status `completed`, assurance `deterministic`. Only compact sanitized receipts
 are committed; the complete studies remain in the local stopped containers.
+
+## Main advanced during qualification
+
+PRs #26 and #27 merged while this work was running. The initial receipts above
+remain bound to `174e200` and are unchanged. A fresh sparse checkout then tested
+[`da9ea458`](https://github.com/alohays/allagma/tree/da9ea45844c59d14ece28789f2707627e8af724f),
+the new main containing both fixes, in the same Linux/Python 3.13 environment.
+
+All tutorial commands passed again: 23 catalog modules, the complete 26/1/1 toy,
+and the 521-reference audit. **All 206 conformance tests passed**, without skips,
+in 51.861 seconds. The new study's manuscript values, links, rational
+recomputation and preservation checks also pass. Its study and receipt are
+separate from the original run. The
+[integration receipt](evidence/linux-python313-current-main.json) records the
+source-selection guard, exact commands and outputs; the
+[full conformance log](evidence/linux-python313-current-main.log) is retained.
+
+The documentation adds a discoverable evidence page and links from the tutorial
+and host-support guide. The 44-page production build, internal links and all 18
+existing desktop/mobile browser checks pass. The new page was also inspected in
+light and dark themes at 1440- and 390-pixel widths; its links work and the page
+does not overflow the viewport. These are documentation checks on the PR, not
+additional platform or native-host qualification.
