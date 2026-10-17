@@ -158,8 +158,17 @@ separate from the original run. The
 source-selection guard, exact commands and outputs; the
 [full conformance log](evidence/linux-python313-current-main.log) is retained.
 
+PR #25 then merged. A further fresh sparse checkout at
+[`f7e32a7`](https://github.com/alohays/allagma/tree/f7e32a70b43675444e9f88c07d227a8b762b9e56)
+also passes all tutorial commands and **217 conformance tests**, with zero skips,
+in 55.100 seconds. This includes the merged toy-paper and audit-binding
+regressions. The [follow-up receipt](evidence/linux-python313-toy-paper-main.json)
+and [full log](evidence/linux-python313-toy-paper-main.log) preserve that run
+separately. The toy again retains 26/1/1 attempts, a passing 521-reference audit,
+unchanged original evidence and the same reported values.
+
 The documentation adds a discoverable evidence page and links from the tutorial
-and host-support guide. The 44-page production build, internal links and all 18
+and host-support guide. The production build, internal links and all 18
 existing desktop/mobile browser checks pass. The new page was also inspected in
 light and dark themes at 1440- and 390-pixel widths; its links work and the page
 does not overflow the viewport. These are documentation checks on the PR, not
